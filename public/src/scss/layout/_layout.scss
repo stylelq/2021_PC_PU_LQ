@@ -1,0 +1,15 @@
+//Layout
+.wrap{
+    padding:0 calcRem($sitePadding);
+    box-sizing:border-box;
+}
+
+.container{
+    padding-top:calcRem($headerHeight);
+    padding-bottom:calcRem(50rem);
+    background-color: #fff;
+}
+
+.site-main{
+    margin-top:calcRem($SiteMainMargin);
+}

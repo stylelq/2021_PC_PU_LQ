@@ -1,0 +1,170 @@
+//Footer
+.footer{
+    // position:relative;
+    // padding:calcRem(30rem) calcRem(30rem);
+    // text-align:center;
+    // box-sizing:border-box;
+    // background-color:$bgColor;
+    // margin-top: auto;
+
+    // &.bottom-fix{
+    //     padding-bottom:calcRem(62rem);
+    // }
+    // &__logo{
+    //     vertical-align:middle;
+    //     width:calcRem(150rem);
+    // }
+    // &__list{
+    //     margin:calcRem(20rem) auto 0 auto;
+    //     padding:0; list-style:none;
+    //     font-size:0;
+    //     max-width: $tabletMax;
+    // }
+    // &__item{
+    //     display:inline-block;
+    //     width:33.33%;
+    //     font-size:11px;
+    //     color:$black1;
+    // }
+    // &__link{
+    //     display:block;
+    //     padding:calcRem(2rem) 0;
+    //     @include body2();
+    // }
+    // &__blank{
+    //     text-decoration: underline
+    // ;}
+    // &__copy{
+    //     margin-top:calcRem(22rem);
+    //     @include body4();
+    // }
+    // &__txt{
+    //     margin-top:calcRem(18rem);
+    //     @include body3();
+    //     line-height:calclH(24,12);
+    //     color:$darkgray;
+    //     & + &{
+    //         margin-top:calcRem(16rem);
+    //     }
+    // }
+}
+
+.footer-info{
+    // margin-top:calcRem(20rem);
+    // $this:&;
+    // &__list{
+    //     margin:0;
+    //     padding:0;
+    //     font-size:0;
+    //     &.type-another{
+    //         margin-top:calcRem(16rem);
+    //     }
+    // }
+    // &__item{
+    //     position:relative;
+    //     display:inline-block;
+    //     list-style:none;
+    //     font-size:10px;
+    //     color:$black1;
+    //     line-height:1.65;
+    //     & + &{
+    //         padding-left:calcRem(7rem);
+    //         margin-left:calcRem(6rem);
+    //         &:before{
+    //             position:absolute;
+    //             left:0;
+    //             top:calcRem(4rem);
+    //             display:block;
+    //             width:0;
+    //             height:calcRem(8rem);
+    //             border-left:1px solid $black1;
+    //             content:'';
+    //         }
+    //         &.type-gray{
+    //             &:before{
+    //                 border-left-color:#878686;
+    //             }
+    //         }
+    //     }
+    //     &.type-block{
+    //         display:block;
+    //         padding-left:0;
+    //         margin-left:0;
+    //         &:before{
+    //             display:none;
+    //         }
+    //     }
+    // }
+    // &__link{
+    //     position:relative;
+    //     cursor:pointer;
+    //     color:$black1 !important;
+    //     text-decoration: none !important;
+    //     &:after{
+    //         display:block;
+    //         position:absolute;
+    //         left:0;
+    //         bottom:0;
+    //         width:100%;
+    //         height:0;
+    //         border-top:1px solid $black1;
+    //         content:'';
+    //     }
+    //     &:hover{
+    //         color:inherit;
+    //     }
+    // }
+    // &__tit{
+    //     margin:calcRem(16rem) 0 calcRem(2rem) 0;
+    //     font-size:10px;
+    //     color:$black1;
+    // }
+}
+
+.footer-sns{
+    margin-top:calcRem(20rem);
+    $this:&;
+    &__list{
+        margin:0;
+        padding:0;
+        font-size:0;
+    }
+    &__item{
+        display:inline-block;
+        width:calcRem(20rem);
+        height:calcRem(20rem);
+        list-style:none;
+        &.type-facebook{
+            #{$this}__link{
+                @include background('/images/common/icon_footer_facebook.png','no-repeat center center / contain')
+            }
+        }
+        &.type-instagram{
+            #{$this}__link{
+                @include background('/images/common/icon_footer_insta.png','no-repeat center center / contain')
+            }
+        }
+        &.type-youtube{
+            #{$this}__link{
+                @include background('/images/common/icon_footer_youtube.png','no-repeat center center / contain')
+            }
+        }
+        &.type-post{
+            #{$this}__link{
+                @include background('/images/common/icon_footer_post.png','no-repeat center center / contain')
+            }
+        }
+        &.type-talk{
+            #{$this}__link{
+                @include background('/images/common/talk_ico.png','no-repeat center center / contain')
+            }
+        }
+        & + &{
+            margin-left:calcRem(16rem)
+        }
+    }
+    &__link{
+        display:block;
+        height:100%;
+    }
+}

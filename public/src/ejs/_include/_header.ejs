@@ -1,0 +1,68 @@
+<%
+	var data = jsonData
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta property="og:type" content="website">
+<meta property="og:title" content="루이가또즈">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<title><%= data.site.name.kor %></title>
+<!-- icon/favicon -->
+<link rel="shortcut icon" href="../../images/logo/favicon.ico">
+<link rel="icon" type="image/png"  href="../../images/logo/favicon_32.png" sizes="32x32" />
+<!-- 공통 css -->
+<link rel="stylesheet" href="../../css/common.css">
+
+<% if (page == "main") { %>
+	<link rel="stylesheet" href="../../css/pages/main.css">
+<%}else if (page == "join") { %>
+	<!-- <link rel="stylesheet" href="../../css/pages/join.css"> -->
+<%} else if (page == "product") { %>
+	<link rel="stylesheet" href="../../css/pages/product.css">
+<%}else if (page == "detail") { %>
+	<!-- <link rel="stylesheet" href="../../css/pages/detail.css"> -->
+<%}else if (page == "cart") { %>
+	<!-- <link rel="stylesheet" href="../../css/pages/cart.css"> -->
+<%}else if (page == "payment") { %>
+	<!-- <link rel="stylesheet" href="../../css/pages/payment.css"> -->
+<%}else if (page == "project") { %>
+	<!-- <link rel="stylesheet" href="../../css/pages/project.css">
+	<link rel="stylesheet" href="../../css/pages/project_collaboration.css"> -->
+<%}else if (page == "center") { %>
+	<!-- <link rel="stylesheet" href="../../css/pages/center_notice.css">
+	<link rel="stylesheet" href="../../css/pages/center_faq.css">
+	<link rel="stylesheet" href="../../css/pages/center_inquiry.css">
+	<link rel="stylesheet" href="../../css/pages/product.css">
+	<link rel="stylesheet" href="../../css/pages/center_membership.css">
+	<link rel="stylesheet" href="../../css/pages/center_store_inquiry.css">
+	<link rel="stylesheet" href="../../css/pages/center_stores.css"> -->
+<%}else if (page == "collection") { %>
+	<!-- <link rel="stylesheet" href="../../css/pages/collection.css"> -->
+<%}else if (page == "promotion") { %>
+	<!-- <link rel="stylesheet" href="../../css/pages/promotion.css"> -->
+<%}else if (page == "platform") { %>
+	<!-- <link rel="stylesheet" href="../../css/pages/platform.css">
+	<link rel="stylesheet" href="../../css/pages/product.css"> -->
+<%}else if (page == "mypage") { %>
+	<!-- <link rel="stylesheet" href="../../css/pages/myPage.css"> -->
+<%}else if (page == "gift") { %>
+	<!-- <link rel="stylesheet" href="../../css/pages/gift.css">  -->
+<% } %>
+</head>
+
+<% classAdd = page == 'main' ? 'page-main' : '' %>
+<body class="<%= classAdd %>">
+
+<!-- [s]contents -->
+
+<!-- header:: main menu -->
+<% include ../_include/_headerMainGnb %>
+<!-- .header:: main menu -->
