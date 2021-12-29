@@ -1,0 +1,27 @@
+{
+  "site" : {
+    "name" : {
+      "kor" : "루이까또즈 StyleLQ",
+      "eng" : "louisquatorze"
+    }
+  },
+  "pages" : {
+    "page1" : {
+      "title" : {
+        "kor" : "단체소개",
+        "eng" : "About Us"
+      },
+      "links" : [
+        "../단체소개/인사말.html"
+      ],
+      "children" : [
+        {
+          "title" : "인사말",
+          "links" : [
+            "../단체소개/인사말.html"
+          ]
+        }
+      ]
+    }
+  }
+}
