@@ -1,0 +1,104 @@
+//mixin
+//Background url/ver
+@mixin background($file, $backOption, $ver:$ver ) {
+  background: url('..' + $file + '?ver=' + $ver)+" "+$backOption
+}
+
+@mixin pageBackground($file, $backOption, $ver:$ver ) {
+  background: url('../..' + $file + '?ver=' + $ver)+" "+$backOption
+}
+
+//Vender prefixes
+@mixin vendor-prefix($name, $value) {
+  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+    #{$vendor}#{$name}: #{$value};
+  }
+}
+
+//Px-> Rem
+@function calcRem($size){
+  @return ($size/$defaultSize);
+}
+//Px-> Vw
+@function calcVw($size){
+  @return ($size / 360) * 100;
+}
+
+//Line height px -> .
+@function calclH($lh,$font){
+  @return ($lh/$font);
+}
+
+
+//Typography
+@mixin heading1(){font-size:calcRem(20rem); line-height:calclH(28,20); letter-spacing: $defaultLetter; font-weight:$medium;}
+@mixin heading2(){font-size:calcRem(17rem); line-height:calclH(24,17); letter-spacing: $defaultLetter; font-weight:$medium;}
+@mixin heading3(){font-size:calcRem(20rem); line-height:calclH(24,17); letter-spacing: $defaultLetter; font-weight:$regular;}
+
+@mixin title1(){font-size:calcRem(14rem); line-height:calclH(22,14); letter-spacing: $defaultLetter; font-weight:$medium;}
+@mixin title2(){font-size:calcRem(14rem); line-height:calclH(22,14); letter-spacing: $defaultLetter; font-weight:$regular;}
+
+@mixin body1(){font-size:calcRem(14rem); line-height:calclH(22,14); letter-spacing: $defaultLetter; font-weight:$light;}
+@mixin body2(){font-size:calcRem(12rem); line-height:calclH(20,12); letter-spacing: $defaultLetter; font-weight:$medium;}
+@mixin body3(){font-size:calcRem(12rem); line-height:calclH(18,12); letter-spacing: $defaultLetter; font-weight:$light;}
+@mixin body4(){font-size:calcRem(10rem); line-height:calclH(16,10); letter-spacing: $defaultLetter; font-weight:$light;}
+@mixin body5(){font-size:calcRem(11rem); line-height:calclH(18,11); letter-spacing: $defaultLetter; font-weight:$light;}
+@mixin body6(){font-size:calcRem(12rem); line-height:calclH(20,12); letter-spacing: $defaultLetter; font-weight:$regular;}
+
+//placeholder-color
+@mixin placeholder-color($place-color){
+  &:-ms-input-placeholder { color: $place-color;}
+  &::-webkit-input-placeholder { color: $place-color;}
+  &::-moz-placeholder { color: $place-color;}
+  &::-moz-placeholder { color: $place-color;}
+}
+
+//hidden
+@mixin hidden { overflow:hidden; position:absolute; width:0; height:0; }
+
+//block
+@mixin block {
+  &:before,
+  &:after { clear:both; display:block; overflow:hidden; height:0; content:""; }
+}
+
+//float reset
+@mixin block-reset {
+  content:"";
+  display: table;
+  clear: both;
+}
+
+//line-clamp
+@mixin line-clamp($lines, $line-height) { overflow:hidden;display:block; display:-webkit-box; -webkit-box-orient:vertical; position:relative; text-overflow: ellipsis; -webkit-line-clamp:$lines; white-space:normal;}
+
+//img-wrap
+@mixin img-wrap {
+  &__img-wrap { overflow:hidden; position:relative; }
+  &__img { position:absolute; top:0; left:0; right:0; bottom:0; margin:auto; max-width:100%; }
+}
+
+//Button 초기화
+@mixin btn-reset {
+  box-shadow:none;
+  border-radius:0;
+  padding:0;
+}
+
+//Center 정렬
+@mixin ab-center {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin vertical-center {
+  top:50%;
+  transform: translateY(-50%);
+}
+
+
+
+
+

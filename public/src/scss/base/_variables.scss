@@ -1,0 +1,86 @@
+// Variables
+// 공통으로 사용되는 SCSS 변수들입니다.
+
+//img ver
+$ver:211025;
+
+//device
+$tablet-size:1024;
+
+//font
+$defaultSize:16;
+$smallDefaultSize:14;
+$defaultLetter:0.06em;
+
+//Font Weight
+$thin:100;
+$lightDown:200;
+$light:300;
+$regular :400;
+$medium :500;
+$bold:600;
+$black:700;
+
+//Font Lineheight
+$bodyTextLine:1.9;
+
+//color
+$black1:#000;
+$darkgray:#484848;
+$point1:#9B192F;
+$gray1:#B8B8B8;
+$gray2:#CBCBCB;
+$lightgray1:#F5F5F2;
+$lightgray2:#F5F5F5;
+$lightgray3:#FBFBFB;
+$lightgray4:#E9E9E9;
+$bgColor:#f5f5f2;
+$bgSiteColor:#ffffff;
+$whiteColor:#ffffff;
+$throughColor:#C2C2C2;
+$disabledColor:#979797;
+$grayTextColor:#979797;
+$gold:#af9e73;
+$silver:#949494;
+$club:#705eac;
+$clubPlus:#95B476;
+$web:#9b192f;
+$boxgray:#E9E9E9;
+$bulletColor:#C4C4C4;
+
+//Font Family
+$font-kor:'noto-kr', Sans-Serif;
+// $defaultFont:'futura-pt','noto-kr', Sans-Serif, 'Malgun Gothic', '맑은 고딕', '맑은고딕', 'Dotum', '돋움';
+$defaultFont:'futura-pt','noto-kr', Sans-Serif, 'Malgun Gothic', '맑은 고딕', '맑은고딕', 'Dotum', '돋움';
+
+//layout
+$sitePadding:20rem;
+$headerHeight:45rem;
+$topHeight:58rem;
+$itemHeight:40rem;
+$joinMargin:20rem;
+$joinMarginText:10rem;
+$SiteMainMargin:20rem;
+$headerTotal: $headerHeight + $topHeight;
+$productTopMargin:40rem;
+
+//z-index;
+$headerZindex:130;
+$gnbZindex:15;
+$depth1Zindex:110;
+$depth2Zindex:120;
+$dimZindex:25;
+$gnbDimZindex:105;
+$searchZindex:150;
+$popupZindex:200;
+$childZindex:5;
+$fixBox:20;
+$fixButtonZindex:100;
+$popupButtonZindex:50;
+
+//Tablet
+$tabletMax:500px;
+
+
+
+
