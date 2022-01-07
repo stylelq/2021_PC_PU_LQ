@@ -1,0 +1,124 @@
+//Footer
+.footer {
+  position: relative;
+  padding: calcRem(30rem) calcRem(30rem);
+  text-align: center;
+  box-sizing: border-box;
+  background-color: $bgColor;
+  margin-top: auto;
+
+  &__wrap{
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+
+  &__left{
+    float: left;
+    display: inline-block;
+    width: calcRem(904rem);
+    text-align: left;
+  }
+
+  &__right{
+    float: left;
+    display: inline-block;
+    text-align: left;
+  }
+
+  &__logo {
+    vertical-align: middle;
+    width: calcRem(150rem);
+  }
+
+  &__list {
+    margin: auto 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+    max-width: $tabletMax;
+  }
+
+  &__item {
+    display: inline-block;
+    width: 100%;
+    font-size: 11px;
+    color: $black1;
+  }
+
+  &__link {
+    display: block;
+    padding: calcRem(2rem) 0;
+    @include body2();
+  }
+
+  &__blank {
+    text-decoration: underline;
+  }
+
+  &__copy {
+    margin-top: calcRem(22rem);
+    @include body4();
+  }
+
+  &__txt {
+    margin-top: calcRem(18rem);
+    @include body3();
+    line-height: calclH(24, 12);
+    color: $darkgray;
+
+    & + & {
+      margin-top: calcRem(16rem);
+    }
+  }
+}
+
+
+.footer-sns{
+  width: 100%;
+  display: inline-block;
+  $this:&;
+  &__list{
+    margin:0;
+    padding:0;
+    font-size:0;
+  }
+  &__item{
+    display:inline-block;
+    width:calcRem(20rem);
+    height:calcRem(20rem);
+    list-style:none;
+    &.type-facebook{
+      #{$this}__link{
+        @include background('/images/common/icon_footer_facebook.png','no-repeat center center / contain')
+      }
+    }
+    &.type-instagram{
+      #{$this}__link{
+        @include background('/images/common/icon_footer_insta.png','no-repeat center center / contain')
+      }
+    }
+    &.type-youtube{
+      #{$this}__link{
+        @include background('/images/common/icon_footer_youtube.png','no-repeat center center / contain')
+      }
+    }
+    &.type-post{
+      #{$this}__link{
+        @include background('/images/common/icon_footer_post.png','no-repeat center center / contain')
+      }
+    }
+    &.type-talk{
+      #{$this}__link{
+        @include background('/images/common/icon_footer_talk.png','no-repeat center center / contain')
+      }
+    }
+    & + &{
+      margin-left:calcRem(16rem)
+    }
+  }
+  &__link{
+    display:block;
+    height:100%;
+  }
+}

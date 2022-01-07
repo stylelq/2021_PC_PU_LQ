@@ -1,0 +1,86 @@
+//Header
+.dim{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 20;
+  &.is-active{
+    display: block;
+  }
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 0.3s;
+  z-index:100;
+  $this: &;
+
+
+  &.is-bg-white{
+    background-color: #fff;
+  }
+
+  &-wrap{
+    display: block;
+    padding-top: calcRem(30rem);
+    //로고
+    &__logo {
+      display: inline-block;
+      width: 212px;
+      height: 36px;
+      margin: 0 0 0px;
+    }
+    //우측메뉴
+    &__right{
+      top: calcRem(30rem);
+      right: calcRem(156rem);
+      position: absolute;
+    }
+  }
+
+  &__btn{
+    margin-left: calcRem(52rem);
+  }
+
+  //네비
+  .gnb{
+    /*font-size: 0;*/
+  }
+  .gnb-1depth{
+    &__list{
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+    }
+    &__item{
+      display: inline-block;
+      padding: calcRem(12rem) calcRem(36rem) calcRem(12rem);
+      list-style: none;
+      vertical-align: top;
+      box-sizing: border-box;
+
+    }
+    &__inner{
+      font-size: calcRem(14rem);
+      font-weight: 400;
+    }
+  }
+
+  .gnb-2depth{
+    &__list{
+      display: none;
+      &.is-active{
+        display: block;
+      }
+    }
+  }
+}
