@@ -28,6 +28,10 @@
   z-index:100;
   $this: &;
 
+  &.is-active{
+    background-color: #fff;
+  }
+
   &.is-bg-white{
     background-color: #fff;
   }
@@ -76,6 +80,14 @@
       box-sizing: border-box;
       font-size: calcRem(16rem);
       font-weight: 400;
+      &.is-active{
+        .gnb-2depth__list{
+          position: relative;
+          width: 100%;
+          display: block;
+          background-color: #fff;
+        }
+      }
     }
     &__inner{
       font-size: calcRem(14rem);
