@@ -1,10 +1,6 @@
 "use strict";
 
-<<<<<<< HEAD
 jQuery(function () {
-=======
-$(function () {
->>>>>>> 0fc2268daa1c1a4d1465e7c5aa2ded6b11cc7b88
   //팝업열기(공통)
   function openPopup() {
     var el = $(this).attr('href').replace("#", "");
@@ -18,26 +14,7 @@ $(function () {
     return false;
   }
 
-<<<<<<< HEAD
   $(document).on('click', '.js-popup-open', openPopup); //제품 팝업 확대축소(플러그인 panzoom)
-=======
-  $(document).on('click', '.js-popup-open', openPopup); //팝업닫기(공통)
-
-  function closePopup() {
-    if ($('.popup.is-active').length <= 1) {
-      $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
-      $('html').removeClass('is-hidden');
-    } else {
-      $(this).closest('.popup').removeClass('is-active');
-    }
-
-    if ($(this).hasClass('slide-popup__close')) {
-      resetPanZoom();
-    }
-  }
-
-  $(document).on('click', '.js-popup-close', closePopup); //제품 팝업 확대축소(플러그인 panzoom)
->>>>>>> 0fc2268daa1c1a4d1465e7c5aa2ded6b11cc7b88
 
   function productZoom() {
     var area = document.querySelectorAll('.js-product-zoom');
@@ -83,7 +60,6 @@ $(function () {
         }
       }
     });
-<<<<<<< HEAD
   } //팝업닫기(공통)
 
 
@@ -102,11 +78,6 @@ $(function () {
 
   $(document).on('click', '.js-popup-close', closePopup); //배송지 정보 탭
 
-=======
-  } //배송지 정보 탭
-
-
->>>>>>> 0fc2268daa1c1a4d1465e7c5aa2ded6b11cc7b88
   function shippingTab() {
     var idx = $(this).parent('li').index();
     var shippingIdx = $('.shipping-tab__item:nth-child(4)');
@@ -123,7 +94,6 @@ $(function () {
     }
   }
 
-<<<<<<< HEAD
   $(document).on('click', '.js-pop-tab-link', shippingTab); //---- 마이페이지::상품리뷰 이미지보기
   // 상품리뷰 이미지 팝업 오픈
 
@@ -177,7 +147,4 @@ $(function () {
   }
 
   $(document).on('click', '.js-imgView-open', reviewImgView); //----
-=======
-  $(document).on('click', '.js-pop-tab-link', shippingTab);
->>>>>>> 0fc2268daa1c1a4d1465e7c5aa2ded6b11cc7b88
 });

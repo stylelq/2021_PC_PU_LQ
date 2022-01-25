@@ -24,6 +24,10 @@ var data = jsonData
     <link rel="stylesheet" href="../../css/common.css">
     <% if (page == "main") { %>
         <link rel="stylesheet" href="../../css/pages/main.css">
+    <%}else if (page == "product") { %>
+        <link rel="stylesheet" href="../../css/pages/product.css">
+    <%}else if (page == "") { %>
+    <%}else if (page == "") { %>
     <%}else if (page == "") { %>
     <%}else if (page == "") { %>
     <% } %>
@@ -33,11 +37,12 @@ var data = jsonData
 <% classAdd = page == 'main' ? 'page-main' : '' %>
 <body class="<%= classAdd %>">
 
-<!-- [s]contents -->
-
 <!-- header:: main menu -->
 <% include ../_include/_contentHeader %>
 <!-- .header:: main menu -->
+
+
+<!-- [s]contents -->
 
 
     
