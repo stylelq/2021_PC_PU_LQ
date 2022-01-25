@@ -1,0 +1,49 @@
+//우측 하단 픽시드 컨텐츠
+.cart-fix{
+	position: fixed;
+	bottom:calcRem(27rem);
+	right:calcRem(20rem);
+	z-index: $fixBox;
+	transition-property: opacity, visibility;
+	transition-duration: 0.1s;
+	opacity: 0;
+	visibility: hidden;
+
+	&.is-up{
+		bottom:calcRem(73rem);
+	}
+
+	&.is-view{
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__add{
+		width:calcRem(36rem);
+		height:calcRem(30rem);
+		margin-top:calcRem(20rem);
+		@include background('/images/common/ico-card-fix.png','no-repeat center center / contain');
+		background-size: calcRem(36rem) calcRem(30rem);
+		position: relative;
+		display: block;
+
+		&--count{
+			position: absolute;
+			left:0;
+			right:0;
+			text-align: center;
+			@include vertical-center;
+			font-size:calcRem(10rem);
+			color:$point1;
+			line-height:calclH(16,10);
+		}
+	}
+
+	&__top{
+		width:calcRem(30rem);
+		height:calcRem(30rem);
+		margin:calcRem(15rem) auto 0;
+		@include background('/images/common/ico_btn_top.png','no-repeat center center / contain');
+		background-size: calcRem(30rem) calcRem(30rem);
+	}
+}
