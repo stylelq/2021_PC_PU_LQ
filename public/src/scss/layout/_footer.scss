@@ -1,12 +1,13 @@
-//Footer
+@import "../base/variables";
+@import "../base/mixins";
+
+//footer
 .footer {
   position: relative;
-  padding: calcRem(30rem) calcRem(30rem);
-  text-align: center;
-  box-sizing: border-box;
   background-color: $bgColor;
-  margin-top: auto;
   border-top: 1px solid #484848;
+  text-align: center;
+  overflow: hidden;
 
   &__layout{
     min-width: 1200px;
@@ -15,17 +16,20 @@
   &__wrap{
     position: relative;
     width: 100%;
-    display: flex;
+    display: block;
+    padding: calcRem(30rem) calcRem(30rem);
   }
 
   &__left{
-    flex: 1;
-    //width: calcRem(904rem);
+    float: left;
+    display: inline-block;
     text-align: left;
   }
 
   &__right{
-    //padding-right: calcRem(170rem);
+    float: right;
+    display: inline-block;
+    width: 20%;
     text-align: left;
   }
 
@@ -47,14 +51,14 @@
     position: relative;
     padding-bottom: calcRem(20rem);
     width: 100%;
-    font-size: calcRem(11rem);
+    font-size: calcRem(14rem);
+    font-weight: 400;
     color: $black1;
   }
 
   &__link {
     display: block;
     padding: calcRem(2rem) 0;
-    @include body2();
     &:after{
       content: '';
       right: 0;
@@ -73,18 +77,21 @@
   }
 
   &__copy {
-    margin-top: calcRem(22rem);
-    @include body4();
+    padding: calcRem(22rem) calcRem(50rem);
+    font-size: calcRem(12rem);
+    font-weight: 300;
+    line-height: calcRem(35rem);
   }
 
-  &__txt {
+  &__info{
     margin-top: calcRem(18rem);
-    @include body3();
+    color: #484848;
     line-height: calcRem(40rem);
-    color: $darkgray;
-
-    & + & {
-      margin-top: calcRem(16rem);
+    font-size: calcRem(14rem);
+    font-weight: 300;
+    line-height: calcRem(40rem);
+    &--underline{
+        text-decoration: underline;
     }
   }
 }
@@ -93,10 +100,11 @@
 .footer-sns{
   width: 100%;
   display: inline-block;
+  border-top: 1px solid #cbcbcb;
   $this:&;
   &__list{
     margin:0;
-    padding:0;
+    padding-top:calcRem(35rem);
     font-size:0;
   }
   &__item{

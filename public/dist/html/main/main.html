@@ -6,8 +6,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no, address=no, email=no">
     <meta property="og:type" content="website">
     <meta property="og:title" content="루이가또즈">
@@ -30,11 +28,13 @@
     <div class="dim"></div>
     <div class="header">
         <div class="header-wrap">
+            <div class="header-wrap__top">
             <!--로고-->
             <a href="" class="header-wrap__logo">
                 <img src="../../images/common/logo.png" alt="louis quatorze" class="img-w100 header__black">
             </a>
             <!--//로고-->
+
             <!--우측메뉴-->
             <div class="header-wrap__right">
                 <a href="#;" class="header__btn type-search js-search-btn">
@@ -48,6 +48,7 @@
                 </a>
             </div>
             <!--//우측메뉴-->
+            </div>
 
             <!--네비게이션-->
             <div class="gnb">
@@ -369,9 +370,8 @@
 
 <div class="section-body">
     <div class="main">
-        <div class="main-slide__video">
-            <video style="width:auto;height:100%;display:block;" src="https://cdn.louisclub.com/static/upload/display/2021/12/30/d656883d-017e-421f-80e6-7689b6fbf612.mp4" alt="#" poster="https://cdn.louisclub.com/static/upload/display/2021/12/30/69a3942e-b0c2-41e7-bb80-94be72bc25a9.jpg" loop="" muted="muted" playsinline="" autoplay="">
-            </video>
+        <div class="main-slide__img">
+            <img style="display: block;" src="https://cdn.louisclub.com/static/upload/display/2022/01/20/ba16a0fd-8dbc-4be5-9033-25961542400c.jpg" alt=""/>
         </div>
     </div>
 </div>
@@ -385,12 +385,15 @@
             <!--왼쪽 영역-->
             <div class="footer__left">
                 <img src="../../images/common/icon_footer_logo.png" class="footer__logo" alt="루이까또즈">
-                <p class="footer__txt">
+                <p class="footer__info">
                     (주)크리에이션엘  ㅣ  대표이사 전상우 신경민 ㅣ  서울시 동대문구 하정로 26<br>
                     국내사업자등록번호 211-81063749  사업자 정보 확인  ㅣ 통신판매업신고 제 2011-서울동대문구-0019호<br>
                     고객센터 080-599-1414   A/S문의 080-725-7272<br>
                     월-금 9:30 -18:00 (공휴일 휴무)  점심 12:00-13:00<br>
-                    소비자피해 보상법 고객님은 안전거래를 위해 현금 결제시 저희사이트에서 가입한 구매안전 서비스를 이용하실 수 있습니다. 서울보증보험 가입 확인
+                    소비자피해 보상법 고객님은 안전거래를 위해 현금 결제시 저희사이트에서 가입한 구매안전 서비스를 이용하실 수 있습니다.
+                    <span class="footer__info--underline">
+                        <a href="#;" class="footer__info--link">서울보증보험 가입 확인</a>
+                    </span>
                 </p>
             </div>
             <!--//왼쪽 영역-->
@@ -420,10 +423,14 @@
             </div>
             <!--오른쪽 영역-->
         </div>
+        <!--sns채널-->
         <div class="footer-sns">
             <ul class="footer-sns__list">
                 <li class="footer-sns__item type-facebook">
                     <a href="" class="footer-sns__link">facebook</a>
+                </li>
+                <li class="footer-sns__item type-post">
+                    <a href="" class="footer-sns__link">post</a>
                 </li>
                 <li class="footer-sns__item type-instagram">
                     <a href="" class="footer-sns__link">instagram</a>
@@ -431,14 +438,13 @@
                 <li class="footer-sns__item type-youtube">
                     <a href="" class="footer-sns__link">youtube</a>
                 </li>
-                <li class="footer-sns__item type-post">
-                    <a href="" class="footer-sns__link">post</a>
-                </li>
                 <li class="footer-sns__item type-talk">
                     <a href="" class="footer-sns__link">talk</a>
                 </li>
             </ul>
         </div>
+        <!--//sns채널-->
+
         <div class="footer__copy">
             COPYRIGHT LOUIS QUATORZE. ALL RIGHTS RESERVED.
         </div>

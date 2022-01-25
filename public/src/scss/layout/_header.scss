@@ -1,3 +1,6 @@
+@import "../base/variables";
+@import "../base/mixins";
+
 //Header
 .dim{
   display: none;
@@ -18,6 +21,7 @@
   left: 0;
   right: 0;
   min-width: 1200px;
+  height: calcRem(120rem);
   text-align: center;
   transform: translateY(0);
   transition: transform 0.3s;
@@ -30,7 +34,10 @@
 
   &-wrap{
     display: block;
-    padding-top: calcRem(30rem);
+    //padding-top: calcRem(30rem);
+    &__top{
+      padding: calcRem(30rem) 0 calcRem(28rem);
+    }
     //로고
     &__logo {
       display: inline-block;
@@ -52,7 +59,7 @@
 
   //네비
   .gnb{
-    /*font-size: 0;*/
+    //padding-bottom: calcRem(12rem);
   }
   .gnb-1depth{
     &__list{
@@ -63,11 +70,12 @@
     }
     &__item{
       display: inline-block;
-      padding: calcRem(12rem) calcRem(36rem) calcRem(12rem);
+      padding: 0 calcRem(36rem);
       list-style: none;
       vertical-align: top;
       box-sizing: border-box;
-
+      font-size: calcRem(16rem);
+      font-weight: 400;
     }
     &__inner{
       font-size: calcRem(14rem);
