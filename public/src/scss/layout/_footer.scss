@@ -8,6 +8,10 @@
   margin-top: auto;
   border-top: 1px solid #484848;
 
+  &__layout{
+    min-width: 1200px;
+  }
+
   &__wrap{
     position: relative;
     width: 100%;
@@ -21,6 +25,7 @@
   }
 
   &__right{
+    //padding-right: calcRem(170rem);
     text-align: left;
   }
 
@@ -34,14 +39,15 @@
     padding: 0;
     list-style: none;
     font-size: 0;
-    max-width: $tabletMax;
+    max-width: calcRem(155rem);
   }
 
   &__item {
     display: inline-block;
+    position: relative;
     padding-bottom: calcRem(20rem);
     width: 100%;
-    font-size: 11px;
+    font-size: calcRem(11rem);
     color: $black1;
   }
 
@@ -51,6 +57,8 @@
     @include body2();
     &:after{
       content: '';
+      right: 0;
+      position: absolute;
       display: inline-block;
       width: calcRem(5rem);
       height: calcRem(10rem);
