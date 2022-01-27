@@ -14,6 +14,7 @@ jQuery(function(){
             var depth = $(this).attr('data-depth');
             if(depth != 1){
                 $('.dim').addClass('is-active');
+                $('.gnb').addClass('is-active');
             }
             $(this).addClass('is-active');
             $('.header').addClass('is-active');
@@ -25,6 +26,7 @@ jQuery(function(){
                 $('.header').removeClass('is-active');
                 if (depth != 1) {
                     $('.dim').removeClass('is-active');
+                    $('.gnb').removeClass('is-active');
                 }
             }
         });

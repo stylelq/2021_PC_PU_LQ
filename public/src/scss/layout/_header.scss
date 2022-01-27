@@ -38,7 +38,6 @@
 
   &-wrap{
     display: block;
-    //padding-top: calcRem(30rem);
     &__top{
       padding: calcRem(30rem) 0 calcRem(28rem);
     }
@@ -63,7 +62,11 @@
 
   //네비
   .gnb{
-    //padding-bottom: calcRem(12rem);
+    font-size: 0;
+    &.is-active{
+      width: 100%;
+      background-color: #fff;
+    }
   }
   .gnb-1depth{
     &__list{
@@ -73,6 +76,7 @@
       padding: 0;
     }
     &__item{
+      position: relative;
       display: inline-block;
       padding: 0 calcRem(36rem);
       list-style: none;
@@ -98,9 +102,32 @@
   .gnb-2depth{
     &__list{
       display: none;
+      position: absolute;
+      padding-top: calcRem(46rem);
       &.is-active{
         display: block;
+        background-color: #fff;
       }
+    }
+    &__item{
+      float: left;
+      display: inline-block;
+      width: calcRem(200rem);
+      text-align: left;
+    }
+    &__inner{
+      font-size: calcRem(14rem);
+      font-weight: 500;
+    }
+  }
+
+  .gnb-3depth{
+    &__list{
+      padding-top: calcRem(38rem);
+      font-weight: 400;
+    }
+    &__item{
+      padding-bottom: calcRem(15rem);
     }
   }
 }
