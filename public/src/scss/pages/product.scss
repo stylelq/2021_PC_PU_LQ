@@ -3,7 +3,7 @@
 
 // 공통
 .product{
-    min-width: 1200px;
+    min-width: calcRem($minWidth);
     margin: auto;
 }
 
@@ -20,31 +20,56 @@
     }
 }
 
+// tab
+.product-tab{
+    min-width:calcRem($minWidth);
+    margin: auto;
+    margin-bottom: calcRem($sitePadding);
+    box-sizing: border-box;
+
+    &__fix{
+        @include flexWrap;
+        @include flex-alignItem;
+        @include flex-justifyCenter;
+    }
+    &__item{
+        margin:0 calcRem(15rem);
+        @include body1;
+
+        &.is-current{
+            font-weight:$medium;
+            position: relative;
+
+            &:after{
+                position:absolute;
+                left:-1%;
+                bottom:-2px;
+                width:102%;
+                height:1px;
+                background-color:#000;
+                content:'';
+            }
+        }
+    }
+
+}
 
 //product Post Layout
 .product-post{
     $this:&;
-    // overflow: hidden;
-    // margin-top:calcRem($productTopMargin);
+
     padding: calcRem(20rem);
     box-sizing: border-box;
 
     &__list{
-        // overflow: hidden;
         margin:calcRem(-20rem) 0;
-
-        @include flexWrap-prefix;
+        @include flexWrap;
     }
 
     &__item{
         padding:calcRem(20rem) 0;
         #{$this}--post &{
             width:33.33%;
-            // float:left;
-
-            // &:nth-child(odd){
-            //     clear: both;
-            // }
         }
 
         #{$this}--list &{
@@ -64,6 +89,12 @@
 //product Post Item
 .product-item{
     $this:&;
+    position: relative;
+
+    &:hover .product-icon{
+        opacity: 1;
+        .product-icon__hover{ transform: rotateX(0); }
+    }
 
     &__link{
         position: relative;
@@ -177,6 +208,10 @@
     }
 }
 
+.product-tab__info:not(:nth-child(2)){
+    display: none;
+}
+
 //product top banner
 .product-banner{
     margin-bottom:calcRem(20rem);
@@ -209,6 +244,28 @@
 }
 
 
+// product bottom banner
+.product-banner-btm{
+    width: calcRem($minWidth);
+    margin:120px auto 0;
 
+    &__list{
+        padding: 0;
+        font-size: 0;
+        letter-spacing: 0;
+    }
+    &__item{
+        display: inline-block;
+        width: 400px;
+        box-sizing: border-box;
+        overflow: hidden;
+        text-align: center;
+    }
+    &__txt{
+        margin-top: 15px;
+        font-size: 0;
+        @include title2;
+    }
+}
 
 

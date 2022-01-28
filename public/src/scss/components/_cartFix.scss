@@ -1,7 +1,7 @@
 //우측 하단 픽시드 컨텐츠
 .cart-fix{
 	position: fixed;
-	bottom:calcRem(27rem);
+	bottom:calcRem(50rem);
 	right:calcRem(20rem);
 	z-index: $fixBox;
 	transition-property: opacity, visibility;

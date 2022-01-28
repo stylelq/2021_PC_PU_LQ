@@ -2,7 +2,7 @@
 	type = "product"
 	page = "product"
     popup = "false"
-    noSort = "true"   
+    noSort = "false"   
 %>
 <% include ../_include/_header %>
 
@@ -16,10 +16,19 @@
                         <a href="#" class="product-tab__link js-basic-tab-link">ALL</a>
                     </li>
                     <li class="product-tab__item">
-                        <a href="#" class="product-tab__link js-basic-tab-link">BAG</a>
+                        <a href="#" class="product-tab__link js-basic-tab-link">숄더백 </a>
                     </li>
                     <li class="product-tab__item">
-                        <a href="#" class="product-tab__link js-basic-tab-link">WALLET</a>
+                        <a href="#" class="product-tab__link js-basic-tab-link">토트백</a>
+                    </li>
+                    <li class="product-tab__item">
+                        <a href="#" class="product-tab__link js-basic-tab-link">크로스백</a>
+                    </li>
+                    <li class="product-tab__item">
+                        <a href="#" class="product-tab__link js-basic-tab-link">미니백/클러치백</a>
+                    </li>
+                    <li class="product-tab__item">
+                        <a href="#" class="product-tab__link js-basic-tab-link">백팩</a>
                     </li>
                 </ul>
             </div>
@@ -159,9 +168,33 @@
             </div>
             <!-- .컨텐츠 -->
 
+            <!-- 하단 배너 -->
+            <div class="product-banner-btm">
+                <ul class="product-banner-btm__list">
+                    <li class="product-banner-btm__item">
+                        <a href="" class="product-banner-btm__link">
+                            <div class="product-banner-btm__img"><img src="../../images/dummy/list_banner1.png" alt=""></div>
+                            <p class="product-banner-btm__txt">Adieu 2021, 20%</p>
+                        </a>
+                    </li>
+                    <li class="product-banner-btm__item">
+                        <a href="" class="product-banner-btm__link">
+                            <div class="product-banner-btm__img"><img src="../../images/dummy/list_banner2.png" alt=""></div>
+                            <p class="product-banner-btm__txt">D-Quilting</p>
+                        </a>
+                    </li>
+                    <li class="product-banner-btm__item">
+                        <a href="" class="product-banner-btm__link">
+                            <div class="product-banner-btm__img"><img src="../../images/dummy/list_banner3.png" alt=""></div>
+                            <p class="product-banner-btm__txt">Present For Men</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- //하단 배너 -->
         </section>
     </div>
 </div>
-<% include ../_include/_cartFix %>
 <% include ../_include/_contentFooter %>
+<% include ../_include/_cartFix %>
 <% include ../_include/_footer %>

@@ -15,7 +15,7 @@
   }
 }
 
-@mixin flexWrap-prefix {
+@mixin flexWrap {
   display: -webkit-flex; display: -moz-flex; display: -o-flexbox; display: -ms-flexbox;//ie10+ 
   display: flex;
 
