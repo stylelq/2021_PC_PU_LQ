@@ -44,9 +44,9 @@
     //로고
     &__logo {
       display: inline-block;
-      width: 212px;
-      height: 36px;
-      margin: 0 0 0px;
+      width: calcRem(212rem);
+      height: calcRem(36rem);
+      margin: 0;
     }
     //우측메뉴
     &__right{
@@ -82,13 +82,12 @@
       list-style: none;
       vertical-align: top;
       box-sizing: border-box;
-      font-size: calcRem(16rem);
+      font-size: calcRem(14rem);
       font-weight: 400;
       &.is-active{
         .gnb-2depth__list{
-          position: relative;
-          width: 100%;
-          display: block;
+          position: absolute;
+          display: flex;
           background-color: #fff;
         }
       }
@@ -108,11 +107,30 @@
         display: block;
         background-color: #fff;
       }
+      &:after, &:before{
+        top: 0;
+        display: block;
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        background-color: #fff;
+        content: "";
+      }
+      &:before{
+        left: -100vw;
+      }
+      &:after{
+        right: -100vw;
+      }
+    }
+    &__item + &__item{
+      margin-left: calcRem(100rem);
     }
     &__item{
-      float: left;
-      display: inline-block;
       width: calcRem(200rem);
+      display: inline-block;
+      list-style: none;
+      vertical-align: top;
       text-align: left;
     }
     &__inner{
