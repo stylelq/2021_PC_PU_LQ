@@ -1,0 +1,116 @@
+//Search
+.search{
+  position:fixed;
+  top:-100%;
+  left:0;
+  width:100%;
+  height:calcRem(420rem);
+  background:#fff;
+  transition: top 0.3s;
+  z-index:$searchZindex;
+
+  &.is-active{
+    top:calcRem(88rem);
+  }
+
+  &__wrap{
+    overflow:auto;
+    margin: 0 auto;
+    width: calcRem(510rem);
+    height:auto;
+    padding-top: calcRem(20rem);
+    box-sizing:border-box;
+  }
+
+  &__btn{
+    overflow:hidden;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    margin:auto 0;
+    text-indent:-9999px;
+    width:calcRem(22rem);
+    height:calcRem(18rem);
+    border:none;
+    @include background('/images/common/icon_search_big.png','no-repeat center center / contain')
+  }
+
+  &__input{
+    display:flex;
+    width:100% ;
+    height:calcRem(36rem) ;
+    padding-right:2rem;
+    align-items: center;
+    border:none ;
+    background-color:transparent ;
+    border-bottom:1px solid $black1;
+    font-size:18px;
+    outline:0;
+    &::placeholder{
+      color:#878686 ;
+    }
+  }
+
+  &__group{
+    position:relative;
+  }
+
+  &__close{
+    overflow:hidden;
+    position:absolute;
+    top:15px;
+    right:calcRem($sitePadding);
+    display:block;
+    width:calcRem(15rem);
+    height:calcRem(14rem);
+    text-indent:-9999px;
+    @include background('/images/common/search_close.png','no-repeat center center / contain');
+  }
+
+  &__box{
+    float: left;
+    display: inline-block;
+    width: 50%;
+    margin-top:calcRem(40rem);
+  }
+
+  &__tit{
+    display:flex;
+    height:calcRem(40rem);
+    align-items: center;
+    margin:0;
+    @include title2();
+    color:$black1;
+  }
+
+  &__list{
+    margin:0;
+    padding:0;
+  }
+
+  &__item{
+    list-style:none;
+  }
+
+  &__link{
+    display:flex;
+    position:relative;
+    height:calcRem(30rem);
+    padding-left:calcRem(18rem);
+    box-sizing:border-box;
+    // @include body2();
+    @include body3();
+    align-items: center;
+
+    &:before{
+      position:absolute;
+      left:0;
+      top:calcRem(10rem);
+      display:block;
+      width:calcRem(10rem);
+      height:calcRem(10rem);
+      @include background('/images/common/icon_search_small.png','no-repeat center center / contain'); content:'';
+    }
+  }
+}

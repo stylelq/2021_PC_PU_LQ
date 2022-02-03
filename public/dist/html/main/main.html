@@ -25,7 +25,6 @@
 </head>
 
 <body class="page-main">
-    <div class="dim"></div>
     <div class="header">
         <div class="header-wrap">
             <div class="header-wrap__top">
@@ -37,13 +36,13 @@
 
             <!--우측메뉴-->
             <div class="header-wrap__right">
-                <a href="#;" class="header__btn type-search js-search-btn">
+                <a href="#;" class="header__btn type-search js-search-open">
                     <img src="../../images/common/search.png" class="header__black" alt="">
                 </a>
-                <a href="#;" class="header__btn type-login js-search-open">
+                <a href="#;" class="header__btn type-login js-search-btn">
                     <img src="../../images/common/login.png" class="header__black" alt="">
                 </a>
-                <a href="#;" class="header__btn type-cart js-search-open">
+                <a href="#;" class="header__btn type-cart js-search-btn">
                     <img src="../../images/common/cart.png" class="header__black" alt="">
                 </a>
             </div>
@@ -354,12 +353,12 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="gnb-2depth__item">
+                            <!--<li class="gnb-2depth__item">
                                 <a href="" class="gnb-2depth__inner">FIND YOUR LIGHT-GROOVY ROOM</a>
                             </li>
                             <li class="gnb-2depth__item">
                                 <a href="" class="gnb-2depth__inner">COLLABORATION</a>
-                            </li>
+                            </li>-->
                         </ul>
                     </li>
                 </ul>
@@ -367,6 +366,42 @@
             <!--//네비게이션-->
     </div>
 </div>
+    <div class="dim"></div>
+    <div class="search">
+        <div class="search__wrap">
+            <a href="" class="search__close js-search-close">close</a>
+            <form id="" name="" class="form-inline" method="post" action="">
+                <div class="search__group">
+                    <label class="sr-only" for="keyword">검색</label>
+                    <input type="text" class="search__input" name="keyword" id="keyword" autocomplete="off" placeholder="Search"
+                           required="">
+                    <button type="submit" class="search__btn type-submit">검색</button>
+                </div>
+            </form>
+            <div class="search__box">
+                <p class="search__tit">TREND</p>
+                <ul class="search__list">
+                    <li class="search__item"><a href="" class="search__link">뮤트컬러템</a></li>
+                    <li class="search__item"><a href="" class="search__link">엘퀼팅</a></li>
+                    <li class="search__item"><a href="" class="search__link">무드아이템</a></li>
+                    <li class="search__item"><a href="" class="search__link">카드지갑</a></li>
+                    <li class="search__item"><a href="" class="search__link">여성반지갑</a></li>
+                </ul>
+            </div>
+            <div class="search__box">
+                <p class="search__tit">RECOMMEND</p>
+                <ul class="search__list">
+                    <li class="search__item"><a href="" class="search__link">라라지갑</a></li>
+                    <li class="search__item"><a href="" class="search__link">미니 캐비어</a></li>
+                    <li class="search__item"><a href="" class="search__link">L-QUILTING MINI</a></li>
+                    <li class="search__item"><a href="" class="search__link">PARIS COLLECTION</a></li>
+                    <li class="search__item"><a href="" class="search__link">HERITAGE</a></li>
+                    <li class="search__item"><a href="" class="search__link">CHEESE</a></li>
+                    <li class="search__item"><a href="" class="search__link">MINI MONTE</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 
 <div class="section-body">
