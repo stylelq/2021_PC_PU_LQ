@@ -26,7 +26,8 @@ var data = jsonData
     <% } %>
 </head>
 
-<body class="page-main">
+<% classAdd = page == 'main' ? 'page-main' : '' %>
+<body class="<%= classAdd %>">
     <div class="dim"></div>
     <div class="header">
         <div class="header-wrap">
