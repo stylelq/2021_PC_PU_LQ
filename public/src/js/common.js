@@ -40,14 +40,13 @@ jQuery(function(){
             $('.search').addClass('is-active');
             $('.type-search').addClass('is-active');
             $('html').addClass('is-hidden');
-        })
+        });
 
         //헤더 서치박스 닫기
         $('.js-search-close').off('click').on('click', function (e) {
             e.preventDefault();
             $('.type-search').removeClass('is-active');
             $('html').removeClass('is-hidden');
-        })
-
+        });
     });
 });
