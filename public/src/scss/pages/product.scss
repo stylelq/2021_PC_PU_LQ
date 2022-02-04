@@ -253,13 +253,13 @@
         padding: 0;
         font-size: 0;
         letter-spacing: 0;
+        text-align: center;
     }
     &__item{
         display: inline-block;
-        width: 400px;
+        width: 33.3333%;
         box-sizing: border-box;
         overflow: hidden;
-        text-align: center;
     }
     &__txt{
         margin-top: 15px;
