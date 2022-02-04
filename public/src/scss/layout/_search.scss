@@ -1,7 +1,8 @@
 //Search
 .search{
+  display: none;
   position:fixed;
-  top:-100%;
+  //top:-100%;
   left:0;
   width:100%;
   height:calcRem(420rem);
@@ -10,6 +11,7 @@
   z-index:$searchZindex;
 
   &.is-active{
+    display: block;
     top:calcRem(88rem);
   }
 
@@ -99,16 +101,16 @@
     height:calcRem(30rem);
     padding-left:calcRem(18rem);
     box-sizing:border-box;
-    // @include body2();
-    @include body3();
     align-items: center;
+    font-size: calcRem(14rem);
+    font-weight: 300;
 
     &:before{
       position:absolute;
       left:0;
       top:calcRem(10rem);
       display:block;
-      width:calcRem(10rem);
+      width:calcRem(12rem);
       height:calcRem(10rem);
       @include background('/images/common/icon_search_small.png','no-repeat center center / contain'); content:'';
     }
