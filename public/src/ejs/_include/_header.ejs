@@ -26,7 +26,9 @@ var data = jsonData
     <% } %>
 </head>
 
-<body class="page-main">
+<% classAdd = page == 'main' ? 'page-main' : '' %>
+<body class="<%= classAdd %>">
+    <div class="dim"></div>
     <div class="header">
         <div class="header-wrap">
             <div class="header-wrap__top">
@@ -38,13 +40,13 @@ var data = jsonData
 
             <!--우측메뉴-->
             <div class="header-wrap__right">
-                <a href="#;" class="header__btn type-search js-search-open">
+                <a href="#;" class="header__btn type-search js-search-btn">
                     <img src="../../images/common/search.png" class="header__black" alt="">
                 </a>
-                <a href="#;" class="header__btn type-login">
+                <a href="#;" class="header__btn type-login js-search-open">
                     <img src="../../images/common/login.png" class="header__black" alt="">
                 </a>
-                <a href="#;" class="header__btn type-cart">
+                <a href="#;" class="header__btn type-cart js-search-open">
                     <img src="../../images/common/cart.png" class="header__black" alt="">
                 </a>
             </div>
@@ -163,9 +165,6 @@ var data = jsonData
                                 <a href="" class="gnb-2depth__inner">SEASON ITEM</a>
                                 <ul class="gnb-3depth__list">
                                     <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">ALL</a>
-                                    </li>
-                                    <li class="gnb-3depth__item">
                                         <a href="" class="gnb-3depth__inner">스카프</a>
                                     </li>
                                     <li class="gnb-3depth__item">
@@ -183,9 +182,6 @@ var data = jsonData
                                 <a href="" class="gnb-2depth__inner">BELT</a>
                                 <ul class="gnb-3depth__list">
                                     <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">ALL</a>
-                                    </li>
-                                    <li class="gnb-3depth__item">
                                         <a href="" class="gnb-3depth__inner">벨트</a>
                                     </li>
                                     <li class="gnb-3depth__item">
@@ -197,16 +193,13 @@ var data = jsonData
                                 <a href="" class="gnb-2depth__inner">ETC</a>
                                 <ul class="gnb-3depth__list">
                                     <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">ALL</a>
-                                    </li>
-                                    <li class="gnb-3depth__item">
                                         <a href="" class="gnb-3depth__inner">키링</a>
                                     </li>
                                     <li class="gnb-3depth__item">
                                         <a href="" class="gnb-3depth__inner">키지갑</a>
                                     </li>
                                     <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">휴대폰케이스</a>
+                                        <a href="" class="gnb-3depth__inner">휴대폰케잇,</a>
                                     </li>
                                     <li class="gnb-3depth__item">
                                         <a href="" class="gnb-3depth__inner">반지갑</a>
@@ -225,36 +218,45 @@ var data = jsonData
                         <a href="" class="gnb-1depth__inner">OÀLC</a>
                         <ul class="gnb-2depth__list">
                             <li class="gnb-2depth__item">
-                                <a href="" class="gnb-2depth__inner">APPAREL</a>
+                                <a href="" class="gnb-2depth__inner">BAG</a>
                                 <ul class="gnb-3depth__list">
                                     <li class="gnb-3depth__item">
                                         <a href="" class="gnb-3depth__inner">ALL</a>
                                     </li>
                                     <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">아우터</a>
+                                        <a href="" class="gnb-3depth__inner">서류가방</a>
                                     </li>
                                     <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">상의</a>
+                                        <a href="" class="gnb-3depth__inner">토트백/클러치백</a>
                                     </li>
                                     <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">하의</a>
+                                        <a href="" class="gnb-3depth__inner">크로스백</a>
                                     </li>
                                     <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">모자</a>
-                                    </li>
-                                    <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">양말</a>
+                                        <a href="" class="gnb-3depth__inner">백팩</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="gnb-2depth__item">
-                                <a href="" class="gnb-2depth__inner">LIFE</a>
+                                <a href="" class="gnb-2depth__inner">WALLET</a>
                                 <ul class="gnb-3depth__list">
                                     <li class="gnb-3depth__item">
                                         <a href="" class="gnb-3depth__inner">ALL</a>
                                     </li>
                                     <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">에그 플레이트</a>
+                                        <a href="" class="gnb-3depth__inner">장지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">중지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">반지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">머니클립</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">카드, 명함지갑</a>
                                     </li>
                                 </ul>
                             </li>
@@ -318,49 +320,48 @@ var data = jsonData
                         <a href="" class="gnb-1depth__inner">PROJECT</a>
                         <ul class="gnb-2depth__list">
                             <li class="gnb-2depth__item">
-                                <a href="" class="gnb-2depth__inner">FIND YOUR LIGHT-SPECTRUM</a>
+                                <a href="" class="gnb-2depth__inner">BAG</a>
                                 <ul class="gnb-3depth__list">
                                     <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">ABOUT</a>
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
                                     </li>
                                     <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">연슬</a>
+                                        <a href="" class="gnb-3depth__inner">서류가방</a>
                                     </li>
                                     <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">김정섭</a>
+                                        <a href="" class="gnb-3depth__inner">토트백/클러치백</a>
                                     </li>
                                     <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">스튜디오 차차</a>
+                                        <a href="" class="gnb-3depth__inner">크로스백</a>
                                     </li>
                                     <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">김현희</a>
-                                    </li>
-                                    <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">이학민</a>
-                                    </li>
-                                    <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">이시산</a>
-                                    </li>
-                                    <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">이채영</a>
-                                    </li>
-                                    <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">신다인</a>
-                                    </li>
-                                    <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">제로랩</a>
-                                    </li>
-                                    <li class="gnb-3depth__item">
-                                        <a href="" class="gnb-3depth__inner">김은학</a>
+                                        <a href="" class="gnb-3depth__inner">백팩</a>
                                     </li>
                                 </ul>
                             </li>
-                            <!--<li class="gnb-2depth__item">
-                                <a href="" class="gnb-2depth__inner">FIND YOUR LIGHT-GROOVY ROOM</a>
-                            </li>
                             <li class="gnb-2depth__item">
-                                <a href="" class="gnb-2depth__inner">COLLABORATION</a>
-                            </li>-->
+                                <a href="" class="gnb-2depth__inner">WALLET</a>
+                                <ul class="gnb-3depth__list">
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">ALL</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">장지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">중지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">반지갑</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">머니클립</a>
+                                    </li>
+                                    <li class="gnb-3depth__item">
+                                        <a href="" class="gnb-3depth__inner">카드, 명함지갑</a>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -368,39 +369,3 @@ var data = jsonData
             <!--//네비게이션-->
     </div>
 </div>
-    <div class="dim"></div>
-    <div class="search">
-        <div class="search__wrap">
-            <a href="" class="search__close js-search-close">close</a>
-            <form id="" name="" class="form-inline" method="post" action="">
-                <div class="search__group">
-                    <label class="sr-only" for="keyword">검색</label>
-                    <input type="text" class="search__input" name="keyword" id="keyword" autocomplete="off" placeholder="Search"
-                           required="">
-                    <button type="submit" class="search__btn type-submit">검색</button>
-                </div>
-            </form>
-            <div class="search__box">
-                <p class="search__tit">TREND</p>
-                <ul class="search__list">
-                    <li class="search__item"><a href="" class="search__link">뮤트컬러템</a></li>
-                    <li class="search__item"><a href="" class="search__link">엘퀼팅</a></li>
-                    <li class="search__item"><a href="" class="search__link">무드아이템</a></li>
-                    <li class="search__item"><a href="" class="search__link">카드지갑</a></li>
-                    <li class="search__item"><a href="" class="search__link">여성반지갑</a></li>
-                </ul>
-            </div>
-            <div class="search__box">
-                <p class="search__tit">RECOMMEND</p>
-                <ul class="search__list">
-                    <li class="search__item"><a href="" class="search__link">라라지갑</a></li>
-                    <li class="search__item"><a href="" class="search__link">미니 캐비어</a></li>
-                    <li class="search__item"><a href="" class="search__link">L-QUILTING MINI</a></li>
-                    <li class="search__item"><a href="" class="search__link">PARIS COLLECTION</a></li>
-                    <li class="search__item"><a href="" class="search__link">HERITAGE</a></li>
-                    <li class="search__item"><a href="" class="search__link">CHEESE</a></li>
-                    <li class="search__item"><a href="" class="search__link">MINI MONTE</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
