@@ -34,7 +34,6 @@ jQuery(function () {
         }
       }
     });
-<<<<<<< HEAD
     /*
     //Header Search
     */
@@ -51,9 +50,6 @@ jQuery(function () {
       $('.search').removeClass('is-active');
       $('html').removeClass('is-hidden');
     });
-  });
-});
-=======
   }); //--[플로팅버튼] ----------------
   //우측 하단 카트(cart-fix)
 
@@ -153,4 +149,3 @@ jQuery(function () {
 
   $(document).on('click', '.product-icon__link', productItem);
 }); //jQuery
->>>>>>> ad5afa40a070e64d5c87bfdcc4be91f5c29fb4f8

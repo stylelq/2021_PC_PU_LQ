@@ -3,7 +3,7 @@
 
 // 공통
 .product{
-    min-width: calcRem($minWidth);
+    width: calcRem($minWidth);
     margin: auto;
 }
 

@@ -2,6 +2,7 @@
 //layout
 .list-filter{
     border-bottom: 1px solid $gray2;
+    margin-bottom: 20px;
   
     &:after{
       @include block-reset;
@@ -16,6 +17,7 @@
 .filter__state{
     float:left;
     font-size: 12px;
+    margin-bottom: 10px;
 }
   
 //filter Select - custom
