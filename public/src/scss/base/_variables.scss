@@ -50,10 +50,10 @@ $bulletColor:#C4C4C4;
 
 //Font Family
 $font-kor:'noto-kr', Sans-Serif;
-// $defaultFont:'futura-pt','noto-kr', Sans-Serif, 'Malgun Gothic', '맑은 고딕', '맑은고딕', 'Dotum', '돋움';
 $defaultFont:'futura-pt','noto-kr', Sans-Serif, 'Malgun Gothic', '맑은 고딕', '맑은고딕', 'Dotum', '돋움';
 
-//layout
+// [mobile]
+// layout
 $sitePadding:20rem;
 $headerHeight:45rem;
 $topHeight:58rem;
@@ -63,6 +63,18 @@ $joinMarginText:10rem;
 $SiteMainMargin:20rem;
 $headerTotal: $headerHeight + $topHeight;
 $productTopMargin:40rem;
+
+// [2022-01-25 PC] 
+// layout 
+// pc에 맞춰 조정 및 추가, pc 어느정도 마무리 되면 겹치는 변수들은 
+// 위 변수에 아래 변수로 대체
+$headerHeight:120rem;
+$SiteMainMargin:60rem;
+$headerTotal: '';
+
+$minWidth : 1200rem;
+
+
 
 //z-index;
 $headerZindex:130;

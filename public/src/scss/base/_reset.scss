@@ -5,6 +5,7 @@ html,body{
   word-break: keep-all;
   color:$black1;
   font-family: $defaultFont;
+  position: relative;
 
   &.no-scroll{
     position:fixed;

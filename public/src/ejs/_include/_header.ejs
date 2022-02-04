@@ -22,11 +22,16 @@ var data = jsonData
     <link rel="stylesheet" href="../../css/common.css">
     <% if (page == "main") { %>
         <link rel="stylesheet" href="../../css/pages/main.css">
+    <%}else if (page == "product") { %>
+        <link rel="stylesheet" href="../../css/pages/product.css">
+    <%}else if (page == "") { %>
+    <%}else if (page == "") { %>
     <%}else if (page == "") { %>
     <% } %>
 </head>
 
-<body class="page-main">
+<% classAdd = page == 'main' ? 'page-main' : '' %>
+<body class="<%= classAdd %>">
     <div class="header">
         <div class="header-wrap">
             <div class="header-wrap__top">

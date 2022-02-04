@@ -1,0 +1,24 @@
+<!-- Product List Filter -->
+<% if(noSort === 'true') classAdd = 'noSorting' %>
+<div class="list-filter <%= classAdd %>">
+    <div class="wrap">
+        <div class="filter__state">
+            <span class="filter__state--tit">ALL</span> [<strong class="filter__state--data">50</strong>]
+        </div>
+        <div class="filter__meta">
+            <!-- Select -->
+            <div class="filter__meta--select">
+                <input type="text" value="" class="hidden-input is-hide">
+                <p class="filter-custom__selected"><span class="selected_text">Sorting</span></p>
+                <ul class="filter-custom__select">
+                    <li class="filter-custom__option"><a href="" class="filter-custom__link">New in</a></li>
+                    <li class="filter-custom__option"><a href="" class="filter-custom__link">Best</a></li>
+                    <li class="filter-custom__option"><a href="" class="filter-custom__link">Price low to high</a></li>
+                    <li class="filter-custom__option"><a href="" class="filter-custom__link">Price high to low</a></li>
+                </ul>
+            </div>
+            <!-- .Select -->
+        </div>
+    </div>
+</div>
+<!-- .Product List Filter -->
