@@ -102,10 +102,28 @@ jQuery(function(){
         var item = '[class $= __item]', //li
             tab = '[class $= -tab__fix]'; //ul
         $(this).closest(tab).children().removeClass('is-current');
-        $(this).parent().addClass('is-current');
+        $(this).parent(item).addClass('is-current');
     }
     $(document).on('click', '.js-basic-tab-link', basicTab);
 
+    //제품 상세 탭
+    function detailTab() {
+        var item = '[class $= __item]', //li
+            tab = '[class $= -tab__fix]', //ul
+            contents = $('.detail-tab__info'), //tab content
+            idx = $(this).parent().index();
+        $(this).closest(tab).children().removeClass('is-current');
+        $(this).parent(item).addClass('is-current');
+
+        contents.removeClass('is-current');
+        contents.eq(idx).addClass('is-current');
+        $('html').animate({scrollTop : contents.eq(idx).offset().top - 280 });
+    }
+    $(document).on('click', '.js-tab-link', detailTab);
+    
+
+
+    //--END[탭] ----------------------
 
 
 
@@ -165,6 +183,81 @@ jQuery(function(){
     }
     $(document).on('click','.product-icon__link',productItem);
 
+
+
+    //--[swiper slider] -------------------
+    if($('.detail-thumb').length > 0){
+        var detailThumbSlide = new Swiper('.detail-thumb__container', {
+            observer: true,
+            observeParents: true,
+            watchOverflow: true,
+            slidesPerView: 1,
+            pagination: {
+                el: ".detail-thumb__pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".detail-thumb--next",
+                prevEl: ".detail-thumb--prev",
+            },
+        });
+    }
+
+
+
+    //-------------------------------
+
+    
+
+
+    //--[Scroll]-------------------------
+    // 제품상세 option fix scroll
+    if( $('.detail').length > 0){
+        var sc = $(document).scrollTop(),
+            winH = $(window).height(),
+            div = $('.recommended').offset().top;
+
+        function positionAbsolute(){
+            $('.product-option-fix__wrap').css({ 
+                position: 'absolute',
+                bottom: 100
+            })
+        }
+        function positionFixed(){
+            $('.product-option-fix__wrap').css({ 
+                position: 'fixed',
+                bottom:'auto'
+            })
+        }
+
+        $(window).scroll(function () {
+            sc = $(document).scrollTop();
+            winH = $(window).height();
+            
+            if( $('.detail-tab__cont').height() > winH ){
+                sc - (div - winH) > 0 ? positionAbsolute() :  positionFixed();
+            }else{
+               
+                // div - winH > (div - sc) ? positionAbsolute() : positionFixed();
+                // positionAbsolute()
+            }
+
+            console.group('================')
+            console.log('scY : ', sc )
+            console.log('div : ', div )
+            console.log('-- sc - (div - winH) : ',  sc - (div - winH) )
+            console.log('div height : ', $('.detail-tab__cont').height() )
+            console.log('++ div - winH > div - sc : ',  $('.detail-tab__cont').height() - winH > div - sc )
+            console.groupEnd()
+        });
+
+        // $('.detail-tab__link').on('click',function(){
+        //     div - winH > (div - sc) ? positionAbsolute() : positionFixed();
+        // })
+    }
+    
+
+    //-------------------------------
 
 
 
