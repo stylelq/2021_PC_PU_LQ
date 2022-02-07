@@ -48,5 +48,6 @@ jQuery(function(){
             $('.type-search').removeClass('is-active');
             $('html').removeClass('is-hidden');
         });
+
     });
 });
