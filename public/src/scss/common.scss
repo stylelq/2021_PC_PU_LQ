@@ -5,15 +5,18 @@
 @import "base/reset";
 @import "base/rule";
 @import "layout/layout";
-@import "layout/_header";
-@import "layout/_footer";
-@import "layout/_search";
-/*@import "layout/gnb";
-@import "components/form";
-@import "components/depthHead";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/search";
+@import "layout/loading";
+// @import "components/form";
+// @import "components/depthHead";
+
+@import "components/productHoverButton";
 @import "components/productListFilter";
 @import "components/cartFix";
-@import "components/productFixButton";
-@import "components/cartFixButton";
+// @import "components/productFixButton";
+// @import "components/cartFixButton";
 @import "components/paging";
-@import "components/popup";*/
+// @import "components/popup";
+
