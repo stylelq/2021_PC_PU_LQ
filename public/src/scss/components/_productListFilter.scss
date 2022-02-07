@@ -11,6 +11,8 @@
     &.noSorting{
         .filter__meta{display: none;}
     }
+
+    .wrap{padding: 0;}
 }
   
 //filter state
@@ -37,8 +39,7 @@
             content: '';
             display: inline-block;
             width: 7px;height: 4px;
-            background: url('../../images/common/select_arrow.png') no-repeat center center / contain;
-            background-size: 100%;
+            @include background('/images/common/select_arrow.png','no-repeat center center / contain' );
         }
         &.is-active:after{
             transform: rotateZ(180deg);
