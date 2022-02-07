@@ -15,6 +15,22 @@
   }
 }
 
+@mixin flexWrap {
+  display: -webkit-flex; display: -moz-flex; display: -o-flexbox; display: -ms-flexbox;//ie10+ 
+  display: flex;
+
+  -webkit-flex-wrap: wrap; -moz-flex-wrap: wrap; -o-flex-wrap: wrap; -ms-flex-wrap: wrap;//ie10+ 
+  flex-wrap: wrap;
+}
+@mixin flex-alignItem {
+  -webkit-align-items: center;-moz-align-items: center;-o-align-items: center;-ms-flex-align: center;//ie10+
+  align-items: center;
+}
+@mixin flex-justifyCenter {
+  -webkit-justify-content: center;-moz-justify-content: center;-o-justify-content: center;-ms-flex-pack: center;//ie10+
+  justify-content: center;
+}
+
 //Px-> Rem
 @function calcRem($size){
   @return ($size/$defaultSize);

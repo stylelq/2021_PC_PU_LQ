@@ -1,0 +1,49 @@
+//Paging
+.paging{
+    margin-top:calcRem(45rem);
+    padding:0 calcRem(20rem);
+    text-align: center;
+    overflow: hidden;
+
+    //제품 상세 리뷰
+    .product-review__info &{
+        margin-top:calcRem(25rem);
+    }
+
+    &__list{
+        line-height:0;
+        overflow: hidden;
+        margin:calcRem(-4rem) calcRem(-3rem);
+    }
+
+    &__item{
+        display: inline-block;
+        vertical-align: middle;
+        padding:calcRem(4rem) calcRem(3rem);
+    }
+
+    &__link{
+        display:block;
+        font-size:calcRem(10rem);
+        width:calcRem(16rem);
+        line-height:calclH(16,10);
+        height:calcRem(16rem);
+        box-sizing: border-box;
+        border-radius: 100%;
+
+        .paging__item.is-current &{
+            background-color: $point1;
+            color:$whiteColor;
+        }
+
+        .paging__item--prev &{
+            @include background('/images/common/ico_paging_prev.png','no-repeat center center / contain');
+            background-size:calcRem(6rem) calcRem(10rem) ;
+        }
+
+        .paging__item--next &{
+            @include background('/images/common/ico_paging_next.png','no-repeat center center / contain');
+            background-size:calcRem(6rem) calcRem(10rem) ;
+        }
+    }
+}
