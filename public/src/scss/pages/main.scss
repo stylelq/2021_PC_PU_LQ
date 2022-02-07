@@ -15,8 +15,9 @@
   position: relative;
   display: block;
   padding-top: calcRem(180rem);
+  overflow: scroll;
   &__wrap{
-    min-width: calcRem(1200rem);
+    min-width: 1200px;
     text-align: center;
   }
   &__top{

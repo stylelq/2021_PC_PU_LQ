@@ -118,6 +118,9 @@
           position: absolute;
           display: flex;
           background-color: #fff;
+          &.align-right{
+            right: 0;
+          }
         }
       }
     }
@@ -131,7 +134,7 @@
     &__list{
       display: none;
       position: absolute;
-      padding-top: calcRem(46rem);
+      padding: calcRem(46rem) 0 calcRem(105rem);
       &.is-active{
         display: block;
         background-color: #fff;
