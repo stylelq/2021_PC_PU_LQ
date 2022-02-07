@@ -39,16 +39,17 @@ jQuery(function(){
         /*
         //Header Search
         */
-
         //헤더 검색박스 레이어 열고닫기
+        var status;
         function jsOpenSearchLayer(){
-            var status = $('.search').addClass('is-active');
-            if(status){
+            if(!status){
                 $('.search').addClass('is-active');
                 $('.type-search').addClass('is-active');
+                status = true;
             }else{
                 $('.search').removeClass('is-active');
                 $('.type-search').removeClass('is-active');
+                status = false;
             }
         }
         $('.js-search-open').on('click',jsOpenSearchLayer);
