@@ -1,13 +1,6 @@
 @import "../base/variables";
 @import "../base/mixins";
 
-// 공통
-.product{
-    width: calcRem($minWidth);
-    margin: auto;
-}
-
-
 .product-wrap{
     display: block;
 
@@ -22,9 +15,9 @@
 
 // tab
 .product-tab{
-    min-width:calcRem($minWidth);
+    width:calcRem($minWidth);
     margin: auto;
-    margin-bottom: calcRem(80rem);
+    margin-bottom: calcRem(50rem);
     box-sizing: border-box;
 
     &__fix{
@@ -52,6 +45,10 @@
         }
     }
 
+    &__cont{
+        width: calcRem($minWidth);
+        margin: calcRem(30rem) auto 0;
+    }
 }
 
 //product Post Layout
@@ -214,7 +211,7 @@
 
 //product top banner
 .product-banner{
-    margin-bottom:calcRem(20rem);
+    margin-bottom:calcRem(80rem);
     line-height:0;
     position: relative;
     overflow: hidden;
@@ -222,7 +219,7 @@
     &.product-banner--img:after{
         content:"";
         display: block;
-        padding-bottom:112%;
+        padding-bottom:47%;
     }
 
     &.product-banner--video:after{

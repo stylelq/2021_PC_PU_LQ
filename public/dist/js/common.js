@@ -1,5 +1,10 @@
 "use strict";
 
+//loading
+window.onload = function () {
+  $('.loading').hide();
+};
+
 jQuery(function () {
   $(document).ready(function () {
     var searchOpen = 'false'; //스크롤 시 헤더 배경 바뀜
@@ -84,9 +89,18 @@ jQuery(function () {
         bottom: height - (footY - winH) + 50
       });
     }
-  } //--[탭] ----------------------
-  //basic
+  } //스크롤탑 버튼
 
+
+  function scrollTopBtn() {
+    $('html, body').animate({
+      scrollTop: '0'
+    }, 340);
+  }
+
+  $(document).on('click', '.js-scrollTop', scrollTopBtn); //--END[플로팅버튼]----------------
+  //--[탭] ----------------------
+  //basic
 
   function basicTab() {
     var item = '[class $= __item]',
@@ -117,7 +131,8 @@ jQuery(function () {
           select = $(this).parent(),
           selBoxLabel = select.siblings('.filter-custom__selected');
       $('.filter-custom__option').removeClass('is-current');
-      $(this).addClass('is-current');
+      $(this).addClass('is-current'); // selected 
+
       $(this).parent().siblings('.hidden-input').val(value);
       selBoxLabel.find('.selected_text').text(value);
       selBoxLabel.removeClass('is-active');
@@ -129,7 +144,7 @@ jQuery(function () {
     return false;
   }
 
-  $(document).on('click', '.filter-custom__selected', customSelect);
+  $(document).on('click', '.filter-custom__selected', customSelect); //--END[select]--------------------------
 
   function productItem() {
     if ($(this).closest('.type-like').length > 0) {
