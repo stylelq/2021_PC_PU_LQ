@@ -24,7 +24,7 @@
 .product-tab{
     min-width:calcRem($minWidth);
     margin: auto;
-    margin-bottom: calcRem($sitePadding);
+    margin-bottom: calcRem(80rem);
     box-sizing: border-box;
 
     &__fix{
