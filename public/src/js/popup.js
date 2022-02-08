@@ -7,7 +7,7 @@ jQuery(function(){
             $('.popup').removeClass('is-active');
         }
         $('#' + el).addClass('is-active');
-        $('html').addClass('is-hidden');
+        // $('html').addClass('is-hidden');
         return false;
     }
     $(document).on('click', '.js-popup-open', openPopup);

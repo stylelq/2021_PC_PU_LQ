@@ -22,7 +22,7 @@
 
     &__fix{
         @include flexWrap;
-        @include flex-alignItem;
+        @include flex-alignCenter;
         @include flex-justifyCenter;
     }
     &__item{
@@ -88,9 +88,9 @@
     $this:&;
     position: relative;
 
-    &:hover .product-icon{
+    &:hover .product-icon__hover{
         opacity: 1;
-        .product-icon__hover{ transform: rotateX(0); }
+        transform: rotateX(0);
     }
 
     &__link{
@@ -99,7 +99,7 @@
     }
 
     &__state{
-        font-size:calcRem(10rem);
+        font-size:calcRem(12rem);
         line-height:calclH(16,10);
         font-weight: $medium;
         color:$point1;
@@ -193,6 +193,7 @@
 
         &--sale{
             @include body3;
+            font-weight: $regular;
             color:$throughColor;
             text-decoration: line-through;
             display:block;
