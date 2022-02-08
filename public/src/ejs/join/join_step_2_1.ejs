@@ -1,0 +1,28 @@
+<%
+type = "join"
+page = "join"
+popup = "false"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <div class="site-main">
+        <section class="join">
+            <div class="join__title">회원가입</div>
+            <div class="bbs-form"><!-- bbs-form -->
+                <div class="holder">
+                    <section class="join">
+                        <div class="join__wrap">
+                            <p class="join__info type-naver">
+                                네이버계정으로 가입합니다.<br>
+                                <span class="join__point">abcdefg@gmail.com</span>
+                            </p>
+                            <a onclick="infoSnsJoinStep2.checkPlusAccreditation();" class="join-box__btn btn-v1 type-primary">휴대폰 본인인증</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>

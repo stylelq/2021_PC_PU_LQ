@@ -1,8 +1,13 @@
 @import "../base/variables";
 @import "../base/mixins";
 
+.container{
+  overflow: scroll;
+}
+
 //회원가입
 .join{
+  min-width: calcRem(1200rem);
   box-sizing: border-box;
   text-align: center;
 
@@ -15,6 +20,7 @@
   &__info{
     position:relative;
     display:inline-block;
+    margin-bottom: calcRem(40rem);
     padding-left:calcRem(46rem);
     @include body3();
     box-sizing: border-box;
@@ -40,7 +46,7 @@
 
     &.type-email{
       &:before{
-        @include pageBackground('/images/join/email_icon.svg','no-repeat center center / contain')}
+        @include pageBackground('/images/join/email_icon.png','no-repeat center center / contain')}
     }
 
     &.type-payco{
@@ -59,8 +65,9 @@
     margin: 0 auto;
   }
 
-  &__point{
+  &__point {
     @include title1();
+    font-weight: 300;
   }
 
   &__point2{
@@ -68,7 +75,7 @@
   }
 
   &__tit{
-    margin:calcRem(28.5rem) 0 0 0;
+    margin: calcRem(28.5rem) 0 0 0;
     @include title1();
   }
 
@@ -179,11 +186,12 @@
 
   &__field{
     margin: 0 auto;
+    padding-bottom: calcRem(20rem);
     width: calcRem(400rem);
     position:relative;
     box-sizing: border-box;
 
-    //이메일 inputbox
+    //이메일 input box
     .input-v1{
       width: 100%;
       height: calcRem(38rem);
@@ -229,12 +237,12 @@
 
   &__btn{
     margin: 0 auto;
-    margin-top: calcRem(20rem);
     padding: calcRem(13rem) 0 calcRem(16rem);
     display: block;
     width: calcRem(400rem);
     color: #fff;
     background-color: $point1;
+    cursor: pointer;
   }
 
 }
