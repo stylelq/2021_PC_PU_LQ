@@ -1,3 +1,6 @@
+@import "../base/variables";
+@import "../base/mixins";
+
 //메인
 .main{
     &-slide{
@@ -6,3 +9,59 @@
       }
     }
 }
+<<<<<<< HEAD
+
+//검색결과
+.main-search{
+  position: relative;
+  display: block;
+  padding-top: calcRem(180rem);
+  overflow: scroll;
+  &__wrap{
+    min-width: 1200px;
+    text-align: center;
+  }
+  &__top{
+    display: block;
+  }
+  &__result{
+    font-size: calcRem(20rem);
+    font-weight: 400;
+    line-height: calcRem(32rem);
+  }
+  &__txt{
+    padding-top: calcRem(5rem);
+    font-size: calcRem(14rem);
+    font-weight: 300;
+  }
+  &__num{
+    color: #9B192F;
+  }
+  &__bottom{
+    position: relative;
+    padding: calcRem(60rem) 0;
+  }
+  &__list{
+    display: inline-block;
+  }
+  &__item + &__item{
+    margin-left: calcRem(10rem);
+  }
+  &__item{
+    float: left;
+    display: inline-block;
+    padding: calcRem(5rem) calcRem(8rem);
+    border: 1px solid #cbcbcb;
+    &.is-active{
+      color: #9B192F;
+      border: 1px solid #9B192F;
+    }
+  }
+  &__inner{
+    display: block;
+    font-size: calcRem(14rem);
+    font-weight: 300;
+  }
+}
+=======
+>>>>>>> b54035a0409b683c629cc8cac7f4ef7f32cf05cc

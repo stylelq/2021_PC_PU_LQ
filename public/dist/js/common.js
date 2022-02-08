@@ -42,20 +42,21 @@ jQuery(function () {
     /*
     //Header Search
     */
-    //헤더 서치박스 열기
+    //헤더 검색박스 레이어 열고닫기
 
-    $('.js-search-open').off('click').on('click', function (e) {
-      e.preventDefault();
-      $('.search').addClass('is-active');
-      $('.type-search').addClass('is-active');
-      $('html').addClass('is-hidden');
-    }); //헤더 서치박스 닫기
+    function jsOpenSearchLayer() {
+      var status = $('.search').addClass('is-active');
 
-    $('.js-search-close').off('click').on('click', function (e) {
-      e.preventDefault();
-      $('.type-search').removeClass('is-active');
-      $('html').removeClass('is-hidden');
-    });
+      if (status) {
+        $('.search').addClass('is-active');
+        $('.type-search').addClass('is-active');
+      } else {
+        $('.search').removeClass('is-active');
+        $('.type-search').removeClass('is-active');
+      }
+    }
+
+    $('.js-search-open').on('click', jsOpenSearchLayer);
   }); //--[플로팅버튼] ----------------
   //우측 하단 카트(cart-fix)
 

@@ -1,8 +1,10 @@
+@import "../base/variables";
+@import "../base/mixins";
+
 //Search
 .search{
   display: none;
   position:fixed;
-  //top:-100%;
   left:0;
   width:100%;
   height:calcRem(420rem);
@@ -40,17 +42,17 @@
 
   &__input{
     display:flex;
-    width:100% ;
-    height:calcRem(36rem) ;
+    width:100%;
+    height:calcRem(36rem);
     padding-right:2rem;
     align-items: center;
-    border:none ;
-    background-color:transparent ;
-    border-bottom:1px solid $black1;
+    border:none;
+    background-color:transparent;
+    border-bottom:1px solid #000;
     font-size:18px;
     outline:0;
     &::placeholder{
-      color:#878686 ;
+      color:#878686;
     }
   }
 
