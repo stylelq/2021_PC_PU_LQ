@@ -1,0 +1,57 @@
+<%
+type = "join"
+page = "join"
+popup = "false"
+%>
+<% include ../_include/_header %>
+
+<div class="container">
+    <div class="site-main">
+        <section class="join">
+            <div class="join__title">회원가입</div>
+            <section class="join__box">
+                <article class="join-sns">
+                        <ul class="join-sns__list">
+                            <li class="join-sns__item type-naver">
+                                <a href="javascript:snsNaverLogin('https://m.stylelq.com','join');" class="join-sns__link">
+                                    네이버 계정으로<br/>회원가입
+                                </a>
+                            </li>
+                            <li class="join-sns__item type-kakao">
+                                <a href="javascript:snsKakao();" class="join-sns__link">
+                                    카카오 계정으로<br/>회원가입
+                                </a>
+                            </li>
+                            <li class="join-sns__item type-payco">
+                                <a href="javascript:snsPaycoLogin('https://m.stylelq.com');" class="join-sns__link">
+                                    페이코 계정으로<br/>회원가입
+                                </a>
+                            </li>
+                        </ul>
+                    </article>
+            </section>
+            <section class="join__box">
+                <h3 class="join-box__tit">이메일로 회원가입</h3>
+                <div class="join-box__field">
+                        <input type="email" name="EMAIL" id="EMAIL" class="input-v1" placeholder="이메일">
+                        <div class="join-box__select">
+                            <select id="emailDomainSelectbox" class="form__select js-placeholder is-check">
+                                <option value="">직접입력</option>
+                                <option value="naver.com">naver.com</option>
+                                <option value="nate.com">nate.com</option>
+                                <option value="daum.net">daum.net</option>
+                                <option value="hanmail.net">hanmail.net</option>
+                                <option value="hotmail.com">hotmail.com</option>
+                                <option value="gmail.com">gmail.com</option>
+                                <option value="kakao.com">kakao.com</option>
+                            </select>
+                        </div>
+                    </div>
+                <buttion type="button" onclick="nextLevel();" class="join-box__btn btn-v1 type-primary">다음</buttion>
+            </section>
+        </section>
+    </div>
+</div>
+
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>

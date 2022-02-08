@@ -1,0 +1,411 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+//회원가입
+.join{
+  box-sizing: border-box;
+  text-align: center;
+
+  &__title{
+    padding-bottom: calcRem(50rem);
+    font-size: calcRem(24rem);
+    font-weight: 400;
+  }
+
+  &__info{
+    position:relative;
+    display:inline-block;
+    padding-left:calcRem(46rem);
+    @include body3();
+    box-sizing: border-box;
+    margin-top:0;
+    text-align: left;
+
+    &:before{
+      display:block;
+      position: absolute;
+      top:0;
+      bottom:0;
+      left:0;
+      width:calcRem(36rem);
+      height:calcRem(36rem);
+      margin:auto 0;
+      content:'';
+    }
+
+    &.type-naver{
+      &:before{
+        @include pageBackground('/images/join/naver_icon.png','no-repeat center center / contain')}
+    }
+
+    &.type-email{
+      &:before{
+        @include pageBackground('/images/join/email_icon.svg','no-repeat center center / contain')}
+    }
+
+    &.type-payco{
+      &:before{
+        @include pageBackground('/images/join/payco_icon.png','no-repeat center center / contain')}
+    }
+
+    &.type-kakao{
+      &:before{
+        @include pageBackground('/images/join/kakao_icon.png','no-repeat center center / contain')}
+    }
+  }
+
+  &__box{
+    width: calcRem(600rem);
+    margin: 0 auto;
+  }
+
+  &__point{
+    @include title1();
+  }
+
+  &__point2{
+    @include body2();
+  }
+
+  &__tit{
+    margin:calcRem(28.5rem) 0 0 0;
+    @include title1();
+  }
+
+  &__area{
+    margin-top:calcRem($joinMargin);
+
+    .input-list__item.type-btn:nth-child(3){
+      margin-top:calcRem(20rem);
+    }
+  }
+
+  &__box{
+    & + &{
+      border-top: 1px solid #e9e9e9;
+    }
+
+    .btn-group2{
+      max-width: $tabletMax;
+      margin-left:auto;
+      margin-right:auto;
+    }
+  }
+
+  &__group{
+    margin-top:calcRem(40rem);
+  }
+
+  &__link{
+    display:block;
+    margin-top:calcRem($joinMargin);
+    @include body3();
+    text-decoration: underline;
+  }
+
+  &__check{
+    margin-top:calcRem(10rem);
+    text-align: left;
+  }
+
+  &__finish{
+    margin-top:calcRem($joinMargin);
+  }
+}
+.join-sns{
+  padding-bottom: calcRem(40rem);
+  max-width: calcRem(420rem);
+  margin-left:auto;
+  margin-right:auto;
+
+  &__list{
+    display:flex;
+    margin:0;
+    padding:0;
+    list-style:none;
+    justify-content: space-evenly;
+  }
+
+  &__item{
+    text-align: center;
+  }
+
+  &__link{
+    display:block;
+    @include body2();
+
+    &:before{
+      display:block;
+      width:calcRem(46rem);
+      height:calcRem(46rem);
+      margin:0 auto calcRem(10rem);
+      content:'';
+    }
+
+    .type-naver &{
+      &:before{
+        @include pageBackground('/images/join/naver_icon.png','no-repeat center center / contain')
+      }
+    }
+
+    .type-email &{
+      &:before{
+        @include pageBackground('/images/join/email_icon.png','no-repeat center center / contain')
+      }
+    }
+
+    .type-kakao &{
+      &:before{
+        @include pageBackground('/images/join/kakao_icon.png','no-repeat center center / contain')
+      }
+    }
+
+    .type-payco &{
+      &:before{
+        @include pageBackground('/images/join/payco_icon.png','no-repeat center center / contain')
+      }
+    }
+  }
+}
+
+.join-box{
+
+  &__tit{
+    margin: 0;
+    padding: calcRem(38rem) 0 calcRem(18rem);
+    font-size: calcRem(16rem);
+    font-weight: 500;
+  }
+
+  &__field{
+    margin: 0 auto;
+    width: calcRem(400rem);
+    position:relative;
+    box-sizing: border-box;
+
+    //이메일 inputbox
+    .input-v1{
+      width: 100%;
+      height: calcRem(38rem);
+      padding: calcRem(8rem) calcRem(10rem) calcRem(8rem);
+      font-size: calcRem(12rem);
+      font-weight: 500;
+      letter-spacing: calcRem(1rem);
+      line-height: 1.666667;
+      border: 1px solid #CBCBCB;
+      box-sizing: border-box;
+      appearance: none;
+      box-shadow: none;
+    }
+  }
+
+  &__select{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    width:calcRem(119rem);
+
+    //이메일 selectbox
+    .form__select{
+      display: block;
+      width: 100%;
+      height: calcRem(38rem);
+      border: solid 1px #CBCBCB;
+      font-size: calcRem(12rem);
+      line-height: 1.666667;
+      letter-spacing: calcRem(1rem);
+      font-weight: 500;
+      color: #CBCBCB;
+      padding: calcRem(8rem) calcRem(10rem) calcRem(8rem);
+      @include pageBackground('/images/join/ico_qna_more.png','no-repeat center center / contain');
+      background-size: 0.5rem 0.25rem;
+      background-position: calc(100% - 0.625rem) center;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__btn{
+    margin: 0 auto;
+    margin-top: calcRem(20rem);
+    padding: calcRem(13rem) 0 calcRem(16rem);
+    display: block;
+    width: calcRem(400rem);
+    color: #fff;
+    background-color: $point1;
+  }
+
+}
+
+
+.join-benefit{
+  text-align: left;
+
+  &__list{
+    margin:0;
+    padding:0;
+    list-style: none;
+  }
+
+  &__item{
+    display:flex;
+    position: relative;
+    padding:calcRem(20rem) 0 calcRem(20rem) calcRem(40rem);
+    @include body2();
+    align-items: center;
+    border-bottom:1px solid $lightgray1;
+
+    &:first-child{
+      border-top:1px solid $lightgray1;
+    }
+
+    &.type-coin{
+
+      &:before{
+        width:calcRem(25rem);
+        height:calcRem(27rem);
+        @include pageBackground('/images/join/coin_icon.svg','no-repeat center center / contain')
+      }
+    }
+
+    &.type-coupon{
+
+      &:before{
+        width:calcRem(28rem);
+        height:calcRem(28rem);
+        @include pageBackground('/images/join/coupon_icon.svg','no-repeat center center / contain')
+      }
+    }
+
+    &.type-birth{
+
+      &:before{
+        width:calcRem(30rem);
+        height:calcRem(30rem);
+        @include pageBackground('/images/join/birth_icon.svg','no-repeat center center / contain')
+      }
+    }
+
+    &:before{
+      position: absolute;
+      top:0;
+      left:0;
+      bottom:0;
+      margin:auto 0;
+      content:'';
+    }
+  }
+  &__para{
+    flex-grow: 3;
+  }
+
+  &__point{
+    flex-grow: 1;
+    color:$point1;
+    text-align: right;
+  }
+}
+
+
+
+.login-info{
+  margin-top:calcRem($joinMargin);
+  max-width: $tabletMax;
+  margin-left:auto;
+  margin-right:auto;
+
+  &__list{
+    display:flex;
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+
+  &__item{
+    position:relative;
+    flex-grow: 1;
+    @include body2();
+    color:$gray1;
+
+    & + &:before{
+      position:absolute;
+      top:0;
+      bottom:0;
+      left:0;
+      width:0;
+      height:calcRem(8.25rem);
+      margin:auto 0;
+      border-left: 1px solid $gray1;
+      content:'';
+    }
+  }
+}
+
+.login{
+  &__txt{
+    margin-top:calcRem(20rem);
+    @include body3();
+    text-align: left;
+  }
+
+  &__para{
+    @include body3();
+    text-align: center;
+  }
+
+  &__tit{
+    @include title1();
+    margin-bottom:calcRem(2rem);
+    font-family: $font-kor;
+  }
+
+  &__box{
+    margin-bottom:calcRem($joinMargin);
+  }
+}
+
+.result{
+  &__tit{
+    @include title2();
+  }
+
+  &__box{
+    margin-top:calcRem($joinMargin);
+    @include body3();
+    padding:calcRem(10rem);
+    border:1px solid $lightgray1;
+  }
+
+  &__table{
+    margin-top:calcRem($joinMargin);
+  }
+
+  &__bullet{
+    margin-top:calcRem($joinMargin);
+  }
+}
+
+//기존회원가입 존재할경우
+.join-existing{
+  text-align: left;
+
+  &__text{
+    @include title2;
+    text-align: center;
+    margin-bottom:calcRem(24rem);
+
+    &--point{
+      color:$point1;
+    }
+  }
+
+  &__table{
+    margin-bottom:calcRem(10rem);
+
+    .basic-table{
+      margin-bottom:0;
+    }
+  }
+}
