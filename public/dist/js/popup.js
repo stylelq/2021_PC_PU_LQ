@@ -9,8 +9,8 @@ jQuery(function () {
       $('.popup').removeClass('is-active');
     }
 
-    $('#' + el).addClass('is-active');
-    $('html').addClass('is-hidden');
+    $('#' + el).addClass('is-active'); // $('html').addClass('is-hidden');
+
     return false;
   }
 
