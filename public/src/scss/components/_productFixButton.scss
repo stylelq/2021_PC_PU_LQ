@@ -12,6 +12,10 @@
     // &.is-on:not(.sold-out){
     //     background-color: $point1;
     // }
+    &.sold-out{
+        background-color: $bgSiteColor;
+        border: 1px solid $lightgray4;
+    }
 
     &:after{
         @include block-reset;
@@ -53,6 +57,9 @@
         // .is-on:not(.sold-out) &{
         //     color:$whiteColor;
         // }
+        .sold-out &{
+            color:$black1;
+        }
 
         &.fix-button__link--like{
             &:after{
@@ -63,9 +70,15 @@
                 background-size: calcRem(16rem) calcRem(14rem);
                 @include ab-center;
 
-                // .is-on:not(.sold-out) &{
-                //     @include background('/images/common/ico_big_like_white.svg','no-repeat center center / contain');
-                // }
+                .is-on &{
+                    @include background('/images/common/ico_big_like_white-active.svg','no-repeat center center / contain');
+                }
+                .sold-out &{
+                    @include background('/images/common/ico_big_like_black.svg','no-repeat center center / contain');
+                }
+                .sold-out.is-on &{
+                    @include background('/images/common/ico_big_like_black-active.svg','no-repeat center center / contain');
+                }
             }
             &.is-active{
                 &:after{
@@ -74,6 +87,9 @@
                     // .is-on:not(.sold-out) &{
                     //     @include background('/images/common/ico_big_like_white-active.svg','no-repeat center center / contain');
                     // }
+                    .sold-out &{
+                        @include background('/images/common/ico_big_like_black-active.svg','no-repeat center center / contain');
+                    }
                 }
             }
         }
@@ -90,6 +106,9 @@
                 // .is-on:not(.sold-out) &{
                 //     @include background('/images/common/ico-naver-pay-white.png','no-repeat center center / contain');
                 // }
+                .sold-out &{
+                    @include background('/images/common/ico-naver-pay.png','no-repeat center center / contain');
+                }
             }
         }
     }

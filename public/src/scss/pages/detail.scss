@@ -7,7 +7,7 @@
     text-align: center;
     padding:calcRem(100rem) calcRem(20rem);
     font-size:calcRem(12rem);
-    border-top:solid 1px $black1;
+    // border-top:solid 1px $black1;
     border-bottom:solid 1px $lightgray4;
 }
 
@@ -255,6 +255,7 @@
             display: inline-block;
             margin-left:calcRem(7rem);
             vertical-align: text-top;
+            margin-top: 2px;
             @include pageBackground('/images/common/ico_radius_arrow.svg','no-repeat center center / contain');
             background-size: calcRem(14rem) calcRem(14rem);
         }
@@ -483,7 +484,7 @@
 
     &__info{
         display:none;
-        padding-bottom:calcRem(70rem);
+        // padding-bottom:calcRem(70rem);
 
         &.is-current{
             display: block;
@@ -493,14 +494,41 @@
             margin:0 calcRem(-20rem);
         }
     }
+
+    &.fixed{
+        position: fixed;
+        top: 120px;
+        margin-top: 0;
+        width: calcRem(720rem);
+        height: calcRem(55rem);
+        z-index: 5;
+        &:before{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 20px;
+            background-color: #fff;
+        }
+        .detail-tab__fix{
+            padding: 0;
+            height: auto;
+            position: relative;
+        }
+
+        & + .detail-tab__cont{
+            .detail-tab__info{
+                padding-top: calcRem(90rem);
+            }
+        }
+    }
 }
 
 
 //연관제품
 .recommended{
     overflow: hidden;
-    padding:0 calcRem(20rem);
-    margin-top: calcRem(80rem);
+    // padding:0 calcRem(20rem);
+    margin-top: calcRem(150rem);
     background-color: $whiteColor;
     position: relative;
     z-index: 1;
@@ -528,7 +556,7 @@
 
         //페이징
         &__pagination{
-            margin-top:calcRem(20rem);
+            margin-top:calcRem(40rem);
             text-align: center;
             font-size:0;
             line-height:0;
@@ -557,6 +585,12 @@
                     padding-left:calcRem(10rem);
                 }
             }
+        }
+
+        //버튼
+        .detail-thumb--prev, 
+        .detail-thumb--next{
+            transform: translateY(100%);
         }
     }
 
