@@ -284,7 +284,16 @@ jQuery(function () {
     }
   }
 
-  $(document).on('click', '[class $= __link--like]', likeButtonStyle); //--[swiper slider] -------------------
+  $(document).on('click', '[class $= __link--like]', likeButtonStyle); //상세 컬러 선택
+
+  function colorCheck() {
+    var item = '.color-list__item';
+    $(item).removeClass('is-current');
+    $(this).parent(item).addClass('is-current');
+    return false;
+  }
+
+  $(document).on('click', '.color-list__title', colorCheck); //--[swiper slider] -------------------
 
   if ($('.detail-thumb').length > 0) {
     var detailThumbSlide = new Swiper('.detail-thumb__container', {
