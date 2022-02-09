@@ -51,11 +51,17 @@
 @mixin heading2(){font-size:calcRem(17rem); line-height:calclH(24,17); letter-spacing: $defaultLetter; font-weight:$medium;}
 @mixin heading3(){font-size:calcRem(20rem); line-height:calclH(24,17); letter-spacing: $defaultLetter; font-weight:$regular;}
 
-@mixin title1(){font-size:calcRem(14rem); line-height:calclH(22,14); letter-spacing: $defaultLetter; font-weight:$medium;}
+// @mixin title1(){font-size:calcRem(14rem); line-height:calclH(22,14); letter-spacing: $defaultLetter; font-weight:$medium;}
+@mixin title1(){
+  font-size:calcRem(16rem); 
+  line-height:calclH(26,16); 
+  letter-spacing: $defaultLetter; 
+  font-weight:$medium;
+}
 // @mixin title2(){font-size:calcRem(14rem); line-height:calclH(22,14); letter-spacing: $defaultLetter; font-weight:$regular;}
 @mixin title2(){
   font-size:calcRem(16rem); 
-  line-height:calclH(25,16); 
+  line-height:calclH(26,16); 
   letter-spacing: $defaultLetter; 
   font-weight:$regular;
 }
@@ -77,12 +83,23 @@
 }
 @mixin body4(){font-size:calcRem(10rem); line-height:calclH(16,10); letter-spacing: $defaultLetter; font-weight:$light;}
 @mixin body5(){font-size:calcRem(11rem); line-height:calclH(18,11); letter-spacing: $defaultLetter; font-weight:$light;}
-@mixin body6(){font-size:calcRem(12rem); line-height:calclH(20,12); letter-spacing: $defaultLetter; font-weight:$regular;}
+@mixin body6(){
+  font-size:calcRem(12rem); 
+  line-height:calclH(20,12); 
+  letter-spacing: $defaultLetter; 
+  font-weight:$regular;
+}
 @mixin body7(){
   font-size:calcRem(12rem); 
   line-height:calclH(20,12); 
   letter-spacing: $defaultLetter; 
   font-weight:$light;
+}
+@mixin body8(){
+  font-size:calcRem(12rem); 
+  line-height:calclH(20,12); 
+  letter-spacing: $defaultLetter; 
+  font-weight:$medium;
 }
 
 //placeholder-color

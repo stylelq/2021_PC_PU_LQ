@@ -7,135 +7,54 @@
     left:0;
     right:0;
     bottom: 0;
-    //mobile 디바이스 브라우저별 높이값처리
-    height: 100%;
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100); 
-    background-color:#fff;
+    // background-color:#fff;
     z-index:$popupZindex;
+
     &.is-active{
         display:block;
     }
+
+    &__dim{
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background-color:$black1;
+        opacity: 0.5;
+    }
+
     &__header{
         position:relative;
-        display:flex;
         width:100%;
-        height:calcRem(58rem);
-        align-items: center;
-        justify-content: center;
-        border-bottom:solid 1px $lightgray1;
+        border-bottom:solid 1px $black1;
+        padding-bottom: calcRem(20rem);
 
-        //배송정보 팝업
-        .type-tab &{
-            border-color:$gray1;
+        &--title{
+            margin:0;
+            @include title1;
         }
     }
     &__tit{
         @include title1();
     }
     &__close{
-        overflow:hidden;
-        position:absolute;
-        display:block;
-        top:0;
-        right:calcRem($sitePadding);
-        bottom:0;
-        width:calcRem(14rem);
-        height:calcRem(14rem);
-        margin:auto 0;
-        border:none;
-        outline:none;
-        @include background('/images/common/close.svg','no-repeat center center / contain');
-        text-indent: -9999px;
+        width:calcRem(20rem);
+        height:calcRem(20rem);
+        @include background('/images/common/ico_small_popup_close.svg','no-repeat center center / contain');
+        position: absolute;
+        top:calcRem(-34rem);
+        right:0;
     }
     
     &__body{
-        overflow:auto;
-        // height:calc(100vh - #{calcRem(58rem)});
-        width: 100vw;
-        height: calc(var(--vh, 1vh) * 100 - #{calcRem(59rem)} );
-        
-        padding-top:calcRem(20rem);
-        padding-bottom:calcRem(20rem);
+        @include ab-center;
+        background-color: $bgSiteColor;
+        width: calcRem(800rem);
+        // width: 80%;
+        z-index: $childZindex;
+        padding:calcRem(40rem);
         box-sizing: border-box;
-
-        //필터 팝업
-        .type-footer &{
-            // height:calc(100vh - #{calcRem(171rem)});
-            height: calc(var(--vh, 1vh) * 100 - #{calcRem(175rem)} );
-        }
-
-        //qna 글쓰기 팝업
-        .type-write &{
-            // height:calc(100vh - #{calcRem(100rem)});
-            height: calc(var(--vh, 1vh) * 100 - #{calcRem(240rem)} );
-
-            [class $= __footer ]{
-                position: fixed;
-                .popup-write__list{
-                    // padding: 0 calcRem(20rem);
-                    box-sizing: border-box;
-                }
-            }
-        }
-        //[스테이징에 맞춤]이용약관
-        #provisionPop.type-write &{
-            height: calc(var(--vh, 1vh) * 100 - #{calcRem(100rem)});
-            #termsPop>.popup__body>.wrap>.container{
-                padding-top: 0;
-            }
-        }
-        //[스테이징에 맞춤]개인정보처리방침
-        #privacyPop.type-write &{
-            height: calc(var(--vh, 1vh) * 100 - #{calcRem(100rem)});
-        }
-
-        //하단버튼 fixed 하지 않기
-        .type-notFixed &{
-            // height:calc(var(--vh, 1vh) * 100 );
-            [class $= __contents]{
-                padding-bottom: calcRem(30rem);
-            }
-            [class $= __footer ]{
-                position: static;
-                margin-bottom:calcRem(20rem);
-
-                .popup-write__list{    
-                    .popup-write__item:nth-child(1){
-                        width: calc(37% - #{calcRem(5rem)});
-                        margin-right: calcRem(5rem);
-                    }
-                }
-            }
-        }
-        #couponPop.type-notFixed &{
-            height: calc(var(--vh, 1vh) * 100 - #{calcRem(200rem)} );
-            .wrap{
-                padding-bottom: calcRem(50rem);
-            }
-            [class $= __footer ]{
-                position: fixed;
-                margin-bottom: 0;
-
-                .popup-write__list{    
-                    .popup-write__item:nth-child(1){
-                        width: 37%;
-                        margin-right: calcRem(0);
-                    }
-                }
-            }
-        }
-
-        //배송정보 팝업
-        .type-tab &{
-            // height:calc(100vh - #{calcRem(136rem)}); 
-            height: calc(var(--vh, 1vh) * 100 - #{calcRem(250rem)} );
-            // padding-top:calcRem(30rem);
-            // padding-bottom:calcRem(30rem);
-            [class $= __footer ]{
-                position: fixed;
-            }
-        }
     }
 }
 
@@ -408,7 +327,7 @@
     &-write{
         //헤더
         &__header{
-            padding-bottom:calcRem(13rem);
+            padding:calcRem(13rem) 0;
             position: relative;
 
             &:before{
@@ -427,10 +346,12 @@
         }
 
         &__thumb{
-            float:left;
+            // float:left;
+            display: inline-block;
             width:calcRem(82rem);
             margin-right:calcRem(10rem);
             position: relative;
+            vertical-align: middle;
 
             &:after{
                 content:"";
@@ -445,16 +366,18 @@
         }
 
         &__cont{
-            overflow: hidden;
+            // overflow: hidden;
+            display: inline-block;
+            vertical-align: middle;
 
             &--title{
-                @include body2;
+                @include body7;
             }
         }
 
         //폼
         &__form{
-            padding:calcRem(30rem) 0 calcRem(50rem);
+            padding:calcRem(30rem) 0;
 
             &--item{
                 margin-top:calcRem(10rem);
@@ -466,7 +389,7 @@
 
             &--info{
                 margin:calcRem(20rem) 0 0;
-                @include body3;
+                @include body7;
                 padding-left:calcRem(8rem);
                 position: relative;
 
@@ -485,35 +408,36 @@
 
         //푸터
         &__footer{
-            position: absolute;
-            bottom:0;
-            left:0;
-            right:0;
-            z-index: $childZindex;
-            background: $whiteColor;
+            border-top: 1px solid $gray1;
+            padding-top:calcRem(40rem)
+            // position: absolute;
+            // bottom:0;
+            // left:0;
+            // right:0;
+            // z-index: $childZindex;
+            // background: $whiteColor;
         }
 
         &__list{
             overflow: hidden;
+            width: 45%;
+            margin: auto;
         }
 
         &__item{
             float:left;
-            width:37%;
             position: relative;
+            width:63%;
 
-            &:nth-child(2){
-                width:63%;
-
-                &:after{
-                    display: none;
-                }
+            &:nth-child(1){
+                width: calc(37% - 0.3125rem);
+                margin-right: 0.3125rem;
             }
         }
 
         &__link{
             display:block;
-            @include title1;
+            @include body8;
             color:$black1;
             text-align: center;
             padding:calcRem(9rem) calcRem(15rem);
@@ -524,6 +448,30 @@
                 background-color: $point1;
                 color:$whiteColor;
             }
+        }
+
+        &__label{
+            @include body7;
+            margin-top:calcRem(10rem);
+
+            &:before{
+                content: '*';
+                display: inline-block;
+                color: $point1;
+                vertical-align: top;
+                font-weight: $medium;
+                margin-right: calcRem(5rem);
+            }
+        }
+
+        &__group{
+            display: flex;
+            margin:0;
+            &:not(:last-child){
+                margin-bottom: calcRem(10rem);
+            }
+            dt{ width: 90px;}
+            dd{ width: 100%;}
         }
     }
 }
@@ -543,10 +491,10 @@
     }
 
     &__close{
-        width:calcRem(14rem);
-        height:calcRem(14rem);
+        width:calcRem(20rem);
+        height:calcRem(20rem);
         @include background('/images/common/ico_small_popup_close.svg','no-repeat center center / contain');
-        background-size:calcRem(14rem) calcRem(14rem) ;
+        // background-size:calcRem(14rem) calcRem(14rem) ;
         position: absolute;
         top:calcRem(-34rem);
         right:0;
@@ -565,12 +513,25 @@
     &__body{
         @include ab-center;
         background-color: $bgSiteColor;
-        width:calc(100% - #{calcRem(80rem)});
+        min-width: calcRem(400rem);
+        max-width: calcRem(500rem);
+        width: auto;
         z-index: $childZindex;
-        padding:calcRem(30rem) calcRem(40rem) calcRem(40rem);
+        padding:calcRem(40rem);
         box-sizing: border-box;
         &.platforml-only{
             padding: 0;
+        }
+
+        .wrap{
+            padding: 0;
+            height: calcRem(640rem);
+            overflow: hidden;
+            overflow-y: auto;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
         }
     }
 
@@ -624,17 +585,17 @@
 
     &__title{
         float:left;
-        @include body3;
+        @include body7;
 
         #{$this}__item--total &{
-            font-weight: $regular;
+            font-weight: $medium;
         }
     }
 
     &__text{
         overflow:hidden;
         text-align: right;
-        @include body3;
+        @include body7;
 
         #{$this}__item--total &{
             font-weight: $regular;
@@ -684,13 +645,12 @@
 
 //무이자 할부 안내
 .installment{
-
     //테이블
     &-table{
-        border-top:solid 1px $gray2;
+        // border-top:solid 1px $gray2;
         thead{
             th{
-                @include body2;
+                @include body8;
                 padding:calcRem(12rem) calcRem(5rem);
                 text-align: center;
                 vertical-align: middle;
@@ -701,15 +661,14 @@
         tbody{
             th{
                 padding:calcRem(15rem) calcRem(5rem);
-                @include body4;
-                font-size:calcRem(11rem);
+                @include body7;
                 vertical-align: middle;
                 border-bottom: solid 1px $gray2;
             }
 
             td{
                 padding:calcRem(15rem) 0;
-                @include body3;
+                @include body7;
                 vertical-align: middle;
                 border-bottom: solid 1px $gray2;
             }
@@ -718,7 +677,8 @@
         //상세 값
         &__info{
             margin-top:calcRem(10rem);
-            font-size: calcRem(12rem);
+            font-size: calcRem(11rem);
+            line-height: 1.4;
         }
 
         &__thumb{
@@ -782,12 +742,12 @@
 
         &__title{
             margin:0 0 calcRem(10rem);
-            @include body2;
+            @include body8;
         }
 
         &__item{
             margin-top:calcRem(5rem);
-            @include body3;
+            @include body7;
             padding-left:calcRem(7rem);
             position: relative;
 
@@ -828,8 +788,8 @@
         width:calcRem(32rem);
         height:calcRem(32rem);
         position: absolute;
-        top:calcRem(20rem);
-        right:calcRem(20rem);
+        top:calcRem(40rem);
+        right:5%;
         z-index: $popupButtonZindex;
         @include background('/images/common/ico_pop_slide_close.png','no-repeat center center / contain');
         background-size:calcRem(30rem) calcRem(30rem) ;

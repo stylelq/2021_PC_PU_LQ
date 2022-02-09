@@ -1,0 +1,71 @@
+<!-- qna write popup -->
+<section id="qnaWrite" class="popup type-write">
+    <div class="popup__dim"></div>
+    <section class="popup__body">
+        <a class="popup__close js-popup-close" href="#;"><span class="sr-only">닫기</span></a>
+        <div class="popup__header">
+            <h3 class="popup__header--title">상품 Q&A 작성</h3>
+        </div>
+        <div class="wrap">
+            <div class="popup-write__header">
+                <div class="popup-write__thumb"><img class="popup-write__img" src="../../images/dummy/detail-img1.jpg" alt="" /></div>
+                <div class="popup-write__cont">
+                    <div class="popup-write__cont--title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</div>
+                </div>
+                <p></p>
+            </div>
+            <!-- qna write form -->
+            <div class="popup-write__form">
+                <dl class="popup-write__group">
+                    <dt><div class="popup-write__label">문의유형</div></dt>
+                    <dd>
+                        <div class="popup-write__form--item">
+                            <select name="wirteOption" id="wirteOption" class="form__select js-placeholder" title="문의 유형 선택">
+                                <option value="" disabled selected>문의 유형 선택</option>
+                                <option value="all">전체</option>
+                                <option value="size">사이즈</option>
+                                <option value="color">디자인/색상</option>
+                                <option value="etc">기타</option>
+                            </select>
+                        </div>
+                    </dd>
+                </dl>
+                
+                <dl class="popup-write__group">
+                    <dt><div class="popup-write__label">제목</div></dt>
+                    <dd>
+                        <div class="popup-write__form--item">
+                            <input type="text" class="form__input--text" title="제목" placeholder="제목을 입력해 주세요">
+                        </div>
+                    </dd>
+                </dl>
+
+                <dl class="popup-write__group">
+                    <dt><div class="popup-write__label">내용</div></dt>
+                    <dd>
+                        <div class="popup-write__form--item">
+                            <textarea class="form__input--textarea" title="내용" placeholder="문의하실 내용을 입력해 주세요"></textarea>
+                        </div>
+                        <div class="popup-write__form--item">
+                            <div class="form__checkbox">
+                                <input class="form__checkbox--input sr-only" type="checkbox" name="private" id="private">
+                                <label class="form__checkbox--text" for="private">비공개</label>
+                            </div>
+                        </div>
+                        <p class="popup-write__form--info">본 게시판과 관련이 없거나 광고성, 단순 반복성, 저작권 침해 등 불건전한 내용을 올리실 경우 통보 없이 임의로 삭제 처리될 수 있습니다.</p>
+                    </dd>
+                </dl>
+            </div>
+            <!-- .qna write form -->
+        </div>
+        <!-- wirte Footer -->
+        <div class="popup-write__footer">
+            <ul class="popup-write__list">
+                <li class="popup-write__item"><a class="popup-write__link" href="javascript:void(0);">취소</a></li>
+                <li class="popup-write__item"><a class="popup-write__link" href="javascript:void(0);">저장</a></li>
+            </ul>
+        </div>
+        <!-- .wirte Footer -->
+    </section>
+</section>
+<!-- .qna write popup -->

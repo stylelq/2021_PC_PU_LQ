@@ -444,7 +444,7 @@ input {
 	display: block;
 	width:100%;
 	border:solid 1px $gray2;
-	@include body2;
+	@include body8;
 	color:$gray2;
 	padding:calcRem(8rem) calcRem(30rem) calcRem(8rem) calcRem(10rem);
 	height:calcRem(38rem);
@@ -474,7 +474,7 @@ input {
 		border:solid 1px $gray2;
 		display: block;
 		width:100%;
-		@include body2;
+		@include body8;
 		padding:calcRem(8rem) calcRem(10rem) calcRem(8rem);
 		height:calcRem(38rem);
 		@include placeholder-color($gray2);
@@ -494,7 +494,7 @@ input {
 		border:solid 1px $gray2;
 		display: block;
 		width:100%;
-		@include body2;
+		@include body8;
 		padding:calcRem(7rem) calcRem(10rem) calcRem(7rem) calcRem(10rem);
 		height:calcRem(240rem);
 		@include placeholder-color($gray2);
@@ -518,7 +518,7 @@ input {
 	&--text{
 		display: inline-block;
 		max-width: 100%;
-		@include body3;
+		@include body7;
 		position: relative;
 		padding-left:calcRem(20rem);
 
