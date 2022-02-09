@@ -169,6 +169,15 @@
             display: block;
             padding-bottom:100%;
         }
+        img+img{
+            opacity: 0;
+        }
+        &:hover{
+            img+img{
+                opacity: 1;
+                transition: all 0.3s;
+            }
+        }
     }
 
     &__img{
