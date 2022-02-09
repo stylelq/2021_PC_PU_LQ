@@ -1,0 +1,130 @@
+//상품 하단 결제 버튼
+.fix-button{
+    // position: relative;
+    // bottom:0;
+    // left:0;
+    width:100%;
+    // background-color: $bgSiteColor;
+    // z-index: $fixButtonZindex;
+    background-color: $point1;
+    display:table;
+
+    // &.is-on:not(.sold-out){
+    //     background-color: $point1;
+    // }
+    &.sold-out{
+        background-color: $bgSiteColor;
+        border: 1px solid $lightgray4;
+    }
+
+    &:after{
+        @include block-reset;
+    }
+
+    &__item{
+        //---- table layout
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        box-sizing: border-box;
+        position: relative;
+        min-width: calcRem(60rem);
+
+        &:not(:last-child):after{
+            content: '';
+            width:1px;
+            height:calcRem(14rem);
+            background-color:$gray2;
+            position: absolute;
+            right:0;
+            @include vertical-center;
+        }
+
+        &:nth-child(1){
+            width: 15%;
+        }
+    }
+
+    &__link{
+        display: block;
+        line-height:0;
+        text-align: center;
+        padding:calcRem(13rem) calcRem(5rem);
+        height:calcRem(46rem);
+        position: relative;
+        box-sizing: border-box;
+        color:$whiteColor;
+        // .is-on:not(.sold-out) &{
+        //     color:$whiteColor;
+        // }
+        .sold-out &{
+            color:$black1;
+        }
+
+        &.fix-button__link--like{
+            &:after{
+                content:"";
+                width:calcRem(16rem);
+                height:calcRem(14rem);
+                @include background('/images/common/ico_big_like_white.svg','no-repeat center center / contain');
+                background-size: calcRem(16rem) calcRem(14rem);
+                @include ab-center;
+
+                .is-on &{
+                    @include background('/images/common/ico_big_like_white-active.svg','no-repeat center center / contain');
+                }
+                .sold-out &{
+                    @include background('/images/common/ico_big_like_black.svg','no-repeat center center / contain');
+                }
+                .sold-out.is-on &{
+                    @include background('/images/common/ico_big_like_black-active.svg','no-repeat center center / contain');
+                }
+            }
+            &.is-active{
+                &:after{
+                    @include background('/images/common/ico_big_like_white-active.svg','no-repeat center center / contain');
+
+                    // .is-on:not(.sold-out) &{
+                    //     @include background('/images/common/ico_big_like_white-active.svg','no-repeat center center / contain');
+                    // }
+                    .sold-out &{
+                        @include background('/images/common/ico_big_like_black-active.svg','no-repeat center center / contain');
+                    }
+                }
+            }
+        }
+
+        &.fix-button__link--pay{
+            &:after{
+                content:"";
+                width:calcRem(44rem);
+                height:calcRem(17rem);
+                @include background('/images/common/ico-naver-pay-white.png','no-repeat center center / 100% auto');
+                // background-size: 100% auto;
+                @include ab-center;
+
+                // .is-on:not(.sold-out) &{
+                //     @include background('/images/common/ico-naver-pay-white.png','no-repeat center center / contain');
+                // }
+                .sold-out &{
+                    @include background('/images/common/ico-naver-pay.png','no-repeat center center / contain');
+                }
+            }
+        }
+    }
+
+    &__text{
+        display: inline-block;
+        @include body3;
+    }
+
+    &.platforml-only{
+        .fix-button__item{
+            width: 100%;
+        }
+    }
+}
+
+
+
+
