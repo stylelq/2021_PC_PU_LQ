@@ -1,5 +1,6 @@
 @import "../base/variables";
 @import "../base/mixins";
+@import "../components/form";
 
 .container{
   overflow: scroll;
@@ -10,6 +11,11 @@
   min-width: calcRem(1200rem);
   box-sizing: border-box;
   text-align: center;
+
+  &-done{
+    margin: 0 auto;
+    width: calcRem(400rem);
+  }
 
   &__title{
     padding-bottom: calcRem(50rem);
@@ -65,6 +71,11 @@
     margin: 0 auto;
   }
 
+  &__box2{
+    width: calcRem(400rem);
+    margin: 0 auto;
+  }
+
   &__point {
     @include title1();
     font-weight: 300;
@@ -75,7 +86,6 @@
   }
 
   &__tit{
-    margin: calcRem(28.5rem) 0 0 0;
     @include title1();
   }
 
@@ -106,7 +116,7 @@
   &__link{
     display:block;
     margin-top:calcRem($joinMargin);
-    @include body3();
+    @include body1();
     text-decoration: underline;
   }
 
@@ -247,7 +257,104 @@
 
 }
 
+.terms{
+  padding-bottom: calcRem(40rem);
+  text-align: left;
+  $this:&;
 
+  &__list{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+
+  &__item{
+    position: relative;
+    font-size: calcRem(12rem);
+    font-weight: 300;
+    & + &{
+      margin-top:calcRem(14rem);
+    }
+  }
+
+  &__depth2-list{
+    margin:calcRem(10rem) 0 0 0;
+    padding:0 0 0 calcRem(10rem);
+    list-style:none;
+    display: none;
+
+    .is-active &{
+      display: block;
+    }
+
+    &.type-inline{
+      #{$this}__depth2-item{
+        display:inline-block;
+        padding-right:0;
+
+        & + #{$this}__depth2-item{
+          margin:0 0 0 calcRem(15rem);
+        }
+      }
+    }
+  }
+
+  &__depth2-item{
+    position: relative;
+    padding-right: calcRem(50rem);
+    box-sizing: border-box;
+
+    & + &{
+      margin-top:calcRem(6rem);
+    }
+  }
+
+  &__depth2-link{
+    position:absolute;
+    top:0;
+    right:0;
+    text-decoration: underline;
+    @include body3();
+  }
+
+  &__btn{
+    overflow:hidden;
+    display:block;
+    position:absolute;
+    width:calcRem(12rem);
+    height:calcRem(24rem);
+    top:calcRem(0rem);
+    right:calcRem(-10rem);
+    transform: rotate(0deg);
+    text-indent: -999px;
+    padding:0 calcRem(15rem);
+    @include pageBackground('/images/common/more.svg','no-repeat center center / #{calcRem(12rem)} #{calcRem(24rem)}');
+    content:'';
+
+    .is-active &{
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.input-list{
+  &__item + &__item{
+    margin-top: calcRem(10rem);
+  }
+  .input-v1{
+    width: 100%;
+    padding: 0.5rem 0.625rem 0.5rem;
+    font-size: .75rem;
+    line-height: 1.666667;
+    letter-spacing: .06em;
+    font-weight: 500;
+    border: 1px solid #CBCBCB;
+    box-sizing: border-box;
+    appearance: none;
+    box-shadow: none;
+    height: 2.375rem;
+  }
+}
 .join-benefit{
   text-align: left;
 
@@ -270,7 +377,6 @@
     }
 
     &.type-coin{
-
       &:before{
         width:calcRem(25rem);
         height:calcRem(27rem);
@@ -279,7 +385,6 @@
     }
 
     &.type-coupon{
-
       &:before{
         width:calcRem(28rem);
         height:calcRem(28rem);
@@ -288,7 +393,6 @@
     }
 
     &.type-birth{
-
       &:before{
         width:calcRem(30rem);
         height:calcRem(30rem);
@@ -307,6 +411,7 @@
   }
   &__para{
     flex-grow: 3;
+    font-weight: 300;
   }
 
   &__point{
@@ -397,6 +502,8 @@
 
 //기존회원가입 존재할경우
 .join-existing{
+  margin: 0 auto;
+  width: calcRem(400rem);
   text-align: left;
 
   &__text{
@@ -410,7 +517,7 @@
   }
 
   &__table{
-    margin-bottom:calcRem(10rem);
+    margin-bottom:calcRem(30rem);
 
     .basic-table{
       margin-bottom:0;

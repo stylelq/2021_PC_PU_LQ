@@ -166,6 +166,97 @@ jQuery(function(){
     $(document).on('click','.product-icon__link',productItem);
 
 
+    /*
+        //Join(회원가입, 로그인)
+    */
+    //전체 체크박스 체크
+    function allCheck() {
+        var dataName = $(this).attr('name');
+        var allCheckInput = $(this);
+        $(allCheckInput).change(function(){
+            if($(allCheckInput).is( ":checked") == true) {
+                $('[name="' + dataName + '"]:not(:disabled)').prop("checked",true);
+                $(this).parent('li').addClass('is-active');
+            } else {
+                $('[name="' + dataName + '"]:not(:disabled)').prop("checked",false);
+            }
+        });
+    };
+    $(document).on('click', '.js-check-all', allCheck);
 
+    //통합 체크시 관련 체크박스 제어
+    function allCheckItem() {
+        var label = $(this).prev('[type=checkbox]');
+        var dataName = label.attr('name');
+        var subInput = $('[name="' + dataName + '"]:not(:disabled):not(.js-check-all)');
+        $(label).change(function(){
+            if (subInput.length > subInput.filter(":checked").length) {
+                $('[name="' + dataName + '"].js-check-all').prop("checked",false);
+            } else {
+                $('[name="' + dataName + '"].js-check-all').prop("checked",true);
+            }
+        });
+    };
+    $(document).on('click', '.terms__depth2-item label', allCheckItem);
+
+    //기본 아코디언
+    function accordionMore() {
+        var parent = $(this).parent('li');
+        if(parent.hasClass('is-active')){
+            parent.removeClass('is-active');
+        }else{
+            parent.addClass('is-active').siblings('li').removeClass('is-active');
+        }
+        return false;
+    }
+    $(document).on('click', '.js-accordion', accordionMore);
+
+    //팝업열기(공통)
+    function openPopup() {
+        var el='';
+        if( this.tagName === 'BUTTON' ){
+            el = this.dataset.popup;
+        }
+        if( this.tagName === "A" ){
+            el = $(this).attr('href').replace('#','');
+        }
+
+        if($('.popup.is-active').length <= 1) {
+        }else{
+            $('.popup').removeClass('is-active');
+        }
+        $('#' + el).addClass('is-active');
+        $('.popup__body').scrollTop(0);
+
+        // mobile 디바이스 하단 네비게이션 버튼 바
+        var vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', vh+'px');
+
+        window.addEventListener('resize', function(){
+            var vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', vh+'px');
+        });
+        window.addEventListener('touchmove', function(){
+            var vh = window.innerHeight * 0.01 //window.innerHeight/100;
+            document.documentElement.style.setProperty('--vh', vh+'px');
+        });
+
+        // 전체 팝업 body scroll 없앰
+        $('html').addClass('is-hidden');
+
+        // 예외 modal-pop
+        var typeModal = ['small-popup','button-popup','modal-pop'];
+        var popId = $('#' + el);
+        typeModal.forEach(function(name){
+            if( popId.hasClass(name) ){
+                $('html').removeClass('is-hidden');
+                $('.popup__body').scrollTop(0);
+            }
+            return false;
+        });
+
+        return false;
+    }
+    $(document).on('click', '.js-popup-open', openPopup);
 
 });//jQuery

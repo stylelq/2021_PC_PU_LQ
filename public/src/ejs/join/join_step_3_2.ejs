@@ -1,0 +1,98 @@
+<%
+type = "join"
+page = "join"
+popup = "false"
+%>
+<% include ../_include/_header %>
+<% include ../_popup/_terms1 %>
+<div class="container">
+    <div class="site-main">
+        <section class="join">
+            <div class="join__title">회원가입</div>
+            <div class="holder">
+                <section class="join">
+                    <div class="join__wrap">
+                        <section class="join__box2">
+                            <p class="join__info type-email">
+                                네이버계정으로 가입합니다.<br>
+                                <span class="join__point">abcdefg@gmail.com</span>
+                            </p>
+                            <p class="join__finish finish-txt">
+                                <span class="finish-txt__check">본인인증 완료</span>
+                            </p>
+                            <div class="join__area">
+                                <div class="input-list">
+                                    <ul class="input-list__list">
+                                        <li class="input-list__item">
+                                            <input type="text" class="input-v1" value="홍길동" disabled="">
+                                        </li>
+                                        <li class="input-list__item">
+                                            <input type="text" class="input-v1" value="010-1234-5678" disabled="">
+                                        </li>
+                                        <li class="input-list__item type-btn">
+                                            <input type="text" class="input-v1" placeholder="아이디 6~12자 영문과 숫자를 조합">
+                                            <button class="input-list__btn btn-v1 type-secondary">중복확인</button>
+                                        </li>
+                                        <li class="input-list__item">
+                                            <input type="password" class="input-v1" placeholder="비밀번호 6~12자 영문, 숫자를 조합">
+                                        </li>
+                                        <li class="input-list__item">
+                                            <input type="password" class="input-v1" placeholder="비밀번호 확인">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="join__box2">
+                            <h3 class="join-box__tit">이용약관 및 정보수집</h3>
+                            <div class="terms">
+                                <ul class="terms__list">
+                                    <li class="terms__item">
+                                        <a href="" class="terms__btn js-accordion">open/close</a>
+                                        <input type="checkbox" name="terms" class="checkbox-v1 js-check-all" id="checkAll">
+                                        <label for="checkAll"> <span class="color-point1">[필수]</span> 이용약관 및 개인정보 수집/이용/취급</label>
+                                        <ul class="terms__depth2-list">
+                                            <li class="terms__depth2-item">
+                                                <input type="checkbox" name="terms" class="checkbox-v1" id="terms1">
+                                                <label for="terms1">통합 이용약관</label>
+                                                <a href="#termsPop" class="terms__depth2-link btn-v2 js-popup-open">보기</a>
+                                            </li>
+                                            <li class="terms__depth2-item">
+                                                <input type="checkbox" name="terms" class="checkbox-v1" id="terms2">
+                                                <label for="terms2">개인정보 수집 및 이용</label>
+                                                <a href="#termsPop2" class="terms__depth2-link btn-v2 js-popup-open">보기</a>
+                                            </li>
+                                            <li class="terms__depth2-item">
+                                                <input type="checkbox" name="terms" class="checkbox-v1" id="terms3">
+                                                <label for="terms3">개인정보 취급 위탁</label>
+                                                <a href="" class="terms__depth2-link btn-v2">보기</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="terms__item">
+                                        <a href="" class="terms__btn js-accordion">open/close</a>
+                                        <input type="checkbox" name="info" class="checkbox-v1 js-check-all" id="infoAll">
+                                        <label for="infoAll"> [선택] 정보수신동의</label>
+                                        <ul class="terms__depth2-list type-inline">
+                                            <li class="terms__depth2-item">
+                                                <input type="checkbox" name="info" class="checkbox-v1" id="info1">
+                                                <label for="info1">이메일</label>
+                                            </li>
+                                            <li class="terms__depth2-item">
+                                                <input type="checkbox" name="info" class="checkbox-v1" id="info2">
+                                                <label for="info2">문자</label>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a onclick="infoSnsJoinStep2.checkPlusAccreditation();" class="join-box__btn btn-v1 type-primary">가입하기</a>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>
