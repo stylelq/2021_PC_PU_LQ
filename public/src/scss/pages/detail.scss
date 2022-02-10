@@ -526,6 +526,8 @@
 
 //연관제품
 .recommended{
+    width: calcRem($minWidth);
+    margin: auto;
     overflow: hidden;
     // padding:0 calcRem(20rem);
     margin-top: calcRem(150rem);

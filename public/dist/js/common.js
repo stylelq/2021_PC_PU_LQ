@@ -345,7 +345,7 @@ jQuery(function () {
   } //연관제품 슬라이드
 
 
-  if ($('.recommended-slide').length > 0) {
+  if ($('.recommended').length > 0) {
     var recommendeSlide = new Swiper('.recommended-slide__container', {
       observer: true,
       observeParents: true,

@@ -1,0 +1,129 @@
+<%
+type = "cart"
+page = "cart"
+popup = "false"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <div class="site-main">
+        <section class="cart">
+            <h3>SHOPPING CART</h3>
+            <div class="cart-banner">
+                <div class="cart-list__no-cart">장바구니에 담긴 상품이 없습니다.</div>
+                <div class="cart-banner__text">고객님은 <span class="cart-banner__text--point">비로그인</span> 상태 입니다.<br />로그인 하시면 혜택가로 구매 가능 합니다.</div>
+                <div class="cart-banner__btn">
+                    <ul class="cart-banner__list">
+                        <li class="cart-banner__item">
+                            <a href="" class="btn-v1 type-primary">로그인</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- list -->
+            <div class="cart-list">
+                
+            </div>
+            <!-- .list -->
+
+            <!-- recommended -->
+            <div class="recommended">
+                <h3 class="recommended__title">THE RECOMMENDED</h3>
+                <div class="recommended-slide">
+                    <div class="swiper-container recommended-slide__container">
+                        <div class="swiper-wrapper recommended-slide__wrapper">
+                            <div class='swiper-slide recommended-slide__item'>
+                                <div class="recommended-product">
+                                    <div class="recommended-product__thumb">
+                                        <div class="recommended-product__state">NEW</div>
+                                        <img class="recommended-product__img" src="../../images/dummy/recommended_img.png" alt="" />
+                                        <!-- <a class="recommended-product__like is-active" href="javascript:void(0);"><span class="sr-only">좋아요</span></a> -->
+                                        <!-- 좋아요시 a 링크에 is-active -->
+                                        <% include ../_include/_productHoverButton %>
+                                    </div>
+                                    <div class="recommended-product__cont">
+                                        <div class="recommended-product__title">루이까또즈 씨엘(CIEL) 미니지갑 블루라일락 SP3SD71PB</div>
+                                        <div class="recommended-product__price">211,300원</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='swiper-slide recommended-slide__item'>
+                                <div class="recommended-product">
+                                    <div class="recommended-product__thumb">
+                                        <div class="recommended-product__state">NEW</div>
+                                        <img class="recommended-product__img" src="../../images/dummy/recommended_img.png" alt="" />
+                                        <!-- <a class="recommended-product__like" href="javascript:void(0);"><span class="sr-only">좋아요</span></a> -->
+                                        <% include ../_include/_productHoverButton %>
+                                    </div>
+                                    <div class="recommended-product__cont">
+                                        <div class="recommended-product__title">루이까또즈 씨엘(CIEL) 미니지갑 블루라일락 SP3SD71PB</div>
+                                        <div class="recommended-product__price">211,300원</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='swiper-slide recommended-slide__item'>
+                                <div class="recommended-product">
+                                    <div class="recommended-product__thumb">
+                                        <img class="recommended-product__img" src="../../images/dummy/recommended_img.png" alt="" />
+                                        <!-- <a class="recommended-product__like" href="javascript:void(0);"><span class="sr-only">좋아요</span></a> -->
+                                        <% include ../_include/_productHoverButton %>
+                                    </div>
+                                    <div class="recommended-product__cont">
+                                        <div class="recommended-product__title">루이까또즈 씨엘(CIEL) 미니지갑 블루라일락 SP3SD71PB</div>
+                                        <div class="recommended-product__price">211,300원</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='swiper-slide recommended-slide__item'>
+                                <div class="recommended-product">
+                                    <div class="recommended-product__thumb">
+                                        <img class="recommended-product__img" src="../../images/dummy/recommended_img.png" alt="" />
+                                        <!-- <a class="recommended-product__like" href="javascript:void(0);"><span class="sr-only">좋아요</span></a> -->
+                                        <% include ../_include/_productHoverButton %>
+                                    </div>
+                                    <div class="recommended-product__cont">
+                                        <div class="recommended-product__title">루이까또즈 씨엘(CIEL) 미니지갑 블루라일락 SP3SD71PB</div>
+                                        <div class="recommended-product__price">211,300원</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='swiper-slide recommended-slide__item'>
+                                <div class="recommended-product">
+                                    <div class="recommended-product__thumb">
+                                        <img class="recommended-product__img" src="../../images/dummy/recommended_img.png" alt="" />
+                                        <!-- <a class="recommended-product__like" href="javascript:void(0);"><span class="sr-only">좋아요</span></a> -->
+                                        <% include ../_include/_productHoverButton %>
+                                    </div>
+                                    <div class="recommended-product__cont">
+                                        <div class="recommended-product__title">루이까또즈 씨엘(CIEL) 미니지갑 블루라일락 SP3SD71PB</div>
+                                        <div class="recommended-product__price">211,300원</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='swiper-slide recommended-slide__item'>
+                                <div class="recommended-product">
+                                    <div class="recommended-product__thumb">
+                                        <img class="recommended-product__img" src="../../images/dummy/recommended_img.png" alt="" />
+                                        <!-- <a class="recommended-product__like" href="javascript:void(0);"><span class="sr-only">좋아요</span></a> -->
+                                        <% include ../_include/_productHoverButton %>
+                                    </div>
+                                    <div class="recommended-product__cont">
+                                        <div class="recommended-product__title">루이까또즈 씨엘(CIEL) 미니지갑 블루라일락 SP3SD71PB</div>
+                                        <div class="recommended-product__price">211,300원</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next detail-thumb--next"></div>
+                    <div class="swiper-button-prev detail-thumb--prev"></div>
+                    <div class="swiper-pagination recommended-slide__pagination"></div>
+                </div>
+            </div>
+            <!-- .recommended -->
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_cartFix %>
+<% include ../_include/_footer %>
