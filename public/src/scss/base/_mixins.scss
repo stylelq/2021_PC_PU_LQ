@@ -164,4 +164,20 @@
 
 
 
+// scrollbar custom
+@mixin scrollbar-custom {
+  scrollbar-width: thin;
+  scrollbar-width: none;
 
+  //크롬,Firefox
+  &::-webkit-scrollbar {
+    width: 5px;               
+  }
+  &::-webkit-scrollbar-thumb{
+    border-radius: 10px; 
+    background-color: #cbcbcb;
+  }
+
+  //ie
+  scrollbar-face-color: #000;
+}

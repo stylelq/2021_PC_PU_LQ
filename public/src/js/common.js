@@ -37,7 +37,7 @@ jQuery(function(){
         });
 
         /*
-        //Header Search
+        // Header Search
         */
         //헤더 검색박스 레이어 열고닫기
         var headSearchStatus = false;
@@ -53,6 +53,18 @@ jQuery(function(){
             }
         }
         $('.js-search-open').on('click',jsOpenSearchLayer);
+
+        //헤더 검색 -> 종류 필터 버튼
+        function searchFilterButton(){
+            var item = '.main-search__item';
+            $(item).removeClass('is-active');
+            $(this).addClass('is-active');
+            $('.main-search__top').hide(); // 버튼클릭시 검색결과 텍스트 숨기기
+            console.log( $(this).find('a').text() )
+            return false;
+        }
+        $(document).on('click','.main-search__item',searchFilterButton);
+
 
         //--[플로팅버튼] ----------------
         //우측 하단 카트(cart-fix)
@@ -92,11 +104,12 @@ jQuery(function(){
         $(document).on('click', '.js-scrollTop', scrollTopBtn);
         //--END[플로팅버튼]----------------
         
-    });
-    //------------ // header
+    });// header
 
 
-    //--[Scroll]-------------------------
+    /*---------------------------
+    * [Scroll]
+    ---------------------------*/
     // 제품상세 option fix scroll
     if( $('.detail').length > 0){
         var sc,winH,divH;
@@ -154,7 +167,9 @@ jQuery(function(){
 
 
 
-    //--[탭] ----------------------
+    /*------------------------
+    * [탭]
+    ------------------------*/
     //basic
     function basicTab() {
         var item = '[class $= __item]', //li
@@ -192,8 +207,10 @@ jQuery(function(){
 
 
 
-    //--[dropdown::아코디언] ----------------------
-    //qna 더보기(아코디언)
+    /*------------------------
+    * [dropdown::아코디언]
+    ------------------------*/
+    //qna 더보기
     function qnaMore() {
         var parent = $(this).closest('.qna-item');
         if(parent.hasClass('is-view')){
@@ -204,12 +221,16 @@ jQuery(function(){
         return false;
     }
     $(document).on('click', '.js-qna-more', qnaMore );
+
+
     //--END[dropdown::아코디언] ----------------------
 
 
 
 
-    //--[select] -------------------
+    /*---------------------
+    * [select] 
+    ---------------------*/
     //custom select
     function customSelect(){
         // sorting btn dropDown
@@ -248,7 +269,9 @@ jQuery(function(){
     //--END[select]--------------------------
 
 
-
+    /*-------------------
+    * [기타 click EVENT]  
+    -------------------*/
     // 리스트 - 장바구니,좋아요 버튼 :: productHoverButton
     function productItem(){
         if( $(this).closest('.type-like').length > 0 ){
@@ -289,9 +312,12 @@ jQuery(function(){
     }
     $(document).on('click','.color-list__title',colorCheck);
 
+    //--END[기타 click EVENT] -------------------
 
 
-    //--[swiper slider] -------------------
+    /*---------------------
+    * [swiper slider] 
+    ---------------------*/
     if($('.detail-thumb').length > 0){
         var detailThumbSlide = new Swiper('.detail-thumb__container', {
             observer: true,
