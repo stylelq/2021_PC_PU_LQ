@@ -48,7 +48,6 @@ jQuery(function(){
     $(document).on('click', '.js-popup-open', openPopup);
 
 
-
     //제품 팝업 확대축소(플러그인 panzoom)
     function productZoom(){
         var area = document.querySelectorAll('.js-product-zoom');
