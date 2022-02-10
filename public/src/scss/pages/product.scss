@@ -15,8 +15,8 @@
 
 // tab
 .product-tab{
-    width:calcRem($minWidth);
-    margin: auto;
+    // width:calcRem($minWidth);
+    // margin: auto;
     margin-bottom: calcRem(50rem);
     box-sizing: border-box;
 
@@ -55,6 +55,8 @@
 .product-post{
     $this:&;
 
+    width:calcRem($minWidth);
+    margin: auto;
     padding: calcRem(20rem);
     box-sizing: border-box;
 
@@ -264,9 +266,16 @@
     }
     &__item{
         display: inline-block;
-        width: 33.3333%;
-        box-sizing: border-box;
+        width: 400px;
         overflow: hidden;
+        position: relative;
+        &:not(:last-child):after{
+            content: '';
+            position: absolute;
+            top: 0;bottom: 0;right: 0;
+            width: 0;height: 100%;
+            border-right: 1px solid #fff;
+        }
     }
     &__txt{
         margin-top: 15px;
