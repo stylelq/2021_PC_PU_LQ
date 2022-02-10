@@ -4,7 +4,7 @@
   display:none;
   position:fixed;
   margin: 0 auto;
-  top:0;
+  top:calcRem(220rem);
   left:0;
   right:0;
   bottom: 0;
@@ -22,7 +22,6 @@
     height:calcRem(58rem);
     align-items: center;
     justify-content: center;
-    border-bottom:solid 1px $lightgray1;
 
     //배송정보 팝업
     .type-tab &{
@@ -186,7 +185,7 @@
   }
 }
 .section-terms{
-  padding-top:0;
+  padding: 0 calcRem(50rem);
   width: auto;
   height: 100%;
   overflow: scroll;
