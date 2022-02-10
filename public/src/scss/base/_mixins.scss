@@ -65,6 +65,12 @@
   letter-spacing: $defaultLetter; 
   font-weight:$regular;
 }
+@mixin title3(){
+  font-size:calcRem(16rem); 
+  line-height:calclH(26,16); 
+  letter-spacing: $defaultLetter; 
+  font-weight:$light;
+}
 
 @mixin body1(){font-size:calcRem(14rem); line-height:calclH(22,14); letter-spacing: $defaultLetter; font-weight:$light;}
 // @mixin body2(){font-size:calcRem(12rem); line-height:calclH(20,12); letter-spacing: $defaultLetter; font-weight:$medium;}

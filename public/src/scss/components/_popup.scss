@@ -785,14 +785,15 @@
     }
 
     &__close{
-        width:calcRem(32rem);
-        height:calcRem(32rem);
+        width:calcRem(30rem);
+        height:calcRem(30rem);
         position: absolute;
         top:calcRem(40rem);
         right:5%;
         z-index: $popupButtonZindex;
-        @include background('/images/common/ico_pop_slide_close.png','no-repeat center center / contain');
-        background-size:calcRem(30rem) calcRem(30rem) ;
+        // @include background('/images/common/ico_pop_slide_close.png','no-repeat center center / contain');
+        @include background('/images/common/close_big.svg','no-repeat center center / contain');
+        // background-size:calcRem(30rem) calcRem(30rem) ;
     }
 }
 
