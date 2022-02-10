@@ -173,7 +173,7 @@ jQuery(function () {
       console.groupEnd();
       return;
     });
-  } //--END[Scroll]-----------------------------
+  } //--END[Scroll]----------------------------- 
 
   /*------------------------
   * [탭]
@@ -240,7 +240,7 @@ jQuery(function () {
   $(document).on('click', '.js-qna-more', qnaMore); //--END[dropdown::아코디언] ----------------------
 
   /*---------------------
-  * [select]
+  * [select] 
   ---------------------*/
   //custom select
 
@@ -277,7 +277,7 @@ jQuery(function () {
   $(document).on('click', '.filter-custom__selected', customSelect); //--END[select]--------------------------
 
   /*-------------------
-  * [기타 click EVENT]
+  * [기타 click EVENT]  
   -------------------*/
   // 리스트 - 장바구니,좋아요 버튼 :: productHoverButton
 
@@ -298,74 +298,17 @@ jQuery(function () {
     return false;
   }
 
-  $(document).on('click', '.product-icon__link', productItem);
-  /*
-      //Join(회원가입, 로그인)
-  */
-  //전체 체크박스 체크
+  $(document).on('click', '.product-icon__link', productItem); //like it
 
-  function allCheck() {
-    var dataName = $(this).attr('name');
-    var allCheckInput = $(this);
-    $(allCheckInput).change(function () {
-      if ($(allCheckInput).is(":checked") == true) {
-        $('[name="' + dataName + '"]:not(:disabled)').prop("checked", true);
-        $(this).parent('li').addClass('is-active');
-      } else {
-        $('[name="' + dataName + '"]:not(:disabled)').prop("checked", false);
-      }
-    });
-  }
+  var likeClick;
 
-  ;
-  $(document).on('click', '.js-check-all', allCheck); //통합 체크시 관련 체크박스 제어
-
-  function allCheckItem() {
-    var label = $(this).prev('[type=checkbox]');
-    var dataName = label.attr('name');
-    var subInput = $('[name="' + dataName + '"]:not(:disabled):not(.js-check-all)');
-    $(label).change(function () {
-      if (subInput.length > subInput.filter(":checked").length) {
-        $('[name="' + dataName + '"].js-check-all').prop("checked", false);
-      } else {
-        $('[name="' + dataName + '"].js-check-all').prop("checked", true);
-      }
-    });
-  }
-
-  ;
-  $(document).on('click', '.terms__depth2-item label', allCheckItem); //기본 아코디언
-
-  function accordionMore() {
-    var parent = $(this).parent('li');
-
-    if (parent.hasClass('is-active')) {
-      parent.removeClass('is-active');
+  function likeButtonStyle() {
+    if (!likeClick) {
+      likeClick = true;
+      $('.fix-button').addClass('is-on');
     } else {
-      parent.addClass('is-active').siblings('li').removeClass('is-active');
-    }
-
-    return false;
-  }
-
-  $(document).on('click', '.js-accordion', accordionMore); //팝업열기(공통)
-
-  function openPopup() {
-    var el = '';
-
-    if (this.tagName === 'BUTTON') {
-      el = this.dataset.popup;
-    }
-
-    if (this.tagName === "A") {
-      el = $(this).attr('href').replace('#', '');
-    }
-
-    if ($('.popup.is-active').length <= 1) {
-      $('.dim-join').addClass('is-active');
-    } else {
-      $('.popup').removeClass('is-active');
-      $('.dim-join').removeClass('is-active');
+      likeClick = false;
+      $('.fix-button').removeClass('is-on');
     }
   }
 
@@ -381,7 +324,7 @@ jQuery(function () {
   $(document).on('click', '.color-list__title', colorCheck); //--END[기타 click EVENT] -------------------
 
   /*---------------------
-  * [swiper slider]
+  * [swiper slider] 
   ---------------------*/
 
   if ($('.detail-thumb').length > 0) {
