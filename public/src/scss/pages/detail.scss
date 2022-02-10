@@ -30,6 +30,7 @@
     // [left] detail
     .product-option{
         width: calcRem(720rem);
+        margin-bottom: calcRem(80rem);
     }
 
     // [right] option
@@ -530,7 +531,7 @@
     margin: auto;
     overflow: hidden;
     // padding:0 calcRem(20rem);
-    margin-top: calcRem(150rem);
+    margin-top: calcRem(70rem);
     background-color: $whiteColor;
     position: relative;
     z-index: 1;

@@ -363,7 +363,6 @@
         <section class="cart">
             <h3 class="cart__title">SHOPPING CART</h3>
             <div class="cart-banner">
-                <div class="cart-list__no-cart">장바구니에 담긴 상품이 없습니다.</div>
                 <div class="cart-banner__text">고객님은 <span class="cart-banner__text--point">비로그인</span> 상태 입니다.<br />로그인 하시면 혜택가로 구매 가능 합니다.</div>
                 <div class="cart-banner__btn">
                     <ul class="cart-banner__list">
@@ -375,7 +374,87 @@
             </div>
 
             <!-- list -->
-            <div class="cart-list"></div>
+            <div class="cart-list">
+                <table class="basic-table" summary="장바구니">
+                    <caption>장바구니</caption>
+                    <colgroup>
+                        <col width="5%"><col width="50%"><col><col><col><col><col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="checkbox-point">
+                                    <input class="checkbox-point__input sr-only chk-all" type="checkbox" name="cart" id="cartAll" >
+                                    <label for="cartAll" class="checkbox-point__label"><span class="sr-only">체크</span></label>
+                                </div>
+                            </th>
+                            <th>상품/옵션 정보</th>
+                            <th>판매가/혜택가</th>
+                            <th>수량</th>
+                            <th>합계</th>
+                            <th>배송비</th>
+                            <th>선택</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="checkbox-point">
+                                    <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart1" >
+                                    <label for="cart1" class="checkbox-point__label"><span class="sr-only">체크</span></label>
+                                </div>
+                            </td>
+                            <td>
+                                <!-- Select -->
+                                <div class="selBox__meta--select">
+                                    <input type="text" value="" class="hidden-input is-hide">
+                                    <p class="selBox-custom__selected"><span class="selected_text">Sorting</span></p>
+                                    <ul class="selBox-custom__select">
+                                        <li class="selBox-custom__option"><a href="" class="filter-custom__link">New in</a></li>
+                                        <li class="selBox-custom__option"><a href="" class="filter-custom__link">Best</a></li>
+                                        <li class="selBox-custom__option"><a href="" class="filter-custom__link">Price low to high</a></li>
+                                        <li class="selBox-custom__option"><a href="" class="filter-custom__link">Price high to low</a></li>
+                                    </ul>
+                                </div>
+                                <!-- .Select -->
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox-point">
+                                    <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart2">
+                                    <label for="cart2" class="checkbox-point__label"><span class="sr-only">체크</span></label>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox-point">
+                                    <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart3" >
+                                    <label for="cart3" class="checkbox-point__label"><span class="sr-only">체크</span></label>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <!-- .list -->
 
             <!-- recommended -->

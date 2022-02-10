@@ -113,14 +113,14 @@ jQuery(function(){
     // 제품상세 option fix scroll
     if( $('.detail').length > 0){
         var sc,winH,divH;
-        var stypeOpt = {}
+        var styleOpt = {}
         function positionAbsolute(num){
-            stypeOpt.position = 'absolute';
-            stypeOpt.top = num;
+            styleOpt.position = 'absolute';
+            styleOpt.top = num;
         }
         function positionFixed(num){
-            stypeOpt.position = 'fixed';
-            stypeOpt.top = num;
+            styleOpt.position = 'fixed';
+            styleOpt.top = num;
         }
         $(window).on('scroll',function () {
             sc = $(document).scrollTop();
@@ -155,7 +155,7 @@ jQuery(function(){
                 $('.detail-tab__info').eq(0).addClass('is-current');
             }
 
-            $('.product-option-fix').css(stypeOpt);
+            $('.product-option-fix').css(styleOpt);
             
             console.group('================')
             console.log('scY : ', sc )
@@ -191,10 +191,11 @@ jQuery(function(){
         contents.removeClass('is-current');
         contents.eq(idx).addClass('is-current');
 
-        // 오른쪽 옵션값 고정시키기
+        //왼쪽 탭 고정시키기 
+        $('html').animate({scrollTop : 920 }); 
         $('.detail-tab').addClass('fixed');
-        $('html').animate({scrollTop : contents.eq(idx).offset().top - $('.header').height() });
-        contents.eq(idx).css({minHeight: 600})
+        contents.eq(idx).css({minHeight: 600});
+        //오른쪽 옵션값 고정시키기
         $('.product-option-fix').css({
             position: 'fixed',
             top: $('.header').height()+20
@@ -229,43 +230,61 @@ jQuery(function(){
 
 
     /*---------------------
-    * [select] 
+    * [select] :: custom 
     ---------------------*/
-    //custom select
+    //--custom select setting---
+    // select option view
+    function selectView(selected, option){
+        var link = '[class $= __link]',
+            value = $(this).find(link).text(),
+            select = $(this).parent(), 
+            selName = selected,
+            optName = option,
+            selBoxLabel = select.siblings(selName);
+
+        $(optName).removeClass('is-current');
+        $(this).addClass('is-current');
+        
+        // selected 
+        $(this).parent().siblings('.hidden-input').val(value);
+        selBoxLabel.find('.selected_text').text(value);
+        
+        selBoxLabel.removeClass('is-active');
+        select.stop().slideUp();
+        
+        $(document).on('click',optName,selectView);
+        return false;
+    }
+    //--[END]custom select setting---
+
+    //리스트 소팅버튼
     function customSelect(){
-        // sorting btn dropDown
         if( $(this).hasClass('is-active') ){
             $(this).removeClass('is-active');
             $(this).next().stop().slideUp();
         }else{
             $(this).addClass('is-active');
             $(this).next().stop().slideDown();
-        }
-
-        // select option view
-        function selectView(){
-            var link = '[class $= __link]',
-                value = $(this).find(link).text(),
-                select = $(this).parent(), 
-                selBoxLabel = select.siblings('.filter-custom__selected');
-
-            $('.filter-custom__option').removeClass('is-current');
-            $(this).addClass('is-current');
-            
-            // selected 
-            $(this).parent().siblings('.hidden-input').val(value);
-            selBoxLabel.find('.selected_text').text(value);
-            
-            selBoxLabel.removeClass('is-active');
-            select.stop().slideUp();
-            
-            return false;
-        }
-        $(document).on('click','.filter-custom__option',selectView);
-
+        }  
+        selectView('.filter-custom__selected','.filter-custom__option');
         return false;
     }
     $(document).on('click','.filter-custom__selected',customSelect);
+
+    // 장바구니FREESIZE
+    function cartCustomSelect(){
+        if( $(this).hasClass('is-active') ){
+            $(this).removeClass('is-active');
+            $(this).next().stop().slideUp();
+        }else{
+            $(this).addClass('is-active');
+            $(this).next().stop().slideDown();
+        }  
+        selectView('.selBox-custom__selected','.selBox-custom__option');
+        return false;
+    } 
+    $(document).on('click','.selBox-custom__selected',cartCustomSelect);
+
     //--END[select]--------------------------
 
 
@@ -311,6 +330,19 @@ jQuery(function(){
         return false;
     }
     $(document).on('click','.color-list__title',colorCheck);
+
+    //장바구니 checkbox checked ALL
+    function checkBoxChkAll(){
+        var chkBox = $('[name=cart]');
+        function chked(sta){
+            for( var i =0, len = chkBox.length;i<len;i++){
+                chkBox[i].checked = sta;
+            }
+        }
+        return this.checked ? chked(true) : chked(false); 
+    }
+    $(document).on('click','.chk-all', checkBoxChkAll );
+
 
     //--END[기타 click EVENT] -------------------
 

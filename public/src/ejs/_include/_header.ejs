@@ -31,7 +31,7 @@ var data = jsonData
     <% if (page == "detail") { %>
         <link rel="stylesheet" href="../../css/pages/detail.css">
     <% } %>
-    <% if (page == "detail") { %>
+    <% if (page == "cart") { %>
         <link rel="stylesheet" href="../../css/pages/cart.css">
     <% } %>
     <% if (page == "") { %>
@@ -51,7 +51,7 @@ var data = jsonData
 
 <% classAdd = page == 'main' ? 'page-main' : '' %>
 <body class="<%= classAdd %>">
-    
+
 <!-- header -->
 <% include ../_include/_contentHeader %>
 <!-- //header -->
