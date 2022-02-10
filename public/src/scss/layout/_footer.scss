@@ -8,6 +8,7 @@
   border-top: 1px solid #484848;
   text-align: center;
   overflow: hidden;
+  margin-top: calcRem(120rem);
 
   &__layout{
     min-width: 1200px;

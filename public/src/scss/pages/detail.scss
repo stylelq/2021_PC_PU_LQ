@@ -388,7 +388,7 @@
         &--text{
             display: block;
             padding-left:calcRem(10rem);
-            @include title2;
+            @include title3;
         }
 
         &--del{
@@ -526,6 +526,8 @@
 
 //연관제품
 .recommended{
+    width: calcRem($minWidth);
+    margin: auto;
     overflow: hidden;
     // padding:0 calcRem(20rem);
     margin-top: calcRem(150rem);
