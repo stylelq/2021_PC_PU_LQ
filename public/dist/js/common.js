@@ -59,7 +59,11 @@ jQuery(function () {
     }
 
     $('.js-search-open').on('click', jsOpenSearchLayer);
-  }); //--[플로팅버튼] ----------------
+  }); //header
+
+  /*------------------
+  * [플로팅버튼]
+  ------------------*/
   //우측 하단 카트(cart-fix)
 
   if ($('.cart-fix').length > 0) {
@@ -85,13 +89,7 @@ jQuery(function () {
           bottom: height - (footY - winH) + 50
         });
       }
-    }); //히스토리 백, 또는 위치에서 새로고침 시 위치값 조정
-
-    if (height - (footY - winH) > 0) {
-      $('.cart-fix').css({
-        bottom: height - (footY - winH) + 50
-      });
-    }
+    });
   } //스크롤탑 버튼
 
 
@@ -101,10 +99,13 @@ jQuery(function () {
     }, 340);
   }
 
-<<<<<<< HEAD
   $(document).on('click', '.js-scrollTop', scrollTopBtn); //--END[플로팅버튼]----------------
-  //--[탭] ----------------------
-=======
+
+  /*---------------------------
+  * [Scroll]
+  ---------------------------*/
+  // 제품상세 option fix scroll
+
   if ($('.detail').length > 0) {
     var positionAbsolute = function positionAbsolute(num) {
       styleOpt.position = 'absolute';
@@ -157,14 +158,16 @@ jQuery(function () {
       console.log('scY : ', sc);
       console.groupEnd();
       return;
-    });
-  } //--END[Scroll]----------------------------- 
+    }); //히스토리 백, 또는 위치에서 새로고침 시 위치값 조정
 
-  /*------------------------
-  * [탭]
-  ------------------------*/
->>>>>>> 3aa2a87dd0234cc713189e2dfbc3ad0c8c17df0a
+    if (height - (footY - winH) > 0) {
+      $('.cart-fix').css({
+        bottom: height - (footY - winH) + 50
+      });
+    }
+  } //--[탭] ----------------------
   //basic
+
 
   function basicTab() {
     var item = '[class $= __item]',
@@ -175,10 +178,6 @@ jQuery(function () {
     $(this).parent().addClass('is-current');
   }
 
-<<<<<<< HEAD
-  $(document).on('click', '.js-basic-tab-link', basicTab); //--[select] -------------------
-  //custom select
-=======
   $(document).on('click', '.js-basic-tab-link', basicTab); //제품 상세 탭
 
   function detailTab() {
@@ -252,7 +251,6 @@ jQuery(function () {
     return false;
   } //리스트 소팅버튼
 
->>>>>>> 3aa2a87dd0234cc713189e2dfbc3ad0c8c17df0a
 
   function customSelect() {
     if ($(this).hasClass('is-active')) {
@@ -351,10 +349,7 @@ jQuery(function () {
     return false;
   }
 
-<<<<<<< HEAD
-  $(document).on('click', '.js-accordion', accordionMore); //팝업열기(공통)
-=======
-  $(document).on('click', '.color-list__title', colorCheck); //장바구니 checkbox checked ALL
+  $(document).on('click', '.js-accordion', accordionMore); //장바구니 checkbox checked ALL
 
   function checkBoxChkAll() {
     var chkBox = $('[name=' + this.name + ']');
@@ -369,43 +364,27 @@ jQuery(function () {
   }
 
   $(document).on('input, click', '.js-table-checkAll', checkBoxChkAll); //--END[기타 click EVENT] -------------------
->>>>>>> 3aa2a87dd0234cc713189e2dfbc3ad0c8c17df0a
-
-  function openPopup() {
-    var el = '';
-
-    if (this.tagName === 'BUTTON') {
-      el = this.dataset.popup;
-    }
-
-    if (this.tagName === "A") {
-      el = $(this).attr('href').replace('#', '');
-    }
-
-    if ($('.popup.is-active').length <= 1) {
-      $('.dim-join').addClass('is-active');
-    } else {
-      $('.popup').removeClass('is-active');
-      $('.dim-join').removeClass('is-active');
-    }
-
-    $('#' + el).addClass('is-active');
-    $('.popup__body').scrollTop(0); // 전체 팝업 body scroll 없앰
-
-    $('html').addClass('is-hidden'); // 예외 modal-pop
-
-    var typeModal = ['small-popup', 'button-popup', 'modal-pop'];
-    var popId = $('#' + el);
-    typeModal.forEach(function (name) {
-      if (popId.hasClass(name)) {
-        $('html').removeClass('is-hidden');
-        $('.popup__body').scrollTop(0);
-      }
-
-      return false;
-    });
-    return false;
-  }
-
-  $(document).on('click', '.js-popup-open', openPopup);
+  //     if($('.popup.is-active').length <= 1) {
+  //         $('.dim-join').addClass('is-active');
+  //     }else{
+  //         $('.popup').removeClass('is-active');
+  //         $('.dim-join').removeClass('is-active');
+  //     }
+  //     $('#' + el).addClass('is-active');
+  //     $('.popup__body').scrollTop(0);
+  //     // 전체 팝업 body scroll 없앰
+  //     $('html').addClass('is-hidden');
+  //     // 예외 modal-pop
+  //     var typeModal = ['small-popup','button-popup','modal-pop'];
+  //     var popId = $('#' + el);
+  //     typeModal.forEach(function(name){
+  //         if( popId.hasClass(name) ){
+  //             $('html').removeClass('is-hidden');
+  //             $('.popup__body').scrollTop(0);
+  //         }
+  //         return false;
+  //     });
+  //     return false;
+  // }
+  // $(document).on('click', '.js-popup-open', openPopup);
 }); //jQuery

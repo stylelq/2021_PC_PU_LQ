@@ -22,7 +22,7 @@
   -webkit-flex-wrap: wrap; -moz-flex-wrap: wrap; -o-flex-wrap: wrap; -ms-flex-wrap: wrap;//ie10+ 
   flex-wrap: wrap;
 }
-@mixin flex-alignItem {
+@mixin flex-alignCenter {
   -webkit-align-items: center;-moz-align-items: center;-o-align-items: center;-ms-flex-align: center;//ie10+
   align-items: center;
 }
@@ -49,10 +49,33 @@
 //Typography
 @mixin heading1(){font-size:calcRem(20rem); line-height:calclH(28,20); letter-spacing: $defaultLetter; font-weight:$medium;}
 @mixin heading2(){font-size:calcRem(17rem); line-height:calclH(24,17); letter-spacing: $defaultLetter; font-weight:$medium;}
-@mixin heading3(){font-size:calcRem(20rem); line-height:calclH(24,17); letter-spacing: $defaultLetter; font-weight:$regular;}
+@mixin heading3(){
+  font-size:calcRem(20rem); 
+  line-height:calclH(24,17); 
+  letter-spacing: $defaultLetter; 
+  font-weight:$regular;
+}
 
-@mixin title1(){font-size:calcRem(20rem); line-height:calclH(22,14); letter-spacing: $defaultLetter; font-weight:$regular;}
-@mixin title2(){font-size:calcRem(16rem); line-height:calclH(22,14); letter-spacing: $defaultLetter; font-weight:$regular;}
+// @mixin title1(){font-size:calcRem(14rem); line-height:calclH(22,14); letter-spacing: $defaultLetter; font-weight:$medium;}
+@mixin title1(){
+  font-size:calcRem(16rem); 
+  line-height:calclH(26,16); 
+  letter-spacing: $defaultLetter; 
+  font-weight:$medium;
+}
+// @mixin title2(){font-size:calcRem(14rem); line-height:calclH(22,14); letter-spacing: $defaultLetter; font-weight:$regular;}
+@mixin title2(){
+  font-size:calcRem(16rem); 
+  line-height:calclH(26,16); 
+  letter-spacing: $defaultLetter; 
+  font-weight:$regular;
+}
+@mixin title3(){
+  font-size:calcRem(16rem); 
+  line-height:calclH(26,16); 
+  letter-spacing: $defaultLetter; 
+  font-weight:$light;
+}
 
 @mixin body1(){font-size:calcRem(14rem); line-height:calclH(22,14); letter-spacing: $defaultLetter; font-weight:$light;}
 // @mixin body2(){font-size:calcRem(12rem); line-height:calclH(20,12); letter-spacing: $defaultLetter; font-weight:$medium;}
@@ -144,6 +167,21 @@
 }
 
 
+// scrollbar custom
+@mixin scrollbar-custom {
+  scrollbar-width: thin;
+  scrollbar-width: none;
 
+  //크롬,Firefox
+  &::-webkit-scrollbar {
+    width: 5px;               
+  }
+  &::-webkit-scrollbar-thumb{
+    border-radius: 10px; 
+    background-color: #cbcbcb;
+  }
 
+  //ie
+  scrollbar-face-color: #000;
+}
 

@@ -347,31 +347,31 @@ jQuery(function(){
 
     //--END[기타 click EVENT] -------------------
 
-        if($('.popup.is-active').length <= 1) {
-            $('.dim-join').addClass('is-active');
-        }else{
-            $('.popup').removeClass('is-active');
-            $('.dim-join').removeClass('is-active');
-        }
-        $('#' + el).addClass('is-active');
-        $('.popup__body').scrollTop(0);
+    //     if($('.popup.is-active').length <= 1) {
+    //         $('.dim-join').addClass('is-active');
+    //     }else{
+    //         $('.popup').removeClass('is-active');
+    //         $('.dim-join').removeClass('is-active');
+    //     }
+    //     $('#' + el).addClass('is-active');
+    //     $('.popup__body').scrollTop(0);
 
-        // 전체 팝업 body scroll 없앰
-        $('html').addClass('is-hidden');
+    //     // 전체 팝업 body scroll 없앰
+    //     $('html').addClass('is-hidden');
 
-        // 예외 modal-pop
-        var typeModal = ['small-popup','button-popup','modal-pop'];
-        var popId = $('#' + el);
-        typeModal.forEach(function(name){
-            if( popId.hasClass(name) ){
-                $('html').removeClass('is-hidden');
-                $('.popup__body').scrollTop(0);
-            }
-            return false;
-        });
+    //     // 예외 modal-pop
+    //     var typeModal = ['small-popup','button-popup','modal-pop'];
+    //     var popId = $('#' + el);
+    //     typeModal.forEach(function(name){
+    //         if( popId.hasClass(name) ){
+    //             $('html').removeClass('is-hidden');
+    //             $('.popup__body').scrollTop(0);
+    //         }
+    //         return false;
+    //     });
 
-        return false;
-    }
-    $(document).on('click', '.js-popup-open', openPopup);
+    //     return false;
+    // }
+    // $(document).on('click', '.js-popup-open', openPopup);
 
 });//jQuery
