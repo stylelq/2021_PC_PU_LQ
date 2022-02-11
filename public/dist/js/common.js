@@ -243,8 +243,7 @@ jQuery(function () {
   /*---------------------
   * [select] :: custom 
   ---------------------*/
-  //--custom select setting---
-  // select option view
+  //--custom select setting::option view -----
 
   function selectView(selected, option) {
     var link = '[class $= __link]',
@@ -262,8 +261,7 @@ jQuery(function () {
     select.stop().slideUp();
     $(document).on('click', optName, selectView);
     return false;
-  } //--[END]custom select setting---
-  //리스트 소팅버튼
+  } //리스트 소팅버튼
 
 
   function customSelect() {
@@ -344,7 +342,7 @@ jQuery(function () {
   $(document).on('click', '.color-list__title', colorCheck); //장바구니 checkbox checked ALL
 
   function checkBoxChkAll() {
-    var chkBox = $('[name=cart]');
+    var chkBox = $('[name=' + this.name + ']');
 
     function chked(sta) {
       for (var i = 0, len = chkBox.length; i < len; i++) {
@@ -355,7 +353,7 @@ jQuery(function () {
     return this.checked ? chked(true) : chked(false);
   }
 
-  $(document).on('click', '.chk-all', checkBoxChkAll); //--END[기타 click EVENT] -------------------
+  $(document).on('input, click', '.js-table-checkAll', checkBoxChkAll); //--END[기타 click EVENT] -------------------
 
   /*---------------------
   * [swiper slider] 
