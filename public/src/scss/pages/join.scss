@@ -90,8 +90,8 @@
   }
 
   &__area{
-    margin-top:calcRem($joinMargin);
-
+    margin: 0 auto;
+    width: calcRem(400rem);
     .input-list__item.type-btn:nth-child(3){
       margin-top:calcRem(20rem);
     }
