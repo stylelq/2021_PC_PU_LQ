@@ -424,7 +424,7 @@
 
 
 .login-info{
-  margin-top:calcRem($joinMargin);
+  margin:calcRem($joinMargin) 0;
   max-width: $tabletMax;
   margin-left:auto;
   margin-right:auto;
