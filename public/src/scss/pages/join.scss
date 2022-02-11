@@ -116,7 +116,7 @@
   &__link{
     display:block;
     margin-top:calcRem($joinMargin);
-    @include body1();
+    @include body6();
     text-decoration: underline;
   }
 
@@ -247,7 +247,8 @@
 
   &__btn{
     margin: 0 auto;
-    padding: calcRem(13rem) 0 calcRem(16rem);
+    margin: calcRem(20rem) 0 calcRem(40rem);
+    //padding: calcRem(13rem) 0 calcRem(16rem);
     display: block;
     width: calcRem(400rem);
     color: #fff;
@@ -439,7 +440,7 @@
   &__item{
     position:relative;
     flex-grow: 1;
-    @include body4();
+    @include body6();
     color:$gray1;
 
     & + &:before{
@@ -458,9 +459,9 @@
 
 .login{
   &__txt{
-    margin-top:calcRem(20rem);
     @include body3();
-    text-align: left;
+    text-align: center;
+    margin: 0;
   }
 
   &__para{
