@@ -91,7 +91,7 @@
   }
 }
 .btn-group2{
-  margin-top:calcRem(20rem);
+  margin-top:calcRem(30rem);
   $this:&;
 
   &__list{
@@ -120,7 +120,7 @@
   }
 
   &__link{
-    @include title1();
+    @include title4();
   }
 }
 
@@ -189,7 +189,7 @@
   padding:calcRem(10rem) calcRem(10rem) calcRem(8rem);
   background-color:transparent;
   border:1px solid #fff; outline:none;
-  @include title1;
+  @include title4;
   box-sizing: border-box;
   cursor: pointer;
   color:$darkgray;
@@ -265,7 +265,7 @@
     width:calcRem(80rem);
     height:calcRem(38rem);
     display: block;
-    @include body4();
+    @include body6();
     padding:calcRem(9rem) calcRem(10rem) calcRem(7rem);
   }
 }
@@ -296,7 +296,7 @@ input {
     margin-left: 0;
     padding-left:  calcRem(20rem);
     cursor: pointer;
-    @include body3();
+    @include body7();
     box-sizing: border-box;
 
     &:before{

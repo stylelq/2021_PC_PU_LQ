@@ -61,7 +61,7 @@
 @mixin dotStyle {
   position: relative;
   padding-left: 15px;
-  @include body3();
+  @include body7();
   
   &:before{
       content: '';
@@ -77,7 +77,7 @@
 @mixin numStyle {
   position: relative;
   padding-left: 15px;
-  @include body3();
+  @include body7();
 
   &:before{
       content: '';
@@ -122,7 +122,7 @@
   .etc__num:not(ul):not(ol){@include numStyle;}
   .etc__line:not(ul):not(ol){@include lineStyle;}
 
-  p{@include body3();}
+  p{@include body7();}
   strong{font-weight: 400;}
   .etc__title,.title{ 
       margin:calcRem(30rem) 0 calcRem(10rem); 
@@ -520,6 +520,10 @@
       &.platforml-only{
           padding: 0;
       }
+      &.terms-only{
+        min-width: calcRem(600rem);
+        max-width: calcRem(600rem);
+      }
 
       .wrap{
           padding: 0;
@@ -542,6 +546,9 @@
   &__header{
       padding-bottom:calcRem(20rem);
       border-bottom:solid 1px $gray1;
+      &.terms{
+        border-bottom: none;
+      }
 
       &--title,
       &__tit{
