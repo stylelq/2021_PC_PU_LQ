@@ -15,7 +15,7 @@
   position: relative;
   display: block;
   padding-top: calcRem(180rem);
-  overflow: scroll;
+  // overflow: scroll;
   &__wrap{
     min-width: 1200px;
     text-align: center;
@@ -60,5 +60,10 @@
     display: block;
     font-size: calcRem(14rem);
     font-weight: 300;
+  }
+  .search__result{
+    width:calcRem($minWidth);
+    margin: auto;
+    margin-bottom: calcRem(120rem);
   }
 }
