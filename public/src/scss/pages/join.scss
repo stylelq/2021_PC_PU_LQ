@@ -480,13 +480,14 @@
 .result{
   &__tit{
     @include title2();
+    margin: 0;
   }
 
   &__box{
     margin-top:calcRem($joinMargin);
-    @include body3();
+    @include body1();
     padding:calcRem(10rem);
-    border:1px solid $lightgray1;
+    border:1px solid #cbcbcb;
   }
 
   &__table{
@@ -494,7 +495,7 @@
   }
 
   &__bullet{
-    margin-top:calcRem($joinMargin);
+    margin:calcRem($joinMarginBullet) 0 calcRem($joinMargin);
   }
 }
 

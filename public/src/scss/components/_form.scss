@@ -9,14 +9,18 @@
 
   &__th{
     height:calcRem(48rem);
-    @include body2();
+    @include body1();
     background-color:$lightgray2;
     vertical-align: middle;
+
+    &.bold{
+      font-weight: $regular;
+    }
   }
 
   &__td{
     height:calcRem(42rem);
-    @include body3();
+    @include body1();
     border-bottom:1px solid $lightgray1;
     vertical-align: middle;
 
@@ -38,7 +42,7 @@
 
   &__item{
     position: relative;
-    @include body3();
+    @include body7();
     padding-left:calcRem(7rem);
     & + &{
       margin-top:calcRem(5rem);
