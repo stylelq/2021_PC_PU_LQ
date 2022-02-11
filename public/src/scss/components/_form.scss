@@ -235,6 +235,48 @@
   color:inherit
 }
 
+.btn-v3{
+	display:block;
+  width:100%;
+  padding:calcRem(10rem) calcRem(10rem) calcRem(8rem);
+  background-color:transparent;
+  border:1px solid #fff; outline:none;
+  @include body2;
+  box-sizing: border-box;
+  cursor: pointer;
+  color:$darkgray;
+  text-align: center;
+
+  &--small{
+	@include body8;
+    padding:calcRem(8rem) calcRem(10rem) calcRem(6rem);
+  }
+
+  &.type-primary{
+    background-color:$point1;
+    color:#fff;
+    border-color:$point1;
+  }
+
+  &.type-secondary{
+    background-color:$darkgray;
+    color:#fff;
+    border-color:$darkgray;
+  }
+
+  &.type-outline{
+    border-color:$black1;
+  }
+
+  &.type-white{
+    border-color:$gray2;
+  }
+
+  &.size-small{
+    width:auto;
+    padding:calcRem(15rem) calcRem(5rem);
+  }
+}
 
 //인풋 리스트 형태
 .input-list{
@@ -610,6 +652,7 @@ input {
   }
 }
 
+
 //폼 셀렉트(하단보더)
 .form__select{
   &--noborder{
@@ -923,10 +966,20 @@ input {
 
 //공통 테이블
 .basic-table{
-  $this:&;
-  margin-bottom:calcRem(25rem);
-  border-top:solid 1px $grayTextColor;
-  width:100%;
+	$this:&;
+	margin-bottom:calcRem(25rem);
+	border-top:solid 1px $grayTextColor;
+	width:100%;
+	
+	caption{
+		overflow:hidden;
+        position:absolute;
+        border:0;
+        margin:-1px;
+        width:1px; height:1px; 
+        clip: rect(1px 1px 1px 1px); 
+        clip-path: inset(50%); 
+	}
 
   thead{
     th{
@@ -983,7 +1036,153 @@ input {
     }
   }
 
-  .weight-light{
-    font-weight: 300;
-  }
+	.weight-light{
+		font-weight: 300;
+	}
+}
+
+//pc 리스트 테이블
+.list-table{
+	$this:&;
+	margin-bottom:calcRem(25rem);
+	border-top:solid 1px $black1;
+	width:100%;
+	
+	caption{
+		overflow:hidden;
+        position:absolute;
+        border:0;
+        margin:-1px;
+        width:1px; height:1px; 
+        clip: rect(1px 1px 1px 1px); 
+        clip-path: inset(50%); 
+	}
+
+	thead{
+		th{
+			vertical-align: middle;
+			@include body7;
+			padding:calcRem(20rem) calcRem(5rem);
+			border-bottom:solid 1px $gray2;
+			text-align: center;
+		}
+	}
+
+	tbody{
+		tr{
+			th,td{
+				border-color:$gray2;
+			}
+		}
+		th{
+			vertical-align: middle;
+			@include body3;
+			padding:calcRem(10rem) calcRem(5rem);
+			text-align: center;
+			border-bottom: solid 1px $lightgray1;
+			color:$black1;
+			background-color: $lightgray3;
+		}
+
+		#{$this}--bold{
+			font-weight: $medium;
+			background-color: $lightgray2;
+		}
+
+		td{
+			vertical-align: middle;
+			@include body3;
+			padding:calcRem(10rem) calcRem(20rem);
+			text-align: center;
+			border-bottom: solid 1px $lightgray1;
+			color:$black1;
+		}
+	}
+
+	.type-chk{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.weight-light{
+		font-weight: 300;
+	}
+}
+
+
+//custom 셀렉트
+//filter Select - custom
+.selBox{
+	&__meta--select{
+		position: relative;
+		width: calcRem(160rem);
+	} 
+	&-custom{
+		$this:&;
+		&__selected {
+			@include body7;
+			text-align: left;
+			margin: 0;
+			padding-bottom: 5px;
+			border-bottom: 1px solid $gray2;
+			box-sizing: border-box;
+			cursor: pointer;
+			position: relative;
+			&:after{
+				content: '';
+				position: absolute;
+				top: 50%;right: 0;
+				transform: translateY(-50%);
+				width: 7px;height: 4px;
+				@include background('/images/common/ico_faq_arrow.svg','no-repeat center center / contain' );
+			}
+			&.is-active:after{
+				transform: rotateZ(180deg);
+			}
+			.selected_text{margin-right: 10px;}
+		}
+		
+		&__select{
+			font-size: 12px;
+			padding: 20px;
+			position: absolute;
+			top: 25px;
+			right: 0;
+			z-index: 100;
+			border: 1px solid $gray2;
+			width: 100%;
+			box-sizing: border-box;
+			background:$whiteColor;
+			display: none;
+		}
+		&__option{
+			text-align: left;
+			&:not(:last-child){
+				margin-bottom: 15px;
+			}
+			#{$this}__link{
+				color: #000;
+				line-height: 19px;
+				position: relative;        
+				&:after{
+					content: '';
+					position:absolute;
+					bottom:-4px;left: 0;
+					width: 0;
+					height: 1px;
+					background:#000;
+					transition: all 0.5s;
+				}
+			}
+	
+			&:hover,
+			&.is-current{
+				font-weight: $medium;
+				
+				#{$this}__link:after{
+					width: 100%; 
+				}
+			}
+		}
+			
+	}
 }

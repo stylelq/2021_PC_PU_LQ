@@ -1,7 +1,7 @@
 <%
 type = "cart"
 page = "cart"
-popup = "false"
+popup = "true"
 %>
 <% include ../_include/_header %>
 <div class="container">
@@ -9,7 +9,6 @@ popup = "false"
         <section class="cart">
             <h3 class="cart__title">SHOPPING CART</h3>
             <div class="cart-banner">
-                <div class="cart-list__no-cart">장바구니에 담긴 상품이 없습니다.</div>
                 <div class="cart-banner__text">고객님은 <span class="cart-banner__text--point">비로그인</span> 상태 입니다.<br />로그인 하시면 혜택가로 구매 가능 합니다.</div>
                 <div class="cart-banner__btn">
                     <ul class="cart-banner__list">
@@ -21,8 +20,150 @@ popup = "false"
             </div>
 
             <!-- list -->
-            <div class="cart-list"></div>
+            <div class="cart-list">
+                <table class="list-table" summary="장바구니">
+                    <caption>장바구니</caption>
+                    <colgroup>
+                        <col width="5%"><col width="50%"><col><col><col><col><col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="type-chk">
+                                <div class="checkbox-point">
+                                    <input class="checkbox-point__input sr-only js-table-checkAll" type="checkbox" name="cart" id="cartAll" >
+                                    <label for="cartAll" class="checkbox-point__label"><span class="sr-only">체크</span></label>
+                                </div>
+                            </th>
+                            <th>상품/옵션 정보</th>
+                            <th>판매가/혜택가</th>
+                            <th>수량</th>
+                            <th>합계</th>
+                            <th>배송비</th>
+                            <th>선택</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="type-chk">
+                                <div class="checkbox-point">
+                                    <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart1" >
+                                    <label for="cart1" class="checkbox-point__label"><span class="sr-only">체크</span></label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="detail-Meta">
+                                    <h2 class="detail-Meta__title">루이까또즈 MINI CAVIAR(미니캐비어) 사첼백 HO1PM21IV</h2>
+                                    
+                                </div>
+                                <!-- Select -->
+                                <div class="selBox__meta--select">
+                                    <input type="text" value="" class="hidden-input is-hide">
+                                    <p class="selBox-custom__selected"><span class="selected_text">Sorting</span></p>
+                                    <ul class="selBox-custom__select">
+                                        <li class="selBox-custom__option"><a href="" class="selBox-custom__link">New in</a></li>
+                                        <li class="selBox-custom__option"><a href="" class="selBox-custom__link">Best</a></li>
+                                        <li class="selBox-custom__option"><a href="" class="selBox-custom__link">Price low to high</a></li>
+                                        <li class="selBox-custom__option"><a href="" class="selBox-custom__link">Price high to low</a></li>
+                                    </ul>
+                                </div>
+                                <!-- .Select -->
+                            </td>
+                            <td>
+                                <div class="detail-Meta__price">
+                                    <span class="detail-Meta__price--current">289,290원</span>
+                                    <span class="detail-Meta__price--sale">328,000원</span>
+                                    <a href="#benefitsPop" class="detail-Meta__benefit js-popup-open">benefit</a>
+                                </div>
+                            </td>
+                            <td>
+                                <!-- quantity -->
+                                <div class="quantity">
+                                    <a href="#;" classw="quantity__minus js-minus"><span class="sr-only">minus</span></a>
+                                    <input class="quantity__text--current" type="number" value="1" min="1" max="999" maxlength="3" inputmode="numeric" pattern="[0-9]*" readonly="readonly" />
+                                    <a href="#;" class="quantity__plus js-plus"><span class="sr-only">plus</span></a>
+                                </div>
+                                <!-- quantity -->
+                            </td>
+                            <td><span class="detail-Meta__price--current">289,290원</span></td>
+                            <td><span>무료배송</span></td>
+                            <td>
+                                <a href="" class="btn-v3 btn-v3--small type-primary">로그인</a>
+                                <a href="" class="btn-v3 btn-v3--small type-white">로그인</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="type-chk">
+                                <div class="checkbox-point">
+                                    <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart2">
+                                    <label for="cart2" class="checkbox-point__label"><span class="sr-only">체크</span></label>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="type-chk">
+                                <div class="checkbox-point">
+                                    <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart3" >
+                                    <label for="cart3" class="checkbox-point__label"><span class="sr-only">체크</span></label>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <!-- .list -->
+            <div class="cart-list2">
+                <div class="cart-btn">
+                    <a href="" class="btn-v3 btn-v3--small type-white">선택상품 삭제</a>
+                    <a href="" class="btn-v3 btn-v3--small type-white">품절상품 삭제</a>
+                </div>
+
+                <div class="cart-total">
+                    <div class="cart-total__list">
+						<ul class="cart-total__list--inner">
+							<li class="cart-total__list--item">
+								<dl class="cart-total--inner">
+									<dt class="cart-total__title">총 상품 금액</dt>
+									<dd class="cart-total__text" id="strong_total_price">93,000원</dd>
+								</dl>
+							</li>
+							<li class="cart-total__list--item">
+								<dl class="cart-total--inner">
+									<dt class="cart-total__title">총 할인 금액</dt>
+									<dd class="cart-total__text" id="strong_total_discount_price">-10,980원</dd>
+								</dl>
+							</li>
+							<li class="cart-total__list--item">
+								<dl class="cart-total--inner">
+									<dt class="cart-total__title">배송비</dt>
+									<dd class="cart-total__text" id="strong_total_deli_price">0 원</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					<div class="cart-total-sum">
+						<dl class="cart-total--inner">
+							<dt class="cart-total__title">총 주문 금액</dt>
+							<dd class="cart-total__text" id="strong_total_apply_price">82,020원</dd>
+						</dl>
+					</div>
+                    <div class="cart-total__btn">
+                        <a href="" class="btn-v3 type-white">선택상품 주문</a>
+                        <a href="" class="btn-v3 type-primary">전체상품 주문</a>
+                    </div>
+                </div>
+            </div>
 
             <!-- recommended -->
             <div class="recommended">
@@ -124,4 +265,5 @@ popup = "false"
 </div>
 <% include ../_include/_contentFooter %>
 <% include ../_include/_cartFix %>
+<% include ../_popup/_benefits %>
 <% include ../_include/_footer %>

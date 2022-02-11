@@ -1,14 +1,13 @@
 @import "../base/variables";
 @import "../base/mixins";
 
-
-//연관제품
+//하단 연관제품
 .recommended{
     width: calcRem($minWidth);
     margin: auto;
     overflow: hidden;
     // padding:0 calcRem(20rem);
-    margin-top: calcRem(150rem);
+    margin-top: calcRem(40rem);
     background-color: $whiteColor;
     position: relative;
     z-index: 1;
@@ -173,6 +172,41 @@
         &__price{
             @include body2;
             margin-top:calcRem(10rem);
+        }
+    }
+}
+
+.cart{
+    width: calcRem($minWidth);
+    margin: auto;
+
+    &__title{
+        margin:0;
+        font-size: calcRem(20rem);
+        font-weight: $regular;
+        text-align: center;
+        padding-bottom: calcRem(20rem); 
+    }
+    &-banner{
+        text-align: center;
+        padding: calcRem(40rem) 0 calcRem(60rem);
+
+        .cart-list__no-cart{
+            margin-bottom: calcRem(10rem);
+        }
+        &__text{
+            @include body3;
+            margin-bottom: calcRem(20rem);
+            &--point{
+                font-weight: $medium;
+                color: $point1;
+            }
+        }
+        &__btn{
+            display: inline-block;
+            .btn-v1--small{
+                padding: calcRem(8rem) calcRem(30rem) calcRem(6rem);
+            }
         }
     }
 }
