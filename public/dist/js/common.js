@@ -58,7 +58,19 @@ jQuery(function () {
       }
     }
 
-    $('.js-search-open').on('click', jsOpenSearchLayer);
+    $('.js-search-open').on('click', jsOpenSearchLayer); // 헤더 검색박스 필터 버튼
+
+    function searchFilterButton() {
+      var item = '.main-search__item';
+      $(item).removeClass('is-active');
+      $(this).addClass('is-active');
+      $('.main-search__top').hide(); // 버튼클릭시 검색결과 텍스트 숨기기
+
+      console.log($(this).find('a').text());
+      return false;
+    }
+
+    $(document).on('click', '.main-search__item', searchFilterButton);
   }); //header
 
   /*------------------
@@ -209,25 +221,6 @@ jQuery(function () {
 
   $(document).on('click', '.js-tab-link', detailTab); //--END[탭] ----------------------
 
-  /*------------------------
-  * [dropdown::아코디언]
-  ------------------------*/
-  //qna 더보기
-
-  function qnaMore() {
-    var parent = $(this).closest('.qna-item');
-
-    if (parent.hasClass('is-view')) {
-      parent.removeClass('is-view');
-    } else {
-      parent.addClass('is-view');
-    }
-
-    return false;
-  }
-
-  $(document).on('click', '.js-qna-more', qnaMore); //--END[dropdown::아코디언] ----------------------
-
   /*---------------------
   * [select] :: custom 
   ---------------------*/
@@ -281,6 +274,7 @@ jQuery(function () {
   }
 
   $(document).on('click', '.selBox-custom__selected', cartCustomSelect); //--END[select]--------------------------
+  // 좋아요/장바구니 넣기
 
   function productItem() {
     if ($(this).closest('.type-like').length > 0) {
@@ -299,7 +293,30 @@ jQuery(function () {
     return false;
   }
 
-  $(document).on('click', '.product-icon__link', productItem);
+  $(document).on('click', '.product-icon__link', productItem); // 좋아요버튼 active style
+
+  var likeClick;
+
+  function likeButtonStyle() {
+    if (!likeClick) {
+      likeClick = true;
+      $('.fix-button').addClass('is-on');
+    } else {
+      likeClick = false;
+      $('.fix-button').removeClass('is-on');
+    }
+  }
+
+  $(document).on('click', '[class $= __link--like]', likeButtonStyle); //상세 컬러 선택
+
+  function colorCheck() {
+    var item = '.color-list__item';
+    $(item).removeClass('is-current');
+    $(this).parent(item).addClass('is-current');
+    return false;
+  }
+
+  $(document).on('click', '.color-list__title', colorCheck);
   /*
       //Join(회원가입, 로그인)
   */
@@ -335,21 +352,7 @@ jQuery(function () {
   }
 
   ;
-  $(document).on('click', '.terms__depth2-item label', allCheckItem); //기본 아코디언
-
-  function accordionMore() {
-    var parent = $(this).parent('li');
-
-    if (parent.hasClass('is-active')) {
-      parent.removeClass('is-active');
-    } else {
-      parent.addClass('is-active').siblings('li').removeClass('is-active');
-    }
-
-    return false;
-  }
-
-  $(document).on('click', '.js-accordion', accordionMore); //장바구니 checkbox checked ALL
+  $(document).on('click', '.terms__depth2-item label', allCheckItem); //장바구니 checkbox checked ALL
 
   function checkBoxChkAll() {
     var chkBox = $('[name=' + this.name + ']');
@@ -363,7 +366,79 @@ jQuery(function () {
     return this.checked ? chked(true) : chked(false);
   }
 
-  $(document).on('input, click', '.js-table-checkAll', checkBoxChkAll); //--END[기타 click EVENT] -------------------
+  $(document).on('input, click', '.js-table-checkAll', checkBoxChkAll);
+  /*------------------------
+  * [dropdown::아코디언]
+  ------------------------*/
+  //기본 아코디언
+
+  function accordionMore() {
+    var parent = $(this).parent('li');
+
+    if (parent.hasClass('is-active')) {
+      parent.removeClass('is-active');
+    } else {
+      parent.addClass('is-active').siblings('li').removeClass('is-active');
+    }
+
+    return false;
+  }
+
+  $(document).on('click', '.js-accordion', accordionMore); //qna 더보기
+
+  function qnaMore() {
+    var parent = $(this).closest('.qna-item');
+
+    if (parent.hasClass('is-view')) {
+      parent.removeClass('is-view');
+    } else {
+      parent.addClass('is-view');
+    }
+
+    return false;
+  }
+
+  $(document).on('click', '.js-qna-more', qnaMore); //--END[dropdown::아코디언] ----------------------
+
+  /*---------------------
+    * [swiper slider] 
+    ---------------------*/
+
+  if ($('.detail-thumb').length > 0) {
+    var detailThumbSlide = new Swiper('.detail-thumb__container', {
+      observer: true,
+      observeParents: true,
+      watchOverflow: true,
+      slidesPerView: 1,
+      pagination: {
+        el: ".detail-thumb__pagination",
+        type: "fraction"
+      },
+      navigation: {
+        nextEl: ".detail-thumb--next",
+        prevEl: ".detail-thumb--prev"
+      }
+    });
+  } //연관제품 슬라이드
+
+
+  if ($('.recommended').length > 0) {
+    var recommendeSlide = new Swiper('.recommended-slide__container', {
+      observer: true,
+      observeParents: true,
+      watchOverflow: true,
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      navigation: {
+        nextEl: ".detail-thumb--next",
+        prevEl: ".detail-thumb--prev"
+      },
+      pagination: {
+        el: ".recommended-slide__pagination",
+        type: "fraction"
+      }
+    });
+  } //--END[swiper slider]-----------------------------
   //     if($('.popup.is-active').length <= 1) {
   //         $('.dim-join').addClass('is-active');
   //     }else{
@@ -387,4 +462,5 @@ jQuery(function () {
   //     return false;
   // }
   // $(document).on('click', '.js-popup-open', openPopup);
+
 }); //jQuery
