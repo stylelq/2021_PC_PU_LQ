@@ -1,0 +1,36 @@
+<%
+type = "join"
+page = "join"
+popup = "false"
+%>
+<% include ../_include/_header %>
+
+<div class="container">
+    <div class="site-main">
+        <section class="join">
+            <div class="join__title">비회원 주문하기</div>
+            <div class="wrap">
+                <div class="join__area">
+                    <div class="input-list">
+                        <ul class="input-list__list">
+                            <li class="input-list__item">
+                                <input type="text" class="input-v1" placeholder="주문번호 입력">
+                            </li>
+                            <li class="input-list__item">
+                                <input type="password" class="input-v1" placeholder="휴대폰번호 ‘-’ 없이 입력">
+                            </li>
+                        </ul>
+                        <button class="join-box__btn btn-v1 type-primary">확인</button>
+                        <p class="login__txt">
+                            비회원 주문/배송 정보를 잊으셨다면<br>
+                            고객센터 080-599-1414로 전화 주시기 바랍니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>

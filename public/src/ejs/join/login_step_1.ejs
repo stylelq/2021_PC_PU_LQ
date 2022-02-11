@@ -1,0 +1,75 @@
+<%
+type = "join"
+page = "join"
+popup = "false"
+%>
+<% include ../_include/_header %>
+
+<div class="container">
+    <div class="site-main">
+        <section class="join">
+            <div class="join__title">로그인</div>
+            <div class="wrap">
+                <section class="join__box2">
+                    <div class="input-list">
+                        <ul class="input-list__list">
+                            <li class="input-list__item">
+                                <input type="text" class="input-v1" placeholder="아이디">
+                            </li>
+                            <li class="input-list__item">
+                                <input type="password" class="input-v1" placeholder="비밀번호 입력">
+                            </li>
+                        </ul>
+                        <div class="join__check">
+                            <input type="checkbox" class="checkbox-v1" id="info1">
+                            <label for="info1">아이디 저장</label>
+                        </div>
+                        <button class="join-box__btn btn-v1 type-primary">로그인</button>
+                    </div>
+                    <div class="login-info">
+                        <ul class="login-info__list">
+                            <li class="login-info__item">
+                                <a href="" class="login-info__link">아이디 찾기</a>
+                            </li>
+                            <li class="login-info__item">
+                                <a href="" class="login-info__link">비밀번호 찾기</a>
+                            </li>
+                            <li class="login-info__item">
+                                <a href="" class="login-info__link">회원가입</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="join__box2">
+                    <article class="join-sns">
+                        <ul class="join-sns__list">
+                            <li class="join-sns__item type-naver">
+                                <a href="" class="join-sns__link">
+                                    네이버 계정으로 로그인
+                                </a>
+                            </li>
+                            <li class="join-sns__item type-kakao">
+                                <a href="" class="join-sns__link">
+                                    카카오 계정으로 로그인
+                                </a>
+                            </li>
+                            <li class="join-sns__item type-payco">
+                                <a href="" class="join-sns__link">
+                                    페이코 계정으로 로그인
+                                </a>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+                <section class="join__box2">
+                    <div class="login__info">
+                        <button class="btn-v1 type-white">비회원 주문조회</button>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+</div>
+
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>

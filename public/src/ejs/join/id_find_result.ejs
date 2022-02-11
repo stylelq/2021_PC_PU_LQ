@@ -1,0 +1,81 @@
+<%
+type = "join"
+page = "join"
+popup = "false"
+%>
+<% include ../_include/_header %>
+
+<div class="container">
+    <div class="site-main">
+        <section class="join">
+            <div class="join__title">아이디 찾기</div>
+            <div class="wrap">
+                <section class="result join__box2">
+                    <p class="result__tit">
+                        입력하신 정보로 가입된 아이디가<br>
+                        <span class="color-point1">3개</span> 검색되었습니다.
+                    </p>
+                    <div class="result__box">
+                        이름: 최길*<br>
+                        휴대폰번호: 010-****-1622
+                    </div>
+                    <table class="result__table table-v1">
+                        <colgroup>
+                            <col style="width:auto">
+                            <col style="width:auto">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                        <tr class="table-v1__tr">
+                            <th class="table-v1__th bold">회원구분</th>
+                            <th class="table-v1__th bold">아이디</th>
+                            <th class="table-v1__th bold">가입유형</th>
+                        </tr>
+                        <tr class="table-v1__tr">
+                            <td class="table-v1__td">MEMBERSHIP</td>
+                            <td class="table-v1__td">youngv**</td>
+                            <td class="table-v1__td">네이버 계정</td>
+                        </tr>
+                        <tr class="table-v1__tr">
+                            <td class="table-v1__td">WEB</td>
+                            <td class="table-v1__td">kakao**</td>
+                            <td class="table-v1__td">카카오 계정</td>
+                        </tr>
+                        <tr class="table-v1__tr">
+                            <td class="table-v1__td">MEMBERSHIP</td>
+                            <td class="table-v1__td">abcdefg**</td>
+                            <td class="table-v1__td">이메일</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="result__bullet bullet-v1">
+                        <ul class="bullet-v1__list">
+                            <li class="bullet-v1__item">
+                                MEMBERSHIP 아이디로 로그인 후 사용하시기 바랍니다.
+                            </li>
+                            <li class="bullet-v1__item">
+                                ID통합 등 회원 관련 문의사항은 080-599-1414로 문의 주시기 바랍니다.
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="join__box2">
+                    <div class="btn-group">
+                        <ul class="btn-group__list type-two">
+                            <li class="btn-group__item">
+                                <button class="btn-group__btn btn-v1 type-white">비밀번호 찾기</button>
+                            </li>
+                            <li class="btn-group__item">
+                                <button class="btn-group__btn btn-v1 type-primary">로그인</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                </section>
+            </div>
+        </section>
+    </div>
+</div>
+
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>

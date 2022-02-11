@@ -76,6 +76,12 @@
   letter-spacing: $defaultLetter; 
   font-weight:$light;
 }
+@mixin title4(){
+  font-size:calcRem(14rem);
+  line-height:calclH(26,16);
+  letter-spacing: $defaultLetter;
+  font-weight:$medium;
+}
 
 @mixin body1(){font-size:calcRem(14rem); line-height:calclH(22,14); letter-spacing: $defaultLetter; font-weight:$light;}
 // @mixin body2(){font-size:calcRem(12rem); line-height:calclH(20,12); letter-spacing: $defaultLetter; font-weight:$medium;}
@@ -90,7 +96,7 @@
   font-size:calcRem(14rem); 
   line-height:calclH(22,14); 
   letter-spacing: $defaultLetter; 
-  font-weight:$light;
+  font-weight:$regular;
 }
 @mixin body4(){font-size:calcRem(10rem); line-height:calclH(16,10); letter-spacing: $defaultLetter; font-weight:$light;}
 @mixin body5(){font-size:calcRem(11rem); line-height:calclH(18,11); letter-spacing: $defaultLetter; font-weight:$light;}
