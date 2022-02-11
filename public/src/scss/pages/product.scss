@@ -13,6 +13,7 @@
     }
 }
 
+
 // tab
 .product-tab{
     width:calcRem($minWidth);
@@ -55,7 +56,7 @@
 .product-post{
     $this:&;
 
-    padding: calcRem(20rem);
+    padding: calcRem(20rem) 0;
     box-sizing: border-box;
 
     &__list{
