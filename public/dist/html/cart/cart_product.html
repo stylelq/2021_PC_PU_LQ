@@ -19,12 +19,28 @@
 
     <!-- 공통 css -->
     <link rel="stylesheet" href="../../css/common.css">
+
     
+    
+    
+    
+    
+        <link rel="stylesheet" href="../../css/pages/cart.css">
+    
+    
+    
+    
+    
+    
+    
+
 </head>
 
 
 <body class="">
-    <div class="dim"></div>
+
+<!-- header -->
+<div class="dim"></div>
     <div class="header">
         <div class="header-wrap">
             <div class="header-wrap__top">
@@ -329,27 +345,36 @@
             </div>
     </div>
 </div>
+<!-- //header -->
 
+<div class="loading">
+    <div class="loading-box">
+        <div class="loading-box__img"><img src="../../images/common/loading.gif" alt=""></div>
+        <div class="loading-box__text">
+            데이터 로딩중입니다<br>잠시만 기다려주세요
+        </div>
+    </div>
+</div>
+
+<!-- contents start -->
 <div class="container">
     <div class="site-main">
         <section class="cart">
-            <h3>SHOPPING CART</h3>
+            <h3 class="cart__title">SHOPPING CART</h3>
             <div class="cart-banner">
                 <div class="cart-list__no-cart">장바구니에 담긴 상품이 없습니다.</div>
                 <div class="cart-banner__text">고객님은 <span class="cart-banner__text--point">비로그인</span> 상태 입니다.<br />로그인 하시면 혜택가로 구매 가능 합니다.</div>
                 <div class="cart-banner__btn">
                     <ul class="cart-banner__list">
                         <li class="cart-banner__item">
-                            <a href="" class="btn-v1 type-primary">로그인</a>
+                            <a href="" class="btn-v1 btn-v1--small type-primary">로그인</a>
                         </li>
                     </ul>
                 </div>
             </div>
 
             <!-- list -->
-            <div class="cart-list">
-                
-            </div>
+            <div class="cart-list"></div>
             <!-- .list -->
 
             <!-- recommended -->
@@ -626,6 +651,7 @@
 
 
 <script src="../../js/common.js"></script>
+
 
 
 

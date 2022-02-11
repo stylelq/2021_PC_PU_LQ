@@ -59,7 +59,11 @@ jQuery(function () {
     }
 
     $('.js-search-open').on('click', jsOpenSearchLayer);
-  }); //--[플로팅버튼] ----------------
+  }); //header
+
+  /*------------------
+  * [플로팅버튼]
+  ------------------*/
   //우측 하단 카트(cart-fix)
 
   if ($('.cart-fix').length > 0) {
@@ -85,13 +89,7 @@ jQuery(function () {
           bottom: height - (footY - winH) + 50
         });
       }
-    }); //히스토리 백, 또는 위치에서 새로고침 시 위치값 조정
-
-    if (height - (footY - winH) > 0) {
-      $('.cart-fix').css({
-        bottom: height - (footY - winH) + 50
-      });
-    }
+    });
   } //스크롤탑 버튼
 
 
@@ -102,8 +100,74 @@ jQuery(function () {
   }
 
   $(document).on('click', '.js-scrollTop', scrollTopBtn); //--END[플로팅버튼]----------------
-  //--[탭] ----------------------
+
+  /*---------------------------
+  * [Scroll]
+  ---------------------------*/
+  // 제품상세 option fix scroll
+
+  if ($('.detail').length > 0) {
+    var positionAbsolute = function positionAbsolute(num) {
+      styleOpt.position = 'absolute';
+      styleOpt.top = num;
+    };
+
+    var positionFixed = function positionFixed(num) {
+      styleOpt.position = 'fixed';
+      styleOpt.top = num;
+    };
+
+    var sc, winH, divH;
+    var styleOpt = {};
+    $(window).on('scroll', function () {
+      sc = $(document).scrollTop();
+      winH = $(window).height();
+      divH = $('.detail-tab__cont').height();
+
+      if (sc >= 900) {
+        $('.detail-tab').addClass('fixed');
+
+        if (divH < winH) {
+          if (sc - divH > 470) {
+            positionAbsolute(divH + 240);
+            $('.detail-tab').removeClass('fixed');
+          } else {
+            positionFixed($('.header').height() + 20);
+          }
+        } else {
+          if (sc - divH > 0) {
+            positionAbsolute(divH + 240);
+            $('.detail-tab').removeClass('fixed');
+          } else {
+            positionFixed($('.header').height() + 20);
+          }
+        }
+      } else {
+        $('.detail-tab').removeClass('fixed');
+        positionFixed('inherit');
+      }
+
+      if (sc == 0) {
+        $('.detail-tab__item').removeClass('is-current');
+        $('.detail-tab__item').eq(0).addClass('is-current');
+        $('.detail-tab__info').eq(0).addClass('is-current');
+      }
+
+      $('.product-option-fix').css(styleOpt);
+      console.group('================');
+      console.log('scY : ', sc);
+      console.groupEnd();
+      return;
+    }); //히스토리 백, 또는 위치에서 새로고침 시 위치값 조정
+
+    if (height - (footY - winH) > 0) {
+      $('.cart-fix').css({
+        bottom: height - (footY - winH) + 50
+      });
+    }
+  } //--[탭] ----------------------
   //basic
+
 
   function basicTab() {
     var item = '[class $= __item]',
@@ -114,40 +178,109 @@ jQuery(function () {
     $(this).parent().addClass('is-current');
   }
 
-  $(document).on('click', '.js-basic-tab-link', basicTab); //--[select] -------------------
-  //custom select
+  $(document).on('click', '.js-basic-tab-link', basicTab); //제품 상세 탭
+
+  function detailTab() {
+    var item = '[class $= __item]',
+        //li
+    tab = '[class $= -tab__fix]',
+        //ul
+    contents = $('.detail-tab__info'),
+        //tab content
+    idx = $(this).parent().index();
+    $(this).closest(tab).children().removeClass('is-current');
+    $(this).parent(item).addClass('is-current');
+    contents.removeClass('is-current');
+    contents.eq(idx).addClass('is-current'); //왼쪽 탭 고정시키기 
+
+    $('html').animate({
+      scrollTop: 920
+    });
+    $('.detail-tab').addClass('fixed');
+    contents.eq(idx).css({
+      minHeight: 600
+    }); //오른쪽 옵션값 고정시키기
+
+    $('.product-option-fix').css({
+      position: 'fixed',
+      top: $('.header').height() + 20
+    });
+  }
+
+  $(document).on('click', '.js-tab-link', detailTab); //--END[탭] ----------------------
+
+  /*------------------------
+  * [dropdown::아코디언]
+  ------------------------*/
+  //qna 더보기
+
+  function qnaMore() {
+    var parent = $(this).closest('.qna-item');
+
+    if (parent.hasClass('is-view')) {
+      parent.removeClass('is-view');
+    } else {
+      parent.addClass('is-view');
+    }
+
+    return false;
+  }
+
+  $(document).on('click', '.js-qna-more', qnaMore); //--END[dropdown::아코디언] ----------------------
+
+  /*---------------------
+  * [select] :: custom 
+  ---------------------*/
+  //--custom select setting::option view -----
+
+  function selectView(selected, option) {
+    var link = '[class $= __link]',
+        value = $(this).find(link).text(),
+        select = $(this).parent(),
+        selName = selected,
+        optName = option,
+        selBoxLabel = select.siblings(selName);
+    $(optName).removeClass('is-current');
+    $(this).addClass('is-current'); // selected 
+
+    $(this).parent().siblings('.hidden-input').val(value);
+    selBoxLabel.find('.selected_text').text(value);
+    selBoxLabel.removeClass('is-active');
+    select.stop().slideUp();
+    $(document).on('click', optName, selectView);
+    return false;
+  } //리스트 소팅버튼
+
 
   function customSelect() {
-    // sorting btn dropDown
     if ($(this).hasClass('is-active')) {
       $(this).removeClass('is-active');
       $(this).next().stop().slideUp();
     } else {
       $(this).addClass('is-active');
       $(this).next().stop().slideDown();
-    } // select option view
-
-
-    function selectView() {
-      var link = '[class $= __link]',
-          value = $(this).find(link).text(),
-          select = $(this).parent(),
-          selBoxLabel = select.siblings('.filter-custom__selected');
-      $('.filter-custom__option').removeClass('is-current');
-      $(this).addClass('is-current'); // selected 
-
-      $(this).parent().siblings('.hidden-input').val(value);
-      selBoxLabel.find('.selected_text').text(value);
-      selBoxLabel.removeClass('is-active');
-      select.stop().slideUp();
-      return false;
     }
 
-    $(document).on('click', '.filter-custom__option', selectView);
+    selectView('.filter-custom__selected', '.filter-custom__option');
     return false;
   }
 
-  $(document).on('click', '.filter-custom__selected', customSelect); //--END[select]--------------------------
+  $(document).on('click', '.filter-custom__selected', customSelect); // 장바구니FREESIZE
+
+  function cartCustomSelect() {
+    if ($(this).hasClass('is-active')) {
+      $(this).removeClass('is-active');
+      $(this).next().stop().slideUp();
+    } else {
+      $(this).addClass('is-active');
+      $(this).next().stop().slideDown();
+    }
+
+    selectView('.selBox-custom__selected', '.selBox-custom__option');
+    return false;
+  }
+
+  $(document).on('click', '.selBox-custom__selected', cartCustomSelect); //--END[select]--------------------------
 
   function productItem() {
     if ($(this).closest('.type-like').length > 0) {
@@ -216,43 +349,42 @@ jQuery(function () {
     return false;
   }
 
-  $(document).on('click', '.js-accordion', accordionMore); //팝업열기(공통)
+  $(document).on('click', '.js-accordion', accordionMore); //장바구니 checkbox checked ALL
 
-  function openPopup() {
-    var el = '';
+  function checkBoxChkAll() {
+    var chkBox = $('[name=' + this.name + ']');
 
-    if (this.tagName === 'BUTTON') {
-      el = this.dataset.popup;
-    }
-
-    if (this.tagName === "A") {
-      el = $(this).attr('href').replace('#', '');
-    }
-
-    if ($('.popup.is-active').length <= 1) {
-      $('.dim-join').addClass('is-active');
-    } else {
-      $('.popup').removeClass('is-active');
-      $('.dim-join').removeClass('is-active');
-    }
-
-    $('#' + el).addClass('is-active');
-    $('.popup__body').scrollTop(0); // 전체 팝업 body scroll 없앰
-
-    $('html').addClass('is-hidden'); // 예외 modal-pop
-
-    var typeModal = ['small-popup', 'button-popup', 'modal-pop'];
-    var popId = $('#' + el);
-    typeModal.forEach(function (name) {
-      if (popId.hasClass(name)) {
-        $('html').removeClass('is-hidden');
-        $('.popup__body').scrollTop(0);
+    function chked(sta) {
+      for (var i = 0, len = chkBox.length; i < len; i++) {
+        chkBox[i].checked = sta;
       }
+    }
 
-      return false;
-    });
-    return false;
+    return this.checked ? chked(true) : chked(false);
   }
 
-  $(document).on('click', '.js-popup-open', openPopup);
+  $(document).on('input, click', '.js-table-checkAll', checkBoxChkAll); //--END[기타 click EVENT] -------------------
+  //     if($('.popup.is-active').length <= 1) {
+  //         $('.dim-join').addClass('is-active');
+  //     }else{
+  //         $('.popup').removeClass('is-active');
+  //         $('.dim-join').removeClass('is-active');
+  //     }
+  //     $('#' + el).addClass('is-active');
+  //     $('.popup__body').scrollTop(0);
+  //     // 전체 팝업 body scroll 없앰
+  //     $('html').addClass('is-hidden');
+  //     // 예외 modal-pop
+  //     var typeModal = ['small-popup','button-popup','modal-pop'];
+  //     var popId = $('#' + el);
+  //     typeModal.forEach(function(name){
+  //         if( popId.hasClass(name) ){
+  //             $('html').removeClass('is-hidden');
+  //             $('.popup__body').scrollTop(0);
+  //         }
+  //         return false;
+  //     });
+  //     return false;
+  // }
+  // $(document).on('click', '.js-popup-open', openPopup);
 }); //jQuery
