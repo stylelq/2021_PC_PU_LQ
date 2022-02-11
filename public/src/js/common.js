@@ -210,37 +210,43 @@ jQuery(function(){
     * [select] :: custom 
     ---------------------*/
     //--custom select setting::option view -----
+    function selectViewDropDown(selected){
+        var ele = selected;
+        if( $(ele).hasClass('is-active') ){
+            $(ele).removeClass('is-active');
+            $(ele).next().stop().slideUp();
+        }else{
+            $(ele).addClass('is-active');
+            $(ele).next().stop().slideDown();
+        }
+    }
     function selectView(selected, option){
-        var link = '[class $= __link]',
-            value = $(this).find(link).text(),
-            select = $(this).parent(), 
-            selName = selected,
-            optName = option,
-            selBoxLabel = select.siblings(selName);
+        var selName = selected,
+            optName = option;
 
         $(optName).removeClass('is-current');
         $(this).addClass('is-current');
-        
-        // selected 
-        $(this).parent().siblings('.hidden-input').val(value);
-        selBoxLabel.find('.selected_text').text(value);
-        
-        selBoxLabel.removeClass('is-active');
-        select.stop().slideUp();
-        
-        $(document).on('click',optName,selectView);
-        return false;
+
+        function selectedTextChange(){
+            var value = this.innerText,
+                select = $(selName).next();
+            
+            //hidden input 에 value 값 넣기
+            $('[class $= __meta--select ] .hidden-input').val(value);
+            $(selName).find('.selected_text').text(value);
+
+            // selected Text변경 하고 옵션ul 닫기
+            $(selName).removeClass('is-active');
+            select.stop().slideUp();
+
+            return false;
+        }
+        $(document).on('click',optName,selectedTextChange);
     }
 
     //리스트 소팅버튼
     function customSelect(){
-        if( $(this).hasClass('is-active') ){
-            $(this).removeClass('is-active');
-            $(this).next().stop().slideUp();
-        }else{
-            $(this).addClass('is-active');
-            $(this).next().stop().slideDown();
-        }  
+        selectViewDropDown('.filter-custom__selected');
         selectView('.filter-custom__selected','.filter-custom__option');
         return false;
     }
@@ -248,13 +254,7 @@ jQuery(function(){
 
     // 장바구니FREESIZE
     function cartCustomSelect(){
-        if( $(this).hasClass('is-active') ){
-            $(this).removeClass('is-active');
-            $(this).next().stop().slideUp();
-        }else{
-            $(this).addClass('is-active');
-            $(this).next().stop().slideDown();
-        }  
+        selectViewDropDown('.selBox-custom__selected');
         selectView('.selBox-custom__selected','.selBox-custom__option');
         return false;
     } 
@@ -277,20 +277,20 @@ jQuery(function(){
         if( $(this).closest('.type-basket').length > 0 ){
             alert('장바구니')
         }
-        
         return false
     }
     $(document).on('click','.product-icon__link',productItem);
+
 
     // 좋아요버튼 active style
     var likeClick;
     function likeButtonStyle() {
         if (!likeClick) {
-        likeClick = true;
-        $('.fix-button').addClass('is-on');
+            likeClick = true;
+            $('.fix-button').addClass('is-on');
         } else {
-        likeClick = false;
-        $('.fix-button').removeClass('is-on');
+            likeClick = false;
+            $('.fix-button').removeClass('is-on');
         }
     }
     $(document).on('click', '[class $= __link--like]', likeButtonStyle); 
@@ -349,7 +349,7 @@ jQuery(function(){
         }
         return this.checked ? chked(true) : chked(false); 
     }
-    $(document).on('input, click','.js-table-checkAll', checkBoxChkAll );
+    $(document).on('click','.js-table-checkAll', checkBoxChkAll );
 
 
 
@@ -427,32 +427,5 @@ jQuery(function(){
 
 
 
-
-    //     if($('.popup.is-active').length <= 1) {
-    //         $('.dim-join').addClass('is-active');
-    //     }else{
-    //         $('.popup').removeClass('is-active');
-    //         $('.dim-join').removeClass('is-active');
-    //     }
-    //     $('#' + el).addClass('is-active');
-    //     $('.popup__body').scrollTop(0);
-
-    //     // 전체 팝업 body scroll 없앰
-    //     $('html').addClass('is-hidden');
-
-    //     // 예외 modal-pop
-    //     var typeModal = ['small-popup','button-popup','modal-pop'];
-    //     var popId = $('#' + el);
-    //     typeModal.forEach(function(name){
-    //         if( popId.hasClass(name) ){
-    //             $('html').removeClass('is-hidden');
-    //             $('.popup__body').scrollTop(0);
-    //         }
-    //         return false;
-    //     });
-
-    //     return false;
-    // }
-    // $(document).on('click', '.js-popup-open', openPopup);
 
 });//jQuery
