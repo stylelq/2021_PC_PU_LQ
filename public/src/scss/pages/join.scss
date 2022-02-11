@@ -439,7 +439,7 @@
   &__item{
     position:relative;
     flex-grow: 1;
-    @include body2();
+    @include body4();
     color:$gray1;
 
     & + &:before{
