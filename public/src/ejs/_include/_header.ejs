@@ -26,10 +26,36 @@ var data = jsonData
         <link rel="stylesheet" href="../../css/pages/join.css">
     <%}else if (page == "") { %>
     <% } %>
+<<<<<<< HEAD
+=======
+    <% if (page == "product") { %>
+        <link rel="stylesheet" href="../../css/pages/product.css">
+    <% } %>
+    <% if (page == "detail") { %>
+        <link rel="stylesheet" href="../../css/pages/detail.css">
+    <% } %>
+    <% if (page == "cart") { %>
+        <link rel="stylesheet" href="../../css/pages/cart.css">
+    <% } %>
+    <% if (page == "") { %>
+    <% } %>
+    <% if (page == "") { %>
+    <% } %>
+    <% if (page == "") { %>
+    <% } %>
+    <% if (page == "") { %>
+    <% } %>
+    <% if (page == "") { %>
+    <% } %>
+    <% if (page == "") { %>
+    <% } %>
+
+>>>>>>> 3aa2a87dd0234cc713189e2dfbc3ad0c8c17df0a
 </head>
 
 <% classAdd = page == 'main' ? 'page-main' : '' %>
 <body class="<%= classAdd %>">
+<<<<<<< HEAD
     <div class="dim"></div>
     <div class="header">
         <div class="header-wrap">
@@ -39,6 +65,12 @@ var data = jsonData
                 <img src="../../images/common/logo.png" alt="louis quatorze" class="img-w100 header__black">
             </a>
             <!--//로고-->
+=======
+
+<!-- header -->
+<% include ../_include/_contentHeader %>
+<!-- //header -->
+>>>>>>> 3aa2a87dd0234cc713189e2dfbc3ad0c8c17df0a
 
             <!--우측메뉴-->
             <div class="header-wrap__right">
