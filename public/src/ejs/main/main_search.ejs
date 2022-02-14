@@ -2,6 +2,7 @@
 type = "main"
 page = "main"
 popup = "true"
+noSort = 'false'
 %>
 <% include ../_include/_header %>
 
@@ -53,6 +54,7 @@ popup = "true"
             </div>
 
             <div class="search__result">
+                <!-- _productFilter noSort= true 값이면 오른쪽 소팅 버튼 숨기기. [noSort = true/false]  -->
                 <% include ../_include/_productFilter %>
                 <div class="product-tab__info">
                     <!-- product post -->
