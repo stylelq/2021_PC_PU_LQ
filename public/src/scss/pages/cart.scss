@@ -67,10 +67,33 @@
         }
 
         //버튼
-        .detail-thumb--prev, 
-        .detail-thumb--next{
-            transform: translateY(100%);
+        //prev, next
+        .detail-thumb{
+            &--prev,
+            &--next{
+                width:calcRem(14rem);
+                height:calcRem(30rem);
+                position: absolute;
+                @include vertical-center;
+                cursor: pointer;
+            }
+            &--prev{
+                left:calcRem(20rem);
+                @include pageBackground('/images/common/ico_slide_prev.svg','no-repeat center center / contain');
+                z-index: $childZindex;
+            }
+            &--next{
+                right:calcRem(20rem);
+                @include pageBackground('/images/common/ico_slide_next.svg','no-repeat center center / contain');
+                z-index: $childZindex;
+            }
+            &--prev, 
+            &--next{
+                transform: translateY(100%);
+            }
         }
+        
+        
     }
 
     //슬라이드 컨텐츠

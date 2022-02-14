@@ -333,13 +333,16 @@
               position: absolute;
               height:1px;
               bottom:0;
-              left:calcRem(-20rem);
-              right:calcRem(-20rem);
+              left: 0;
+              right: 0;
+            //   left:calcRem(-20rem);
+            //   right:calcRem(-20rem);
               background-color:$gray1;
           }
 
           &:after{
-              @include block-reset;
+              display: none;
+            //   @include block-reset;
           }
       }
 
