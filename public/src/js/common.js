@@ -220,42 +220,45 @@ jQuery(function(){
             $(ele).next().stop().slideDown();
         }
     }
-    function selectView(selected, option){
-        var selName = selected,
-            optName = option;
-
+    function selectView(option){
+        var optName = option;
+           
         $(optName).removeClass('is-current');
         $(this).addClass('is-current');
 
-        function selectedTextChange(){
-            var value = this.innerText,
-                select = $(selName).next();
+        function selectedTextChange(e){
+            var link = e.target,
+                value = link.innerText,
+                select = link.parentNode.parentNode;
             
-            //hidden input 에 value 값 넣기
-            $('[class $= __meta--select ] .hidden-input').val(value);
-            $(selName).find('.selected_text').text(value);
+            if( link.parentNode.className === option.replace('.','') ){
+                //hidden input 에 value 값 넣기
+                $(select).siblings('.hidden-input').val(value);
+                $(select).siblings().find('.selected_text').text(value);
 
-            // selected Text변경 하고 옵션ul 닫기
-            $(selName).removeClass('is-active');
-            select.stop().slideUp();
-
+                // selected Text변경 하고 옵션ul 닫기
+                $(select).siblings().removeClass('is-active');
+                $(select).stop().slideUp();
+            }
             return false;
         }
-        $(document).on('click',optName,selectedTextChange);
+        $(document).on('click',optName, selectedTextChange);
+
+        return false;
     }
 
     //리스트 소팅버튼
     function customSelect(){
-        selectViewDropDown('.filter-custom__selected');
-        selectView('.filter-custom__selected','.filter-custom__option');
+        selectViewDropDown(this);
+        selectView('.filter-custom__option');
         return false;
     }
     $(document).on('click','.filter-custom__selected',customSelect);
 
     // 장바구니FREESIZE
     function cartCustomSelect(){
-        selectViewDropDown('.selBox-custom__selected');
-        selectView('.selBox-custom__selected','.selBox-custom__option');
+        selectViewDropDown(this);
+        selectView('.selBox-custom__option');
         return false;
     } 
     $(document).on('click','.selBox-custom__selected',cartCustomSelect);
@@ -403,9 +406,9 @@ jQuery(function(){
         prevEl: ".detail-thumb--prev"
       }
     });
-  } //연관제품 슬라이드
+  } 
 
-
+  //연관제품 슬라이드
   if ($('.recommended').length > 0) {
     var recommendeSlide = new Swiper('.recommended-slide__container', {
       observer: true,
@@ -423,6 +426,8 @@ jQuery(function(){
       }
     });
   } 
+
+
   //--END[swiper slider]-----------------------------
 
 
