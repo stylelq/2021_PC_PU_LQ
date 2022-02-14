@@ -43,7 +43,7 @@
   &.is-active{
     background-color: #fff;
     .header-wrap__background{
-      background: url('/images/common/logo.png') no-repeat center center;
+      background: url('../images/common/logo.png') no-repeat center center;
       background-size: contain;
     }
     .gnb-1depth__item{
@@ -55,7 +55,7 @@
   &.is-bg-white{
     background-color: #fff;
     .header-wrap__background{
-      background: url('/images/common/logo.png') no-repeat center center;
+      background: url('../images/common/logo.png') no-repeat center center;
       background-size: contain;
     }
     .gnb-1depth__item{
@@ -65,17 +65,17 @@
     .header-wrap__item.type-search{
       width: calcRem(20rem);
       height: calcRem(20rem);
-      background: url('/images/common/icon_search.svg') no-repeat center top;
+      background: url('../images/common/icon_search.svg') no-repeat center top;
     }
     .header-wrap__item.type-login{
       width: calcRem(20rem);
       height: calcRem(20rem);
-      background: url('/images/common/icon_mypage.svg') no-repeat center top;
+      background: url('../images/common/icon_mypage.svg') no-repeat center top;
     }
     .header-wrap__item.type-cart{
       width: calcRem(20rem);
       height: calcRem(20rem);
-      background: url('/images/common/icon_basket.svg') no-repeat center top;
+      background: url('../images/common/icon_basket.svg') no-repeat center top;
     }
   }
 
@@ -103,7 +103,7 @@
       overflow: hidden;
       display: inline-block;
       margin: 0 auto;
-      background: url('/images/common/pc_logo_w.png') no-repeat center center;
+      background: url('../images/common/pc_logo_w.png') no-repeat center center;
       text-indent: -9999px;
     }
 
@@ -123,20 +123,20 @@
       &.type-search{
         width: calcRem(20rem);
         height: calcRem(20rem);
-        background: url('/images/common/icon_search_w.svg') no-repeat center top;
+        background: url('../images/common/icon_search_w.svg') no-repeat center top;
         &.is-active{
-          background: url('/images/common/icon_close2.png') no-repeat center top;
+          background: url('../images/common/icon_close2.png') no-repeat center top;
         }
       }
       &.type-login{
         width: calcRem(20rem);
         height: calcRem(20rem);
-        background: url('/images/common/icon_mypage_w.svg') no-repeat center top;
+        background: url('../images/common/icon_mypage_w.svg') no-repeat center top;
       }
       &.type-cart{
         width: calcRem(20rem);
         height: calcRem(20rem);
-        background: url('/images/common/icon_basket_w.svg') no-repeat center top;
+        background: url('../images/common/icon_basket_w.svg') no-repeat center top;
       }
     }
     &__link{
