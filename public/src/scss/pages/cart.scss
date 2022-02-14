@@ -210,3 +210,143 @@
         }
     }
 }
+
+// 데이터 리스트 
+.cart-list{
+    .list-table{
+        .detail-Meta{
+            @include flexWrap;
+            -webkit-box-orient: vertical; -ms-flex-direction: column;
+            flex-direction: column;
+            height: calcRem(150rem);
+
+            &__btn{
+                width: calcRem(88rem);
+                margin: auto;
+                .btn-v3{margin: 5px 0;}
+            }
+            &__thumb{
+                width: calcRem(150rem);
+                height: calcRem(150rem);
+            }
+            &__title{
+                width: calc(100% - 170px);
+                @include body3;
+                text-align: left;
+                margin-top: auto;
+            }
+            &__option{
+                width: calc(100% - 170px);
+                margin-bottom: auto;
+
+                @include flexWrap;
+                .btn-v3{
+                    width: auto;
+                    height: calcRem(24rem);
+                    padding: calcRem(5rem) calcRem(8rem);
+                    box-sizing: border-box;
+                    line-height: 1;
+                    margin-left: calcRem(20rem);
+                }
+            }
+
+            &__price{
+                // margin-top:calcRem(20rem);
+                line-height: 0;
+                position: relative;
+                // padding-right:calcRem(30rem);
+        
+                &--current{
+                    @include body2;
+                    font-weight: $medium;
+                    display: block;
+                    // vertical-align: middle;
+                }
+        
+                &--sale{
+                    @include body2;
+                    font-weight: $light;
+                    color:$throughColor;
+                    text-decoration: line-through;
+                    // margin-left:calcRem(20rem);
+                    display: inline-block;
+                    // vertical-align: middle;
+                }
+            }
+        
+            &__benefit{
+                display: inline-block;
+                font-size:calcRem(12rem);
+                line-height:calclH(20,12);
+                color:$whiteColor;
+                padding:calcRem(2rem) calcRem(15rem);
+                background-color: $point1;
+                letter-spacing: $defaultLetter;
+                margin-top:calcRem(15rem);
+            }
+        }
+    }
+}
+
+//최종금액
+.cart-list2{
+    @include flexWrap;
+    .cart-btn{
+        margin-left: 0;
+
+        .btn-v3{
+            display: inline-block;
+            width: calcRem(100rem);
+        }
+    }
+    .cart-total{
+        margin-left: auto;
+        width: 30%;
+
+        $this:&;
+        padding:calcRem(30rem) calcRem(20rem);
+
+        &__list{
+            padding-bottom:calcRem(20rem);
+            margin-bottom:calcRem(20rem);
+            border-bottom:solid 1px $gray1;
+            
+
+            &--item{
+                margin-top:calcRem(10rem);
+
+                &:first-child{
+                    margin-top:0;
+                }
+            }
+        }
+
+        &--inner{
+            margin:0;
+
+            &:after{
+                @include block-reset;
+            }
+        }
+
+        &__title{
+            float: left;
+            @include body3;
+
+            #{$this}-sum &{
+                // @include title2;
+            }
+        }
+
+        &__text{
+            overflow: hidden;
+            text-align: right;
+            @include body3;
+
+            #{$this}-sum &{
+                @include title2;
+                color:$point1;
+            }
+        }
+    }
+}

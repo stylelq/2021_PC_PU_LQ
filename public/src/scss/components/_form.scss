@@ -264,6 +264,12 @@
     border-color:$darkgray;
   }
 
+  &.type-disabled{
+	background-color:$gray1;
+    color:#fff;
+    border-color:$gray1;
+  }
+
   &.type-outline{
     border-color:$black1;
   }
@@ -1062,7 +1068,7 @@ input {
 		th{
 			vertical-align: middle;
 			@include body7;
-			padding:calcRem(20rem) calcRem(5rem);
+			padding:calcRem(20rem) calcRem(10rem);
 			border-bottom:solid 1px $gray2;
 			text-align: center;
 		}
@@ -1076,7 +1082,7 @@ input {
 		}
 		th{
 			vertical-align: middle;
-			@include body3;
+			@include body7;
 			padding:calcRem(10rem) calcRem(5rem);
 			text-align: center;
 			border-bottom: solid 1px $lightgray1;
@@ -1091,18 +1097,14 @@ input {
 
 		td{
 			vertical-align: middle;
-			@include body3;
-			padding:calcRem(10rem) calcRem(20rem);
+			@include body7;
+			padding:calcRem(10rem) calcRem(10rem);
 			text-align: center;
 			border-bottom: solid 1px $lightgray1;
 			color:$black1;
 		}
 	}
 
-	.type-chk{
-		padding-left: 0;
-		padding-right: 0;
-	}
 	.weight-light{
 		font-weight: 300;
 	}
