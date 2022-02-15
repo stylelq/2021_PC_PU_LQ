@@ -1,5 +1,6 @@
 @import "../base/variables";
 @import "../base/mixins";
+
 //Header
 .dim{
   display: none;
@@ -42,41 +43,10 @@
 
   &.is-active{
     background-color: #fff;
-    .header-wrap__background{
-      background: url('../images/common/logo.png') no-repeat center center;
-      background-size: contain;
-    }
-    .gnb-1depth__item{
-      color: #000;
-    }
-
   }
 
   &.is-bg-white{
     background-color: #fff;
-    .header-wrap__background{
-      background: url('../images/common/logo.png') no-repeat center center;
-      background-size: contain;
-    }
-    .gnb-1depth__item{
-      color: #000;
-    }
-
-    .header-wrap__item.type-search{
-      width: calcRem(20rem);
-      height: calcRem(20rem);
-      background: url('../images/common/icon_search.svg') no-repeat center top;
-    }
-    .header-wrap__item.type-login{
-      width: calcRem(20rem);
-      height: calcRem(20rem);
-      background: url('../images/common/icon_mypage.svg') no-repeat center top;
-    }
-    .header-wrap__item.type-cart{
-      width: calcRem(20rem);
-      height: calcRem(20rem);
-      background: url('../images/common/icon_basket.svg') no-repeat center top;
-    }
   }
 
   // &.type-bg{
@@ -96,15 +66,15 @@
       height: calcRem(36rem);
       margin: 0;
     }
-
     &__background{
       width: calcRem(212rem);
       height: calcRem(36rem);
       overflow: hidden;
       display: inline-block;
       margin: 0 auto;
-      background: url('../images/common/pc_logo_w.png') no-repeat center center;
-      text-indent: -9999px;
+      background: url('../images/common/logo.png') no-repeat center center;
+      background-size: contain;
+      text-indent: calcRem(-9999rem);
     }
 
     //우측메뉴
@@ -123,7 +93,7 @@
       &.type-search{
         width: calcRem(20rem);
         height: calcRem(20rem);
-        background: url('../images/common/icon_search.svg') no-repeat center top;
+        background: url('../images/common/icon_search_blk.svg') no-repeat center top;
         &.is-active{
           background: url('../images/common/icon_close2.png') no-repeat center top;
         }
@@ -131,12 +101,12 @@
       &.type-login{
         width: calcRem(20rem);
         height: calcRem(20rem);
-        background: url('../images/common/icon_mypage_w.svg') no-repeat center top;
+        background: url('../images/common/icon_mypage.svg') no-repeat center top;
       }
       &.type-cart{
         width: calcRem(20rem);
         height: calcRem(20rem);
-        background: url('../images/common/icon_basket_w.svg') no-repeat center top;
+        background: url('../images/common/icon_basket.svg') no-repeat center top;
       }
     }
     &__link{
@@ -166,18 +136,15 @@
       position: relative;
       display: inline-block;
       padding: 0 calcRem(36rem);
-      margin-bottom: calcRem(12rem);
       list-style: none;
       vertical-align: top;
       box-sizing: border-box;
       font-size: calcRem(14rem);
       font-weight: 400;
-      color: #fff;
       &.is-active{
         .gnb-2depth__list{
           position: absolute;
           display: flex;
-          color: #000;
           background-color: #fff;
           &.align-right{
             right: 0;
