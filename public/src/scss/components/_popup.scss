@@ -466,7 +466,7 @@
       }
 
       &__group{
-          display: flex;
+          @include flexNoWrap;
           margin:0;
           &:not(:last-child){
               margin-bottom: calcRem(10rem);
