@@ -22,11 +22,16 @@
 // collection main
 .collection{
   &-wrap{
-    padding-top: calcRem(20rem);
+    padding-top: calcRem(150rem);
+  }
+  &-wrap + &-wrap{
+    padding-top: 0;
   }
   // 컬렉션 메인 비주얼
   &-visual{
+    margin: 0 auto;
     position: relative;
+    width: calcRem(560rem);
     &__img{
       @include imageBlock;
     }
@@ -42,7 +47,7 @@
     &__button{
       color: #fff;
       border: 1px solid #fff;
-      margin: 0 calcRem(20rem);
+      margin: 0 calcRem(100rem);
       padding: calcRem(12rem) 0;
     }
   }
@@ -50,7 +55,9 @@
   // 컬렉션 상품슬라이드
   &-slide{
     position: relative;
-    padding: calcRem(30rem) 0 calcRem(71rem);
+    margin: 0 auto;
+    width: calcRem(560rem);
+    padding: calcRem(20rem) 0 calcRem(150rem);
     .swiper{
       &-button{
         @mixin swiperButtonStyle {
@@ -65,12 +72,12 @@
         &-next{
           @include swiperButtonStyle;
           right: calcRem(10rem);
-          background: url('../../images/collection/collection_slide_next.png') no-repeat center center /contain;
+          background: url('../../images/collection/list/collection_slide_next.png') no-repeat center center /contain;
         }
         &-prev{
           @include swiperButtonStyle;
           left: calcRem(10rem);
-          background: url('../../images/collection/collection_slide_prev.png') no-repeat center center /contain;
+          background: url('../../images/collection/list/collection_slide_prev.png') no-repeat center center /contain;
         }
       }
     }
@@ -121,14 +128,16 @@
       padding-bottom: calcRem(30rem);
     }
     &__txt{
-      font-size: calcRem(20rem);
+      font-size: calcRem(24rem);
       text-align: center;
       text-transform: uppercase;
     }
     &__container{
-      overflow: visible;
+      overflow: hidden;
     }
     &__slide{
+      margin: 0 auto;
+      width: calcRem(1200rem);
       padding: 0 calcRem(44rem);
       //롤링슬라이드
       .swiper-wrapper{
@@ -179,32 +188,29 @@
         &-next{
           @include vertical-center;
           display: inline-block;
-          width: calcRem(10rem);
-          height: calcRem(20rem);
+          width: calcRem(17rem);
+          height: calcRem(32rem);
           position: absolute;
-          right: calcRem(10rem);
-          background: url('../../images/collection/collection_slide_next_w.png') no-repeat center center /contain;
+          right: calcRem(20rem);
+          background: url('../../images/collection/list/collection_slide_next_w.png') no-repeat center center /contain;
           z-index: 100;
         }
         &-prev{
           @include vertical-center;
           display: inline-block;
-          width: calcRem(10rem);
-          height: calcRem(20rem);
+          width: calcRem(17rem);
+          height: calcRem(32rem);
           position: absolute;
-          left: calcRem(10rem);
-          background: url('../../images/collection/collection_slide_prev_w.png') no-repeat center center /contain;
+          left: calcRem(20rem);
+          background: url('../../images/collection/list/collection_slide_prev_w.png') no-repeat center center /contain;
           z-index: 100;
         }
 
-        &-next,
-        &-prev{ display: none; }
       }
     }
     &__detail{
       @include vertical-center;
       position: absolute;
-      width: 80%;
       text-align: center;
       z-index: 10;
     }
@@ -214,7 +220,7 @@
     &__box{
       color: #fff;
       border: 1px solid #fff;
-      padding: calcRem(8rem);
+      padding: calcRem(14rem) calcRem(64rem);
     }
   }
 
@@ -308,6 +314,11 @@
   // 컬렉션 모델슬라이드
   &-model{
     position: relative;
+    background-color: rgb(245, 214, 97);
+    &__slide{
+      margin: 0 auto;
+      width: calcRem(850rem);
+    }
     .swiper{
       &-button{
         &-next{
@@ -366,9 +377,11 @@
   // 룩북 바로가기 버튼
   &-view{
     position: relative;
-    padding: calcRem(60rem) calcRem(20rem) 0;
+    padding: calcRem(60rem) 0;
     padding-top: calcRem(60rem);
     &__button{
+      margin: 0 auto;
+      width: calcRem(360rem);
       border: 1px solid #000;
       text-align: center;
     }
@@ -387,6 +400,8 @@
   }
   &-list{
     position: relative;
+    margin: 0 auto;
+    width: calcRem(1200rem);
     padding-bottom: calcRem(60rem);
     &__header{
       padding: 0 calcRem(20rem);
@@ -404,7 +419,7 @@
       overflow: hidden;
     }
     &__item{
-      width: 50%;
+      width: 33%;
       float: left;
       padding-top: calcRem(40rem);
     }
