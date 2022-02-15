@@ -208,11 +208,11 @@
         font-size: calcRem(20rem);
         font-weight: $regular;
         text-align: center;
-        padding-bottom: calcRem(20rem); 
+        padding-bottom: calcRem(50rem); 
     }
     &-banner{
         text-align: center;
-        padding: calcRem(40rem) 0 calcRem(60rem);
+        padding: calcRem(10rem) 0 calcRem(60rem);
 
         .cart-list__no-cart{
             margin-bottom: calcRem(10rem);
@@ -340,6 +340,8 @@
 
                 &:first-child{
                     margin-top:0;
+
+                    dt,dd{font-weight: $medium;}
                 }
             }
         }
@@ -355,10 +357,6 @@
         &__title{
             float: left;
             @include body3;
-
-            #{$this}-sum &{
-                // @include title2;
-            }
         }
 
         &__text{
@@ -369,6 +367,32 @@
             #{$this}-sum &{
                 @include title2;
                 color:$point1;
+            }
+        }
+
+        &-sum{
+            .cart-total__title{
+                font-weight: $medium;
+            }
+            .cart-total__text{
+                font-weight: $medium;
+                color: $point1;
+            }   
+        }
+
+        &-sum + p {
+            @include body7;
+            color: $grayTextColor;
+            margin: calcRem(25rem) 0;
+        }
+
+        &__btn{
+            .btn-v3{
+                display: inline-block;
+                width:calc( (100% - 10px) / 2);
+                &:last-child{
+                    margin-left: 5px;
+                }
             }
         }
     }
