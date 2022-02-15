@@ -27,7 +27,9 @@
 
 
     &-section{
-        padding:calcRem(30rem) calcRem(20rem);
+        &__cont{
+            padding:calcRem(30rem) 0;
+        }
 
         border-top: 1px solid $black1;
         .payment-left &{
@@ -181,7 +183,7 @@
             }
         }
 
-        // form custom
+        // group::일반 div dom
         &__group{
             @include flexNoWrap;
         }
@@ -224,186 +226,276 @@
 
 //주문자 정보
 .order-info{
-    &__title{
-        &--inner{
-            font-size:0;
-            line-height:0;
-            margin:0;
-
-            &:after{
-                @include block-reset;
-            }
+    //group ::dl 
+    &__group{
+        @include flexNoWrap;
+        margin:0;
+        &:not(:last-child){
+            margin-bottom: calcRem(10rem);
         }
-
-        &--name{
-            display: block;
-            @include body3;
-            font-weight: $regular;
+        dt{ 
+            width: 100px;
+            @include body7;
         }
-
-        &--tel{
-            display: block;
-            @include body3;
-            margin:calcRem(4rem) 0 0;
+        dd{ 
+            width: 100%;
+            @include body7;
         }
     }
 
-    &__email{
-        margin-top:calcRem(4rem);
-        @include body3;
-    }
 }
 
 //주문 제품
 .order-product{
-    //item
+    // margin-top: calcRem(-30rem);
+
+    &__thead{  
+        display: flex; 
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__th{
+        width: auto;
+
+        &:nth-child(1){ width: calcRem(110rem); }
+        &:nth-child(2){ width: 50%; }
+    }
+
     &__item{
-        padding-top:calcRem(30rem);
-        margin-top:calcRem(30rem);
-        border-top:solid 1px $lightgray1;
-
-        &:first-child{
-            padding-top:0;
-            margin-top:0;
-            border-top:none;
-        }
+        @include flexWrap;
+        -webkit-box-orient: vertical; -ms-flex-direction: column;
+        flex-direction: column;
+        height: calcRem(180rem);
     }
 
-    &__info{
-        &:after{
-            @include block-reset;
-        }
-    }
+    // &__th{
+    //     display: table-cell;
+    //     text-align: center;
+    // }
 
-    &__thumb{
-        float: left;
-        margin-right:calcRem(15rem);
-        width:calcRem(120rem);
-        display: block;
-        position: relative;
-        overflow: hidden;
+    // .list-table{
+    //     margin-top: calcRem(-30rem);
+    //     border-top: 0;
+    // }
+    // .detail-Meta{
+    //     @include flexWrap;
+    //     -webkit-box-orient: vertical; -ms-flex-direction: column;
+    //     flex-direction: column;
+    //     height: calcRem(180rem);
 
-        &:after{
-            content: "";
-            display: block;
-            padding-bottom:100%;
-        }
-    }
+    //     &__thumb{
+    //         width: calcRem(110rem);
+    //         height: calcRem(110rem);
+    //     }
+    //     &__title{
+    //         width: calc(100% - 130px);
+    //         @include body3;
+    //         text-align: left;
+    //         margin-top: auto;
+    //         margin-bottom: calcRem(35rem);
+    //     }
+    //     &__option{
+    //         width: calc(100% - 130px);
+    //         margin-bottom: auto;
+    //     }
 
-    &__img{
-        width:100%;
-        @include ab-center;
-    }
+    //     &__price{
+    //         line-height: 0;
+    //         position: relative;
+    
+    //         &--current{
+    //             @include body2;
+    //             font-weight: $medium;
+    //             display: block;
+    //         }
+    
+    //         &--sale{
+    //             @include body2;
+    //             font-weight: $light;
+    //             color:$throughColor;
+    //             text-decoration: line-through;
+    //             display: inline-block;
+    //         }
+    //     }
+    // }
 
-    &__cont{
-        overflow: hidden;
-    }
+    // &__meta{
+    //     &--list{ text-align: left; }
+    //     &--item{
+    //         display: inline-block;
+    //         margin-right: calcRem(10rem);
+    //         position: relative;
+    //     }
+    //     .form__checkbox{
+    //         padding-right: calcRem(20rem);;
+    //     }
+    //     &--btn{
+    //         width:calcRem(16rem);
+    //         height:calcRem(16rem);
+    //         position: absolute;
+    //         right:0;
+    //         @include vertical-center;
+    //         @include pageBackground('/images/common/ico_info-btn.svg','no-repeat center center / contain');
+    //         background-size:calcRem(16rem) calcRem(16rem) ;
+    //     }
+    // }
+    // &__message{
+    //     // margin-top:calcRem(16rem);
+    //     .form__input--textarea{
+    //         height: calcRem(36rem);
+    //         width: 100%;
+    //     }
+    // }
 
-    &__title{
-        @include body2;
-        padding-right:calcRem(20rem);
-    }
+    // //item
+    // &__item{
+    //     padding-top:calcRem(30rem);
+    //     margin-top:calcRem(30rem);
+    //     border-top:solid 1px $lightgray1;
 
-    &__option{
-        margin-top:calcRem(12rem);
+    //     &:first-child{
+    //         padding-top:0;
+    //         margin-top:0;
+    //         border-top:none;
+    //     }
+    // }
 
-        &--item{
-            margin-top:calcRem(5rem);
+    // &__info{
+    //     &:after{
+    //         @include block-reset;
+    //     }
+    // }
 
-            &:after{
-                @include block-reset;
-            }
+    // &__thumb{
+    //     float: left;
+    //     margin-right:calcRem(15rem);
+    //     width:calcRem(120rem);
+    //     display: block;
+    //     position: relative;
+    //     overflow: hidden;
 
-            &:first-child{
-                margin-top:0;
-            }
-        }
+    //     &:after{
+    //         content: "";
+    //         display: block;
+    //         padding-bottom:100%;
+    //     }
+    // }
 
-        &--title{
-            display: block;
-            float:left;
-            margin-right:calcRem(5rem);
-            @include body3;
-        }
+    // &__img{
+    //     width:100%;
+    //     @include ab-center;
+    // }
 
-        &--text{
-            display: block;
-            overflow: hidden;
-            @include body3;
-        }
-    }
+    // &__cont{
+    //     overflow: hidden;
+    // }
 
-    &__price{
-        margin-top:calcRem(25rem);
-        clear: both;
-        padding-left:calcRem(20rem);
-        padding-right:calcRem(20rem);
-        position: relative;
-        line-height:0;
-        font-size:0;
+    // &__title{
+    //     @include body2;
+    //     padding-right:calcRem(20rem);
+    // }
 
-        &--current{
-            @include title2;
-            margin-right:calcRem(12rem);
-            display: inline-block;
-            vertical-align: middle;
-        }
+    // &__option{
+    //     margin-top:calcRem(12rem);
 
-        &--sale{
-            @include title2;
-            color:$throughColor;
-            text-decoration: line-through;
-            display: inline-block;
-            vertical-align: middle;
-        }
-    }
+    //     &--item{
+    //         margin-top:calcRem(5rem);
 
-    //메세지 카드
-    &__meta{
-        margin-top:calcRem(15rem);
-        line-height:0;
-        padding-left:calcRem(20rem);
-        padding-right:calcRem(20rem);
+    //         &:after{
+    //             @include block-reset;
+    //         }
 
-        &--list{
-            margin:0 calcRem(-15rem);
-            &:after{
-                @include block-reset;
-            }
-        }
+    //         &:first-child{
+    //             margin-top:0;
+    //         }
+    //     }
 
-        &--item{
-            float:left;
-            margin:0 calcRem(15rem);
-            position: relative;
-            padding-right:calcRem(24rem);
-        }
+    //     &--title{
+    //         display: block;
+    //         float:left;
+    //         margin-right:calcRem(5rem);
+    //         @include body3;
+    //     }
 
-        &--btn{
-            width:calcRem(16rem);
-            height:calcRem(16rem);
-            position: absolute;
-            right:0;
-            @include vertical-center;
-            @include pageBackground('/images/common/ico_info-btn.svg','no-repeat center center / contain');
-            background-size:calcRem(16rem) calcRem(16rem) ;
-        }
-    }
+    //     &--text{
+    //         display: block;
+    //         overflow: hidden;
+    //         @include body3;
+    //     }
+    // }
 
-    &__message{
-        margin-top:calcRem(15rem);
-        padding-left:calcRem(20rem);
-        padding-right:calcRem(20rem);
-        display: none;
+    // &__price{
+    //     margin-top:calcRem(25rem);
+    //     clear: both;
+    //     padding-left:calcRem(20rem);
+    //     padding-right:calcRem(20rem);
+    //     position: relative;
+    //     line-height:0;
+    //     font-size:0;
 
-        &.is-active{
-            display: block;
-        }
+    //     &--current{
+    //         @include title2;
+    //         margin-right:calcRem(12rem);
+    //         display: inline-block;
+    //         vertical-align: middle;
+    //     }
 
-        textarea{
-            height:calcRem(57rem);
-        }
-    }
+    //     &--sale{
+    //         @include title2;
+    //         color:$throughColor;
+    //         text-decoration: line-through;
+    //         display: inline-block;
+    //         vertical-align: middle;
+    //     }
+    // }
+
+    // //메세지 카드
+    // &__meta{
+    //     margin-top:calcRem(15rem);
+    //     line-height:0;
+    //     padding-left:calcRem(20rem);
+    //     padding-right:calcRem(20rem);
+
+    //     &--list{
+    //         margin:0 calcRem(-15rem);
+    //         &:after{
+    //             @include block-reset;
+    //         }
+    //     }
+
+    //     &--item{
+    //         float:left;
+    //         margin:0 calcRem(15rem);
+    //         position: relative;
+    //         padding-right:calcRem(24rem);
+    //     }
+
+    //     &--btn{
+    //         width:calcRem(16rem);
+    //         height:calcRem(16rem);
+    //         position: absolute;
+    //         right:0;
+    //         @include vertical-center;
+    //         @include pageBackground('/images/common/ico_info-btn.svg','no-repeat center center / contain');
+    //         background-size:calcRem(16rem) calcRem(16rem) ;
+    //     }
+    // }
+
+    // &__message{
+    //     margin-top:calcRem(15rem);
+    //     padding-left:calcRem(20rem);
+    //     padding-right:calcRem(20rem);
+    //     display: none;
+
+    //     &.is-active{
+    //         display: block;
+    //     }
+
+    //     textarea{
+    //         height:calcRem(57rem);
+    //     }
+    // }
+
 }
 
 //쿠폰/할인 정보

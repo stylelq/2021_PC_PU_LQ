@@ -21,17 +21,29 @@
     <link rel="stylesheet" href="../../css/common.css">
 
     
+
     
+
     
+
+    
+
+    
+
     
     
     
         <link rel="stylesheet" href="../../css/pages/payment.css">
     
+
     
+
     
+
     
+
     
+
     
 
 </head>
@@ -368,7 +380,7 @@
                 <section class="payment-section">
                     <h2 class="payment-section__title">배송지 정보</h2>
 
-                    <div class="payment-section__head">
+                    <div class="payment-section__cont">
                         <!-- 탭 -->
                         <div class="payment-section-tab">
                             <ul class="payment-section-tab__fix">
@@ -399,8 +411,7 @@
                             </ul>
                         </div>
                         <!-- //탭 -->
-                    </div>
-                    <div class="payment-section__body">
+
                         <div class="payment-section-tab__info is-current">
                             <div class="my-address">
                                 <div class="user-address__meta">
@@ -729,17 +740,17 @@
                         <!-- 주문자 정보 -->
 <div class="order-info">
     <div class="order-info__title">
-        <dl class="order-info__title__group">
-            <dt><div class="order-info__title--label">주문자</div></dt>
-            <dd><div class="order-info__title--name">홍길동</div>010-1234-5678</dd>
+        <dl class="order-info__group">
+            <dt><div class="order-info__label">주문자</div></dt>
+            <dd><div class="order-info__name">홍길동</div></dd>
         </dl>
-        <dl class="order-info__title__group">
-            <dt><div class="order-info__title--label">연락처</div></dt>
-            <dd><div class="order-info__title--tel">010-1234-5678</div></dd>
+        <dl class="order-info__group">
+            <dt><div class="order-info__label">연락처</div></dt>
+            <dd><div class="order-info__tel">010-1234-5678</div></dd>
         </dl>
-        <dl class="order-info__title__group">
-            <dt><div class="order-info__title--label">이메일</div></dt>
-            <dd><div class="order-info__title--email">abcdef@naver.com</div></dd>
+        <dl class="order-info__group">
+            <dt><div class="order-info__label">이메일</div></dt>
+            <dd><div class="order-info__email">abcdef@naver.com</div></dd>
         </dl>
     </div>
 </div>
@@ -752,7 +763,158 @@
                 <section class="payment-section">
                     <h2 class="payment-section__title">주문 상품정보</h2>
                     <div class="payment-section__cont">
-                        
+                        <div class="order-product">
+    
+    <div class="order-product__table">
+        <div class="order-product__thead">
+            <div class="order-product__th"></div>
+            <div class="order-product__th">상품/옵션 정보</div>
+            <div class="order-product__th">판매가/혜택가</div>
+            <div class="order-product__th">수량</div>
+            <div class="order-product__th">합계</div>
+            <div class="order-product__th">배송비</div>
+        </div>
+
+        <div class="order-product__tbody">
+            <!-- item -->
+            <div class="order-product__item">
+                <a href="#;" class="order-product__thumb"><img class="order-product__img" src="../../images/dummy/detail-img1.jpg" alt=""></a>
+                <div class="order-product__info">
+                    <div class="order-product__cont">
+                        <div class="order-product__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</div>
+                        <div class="order-product__option">
+                            <ul class="order-product__option--list">
+                                <li class="order-product__option--item">
+                                    <span class="order-product__option--title">색상 :</span>
+                                    <span class="order-product__option--text">WHITE</span>
+                                </li>
+                                <li class="order-product__option--item">
+                                    <span class="order-product__option--title">옵션 :</span>
+                                    <span class="order-product__option--text">FREESIZE</span>
+                                </li>
+                                <li class="order-product__option--item">
+                                    <span class="order-product__option--title">수량 :</span>
+                                    <span class="order-product__option--text">1개</span>
+                                </li>
+                                <li class="order-product__option--item">
+                                    <span class="order-product__option--title">배송 :</span>
+                                    <span class="order-product__option--text">무료배송</span>
+                                </li>
+                                <li class="order-product__option--item order-product__price">
+                                    <span class="order-product__price--current">289,290원</span>
+                                    <span class="order-product__price--sale">328,000원</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-product__meta">
+                    <ul class="order-product__meta--list">
+                        <li class="order-product__meta--item">
+                            <div class="form__checkbox form__checkbox--big-red">
+                                <input class="form__checkbox--input sr-only" type="checkbox" name="gift1" id="giftLabel1">
+                                <label class="form__checkbox--text" for="giftLabel1">선물 포장</label>
+                            </div>
+                            <a href="#giftPop" class="order-product__meta--btn js-popup-open"><span class="sr-only">선물포장 설명</span></a>
+                        </li>
+                        <li class="order-product__meta--item">
+                            <div class="form__checkbox form__checkbox--big-red">
+                                <input class="form__checkbox--input sr-only" type="checkbox" name="message1" id="messageLabel1">
+                                <label class="form__checkbox--text js-open-message" for="messageLabel1">메세지 카드</label>
+                            </div>
+                            <a href="#messagePop" class="order-product__meta--btn js-popup-open"><span class="sr-only">선물포장 설명</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="order-product__message">
+                    <textarea class="form__input--textarea js-max-keyup" title="내용" placeholder="선물 메시지를 50자(공백 포함) 이내로 작성해 주세요."></textarea>
+                </div>
+            </div>
+            <!-- //item -->
+
+        </div>
+
+    </div> 
+    
+   
+   
+   
+    <!-- <div class="order-product__thead">
+        <table class="list-table" summary="주문서 리스트 제목">
+            <caption>주문서 리스트 제목</caption>
+            <colgroup>
+                <col width="110px"><col width="50%"><col><col><col><col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>상품/옵션 정보</th>
+                    <th>판매가/혜택가</th>
+                    <th>수량</th>
+                    <th>합계</th>
+                    <th>배송비</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div class="order-product__tbody">
+        <table class="list-table" summary="주문서 리스트 내용">
+            <caption>주문서 리스트 내용</caption>
+            <colgroup>
+                <col width="110px"><col width="50%"><col><col><col><col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td rowspan="2"><a href="#;" class="detail-Meta__thumb"><img class="cart-product__img" src="../../images/dummy/detail-img1.jpg" alt="" /></a></td>
+                    <td>
+                        <h2 class="detail-Meta__title">oalc SINGLE BREASTED HARRIS TWEED JACKET 싱글브레스트 해리스 트위드 재킷 (Beige)</h2>
+                    </td>
+                    <td>
+                        <div class="detail-Meta__price">
+                            <span class="detail-Meta__price--sale">328,000원</span>
+                            <span class="detail-Meta__price--current">289,290원</span>
+                        </div>
+                    </td>
+                    <td><span>1</span></td>
+                    <td><span class="detail-Meta__price--current">289,290원</span></td>
+                    <td><span>무료배송</span></td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <div class="detail-Meta__option">
+                            <div class="order-product__meta">
+                                <ul class="order-product__meta--list">
+                                    <li class="order-product__meta--item">
+                                        <div class="form__checkbox form__checkbox--big-red">
+                                            <input class="form__checkbox--input sr-only" type="checkbox" name="gift1" id="giftLabel1">
+                                            <label class="form__checkbox--text" for="giftLabel1">선물 포장</label>
+                                        </div>
+                                        <a href="#giftPop" class="order-product__meta--btn js-popup-open"><span class="sr-only">선물포장 설명</span></a>
+                                    </li>
+                                    <li class="order-product__meta--item">
+                                        <div class="form__checkbox form__checkbox--big-red">
+                                            <input class="form__checkbox--input sr-only" type="checkbox" name="message1" id="messageLabel1">
+                                            <label class="form__checkbox--text js-open-message" for="messageLabel1">메세지 카드</label>
+                                        </div>
+                                        <a href="#messagePop" class="order-product__meta--btn js-popup-open"><span class="sr-only">선물포장 설명</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="order-product__message">
+                                <textarea class="form__input--textarea js-max-keyup" title="내용" placeholder="선물 메시지를 50자(공백 포함) 이내로 작성해 주세요."></textarea>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+
+
+
+</div>
                     </div>
                 </section>
                 <!-- .주문 상품정보 -->
