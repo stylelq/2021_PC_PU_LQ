@@ -18,20 +18,7 @@ jQuery(function () {
     }
 
     $('#' + el).addClass('is-active');
-    $('.popup__body').scrollTop(0); // mobile 디바이스 하단 네비게이션 버튼 바
-    // var vh = window.innerHeight * 0.01;  
-    // document.documentElement.style.setProperty('--vh', vh+'px');
-    // window.addEventListener('resize', function(){
-    //     var vh = window.innerHeight * 0.01;
-    //     document.documentElement.style.setProperty('--vh', vh+'px');
-    // });
-    // window.addEventListener('touchmove', function(){
-    //     var vh = window.innerHeight * 0.01 //window.innerHeight/100;
-    //     document.documentElement.style.setProperty('--vh', vh+'px');
-    // });
-    // // 전체 팝업 body scroll 없앰
-    // $('html').addClass('is-hidden'); 
-    // 예외 modal-pop
+    $('.popup__body').scrollTop(0); // 예외 modal-pop
 
     var typeModal = ['small-popup', 'button-popup', 'modal-pop'];
     var popId = $('#' + el);
@@ -126,7 +113,28 @@ jQuery(function () {
     }
   }
 
-  $(document).on('click', '.js-pop-tab-link', shippingTab); //---- 마이페이지::상품리뷰 이미지보기
+  $(document).on('click', '.js-pop-tab-link', shippingTab); //------[임시::퍼블 확인용] 데이터 삽입시 지울것---------------------
+  // 주소검색 > 검색리스트 > 상세입력
+
+  function addressDepth() {
+    $('.form__search--btn').on('click', function () {
+      this.type = 'button';
+      console.log('??');
+      $('.address-search__section').removeClass('is-current');
+      $('.address-search__section').eq(1).addClass('is-current');
+    });
+    $('.zipcode-address .btn-v3').on('click', function () {
+      $('.address-search__section').removeClass('is-current');
+      $('.address-search__section').eq(2).addClass('is-current');
+    });
+    $('.js-popup-close').on('click', function () {
+      $('.address-search__section').removeClass('is-current');
+      $('.address-search__section').eq(0).addClass('is-current');
+    });
+  }
+
+  $(document).on('click', '.new-address .js-popup-open', addressDepth); //--------------------------------------------------------------------
+  //---- 마이페이지::상품리뷰 이미지보기
   // 상품리뷰 이미지 팝업 오픈
 
   function reviewImgOpen(id) {
