@@ -25,10 +25,7 @@
   }
 
   &__header{
-      /*position:relative;
-      width:100%;
-      border-bottom:solid 1px $black1;
-      padding-bottom: calcRem(20rem);*/
+      /**/
       position: relative;
       display: flex;
       width: 100%;
@@ -41,10 +38,6 @@
       &--title{
           margin:0;
           @include title1;
-
-          &.align-center{
-            text-align: center
-          }
       }
   }
   &__tit{
@@ -54,9 +47,6 @@
       width:calcRem(20rem);
       height:calcRem(20rem);
       @include background('/images/common/ico_small_popup_close2.svg','no-repeat center center / contain');
-      position: absolute;
-      top:calcRem(-34rem);
-      right:0;
 
     overflow:hidden;
     position:absolute;
@@ -80,14 +70,27 @@
       box-sizing: border-box;
   }
 
-  .popup__header + .wrap{
-    max-height: calcRem(640rem);
-    height: auto;
-    overflow: hidden;
-    overflow-y: auto;
-    padding: calcRem(20rem) 0;
-    box-sizing: border-box;
+  &.type-write{
+    .popup__header{
+        display: block;
+        position:relative;
+        width:100%;
+        border-bottom:solid 1px $black1;
+        padding-bottom: calcRem(20rem);
+        height: auto;
+    }
+    .popup__close{
+        @include background('/images/common/ico_small_popup_close.svg','no-repeat center center / contain');
+        position: absolute;
+        top:calcRem(-34rem);
+        bottom: auto;
+        right:0;
+    }
   }
+}
+
+.align-center{
+    text-align: center
 }
 
 //개인정보처리방침 컨텐츠
@@ -1304,7 +1307,7 @@
 
   &__link{
       display:block;
-      @include title1;
+      @include body8;
       color:$whiteColor;
       text-align: center;
       padding:calcRem(9rem) calcRem(15rem);
