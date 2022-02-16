@@ -21,6 +21,13 @@
 
 // collection main
 .collection{
+  &-group + &-group{
+    padding-bottom: calcRem(100rem);
+  }
+  &-group{
+    background-color: #f5d661;
+    padding-bottom: 0;
+  }
   &-wrap{
     padding-top: calcRem(150rem);
   }
@@ -86,7 +93,7 @@
       position: absolute;
       left: 0;
       right: 0;
-      bottom: calcRem(20rem) !important;
+      bottom: calcRem(50rem) !important;
       text-align: center;
       width: 100%;
       z-index: 50;
@@ -110,7 +117,7 @@
       position: absolute;
       left: 0;
       right: 0;
-      bottom: calcRem(20rem) !important;
+      bottom: calcRem(50rem) !important;
       text-align: center;
       width: 100%;
       z-index: 50;
@@ -238,7 +245,8 @@
     &__title {
       width: 100%;
       position: absolute;
-      bottom: calcRem(80rem);
+      bottom: calcRem(100rem);
+      transform: translate(-50% -50%);
       text-align: center;
     }
 
@@ -284,14 +292,14 @@
       font-size: calcRem(20rem);
     }
     &__title{
-      padding: calcRem(50rem) 0 calcRem(20rem);
-      font-size: calcRem(14rem);
-      font-weight: 300;
+      padding:calcRem(100rem) 0 calcRem(20rem);
+      font-size: calcRem(18rem);
+      font-weight: 400;
     }
     &__txt{
-      padding-bottom: calcRem(50rem);
-      font-size: calcRem(10rem);
-      font-weight: 300;
+      padding-bottom: calcRem(30rem);
+      font-size: calcRem(12rem);
+      font-weight: 400;
     }
     &__img{
       @include imageBlock;
@@ -315,6 +323,11 @@
   &-model{
     position: relative;
     background-color: rgb(245, 214, 97);
+    &-wrap{
+      position: relative;
+      margin: 0 auto;
+      width: calcRem(850rem);
+    }
     &__slide{
       margin: 0 auto;
       width: calcRem(850rem);
@@ -324,8 +337,8 @@
         &-next{
           @include vertical-center;
           display: inline-block;
-          width: calcRem(10rem);
-          height: calcRem(20rem);
+          width: calcRem(28rem);
+          height: calcRem(56rem);
           position: absolute;
           right: calcRem(20rem);
           background: url('../../images/collection/collection_slide_next_w.png') no-repeat center center /contain;
@@ -334,8 +347,8 @@
         &-prev{
           @include vertical-center;
           display: inline-block;
-          width: calcRem(10rem);
-          height: calcRem(20rem);
+          width: calcRem(28rem);
+          height: calcRem(56rem);
           position: absolute;
           left: calcRem(20rem);
           background: url('../../images/collection/collection_slide_prev_w.png') no-repeat center center /contain;
@@ -358,12 +371,16 @@
       width: 100%;
     }
     .model-next-btn{
-      right: calcRem(12rem);
-      background: url("../../images/collection/collection_slide_next.png") no-repeat center center/contain;
+      right: calcRem(-50rem);
+      background: url("https://cdn.louisclub.com/static/fr/img/specialty/20210107/arrow_next.png") no-repeat center center/contain;
+      z-index: 10;
+      cursor: pointer;
     }
     .model-prev-btn{
-      left: calcRem(12rem);
-      background: url("../../images/collection/collection_slide_prev.png") no-repeat center center/contain;
+      left: calcRem(-50rem);
+      background: url("https://cdn.louisclub.com/static/fr/img/specialty/20210107/arrow_prev.png") no-repeat center center/contain;
+      z-index: 10;
+      cursor: pointer;
     }
   }
 
@@ -475,8 +492,8 @@
   &-pagination{
     &-bullet{
       margin-left: calcRem(7rem);
-      width: calcRem(15rem);
-      height: calcRem(1rem);
+      width: calcRem(30rem);
+      height: calcRem(2rem);
       background: rgba(255, 255, 255, 0.2);
       opacity: 1 !important;
       display: inline-block;
