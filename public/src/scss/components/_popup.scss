@@ -8,6 +8,8 @@
   // background-color:#fff;
   z-index:$popupZindex;
 
+
+
   &.is-active{
       display:block;
   }
@@ -23,10 +25,18 @@
   }
 
   &__header{
-      position:relative;
+      /*position:relative;
       width:100%;
       border-bottom:solid 1px $black1;
-      padding-bottom: calcRem(20rem);
+      padding-bottom: calcRem(20rem);*/
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 3.625rem;
+      align-items: center;
+      justify-content: center;
+      border-bottom: solid 1px #F5F5F2;
+      z-index: 99999;
 
       &--title{
           margin:0;
@@ -39,10 +49,21 @@
   &__close{
       width:calcRem(20rem);
       height:calcRem(20rem);
-      @include background('/images/common/ico_small_popup_close.svg','no-repeat center center / contain');
+      @include background('/images/common/ico_small_popup_close2.svg','no-repeat center center / contain');
       position: absolute;
       top:calcRem(-34rem);
       right:0;
+
+    overflow:hidden;
+    position:absolute;
+    display:block;
+    top:0;
+    right:calcRem($sitePadding);
+    bottom:0;
+    margin:auto 0;
+    border:none;
+    outline:none;
+    text-indent: -9999px;
   }
   
   &__body{
@@ -1620,7 +1641,8 @@
   }
 
   .popup__body{
-      height: calc(var(--vh, 1vh) * 100); 
+      width: 100%;
+      //height: calc(var(--vh, 1vh) * 100);
   }
 }
 .lookbook-wrap{
@@ -1642,6 +1664,8 @@
   // 룩북 이미지
   &__list{
       position: relative;
+      margin: 0 auto;
+      width: calcRem(720rem);
       padding-bottom: calcRem(40rem);
 
       &:last-child{
