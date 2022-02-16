@@ -76,31 +76,35 @@
     
 }
 
-// tab
-.payment-section-tab{
-    &__item{
-        display: inline-block;
-        margin-right: calcRem(20rem);
-        label{cursor: pointer;}
-        .form__radio--text{
-            @include body7;
-            &:before{ top:calcRem(2rem); }
-            &:after{ top:calcRem(6rem); }
+//레이아웃 왼쪽
+.payment-left{
+    //tab
+    .payment-section-tab{
+        &__item{
+            display: inline-block;
+            margin-right: calcRem(20rem);
+            label{cursor: pointer;}
+            .form__radio--text{
+                @include body7;
+                &:before{ top:calcRem(2rem); }
+                &:after{ top:calcRem(6rem); }
+            }
+        }
+        &__link{
+            display: block;
+        }
+        &__info{
+            display: none;
+            &.is-current{display: block;}
         }
     }
-    &__link{
-        display: block;
-    }
-    &__info{
-        display: none;
-        &.is-current{display: block;}
+    // 배송지 데이터 없음
+    .payment-section__text.no-data{
+        padding: calcRem(80rem) 0 calcRem(50rem);
+        @include body7;
     }
 }
-// 배송지 데이터 없음
-.payment-section__text.no-data{
-    padding: calcRem(80rem) 0 calcRem(50rem);
-    @include body7;
-}
+
 
 //배송지 정보
 .address{
@@ -223,7 +227,6 @@
     }
 }
 
-
 //주문자 정보
 .order-info{
     //group ::dl 
@@ -247,443 +250,236 @@
 
 //주문 제품
 .order-product{
-    // margin-top: calcRem(-30rem);
+    margin-top: calcRem(-30rem);
 
     &__thead{  
-        display: flex; 
+        @include flexNoWrap; 
+        @include vendor-prefix('justify-content','space-between');
         justify-content: space-between;
         width: 100%;
+        margin: calcRem(20rem) 0;
     }
     &__th{
-        width: auto;
+        text-align: center;
+        @include body7;
 
         &:nth-child(1){ width: calcRem(110rem); }
-        &:nth-child(2){ width: 50%; }
+        &:nth-child(2){ 
+            width: calcRem(249rem); 
+            text-align: left;
+        }
+        &:nth-child(3){ width: calcRem(116rem); }
+        &:nth-child(4){ width: calcRem(65rem); }
+        &:nth-child(5){ width: calcRem(100rem); }
+        &:nth-child(6){ width: calcRem(80rem); }
     }
 
     &__item{
         @include flexWrap;
         -webkit-box-orient: vertical; -ms-flex-direction: column;
         flex-direction: column;
-        height: calcRem(180rem);
+        height: calcRem(210rem);
+        padding: calcRem(30rem) 0;
+        box-sizing: border-box;
+
+        &:first-child{
+            border-top: 1px solid $gray2;
+        }
+        border-bottom: 1px solid $gray2;
+        
+    }
+    &__thumb{
+        width: calcRem(110rem);
+        height: 100%;
+        position: relative;
+    }
+    &__info,
+    &__meta,
+    &__message{
+        width: calc(( 100% - #{calcRem(110rem)} ))
     }
 
-    // &__th{
-    //     display: table-cell;
-    //     text-align: center;
-    // }
+    &__img{
+        width:100%;
+        @include ab-center;
+    }
 
-    // .list-table{
-    //     margin-top: calcRem(-30rem);
-    //     border-top: 0;
-    // }
-    // .detail-Meta{
-    //     @include flexWrap;
-    //     -webkit-box-orient: vertical; -ms-flex-direction: column;
-    //     flex-direction: column;
-    //     height: calcRem(180rem);
+    &__title{
+       @include body7;
+        text-align: left;
+    }
 
-    //     &__thumb{
-    //         width: calcRem(110rem);
-    //         height: calcRem(110rem);
-    //     }
-    //     &__title{
-    //         width: calc(100% - 130px);
-    //         @include body3;
-    //         text-align: left;
-    //         margin-top: auto;
-    //         margin-bottom: calcRem(35rem);
-    //     }
-    //     &__option{
-    //         width: calc(100% - 130px);
-    //         margin-bottom: auto;
-    //     }
+    &__option{
+        &--list{
+            @include flexNoWrap;
+            width: 100%;
+        }
+        &--item{
+            text-align: center;
+            &:nth-child(1){ 
+                width: calcRem(249rem); 
+                text-align: left;
+            }
+            &:nth-child(2){ width: calcRem(116rem); }
+            &:nth-child(3){ width: calcRem(65rem); }
+            &:nth-child(4){ width: calcRem(100rem); }
+            &:nth-child(5){ width: calcRem(80rem); }
+        }
 
-    //     &__price{
-    //         line-height: 0;
-    //         position: relative;
-    
-    //         &--current{
-    //             @include body2;
-    //             font-weight: $medium;
-    //             display: block;
-    //         }
-    
-    //         &--sale{
-    //             @include body2;
-    //             font-weight: $light;
-    //             color:$throughColor;
-    //             text-decoration: line-through;
-    //             display: inline-block;
-    //         }
-    //     }
-    // }
+        &--title{
+            display: block;
+            float:left;
+            margin-right:calcRem(5rem);
+            @include body7;
+        }
 
-    // &__meta{
-    //     &--list{ text-align: left; }
-    //     &--item{
-    //         display: inline-block;
-    //         margin-right: calcRem(10rem);
-    //         position: relative;
-    //     }
-    //     .form__checkbox{
-    //         padding-right: calcRem(20rem);;
-    //     }
-    //     &--btn{
-    //         width:calcRem(16rem);
-    //         height:calcRem(16rem);
-    //         position: absolute;
-    //         right:0;
-    //         @include vertical-center;
-    //         @include pageBackground('/images/common/ico_info-btn.svg','no-repeat center center / contain');
-    //         background-size:calcRem(16rem) calcRem(16rem) ;
-    //     }
-    // }
-    // &__message{
-    //     // margin-top:calcRem(16rem);
-    //     .form__input--textarea{
-    //         height: calcRem(36rem);
-    //         width: 100%;
-    //     }
-    // }
+        &--text{
+            display: block;
+            overflow: hidden;
+            @include body7;
+        }
 
-    // //item
-    // &__item{
-    //     padding-top:calcRem(30rem);
-    //     margin-top:calcRem(30rem);
-    //     border-top:solid 1px $lightgray1;
+        &--price{
+            line-height: 0;
+            position: relative;
+        }
+        &--current{
+            @include body2;
+            font-weight: $medium;
+            display: block;
+        }
+        &--sale{
+            @include body2;
+            font-weight: $light;
+            color:$throughColor;
+            text-decoration: line-through;
+            display: inline-block;
+        }
+    }
 
-    //     &:first-child{
-    //         padding-top:0;
-    //         margin-top:0;
-    //         border-top:none;
-    //     }
-    // }
+    &__meta{
+        margin-top: auto;
+        &--list{ text-align: left; }
+        &--item{
+            display: inline-block;
+            margin-right: calcRem(10rem);
+            position: relative;
+        }
+        .form__checkbox{
+            padding-right: calcRem(20rem);;
+        }
+        &--btn{
+            width:calcRem(16rem);
+            height:calcRem(16rem);
+            position: absolute;
+            right:0;
+            @include vertical-center;
+            @include pageBackground('/images/common/ico_info-btn.svg','no-repeat center center / contain');
+            background-size:calcRem(16rem) calcRem(16rem) ;
+        }
+    }
 
-    // &__info{
-    //     &:after{
-    //         @include block-reset;
-    //     }
-    // }
-
-    // &__thumb{
-    //     float: left;
-    //     margin-right:calcRem(15rem);
-    //     width:calcRem(120rem);
-    //     display: block;
-    //     position: relative;
-    //     overflow: hidden;
-
-    //     &:after{
-    //         content: "";
-    //         display: block;
-    //         padding-bottom:100%;
-    //     }
-    // }
-
-    // &__img{
-    //     width:100%;
-    //     @include ab-center;
-    // }
-
-    // &__cont{
-    //     overflow: hidden;
-    // }
-
-    // &__title{
-    //     @include body2;
-    //     padding-right:calcRem(20rem);
-    // }
-
-    // &__option{
-    //     margin-top:calcRem(12rem);
-
-    //     &--item{
-    //         margin-top:calcRem(5rem);
-
-    //         &:after{
-    //             @include block-reset;
-    //         }
-
-    //         &:first-child{
-    //             margin-top:0;
-    //         }
-    //     }
-
-    //     &--title{
-    //         display: block;
-    //         float:left;
-    //         margin-right:calcRem(5rem);
-    //         @include body3;
-    //     }
-
-    //     &--text{
-    //         display: block;
-    //         overflow: hidden;
-    //         @include body3;
-    //     }
-    // }
-
-    // &__price{
-    //     margin-top:calcRem(25rem);
-    //     clear: both;
-    //     padding-left:calcRem(20rem);
-    //     padding-right:calcRem(20rem);
-    //     position: relative;
-    //     line-height:0;
-    //     font-size:0;
-
-    //     &--current{
-    //         @include title2;
-    //         margin-right:calcRem(12rem);
-    //         display: inline-block;
-    //         vertical-align: middle;
-    //     }
-
-    //     &--sale{
-    //         @include title2;
-    //         color:$throughColor;
-    //         text-decoration: line-through;
-    //         display: inline-block;
-    //         vertical-align: middle;
-    //     }
-    // }
-
-    // //메세지 카드
-    // &__meta{
-    //     margin-top:calcRem(15rem);
-    //     line-height:0;
-    //     padding-left:calcRem(20rem);
-    //     padding-right:calcRem(20rem);
-
-    //     &--list{
-    //         margin:0 calcRem(-15rem);
-    //         &:after{
-    //             @include block-reset;
-    //         }
-    //     }
-
-    //     &--item{
-    //         float:left;
-    //         margin:0 calcRem(15rem);
-    //         position: relative;
-    //         padding-right:calcRem(24rem);
-    //     }
-
-    //     &--btn{
-    //         width:calcRem(16rem);
-    //         height:calcRem(16rem);
-    //         position: absolute;
-    //         right:0;
-    //         @include vertical-center;
-    //         @include pageBackground('/images/common/ico_info-btn.svg','no-repeat center center / contain');
-    //         background-size:calcRem(16rem) calcRem(16rem) ;
-    //     }
-    // }
-
-    // &__message{
-    //     margin-top:calcRem(15rem);
-    //     padding-left:calcRem(20rem);
-    //     padding-right:calcRem(20rem);
-    //     display: none;
-
-    //     &.is-active{
-    //         display: block;
-    //     }
-
-    //     textarea{
-    //         height:calcRem(57rem);
-    //     }
-    // }
-
+    &__message{
+        margin-top:calcRem(15rem);
+        .form__input--textarea{
+            height: calcRem(36rem);
+            width: 100%;
+        }
+    }
 }
 
 //쿠폰/할인 정보
 .coupon-info{
     $this:&;
-    padding:0;
 
-    &__inner{
-        padding:calcRem(20rem) 0;
-        border-top:solid 1px $lightgray1;
+    //group ::dl 
+    &__group{
+        @include flexNoWrap;
+        margin:0;
+        &:not(:last-child){
+            margin-bottom: calcRem(30rem);
+        } 
 
-        &:first-child{
-            border-top:none;
-            padding-top:0;
-        }
+        dt:not(.coupon-info__list--total){ width: calcRem(130rem); }
+        dd:not(.coupon-info__list--cont){ width: 100%; }
 
-        &:last-child{
-            padding-bottom:0;
-        }
+        #{$this}__label{ @include body8; }
+        #{$this}__text{ @include body7; }
+        #{$this}__list{ @include body7; }
     }
+    #{$this}__list--inner{ margin:0; }
 
-    &__text-info{
-        // font-size:calcRem(11rem);
-        font-size:calcRem(12rem);
-        padding-left:calcRem(7rem);
-        position: relative;
-        line-height:calclH(18,11);
-        letter-spacing: $defaultLetter;
-        font-weight: $light;
-        color:$darkgray;
-        margin:calcRem(10rem) 0 0;
 
-        &:after{
-            content:"";
-            width:calcRem(2rem);
-            height:calcRem(2rem);
-            border-radius: 100%;
-            position: absolute;
-            top:calcRem(8rem);
-            left:0;
-            background:$darkgray;
-        }
-    }
-
-    //상단 전체 쿠폰 정보
-    &__list{
-        &--inner{
-            margin:0;
-        }
-
-        &--total{
-            margin-bottom:calcRem(10rem);
-            // @include body2;
-            font-size: calcRem(12rem);
-            font-weight: $light;
-            .coupon-info__list--count{
-                font-weight: $medium;
-            }
-        }
-
-        &--cont{
-            margin:0;
-        }
-    }
-
-    &__price{
-
-        &--item{
-            margin-top:calcRem(8rem);
-
-            &:after{
-                @include block-reset;
-            }
-
-            &:first-child{
-                margin-top:0;
-            }
-        }
-
-        &--title{
-            float:left;
-            display: block;
+    //총 할인금액
+    &__group:first-child{
+        #{$this}__text{
             @include body3;
-
-            // #{$this}__price--item-total &{
-            //     font-weight: $medium;
-            // }
-            #{$this}__price--text{
-                font-weight: $medium;
-            }
-        }
-
-        &--text{
-            overflow: hidden;
-            display: block;
-            text-align: right;
-            @include body3;
-
-            #{$this}__price--item-total &{
-                font-weight: $medium;
-                color:$point1;
-            }
         }
     }
 
-    &__btn{
-        margin-top:calcRem(20rem);
-
-        .btn--border{
-            font-weight: $medium;
+    //쿠폰/할인 정보
+    .group-count{
+        #{$this}__btn{
+            display: inline-block;
+            margin-left: calcRem(20rem);
+        }
+        #{$this}__list--cont{margin-left: 0;}
+        #{$this}__price{
+            margin: calcRem(15rem) 0 calcRem(10rem);
+            &--text{
+                color: $point1;
+                @include body8;
+            }
         }
     }
-
+    
+    //적립금 즉시 할인
+    .group-accumulate{
+        #{$this}__list{
+            @include flexNoWrap;
+        }
+        #{$this}__accumulate--price{
+            color: $point1;
+            @include body8;
+            margin-right: calcRem(20rem);
+        }
+        #{$this}__accumulate--price + .form__checkbox{
+            margin-right: calcRem(20rem);
+        }
+    }
+    
     //적립금 사용
-    &__accumulate{
-        &--title{
-            position: relative;
-
-            .form__checkbox{
-                position: absolute;
-                right:0;
-                @include vertical-center;
-
-                &--text{
-                    font-weight: $medium;
-                }
-            }
+    .group-use{
+        #{$this}__list{
+            @include flexNoWrap;
+            @include flex-alignCenter;
         }
-
-        &--text{
-            margin-bottom:calcRem(10rem);
-            @include body2;
-        }
-    }
-
-    //적립금 사용
-    &__use{
-        &:after{
-            @include block-reset;
-        }
-
-        &--title{
-            float:left;
-            margin-right:calcRem(10rem);
-            @include body2;
-            padding-top:calcRem(9rem);
-        }
-        
-        &--cont{
-            overflow: hidden;
-            padding-right:calcRem(80rem);
-            position: relative;
-        }
-
-        &--btn{
-            @include body2;
-            color:$whiteColor;
-            padding:calcRem(9rem) calcRem(5rem);
-            height:calcRem(38rem);
-            text-align: center;
-            width:calcRem(53rem);
-            background-color: $darkgray;
-            position: absolute;
-            right:0;
-            top:0;
-            box-sizing: border-box;
-        }
-
-        &--inner{
-            padding-right:calcRem(56rem);
-            position: relative;
-
-            .form__checkbox{
-                position: absolute;
-                right:0;
-                @include vertical-center;
-            }
-        }
-
-        &--total{
-            margin-top:calcRem(8rem);
-            @include body3;
-
+        #{$this}__use{
             &--price{
-                font-weight: $regular;
+                color: $point1;
+                @include body8;
+                margin-right: calcRem(20rem);
+            }
+            &--inner{
+                .form__input--text{
+                    display: inline-block;
+                    width: 70%;
+                }
+                .form__checkbox{ 
+                    display: inline-block;
+                    margin-left: calcRem(8rem); 
+                }
+                margin-right: calcRem(20rem);
+            }
+            &--btn{
+                margin-right: calcRem(20rem);
+            }
+            &--total-price{
+                font-weight: $medium;
             }
         }
     }
+
 }
 
 //결제하기
@@ -695,7 +491,7 @@
     }
 
     &__item{
-        width:33.333%;
+        width:calcRem(100rem);
         float: left;
         padding:calcRem(3rem) calcRem(3rem);
         box-sizing: border-box;
@@ -749,7 +545,7 @@
     &__text{
         @include ab-center;
         white-space: nowrap;
-        @include body2;
+        @include body8;
 
         .is-current &{
             color:$whiteColor;
@@ -777,7 +573,7 @@
             display: inline-block;
             padding-left:calcRem(24rem);
             padding-right:calcRem(14rem);
-            @include body3;
+            @include body7;
             position: relative;
 
             &:before{
@@ -809,7 +605,7 @@
 
         &--text{
             display: block;
-            @include body3;
+            @include body7;
         }
 
         &--title{
@@ -830,205 +626,172 @@
 
 //무통장 입금
 .nobankbook{
-    &__item{
-        padding:calcRem(20rem) 0;
-        border-top:solid 1px $lightgray1;
-
-        &:first-child{
-            padding-top:0;
-            border-top:0;
-        }
-
-        &:last-child{
-            padding-bottom:0;
-        }
-
-        //보증보험 가입
-        .form__checkbox{
-            margin-top:calcRem(15rem);
-        }
-    }
-
     &__title{
-        @include body2;
-        margin-bottom:calcRem(8rem);
+        @include body8;
+        margin-bottom: calcRem(10rem);
     }
 
-    //환불계좌
-    &__form{
-        &--item{
+    // group::일반 div dom
+    &-form{
+        &__group{
+            @include flexNoWrap;
+            margin-bottom:calcRem(10rem);
+        }
+        &__label{
+            width: calcRem(100rem);
+            @include body7;
             margin-top:calcRem(10rem);
-
-            &:first-child{
-                margin-top:0;
-            }
         }
-    }
-
-    //보증보험 가입
-    &__text{
-        @include body3;
-        margin:calcRem(20rem) 0 0;
-
-        &:first-of-type{
-            margin:0;
-        }
-    }
-
-    &-info--text{
-        font-size:calcRem(11rem);
-        padding-left:calcRem(7rem);
-        position: relative;
-        line-height:calclH(18,11);
-        letter-spacing: $defaultLetter;
-        font-weight: $light;
-        color:$darkgray;
-        margin:calcRem(20rem) 0 0;
-
-        &:after{
-            content:"";
-            width:calcRem(2rem);
-            height:calcRem(2rem);
-            border-radius: 100%;
-            position: absolute;
-            top:calcRem(8rem);
-            left:0;
-            background:$darkgray;
-        }
-    }
-
-    &__option{
-        margin-top:calcRem(25rem);
-
-        &--item{
-            margin:calcRem(20rem) 0 0;
-
-            &:first-child{
-                margin-top:0;
-            }
-
-            &:after{
-                @include block-reset;
-            }
-        }
-
-        &--title{
-            float:left;
-            width: calcRem(58rem);
-            @include body2;
-
-            &-vertical{
-                padding-top:calcRem(7rem);
-            }
-        }
-
-        &--cont{
-            float:left;
-            width:calc(100% - #{calcRem(58rem)});
-            margin:0;
-        }
-    }
-
-    &-birth{
         &__list{
-            margin-right:calcRem(-5rem);
-            &:after{
-                @include block-reset;
+            width: 50%;
+    
+            .form__input--text,
+            .form__select{
+                @include body8;
+                @include placeholder-color($gray2);
             }
         }
-
-        &__item{
-            width:33.333%;
-            float:left;
-            padding-right:calcRem(5rem);
-            box-sizing: border-box;
+    }
+    
+    //보증보험가입
+    &__item{
+        margin-top: calcRem(30rem);
+    }
+    &__text{
+        @include body7;
+        &+.nobankbook__text{
+            margin-top: calcRem(20rem);
         }
     }
-
+    &__option{
+        margin-top:calcRem(30rem);
+        .nobankbook-form__group{
+            margin-bottom:calcRem(30rem);
+        }
+        .nobankbook-form__label{ 
+            @include body8; 
+            width: calcRem(60rem);
+        }
+    }
+    &-birth{
+        &__item{
+            display: inline-block;
+            vertical-align: middle;
+            width: calcRem(84rem);
+        }
+    }
     &-gender{
         &__list{
-            margin-right:calcRem(-8rem);
-            &:after{
-                @include block-reset;
+            margin-top: 6px;
+        }
+        &__item{
+            display: inline-block;
+            vertical-align: middle;
+            width: calcRem(40rem);
+        }
+    }
+}
+
+
+//레이아웃 오른쪽
+.payment-right{
+    //layout
+    .payment-section{
+        padding-top: calcRem(20rem);
+
+        &__title{
+            @include heading4;
+            text-align: center;
+        }
+    }
+
+    //최종금액 상단
+    .payment-total{
+        margin: calcRem(20rem) 0;
+        $this:&;
+
+        &__inner{
+            margin:0;
+            margin-bottom: calcRem(15rem);
+        }
+
+        &__text{
+            float:left;
+            @include body1;
+        }
+
+        &__price{
+            overflow: hidden;
+            text-align: right;
+            @include body1;
+        }
+
+        &__title{
+            .payment-total__text,
+            .payment-total__price{
+                @include body2;
             }
         }
 
-        &__item{
-            float:left;
-            padding-right:calcRem(8rem);
-        }
-    }
-}
+        //최종금액 하단
+        &__bottom{
+            .payment-total__text{  @include title2; }
+            .payment-total__price{  
+                @include title4;
+                color: $point1;
 
-//최종금액
-.payment-total{
-    $this:&;
-
-    &__title{
-        margin-bottom:calcRem(20rem);
-    }
-
-    &__inner{
-        margin:0;
-
-        &:after{
-            @include block-reset;
+                &--saleInfo{
+                    margin-top: calcRem(5rem);
+                    @include body7;
+                }
+            }
         }
     }
 
-    &__text{
-        float:left;
-        @include body3;
-
-        #{$this}__title &{
-            @include title2;
-        }
-    }
-
-    &__price{
-        overflow: hidden;
-        text-align: right;
-        @include body3;
-
-        #{$this}__title &{
-            @include title2;
-            color:$point1;
-        }
-    }
-
-    &__item{
-        margin-top:calcRem(10rem);
-
-        &:first-child{
-            margin-top:0;
-        }
-    }
-}
-
-//구매동의
-.payment-agree{
-    &__text{
+    //구매동의
+    .payment-total__bottom + .payment-section__cont{
+        padding: 0;
         margin:0 0 calcRem(20rem);
-        @include body3;
-        font-family: $font-kor;
-    }
 
-    &__btn{
-        margin-top:calcRem(30rem);
+        .payment-total__text{
+            float: inherit;
+            @include body2;
+        }
+        .payment-total__cont{
+            margin: 0;
+        }
+
+        .payment-agree{
+            &__text{
+                margin:0 0 calcRem(10rem);
+                @include body7;
+                font-family: $font-kor;
+            }
+        }
     }
+    
 }
+
+
+
+
+
 
 //배송지 정보 있을경우
 .user-address{
 
-    &__select{
-        margin-top:calcRem(20rem);
-    }
+    // &__select{
+    //     margin-top:calcRem(20rem);
+    // }
 
     &__link{
-        display: block;
-        position: relative;
+        // display: block;
+        // position: relative;
         padding-right:calcRem(8rem);
+        position: absolute;
+        top: calcRem(30rem);
+        right: 0;
+        @include body8;
 
         &:after{
             content: "";

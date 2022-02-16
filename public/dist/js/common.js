@@ -270,7 +270,17 @@ jQuery(function () {
     contents.eq(idx).addClass('is-current');
   }
 
-  $(document).on('click', '.js-add-tab-link', basicTab); //--END[탭] ----------------------
+  $(document).on('click', '.js-add-tab-link', basicTab); //결제탭
+
+  function paymentTab() {
+    var el = $(this).attr('href').replace("#", "");
+    $(this).parent('li').addClass('is-current').siblings('li').removeClass('is-current');
+    $('.payment-tool__list--item').removeClass('is-current');
+    $('#' + el).addClass('is-current');
+    return false;
+  }
+
+  $(document).on('click', '.js-payment-open', paymentTab); //--END[탭] ----------------------
 
   /*---------------------
   * [select] :: custom 

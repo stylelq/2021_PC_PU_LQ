@@ -31,6 +31,10 @@
       &--title{
           margin:0;
           @include title1;
+
+          &.align-center{
+            text-align: center
+          }
       }
   }
   &__tit{
@@ -53,6 +57,15 @@
       z-index: $childZindex;
       padding:calcRem(40rem);
       box-sizing: border-box;
+  }
+
+  .popup__header + .wrap{
+    max-height: calcRem(640rem);
+    height: auto;
+    overflow: hidden;
+    overflow-y: auto;
+    padding: calcRem(20rem) 0;
+    box-sizing: border-box;
   }
 }
 
@@ -517,6 +530,7 @@
       min-width: calcRem(400rem);
       max-width: calcRem(500rem);
       width: auto;
+      min-height: calcRem(450rem);
       z-index: $childZindex;
       padding:calcRem(40rem);
       box-sizing: border-box;
@@ -533,16 +547,19 @@
           height: calcRem(640rem);
           overflow: hidden;
           overflow-y: auto;
-          // scrollbar-width: none;
-          // &::-webkit-scrollbar {
-          //     // display: none;
-          //     width: 5px;               
-          // }
-          // &::-webkit-scrollbar-thumb{
-          //     border-radius: 10px; 
-          //     background-color: rgba(0,0,0,0.2);
-          // }
+
           @include scrollbar-custom;
+      }
+
+      .small-popup__header{
+        // margin-bottom: calcRem(30rem);
+      }
+      .small-popup__header + .wrap{
+        max-height: calcRem(530rem);
+        height: auto;
+        overflow: hidden;
+        overflow-y: auto;
+        box-sizing: border-box;
       }
   }
 
@@ -569,6 +586,13 @@
       &::-webkit-scrollbar {
           display: none;
       }
+  }
+  &-confirm__footer{
+      margin-top: calcRem(30rem);
+  }
+  &-confirm__list{
+      width: 50%;
+      margin: auto;
   }
 }
 
@@ -1033,7 +1057,7 @@
       padding-top:calcRem(20rem);
 
       &__title{
-         @include body2;
+         @include body8;
           margin-bottom:calcRem(5rem);
       }
 
@@ -1048,7 +1072,7 @@
 
   &-bullet__text{
       margin:0;
-      font-size:calcRem(11rem);
+      font-size:calcRem(12rem);
       padding-left:calcRem(7rem);
       position: relative;
       line-height:calclH(18,11);
@@ -1085,7 +1109,7 @@
 
   &-bullet__text{
       margin:0;
-      font-size:calcRem(11rem);
+      font-size:calcRem(12rem);
       padding-left:calcRem(7rem);
       position: relative;
       line-height:calclH(18,11);
@@ -1335,6 +1359,8 @@
 
 //배송지 정보:내주소록
 .my-address{
+    width: calcRem(420rem);
+
   &__item{
       margin:0 calcRem(-20rem);
       padding:0 calcRem(20rem);
@@ -1351,12 +1377,10 @@
       .radio-address{
           padding-bottom: calcRem(25rem);
       }
-      &:not(:first-child){
-          .radio-address{
-              padding: calcRem(25rem) 0;
-              border-top:solid 1px $lightgray4; //$gray1
-          } 
-      }
+      .radio-address{
+        padding: calcRem(25rem) 0;
+        border-bottom:solid 1px $lightgray4; //$gray1
+    } 
   }
 }
 
@@ -1368,11 +1392,12 @@
   }
 
   &__text{
-      @include body3;
+      @include body7;
   }
 
   &__tel{
-      @include body3;
+    //   @include body3;
+      @include body7;
       margin-top:calcRem(8rem);
   }
 }
@@ -1389,6 +1414,8 @@
 .address-search{
   &__section{
       display: none;
+      width: calcRem(420rem);
+      margin-top: calcRem(20rem);
 
       &.is-current{
           display: block;
@@ -1396,8 +1423,8 @@
   }
 
   &__text{
-      margin:calcRem(10rem) 0 0;
-      @include body3;
+      margin:calcRem(20rem) 0 0;
+      @include body7;
   }
 
   &__list{
@@ -1436,9 +1463,14 @@
   }
 }
 
+.address-list + .paging{
+    margin-top: calcRem(20rem);
+}
+
 .zipcode-address{
   display: block;
   padding:calcRem(20rem) 0;
+  position: relative;
 
   &:after{
       @include block-reset;
@@ -1449,7 +1481,8 @@
       margin-right:calcRem(5rem);
       min-width:calcRem(55rem);
       box-sizing: border-box;
-      @include body3;
+    //   @include body3;
+      @include body7;
   }
   
   &__cont{
@@ -1457,15 +1490,25 @@
 
       &--zip{
           display: block;
-          @include body3;
+        //   @include body3;
+          @include body7;
       }
 
       &--address{
           display: block;
-          @include body3;
+        //   @include body3;
+          @include body7;
           color:$grayTextColor;
           margin-top:calcRem(2rem);
       }
+  }
+
+  .btn-v3{
+      position: absolute;
+      top: calcRem(20rem);
+      right: 0;
+      width: auto;
+      padding: calcRem(4rem) calcRem(10rem);
   }
 
   //주소검색(3)
@@ -1478,13 +1521,17 @@
 .address-search{
   &__btn{
       margin-top:calcRem(20rem);
-
+    &--list{overflow: hidden;}
       &--item{
-          margin-top:calcRem(10rem);
+          float: left;
+          width: calc((100% - 5px) / 2);
+          &:first-child{margin-right: 5px;}
+        //   margin-top:calcRem(10rem);
+          .btn-v1{ @include body8; }          
 
-          &:first-child{
-              margin-top:0;
-          }
+        //   &:first-child{
+        //       margin-top:0;
+        //   }
       }
   }
   input[type="hidden"] + .zipcode-address__cont--zip{

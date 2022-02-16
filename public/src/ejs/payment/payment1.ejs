@@ -45,6 +45,7 @@ popup = "true"
                             </ul>
                         </div>
                         <!-- //탭 -->
+                        <a href="#shippingPop" class="user-address__link js-popup-open">배송지 목록</a>
 
                         <div class="payment-section-tab__info is-current">
                             <div class="my-address">
@@ -128,24 +129,20 @@ popup = "true"
                 <!-- .결제하기 -->
             </div>
 
+            <!-- 레이아웃 오른쪽 fixed -->
             <div class="payment-right">
                 <!-- 토탈결제금액-->
                 <section class="payment-section">
+                    <h5 class="payment-section__title">TOTAL</h5>
                     <div class="payment-total">
                         <div class="payment-total__title">
                             <dl class="payment-total__inner">
-                                <dt class="payment-total__text">최종 결제금액</dt>
+                                <dt class="payment-total__text">총 주문상품금액</dt>
                                 <dd class="payment-total__price">289,290원</dd>
                             </dl>
                         </div>
                         <div class="payment-total__cont">
                             <ul class="payment-total__list">
-                                <li class="payment-total__item">
-                                    <dl class="payment-total__inner">
-                                        <dt class="payment-total__text">총 주문상품금액</dt>
-                                        <dd class="payment-total__price">328,000원</dd>
-                                    </dl>
-                                </li>
                                 <li class="payment-total__item">
                                     <dl class="payment-total__inner">
                                         <dt class="payment-total__text">쿠폰할인금액</dt>
@@ -177,16 +174,28 @@ popup = "true"
                 <!-- .토탈결제금액 -->
                 <!-- 구매동의-->
                 <section class="payment-section">
-                    <h2 class="payment-section__title">구매동의</h2>
+                    <div class="payment-total__bottom">
+                        <dl class="payment-total__inner">
+                            <dt class="payment-total__text">TOTAL</dt>
+                            <dd class="payment-total__price">289,290원
+                                <p class="payment-total__price--saleInfo">(약 10%할인)</p>
+                            </dd>
+                        </dl>
+                    </div>
                     <div class="payment-section__cont">
-                        <div class="payment-agree">
-                            <p class="payment-agree__text">주문할 상품의 상품명, 상품가격, 배송 정보를 확인하였으며, 구매에 동의하시겠습니까? <br />(전자상거래법 제8조 제2항)</p>
-                            <div class="form__checkbox form__checkbox--big">
-                                <input class="form__checkbox--input sr-only" type="checkbox" name="paymentAgree" id="paymentAgree">
-                                <label class="form__checkbox--text js-full-use" for="paymentAgree">동의합니다.</label>
-                            </div>
-                            <button class="payment-agree__btn btn-v1 type-primary">결제하기</button>
-                        </div>
+                        <dl class="payment-total__inner">
+                            <dt class="payment-total__text">구매동의</dt>
+                            <dd class="payment-total__cont">
+                                <div class="payment-agree">
+                                    <p class="payment-agree__text">주문할 상품의 상품명, 상품가격, 배송 정보를 확인하였으며, 구매에 동의하시겠습니까? (전자상거래법 제8조 제2항)</p>
+                                    <div class="form__checkbox form__checkbox--big">
+                                        <input class="form__checkbox--input sr-only" type="checkbox" name="paymentAgree" id="paymentAgree">
+                                        <label class="form__checkbox--text js-full-use" for="paymentAgree">동의합니다.</label>
+                                    </div>
+                                    <button class="payment-agree__btn btn-v1 type-primary">결제하기</button>
+                                </div>
+                            </dd>
+                        </dl>
                     </div>
                 </section>
                 <!-- .구매동의 -->
@@ -200,4 +209,5 @@ popup = "true"
 <% include ../_popup/_message %>
 <% include ../_popup/_coupon %>
 <% include ../_popup/_addressSearch %>
+<% include ../_popup/_shipping %>
 <% include ../_include/_footer %>
