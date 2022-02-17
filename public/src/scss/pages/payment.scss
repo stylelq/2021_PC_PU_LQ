@@ -448,7 +448,7 @@
     //총 할인금액
     &__group:first-child{
         #{$this}__text{
-            @include body3;
+            @include body2;
         }
     }
 
@@ -458,8 +458,11 @@
             display: inline-block;
             margin-left: calcRem(20rem);
         }
-        #{$this}__list{ margin-top: calcRem(-8rem); }
-        #{$this}__list--cont{margin-left: 0;}
+        #{$this}__list{ 
+            margin-top: calcRem(-8rem); 
+            &--cont{ margin-left: 0; }
+            &--count{ font-weight: $medium; }
+        }
         #{$this}__price{
             margin: calcRem(15rem) 0 calcRem(10rem);
             &--text{
@@ -812,10 +815,6 @@
 }
 
 
-
-
-
-
 //배송지 정보 있을경우
 .user-address{
 
@@ -860,7 +859,7 @@
     }
 
     &__tel{
-        @include body3;
+        @include body7;
         margin-bottom:calcRem(2rem);
     }
 
@@ -887,172 +886,172 @@
     }
 }
 
-//주문 완료 상단 컨텐츠
-.payment-complete{
-    &__title{
-        margin:0 0 calcRem(9rem);
-        @include body1;
-        text-align: center;
+// //주문 완료 상단 컨텐츠
+// .payment-complete{
+//     &__title{
+//         margin:0 0 calcRem(9rem);
+//         @include body1;
+//         text-align: center;
 
-        &--name{
-            font-weight: $regular;
-        }
-    }
+//         &--name{
+//             font-weight: $regular;
+//         }
+//     }
 
-    &__code{
-        margin-bottom:calcRem(20rem);
-        text-align: center;
-        @include body3;
-        font-weight: $regular;
-    }
+//     &__code{
+//         margin-bottom:calcRem(20rem);
+//         text-align: center;
+//         @include body3;
+//         font-weight: $regular;
+//     }
 
-    &__info-text{
-        @include body5;
-        padding-left:calcRem(7rem);
-        position: relative;
-        color:$darkgray;
-        margin:calcRem(15rem) 0 0;
+//     &__info-text{
+//         @include body5;
+//         padding-left:calcRem(7rem);
+//         position: relative;
+//         color:$darkgray;
+//         margin:calcRem(15rem) 0 0;
 
-        &:after{
-            content:"";
-            width:calcRem(2rem);
-            height:calcRem(2rem);
-            border-radius: 100%;
-            position: absolute;
-            top:calcRem(8rem);
-            left:0;
-            background:$bulletColor;
-        }
-    }
-}
+//         &:after{
+//             content:"";
+//             width:calcRem(2rem);
+//             height:calcRem(2rem);
+//             border-radius: 100%;
+//             position: absolute;
+//             top:calcRem(8rem);
+//             left:0;
+//             background:$bulletColor;
+//         }
+//     }
+// }
 
-//주문내역 하단 컨텐츠
-.complete-section{
-    &--last{
-        padding-top:calcRem(20rem);
-        text-align: center;
-    }
+// //주문내역 하단 컨텐츠
+// .complete-section{
+//     &--last{
+//         padding-top:calcRem(20rem);
+//         text-align: center;
+//     }
 
-    &__inner{
-        font-size:0;
-        line-height:0;
-        white-space: nowrap;
+//     &__inner{
+//         font-size:0;
+//         line-height:0;
+//         white-space: nowrap;
 
-        &:after{
-            @include block-reset;
-        }
-    }
+//         &:after{
+//             @include block-reset;
+//         }
+//     }
 
-    &__item{
-        display: inline-block;
-        text-align: center;
-        vertical-align: middle;
-        padding:0 calcRem(20rem);
-        min-width: 50%;
-        box-sizing: border-box;
-        position: relative;
+//     &__item{
+//         display: inline-block;
+//         text-align: center;
+//         vertical-align: middle;
+//         padding:0 calcRem(20rem);
+//         min-width: 50%;
+//         box-sizing: border-box;
+//         position: relative;
 
-        &:after{
-            content:"";
-            width:1px;
-            height:calcRem(15rem);
-            background-color: $gray1;
-            position: absolute;
-            right:0;
-            @include vertical-center;
-        }
+//         &:after{
+//             content:"";
+//             width:1px;
+//             height:calcRem(15rem);
+//             background-color: $gray1;
+//             position: absolute;
+//             right:0;
+//             @include vertical-center;
+//         }
 
-        &:last-child{
-            &:after{
-                display: none;
-            }
-        }
-    }
+//         &:last-child{
+//             &:after{
+//                 display: none;
+//             }
+//         }
+//     }
 
-    &__link{
-        @include title1;
-        display: block;
-    }
-}
+//     &__link{
+//         @include title1;
+//         display: block;
+//     }
+// }
 
-//주문완료 결제 정보 확인
-.payment-confirm{
-    &__inner{
-        margin:0;
+// //주문완료 결제 정보 확인
+// .payment-confirm{
+//     &__inner{
+//         margin:0;
 
-        &:after{
-            @include block-reset;
-        }
-    }
+//         &:after{
+//             @include block-reset;
+//         }
+//     }
 
-    &__title{
-        float:left;
-        @include body3;
-    }
+//     &__title{
+//         float:left;
+//         @include body3;
+//     }
 
-    &__text{
-        overflow: hidden;
-        text-align: right;
-        @include body3;
-    }
+//     &__text{
+//         overflow: hidden;
+//         text-align: right;
+//         @include body3;
+//     }
 
-    &__sort{
-        margin-top:calcRem(20rem);
-        padding-top:calcRem(20rem);
-        border-top:solid 1px $lightgray1;
+//     &__sort{
+//         margin-top:calcRem(20rem);
+//         padding-top:calcRem(20rem);
+//         border-top:solid 1px $lightgray1;
 
-        &--title{
-            @include body2;
-            margin-bottom:calcRem(10rem);
-        }
+//         &--title{
+//             @include body2;
+//             margin-bottom:calcRem(10rem);
+//         }
 
-        &--current{
-            @include body3;
-            font-weight: $regular;
-            margin-bottom:calcRem(3rem);
+//         &--current{
+//             @include body3;
+//             font-weight: $regular;
+//             margin-bottom:calcRem(3rem);
 
-            &.unidentified{
-                color:$point1;
-            }
-        }
+//             &.unidentified{
+//                 color:$point1;
+//             }
+//         }
 
-        &--account{
-            @include body3;
-        }
+//         &--account{
+//             @include body3;
+//         }
 
-        &--number{
-            @include body3;
-            margin-top:calcRem(3rem);
-        }
+//         &--number{
+//             @include body3;
+//             margin-top:calcRem(3rem);
+//         }
 
-        &--date{
-            @include body3;
-            margin-top:calcRem(3rem);
-        }
-    }
+//         &--date{
+//             @include body3;
+//             margin-top:calcRem(3rem);
+//         }
+//     }
 
-    &__info-text{
-        font-size:calcRem(11rem);
-        padding-left:calcRem(7rem);
-        position: relative;
-        line-height:calclH(18,11);
-        font-weight: $light;
-        letter-spacing: $defaultLetter;
-        color:$darkgray;
-        margin:calcRem(10rem) 0 0;
+//     &__info-text{
+//         font-size:calcRem(11rem);
+//         padding-left:calcRem(7rem);
+//         position: relative;
+//         line-height:calclH(18,11);
+//         font-weight: $light;
+//         letter-spacing: $defaultLetter;
+//         color:$darkgray;
+//         margin:calcRem(10rem) 0 0;
 
-        &:after{
-            content:"";
-            width:calcRem(2rem);
-            height:calcRem(2rem);
-            border-radius: 100%;
-            position: absolute;
-            top:calcRem(8rem);
-            left:0;
-            background:$bulletColor;
-        }
-    }
-}
+//         &:after{
+//             content:"";
+//             width:calcRem(2rem);
+//             height:calcRem(2rem);
+//             border-radius: 100%;
+//             position: absolute;
+//             top:calcRem(8rem);
+//             left:0;
+//             background:$bulletColor;
+//         }
+//     }
+// }
 
 
 //주문 완료 페이지

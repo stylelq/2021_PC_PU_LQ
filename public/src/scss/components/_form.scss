@@ -387,7 +387,8 @@ input {
   $this:&;
   &__label{
     display: block;
-    @include body3;
+    // @include body3;
+    @include body7;
     padding-right:calcRem(36rem);
     position: relative;
 
@@ -466,7 +467,8 @@ input {
   }
 
   &__text--current{
-    @include body3;
+    // @include body3;
+    @include body7;
     display: block;
     min-width: calcRem(16rem);
     text-align: center;
@@ -477,7 +479,8 @@ input {
 //보더 버튼
 .btn{
   &--border{
-    @include body3;
+    // @include body3;
+    @include body7;
     font-weight:$regular;
     border:solid 1px $gray1;
     padding:calcRem(8rem) calcRem(20rem);
@@ -568,7 +571,8 @@ input {
   &--text{
     display: inline-block;
     max-width: 100%;
-    @include body3;
+    // @include body3;
+    @include body7;
     position: relative;
     padding-left:calcRem(20rem);
 
@@ -669,7 +673,8 @@ input {
     display: block;
     width:100%;
     border-bottom:solid 1px $gray1;
-    @include body3;
+    // @include body3;
+    @include body7;
     padding:0 calcRem(10rem) calcRem(7rem) 0;
     height:calcRem(26rem);
     @include background('/images/common/ico_qna_more.svg','no-repeat center center / contain');
@@ -702,7 +707,8 @@ input {
   &--text{
     display: inline-block;
     max-width: 100%;
-    @include body3;
+    // @include body3;
+    @include body7;
     position: relative;
     padding-left:calcRem(20rem);
 
@@ -916,7 +922,8 @@ input {
   &__item{
     padding-left:calcRem(7rem);
     position: relative;
-    @include body3;
+    // @include body3;
+    @include body7;
     color:$darkgray;
     margin:calcRem(5rem) 0 0;
 
@@ -952,7 +959,8 @@ input {
   &__item{
     padding-left:calcRem(10rem);
     position: relative;
-    @include body3;
+    // @include body3;
+    @include body7;
     color:$darkgray;
     margin:calcRem(10rem) 0 0;
 
