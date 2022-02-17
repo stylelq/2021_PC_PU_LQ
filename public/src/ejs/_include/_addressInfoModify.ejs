@@ -1,0 +1,139 @@
+<!-- 배송지 정보 -->
+<div class="address-info__form">
+    <!-- item -->
+    <div class="address-info__group">
+        <div class="address-info__label">받는분</div>
+        <div class="address-info__list">
+            <div class="address-info__inner">
+                <input type="text" class="form__input--text" placeholder="받는 분" value="홍길동">
+            </div>
+        </div>
+    </div>
+    <!-- //item -->
+
+    <!-- item -->
+    <div class="address-info__group">
+        <div class="address-info__label">연락처</div>
+        <div class="address-info__list">
+            <div class="address-info__inner">
+                <ul class="address-info__inner--list">
+                    <li class="address-info__inner--item">
+                        <select name="wirteOption" id="addressSelect1" class="form__select js-placeholder" title="선택">
+                            <option value="" disabled="">선택</option>
+                            <option value="010" selected>010</option>
+                            <option value="011">011</option>
+                            <option value="016">016</option>
+                            <option value="017">017</option>
+                            <option value="018">018</option>
+                            <option value="019">019</option>
+                        </select>
+                    </li>
+                    <li class="address-info__inner--item">
+                        <input type="number" class="form__input--text" title="연락처1 중간 번호" placeholder="연락처1" maxlength="4" value="1234">
+                    </li>
+                    <li class="address-info__inner--item">
+                        <input type="number" class="form__input--text" title="연락처1 마지막 번호" maxlength="4" value="1234">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- //item -->
+
+    <!-- item -->
+    <div class="address-info__group">
+        <div class="address-info__label">추가연락처</div>
+        <div class="address-info__list">
+            <div class="address-info__inner">
+                <ul class="address-info__inner--list">
+                    <li class="address-info__inner--item">
+                        <select name="wirteOption" id="addressSelect2" class="form__select js-placeholder" title="선택">
+                            <option value="" disabled="">선택</option>
+                            <option value="02">02</option>
+                            <option value="031">031</option>
+                            <option value="032">032</option>
+                            <option value="033">033</option>
+                            <option value="041">041</option>
+                            <option value="042">042</option>
+                            <option value="043">043</option>
+                            <option value="044">044</option>
+                            <option value="051">051</option>
+                            <option value="052">052</option>
+                            <option value="053">053</option>
+                            <option value="054">054</option>
+                            <option value="055">055</option>
+                            <option value="061">061</option>
+                            <option value="062">062</option>
+                            <option value="063">063</option>
+                            <option value="064">064</option>
+                            <option value="070">070</option>
+                        </select>
+                    </li>
+                    <li class="address-info__inner--item">
+                        <input type="number" class="form__input--text" title="연락처1 중간 번호" placeholder="연락처1" maxlength="4">
+                    </li>
+                    <li class="address-info__inner--item">
+                        <input type="number" class="form__input--text" title="연락처1 마지막 번호" maxlength="4">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- //item -->
+
+    <!-- item -->
+    <div class="address-info__group">
+        <div class="address-info__label">주소</div>
+        <div class="address-info__list">
+            <!-- inner -->
+            <div class="address-info__inner address-info__inner--btn">
+                <input type="text" class="form__input--text" title="우편번호" placeholder="우편번호" value="12345" readonly>
+                <a href="#addressPop" class="form__input--btn js-popup-open">주소검색</a>
+            </div>
+            <!-- .inner -->
+            <!-- inner -->
+            <div class="address-info__item">
+                <input type="text" class="form__input--text" title="중간 주소" readonly
+                   value="서울시 동대문구 하정로 26 (신설동)">
+            </div>
+            <!-- .inner -->
+            <!-- inner -->
+            <div class="address-info__item">
+                <input type="text" class="form__input--text" title="상세 주소" value="3F">
+            </div>
+            <!-- .inner -->
+            <!-- inner -->
+            <div class="address-info__inner">
+                <div class="form__checkbox">
+                    <input class="form__checkbox--input form__checkbox--big-red sr-only" type="checkbox" name="addressList" id="addressList">
+                    <label class="form__checkbox--text" for="addressList">배송지목록에 추가</label>
+                </div>
+            </div>
+            <!-- .inner -->
+        </div>
+    </div>
+    <!-- .item -->
+
+    <!-- item -->
+    <div class="address-info__group">
+        <div class="address-info__label">배송메시지</div>
+        <div class="address-info__list">
+            <div class="address-info__inner address-info__item--message">
+                <select name="wirteOption" id="addressSelect2" class="form__select js-placeholder js-custom-message" title="배송 메세지 선택">
+                    <option value="1">메시지를 선택해주세요</option>
+                    <option value="2">부재시 경비실/관리실에 맡겨주세요.</option>
+                    <option value="3">배송 전에 미리 연락주세요.</option>
+                    <option value="4">빠른 배송 부탁드립니다.</option>
+                    <option value="5">파손의 위험이 있으므로, 주의하여 배송해 주세요.</option>
+                    <option value="6">메시지 직접입력</option>
+                </select>
+            </div>
+            <div class="address-info__item js-select-custom">
+                <input type="text" class="form__input--text js-max-keyup" placeholder="최대 50자 이내 입력 가능합니다.">
+            </div>
+            <p class="address-info--text">배송 메시지는 배송 상황 및 요청 내용에 따라 반영되지 않을 수도 있습니다.</p>
+        </div>
+    </div>
+    <!-- //item -->
+
+</div>
