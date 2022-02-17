@@ -1,0 +1,77 @@
+<!-- 쿠폰/할인 정보 -->
+<div class="coupon-info">
+    <dl class="coupon-info__group group-total">
+        <dt><div class="coupon-info__label">총 할인 금액</div></dt>
+        <dd><div class="coupon-info__text">29,800원</div></dd>
+    </dl>
+
+    <dl class="coupon-info__group group-count">
+        <dt><div class="coupon-info__label">쿠폰/할인 정보</div></dt>
+        <dd>
+            <div class="coupon-info__list">
+                <dl class="coupon-info__list--inner">
+                    <dt class="coupon-info__list--total">
+                        전체 사용 가능한 쿠폰 : <span class="coupon-info__list--count">2</span>장
+                        <div class="coupon-info__btn">
+                            <a href="#couponPop" class="btn--border js-popup-open">쿠폰 조회/적용</a>
+                        </div>
+                    </dt>
+                    <dd class="coupon-info__list--cont">
+                        <ul class="coupon-info__price">
+                            <li class="coupon-info__price--item coupon-info__price--item-total">
+                                <span class="coupon-info__price--text">38,710원</span>
+                                <span class="coupon-info__price--title">: 상품쿠폰 할인</span>
+                            </li>
+                            <li class="coupon-info__price--item coupon-info__price--item-total">
+                                <span class="coupon-info__price--text">38,710원</span>
+                                <span class="coupon-info__price--title">: 더블쿠폰 할인</span>
+                            </li>
+                            <li class="coupon-info__price--item coupon-info__price--item-total">
+                                <span class="coupon-info__price--text">38,710원</span>
+                                <span class="coupon-info__price--title">: 추가쿠폰 할인</span>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>    
+        </dd>
+    </dl>
+
+    <dl class="coupon-info__group group-accumulate">
+        <dt><div class="coupon-info__label">적립금 즉시할인</div></dt>
+        <dd>
+            <div class="coupon-info__list">
+                <div class="coupon-info__accumulate--price">2,850원</div>
+                <div class="form__checkbox form__checkbox--big">
+                    <input class="form__checkbox--input sr-only" type="checkbox" name="accumulate" id="accumulate">
+                    <label class="form__checkbox--text" for="accumulate">사용</label>
+                </div>
+                <ul class="center-bullet">
+                    <li class="center-bullet__item">구매확정 시, 적립금이 지급되지 않습니다.</li>
+                </ul>
+            </div>
+        </dd>
+    </dl>
+
+    <dl class="coupon-info__group group-use">
+        <dt><div class="coupon-info__label">적립금 사용</div></dt>
+        <dd>
+            <div class="coupon-info__list">
+                <div class="coupon-info__use--price">0원</div>
+                <div class="coupon-info__use--inner">
+                    <input type="number" class="form__input--text js-full-use-text" value="0">
+                    <div class="form__checkbox form__checkbox--big">
+                        <input class="form__checkbox--input sr-only" type="checkbox" name="use" id="useFull">
+                        <label class="form__checkbox--text js-full-use" for="useFull">전액</label>
+                    </div>
+                </div>
+                <div class="coupon-info__use--btn">
+                    <a href="javascript:void(0);" class="btn--border">적용</a>
+                </div>
+                <div class="coupon-info__use--total">사용가능 적립금 : <span class="coupon-info__use--total-price">1,234,567</span>원</div>
+            </div>
+        </dd>
+    </dl>
+
+</div>
+<!-- 쿠폰/할인 정보 -->

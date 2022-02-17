@@ -127,9 +127,10 @@ jQuery(function(){
 
             if( sc >= 900 ){
                 $('.detail-tab').addClass('fixed');
-                if( divH < winH ){
-                    if( sc - divH > 470 ){
-                        positionAbsolute(divH + 240);
+
+                if( $divH < $winH ){ //상세콘텐츠 높이 < 윈도우창 높이
+                    if( $sc - $divH > 470 ){ //윈도우창보다 작은 콘텐츠
+                        positionAbsolute($divH + 240);
                         $('.detail-tab').removeClass('fixed');
                     }else{
                         positionFixed( $('.header').height()+20 );

@@ -17,53 +17,8 @@ popup = "true"
                     <h2 class="payment-section__title">배송지 정보</h2>
 
                     <div class="payment-section__cont">
-                        <!-- 탭 -->
-                        <div class="payment-section-tab">
-                            <ul class="payment-section-tab__fix">
-                                <li class="payment-section-tab__item is-current">
-                                    <a href="#" class="product-tab__link js-add-tab-link">
-                                        <div class="form__radio form__radio--big form__radio--red">
-                                            <input class="form__radio--input sr-only" type="radio" name="addressTab" id="add1" checked>
-                                            <label class="form__radio--text" for="add1">기본배송지</label>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="payment-section-tab__item">
-                                    <a href="#" class="product-tab__link js-add-tab-link">
-                                        <div class="form__radio form__radio--big form__radio--red">
-                                            <input class="form__radio--input sr-only" type="radio" name="addressTab" id="add2">
-                                            <label class="form__radio--text" for="add2">새로운주소</label>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="payment-section-tab__item">
-                                    <a href="#" class="product-tab__link js-add-tab-link">
-                                        <div class="form__radio form__radio--big form__radio--red">
-                                            <input class="form__radio--input sr-only" type="radio" name="addressTab" id="add3">
-                                            <label class="form__radio--text" for="add3">주문자 정보와 동일</label>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- //탭 -->
-                        <a href="#shippingPop" class="user-address__link js-popup-open">배송지 목록</a>
-
-                        <div class="payment-section-tab__info is-current">
-                            <!-- 배송지 없음 -->
-                            <p class="payment-section__text no-data">등록된 배송지 정보가 없습니다. 배송지 정보를 입력하세요.</p>
-                        </div>
-                        
-                        <div class="payment-section-tab__info">
-                            <div class="new-address">
-                                <% include ../_include/_addressInfo %>
-                            </div>
-                        </div>
-
-                        <div class="payment-section-tab__info">
-                            <div class="orderer-information">
-                                <% include ../_include/_addressInfoModify %>
-                            </div>
+                        <div class="new-address">
+                            <% include ../_include/_addressInfo %>
                         </div>
                     </div>
                 </section>
@@ -82,19 +37,10 @@ popup = "true"
                 <section class="payment-section">
                     <h2 class="payment-section__title">주문 상품정보</h2>
                     <div class="payment-section__cont">
-                        <% include ../_include/_orderProduct %>
+                        <% include ../_include/_orderProductNonMember %>
                     </div>
                 </section>
                 <!-- .주문 상품정보 -->
-
-                <!-- 쿠폰/할인 정보-->
-                <section class="payment-section">
-                    <h2 class="payment-section__title">쿠폰/할인 정보</h2>
-                    <div class="payment-section__cont">
-                        <% include ../_include/_couponInfo %>
-                    </div>
-                </section>
-                <!-- .쿠폰/할인 정보 -->
 
                 <!-- 결제하기-->
                 <section class="payment-section">
@@ -182,9 +128,5 @@ popup = "true"
 </div>
 <% include ../_include/_contentFooter %>
 <% include ../_popup/_installment %>
-<% include ../_popup/_gift %>
-<% include ../_popup/_message %>
-<% include ../_popup/_coupon %>
 <% include ../_popup/_addressSearch %>
-<% include ../_popup/_shipping %>
 <% include ../_include/_footer %>

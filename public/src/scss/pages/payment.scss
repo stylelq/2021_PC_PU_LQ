@@ -6,12 +6,47 @@
     margin: auto;
     @include flexWrap;
 
-    &__title{
+    &-head{
         width: 100%;
+        padding-bottom: calcRem(50rem); 
+
+        &__cont{
+            margin-top: calcRem(60rem); 
+            text-align: center;
+            .payment-head{
+                &__text{
+                    @include title3;
+                }
+                &__text--state{
+                    color: $point1;
+                    @include heading4;
+                }
+                &__text--name{
+                    font-weight: $medium;
+                }
+                &__text--id{
+                    @include body7;
+                }
+                &__btn{
+                    margin-top: calcRem(40rem); 
+                    .payment-head__list{
+                        width: 25%;
+                        margin: auto;
+                        overflow: hidden;
+                    }
+                    .payment-head__item{
+                        float: left;
+                        width: calc((100% - 5px)/2);
+                        &:first-child{margin-right: 5px;}
+                    }
+                }
+            }
+        }
+    }
+    &__title{
         font-size: calcRem(20rem);
         font-weight: $regular;
         text-align: center;
-        padding-bottom: calcRem(50rem); 
     }
     &-left{
         width: calcRem(720rem);
@@ -100,7 +135,7 @@
     }
     // 배송지 데이터 없음
     .payment-section__text.no-data{
-        padding: calcRem(80rem) 0 calcRem(50rem);
+        padding: calcRem(30rem) 0 0;
         @include body7;
     }
 }
@@ -221,9 +256,7 @@
                 }
             }
         }
-        &__item{
-            margin-bottom: calcRem(15rem);
-        }
+        &__item{ margin-bottom: calcRem(15rem); }
     }
 }
 
@@ -245,7 +278,9 @@
             @include body7;
         }
     }
-
+    &__text:not(:first-child){
+        margin-top: calcRem(10rem);
+    }
 }
 
 //주문 제품
@@ -423,12 +458,16 @@
             display: inline-block;
             margin-left: calcRem(20rem);
         }
+        #{$this}__list{ margin-top: calcRem(-8rem); }
         #{$this}__list--cont{margin-left: 0;}
         #{$this}__price{
             margin: calcRem(15rem) 0 calcRem(10rem);
             &--text{
                 color: $point1;
                 @include body8;
+            }
+            &--item-total{
+                margin-bottom: calcRem(10rem);
             }
         }
     }
@@ -735,7 +774,7 @@
 
         //최종금액 하단
         &__bottom{
-            .payment-total__text{  @include title2; }
+            .payment-total__text{  @include title1; }
             .payment-total__price{  
                 @include title4;
                 color: $point1;
@@ -1011,6 +1050,20 @@
             top:calcRem(8rem);
             left:0;
             background:$bulletColor;
+        }
+    }
+}
+
+
+//주문 완료 페이지
+.payment-success{
+    .payment{
+        &-head{
+            padding-bottom: calcRem(90rem); 
+        }
+        &-right{
+            top: 525px;
+            .payment-section:last-child{border-bottom: 0;}
         }
     }
 }
