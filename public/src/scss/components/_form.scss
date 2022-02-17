@@ -1139,7 +1139,36 @@ input {
 	&__meta--select{
 		position: relative;
 		width: calcRem(160rem);
+    &:not(:last-child){
+      margin-bottom: calcRem(10rem);
+    }
+
+    &.sel-disabled{
+      background-color: $gray2;
+      pointer-events: none;
+      padding: calcRem(5rem);
+      border: 1px solid $gray2;
+      .selBox-custom__selected{
+        border: 0;
+        padding: 0;
+      }
+    }
+    &.sel-border{
+      border: 1px solid $gray2;
+      padding: calcRem(5rem);
+      .selBox-custom__selected{
+        border: 0;
+        padding: 0;
+      }
+      .selBox-custom__select{
+        padding: calcRem(6rem);
+        top: 30px;
+        left: -1px;
+        width: 101%;
+      }
+    }
 	} 
+
 	&-custom{
 		$this:&;
 		&__selected {
@@ -1196,6 +1225,10 @@ input {
 					background:#000;
 					transition: all 0.5s;
 				}
+
+        .sel-border &{
+          &::after{display: none;}
+        }
 			}
 	
 			&:hover,

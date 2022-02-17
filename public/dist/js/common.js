@@ -152,7 +152,7 @@ jQuery(function () {
           //상세콘텐츠 높이 < 윈도우창 높이
           if ($sc - $divH > 470) {
             //윈도우창보다 작은 콘텐츠
-            positionAbsolute(divH + 240);
+            positionAbsolute($divH + 240);
             $('.detail-tab').removeClass('fixed');
           } else {
             //스크롤 햇을때

@@ -328,7 +328,7 @@
 .size-list{
     $this:&;
     overflow: hidden;
-    margin:calcRem(-10rem) calcRem(-10rem);
+    // margin:calcRem(-10rem) calcRem(-10rem);
 
     &__item{
         padding:calcRem(10rem) calcRem(10rem);
@@ -404,11 +404,17 @@
     }
 
     &__total{
-        border-top:solid 1px $black1;
         text-align: right;
-        padding-top:calcRem(8rem);
-        margin-top:calcRem(20rem);
         @include heading3;
+        position: relative;
+        &:before{
+            content: '';
+            display: block;
+            width: calc(100% + #{calcRem(40rem)});
+            margin: calcRem(20rem) calcRem(-20rem);
+            height: 0.03em;
+            background-color: $black1;
+        }
     }
 }
 

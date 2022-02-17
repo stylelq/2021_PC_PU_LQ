@@ -8,8 +8,6 @@
   // background-color:#fff;
   z-index:$popupZindex;
 
-
-
   &.is-active{
       display:block;
   }
@@ -1156,64 +1154,83 @@
 
 //쿠폰 조회/적용
 .popup{
-  &-coupon{
-      &__header{
-          margin:0 calcRem(-20rem);
-          padding:0 calcRem(30rem) calcRem(20rem);
-          border-bottom: solid 1px $gray1;
-      }
+    &__header{
+        position: relative;
+        &--title + &--text{
+            position: absolute;
+            bottom: calcRem(20rem);
+            right: 0;
+            @include body8;
+            color: $point1;
+            margin: 0;
+        }
+    }
+    &-coupon{
+        &__product{
+            .list-table{
+                border-top: 0;
+                tbody{
+                    td:nth-child(1){ text-align: left; }
+                    tr:last-child td{ border-color: $black1; }
+                }
 
-      &__item{
-          margin-top: calcRem(8rem);
-
-          &:first-child{
-              margin-top:0;
-          }
-      }
-
-      &__inner{
-          margin:0;
-
-          &:after{
-              @include block-reset;
-          }
-      }
-
-      &__title{
-          float:left;
-          @include title2;
-      }
-
-      &__text{
-          overflow: hidden;
-          text-align: right;
-          @include title2;
-          color:$point1;
-      }
-
-      //상품 리스트
-      &__product--item{
-          padding:calcRem(25rem) calcRem(20rem) 0;
-          margin-top:calcRem(25rem);
-          border-top:solid 1px $gray1;
-          margin-left:calcRem(-20rem);
-          margin-right:calcRem(-20rem);
-
-          &:first-child{
-              padding-top:0;
-              margin-top:0;
-              border-top:none;
-          }
-      }
-
-      //적용가능한 쿠폰 없을 시
-      &__no-coupon{
-          @include body5;
-          text-align: center;
-          padding:calcRem(20rem) calcRem(20rem);
-          font-size:calcRem(12rem);
-      }
-  }
+                .detail-Meta{
+                    &__title--option{
+                        display: block;
+                        margin-top: calcRem(20rem);
+                        color: $grayTextColor;
+                    }
+                    &__price--current{
+                        font-weight: $regular;
+                    }
+                }
+            }
+        }
+        //적용가능한 쿠폰 없을 시
+        &__no-coupon{
+            @include body7;
+            // text-align: center;
+            // padding:calcRem(20rem) calcRem(20rem);
+            // display: block;
+        }
+    }
+    &__footer{       
+        .popup-coupon{
+            &__total{ 
+                .popup-coupon__list{
+                    @include flexNoWrap;
+                }
+                .popup-coupon__item{
+                    @include body7;
+                    &:last-child{
+                        margin-left: auto;
+                        @include body2;
+                    }
+                }
+            }
+            &__btn{
+                width: 55%;
+                margin: calcRem(50rem) auto 0;
+                .popup-write__item{ 
+                    width: 49%; 
+                    &:nth-child(1){
+                        .popup-write__link{
+                            border-color:$point1;
+                            background-color: $point1;
+                            color:$whiteColor;
+                        }
+                    }
+                    &:nth-child(2){
+                        .popup-write__link{
+                            border-color:$gray2;
+                            background-color: $whiteColor;
+                            color:$darkgray;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 //상품 목록
