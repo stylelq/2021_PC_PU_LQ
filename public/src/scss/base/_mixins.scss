@@ -15,6 +15,13 @@
   }
 }
 
+@mixin flexNoWrap {
+  display: -webkit-flex; display: -moz-flex; display: -o-flexbox; display: -ms-flexbox;//ie10+ 
+  display: flex;
+
+  -webkit-flex-wrap: nowrap; -moz-flex-wrap: nowrap; -o-flex-wrap: nowrap; -ms-flex-wrap: nowrap;//ie10+ 
+  flex-wrap: nowrap;
+}
 @mixin flexWrap {
   display: -webkit-flex; display: -moz-flex; display: -o-flexbox; display: -ms-flexbox;//ie10+ 
   display: flex;
@@ -51,6 +58,12 @@
 @mixin heading2(){font-size:calcRem(17rem); line-height:calclH(24,17); letter-spacing: $defaultLetter; font-weight:$medium;}
 @mixin heading3(){
   font-size:calcRem(20rem); 
+  line-height:calclH(24,17); 
+  letter-spacing: $defaultLetter; 
+  font-weight:$regular;
+}
+@mixin heading4(){
+  font-size:calcRem(18rem); 
   line-height:calclH(24,17); 
   letter-spacing: $defaultLetter; 
   font-weight:$regular;

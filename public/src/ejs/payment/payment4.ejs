@@ -6,9 +6,24 @@ popup = "true"
 <% include ../_include/_header %>
 <div class="container">
     <div class="site-main">
-        <section class="payment">
+        <section class="payment payment-success">
             <div class="payment-head">
                 <h3 class="payment__title">PAYMENT</h3>
+                <div class="payment-head__cont">
+                    <div class="payment-head__text payment-head__text--state">주문완료</div>
+                    <div class="payment-head__text"><span class="payment-head__text--name">홍길동</span> 님, 주문이 정상적으로 완료되었습니다.</div>
+                    <div class="payment-head__text payment-head__text--id">주문번호 : M202081816</div>
+                    <div class="payment-head__btn">
+                        <ul class="payment-head__list">
+                            <li class="payment-head__item">
+                                <a href="" class="btn-v1 btn-v1--small type-primary">주문 내역 조회</a>
+                            </li>
+                            <li class="payment-head__item">
+                                <a href="" class="btn-v1 btn-v1--small type-white">계속 쇼핑 하기</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div class="payment-left">
@@ -17,52 +32,28 @@ popup = "true"
                     <h2 class="payment-section__title">배송지 정보</h2>
 
                     <div class="payment-section__cont">
-                        <!-- 탭 -->
-                        <div class="payment-section-tab">
-                            <ul class="payment-section-tab__fix">
-                                <li class="payment-section-tab__item is-current">
-                                    <a href="#" class="product-tab__link js-add-tab-link">
-                                        <div class="form__radio form__radio--big form__radio--red">
-                                            <input class="form__radio--input sr-only" type="radio" name="addressTab" id="add1" checked>
-                                            <label class="form__radio--text" for="add1">기본배송지</label>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="payment-section-tab__item">
-                                    <a href="#" class="product-tab__link js-add-tab-link">
-                                        <div class="form__radio form__radio--big form__radio--red">
-                                            <input class="form__radio--input sr-only" type="radio" name="addressTab" id="add2">
-                                            <label class="form__radio--text" for="add2">새로운주소</label>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="payment-section-tab__item">
-                                    <a href="#" class="product-tab__link js-add-tab-link">
-                                        <div class="form__radio form__radio--big form__radio--red">
-                                            <input class="form__radio--input sr-only" type="radio" name="addressTab" id="add3">
-                                            <label class="form__radio--text" for="add3">주문자 정보와 동일</label>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- //탭 -->
-                        <a href="#shippingPop" class="user-address__link js-popup-open">배송지 목록</a>
-
-                        <div class="payment-section-tab__info is-current">
-                            <!-- 배송지 없음 -->
-                            <p class="payment-section__text no-data">등록된 배송지 정보가 없습니다. 배송지 정보를 입력하세요.</p>
-                        </div>
-                        
-                        <div class="payment-section-tab__info">
-                            <div class="new-address">
-                                <% include ../_include/_addressInfo %>
-                            </div>
-                        </div>
-
-                        <div class="payment-section-tab__info">
-                            <div class="orderer-information">
-                                <% include ../_include/_addressInfoModify %>
+                        <div class="order-info">
+                            <div class="order-info__title">
+                                <dl class="order-info__group">
+                                    <dt><div class="order-info__label">받는분</div></dt>
+                                    <dd><div class="order-info__name">홍길동</div></dd>
+                                </dl>
+                                <dl class="order-info__group">
+                                    <dt><div class="order-info__label">연락처</div></dt>
+                                    <dd><div class="order-info__tel">010-1234-5678</div></dd>
+                                </dl>
+                                <dl class="order-info__group">
+                                    <dt><div class="order-info__label">추가연락처</div></dt>
+                                    <dd><div class="order-info__text">010-1234-5678</div></dd>
+                                </dl>
+                                <dl class="order-info__group">
+                                    <dt><div class="order-info__label">주소</div></dt>
+                                    <dd><div class="order-info__text">(02586) 서울시 동대문구 하정로 26 (신설동) 3F</div></dd>
+                                </dl>
+                                <dl class="order-info__group">
+                                    <dt><div class="order-info__label">배송메시지</div></dt>
+                                    <dd><div class="order-info__text">배송전 연락 부탁드립니다.</div></dd>
+                                </dl>
                             </div>
                         </div>
                     </div>
@@ -82,25 +73,31 @@ popup = "true"
                 <section class="payment-section">
                     <h2 class="payment-section__title">주문 상품정보</h2>
                     <div class="payment-section__cont">
-                        <% include ../_include/_orderProduct %>
+                        <% include ../_include/_orderProductNonMember %>
                     </div>
                 </section>
                 <!-- .주문 상품정보 -->
-
-                <!-- 쿠폰/할인 정보-->
-                <section class="payment-section">
-                    <h2 class="payment-section__title">쿠폰/할인 정보</h2>
-                    <div class="payment-section__cont">
-                        <% include ../_include/_couponInfo %>
-                    </div>
-                </section>
-                <!-- .쿠폰/할인 정보 -->
 
                 <!-- 결제하기-->
                 <section class="payment-section">
                     <h2 class="payment-section__title">결제</h2>
                     <div class="payment-section__cont">
-                        <% include ../_include/_paymentTool %>
+                        <div class="order-info">
+                            <div class="order-info__title">
+                                <dl class="order-info__group">
+                                    <dt><div class="order-info__label">결제일시</div></dt>
+                                    <dd><div class="order-info__text">홍길동</div></dd>
+                                </dl>
+                                <dl class="order-info__group">
+                                    <dt><div class="order-info__label">결제방법</div></dt>
+                                    <dd>
+                                        <div class="order-info__text">무통장 입금 미확인</div>
+                                        <div class="order-info__text">입금계좌 : [우리은행] 458392827474 </div>
+                                        <div class="order-info__text">입금만료일 : 2022.01.02 </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <!-- .결제하기 -->
@@ -159,21 +156,6 @@ popup = "true"
                             </dd>
                         </dl>
                     </div>
-                    <div class="payment-section__cont">
-                        <dl class="payment-total__inner">
-                            <dt class="payment-total__text">구매동의</dt>
-                            <dd class="payment-total__cont">
-                                <div class="payment-agree">
-                                    <p class="payment-agree__text">주문할 상품의 상품명, 상품가격, 배송 정보를 확인하였으며, 구매에 동의하시겠습니까? (전자상거래법 제8조 제2항)</p>
-                                    <div class="form__checkbox form__checkbox--big">
-                                        <input class="form__checkbox--input sr-only" type="checkbox" name="paymentAgree" id="paymentAgree">
-                                        <label class="form__checkbox--text js-full-use" for="paymentAgree">동의합니다.</label>
-                                    </div>
-                                    <button class="payment-agree__btn btn-v1 type-primary">결제하기</button>
-                                </div>
-                            </dd>
-                        </dl>
-                    </div>
                 </section>
                 <!-- .구매동의 -->
             </div>
@@ -182,9 +164,5 @@ popup = "true"
 </div>
 <% include ../_include/_contentFooter %>
 <% include ../_popup/_installment %>
-<% include ../_popup/_gift %>
-<% include ../_popup/_message %>
-<% include ../_popup/_coupon %>
 <% include ../_popup/_addressSearch %>
-<% include ../_popup/_shipping %>
 <% include ../_include/_footer %>
