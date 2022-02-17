@@ -1,0 +1,302 @@
+@import "../base/variables";
+@import "../base/mixins";
+@import "../pages/product";
+
+@mixin imageBlock {
+  display:block;
+  width:100%;
+}
+
+// 회전 애니메이션
+@keyframes objRotate{
+  0%{
+    transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+    -ms-transform:rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+  }
+}
+
+// 슬라이드되는 애니메이션
+@keyframes photoline{
+  0%{
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+  100%{
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+.promotion{
+  // 프로모션 리스트
+  // 프로모션 메인배너
+  &-banner{
+    margin: 0 auto;
+    position: relative;
+    padding-top: calcRem(60rem);
+    width: calcRem(550rem);
+    &__img{
+      @include imageBlock;
+    }
+    &__bottom{
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      bottom: calcRem(40rem);
+    }
+    &__txt{
+      color: #fff;
+      font-size: calcRem(14rem);
+    }
+    &__link{
+      position: relative;
+      display: block;
+    }
+    &__visual{
+      &.is-video{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+    }
+    &__video{
+      width: auto;
+      height: 100vh;
+    }
+  }
+
+  // 프로모션 배너 리스트 그룹
+  &-wrap{
+    margin: 0 auto;
+    width: calcRem(960rem);
+    padding: calcRem(80rem) 0;
+    list-style: none;
+    font-size: 0;
+    letter-spacing: 0;
+  }
+
+  // 프로모션 배너 리스트
+
+  &-list{
+    //margin-bottom: calcRem(30rem);
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    padding-left: 80px;
+    text-align: center;
+    vertical-align: top;
+    box-sizing: border-box;
+
+    &-wrap + &-wrap{
+      padding-top: calcRem(50rem);
+    }
+    &-wrap{
+      padding-top: 0;
+
+    }
+
+    &__link{
+      display: block;
+    }
+    &__img{
+      @include imageBlock;
+    }
+    &__name{
+      padding-top: calcRem(10rem);
+      text-align: center;
+      font-size: calcRem(14rem);
+      font-weight: 100;
+    }
+  }
+
+  // 프로모션 뷰 비주얼
+  &-view{
+    padding: calcRem(17rem) 0 calcRem(41rem);
+    &__name{
+      font-size: calcRem(16rem);
+    }
+    &__title{
+      text-align: center;
+      padding: 0 0 calcRem(10rem);
+    }
+    &__date{
+      margin-top: calcRem(9rem);
+      font-size: calcRem(12rem);
+      font-weight: 100;
+      color: #484848;
+    }
+    &__visual{
+      img{
+        @include imageBlock;
+      }
+      &--play{
+        position: relative;
+      }
+      &--thumb{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../../images/collection/video_thumnail.jpg') no-repeat center center/cover;
+        z-index: 1;
+        &.is-nobg{
+          background-image: none;
+        }
+      }
+      &--btn{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        width: 17.77%;
+        margin: 0 auto;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+    }
+    &__iframe{
+      width: 100%;
+      height: calcRem(210rem);
+      display: block;
+    }
+    &__video{
+      width: 100%;
+      display: block;
+    }
+    &__videoNew{
+      width: 100%;
+      display: block;
+    }
+    &__sound{
+      display: block;
+      position: absolute;
+      right: calcRem(20rem);
+      bottom: calcRem(25rem);
+      overflow: hidden;
+      width: calcRem(30rem);
+      height: calcRem(30rem);
+      background: url(https://cdn.louisclub.com/static/fr/img/specialty/20200911/sound_off.png) no-repeat center center/contain;
+      text-indent: -9999px;
+      -webkit-user-select: auto;
+      -moz-user-select: auto;
+      -ms-user-select: auto;
+      user-select: auto;
+    }
+
+    &__motion{
+      overflow: hidden;
+    }
+    &__wrap{
+      font-size: 0;
+      width: 5324px;
+      white-space: nowrap;
+      -webkit-animation: photoline 20s infinite linear;
+      animation: photoline 20s infinite linear;
+    }
+  }
+
+  // 프로모션 상품 리스트
+  &-group{
+    margin-bottom: calcRem(-60rem);
+  }
+  &-product{
+    // position: relative;
+    &__header{
+      padding: 0 20px;
+      text-align: center;
+    }
+    &__name{
+      padding-bottom: calcRem(10rem);
+      border-bottom: 1px solid #dddddd;
+
+    }
+    &__wrap{
+      width: 100%;
+      overflow: hidden;
+    }
+    &__item{
+      width: 50%;
+      float: left;
+      padding: calcRem(20rem) 0 calcRem(60rem);
+      position: relative;
+      box-sizing: border-box;
+
+      .product-item{
+        &__state{
+          text-transform: uppercase;
+
+          &.type-circle{
+            color: $whiteColor;
+            text-align: center;
+            padding-top: calcRem(8rem);
+            box-sizing: border-box;
+          }
+        }
+      }
+
+      &:nth-child(odd){
+        clear:both;
+      }
+    }
+  }
+
+  // 프로모션 모델슬라이드
+  &-model{
+    position: relative;
+    &__wrap{
+      width: 100%;
+    }
+    &__img{
+      display: block;
+      width: 100%;
+    }
+  }
+
+  // 프로모션 flash추가 시
+  &-flash{
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 96.11%;
+    background: url('https://mcdn.louisclub.com/static/mo/img/specialty/20210614/bg.jpg') no-repeat center center/cover;
+    &__img {
+      top: 0;
+      left: 0;
+      position: absolute;
+      display: block;
+      width: 100%;
+      &.is-rotate{
+        animation-name: objRotate;
+        animation-duration: 10000ms;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        -ms-animation-name: objRotate;
+        -ms-animation-duration: 10000ms;
+        -ms-animation-timing-function: linear;
+        -webkit-animation-name: objRotate;
+        -webkit-animation-duration: 10000ms;
+        -webkit-animation-timing-function: linear;
+      }
+    }
+  }
+}
+
+
+// 프로모션 상세 :: 스테이징 구조에 따른 스타일적용
+.container + .promotion-wrap {
+  padding-top: 0;
+}
+
+#planListArea{
+  .promotion-list__link{
+    margin-bottom: calcRem(30rem);
+  }
+}
