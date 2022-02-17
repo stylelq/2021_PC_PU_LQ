@@ -133,8 +133,7 @@
 .input-v1{
   width:100%;
   padding:calcRem(8rem) calcRem(10rem) calcRem(8rem);
-  // @include body2();
-  @include body8();
+  @include body2();
   border:1px solid $gray2;
   box-sizing: border-box;
   appearance: none;
@@ -161,8 +160,7 @@
   display:block;
   width:100%;
   padding:calcRem(7rem) calcRem(10rem) calcRem(7rem);
-  // @include body2();
-  @include body8();
+  @include body2();
   border:1px solid $gray2;
   border-radius: 0;
   box-sizing: border-box;
@@ -202,8 +200,7 @@
   text-align: center;
 
   &--small{
-    // @include body2;
-    @include body8;
+    @include body2;
     padding:calcRem(8rem) calcRem(10rem) calcRem(6rem);
   }
 
@@ -248,8 +245,7 @@
   padding:calcRem(10rem) calcRem(10rem) calcRem(8rem);
   background-color:transparent;
   border:1px solid #fff; outline:none;
-  // @include body2;
-  @include body8;
+  @include body2;
   box-sizing: border-box;
   cursor: pointer;
   color:$darkgray;
@@ -501,8 +497,7 @@ input {
   display: block;
   width:100%;
   border:solid 1px $gray2;
-  // @include body2;
-  @include body8;
+  @include body2;
   color:$gray2;
   padding:calcRem(8rem) calcRem(30rem) calcRem(8rem) calcRem(10rem);
   height:calcRem(38rem);
@@ -532,8 +527,7 @@ input {
     border:solid 1px $gray2;
     display: block;
     width:100%;
-    // @include body2;
-    @include body8;
+    @include body2;
     padding:calcRem(8rem) calcRem(10rem) calcRem(8rem);
     height:calcRem(38rem);
     @include placeholder-color($gray2);
@@ -553,8 +547,7 @@ input {
     border:solid 1px $gray2;
     display: block;
     width:100%;
-    // @include body2;
-    @include body7;
+    @include body2;
     padding:calcRem(7rem) calcRem(10rem) calcRem(7rem) calcRem(10rem);
     height:calcRem(240rem);
     @include placeholder-color($gray2);
@@ -717,7 +710,7 @@ input {
     // @include body3;
     @include body7;
     position: relative;
-    padding-left:calcRem(25rem);
+    padding-left:calcRem(20rem);
 
     &:before{
       content:"";
@@ -810,8 +803,7 @@ input {
     border:none;
     display: block;
     width:100%;
-    // @include body2;
-    @include body8;
+    @include body2;
     padding:calcRem(8rem) calcRem(10rem) calcRem(8rem);
     height:calcRem(38rem);
     @include placeholder-color($gray2);
@@ -908,8 +900,7 @@ input {
 
   &--text{
     display: inline-block;
-    // @include body2;
-    @include body8;
+    @include body2;
     padding-right:calcRem(14rem);
     position: relative;
 
@@ -1011,8 +1002,7 @@ input {
   thead{
     th{
       vertical-align: middle;
-      // @include body2;
-      @include body8;
+      @include body2;
       padding:calcRem(10rem) calcRem(5rem);
       background-color: $lightgray2;
       text-align: center;
@@ -1139,7 +1129,36 @@ input {
 	&__meta--select{
 		position: relative;
 		width: calcRem(160rem);
+    &:not(:last-child){
+      margin-bottom: calcRem(10rem);
+    }
+
+    &.sel-disabled{
+      background-color: $gray2;
+      pointer-events: none;
+      padding: calcRem(5rem);
+      border: 1px solid $gray2;
+      .selBox-custom__selected{
+        border: 0;
+        padding: 0;
+      }
+    }
+    &.sel-border{
+      border: 1px solid $gray2;
+      padding: calcRem(5rem);
+      .selBox-custom__selected{
+        border: 0;
+        padding: 0;
+      }
+      .selBox-custom__select{
+        padding: calcRem(6rem);
+        top: 30px;
+        left: -1px;
+        width: 101%;
+      }
+    }
 	} 
+
 	&-custom{
 		$this:&;
 		&__selected {
@@ -1196,6 +1215,10 @@ input {
 					background:#000;
 					transition: all 0.5s;
 				}
+
+        .sel-border &{
+          &::after{display: none;}
+        }
 			}
 	
 			&:hover,

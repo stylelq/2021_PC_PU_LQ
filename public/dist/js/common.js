@@ -101,13 +101,7 @@ jQuery(function () {
           bottom: height - (footY - winH) + 50
         });
       }
-    }); //히스토리 백, 또는 위치에서 새로고침 시 위치값 조정
-
-    if (height - (footY - winH) > 0) {
-      $('.cart-fix').css({
-        bottom: height - (footY - winH) + 50
-      });
-    }
+    });
   } //스크롤탑 버튼
 
 
@@ -120,8 +114,8 @@ jQuery(function () {
   $(document).on('click', '.js-scrollTop', scrollTopBtn); //--END[플로팅버튼]----------------
 
   /*---------------------------
-  * [Scroll]
-  ---------------------------*/
+   * [Scroll]
+   ---------------------------*/
 
   var $sc, $winH, $divH;
   var $styleOpt = {};
@@ -152,7 +146,7 @@ jQuery(function () {
           //상세콘텐츠 높이 < 윈도우창 높이
           if ($sc - $divH > 470) {
             //윈도우창보다 작은 콘텐츠
-            positionAbsolute(divH + 240);
+            positionAbsolute($divH + 240);
             $('.detail-tab').removeClass('fixed');
           } else {
             //스크롤 햇을때
@@ -420,7 +414,7 @@ jQuery(function () {
   }
 
   ;
-  $(document).on('click', '.terms__depth2-item label', allCheckItem); //장바구니&&테이블 리스트 checkbox checked ALL
+  $(document).on('click', '.terms__depth2-item label', allCheckItem); //장바구니 checkbox checked ALL
 
   function checkBoxChkAll() {
     var chkBox = $('[name=' + this.name + ']');
@@ -434,7 +428,7 @@ jQuery(function () {
     return this.checked ? chked(true) : chked(false);
   }
 
-  $(document).on('input', '.js-table-checkAll', checkBoxChkAll);
+  $(document).on('click', '.js-table-checkAll', checkBoxChkAll);
   /*------------------------
   * [dropdown::아코디언]
   ------------------------*/

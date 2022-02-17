@@ -8,8 +8,6 @@
   // background-color:#fff;
   z-index:$popupZindex;
 
-
-
   &.is-active{
       display:block;
   }
@@ -25,7 +23,6 @@
   }
 
   &__header{
-      /**/
       position: relative;
       display: flex;
       width: 100%;
@@ -47,17 +44,16 @@
       width:calcRem(20rem);
       height:calcRem(20rem);
       @include background('/images/common/ico_small_popup_close2.svg','no-repeat center center / contain');
-
-    overflow:hidden;
-    position:absolute;
-    display:block;
-    top:0;
-    right:calcRem($sitePadding);
-    bottom:0;
-    margin:auto 0;
-    border:none;
-    outline:none;
-    text-indent: -9999px;
+      position: absolute;
+      overflow:hidden;
+      display:block;
+      top:0;
+      right:calcRem($sitePadding);
+      bottom:0;
+      margin:auto 0;
+      border:none;
+      outline:none;
+      text-indent: -9999px;
   }
   
   &__body{
@@ -69,28 +65,6 @@
       padding:calcRem(40rem);
       box-sizing: border-box;
   }
-
-  &.type-write{
-    .popup__header{
-        display: block;
-        position:relative;
-        width:100%;
-        border-bottom:solid 1px $black1;
-        padding-bottom: calcRem(20rem);
-        height: auto;
-    }
-    .popup__close{
-        @include background('/images/common/ico_small_popup_close.svg','no-repeat center center / contain');
-        position: absolute;
-        top:calcRem(-34rem);
-        bottom: auto;
-        right:0;
-    }
-  }
-}
-
-.align-center{
-    text-align: center
 }
 
 //개인정보처리방침 컨텐츠
@@ -503,7 +477,7 @@
       }
 
       &__group{
-          @include flexNoWrap;
+          display: flex;
           margin:0;
           &:not(:last-child){
               margin-bottom: calcRem(10rem);
@@ -554,7 +528,6 @@
       min-width: calcRem(400rem);
       max-width: calcRem(500rem);
       width: auto;
-      min-height: calcRem(450rem);
       z-index: $childZindex;
       padding:calcRem(40rem);
       box-sizing: border-box;
@@ -571,19 +544,16 @@
           height: calcRem(640rem);
           overflow: hidden;
           overflow-y: auto;
-
+          // scrollbar-width: none;
+          // &::-webkit-scrollbar {
+          //     // display: none;
+          //     width: 5px;
+          // }
+          // &::-webkit-scrollbar-thumb{
+          //     border-radius: 10px;
+          //     background-color: rgba(0,0,0,0.2);
+          // }
           @include scrollbar-custom;
-      }
-
-      .small-popup__header{
-        // margin-bottom: calcRem(30rem);
-      }
-      .small-popup__header + .wrap{
-        max-height: calcRem(530rem);
-        height: auto;
-        overflow: hidden;
-        overflow-y: auto;
-        box-sizing: border-box;
       }
   }
 
@@ -610,13 +580,6 @@
       &::-webkit-scrollbar {
           display: none;
       }
-  }
-  &-confirm__footer{
-      margin-top: calcRem(30rem);
-  }
-  &-confirm__list{
-      width: 50%;
-      margin: auto;
   }
 }
 
@@ -1081,7 +1044,7 @@
       padding-top:calcRem(20rem);
 
       &__title{
-         @include body8;
+         @include body2;
           margin-bottom:calcRem(5rem);
       }
 
@@ -1096,7 +1059,7 @@
 
   &-bullet__text{
       margin:0;
-      font-size:calcRem(12rem);
+      font-size:calcRem(11rem);
       padding-left:calcRem(7rem);
       position: relative;
       line-height:calclH(18,11);
@@ -1133,7 +1096,7 @@
 
   &-bullet__text{
       margin:0;
-      font-size:calcRem(12rem);
+      font-size:calcRem(11rem);
       padding-left:calcRem(7rem);
       position: relative;
       line-height:calclH(18,11);
@@ -1156,64 +1119,83 @@
 
 //쿠폰 조회/적용
 .popup{
-  &-coupon{
-      &__header{
-          margin:0 calcRem(-20rem);
-          padding:0 calcRem(30rem) calcRem(20rem);
-          border-bottom: solid 1px $gray1;
-      }
+    &__header{
+        position: relative;
+        &--title + &--text{
+            position: absolute;
+            bottom: calcRem(20rem);
+            right: 0;
+            @include body8;
+            color: $point1;
+            margin: 0;
+        }
+    }
+    &-coupon{
+        &__product{
+            .list-table{
+                border-top: 0;
+                tbody{
+                    td:nth-child(1){ text-align: left; }
+                    tr:last-child td{ border-color: $black1; }
+                }
 
-      &__item{
-          margin-top: calcRem(8rem);
-
-          &:first-child{
-              margin-top:0;
-          }
-      }
-
-      &__inner{
-          margin:0;
-
-          &:after{
-              @include block-reset;
-          }
-      }
-
-      &__title{
-          float:left;
-          @include title2;
-      }
-
-      &__text{
-          overflow: hidden;
-          text-align: right;
-          @include title2;
-          color:$point1;
-      }
-
-      //상품 리스트
-      &__product--item{
-          padding:calcRem(25rem) calcRem(20rem) 0;
-          margin-top:calcRem(25rem);
-          border-top:solid 1px $gray1;
-          margin-left:calcRem(-20rem);
-          margin-right:calcRem(-20rem);
-
-          &:first-child{
-              padding-top:0;
-              margin-top:0;
-              border-top:none;
-          }
-      }
-
-      //적용가능한 쿠폰 없을 시
-      &__no-coupon{
-          @include body5;
-          text-align: center;
-          padding:calcRem(20rem) calcRem(20rem);
-          font-size:calcRem(12rem);
-      }
-  }
+                .detail-Meta{
+                    &__title--option{
+                        display: block;
+                        margin-top: calcRem(20rem);
+                        color: $grayTextColor;
+                    }
+                    &__price--current{
+                        font-weight: $regular;
+                    }
+                }
+            }
+        }
+        //적용가능한 쿠폰 없을 시
+        &__no-coupon{
+            @include body7;
+            // text-align: center;
+            // padding:calcRem(20rem) calcRem(20rem);
+            // display: block;
+        }
+    }
+    &__footer{
+        .popup-coupon{
+            &__total{
+                .popup-coupon__list{
+                    @include flexNoWrap;
+                }
+                .popup-coupon__item{
+                    @include body7;
+                    &:last-child{
+                        margin-left: auto;
+                        @include body2;
+                    }
+                }
+            }
+            &__btn{
+                width: 55%;
+                margin: calcRem(50rem) auto 0;
+                .popup-write__item{
+                    width: 49%;
+                    &:nth-child(1){
+                        .popup-write__link{
+                            border-color:$point1;
+                            background-color: $point1;
+                            color:$whiteColor;
+                        }
+                    }
+                    &:nth-child(2){
+                        .popup-write__link{
+                            border-color:$gray2;
+                            background-color: $whiteColor;
+                            color:$darkgray;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 //상품 목록
@@ -1307,7 +1289,7 @@
 
   &__link{
       display:block;
-      @include body8;
+      @include title1;
       color:$whiteColor;
       text-align: center;
       padding:calcRem(9rem) calcRem(15rem);
@@ -1383,8 +1365,6 @@
 
 //배송지 정보:내주소록
 .my-address{
-    width: calcRem(420rem);
-
   &__item{
       margin:0 calcRem(-20rem);
       padding:0 calcRem(20rem);
@@ -1401,10 +1381,12 @@
       .radio-address{
           padding-bottom: calcRem(25rem);
       }
-      .radio-address{
-        padding: calcRem(25rem) 0;
-        border-bottom:solid 1px $lightgray4; //$gray1
-    }
+      &:not(:first-child){
+          .radio-address{
+              padding: calcRem(25rem) 0;
+              border-top:solid 1px $lightgray4; //$gray1
+          }
+      }
   }
 }
 
@@ -1416,12 +1398,11 @@
   }
 
   &__text{
-      @include body7;
+      @include body3;
   }
 
   &__tel{
-    //   @include body3;
-      @include body7;
+      @include body3;
       margin-top:calcRem(8rem);
   }
 }
@@ -1438,8 +1419,6 @@
 .address-search{
   &__section{
       display: none;
-      width: calcRem(420rem);
-      margin-top: calcRem(20rem);
 
       &.is-current{
           display: block;
@@ -1447,8 +1426,8 @@
   }
 
   &__text{
-      margin:calcRem(20rem) 0 0;
-      @include body7;
+      margin:calcRem(10rem) 0 0;
+      @include body3;
   }
 
   &__list{
@@ -1487,14 +1466,9 @@
   }
 }
 
-.address-list + .paging{
-    margin-top: calcRem(20rem);
-}
-
 .zipcode-address{
   display: block;
   padding:calcRem(20rem) 0;
-  position: relative;
 
   &:after{
       @include block-reset;
@@ -1505,8 +1479,7 @@
       margin-right:calcRem(5rem);
       min-width:calcRem(55rem);
       box-sizing: border-box;
-    //   @include body3;
-      @include body7;
+      @include body3;
   }
   
   &__cont{
@@ -1514,25 +1487,15 @@
 
       &--zip{
           display: block;
-        //   @include body3;
-          @include body7;
+          @include body3;
       }
 
       &--address{
           display: block;
-        //   @include body3;
-          @include body7;
+          @include body3;
           color:$grayTextColor;
           margin-top:calcRem(2rem);
       }
-  }
-
-  .btn-v3{
-      position: absolute;
-      top: calcRem(20rem);
-      right: 0;
-      width: auto;
-      padding: calcRem(4rem) calcRem(10rem);
   }
 
   //주소검색(3)
@@ -1545,17 +1508,13 @@
 .address-search{
   &__btn{
       margin-top:calcRem(20rem);
-    &--list{overflow: hidden;}
-      &--item{
-          float: left;
-          width: calc((100% - 5px) / 2);
-          &:first-child{margin-right: 5px;}
-        //   margin-top:calcRem(10rem);
-          .btn-v1{ @include body8; }
 
-        //   &:first-child{
-        //       margin-top:0;
-        //   }
+      &--item{
+          margin-top:calcRem(10rem);
+
+          &:first-child{
+              margin-top:0;
+          }
       }
   }
   input[type="hidden"] + .zipcode-address__cont--zip{

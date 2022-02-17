@@ -22,7 +22,6 @@
   -webkit-flex-wrap: nowrap; -moz-flex-wrap: nowrap; -o-flex-wrap: nowrap; -ms-flex-wrap: nowrap;//ie10+ 
   flex-wrap: nowrap;
 }
-
 @mixin flexWrap {
   display: -webkit-flex; display: -moz-flex; display: -o-flexbox; display: -ms-flexbox;//ie10+ 
   display: flex;
