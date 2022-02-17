@@ -80,6 +80,13 @@
     list-style: none;
     font-size: 0;
     letter-spacing: 0;
+    &.only-bottom{
+      width: calcRem(1200rem);
+      .promotion-list{
+        padding-left: 0;
+        width: 33%;
+      }
+    }
   }
 
   // 프로모션 배너 리스트
@@ -118,17 +125,18 @@
 
   // 프로모션 뷰 비주얼
   &-view{
-    padding: calcRem(17rem) 0 calcRem(41rem);
+    padding: calcRem(60rem) 0 calcRem(100rem);
     &__name{
-      font-size: calcRem(16rem);
+      font-size: calcRem(24rem);
+      font-weight: 400;
     }
     &__title{
       text-align: center;
-      padding: 0 0 calcRem(10rem);
+      padding-top: calcRem(100rem);
     }
     &__date{
       margin-top: calcRem(9rem);
-      font-size: calcRem(12rem);
+      font-size: calcRem(14rem);
       font-weight: 100;
       color: #484848;
     }
@@ -205,6 +213,8 @@
 
   // 프로모션 상품 리스트
   &-group{
+    margin: 0 auto;
+    width: calcRem(1200rem);
     margin-bottom: calcRem(-60rem);
   }
   &-product{
@@ -216,14 +226,14 @@
     &__name{
       padding-bottom: calcRem(10rem);
       border-bottom: 1px solid #dddddd;
-
+      font-size: calcRem(24rem);
     }
     &__wrap{
       width: 100%;
       overflow: hidden;
     }
     &__item{
-      width: 50%;
+      width: 33%;
       float: left;
       padding: calcRem(20rem) 0 calcRem(60rem);
       position: relative;
@@ -242,9 +252,9 @@
         }
       }
 
-      &:nth-child(odd){
+      /*&:nth-child(odd){
         clear:both;
-      }
+      }*/
     }
   }
 
