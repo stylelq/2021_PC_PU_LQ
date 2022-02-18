@@ -208,11 +208,11 @@
         font-size: calcRem(20rem);
         font-weight: $regular;
         text-align: center;
-        padding-bottom: calcRem(20rem); 
+        padding-bottom: calcRem(60rem); 
     }
     &-banner{
         text-align: center;
-        padding: calcRem(40rem) 0 calcRem(60rem);
+        padding: 0 0 calcRem(60rem);
 
         .cart-list__no-cart{
             margin-bottom: calcRem(10rem);
