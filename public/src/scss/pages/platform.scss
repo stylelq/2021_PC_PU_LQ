@@ -1,0 +1,57 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+
+@import "../base/variables";
+@import "../base/mixins";
+.platform{
+    //platform Video
+    &-banner{
+        margin-bottom:calcRem(20rem);
+        line-height:0;
+        position: relative;
+        overflow: hidden;
+
+        &.platform-banner--video:after{
+            content:"";
+            display: block;
+            padding-bottom:57%;
+        }
+
+        &.platform-banner--img:after{
+            content:"";
+            display: block;
+            padding-bottom:50%;
+        }
+
+        &__img{
+            @include ab-center;
+            width:100%;
+        }
+
+        &__file{
+            @include ab-center;
+            width:100% !important;
+            height:100% !important;
+        }
+    }
+
+    //포스트
+    .product-post{
+        width: calcRem($minWidth);
+        margin: auto;
+
+        &__list{
+            @include flexWrap;
+            // margin-left:calcRem(-2rem);
+            // margin-right:calcRem(-2rem);
+        }
+
+        &__item{
+            width: 33.33%;
+            // padding-left:calcRem(2rem);
+            // padding-right:calcRem(2rem);
+            box-sizing: border-box;
+        }
+    }
+}

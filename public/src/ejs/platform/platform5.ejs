@@ -1,0 +1,144 @@
+<%
+type = "platform"
+page = "platform"
+popup = "false"
+noSort = "false"   
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <div class="site-main">
+        <section class="platform">
+            <% include ../_include/_platformTab %>
+
+            <!-- platform video -->
+            <div class="platform-banner platform-banner--img"><!-- 안에 이미지가 들어갈시 platform-banner--img 클래스, 비디오 추가시 platform-banner--video 클래스 추가 -->
+                <img class="platform-banner__img" src="../../images/platform/mo_TextileFashion.jpg" alt="" />
+            </div>
+            <!-- .platform video -->
+            
+            <!-- product post -->
+            <div class="product-post product-post--post">
+                <!-- _platformFilter noSort= true 값이면 오른쪽 소팅 버튼 숨기기. [noSort = true/false]  -->
+                <% include ../_include/_platformFilter %>
+ 
+                <ul class="product-post__list">
+                    <li class="product-post__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">SOLD OUT</div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-1.jpg" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </li>
+                    <li class="product-post__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__state">NEW</div>
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-2.jpg" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </li>
+                    <li class="product-post__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-1.jpg" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </li>
+                    <li class="product-post__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-2.jpg" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </li>
+                    <li class="product-post__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-1.jpg" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </li>
+                    <li class="product-post__item">
+                        <!-- item -->
+                        <div class="product-item">
+                            <a href="" class="product-item__link">
+                                <div class="product-item__thumb">
+                                    <img class="product-item__img" src="../../images/dummy/platform-dummy5-2.jpg" alt="" />
+                                </div>
+                                <div class="product-item__cont">
+                                    <div class="product-item__title">Martens and Martens KM Wrinkle Bag HP4CD35BW</div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price--sale">328,000원</span>
+                                        <span class="product-item__price--current">289,290원</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- .item -->
+                    </li>
+                </ul>
+            </div>
+            <!-- .product post -->
+            <% include ../_include/_paging %>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_cartFix %>
+<% include ../_include/_footer %>
