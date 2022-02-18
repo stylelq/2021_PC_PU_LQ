@@ -419,6 +419,7 @@
         .form__input--textarea{
             height: calcRem(36rem);
             width: 100%;
+            @include body7;
         }
     }
 }

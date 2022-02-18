@@ -65,6 +65,25 @@
       padding:calcRem(40rem);
       box-sizing: border-box;
   }
+
+  &.type-write{
+    .popup__header{
+        display: block;
+        position:relative;
+        width:100%;
+        border-bottom:solid 1px $black1;
+        padding-bottom: calcRem(20rem);
+        height: auto;
+    }
+    .popup__close{
+        @include background('/images/common/ico_small_popup_close.svg','no-repeat center center / contain');
+        position: absolute;
+        top:calcRem(-34rem);
+        bottom: auto;
+        right:0;
+    }
+  }
+
 }
 
 //개인정보처리방침 컨텐츠
@@ -528,6 +547,7 @@
       min-width: calcRem(400rem);
       max-width: calcRem(500rem);
       width: auto;
+      min-height: calcRem(450rem);
       z-index: $childZindex;
       padding:calcRem(40rem);
       box-sizing: border-box;
@@ -535,26 +555,25 @@
           padding: 0;
       }
       &.terms-only{
-        min-width: calcRem(600rem);
-        max-width: calcRem(600rem);
+        width: calcRem(600rem);
       }
 
       .wrap{
           padding: 0;
-          height: calcRem(640rem);
+        //   height: calcRem(640rem);
           overflow: hidden;
           overflow-y: auto;
-          // scrollbar-width: none;
-          // &::-webkit-scrollbar {
-          //     // display: none;
-          //     width: 5px;
-          // }
-          // &::-webkit-scrollbar-thumb{
-          //     border-radius: 10px;
-          //     background-color: rgba(0,0,0,0.2);
-          // }
           @include scrollbar-custom;
       }
+
+        .small-popup__header + .wrap{
+            margin-top: calcRem(20rem);
+            max-height: calcRem(530rem);
+            height: auto;
+            overflow: hidden;
+            overflow-y: auto;
+            box-sizing: border-box;
+        }
   }
 
   &__header{
@@ -1044,7 +1063,8 @@
       padding-top:calcRem(20rem);
 
       &__title{
-         @include body2;
+        //  @include body2;
+         @include body8;
           margin-bottom:calcRem(5rem);
       }
 
@@ -1177,6 +1197,7 @@
                 width: 55%;
                 margin: calcRem(50rem) auto 0;
                 .popup-write__item{
+                    @include body7;
                     width: 49%;
                     &:nth-child(1){
                         .popup-write__link{
@@ -1251,14 +1272,16 @@
       line-height:0;
 
       &--title{
-          @include body3;
+        //   @include body3;
+          @include body7;
           display: inline-block;
           vertical-align: middle;
           margin-right:calcRem(5rem);
       }
 
       &--text{
-          @include body3;
+        //   @include body3;
+          @include body7;
           display: inline-block;
           vertical-align: middle;
           color:$point1;
@@ -1329,7 +1352,8 @@
 
   &__link{
       display: block;
-      @include body3;
+    //   @include body3;
+      @include body7;
       padding:calcRem(8rem) calcRem(5rem);
       position: relative;
 
@@ -1398,11 +1422,13 @@
   }
 
   &__text{
-      @include body3;
+    //   @include body3;
+      @include body7;
   }
 
   &__tel{
-      @include body3;
+    //   @include body3;
+      @include body7;
       margin-top:calcRem(8rem);
   }
 }
@@ -1419,6 +1445,8 @@
 .address-search{
   &__section{
       display: none;
+      width: calcRem(420rem);
+      margin-top: calcRem(20rem);
 
       &.is-current{
           display: block;
@@ -1427,7 +1455,8 @@
 
   &__text{
       margin:calcRem(10rem) 0 0;
-      @include body3;
+    //   @include body3;
+      @include body7;
   }
 
   &__list{
@@ -1461,72 +1490,93 @@
 //주소 검색 리스트
 .address-list{
 
-  &__item{
-      border-bottom:solid 1px $gray1;
-  }
+    &__item{
+        border-bottom:solid 1px $gray1;
+    }
+
+    & + .paging{
+        margin-top: calcRem(20rem);
+    }
+
 }
 
 .zipcode-address{
-  display: block;
-  padding:calcRem(20rem) 0;
-
-  &:after{
-      @include block-reset;
-  }
-
-  &__zip{
-      float:left;
-      margin-right:calcRem(5rem);
-      min-width:calcRem(55rem);
-      box-sizing: border-box;
-      @include body3;
-  }
+    display: block;
+    padding:calcRem(20rem) 0;
+    position: relative;
   
-  &__cont{
-      overflow: hidden;
-
-      &--zip{
-          display: block;
-          @include body3;
-      }
-
-      &--address{
-          display: block;
-          @include body3;
-          color:$grayTextColor;
-          margin-top:calcRem(2rem);
-      }
-  }
-
-  //주소검색(3)
-  &__form{
-      margin-top:calcRem(20rem);
-  }
+    &:after{
+        @include block-reset;
+    }
+  
+    &__zip{
+        float:left;
+        margin-right:calcRem(5rem);
+        min-width:calcRem(55rem);
+        box-sizing: border-box;
+      //   @include body3;
+        @include body7;
+    }
+    
+    &__cont{
+        overflow: hidden;
+  
+        &--zip{
+            display: block;
+          //   @include body3;
+            @include body7;
+        }
+  
+        &--address{
+            display: block;
+          //   @include body3;
+            @include body7;
+            color:$grayTextColor;
+            margin-top:calcRem(2rem);
+        }
+    }
+  
+    .btn-v3{
+        position: absolute;
+        top: calcRem(20rem);
+        right: 0;
+        width: auto;
+        padding: calcRem(4rem) calcRem(10rem);
+    }
+  
+    //주소검색(3)
+    &__form{
+        margin-top:calcRem(20rem);
+    }
 }
-
 //주소검색(3)
 .address-search{
-  &__btn{
-      margin-top:calcRem(20rem);
-
-      &--item{
-          margin-top:calcRem(10rem);
-
-          &:first-child{
-              margin-top:0;
-          }
-      }
-  }
-  input[type="hidden"] + .zipcode-address__cont--zip{
-      margin-top: calcRem(10rem);
-  }
+    &__btn{
+        margin-top:calcRem(20rem);
+        &--list{overflow: hidden;}
+        &--item{
+            float: left;
+            width: calc((100% - 5px) / 2);
+            &:first-child{margin-right: 5px;}
+          //   margin-top:calcRem(10rem);
+            .btn-v1{ @include body8; }          
+  
+          //   &:first-child{
+          //       margin-top:0;
+          //   }
+        }
+    }
+    input[type="hidden"] + .zipcode-address__cont--zip{
+        margin-top: calcRem(10rem);
+    }
 }
 
 //주문내역
 .popup-orderlist{
 
   &__header{
-      @include body3;
+    //   @include body3;
+      @include body7;
       padding:0 calcRem(20rem) calcRem(20rem);
       border-bottom:solid 1px $black1;
   }
@@ -1814,7 +1864,8 @@
   *[class *= __bullet__item]{
       padding-left:calcRem(7rem);
       position: relative;
-      @include body3;
+    //   @include body3;
+      @include body7;
       // color:$darkgray;
       margin:calcRem(5rem) 0 0;
 
@@ -2058,13 +2109,15 @@
           display: block;
           float:left;
           margin-right:calcRem(5rem);
-          @include body3;
+        //   @include body3;
+          @include body7;
       }
   
       &--text{
           display: block;
           overflow: hidden;
-          @include body3;
+        //   @include body3;
+          @include body7;
       }
   }
   
@@ -2115,7 +2168,8 @@
   }
 
   .order-mypage__text{ 
-      @include body3; 
+    //   @include body3; 
+      @include body7; 
       margin: calcRem(20rem) 0;
   }
 
@@ -2237,7 +2291,8 @@
           margin:calcRem(30rem) 0 calcRem(10rem);
       }
       &__text{
-          @include body3;
+        //   @include body3;
+          @include body7;
           margin-bottom: calcRem(10rem);
       }
   }
@@ -2316,13 +2371,15 @@
           display: block;
           float:left;
           margin-right:calcRem(5rem);
-          @include body3;
+        //   @include body3;
+          @include body7;
       }
   
       &--text{
           display: block;
           overflow: hidden;
-          @include body3;
+        //   @include body3;
+          @include body7;
       }
   }
 
@@ -2381,7 +2438,8 @@
   }
 
   .order-mypage__text{ 
-      @include body3; 
+    //   @include body3; 
+      @include body7; 
       margin: calcRem(30rem) 0;
   }
 
