@@ -928,7 +928,8 @@ input {
     margin:calcRem(5rem) 0 0;
 
     .type-small &{
-      @include body5;
+      // @include body5;
+      @include body7;
       font-size:calcRem(12rem);
       margin:calcRem(5rem) 0 0;
     }

@@ -419,6 +419,7 @@
         .form__input--textarea{
             height: calcRem(36rem);
             width: 100%;
+            @include body7;
         }
     }
 }
@@ -886,6 +887,21 @@
     }
 }
 
+//주문 완료 페이지
+.payment-success{
+    .payment{
+        &-head{
+            padding-bottom: calcRem(90rem); 
+        }
+        &-right{
+            top: 525px;
+            .payment-section:last-child{border-bottom: 0;}
+        }
+    }
+}
+
+
+
 // //주문 완료 상단 컨텐츠
 // .payment-complete{
 //     &__title{
@@ -1054,15 +1070,3 @@
 // }
 
 
-//주문 완료 페이지
-.payment-success{
-    .payment{
-        &-head{
-            padding-bottom: calcRem(90rem); 
-        }
-        &-right{
-            top: 525px;
-            .payment-section:last-child{border-bottom: 0;}
-        }
-    }
-}
