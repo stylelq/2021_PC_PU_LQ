@@ -7,27 +7,33 @@
   width:100%;
 }
 
+.site-project{
+  padding-top: calcRem(60rem);
+}
 // collaboration
 // 콜라보 리스트
 .collabo{
   &-list{
+    margin: 0 auto;
+    position: relative;
     display: block;
-    padding: calcRem(60rem) 0 0;
     box-sizing: border-box;
     width: calcRem(1200rem);
-    //margin: 0 0 0 -90px;
     list-style: none;
     font-size: 0;
     letter-spacing: 0;
     text-align: left;
 
-    &__wrap + &__wrap{
-      //margin-top: calcVw(50vw);
+    &-wrap{
+      padding-bottom: calcRem(80rem);
+      .collabo-list__wrap:nth-child(2){
+        margin-left: calcRem(80rem);
+      }
     }
+
     &__wrap{
       display: inline-block;
-      width: 50%;
-      padding-left: 90px;
+      width: calcRem(560rem);
       vertical-align: top;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;

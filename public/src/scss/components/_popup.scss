@@ -1832,6 +1832,8 @@
       }
       &__list{
           position: relative;
+          margin:0 auto;
+          width: calcRem(720rem);
           padding-bottom: calcRem(40rem);
       }
       &__img{

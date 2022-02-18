@@ -75,7 +75,7 @@
   // 프로모션 배너 리스트 그룹
   &-wrap{
     margin: 0 auto;
-    width: calcRem(960rem);
+    width: calcRem(880rem);
     padding: calcRem(80rem) 0;
     list-style: none;
     font-size: 0;
@@ -90,13 +90,10 @@
   }
 
   // 프로모션 배너 리스트
-
   &-list{
-    //margin-bottom: calcRem(30rem);
     display: inline-block;
     position: relative;
-    width: 50%;
-    padding-left: 80px;
+    width: calcRem(400rem);
     text-align: center;
     vertical-align: top;
     box-sizing: border-box;
@@ -106,7 +103,9 @@
     }
     &-wrap{
       padding-top: 0;
-
+      .promotion-list:nth-child(2){
+        margin-left: calcRem(80rem);
+      }
     }
 
     &__link{
@@ -204,7 +203,7 @@
     }
     &__wrap{
       font-size: 0;
-      width: 5324px;
+      wdith: calcRem(5324rem);
       white-space: nowrap;
       -webkit-animation: photoline 20s infinite linear;
       animation: photoline 20s infinite linear;
@@ -220,7 +219,7 @@
   &-product{
     // position: relative;
     &__header{
-      padding: 0 20px;
+      padding: 0 calcRem(20rem);
       text-align: center;
     }
     &__name{
