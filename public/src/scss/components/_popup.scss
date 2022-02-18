@@ -1151,6 +1151,7 @@
         }
     }
     &-coupon{
+        min-height:calcRem(162rem);
         &__product{
             .list-table{
                 border-top: 0;
