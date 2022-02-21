@@ -158,9 +158,6 @@ jQuery(function(){
             }
             $('.product-option-fix').css($styleOpt); 
             
-            console.group('================')
-            console.log('scY : ', $sc )
-            console.groupEnd();
             return 
         });
     }
@@ -434,6 +431,18 @@ jQuery(function(){
         return false;
     }
     $(document).on('click', '.js-qna-more', qnaMore );
+
+    //faq 더보기(아코디언)
+    function faqMore() {
+        var parent = $(this).closest('.notice-faq__item');
+        if(parent.hasClass('is-active')){
+            parent.removeClass('is-active');
+        }else{
+            parent.addClass('is-active').siblings('li').removeClass('is-active');
+        }
+        return false;
+    }
+    $(document).on('click', '.js-faq-more', faqMore);
 
 
     //--END[dropdown::아코디언] ----------------------

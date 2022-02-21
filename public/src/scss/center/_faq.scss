@@ -1,0 +1,125 @@
+// FAQ
+//faq search
+.center-filter{
+    .center-search{
+        width: 50%;
+        max-width: calcRem(320rem);
+        margin:0 auto calcRem(30rem);
+        padding: 0;
+    }
+}
+
+//faq 탭
+.center-tab{
+    height:calcRem(35rem);
+    position: relative;
+    margin-bottom:calcRem(50rem);
+
+    //head
+    &__fix{
+        border-top:solid 1px $gray1;
+        // position: absolute;
+        // padding:0 calcRem(20rem);
+        // height:calcRem(35rem);
+        background-color: $whiteColor;
+        // top:0;
+        // left:0;
+        width:100%;
+        box-sizing: border-box;
+        // z-index: $childZindex;
+        @include flexNoWrap;
+        // justify-content: space-between;
+
+        &:after{
+            @include block-reset;
+        }
+
+        // .is-fixed &{
+        //     transition: transform 0.3s;
+        //     position: fixed;
+        //     transform:translateZ(0) translateY(0);
+        // }
+
+        // .is-fixed.is-down &{
+        //     transform:translateZ(0) translateY(calcRem(45rem));
+        // }
+    }
+
+    &__item{
+        width:calc(100% / 8);
+        // float:left;
+        text-align: center;
+        margin: auto;
+    }
+
+    &__link{
+        display: block;
+        @include body7;
+        padding:calcRem(8rem) 0; //calcRem(8rem) calcRem(5rem)
+        position: relative;
+
+        .is-current &{
+            font-weight: $medium;
+        }
+
+        &:after{
+            content:"";
+            height:calcRem(2rem);
+            background-color: $black1;
+            position: absolute;
+            top:-1px;
+            left:0;
+            right:0;
+            opacity: 0;
+
+            .is-current &{
+                opacity: 1;
+            }
+        }
+    }
+
+    //cont
+    &__cont{
+        padding:calcRem(35rem) calcRem(20rem) 0;
+    }
+
+    &__info{
+        display:none;
+        // padding-bottom:calcRem(70rem);
+
+        &.is-current{
+            display: block;
+        }
+
+        &.detail-tab__info--detail{
+            margin:0 calcRem(-20rem);
+        }
+    }
+
+    // &.fixed{
+    //     position: fixed;
+    //     top: 120px;
+    //     margin-top: 0;
+    //     width: calcRem(720rem);
+    //     height: calcRem(55rem);
+    //     z-index: 5;
+    //     &:before{
+    //         content: '';
+    //         display: block;
+    //         width: 100%;
+    //         height: 20px;
+    //         background-color: #fff;
+    //     }
+    //     .detail-tab__fix{
+    //         padding: 0;
+    //         height: auto;
+    //         position: relative;
+    //     }
+
+    //     & + .detail-tab__cont{
+    //         .detail-tab__info{
+    //             padding-top: calcRem(90rem);
+    //         }
+    //     }
+    // }
+}
