@@ -597,6 +597,28 @@ jQuery(function(){
         });
     }
 
+    // 컬렉션 썸네일 슬라이드
+    if($('.gallery-thumbs').length > 0){
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
+            spaceBetween: 8,
+            slidesPerView: 6,
+            freeMode: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true
+        });
+
+        var galleryTop = new Swiper('.gallery-top', {
+            navigation: {
+                nextEl: ".thumb-prev-btn",
+                prevEl: ".thumb-next-btn",
+            },
+            thumbs: {
+                swiper: galleryThumbs
+            },
+            effect: "fade",
+            loop: true
+        });
+    }
 
   //--END[swiper slider]-----------------------------
 

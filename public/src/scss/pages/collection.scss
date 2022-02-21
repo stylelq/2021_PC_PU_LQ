@@ -21,290 +21,389 @@
 
 // collection main
 .collection{
-  &-group + &-group{
-    padding-bottom: calcRem(100rem);
-  }
-  &-group{
-    //background-color: #f5d661;
-    padding-bottom: 0;
-  }
-  &-wrap{
-    padding-top: calcRem(150rem);
-  }
-  &-wrap + &-wrap{
-    padding-top: 0;
-  }
-  // 컬렉션 메인 비주얼
-  &-visual{
-    margin: 0 auto;
-    position: relative;
-    width: calcRem(560rem);
-    &__img{
-      @include imageBlock;
+    &-group + &-group{
+      padding-bottom: calcRem(100rem);
     }
-    &__detail{
-      position: absolute;
-      width: 100%;
-      text-align: center;
-      @include vertical-center;
-    }
-    &__link{
-      display: block;
-    }
-    &__button{
-      color: #fff;
-      border: 1px solid #fff;
-      margin: 0 calcRem(100rem);
-      padding: calcRem(12rem) 0;
-    }
-  }
-
-  // 컬렉션 상품슬라이드
-  &-slide{
-    position: relative;
-    margin: 0 auto;
-    width: calcRem(560rem);
-    padding: calcRem(20rem) 0 calcRem(150rem);
-    .swiper{
-      &-button{
-        @mixin swiperButtonStyle {
-          @include vertical-center;
-          display: inline-block;
-          width: calcRem(10rem);
-          height: calcRem(20rem);
-          position: absolute;
-          top:30%;
-          z-index: 100;
-        }
-        &-next{
-          @include swiperButtonStyle;
-          right: calcRem(10rem);
-          background: url('../../images/collection/list/collection_slide_next.png') no-repeat center center /contain;
-        }
-        &-prev{
-          @include swiperButtonStyle;
-          left: calcRem(10rem);
-          background: url('../../images/collection/list/collection_slide_prev.png') no-repeat center center /contain;
-        }
+    &-group{
+      padding-bottom: 0;
+      &.type-yellow{
+        background-color: #F9E96C;
+      }
+      &.type-gray{
+        background-color: #f2f2f2;
       }
     }
+    &-wrap{
+      padding-top: calcRem(150rem);
 
-    &-pagination {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: calcRem(50rem) !important;
-      text-align: center;
-      width: 100%;
-      z-index: 50;
-      line-height: 0;
-      font-size: 0;
-      &-bullet {
-        margin-left: calcRem(7rem);
-        width: calcRem(15rem);
-        height: calcRem(1rem);
-        background: rgba(255, 255, 255, 0.2);
-        opacity: 1 !important;
-        display: inline-block;
-        border-radius: 0;
-
-        &:first-child {
-          margin-left: 0;
-        }
-      }
     }
-    &-paginationSecond{
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: calcRem(50rem) !important;
-      text-align: center;
-      width: 100%;
-      z-index: 50;
-      line-height: 0;
-      font-size: 0;
+    &-wrap + &-wrap{
+      padding-top: 0;
     }
-  }
-
-  // more collection
-  &-more{
-    position: relative;
-    overflow: hidden;
-    &__title{
-      display: block;
-      padding-bottom: calcRem(30rem);
-    }
-    &__txt{
-      font-size: calcRem(24rem);
-      text-align: center;
-      text-transform: uppercase;
-    }
-    &__container{
-      overflow: hidden;
-    }
-    &__slide{
+    // 컬렉션 메인 비주얼
+    &-visual{
       margin: 0 auto;
-      width: calcRem(1200rem);
-      padding: 0 calcRem(44rem);
-      //롤링슬라이드
-      .swiper-wrapper{
-        transition-timing-function: linear;
+      position: relative;
+      width: calcRem(560rem);
+      &__img{
+        @include imageBlock;
+      }
+      &__detail{
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        @include vertical-center;
+      }
+      &__link{
+        display: block;
+      }
+      &__button{
+        color: #fff;
+        border: 1px solid #fff;
+        margin: 0 calcRem(100rem);
+        padding: calcRem(12rem) 0;
       }
     }
-    &__item{
-      padding: 0 calcRem(5rem);
-      box-sizing: border-box;
+
+    // 컬렉션 상품슬라이드
+    &-slide{
+      position: relative;
+      margin: 0 auto;
+      width: calcRem(560rem);
+      padding: calcRem(20rem) 0 calcRem(150rem);
+      .swiper{
+        &-button{
+          @mixin swiperButtonStyle {
+            @include vertical-center;
+            display: inline-block;
+            width: calcRem(10rem);
+            height: calcRem(20rem);
+            position: absolute;
+            top:30%;
+            z-index: 100;
+          }
+          &-next{
+            @include swiperButtonStyle;
+            right: calcRem(10rem);
+            background: url('../../images/collection/list/collection_slide_next.png') no-repeat center center /contain;
+          }
+          &-prev{
+            @include swiperButtonStyle;
+            left: calcRem(10rem);
+            background: url('../../images/collection/list/collection_slide_prev.png') no-repeat center center /contain;
+          }
+        }
+      }
+
+      &-pagination {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: calcRem(50rem) !important;
+        text-align: center;
+        width: 100%;
+        z-index: 50;
+        line-height: 0;
+        font-size: 0;
+        &-bullet {
+          margin-left: calcRem(7rem);
+          width: calcRem(15rem);
+          height: calcRem(1rem);
+          background: rgba(255, 255, 255, 0.2);
+          opacity: 1 !important;
+          display: inline-block;
+          border-radius: 0;
+
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+      &-paginationSecond{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: calcRem(50rem) !important;
+        text-align: center;
+        width: 100%;
+        z-index: 50;
+        line-height: 0;
+        font-size: 0;
+      }
     }
-    &__wrap{
-      width: 100%;
+
+    // more collection
+    &-more{
+      position: relative;
+      overflow: hidden;
+      &__title{
+        display: block;
+        padding-bottom: calcRem(30rem);
+      }
+      &__txt{
+        font-size: calcRem(24rem);
+        text-align: center;
+        text-transform: uppercase;
+      }
+      &__container{
+        overflow: hidden;
+      }
+      &__slide{
+        margin: 0 auto;
+        width: calcRem(1200rem);
+        padding: 0 calcRem(44rem);
+        //롤링슬라이드
+        .swiper-wrapper{
+          transition-timing-function: linear;
+        }
+      }
+      &__item{
+        padding: 0 calcRem(5rem);
+        box-sizing: border-box;
+      }
+      &__wrap{
+        width: 100%;
+      }
+      &__img{
+        display: block;
+        width: 100%;
+      }
+      .swiper-pagination{
+        margin-top: calcRem(20rem);
+        display: block;
+        text-align: center;
+        font-size: 0;
+        line-height: 0;
+        &-current{
+          font-size:calcRem(12rem);
+          line-height:calclH(19,12);
+          padding-right:calcRem(11rem);
+          position: relative;
+          &:after{
+            content: "";
+            width: 1px;
+            height: 0.625rem;
+            background-color: #B8B8B8;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        &-total{
+          font-size:calcRem(12rem);
+          line-height:calclH(19,12);
+          padding-left:calcRem(11rem);
+        }
+      }
+      .swiper{
+        &-button{
+          &-next{
+            @include vertical-center;
+            display: inline-block;
+            width: calcRem(17rem);
+            height: calcRem(32rem);
+            position: absolute;
+            right: calcRem(20rem);
+            background: url('../../images/collection/list/collection_slide_next_w.png') no-repeat center center /contain;
+            z-index: 100;
+          }
+          &-prev{
+            @include vertical-center;
+            display: inline-block;
+            width: calcRem(17rem);
+            height: calcRem(32rem);
+            position: absolute;
+            left: calcRem(20rem);
+            background: url('../../images/collection/list/collection_slide_prev_w.png') no-repeat center center /contain;
+            z-index: 100;
+          }
+
+        }
+      }
+      &__detail{
+        @include vertical-center;
+        position: absolute;
+        text-align: center;
+        z-index: 10;
+      }
+      &__link{
+        display: block;
+      }
+      &__box{
+        color: #fff;
+        border: 1px solid #fff;
+        padding: calcRem(14rem) calcRem(64rem);
+      }
     }
-    &__img{
-      display: block;
-      width: 100%;
+
+    // collection detail
+    // 컬렉션 상세 비주얼
+    &-detail {
+      position: relative;
+      padding-top: calcRem(18rem);
+      &.bg-graphic{
+        background: url('https://cdn.louisclub.com/static/fr/img/specialty/20201210/top.jpg') no-repeat center center/cover;
+        height: calcRem(640rem);
+      }
+      &__sound{
+        display: block;
+        position: absolute;
+        right: calcRem(26rem);
+        bottom: calcRem(26rem);
+        overflow: hidden;
+        width: calcRem(36rem);
+        height: calcRem(36rem);
+        background: url('https://cdn.louisclub.com/static/fr/img/specialty/20200911/sound_off.png') no-repeat center center/contain;
+        text-indent: -9999px;
+        z-index: 10;
+      }
+
+      &__visual{
+        overflow: hidden;
+      }
+      &__img {
+        display: block;
+        width: 100%;
+      }
+      &__video{
+        width: 100%;
+        display: block;
+      }
+
+      &__title {
+        width: 100%;
+        position: absolute;
+        bottom: calcRem(80rem);
+        transform: translate(-50% -50%);
+        text-align: center;
+      }
+
+      &__name {
+        margin-bottom: calcRem(10rem);
+        font-size: calcRem(32rem);
+        font-weight: 400;
+        color: #fff;
+        letter-spacing: calcRem(8rem);
+      }
+
+      &__info {
+        font-size: calcRem(16rem);
+        font-weight: 300;
+        color: #fff;
+      }
     }
-    .swiper-pagination{
-      margin-top: calcRem(20rem);
-      display: block;
+
+    // 컬렉션 아이템소개
+    &-info{
       text-align: center;
-      font-size: 0;
-      line-height: 0;
-      &-current{
-        font-size:calcRem(12rem);
-        line-height:calclH(19,12);
-        padding-right:calcRem(11rem);
+      &.bg-monogram{ // monogram
+          background: url('https://cdn.louisclub.com/static/fr/img/specialty/20210107/top_bg.jpg') no-repeat center center/cover;
+      }
+      &.bg-graphic{ // new graphic
+        background-color: #f2f2f2;
+      }
+      &.bg-cheesebag{ // cheesebag
         position: relative;
-        &:after{
-          content: "";
-          width: 1px;
-          height: 0.625rem;
-          background-color: #B8B8B8;
-          position: absolute;
-          right: 0;
-          top: 50%;
-          transform: translateY(-50%);
+        height: calcRem(800rem);
+        background: url('https://cdn.louisclub.com/static/fr/img/specialty/20210723/top.jpg') no-repeat center center/cover;
+      } // cheese bag
+
+      &.bg-classic{
+          background: url('https://cdn.louisclub.com/static/fr/img/specialty/20200911/content_bg.jpg') no-repeat center center/cover;
+      }
+
+      &.bg-parismens{
+        padding: calcRem(100rem) 0;
+      }
+
+
+      &__wrap{
+        margin: 0 auto;
+        width: 100%;
+        max-width: calcRem(1200rem);
+      }
+      &__middle{
+        // padding: calcRem(100rem) 0;
+        font-size: calcRem(16rem);
+        font-weight: 300;
+        line-height: 2.4;
+        background: #ffffff !important;
+        text-align: center;
+
+        &.graphic{
+          padding: calcRem(80rem) 0;
+          background: #f2f2f2 !important;
+        }
+        &.bg-gray{
+          background: #f6f6f6 !important;
+        }
+        &.parismens{
+          background: #f2f2f2 !important;
         }
       }
-      &-total{
-        font-size:calcRem(12rem);
-        line-height:calclH(19,12);
-        padding-left:calcRem(11rem);
+      &__outer{
+        position: relative;
+        width: 100%;
       }
-    }
-    .swiper{
-      &-button{
-        &-next{
-          @include vertical-center;
-          display: inline-block;
-          width: calcRem(17rem);
-          height: calcRem(32rem);
-          position: absolute;
-          right: calcRem(20rem);
-          background: url('../../images/collection/list/collection_slide_next_w.png') no-repeat center center /contain;
-          z-index: 100;
-        }
-        &-prev{
-          @include vertical-center;
-          display: inline-block;
-          width: calcRem(17rem);
-          height: calcRem(32rem);
-          position: absolute;
-          left: calcRem(20rem);
-          background: url('../../images/collection/list/collection_slide_prev_w.png') no-repeat center center /contain;
-          z-index: 100;
-        }
-
+      &__box{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        font-size: calcRem(18rem);
+        color: #fff;
+        z-index: 99;
       }
-    }
-    &__detail{
-      @include vertical-center;
-      position: absolute;
-      text-align: center;
-      z-index: 10;
-    }
-    &__link{
-      display: block;
-    }
-    &__box{
-      color: #fff;
-      border: 1px solid #fff;
-      padding: calcRem(14rem) calcRem(64rem);
-    }
-  }
-
-  // collection detail
-  // 컬렉션 상세 비주얼
-  &-detail {
-    position: relative;
-    padding-top: calcRem(18rem);
-
-    &__img {
-      display: block;
-      width: 100%;
-    }
-
-    &__title {
-      width: 100%;
-      position: absolute;
-      bottom: calcRem(100rem);
-      transform: translate(-50% -50%);
-      text-align: center;
-    }
-
-    &__name {
-      margin-bottom: calcRem(10rem);
-      color: #de9230;
-      font-size: calcRem(20rem);
-    }
-
-    &__info {
-      font-size: calcRem(12rem);
-      color: #fff;
-    }
-  }
-
-  // 컬렉션 아이템소개
-  &-info{
-    //background-color: #f5d661;
-    text-align: center;
-    &__middle{
-      padding: calcRem(50rem) 0;
-      font-size: calcRem(10rem);
-      font-weight: 300;
-      line-height: 1.8;
-      background: #ffffff !important;
-      &.graphic{
-        padding: calcRem(80rem) 0;
-        background: #f2f2f2 !important;
+      &__second{
+        padding: calcRem(30rem) 0 0;
+        font-size: calcRem(10rem);
+        font-weight: 300;
+        line-height: 1.8;
+        background: #ffffff !important;
       }
-      &.bg-gray{
-        background: #f6f6f6 !important;
+      &__top{
+        margin-top: 0;
+        font-size: calcRem(20rem);
       }
-    }
-    &__second{
-      padding: calcRem(30rem) 0 0;
-      font-size: calcRem(10rem);
-      font-weight: 300;
-      line-height: 1.8;
-      background: #ffffff !important;
-    }
-    &__top{
-      margin-top: 0;
-      font-size: calcRem(20rem);
-    }
-    &__title{
-      padding:calcRem(100rem) 0 calcRem(20rem);
-      font-size: calcRem(18rem);
-      font-weight: 400;
-    }
-    &__txt{
-      padding-bottom: calcRem(30rem);
-      font-size: calcRem(12rem);
-      font-weight: 400;
-    }
-    &__img{
-      @include imageBlock;
-    }
-  }
+      &__title{
+        padding:calcRem(100rem) 0 calcRem(20rem);
+        font-size: calcRem(18rem);
+        font-weight: 400;
+      }
+      &__txt{
+        padding-bottom: calcRem(30rem);
+        font-size: calcRem(12rem);
+        font-weight: 400;
+      }
+      &__img{
+        @include imageBlock;
+      }
+      &__sound{
+        display: block;
+        position: absolute;
+        right: calcRem(26rem);
+        bottom: calcRem(26rem);
+        overflow: hidden;
+        width: calcRem(36rem);
+        height: calcRem(36rem);
+        background: url('https://cdn.louisclub.com/static/fr/img/specialty/20200911/sound_off.png') no-repeat center center/contain;
+        text-indent: -9999px;
+        z-index: 10;
+      }
+      }
+
 
   // 컬렉션 이동하기 버튼
   &-button{
@@ -322,15 +421,26 @@
   // 컬렉션 모델슬라이드
   &-model{
     position: relative;
-    //background-color: rgb(245, 214, 97);
+    &.graphic{
+      background-color: #f2f2f2;
+      padding: 0 10%;
+    }
+    &.type-gray{
+      padding: calcRem(150rem) 0;
+      background-color: #fafafa;
+    }
+    &.parismens{
+      padding-bottom: calcRem(100rem);
+      background-color: #f2f2f2;
+    }
     &-wrap{
       position: relative;
       margin: 0 auto;
-      width: calcRem(850rem);
+      width: calcRem(1200rem);
     }
     &__slide{
       margin: 0 auto;
-      width: calcRem(850rem);
+      width: calcRem(1200rem);
     }
     .swiper{
       &-button{
@@ -362,13 +472,22 @@
         padding: 0 10%;
       }
       &.graphic{
-        background-color: #f2f2f2;
         padding: 0 10%;
       }
+
     }
     &__img{
       display: block;
       width: 100%;
+    }
+    &__caption{
+      margin: 0 auto;
+      width: 100%;
+      max-width: calcRem(1200rem);
+      padding-top: calcRem(90rem);
+      &.graphic{
+        max-width: calcRem(700rem);
+      }
     }
     .model-next-btn{
       right: calcRem(-50rem);
@@ -528,10 +647,12 @@
       width: 100%;
     }
     &__img{
-      @include imageBlock;
+      display: block;
     }
   }
   &-wrap{
+    margin: 0 auto;
+    width: calcRem(520rem);
     display: block;
     position: relative;
   }
@@ -539,7 +660,7 @@
     padding: 5.3% 9.5% 10.6%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: #f4f4f4;
+    //background-color: #f4f4f4;
     &__wrap{
       position: relative;
       display: flex;
@@ -566,7 +687,7 @@
       }
     }
     .swiper-slide + .swiper-slide{
-      margin-left: 8px;
+      margin-left: calcRem(6rem);
     }
   }
 }
@@ -575,25 +696,29 @@
   line-height: 0;
 }
 
-.event-monte__btn{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  overflow: hidden;
-  display: block;
-  width: 18px;
-  height: 36px;
-  text-indent: -9999px;
-  margin: auto 0;
-  z-index: 10;
-}
-
-.event-monte__btn.thumb-next-btn{
-  right: 2.7%;
-  background: url(https://mcdn.louisclub.com/static/mo/img/specialty/20200911/arrow_next.png) no-repeat center center/contain;
-}
-
-.event-monte__btn.thumb-prev-btn{
-  left: 2.7%;
-  background: url(https://mcdn.louisclub.com/static/mo/img/specialty/20200911/arrow_prev.png) no-repeat center center/contain;
+.event-monte{
+    &__wrap{
+      margin: 0 auto;
+      width: calcRem(520rem);
+    }
+    &__btn{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      overflow: hidden;
+      display: block;
+      width: 18px;
+      height: 36px;
+      text-indent: -9999px;
+      margin: auto 0;
+      z-index: 10;
+      &.thumb-next-btn{
+        right: calcRem(-50rem);
+        background: url('https://mcdn.louisclub.com/static/mo/img/specialty/20200911/arrow_next.png') no-repeat center center/contain;
+      }
+      &.thumb-prev-btn{
+        left: calcRem(-50rem);
+        background: url('https://mcdn.louisclub.com/static/mo/img/specialty/20200911/arrow_prev.png') no-repeat center center/contain;
+      }
+    }
 }
