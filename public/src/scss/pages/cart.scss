@@ -208,11 +208,11 @@
         font-size: calcRem(20rem);
         font-weight: $regular;
         text-align: center;
-        padding-bottom: calcRem(20rem); 
+        padding-bottom: calcRem(60rem); 
     }
     &-banner{
         text-align: center;
-        padding: calcRem(40rem) 0 calcRem(60rem);
+        padding: 0 0 calcRem(60rem);
 
         .cart-list__no-cart{
             margin-bottom: calcRem(10rem);
@@ -316,7 +316,6 @@
     @include flexWrap;
     .cart-btn{
         margin-left: 0;
-
         .btn-v3{
             display: inline-block;
             width: calcRem(100rem);
@@ -340,6 +339,9 @@
 
                 &:first-child{
                     margin-top:0;
+
+                    .cart-total__title,
+                    .cart-total__text{ @include body2;}
                 }
             }
         }
@@ -355,21 +357,33 @@
         &__title{
             float: left;
             @include body3;
-
-            #{$this}-sum &{
-                // @include title2;
-            }
         }
 
         &__text{
             overflow: hidden;
             text-align: right;
             @include body3;
+        }
 
-            #{$this}-sum &{
-                @include title2;
-                color:$point1;
+        &__sum{
+            .cart-total__title{ @include body2; }
+            .cart-total__text{ 
+                @include body2;
+                color:$point1; 
             }
+        }
+
+        &__info{
+            @include body7;
+        }
+    }
+
+    .cart-total__btn{
+        margin-left: 0;
+
+        .btn-v3{
+            display: inline-block;
+            width: 49%;
         }
     }
 }

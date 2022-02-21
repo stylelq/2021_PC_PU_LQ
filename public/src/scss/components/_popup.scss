@@ -1170,6 +1170,10 @@
                         font-weight: $regular;
                     }
                 }
+
+                .form__select{
+                    margin: calcRem(5rem) 0;
+                }
             }
         }
         //적용가능한 쿠폰 없을 시
