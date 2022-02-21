@@ -25,7 +25,7 @@
     padding-bottom: calcRem(100rem);
   }
   &-group{
-    background-color: #f5d661;
+    //background-color: #f5d661;
     padding-bottom: 0;
   }
   &-wrap{
@@ -264,7 +264,7 @@
 
   // 컬렉션 아이템소개
   &-info{
-    background-color: #f5d661;
+    //background-color: #f5d661;
     text-align: center;
     &__middle{
       padding: calcRem(50rem) 0;
@@ -322,7 +322,7 @@
   // 컬렉션 모델슬라이드
   &-model{
     position: relative;
-    background-color: rgb(245, 214, 97);
+    //background-color: rgb(245, 214, 97);
     &-wrap{
       position: relative;
       margin: 0 auto;
