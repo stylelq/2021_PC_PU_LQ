@@ -49,6 +49,7 @@
     &__title{
         @include heading3;
         margin-top: calcRem(10rem);
+        margin-bottom: calcRem(24rem);
     }
 }
 .center-section{

@@ -1,0 +1,50 @@
+//대량구매/입점문의
+.center-inquiry__write{
+    //상단 타이틀
+    .center-right__head{
+        border-bottom: 1px solid $black1;
+    }
+
+    //하단 버튼
+    .btn-inquiry__group{
+        padding-top: calcRem(40rem);
+        border-top: 1px solid $gray2;
+        .btn-group{
+            &__list{
+                width: 40%;
+                margin: auto;
+            } 
+            &__btn{
+                @include body8;
+            }   
+        }
+    }
+
+    //form
+    .inquiry-form{
+        &__info{
+            margin-top: calcRem(30rem);
+        }
+    }
+
+    //개인정보
+    .inquiry-policy{
+        margin-top: calcRem(30rem);
+        padding: calcRem(30rem) 0;
+        border-top: 1px solid $gray2;
+        &__title{
+            @include title4;
+        }
+        &__list{
+            padding: calcRem(20rem) 0 calcRem(20rem) calcRem(5rem);
+            .center-bullet-number__item{
+                &:first-child{margin-top: calcRem(10rem);}
+            }
+        }
+        // &__text{
+        //     @include body7;
+        // }
+    }
+}
+
+

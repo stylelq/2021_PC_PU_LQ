@@ -247,6 +247,21 @@ jQuery(function(){
     }
     $(document).on('click', '.js-payment-open', paymentTab);
 
+    // 고객센터 > 멤버쉽 탭
+    function membershipTab() {
+        var item = '[class $= __item]', //li
+            tab = '[class $= -tab__fix]', //ul
+            contents = $('.membership-tab__info'), //tab content
+            idx = $(this).parent().index();
+        $(this).closest(tab).children().removeClass('is-current');
+        $(this).parent(item).addClass('is-current');
+
+        contents.removeClass('is-current');
+        contents.eq(idx).addClass('is-current');
+        return false;
+    }
+    $(document).on('click', '.js-membership-tab', membershipTab);
+
 
 
     //--END[탭] ----------------------

@@ -8,7 +8,8 @@
     }
     //하단 버튼
     .btn-inquiry__group{
-        margin-top: calcRem(40rem);
+        padding-top: calcRem(40rem);
+        border-top: 1px solid $gray2;
         .btn-group{
             &__list{
                 width: 40%;
@@ -22,7 +23,6 @@
 }
 .center-inquiry{
     padding: calcRem(30rem) 0 calcRem(20rem);
-    border-bottom: 1px solid $gray2;
 
     .fieldset{
         &__label{
