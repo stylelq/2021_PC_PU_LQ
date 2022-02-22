@@ -1,0 +1,1853 @@
+@import "../base/variables";
+@import "../base/mixins";
+@import "../pages/promotion";
+
+//font
+@font-face {
+    font-family: 'Gotham';
+    src: url(../../fonts/gotham/GothamBlack.ttf) format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham';
+    src: url(../../fonts/gotham/GothamMedium.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+//mixin
+@mixin projectBg($color) {
+    @if $color == green {
+        .project{
+            &-number{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/1/section1_top_bg.jpg") no-repeat center center/cover;
+                //@include pageBackground('/images/common/ico_info-btn.svg','no-repeat center center / cover');
+            }
+            &-head{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/1/section1_ctn1_img1.jpg") no-repeat center center/cover;
+                //@include pageBackground('/images/common/ico_info-btn.svg','no-repeat center center / cover');
+            }
+            &-info{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/1/section1_mid_bg.jpg") no-repeat center center/cover;
+                //@include pageBackground('/images/common/ico_info-btn.svg','no-repeat center center / cover');
+            }
+            &-video{
+                &__intro{
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_1.jpg") no-repeat center center/cover;
+                }
+                &__play{
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
+                }
+            }
+            &-name{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/1/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-view{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/1/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-point{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/1/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-place{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/1/section2_bg.jpg") no-repeat center center/cover;
+            }
+            &-address{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/1/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-button{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/1/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+        }
+
+    } @else if $color == orange {
+        .project {
+            &-number {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/2/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-head{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/2/section1_ctn1_img1.jpg") no-repeat center center/cover;
+            }
+            &-info{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/2/section1_mid_bg.jpg") no-repeat center center/cover;
+            }
+            &-video{
+                &__intro{
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_2.jpg") no-repeat center center/cover;
+                }
+                &__play{
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
+                }
+            }
+            &-name{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/2/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-view{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/2/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-point{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/2/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-place{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/2/section2_bg.jpg") no-repeat center center/cover;
+            }
+            &-address{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/2/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-button{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/2/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+        }
+    } @else if $color == yellow {
+        .project{
+            &-number {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/3/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-head{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/3/section1_ctn1_img1.jpg") no-repeat center center/cover;
+            }
+            &-info{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/3/section1_mid_bg.jpg") no-repeat center center/cover;
+            }
+            &-video{
+                &__intro{
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_3.jpg") no-repeat center center/cover;
+                }
+                &__play{
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
+                }
+            }
+            &-name{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/3/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-view{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/3/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-point{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/3/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-place{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/3/section2_bg.jpg") no-repeat center center/cover;
+            }
+            &-address{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/3/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-button{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/3/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+        }
+    }@else if $color == darkgreen {
+        .project{
+            &-number {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/4/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-head{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/4/section1_ctn1_img1.jpg") no-repeat center center/cover;
+            }
+            &-info{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/4/section1_mid_bg.jpg") no-repeat center center/cover;
+            }
+            &-video{
+                &__intro{
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_4.jpg") no-repeat center center/cover;
+                }
+                &__play{
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
+                }
+            }
+            &-name{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/4/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-view{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/4/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-point{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/4/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-place{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/4/section2_bg.jpg") no-repeat center center/cover;
+            }
+            &-address{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/4/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-button{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/4/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+        }
+    }@else if $color == red{
+        .project{
+            &-number {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/5/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-head{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/5/section1_ctn1_img1.jpg") no-repeat center center/cover;
+            }
+            &-info{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/5/section1_mid_bg.jpg") no-repeat center center/cover;
+            }
+            &-video{
+                &__intro{
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_5.jpg") no-repeat center center/cover;
+                }
+                &__play{
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
+                }
+            }
+            &-name{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/5/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-view{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/5/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-point{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/5/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-place{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/5/section2_bg.jpg") no-repeat center center/cover;
+            }
+            &-address{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/5/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-button{
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/5/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+        }
+    }@else if $color == purple {
+        .project {
+            &-number {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/6/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-head {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/6/section1_ctn1_img1.jpg") no-repeat center center/cover;
+            }
+            &-info {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/6/section1_mid_bg.jpg") no-repeat center center/cover;
+            }
+            &-video {
+                &__intro {
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_6.jpg") no-repeat center center/cover;
+                }
+
+                &__play {
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
+                }
+            }
+            &-name {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/6/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-view {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/6/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-point {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/6/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-place {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/6/section2_bg.jpg") no-repeat center center/cover;
+            }
+            &-address {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/6/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-button {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/6/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+        }
+    }@else if $color == blue {
+        .project {
+            &-number {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/7/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-head {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/7/section1_ctn1_img1.jpg") no-repeat center center/cover;
+            }
+            &-info {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/7/section1_mid_bg.jpg") no-repeat center center/cover;
+            }
+            &-video {
+                &__intro {
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_7.jpg") no-repeat center center/cover;
+                }
+
+                &__play {
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
+                }
+            }
+            &-name {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/7/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-view {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/7/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-point {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/7/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-place {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/7/section2_bg.jpg") no-repeat center center/cover;
+            }
+            &-address {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/7/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-button {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/7/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+        }
+    }@else if $color == pink {
+        .project {
+            &-number {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/8/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-head {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/8/section1_ctn1_img1.jpg") no-repeat center center/cover;
+            }
+            &-info {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/8/section1_mid_bg.jpg") no-repeat center center/cover;
+            }
+            &-video {
+                &__intro {
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_8.jpg") no-repeat center center/cover;
+                }
+
+                &__play {
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
+                }
+            }
+            &-name {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/8/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-view {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/8/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-point {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/8/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-place {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/8/section2_bg.jpg") no-repeat center center/cover;
+            }
+            &-address {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/8/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-button {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/8/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+        }
+    }@else if $color == darkorange {
+        .project {
+            &-number {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/9/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-head {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/9/section1_ctn1_img1.jpg") no-repeat center center/cover;
+            }
+            &-info {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/9/section1_mid_bg.jpg") no-repeat center center/cover;
+            }
+            &-video {
+                &__intro {
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_9.jpg") no-repeat center center/cover;
+                }
+
+                &__play {
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
+                }
+            }
+            &-name {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/9/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-view {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/9/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-point {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/9/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-place {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/9/section2_bg.jpg") no-repeat center center/cover;
+            }
+            &-address {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/9/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-button {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/9/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+        }
+    }@else if $color == lime {
+        .project {
+            &-number {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-head {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_ctn1_img1.jpg") no-repeat center center/cover;
+            }
+            &-info {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_mid_bg.jpg") no-repeat center center/cover;
+            }
+            &-video {
+                &__intro {
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_10.jpg") no-repeat center center/cover;
+                }
+
+                &__play {
+                    background: url("https://cdn.louisclub.com/static/fr/img/find/play_btn.png") no-repeat center center/cover;
+                }
+            }
+            &-name {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-view {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-point {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-place {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section2_bg.jpg") no-repeat center center/cover;
+            }
+            &-address {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+            &-button {
+                background: url("https://mcdn.louisclub.com/static/mo/img/findintroduce/10/section1_top_bg.jpg") no-repeat center center/cover;
+            }
+        }
+    }
+
+}
+
+@mixin projectLine($position) {
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:1px;
+    background-color:$whiteColor;
+    z-index:$childZindex;
+
+    @if $position == number {
+        left:50%;
+    } @else if $position == name1 {
+        left:75%;
+    } @else if $position == name2 {
+        left:70%;
+    } @else if $position == view {
+        left:61%;
+    }@else {
+        display:none;
+    }
+}
+
+@mixin imageBlock {
+    display:block;
+    width:100%;
+}
+
+@mixin create-line($classes...){
+    @each $class in $classes {
+        .#{$class} &{
+            @content;
+        }
+    }
+}
+@mixin lineTypeOne{
+    @include create-line(type-green){
+        @content
+    }
+}
+@mixin lineTypeTwo{
+    @include create-line(type-orange){
+        @content
+    }
+}
+@mixin lineTypeThree{
+    @include create-line(type-yellow){
+        @content
+    }
+}
+@mixin lineTypeFour{
+    @include create-line(type-darkgreen){
+        @content
+    }
+}
+@mixin lineTypeFive{
+    @include create-line(type-red){
+        @content
+    }
+}
+@mixin lineTypeSix{
+    @include create-line(type-purple){
+        @content
+    }
+}
+@mixin lineTypeSeven{
+    @include create-line(type-blue){
+        @content
+    }
+}
+@mixin lineTypeEight{
+    @include create-line(type-pink){
+        @content
+    }
+}
+@mixin lineTypeNine{
+    @include create-line(type-darkorange){
+        @content
+    }
+}
+@mixin lineTypeTen{
+    @include create-line(type-lime){
+        @content
+    }
+}
+
+//animation keyframe
+@-webkit-keyframes x-diagonal-slide-slow {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+@keyframes x-diagonal-slide-slow {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+
+@-webkit-keyframes x-diagonal-slide-med {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+@keyframes x-diagonal-slide-med {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+
+@-webkit-keyframes x-diagonal-slide-fast {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+@keyframes x-diagonal-slide-fast {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+
+@-webkit-keyframes y-diagonal-slide-slow {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+@keyframes y-diagonal-slide-slow {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+
+@-webkit-keyframes y-diagonal-slide-med {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+@keyframes y-diagonal-slide-med {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+
+@-webkit-keyframes y-diagonal-slide-fast {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+@keyframes y-diagonal-slide-fast {
+    0% {
+        -webkit-transform: translateX(-800px);
+        transform: translateX(-800px);
+    }
+    100% {
+        -webkit-transform: translateX(800px);
+        transform: translateX(800px);
+    }
+}
+
+@keyframes fyl-arrow {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0px, 20px);
+        opacity: 0;
+    }
+}
+
+// project - about: 섹션
+.site-project{
+    margin-bottom: calcRem(-50rem);
+}
+
+.find{
+    //기본값
+    &-section {
+        $this: &;
+
+        &__list {
+            margin: 0;
+            padding: calcRem(50rem);
+            list-style: none;
+            font-size: 0;
+            letter-spacing: 0;
+            background-color: #fff;
+        }
+
+        &__item {
+            overflow: hidden;
+            display: inline-block;
+            width: 25%;
+            vertical-align: top;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        &__item:nth-child(odd) {
+            padding-right: 1.35%;
+        }
+
+        &__link {
+            display: block;
+        }
+
+        &__wrap{
+            margin:0 auto;
+            width: calcRem(1200rem);
+        }
+        &__bottom{
+            font-size: calcRem(14rem);
+            text-align: center;
+        }
+    }
+
+    //섹션0
+    &-section0 {
+        //padding: calcVw(40vw) calcVw(40vw);
+        padding: calcRem(80rem) 0 calcRem(80rem);
+        background: url(https://cdn.louisclub.com/static/fr/img/find/bg_01.jpg) no-repeat center center/cover;
+    }
+
+    //섹션1
+    &-section1 {
+        padding-top: 16%;
+        padding-bottom: 30%;
+        background: url(https://cdn.louisclub.com/static/fr/img/find/bg_02.jpg) no-repeat center center/cover;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        line-height: 0;
+
+        &__txt {
+            margin-top: 22%;
+        }
+
+        &__top {
+            background: url(https://mcdn.louisclub.com/static/mo/img/find/section2_top_bg.jpg) no-repeat center center/cover;
+        }
+    }
+
+    //섹션2
+    &-section2 {
+        padding: 11% 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    //섹션3
+    &-section3 {
+        &__top {
+            position: relative;
+            background: url(https://mcdn.louisclub.com/static/mo/img/find/section4_bg1.jpg) no-repeat center center/cover;
+        }
+
+        &__top:after {
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 13%;
+            width: 0;
+            height: 100%;
+            border-left: 1px solid #fff;
+            content: '';
+        }
+    }
+
+    //섹션4
+    &-section4 {
+        position: relative;
+        line-height: 0;
+
+        &__top {
+            background: url("https://mcdn.louisclub.com/static/mo/img/find/section5_bg.jpg") no-repeat center center/cover;
+        }
+    }
+
+    //섹션5
+    &-section5 {
+        border-top: none !important;
+        padding: 25% 0;
+        background: url(https://mcdn.louisclub.com/static/mo/img/find/section6_bg.jpg) no-repeat center bottom/cover;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+
+        &__txt {
+            margin-top: 10%;
+        }
+    }
+}
+
+// project - about:첫번째 섹션 - 애니메이션 영역
+.find-poster {
+    width: 100%;
+    vertical-align: middle;
+    &__content{
+        margin: 0 auto;
+        width: calcRem(580rem);
+        height: calcRem(800rem);
+        color: $whiteColor;
+        position: relative;
+        overflow: hidden;
+        background-color: #9367db;
+        &:after{
+            content:"";
+            display: block;
+            padding-bottom: calcRem(580rem);
+        }
+    }
+    &__wrap{
+        position: absolute;
+        box-sizing: border-box;
+        padding-right: calcRem(50rem);
+        padding-bottom: calcRem(50rem);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(35deg);
+        transform-origin: center center;
+    }
+
+    &__meta{
+        font-size: calcVw(4vw);
+        font-weight: bold;
+        line-height: 1.5;
+        text-align: left;
+        letter-spacing: .05em;
+        float: right;
+
+        &:after{
+            @include block-reset;
+        }
+    }
+
+    &__box{
+        float: left;
+        padding-right: calcRem(150rem);
+        vertical-align: top;
+        box-sizing: border-box;
+        &:last-child{
+            padding-right: calcRem(100rem);
+        }
+    }
+
+    &__title{
+        white-space: nowrap;
+        padding-right: calcVw(36vw);
+    }
+
+    &__name{
+        margin: 0;
+        font-size: calcRem(126rem);
+        font-family: 'Gotham';
+        line-height: 1.4;
+        font-weight: 600;
+    }
+
+    // 애니메이션 바
+    &__graphic{
+        div{
+            position: absolute;
+            background: #fff;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        &--x{
+            z-index: 1;
+            margin-left: calcVw(35vw);
+            margin-top: calcVw(10vw);
+            -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+        }
+    }
+
+    &__span{
+        display: block;
+        font-size: calcRem(34rem);
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        white-space: nowrap;
+    }
+
+    &__meta p{
+        display: block;
+        margin-top: 0;
+        margin-bottom: calcRem(12rem) !important;
+        font-size: calcRem(30rem);
+    }
+
+    // 애니메이션 컨텐츠
+    .artist{
+        font-size: calcRem(16rem);
+        font-family: 'Gotham';
+        font-weight: 500;
+        text-transform: uppercase;
+
+        &__name + &__name{
+            margin-top: 6%;
+        }
+
+        &__name{
+            font-family: 'Gotham';
+            font-weight: 500;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+    }
+
+    &__span{
+        font-size: calcRem(34rem);
+        font-family: 'Gotham';
+        font-weight: 600;
+    }
+    &__meta{
+        &__artist{
+            margin: 0;
+            font-family: 'Gotham';
+            font-weight: 600;
+            white-space: nowrap;
+        }
+    }
+
+    //애니메이션 바
+    &__graphic{
+        div {
+            position: absolute;
+            background: #fff;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        &--x{
+            .x-1{
+                left: 245px;
+                bottom: 20px;
+                width: 60px;
+                height: 2px;
+                -webkit-animation: x-diagonal-slide-fast 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-fast 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-2{
+                left: 208px;
+                bottom: -100px;
+                width: 100px;
+                height: 8px;
+                -webkit-animation: x-diagonal-slide-med 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-med 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-3{
+                left: 155px;
+                bottom: -85px;
+                width: 155px;
+                height: 20px;
+                -webkit-animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-4{
+                left: 108px;
+                bottom: -115px;
+                width: 200px;
+                height: 2px;
+                -webkit-animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-5{
+                left: -70 px;
+                bottom: -140px;
+                width: 330px;
+                height: 12px;
+                -webkit-animation: x-diagonal-slide-med 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-med 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-6{
+                left: -430px;
+                bottom: -140px;
+                width: 120px;
+                height: 12px;
+                -webkit-animation: x-diagonal-slide-fast 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-fast 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-7{
+                left: -440px;
+                bottom: -65 px;
+                width: 450px;
+                height: 20px;
+                -webkit-animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-8{
+                left: 20px;
+                bottom: -10px;
+                width: 170px;
+                height: 2px;
+                -webkit-animation: x-diagonal-slide-med 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-med 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-9{
+                left: -350px;
+                bottom: -10px;
+                width: 260px;
+                height: 2px;
+                -webkit-animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-10{
+                left: -360px;
+                bottom: -115px;
+                width: 370px;
+                height: 2px;
+                -webkit-animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-11{
+                left: -270px;
+                bottom: -100px;
+                width: 370px;
+                height: 8px;
+                -webkit-animation: x-diagonal-slide-med 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-med 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+
+            .x-12{
+                left: -235px;
+                bottom: 3px;
+                width: 165px;
+                height: 12px;
+                -webkit-animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+                animation: x-diagonal-slide-slow 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            }
+        }
+    }
+}
+.find-info{
+    display: inline-block;
+    margin-top: calcRem(100rem);
+    &__wrap{
+        margin: 0 auto;
+        width: calcRem(1200rem);
+    }
+    &__box{
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    &__box:nth-child(2){
+        margin-top: calcRem(-9rem);
+        padding-left: calcRem(20rem);
+    }
+    &__parm + &__parm{
+        margin-left: calcRem(40rem);
+    }
+    &__parm{
+        float: left;
+        width: calcRem(270rem);
+        margin: 0;
+        vertical-align: top;
+        font-size: calcRem(15rem);
+        font-family: 'Noto Sans KR';
+        font-weight: 300;
+        color: #000;
+        line-height: 2;
+        text-align: justify;
+        word-break: break-all;
+    }
+}
+
+.find-video{
+    margin-top: calcRem(100rem);
+    &__wrap{
+        margin: 0 auto;
+        width: 34%;
+    }
+    &__box{
+        position: relative;
+    }
+    &__video{
+        width: 100%;
+    }
+    &__sound{
+        display: block;
+        position: absolute;
+        right: calcRem(26rem);
+        bottom: calcRem(26rem);
+        overflow: hidden;
+        width: calcRem(36rem);
+        height: calcRem(36rem);
+        background: url(https://cdn.louisclub.com/static/fr/img/specialty/20200911/sound_off.png) no-repeat center center/contain;
+        text-indent: -9999px;
+    }
+}
+
+//about 슬라이드
+.project{
+    &-slider{
+        position: relative;
+        &__name{
+            background: url("https://mcdn.louisclub.com/static/mo/img/find/section5_bg.jpg") no-repeat center center/cover;
+        }
+
+        &__wrap{
+            width:100%;
+        }
+
+        &__item{
+            a{
+                display: block;
+                width:100%;
+
+                img{
+                    width:100%;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &-pagination{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: calcVw(20vw) !important;
+        text-align: center;
+        width: 100%;
+        z-index: 50;
+        line-height: 0;
+        font-size: 0;
+
+        .swiper-pagination-bullet {
+            margin-left: calcVw(7vw);
+            width: calcVw(6vw);
+            height: calcVw(6vw);
+            background: #fff !important;
+            opacity: 1 !important;
+            display: inline-block;
+            border-radius: 100%;
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+        .swiper-pagination-bullet-active{
+            background: #000 !important;
+        }
+    }
+}
+
+//애니메이션
+.motion{
+    &-up{
+        opacity: 0;
+        transform: translateY(50%);
+        transition-property: opacity, transform;
+        transition-duration: 1s;
+        transition-timing-function: cubic-bezier(0.25, 0.1, 0.05, 0.83);
+
+        &--active{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+//프로젝트 컨포넌트
+.type{
+    &-green{
+        @include projectBg(green);
+    }
+    &-orange{
+        @include projectBg(orange);
+    }
+    &-yellow{
+        @include projectBg(yellow);
+    }
+    &-darkgreen{
+        @include projectBg(darkgreen);
+    }
+    &-red{
+        @include projectBg(red);
+    }
+    &-purple{
+        @include projectBg(purple);
+    }
+    &-blue{
+        @include projectBg(blue);
+    }
+    &-pink{
+        @include projectBg(pink);
+    }
+    &-darkorange{
+        @include projectBg(darkorange);
+    }
+    &-lime{
+        @include projectBg(lime);
+    }
+}
+.project{
+    //타이틀
+    &-number{
+        position: relative;
+        &:after{
+            @include projectLine(number);
+        }
+
+        &__img{
+            @include imageBlock;
+        }
+    }
+
+    //이름 정보
+    &-head{
+        position: relative;
+        &__img{
+            @include imageBlock;
+        }
+        &__meta{
+            top: calcVw(20vw);
+            right: calcVw(20vw);
+            position: absolute;
+            z-index: $childZindex;
+        }
+        &__link{
+            display: block;
+            background-size: calcVw(24vw);
+            width: calcVw(24vw);
+            height: calcVw(24vw);
+
+            &.instagram{
+                @include pageBackground('/images/common/section1_ctn1_ico1.png','no-repeat center center / cover')
+            }
+
+            &.homepage{
+                margin-top: calcVw(10vw);
+                @include pageBackground('/images/common/section1_ctn1_ico2.png','no-repeat center center / cover')
+            }
+        }
+    }
+
+    //정보
+    &-info{
+        position: relative;
+        &:after{
+            .type-green &{
+                @include projectLine(name1);
+            }
+            .type-orange &{
+                @include projectLine(name2);
+            }
+            .type-yellow &{
+                @include projectLine(name1);
+            }
+            .type-darkgreen &{
+                @include projectLine(name2);
+            }
+            .type-red &{
+                @include projectLine(name1);
+            }
+            .type-purple &{
+                @include projectLine(name1);
+            }
+            .type-blue &{
+                @include projectLine(name1);
+            }
+            .type-pink &{
+                @include projectLine(name1);
+            }
+            .type-darkorange &{
+                @include projectLine(name1);
+            }
+            .type-lime &{
+                @include projectLine(name1);
+            }
+        }
+        &__img {
+            @include imageBlock;
+        }
+        &__contents{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    }
+
+    //비디오
+    &-video{
+        &__area{
+            position: relative;
+            &:after{
+                content:'';
+                display: block;
+                padding-bottom: 56%;
+            }
+        }
+        &__youtube{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        &__intro{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: $childZindex;
+        }
+        &__play{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    //이름
+    &-name{
+        &__img{
+            @include imageBlock;
+        }
+    }
+
+    //슬라이드
+    &-slide{
+        position: relative;
+        overflow: hidden;
+        &__name{
+            position: absolute;
+            z-index: $childZindex;
+            @include imageBlock;
+        }
+        &__wrap{
+            width: 100%;
+        }
+        &__img{
+            @include imageBlock;
+        }
+        &-pagination{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: calcVw(20vw) !important;
+            text-align: center;
+            width: 100%;
+            z-index: 50;
+            line-height: 0;
+            font-size: 0;
+            .swiper-pagination-bullet {
+                margin-left: calcVw(7vw);
+                width: calcVw(6vw);
+                height: calcVw(6vw);
+                background: #fff !important;
+                opacity: 1 !important;
+                display: inline-block;
+                border-radius: 100%;
+                &:first-child{
+                    margin-left: 0;
+                }
+            }
+            .swiper-pagination-bullet-active{
+                background: #000 !important;
+            }
+        }
+    }
+
+    //view 타이틀
+    &-view{
+        position: relative;
+        border-bottom: 1px solid #fff;
+        &:after{
+            @include projectLine(view);
+        }
+
+        &__img{
+            @include imageBlock;
+        }
+    }
+
+    //장소 타이틀(지점)
+    &-point{
+        position: relative;
+        &__img{
+            @include imageBlock;
+        }
+    }
+
+    //장소 슬라이드
+    &-place{
+        position: relative;
+        &__img{
+            @include imageBlock;
+        }
+        &-pagination{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: calcVw(20vw) !important;
+            text-align: center;
+            width: 100%;
+            z-index: 50;
+            line-height: 0;
+            font-size: 0;
+            .swiper-pagination-bullet {
+                margin-left: calcVw(7vw);
+                width: calcVw(6vw);
+                height: calcVw(6vw);
+                background: #fff !important;
+                opacity: 1 !important;
+                display: inline-block;
+                border-radius: 100%;
+                &:first-child{
+                    margin-left: 0;
+                }
+            }
+            .swiper-pagination-bullet-active{
+                background: #000 !important;
+            }
+        }
+    }
+
+    //장소 상세정보
+    &-address{
+        position: relative;
+        &__list{
+            margin: 4.2% 0 0 0;
+            padding: 0 5% 14%;
+            font-size: 0;
+        }
+        &__item{
+            display: inline-block;
+            &:nth-child(1){
+                width: calcVw(67vw);
+            }
+            &:nth-child(2){
+                width: calcVw(52vw);
+                margin: 0 calcVw(10vw);
+            }
+            &:nth-child(3){
+                width: calcVw(96vw);
+            }
+        }
+        &__input{
+            overflow: hidden;
+            position: absolute;
+            top: auto;
+            width: calcVw(1vw);
+            height: calcVw(1vw);
+            padding: 0;
+            margin: calcVw(-1vw);
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+            user-select: auto;
+        }
+        &__link{
+            display: block;
+            line-height: 0;
+        }
+    }
+
+    //More
+    &-button{
+        position: relative;
+        border-top: 1px solid #fff;
+        &__wrap{
+            padding: calcVw(50vw) calcVw(80vw);
+        }
+        &__link{
+            display: block;
+        }
+        &__img{
+            @include imageBlock;
+        }
+    }
+}
+
+
+/* FYL1 - Groovyroom */
+.fyl{
+    // FYL1 - 헤더
+    &-header{
+        position: relative;
+        padding: calcVw(20vw) calcVw(15vw);
+        &__name{
+            font-size: calcVw(16vw);
+            font-weight: 500;
+        }
+        &__date{
+            margin-top: calcVw(10vw);
+            color: #999999;
+            font-size: calcVw(12vw);
+        }
+    }
+
+    // FYL1 - 비디오영역
+    &-full{
+        position: relative;
+        &__source{
+            width: 100%;
+            display: block;
+        }
+        &__arrow{
+            position: absolute;
+            display: block;
+            bottom: 10%;
+            width: 100%;
+            height: 20px;
+            background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/top_arrow.png") no-repeat center center/contain;
+            background-size: 20px;
+            text-align: center;
+            animation: fyl-arrow 1s infinite;
+            z-index: 999;
+        }
+    }
+
+// FYL1 - 당신이 찾고 있는 빛은 어떤 색인가요?
+&-info{
+    &__wrap{
+        padding: calcVw(70vw) 0;
+        background-color: #000;
+    }
+}
+
+// FYL1 - 컨텐츠 탭 & 콘텐츠
+&-tab{
+    &:after{
+        @include block-reset;
+    }
+    &__item{
+        width: 33.33333%;
+        float: left;
+        font-size: 0;
+        font-weight: 100;
+        line-height: 0;
+        text-align: center;
+
+        &:first-child{
+            text-align: left;
+        }
+
+        &:nth-child(2){
+            text-align: center;
+        }
+
+        &:last-child{
+            text-align: right;
+
+            &:nth-child(2){
+                text-align: center;
+            }
+        }
+    }
+    &__link{
+        padding-right: calcVw(14vw);
+        text-align: left;
+        font-size: calcVw(15vw);
+        display: inline-block;
+        background-position: right;
+        line-height: 1.4;
+        position: relative;
+        border-bottom: solid 1px transparent;
+
+        &--white{
+            .is-current &{
+                border-bottom-color: #fff;
+            }
+            &:after{
+                content: '';
+                width: calcVw(10vw);
+                height: calcVw(10vw);
+                background: url("../../images/project/tab_icon01.png") no-repeat center center/cover;
+                background-size: calcVw(10vw);
+                position: absolute;
+                right: 0;
+                @include vertical-center;
+            }
+        }
+        &--black{
+            .is-current &{
+                border-bottom-color: #000;
+            }
+            &:after{
+                content: '';
+                width: calcVw(10vw);
+                height: calcVw(10vw);
+                background: url("../../images/project/tab_icon02.png") no-repeat center center/cover;
+                background-size: calcVw(10vw);
+                position: absolute;
+                right: 0;
+                @include vertical-center;
+            }
+        }
+    }
+    &__img{
+        float: left;
+    }
+}
+
+&-cont{
+    display: inline-block;
+    width: 100%;
+    padding: calcVw(10vw) 0 calcVw(20vw);;
+    &__item{
+        display: none;
+        &.is-current{
+            display: block;
+        }
+    }
+}
+&-contents{
+    position: relative;
+    height: 100vh;
+    // FYL1 - Ns & DM 컨텐츠
+    &.cont01{
+        color: #ffffff;
+        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/section_bg_0.jpg") no-repeat center center/cover;
+        .project{
+            &-video{
+                &__intro{
+                    &.nth-1{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_16.jpg") no-repeat center center/cover;
+                    }
+                    &.nth-2{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_17.jpg") no-repeat center center/cover;
+                    }
+                    &.nth-3{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_18.jpg") no-repeat center center/cover;
+                    }
+                }
+                &__play{
+                    width: 100%;
+                    height: 100%;
+                    background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/play_btn.png") no-repeat center center/cover;
+                }
+            }
+        }
+    }
+
+    // FYL1 - Hoody 컨텐츠
+    &.cont02{
+        color: #000000;
+        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/section_bg_1.jpg") no-repeat center center/cover;
+        .project{
+            &-video{
+                &__intro{
+                    &.nth-4{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_1.jpg") no-repeat center center/cover;
+                    }
+                    &.nth-5{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_2.jpg") no-repeat center center/cover;
+                    }
+                }
+                &__play{
+                    width: 100%;
+                    height: 100%;
+                    background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/play_btn.png") no-repeat center center/cover;
+                }
+            }
+        }
+    }
+
+    // FYL1 - GOLDEN 컨텐츠
+    &.cont03{
+         color: #ffffff;
+         background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/section_bg_2.jpg") no-repeat center center/cover;
+         .project{
+             &-video{
+                 &__intro{
+                     &.nth-6{
+                         background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_4.jpg") no-repeat center center/cover;
+                     }
+                     &.nth-7{
+                         background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_5.jpg") no-repeat center center/cover;
+                     }
+                     &.nth-8{
+                         background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_6.jpg") no-repeat center center/cover;
+                     }
+                 }
+                 &__play{
+                     width: 100%;
+                     height: 100%;
+                     background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/play_btn.png") no-repeat center center/cover;
+                 }
+             }
+         }
+
+     }
+
+    // FYL1 - HAON 컨텐츠
+    &.cont04{
+        color: #ffffff;
+        background-color: #177dce;
+        .project{
+            &-video{
+                &__intro{
+                    &.nth-9{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_7.jpg") no-repeat center center/cover;
+                    }
+                    &.nth-10{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_8.jpg") no-repeat center center/cover;
+                    }
+                    &.nth-11{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_9.jpg") no-repeat center center/cover;
+                    }
+                }
+                &__play{
+                    width: 100%;
+                    height: 100%;
+                    background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/play_btn.png") no-repeat center center/cover;
+                }
+            }
+        }
+    }
+
+    // FYL1 - COOGIE 컨텐츠
+    &.cont05{
+        color: #ffffff;
+        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/section_bg_4.jpg") no-repeat center center/cover;
+        .project{
+            &-video{
+                &__intro{
+                    &.nth-12{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_10.jpg") no-repeat center center/cover;
+                    }
+                    &.nth-13{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_11.jpg") no-repeat center center/cover;
+                    }
+                    &.nth-14{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_12.jpg") no-repeat center center/cover;
+                    }
+                }
+                &__play{
+                    width: 100%;
+                    height: 100%;
+                    background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/play_btn.png") no-repeat center center/cover;
+                }
+            }
+        }
+    }
+
+    // FYL1 - PH-1 컨텐츠
+    &.cont06{
+        margin-bottom: calcVw(-60vw);
+        color: #000000;
+        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/section_bg_5.jpg") no-repeat center center/cover;
+        .project{
+            &-video{
+                &__intro{
+                    &.nth-15{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_10.jpg") no-repeat center center/cover;
+                    }
+                    &.nth-16{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_11.jpg") no-repeat center center/cover;
+                    }
+                    &.nth-17{
+                        background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_12.jpg") no-repeat center center/cover;
+                    }
+                }
+                &__play{
+                    width: 100%;
+                    height: 100%;
+                    background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/play_btn.png") no-repeat center center/cover;
+                }
+            }
+        }
+    }
+
+    &__outer{
+        display: inline-table;
+        width: 100%;
+        height: 100%;
+    }
+    &__inner{
+        display: table-cell;
+        height: 100%;
+        width: 1%;
+        vertical-align: middle;
+        text-align: center;
+        padding: 0 calcVw(30vw);
+    }
+    &__video{
+        padding: calcVw(10vw) 0 calcVw(20vw);
+        position: relative;
+        width: 100%;
+        display: inline-block;
+        .project{
+            &-video{
+                &__intro{
+                    background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg_16.jpg") no-repeat center center/cover;
+                }
+                &__play{
+                    width: 100%;
+                    height: 100%;
+                    background: url("https://mcdn.louisclub.com/static/mo/img/specialty/20200710/play_btn.png") no-repeat center center/cover;
+                }
+            }
+        }
+    }
+    &__source{
+        margin: 0 calcVw(-30vw);
+    }
+}
+// FYL1 = 하단 고정네비
+&-menu{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #000;
+    z-index: 50;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+    &.is-active{
+        transform: translateY(0%);
+    }
+    &__list{
+        display: flex;
+    }
+    &__link{
+        flex: 1;
+        display: inline-block;
+        padding: calcRem(8rem) 0;
+        font-size: calcRem(12rem);
+        text-transform: uppercase;
+        text-align: center;
+        &.nsdm{
+            color: #cb38ff;
+        }
+        &.hoody{
+            color: #fd96a7;
+        }
+        &.golden{
+            color: #08b78e;
+        }
+        &.haon{
+            color: #49b2f6;
+        }
+        &.coogie{
+            color: #fb010b;
+        }
+        &.ph1{
+            color: #ff934b;
+        }
+    }
+    &__play{
+        font-size: calcRem(8rem);
+    }
+}
+
+}
+
+// cart action
+.cart-fix{
+    &.is-project{
+        transition: bottom 0.3s;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
