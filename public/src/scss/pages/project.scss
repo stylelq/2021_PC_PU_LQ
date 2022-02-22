@@ -648,7 +648,7 @@
         $this: &;
 
         &__list {
-            margin: 0;
+            margin: calcRem(44rem) 0 0;
             padding: calcRem(50rem);
             list-style: none;
             font-size: 0;
@@ -657,16 +657,8 @@
         }
 
         &__item {
-            overflow: hidden;
             display: inline-block;
             width: 25%;
-            vertical-align: top;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-
-        &__item:nth-child(odd) {
-            padding-right: 1.35%;
         }
 
         &__link {
@@ -678,6 +670,7 @@
             width: calcRem(1200rem);
         }
         &__bottom{
+            margin: calcRem(24rem) 0 0;
             font-size: calcRem(14rem);
             text-align: center;
         }
@@ -710,13 +703,8 @@
 
     //섹션2
     &-section2 {
-        padding: 11% 0;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-
-    //섹션3
-    &-section3 {
+        overflow: hidden;
+        background: url(https://cdn.louisclub.com/static/fr/img/find/bg_03.jpg) no-repeat center center/cover;
         &__top {
             position: relative;
             background: url(https://mcdn.louisclub.com/static/mo/img/find/section4_bg1.jpg) no-repeat center center/cover;
@@ -735,28 +723,6 @@
         }
     }
 
-    //섹션4
-    &-section4 {
-        position: relative;
-        line-height: 0;
-
-        &__top {
-            background: url("https://mcdn.louisclub.com/static/mo/img/find/section5_bg.jpg") no-repeat center center/cover;
-        }
-    }
-
-    //섹션5
-    &-section5 {
-        border-top: none !important;
-        padding: 25% 0;
-        background: url(https://mcdn.louisclub.com/static/mo/img/find/section6_bg.jpg) no-repeat center bottom/cover;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-
-        &__txt {
-            margin-top: 10%;
-        }
-    }
 }
 
 // project - about:첫번째 섹션 - 애니메이션 영역
@@ -1045,6 +1011,35 @@
     }
 }
 
+.find-bottom{
+    padding: calcRem(120rem) 0 calcRem(40rem);
+    text-align: center;
+    &__box{
+        float: left;
+        width: 50%;
+        text-align: left;
+        &.type-logo {
+            padding-left: calcRem(218rem);
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    }
+    &__txt{
+        float: right;
+        margin: 0;
+        width: calcRem(464rem);
+        font-size: calcRem(15rem);
+        color: #fff;
+        line-height: 2;
+        text-align: justify;
+        word-break: break-all;
+    }
+    &__logo{
+        display: inline-block;
+        margin-top: calcRem(90rem);
+    }
+}
+
 .find-video{
     margin-top: calcRem(100rem);
     &__wrap{
@@ -1067,6 +1062,92 @@
         height: calcRem(36rem);
         background: url(https://cdn.louisclub.com/static/fr/img/specialty/20200911/sound_off.png) no-repeat center center/contain;
         text-indent: -9999px;
+    }
+}
+
+// 매장 관련 섹션
+.find-store {
+    margin-top: calcRem(150rem);
+    padding-bottom: calcRem(150rem);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    &__tit{
+        margin: 0 0 calcRem(40rem);
+    }
+    &__box{
+        width: calcRem(890rem);
+        &.type-desc{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 310px;
+            padding-left: calcRem(40rem);
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    }
+    &__wrap{
+        position: relative;
+    }
+    &__name{
+        margin: 0 0 calcRem(60rem);
+        font-size: calcRem(18rem);
+        font-weight: 700;
+    }
+    &__txt1{
+        margin: 0;
+        font-size: calcRem(24rem);
+        font-family: GothamM !important;
+        text-transform: uppercase;
+    }
+    &__txt2{
+        margin: calcRem(18rem) 0 0;
+        font-size: calcRem(18rem);
+        font-weight: 700;
+    }
+    &__list{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    &__item{
+        display: none;
+        &.is-active{
+            display: block;
+        }
+    }
+}
+.find-slide {
+    position: relative;
+    overflow: hidden;
+    &__list{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    &__link{
+        display: block;
+    }
+    &__dot{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: calcRem(10rem);
+        text-align: center;
+        z-index: 50;
+        span{
+            margin: 0 !important;
+            width: calcRem(9rem);
+            height: calcRem(9rem);
+            background: #fff !important;
+            opacity: 1 !important;
+            &.swiper-pagination-bullet-active{
+                background: #000000 !important;
+            }
+        }
+        span + span{
+            margin-left: calcRem(7rem)!important;
+        }
     }
 }
 
@@ -1838,16 +1919,4 @@
         transition: bottom 0.3s;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -1,0 +1,442 @@
+@import url(top_motion.css);
+@font-face {
+  font-family: GothamA;
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://www.stylelq.com/fr/fonts/find/Gotham-Black.eot);
+  src: local("GothamBlack"), url(https://www.stylelq.com/fr/fonts/find/Gotham-Black.eot?#iefix) format("embedded-opentype"), url(https://www.stylelq.com/fr/fonts/find/Gotham-Black.woff) format("woff"), url(https://www.stylelq.com/fr/fonts/find/Gotham-Black.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: GothamB;
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://www.stylelq.com/fr/fonts/find/Gotham-Light.eot");
+  src: local("GothamLight"), url(https://www.stylelq.com/fr/fonts/find/Gotham-Light.eot?#iefix) format("embedded-opentype"), url(https://www.stylelq.com/fr/fonts/find/Gotham-Light.woff) format("woff"), url(https://www.stylelq.com/fr/fonts/find/Gotham-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: GothamM;
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://www.stylelq.com/fr/fonts/find/Gotham-Medium.eot");
+  src: local("GothamMedium"), url(https://www.stylelq.com/fr/fonts/find/Gotham-Medium.eot?#iefix) format("embedded-opentype"), url(https://www.stylelq.com/fr/fonts/find/Gotham-Medium.woff) format("woff"), url(https://www.stylelq.com/fr/fonts/find/Gotham-Medium.ttf) format("truetype");
+}
+
+.find-section {
+  color: #000;
+  text-align: left;
+}
+
+.find-section.nth-1 {
+  background: url("https://cdn.louisclub.com/static/fr/img/find/bg_01.jpg") no-repeat center bottom 80px/cover;
+}
+
+.find-section.nth-2 {
+  margin-top: -80px;
+  background: url("https://cdn.louisclub.com/static/fr/img/find/bg_02.jpg") no-repeat top center/cover;
+}
+
+.find-section.nth-3 {
+  overflow: hidden;
+  background: url("https://cdn.louisclub.com/static/fr/img/find/bg_03.jpg") no-repeat center center/cover;
+}
+
+.find-section__wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.find-poster {
+  padding-top: 80px;
+}
+
+.find-poster .poster__title h2 {
+  font-family: GothamA !important;
+}
+
+.find-poster .poster__span {
+  font-family: GothamA !important;
+}
+
+.find-poster .poster__meta p {
+  margin: 0;
+  font-family: GothamA !important;
+  white-space: nowrap;
+}
+
+.find-poster .poster__meta li {
+  font-family: GothamM !important;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.find-content {
+  margin-top: 100px;
+}
+
+.find-content:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+.find-content__box {
+  float: left;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.find-content__box:nth-child(1) {
+  padding-right: 20px;
+}
+
+.find-content__box:nth-child(2) {
+  margin-top: -9px;
+  padding-left: 20px;
+}
+
+.find-content__box:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+.find-content__parm {
+  float: left;
+  width: 270px;
+  margin: 0;
+  vertical-align: top;
+  font-size: 15px;
+  font-family: 'Noto Sans KR';
+  font-weight: 300;
+  color: #000;
+  line-height: 2;
+  text-align: justify;
+  word-break: break-all;
+}
+
+.find-content__parm + .find-content__parm {
+  margin-left: 40px;
+}
+
+.find-video {
+  margin-top: 100px;
+}
+
+.find-video__tit {
+  margin: 0;
+  font-size: 24px;
+  font-family: GothamM;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+}
+
+.find-video__video {
+  position: relative;
+  margin-top: 40px;
+}
+
+.find-video__video video {
+  width: 100%;
+}
+
+.find-video__sound {
+  display: block;
+  position: absolute;
+  right: 26px;
+  bottom: 26px;
+  overflow: hidden;
+  width: 36px;
+  height: 36px;
+  background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200911/sound_off.png") no-repeat center center/contain;
+  text-indent: -9999px;
+}
+
+.find-video__sound.is-active {
+  background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200911/sound_on.png") no-repeat center center/contain;
+}
+
+.find-artists {
+  padding-top: 230px;
+}
+
+.find-artists__tit {
+  margin: 0;
+}
+
+.find-artists__list {
+  margin: 44px 0 0 0;
+  padding: 50px;
+  list-style: none;
+  background-color: #fff;
+}
+
+.find-artists__list:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+.find-artists__item {
+  float: left;
+  width: 25%;
+}
+
+.find-artists__link {
+  display: block;
+}
+
+.find-artists__link:hover {
+  color: inherit;
+}
+
+.find-artists__txt {
+  margin: 24px 0 0 0;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  color: #000;
+}
+
+.find-store {
+  margin-top: 150px;
+  padding-bottom: 150px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.find-store__tit {
+  margin: 0 0 40px;
+}
+
+.find-store__box {
+  width: 890px;
+}
+
+.find-store__box.type-desc {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 310px;
+  padding-left: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.find-store__wrap {
+  position: relative;
+}
+
+.find-store__name {
+  position: absolute;
+  bottom: 120px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.find-store__txt1 {
+  margin: 0;
+  font-size: 24px;
+  font-family: GothamM !important;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.find-store__txt2 {
+  margin: 7px 0 0 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.find-store__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.find-store__item {
+  display: none;
+  text-align: left;
+}
+
+.find-store__item.is-active {
+  display: block;
+}
+
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+.find-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.find-slide__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.find-slide__link {
+  display: block;
+}
+
+.find-slide__dot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 40px !important;
+  text-align: center;
+  z-index: 50;
+  line-height: 1;
+}
+
+.find-slide__dot span {
+  margin: 0 !important;
+  width: 8px;
+  height: 8px;
+  background: #fff !important;
+  opacity: 1 !important;
+}
+
+.find-slide__dot span.swiper-pagination-bullet-active {
+  background: #000000 !important;
+}
+
+.find-slide__dot span + span {
+  margin-left: 18px !important;
+}
+
+.find-contri {
+  padding: 120px 0 40px;
+  text-align: center;
+}
+
+.find-contri__box {
+  float: left;
+  width: 50%;
+  text-align: left;
+}
+
+.find-contri__box.type-logo {
+  padding-left: 218px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.find-contri__txt {
+  float: right;
+  margin: 0;
+  width: 464px;
+  font-size: 15px;
+  color: #fff;
+  line-height: 2;
+  text-align: justify;
+  word-break: break-all;
+}
+
+.find-contri__logo {
+  display: inline-block;
+  margin-top: 90px;
+}
+
+.poster {
+  width: 580px;
+  height: 800px;
+  margin: 0 auto;
+}
+
+.is-rotate {
+  animation-name: objRotate;
+  animation-duration: 10000ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -ms-animation-name: objRotate;
+  -ms-animation-duration: 10000ms;
+  -ms-animation-timing-function: linear;
+  -webkit-animation-name: objRotate;
+  -webkit-animation-duration: 10000ms;
+  -webkit-animation-timing-function: linear;
+}
+
+@keyframes objRotate {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes objRotate {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+
+.js-scroll-motion, .js-load-motion {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 0;
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.1, 0.05, 0.63);
+          transition-timing-function: cubic-bezier(0.25, 0.1, 0.05, 0.63);
+}
+
+.js-scroll-motion.is-active, .js-load-motion.is-active {
+  opacity: 1;
+  -webkit-transform: translateY(0) !important;
+  transform: translateY(0) !important;
+}
+
+.js-scroll-motion.type-left, .js-load-motion.type-left {
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+.js-scroll-motion.type-left.is-active, .js-load-motion.type-left.is-active {
+  opacity: 1;
+  -webkit-transform: translateY(0) !important;
+  transform: translateY(0) !important;
+  -webkit-transform: translateX(0%) !important;
+  transform: translateX(0%) !important;
+}
+
+.js-scroll-motion.type-delay5, .js-load-motion.type-delay5 {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.js-scroll-motion.type-delay10, .js-load-motion.type-delay10 {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.js-scroll-motion.type-delay15, .js-load-motion.type-delay15 {
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+}
+/*# sourceMappingURL=find.css.map */
