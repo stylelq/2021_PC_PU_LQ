@@ -18,31 +18,14 @@
     //head
     &__fix{
         border-top:solid 1px $gray1;
-        // position: absolute;
-        // padding:0 calcRem(20rem);
-        // height:calcRem(35rem);
         background-color: $whiteColor;
-        // top:0;
-        // left:0;
         width:100%;
         box-sizing: border-box;
-        // z-index: $childZindex;
         @include flexNoWrap;
-        // justify-content: space-between;
 
         &:after{
             @include block-reset;
         }
-
-        // .is-fixed &{
-        //     transition: transform 0.3s;
-        //     position: fixed;
-        //     transform:translateZ(0) translateY(0);
-        // }
-
-        // .is-fixed.is-down &{
-        //     transform:translateZ(0) translateY(calcRem(45rem));
-        // }
     }
 
     &__item{
@@ -85,7 +68,6 @@
 
     &__info{
         display:none;
-        // padding-bottom:calcRem(70rem);
 
         &.is-current{
             display: block;
@@ -95,31 +77,29 @@
             margin:0 calcRem(-20rem);
         }
     }
+}
 
-    // &.fixed{
-    //     position: fixed;
-    //     top: 120px;
-    //     margin-top: 0;
-    //     width: calcRem(720rem);
-    //     height: calcRem(55rem);
-    //     z-index: 5;
-    //     &:before{
-    //         content: '';
-    //         display: block;
-    //         width: 100%;
-    //         height: 20px;
-    //         background-color: #fff;
-    //     }
-    //     .detail-tab__fix{
-    //         padding: 0;
-    //         height: auto;
-    //         position: relative;
-    //     }
 
-    //     & + .detail-tab__cont{
-    //         .detail-tab__info{
-    //             padding-top: calcRem(90rem);
-    //         }
-    //     }
-    // }
+
+//검색결과 info
+.center-result{
+    margin:calcRem(40rem) 0;
+
+    &__title{
+        text-align: center;
+        padding: calcRem(30rem) 0 calcRem(30rem);
+        @include body2;
+    }
+    &__point{
+        color: $point1;
+    }
+}
+
+// 결과 리스트 :: 데이터없음
+.no-result{
+    border-top:solid 1px $black1;
+    border-bottom:solid 1px $gray1;
+    padding: calcRem(148rem) 0;
+    text-align: center;
+    @include body1;
 }

@@ -1,0 +1,253 @@
+//1:1문의
+
+// [layout]
+.center-inquiry__wrap{
+    //상단 타이틀
+    .center-right__head{
+        border-bottom: 1px solid $black1;
+    }
+    //하단 버튼
+    .btn-inquiry__group{
+        margin-top: calcRem(40rem);
+        .btn-group{
+            &__list{
+                width: 40%;
+                margin: auto;
+            } 
+            &__btn{
+                @include body8;
+            }   
+        }
+    }
+}
+.center-inquiry{
+    padding: calcRem(30rem) 0 calcRem(20rem);
+    border-bottom: 1px solid $gray2;
+
+    .fieldset{
+        &__label{
+            width: calcRem(176rem);
+        }
+        &__inner{
+            margin-bottom:0;
+        }
+    }
+//     // group::일반 div dom
+//     &__group{
+//         @include flexNoWrap;
+//         padding-bottom: calcRem(20rem);
+//     }
+//     &__label{
+//         width: calcRem(176rem);
+//         @include body7;
+//         margin-top:calcRem(10rem);
+//     }
+//     &__list{
+//         width: 100%;
+
+//         .form__input--text,
+//         .form__select{
+//             @include body8;
+//             @include placeholder-color($gray2);
+//         }
+//     }
+//     &__inner{
+//         width: 50%;
+        
+//         &--btn{
+//             @include flexNoWrap;
+//             .form__input--btn{
+//                 position: inherit;
+//                 transform: translateY(0);
+//                 margin-left: calcRem(5rem);
+//                 padding:calcRem(10rem) calcRem(20rem);
+//                 box-sizing: border-box;
+//                 @include body7;
+//             }
+//         }
+//     }
+//     &__item{ margin-bottom: calcRem(15rem); }
+}
+
+// [form] 받는분, 제목, 내용 
+.inquiry-form{
+    &__info{
+        margin-bottom: calcRem(40rem);
+    }
+    // &__list{
+    //     margin-bottom: calcRem(20rem);
+    // }
+}
+
+// [공통] 주문, 상품 검색,이미지 첨부  --
+.inquiry-order,
+.inquiry-product,
+.inquiry-image{
+    width: calcRem(115rem);
+    margin-right: calcRem(10rem);
+    position: relative;
+    .form-arrow__btn--text{
+        @include body8;
+    }
+
+    &__text{
+        @include body7;
+        margin: calcRem(10rem) 0 0;
+    }
+}
+
+// [주문, 상품 검색] info view
+.inquiry-search{
+    margin-bottom: calcRem(40rem);
+
+    &__cont{
+        position: relative;
+        margin-top: calcRem(10rem);
+        display: none;
+    }
+    &__close{
+        position: absolute;
+        right:calcRem(20rem);
+        top:calcRem(20rem);
+        width:calcRem(13rem);
+        height:calcRem(12rem);
+        @include pageBackground('/images/common/ico_inquiry_close.svg','no-repeat center center / contain');
+    }
+
+    //주문검색
+    .inquiry-order{
+        &__item{
+            margin-top:calcRem(5rem);
+
+            &:first-child{
+                margin-top:0;
+            }
+        }
+
+        &__inner{
+            margin:0;
+
+            &:after{
+                @include block-reset;
+            }
+        }
+        &__list{
+            padding:calcRem(20rem);
+            box-sizing: border-box;
+            border: 1px solid $lightgray2;
+        }
+
+        &__title{
+            float:left;
+            @include body7;
+            min-width: calcRem(70rem);
+            box-sizing: border-box;
+        }
+        
+        &__text{
+            overflow: hidden;
+            @include body7;
+            margin: 0;
+        }        
+    }
+
+    //상품검색
+    .inquiry-product{
+        &__body{
+            display: table;
+            table-layout: fixed;
+            width:100%;
+            // padding:calcRem(20rem);
+            box-sizing: border-box;
+            border: 1px solid $lightgray2;
+        }
+
+        &__thumb{
+            display: table-cell;
+            vertical-align: middle;
+            width:calcRem(120rem);
+            line-height: 0;
+        }
+
+        &__title{
+            display: table-cell;
+            vertical-align: middle;
+            padding-left:calcRem(15rem);
+            @include body7;
+            font-weight: $regular;
+        }
+    }
+
+}
+
+
+//이미지 첨부
+.inquiry-imgFile{
+    margin-bottom: calcRem(40rem);
+
+    .inquiry-image{    
+        &__file{
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            display: block;
+            height:100%;
+            z-index: $childZindex;
+            font-size: calcRem(100rem);
+            opacity: 0;
+        }
+    
+        &__text{
+            @include body5; 
+            margin:calcRem(5rem) 0 0;
+    
+            font-size:calcRem(12rem);
+        }
+    
+        //이미지 미리보기
+        &__view{
+            &--item{
+                display: inline-block;
+                margin-right:calcRem(10rem);
+                width:calcRem(77rem);
+                position: relative;
+                
+                padding:calcRem(25rem) 0 calcRem(15rem);
+    
+                &:last-child{
+                    margin-right:calcRem(20rem);
+                }
+            }
+
+            .view-image{
+                position: relative;
+                &__close{
+                    position: absolute;
+                    top:calcRem(3rem);
+                    right:calcRem(3rem);
+                    width:calcRem(18rem);
+                    height:calcRem(18rem);
+                    @include pageBackground('/images/common/ico_view_img_close.svg','no-repeat center center / contain');
+                    background-size: calcRem(18rem) calcRem(18rem);
+                    z-index: $childZindex;
+                }
+            }
+        }
+    }
+}
+
+
+//알림신청
+.inquiry-alim{
+    margin-bottom: calcRem(40rem);
+    .inquiry-notification{
+        &__item{
+            margin-bottom: calcRem(14rem);
+        }
+    }
+}
+
+
+
+

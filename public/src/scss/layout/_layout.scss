@@ -13,3 +13,91 @@
 .site-main{
   margin-top:calcRem($SiteMainMargin);
 }
+
+
+.fieldset{
+  // group::일반 div dom
+  &__group{
+    @include flexNoWrap;
+    margin-bottom:calcRem(15rem);
+  }
+  &__label{
+      width: calcRem(100rem);
+      @include body7;
+      margin-top:calcRem(10rem);
+  }
+  &__list{
+      width: 100%;
+
+      .form__input--text,
+      .form__select{
+          @include body8;
+          @include placeholder-color($gray2);
+      }
+  }
+  &__inner{
+    width: 50%;
+    margin-bottom: calcRem(15rem);
+      
+    &--btn{
+      @include flexNoWrap;
+      .form__input--btn{
+          position: inherit;
+          transform: translateY(0);
+          margin-left: calcRem(5rem);
+          padding:calcRem(10rem) calcRem(20rem);
+          box-sizing: border-box;
+          @include body7;
+      }
+    }
+    &--list{
+      margin-right:calcRem(-5rem);
+      box-sizing: border-box;
+
+      &:after{
+          @include block-reset;
+      }
+    }
+
+    &--item{
+      width:33.333%;
+      float:left;
+      padding-right:calcRem(5rem);
+      box-sizing: border-box;
+      &:last-child{  padding-right: 0;}
+    }
+
+    .form__checkbox--text{
+        @include body7;
+    }
+  }
+  &__item{ margin-bottom: calcRem(15rem); }
+
+  &__no-cart{
+      @include body5;
+      text-align: center;
+      padding:calcRem(30rem) calcRem(20rem);
+  }
+}
+
+.fieldset-dl{
+  //group ::dl 
+  &__group{
+    @include flexNoWrap;
+    margin:0;
+    &:not(:last-child){
+        margin-bottom: calcRem(10rem);
+    }
+    dt{ 
+        width: 100px;
+        @include body7;
+    }
+    dd{ 
+        width: 100%;
+        @include body7;
+    }
+  }
+  &__text:not(:first-child){
+      margin-top: calcRem(10rem);
+  }
+}

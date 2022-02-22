@@ -1,0 +1,82 @@
+<%
+type = "center"
+page = "center"
+popup = "false"
+lnbTitle = "FAQ"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <div class="site-main">
+        <% include ../_include/_lnbSelectCenter %>
+        <section class="service-center">
+            <div class="center-faq__wrap">
+                <div class="center-right__head">
+                    <p class="center-right__title">FAQ</p>
+                </div>
+                
+                <div class="center-filter">
+                    <!-- search -->
+                    <div class="center-search">
+                        <div class="center-search__form">
+                            <div class="form__search">
+                                <input type="text" class="form__search--input" name="keyword" id="keyword" autocomplete="off" placeholder="검색어를 입력해주세요." required="">
+                                <button type="submit" class="form__search--btn"><span class="sr-only">검색</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .search -->
+                    <!-- tab -->
+                    <div class="center-tab">
+                        <ul class="center-tab__fix">
+                            <li class="center-tab__item is-current">
+                                <a href="#;" class="center-tab__link js-basic-tab-link">전체</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="#;" class="center-tab__link js-basic-tab-link">상품</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="#;" class="center-tab__link js-basic-tab-link">주문/결제</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="#;" class="center-tab__link js-basic-tab-link">교환/반품</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="#;" class="center-tab__link js-basic-tab-link">쿠폰/적립금</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="#;" class="center-tab__link js-basic-tab-link">A/S</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="#;" class="center-tab__link js-basic-tab-link">포장</a>
+                            </li>
+                            <li class="center-tab__item">
+                                <a href="#;" class="center-tab__link js-basic-tab-link">회원</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //tab -->
+
+                    <!-- 검색결과 -->
+                    <div class="center-result">
+                        <div class="center-result__title">
+                            <span class="center-result__point">"배숑"</span> 검색결과 총 <span class="center-result__point">0</span>개 입니다.
+                        </div>
+                    </div>
+                    <!-- //검색결과 -->
+                </div>
+                
+                <div class="center-faq">
+                    <!-- list -->
+                    <div class="no-result">
+                        검색결과가 없습니다.<br>검색어를 확인하시고 다시 입력해주세요.
+                    </div>
+                    <!-- list -->
+                    <% include ../_include/_paging %>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_cartFix %>
+<% include ../_include/_footer %>
