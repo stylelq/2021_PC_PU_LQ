@@ -1,0 +1,105 @@
+<!-- qna write popup -->
+<section id="inquiryOrderPop" class="popup type-write">
+    <div class="popup__dim"></div>
+    <section class="popup__body">
+        <a class="popup__close js-popup-close" href="#;"><span class="sr-only">닫기</span></a>
+        <div class="popup__header">
+            <h3 class="popup__header--title">주문내역</h3>
+        </div>
+
+        <div class="wrap">
+            <div class="popup-orderlist">
+                <div class="popup-orderlist__header">최근 6개월 동안의 주문내역 입니다.</div>
+                <!-- 상품이 없을경우 노출 -->
+                <!-- <div class="popup-orderlist__no-cart">주문하신 상품이 없습니다.</div> -->
+                <!-- .상품이 없을경우 노출 -->
+                <div class="popup-orderlist__body">
+                    <div class="popup-orderlist__list">
+                        <table class="list-table" summary="장바구니">
+                            <caption>장바구니</caption>
+                            <colgroup>
+                                <col><col width="50%"><col><col><col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>주문번호</th>
+                                    <th>상품정보</th>
+                                    <th>주문금액</th>
+                                    <th>주문상태</th>
+                                    <th>선택</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- item -->
+                                <tr>
+                                    <td>
+                                        <p class="detail-Meta__orderId">P20210812142407</p>
+                                        <p class="detail-Meta__date">2021.10.27</p>
+                                    </td>
+                                    <td>
+                                        <div class="detail-Meta">
+                                            <a href="#;" class="detail-Meta__thumb"><img class="cart-product__img" src="../../images/dummy/detail-img1.jpg" alt="" /></a>
+                                            <span class="detail-Meta__title">oalc SINGLE BREASTED HARRIS TWEED JACKET 싱글브레스트 해리스 트위드 재킷 (Beige)</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="detail-Meta__price--current">289,290원</span></td>
+                                    <td><span>주문접수</span></td>
+                                    <td>
+                                        <div class="detail-Meta__btn">
+                                            <a href="#" class="btn-v3 btn-v3--small type-primary">선택</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- //item -->
+                                <!-- item -->
+                                <tr>
+                                    <td>
+                                        <p class="detail-Meta__orderId">P20210812142407</p>
+                                        <p class="detail-Meta__date">2021.10.27</p>
+                                    </td>
+                                    <td>
+                                        <div class="detail-Meta">
+                                            <a href="#;" class="detail-Meta__thumb"><img class="cart-product__img" src="../../images/dummy/recommended_img.png" alt="" /></a>
+                                            <span class="detail-Meta__title">oalc SINGLE BREASTED HARRIS TWEED JACKET 싱글브레스트 해리스 트위드 재킷 (Beige)</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="detail-Meta__price--current">289,290원</span></td>
+                                    <td><span>주문접수</span></td>
+                                    <td>
+                                        <div class="detail-Meta__btn">
+                                            <a href="#" class="btn-v3 btn-v3--small type-primary">선택</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- //item -->
+                                <!-- item -->
+                                <tr>
+                                    <td>
+                                        <p class="detail-Meta__orderId">P20210812142407</p>
+                                        <p class="detail-Meta__date">2021.10.27</p>
+                                    </td>
+                                    <td>
+                                        <div class="detail-Meta">
+                                            <a href="#;" class="detail-Meta__thumb"><img class="cart-product__img" src="../../images/dummy/product_img4.png" alt="" /></a>
+                                            <span class="detail-Meta__title">oalc SINGLE BREASTED HARRIS TWEED JACKET 싱글브레스트 해리스 트위드 재킷 (Beige)</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="detail-Meta__price--current">289,290원</span></td>
+                                    <td><span>주문접수</span></td>
+                                    <td>
+                                        <div class="detail-Meta__btn">
+                                            <a href="#" class="btn-v3 btn-v3--small type-primary">선택</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- //item -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <% include ../_include/_paging %>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<!-- .qna write popup -->

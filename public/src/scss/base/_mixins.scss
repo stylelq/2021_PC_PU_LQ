@@ -55,15 +55,21 @@
 
 //Typography
 @mixin heading1(){font-size:calcRem(20rem); line-height:calclH(28,20); letter-spacing: $defaultLetter; font-weight:$medium;}
-@mixin heading2(){font-size:calcRem(17rem); line-height:calclH(24,17); letter-spacing: $defaultLetter; font-weight:$medium;}
+// @mixin heading2(){font-size:calcRem(17rem); line-height:calclH(24,17); letter-spacing: $defaultLetter; font-weight:$medium;}
+@mixin heading2(){
+  font-size:calcRem(30rem); 
+  line-height:calclH(48,30); 
+  letter-spacing: $defaultLetter; 
+  font-weight:$medium;
+}
 @mixin heading3(){
-  font-size:calcRem(20rem); 
+  font-size:calcRem(24rem); 
   line-height:calclH(24,17); 
   letter-spacing: $defaultLetter; 
   font-weight:$regular;
 }
 @mixin heading4(){
-  font-size:calcRem(18rem); 
+  font-size:calcRem(20rem); 
   line-height:calclH(24,17); 
   letter-spacing: $defaultLetter; 
   font-weight:$regular;
