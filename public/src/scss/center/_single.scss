@@ -1,0 +1,53 @@
+// 공지사항 상세페이지
+.center{
+    &-single{
+        //헤더
+        &__header{
+            padding:calcRem(20rem) 0;
+            border-bottom:solid 1px $lightgray1;
+            margin-bottom:calcRem(20rem);
+            border-top:solid 1px $black1;
+        }
+
+        &__title{
+            @include title1;
+            margin:0;
+        }
+
+        &__date{
+            font-size:calcRem(11rem);
+            line-height:calclH(18,11);
+            letter-spacing: $defaultLetter;
+            font-weight:$regular;
+            color:$darkgray;
+            margin-top:calcRem(10rem);
+        }
+
+
+        //컨텐츠
+        &__cont{
+            @include body7;
+            line-height:calclH(19,12);
+            min-height: calcRem(400rem);
+            border-bottom:solid 1px $gray2;
+
+            strong{
+                font-weight: $medium;
+            }
+
+            p{
+                margin:calcRem(15rem) 0 0;
+
+                &:first-child{
+                    margin:0;
+                }
+            }
+        }
+
+        //목록버튼
+        &__btn{
+            margin:calcRem(30rem) auto 0;
+            width: 25%;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+// 고객센터 공통 및 메인
+@import "../center/main";
+
+// 각 페이지별
+@import "../center/single";     //공지사항 상세페이지
+@import "../center/faq";        //faq 
+@import "../center/inquiry";    //1:1문의
