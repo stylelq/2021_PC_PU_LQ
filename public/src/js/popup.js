@@ -125,6 +125,7 @@ jQuery(function(){
     $(document).on('click', '.js-pop-tab-link', shippingTab);
 
 
+
     //---- 마이페이지::상품리뷰 이미지보기
     // 상품리뷰 이미지 팝업 오픈
     function reviewImgOpen(id){
@@ -177,6 +178,7 @@ jQuery(function(){
     //----
 
 
+
     //------[임시::퍼블 확인용] 데이터 삽입시 지울것---------------------
     // 주소검색 > 검색리스트 > 상세입력
     function addressDepth(){
@@ -198,6 +200,27 @@ jQuery(function(){
         });
     }
     $(document).on('click','.new-address .js-popup-open',addressDepth);
+
+     //고객센터 > 1:1문의하기 리스트 선택 시 퍼블확인용
+     // ㄴ 주문내역 > 리스트 선택 > 콘텐츠 show
+     // ㄴ 상품검색 > 썸네일 선택 > 콘텐츠 show
+     function orderMetaSelect(){
+        closePopup();
+        var popup = this.closest('.popup'),
+            popupId = ['inquiryOrderPop','inquiryProductPop'];
+
+        $('.inquiry-search__cont').removeClass('is-current');
+        for( var i=0,len=popupId.length;i<len;i++){
+            if( popup.id === popupId[i] ){
+                $('.inquiry-search__cont').eq(i).addClass('is-current');
+            }
+        }
+        return false;
+    }
+    $(document).on('click', 
+    '.popup-orderlist__body .detail-Meta__btn>a, .product-post__item', 
+    orderMetaSelect);
+    
     //--------------------------------------------------------------------
 });
 

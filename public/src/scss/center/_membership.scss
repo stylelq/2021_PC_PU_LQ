@@ -1,0 +1,237 @@
+//멤버쉽
+
+// 최상단 탭
+.membership-tab{
+    height:calcRem(35rem);
+    position: relative;
+    margin-bottom:calcRem(50rem);
+
+    //head
+    &__fix{
+        border-top:solid 1px $gray1;
+        background-color: $whiteColor;
+        width:100%;
+        box-sizing: border-box;
+        @include flexNoWrap;
+
+        &:after{
+            @include block-reset;
+        }
+    }
+
+    &__item{
+        width:calc(100% / 2);
+        text-align: center;
+        margin: auto;
+    }
+
+    &__link{
+        display: block;
+        @include body1;
+        padding:calcRem(8rem) 0;
+        position: relative;
+
+        .is-current &{
+            font-weight: $medium;
+        }
+
+        &:after{
+            content:"";
+            height:calcRem(2rem);
+            background-color: $black1;
+            position: absolute;
+            top:-1px;
+            left:0;
+            right:0;
+            opacity: 0;
+
+            .is-current &{
+                opacity: 1;
+            }
+        }
+    }
+
+    //cont
+    &__cont{
+        padding:calcRem(35rem) calcRem(20rem) 0;
+    }
+
+    &__info{
+        display:none;
+
+        &.is-current{
+            display: block;
+        }
+
+        &.detail-tab__info--detail{
+            margin:0 calcRem(-20rem);
+        }
+    }
+}
+
+
+//회원등급
+.ranking{
+    $this:&;
+
+    &-cont{
+        @include flexNoWrap;
+        margin-bottom:calcRem(80rem);
+
+        &__item{
+            width: 25%;
+        }
+    }
+    
+    //회원등급 인포
+    &-info{
+        &__title{
+            text-align: center;
+            position: relative;
+
+            &:after{
+                .ranking-cont__item:not(:last-child) &{
+                    content: '';
+                    position: absolute;
+                    @include vertical-center;
+                    right: 0;
+                    height: 15px;width: 7px;
+                    @include pageBackground('/images/common/ico_slide_next.svg','no-repeat center center / contain');
+                    opacity: 0.4;
+                }
+            }
+        }
+
+        &__name{
+            @include title2;
+            &--gold{
+                color:$gold;
+            }
+
+            &--silver{
+                color:$silver;
+            }
+
+            &--club{
+                color:$club;
+            }
+        }
+
+        &__icon{
+            line-height: 0;
+            width:calcRem(54rem);
+            margin:0 auto calcRem(12rem);
+        }
+
+        &__condition{
+            @include body7;
+        }
+
+        &__coupon{
+            padding-top:calcRem(65rem);
+            position: relative;
+            &:after{
+                .ranking-cont__item:not(:last-child) &{
+                    content: '';
+                    position: absolute;
+                    top: 21%;
+                    right: 0;
+                    height: 79%;width: 1px;
+                    background-color: $lightgray4;
+                }
+            }
+        }
+
+        &__item{
+            margin-top:calcRem(20rem);
+
+            &:first-child{
+                margin-top:0;
+            }
+        }
+
+        &__inner{
+            margin:0;
+        }
+
+        &__price{
+            width:calcRem(90rem);
+            box-sizing: border-box;
+            margin: auto;
+
+            &--box{
+                border:solid 1px $point1;
+                border-radius: 0 calcRem(7rem) 0 calcRem(7rem);
+                height:calcRem(57rem);
+                width:100%;
+                position: relative;
+            }
+
+            &--inner{
+                @include ab-center;
+                width:100%;
+                text-align: center;
+            }
+
+            &--title{
+                font-size: calcRem(10rem);
+                font-weight: $regular;
+                color:$point1;
+                display: block;
+            }
+
+            &--text{
+                font-size: calcRem(14rem);
+                font-weight: $medium;
+                color:$point1;
+                display: block;
+            }
+
+            &--won{
+                font-size: calcRem(10rem);
+                font-weight: $regular;
+            }
+        }
+
+        &__text{
+            margin:0;
+            @include body7;
+            text-align: center;
+            margin-top: calcRem(10rem);
+        }
+    }
+
+    &-notice{
+        margin-top:calcRem(60rem);
+        .center-bullet__item{ @include body3; }
+        
+        &__title{
+            @include title1;
+            margin-bottom:calcRem(13rem);
+        }
+    }
+}
+
+
+//적립금 안내
+.membership-info{
+    margin-bottom: calcRem(60rem);
+
+    &__text{
+        @include body1;
+        margin-bottom: calcRem(40rem);
+    }
+    &__title{
+        @include title1;
+        margin-bottom: calcRem(15rem);
+    }
+    .basic-table tbody th{
+        background-color: transparent;
+    }
+    .center-bullet{
+        margin-top: calcRem(30rem);
+        &__item{
+            @include body1;
+        }
+    }
+}
