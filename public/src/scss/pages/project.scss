@@ -678,15 +678,14 @@
 
     //섹션0
     &-section0 {
-        //padding: calcVw(40vw) calcVw(40vw);
         padding: calcRem(80rem) 0 calcRem(80rem);
-        background: url(https://cdn.louisclub.com/static/fr/img/find/bg_01.jpg) no-repeat center center/cover;
+        background: url(https://cdn.louisclub.com/static/fr/img/find/bg_01.jpg) no-repeat center bottom calcRem(80rem)/cover;
     }
 
     //섹션1
     &-section1 {
+        margin-top: calcRem(-80rem);
         padding-top: 16%;
-        padding-bottom: 30%;
         background: url(https://cdn.louisclub.com/static/fr/img/find/bg_02.jpg) no-repeat center center/cover;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
@@ -748,9 +747,9 @@
         box-sizing: border-box;
         padding-right: calcRem(50rem);
         padding-bottom: calcRem(50rem);
-        top: 50%;
+        top: 57%;
         left: 50%;
-        transform: translate(-50%, -50%) rotate(35deg);
+        transform: translate(-50%, -50%) rotate(30deg);
         transform-origin: center center;
     }
 
@@ -769,11 +768,11 @@
 
     &__box{
         float: left;
-        padding-right: calcRem(150rem);
+        padding-right: calcRem(100rem);
         vertical-align: top;
         box-sizing: border-box;
         &:last-child{
-            padding-right: calcRem(100rem);
+            padding-right: calcRem(160rem);
         }
     }
 
@@ -801,8 +800,8 @@
 
         &--x{
             z-index: 1;
-            margin-left: calcVw(35vw);
-            margin-top: calcVw(10vw);
+            margin-left: calcRem(35rem);
+            margin-top: calcRem(10rem);
             -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
         }
@@ -820,7 +819,7 @@
         display: block;
         margin-top: 0;
         margin-bottom: calcRem(12rem) !important;
-        font-size: calcRem(30rem);
+        font-size: calcRem(34rem);
     }
 
     // 애니메이션 컨텐츠
@@ -976,9 +975,22 @@
         }
     }
 }
+
+.find-artist{
+    &__name{
+        font-size: calcRem(16rem);
+        font-family: GothamM !important;
+        text-transform: uppercase;
+    }
+    &__name + &__name{
+        margin-top: 6%;
+    }
+}
+
 .find-info{
-    display: inline-block;
     margin-top: calcRem(100rem);
+    display: inline-block;
+    width: 100%;
     &__wrap{
         margin: 0 auto;
         width: calcRem(1200rem);
@@ -1041,6 +1053,7 @@
 }
 
 .find-video{
+    margin: calcRem(100rem) 0 calcRem(-80rem);
     margin-top: calcRem(100rem);
     &__wrap{
         margin: 0 auto;
@@ -1090,20 +1103,24 @@
         position: relative;
     }
     &__name{
+        position: absolute;
+        bottom: calcRem(120rem);
         margin: 0 0 calcRem(60rem);
-        font-size: calcRem(18rem);
-        font-weight: 700;
+        font-size: calcRem(16rem);
+        font-weight: 500;
     }
     &__txt1{
         margin: 0;
         font-size: calcRem(24rem);
+        font-weight: 600;
         font-family: GothamM !important;
         text-transform: uppercase;
+        line-height: 1.2;
     }
     &__txt2{
-        margin: calcRem(18rem) 0 0;
-        font-size: calcRem(18rem);
-        font-weight: 700;
+        //margin: calcRem(7rem) 0 0;
+        font-size: calcRem(16rem);
+        font-weight: 500;
     }
     &__list{
         margin: 0;
@@ -1128,7 +1145,7 @@
     &__link{
         display: block;
     }
-    &__dot{
+    /*&__dot{
         position: absolute;
         left: 0;
         right: 0;
@@ -1136,11 +1153,13 @@
         text-align: center;
         z-index: 50;
         span{
+            position: absolute;
             margin: 0 !important;
             width: calcRem(9rem);
             height: calcRem(9rem);
             background: #fff !important;
             opacity: 1 !important;
+            border-radius: 100%;
             &.swiper-pagination-bullet-active{
                 background: #000000 !important;
             }
@@ -1148,62 +1167,49 @@
         span + span{
             margin-left: calcRem(7rem)!important;
         }
-    }
+    }*/
 }
 
-//about 슬라이드
-.project{
-    &-slider{
-        position: relative;
-        &__name{
-            background: url("https://mcdn.louisclub.com/static/mo/img/find/section5_bg.jpg") no-repeat center center/cover;
-        }
-
-        &__wrap{
-            width:100%;
-        }
-
-        &__item{
-            a{
-                display: block;
-                width:100%;
-
-                img{
-                    width:100%;
-                    display: block;
-                }
-            }
-        }
-    }
-
-    &-pagination{
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: calcVw(20vw) !important;
-        text-align: center;
-        width: 100%;
-        z-index: 50;
-        line-height: 0;
-        font-size: 0;
-
-        .swiper-pagination-bullet {
-            margin-left: calcVw(7vw);
-            width: calcVw(6vw);
-            height: calcVw(6vw);
-            background: #fff !important;
-            opacity: 1 !important;
-            display: inline-block;
-            border-radius: 100%;
-            &:first-child{
-                margin-left: 0;
-            }
-        }
-        .swiper-pagination-bullet-active{
-            background: #000 !important;
-        }
-    }
+.find-slide {
+    position: relative;
+    overflow: hidden;
 }
+
+.find-slide__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.find-slide__link {
+    display: block;
+}
+
+.find-slide__dot {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    text-align: center;
+    z-index: 50;
+}
+
+.find-slide__dot span {
+    margin: 0 !important;
+    width: 9px;
+    height: 9px;
+    background: #fff !important;
+    opacity: 1 !important;
+}
+
+.find-slide__dot span.swiper-pagination-bullet-active {
+    background: #000000 !important;
+}
+
+.find-slide__dot span + span {
+    margin-left: 7px !important;
+}
+
 
 //애니메이션
 .motion{
@@ -1471,7 +1477,6 @@
                 background: #fff !important;
                 opacity: 1 !important;
                 display: inline-block;
-                border-radius: 100%;
                 &:first-child{
                     margin-left: 0;
                 }
@@ -1539,6 +1544,7 @@
 
 
 /* FYL1 - Groovyroom */
+
 .fyl{
     // FYL1 - 헤더
     &-header{
