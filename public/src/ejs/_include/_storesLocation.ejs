@@ -1,0 +1,122 @@
+<!-- Location -->
+<div class="stores-filter bg-gray">
+    <div class="stores-filter__list">
+        <div class="stores-filter__item">
+            <select name="Location1" id="Location1" class="form__select js-placeholder" title="지역전체">
+                <option value="" selected="">지역전체</option>
+                <option value="8">경기도</option>
+                <option value="15">경상남도</option>
+                <option value="4">광주광역시</option>
+                <option value="5">대구광역시</option>
+                <option value="3">대전광역시</option>
+                <option value="7">부산광역시</option>
+                <option value="1">서울특별시</option>
+                <option value="6">울산광역시</option>
+                <option value="13">전라남도</option>
+                <option value="12">전라북도</option>
+                <option value="16">제주특별자치도</option>
+                <option value="11">충청남도</option>
+                <option value="10">충청북도</option>
+            </select>
+        </div>
+        <div class="stores-filter__item">
+            <select name="Location2" id="Location2" class="form__select js-placeholder" title="매장전체">
+                <option value="" selected="">매장전체</option>
+                <option value="1">플래그십스토어</option>
+                <option value="2">백화점</option>
+                <option value="3">아울렛</option>
+                <option value="4">면세점</option>
+            </select>
+        </div>
+        <div class="stores-filter__item">
+            <div class="stores-filter__item--inner">
+                <input type="text" class="form__input--text" title="제목" placeholder="매장명 입력">
+                <div class="stores-filter__item--btn">
+                    <a href="javascript:void(0)" class="btn-v1 type-primary">검색</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- list -->
+<div class="stores-location">
+    <div class="stores-location__wrap">
+        <ul class="stores-location__list">
+            <!-- item -->
+            <li class="stores-location__item">
+                <div class="location-item">
+                    <a href="#;" class="location-item__link js-location-more">
+                        <div class="location-item__title">AK플라자 수원점</div>
+                        <div class="location-item__address">수원시 팔달구 매산로1가 18번지 AK플라자 2층</div>
+                    </a>
+                    <div class="location-item__meta">
+                        <a href="tel:0312401242" class="location-item__meta--tel">031-240-1242</a>
+                    </div>
+                </div>
+            </li>
+            <!-- .item -->
+            <!-- item -->
+            <li class="stores-location__item">
+                <div class="location-item">
+                    <a href="#;" class="location-item__link js-location-more">
+                        <div class="location-item__title">AK플라자 원주점</div>
+                        <div class="location-item__address">강원 원주시 봉화로1 AK백화점</div>
+                    </a>
+                    <div class="location-item__meta">
+                        <a href="tel:0312401242" class="location-item__meta--tel">031-240-1242</a>
+                    </div>
+                </div>
+            </li>
+            <!-- .item -->
+            <!-- item -->
+            <li class="stores-location__item">
+                <div class="location-item">
+                    <a href="#;" class="location-item__link js-location-more">
+                        <div class="location-item__title">AK플라자 평택점</div>
+                        <div class="location-item__address">경기도 평택시 평택동 297번지 AK플라자 </div>
+                    </a>
+                    <div class="location-item__meta">
+                        <a href="tel:0312401242" class="location-item__meta--tel">031-240-1242</a>
+                    </div>
+                </div>
+            </li>
+            <!-- .item -->
+            <!-- item -->
+            <li class="stores-location__item">
+                <div class="location-item">
+                    <a href="#;" class="location-item__link js-location-more">
+                        <div class="location-item__title">LF스퀘어 광양점</div>
+                        <div class="location-item__address">경기도 평택시 평택동 297번지 AK플라자 </div>
+                    </a>
+                    <div class="location-item__meta">
+                        <a href="tel:0312401242" class="location-item__meta--tel">031-240-1242</a>
+                    </div>
+                </div>
+            </li>
+            <!-- .item -->
+            <!-- item -->
+            <li class="stores-location__item">
+                <div class="location-item">
+                    <a href="#;" class="location-item__link js-location-more">
+                        <div class="location-item__title">NC 순천점</div>
+                        <div class="location-item__address">경기도 평택시 평택동 297번지 AK플라자 </div>
+                    </a>
+                    <div class="location-item__meta">
+                        <a href="tel:0312401242" class="location-item__meta--tel">031-240-1242</a>
+                    </div>
+                </div>
+            </li>
+            <!-- .item -->
+        </ul>
+        <div class="stores-location__map">
+            <div class="location-item__map">
+                <div class="location-item__content">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3175.2507569999198!2d126.99816211560149!3d37.265480449069045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b431c4eab2813%3A0x87d7679749e70fef!2zQUvtlIzrnbzsnpAg7IiY7JuQ7KCQ!5e0!3m2!1sko!2skr!4v1638240382403!5m2!1sko!2skr" width="600" height="470" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% include ../_include/_paging %>
+</div>
+<!-- .list -->
+<!-- .Location -->

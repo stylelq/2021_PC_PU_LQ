@@ -104,6 +104,10 @@
         position: relative;
         margin-top: calcRem(10rem);
         display: none;
+
+        &.is-current{
+            display: block;
+        }
     }
     &__close{
         position: absolute;

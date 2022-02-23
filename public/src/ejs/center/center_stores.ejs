@@ -1,0 +1,48 @@
+<%
+type = "center"
+page = "center"
+popup = "false"
+lnbTitle = "STORES"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <div class="site-main">
+        <% include ../_include/_lnbSelectCenter %>
+        <section class="service-center">
+            <div class="center-right__head">
+                <p class="center-right__title">STORES</p>
+            </div>
+            <!-- 탭 -->
+            <div class="stores-tab js-fixed-check">
+                <ul class="stores-tab__fix">
+                    <li class="stores-tab__item is-current">
+                        <a href="#;" class="stores-tab__link js-stores-tab">LOCATION</a>
+                    </li>
+                    <li class="stores-tab__item">
+                        <a href="#;" class="stores-tab__link js-stores-tab">GLOBAL</a>
+                    </li>
+                    <li class="stores-tab__item">
+                        <a href="#;" class="stores-tab__link js-stores-tab">SPECIAL</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 탭 -->
+            <!-- 컨텐츠 -->
+            <div class="stores-tab__cont">
+                <div class="stores-tab__info is-current">
+                    <% include ../_include/_storesLocation %>
+                </div>
+                <div class="stores-tab__info">
+                    <% include ../_include/_storesGlobal %>
+                </div>
+                <div class="stores-tab__info">
+                    <% include ../_include/_storesSpecial %>
+                </div>
+            </div>
+            <!-- .컨텐츠 -->
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_cartFix %>
+<% include ../_include/_footer %>
