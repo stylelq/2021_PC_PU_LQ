@@ -3,9 +3,8 @@
     &-single{
         //헤더
         &__header{
-            padding:calcRem(20rem) 0;
+            padding:calcRem(30rem) calcRem(20rem);
             border-bottom:solid 1px $lightgray1;
-            margin-bottom:calcRem(20rem);
             border-top:solid 1px $black1;
         }
 
@@ -30,6 +29,8 @@
             line-height:calclH(19,12);
             min-height: calcRem(400rem);
             border-bottom:solid 1px $gray2;
+            padding:calcRem(30rem) calcRem(20rem);
+            box-sizing: border-box;
 
             strong{
                 font-weight: $medium;
