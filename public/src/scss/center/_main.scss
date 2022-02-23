@@ -49,6 +49,7 @@
     &__title{
         @include heading3;
         margin-top: calcRem(10rem);
+        margin-bottom: calcRem(24rem);
     }
 }
 .center-section{
@@ -190,6 +191,9 @@
 
 //상품리뷰
 .center-review{
+    .center-section__title{
+        padding-top: calcRem(80rem);
+    }
     .review-list{ 
         .review-post__list{
             @include flexNoWrap;
@@ -304,34 +308,38 @@
         color: $darkgray;
     }
 }
-
 // QUICK MENU
-.quick-list{
-    padding-top: calcRem(26rem);
-    &__inner{
-        @include flexNoWrap;
-        @include flex-alignCenter;
+.center-quick{
+    .center-section__title{
+        padding-top: calcRem(90rem);
     }
-    &__item{
-        width: 25%;
-        margin: auto;
-        text-align: center;
-        @include body7;
-        position: relative;
-
-        &:not(:last-child):after{
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 0;
-            height: 100%;
-            border-right: 1px solid $lightgray4;
+    .quick-list{
+        padding-top: calcRem(26rem);
+        &__inner{
+            @include flexNoWrap;
+            @include flex-alignCenter;
         }
-    }
-    .quick-item{
-        &__img{
-            margin-bottom: calcRem(10rem);
+        &__item{
+            width: 25%;
+            margin: auto;
+            text-align: center;
+            @include body7;
+            position: relative;
+    
+            &:not(:last-child):after{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 0;
+                height: 100%;
+                border-right: 1px solid $lightgray4;
+            }
+        }
+        .quick-item{
+            &__img{
+                margin-bottom: calcRem(10rem);
+            }
         }
     }
 }

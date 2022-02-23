@@ -66,7 +66,6 @@ jQuery(function () {
       $(this).addClass('is-active');
       $('.main-search__top').hide(); // 버튼클릭시 검색결과 텍스트 숨기기
 
-      console.log($(this).find('a').text());
       return false;
     }
 
@@ -223,7 +222,7 @@ jQuery(function () {
         //li
     tab = '[class $= -tab__fix]',
         //ul
-    contents = $('.detail-tab__info'),
+    contents = $('[class *= -tab__info]'),
         //tab content
     idx = $(this).parent().index();
     $(this).closest(tab).children().removeClass('is-current');
@@ -252,7 +251,7 @@ jQuery(function () {
         //li
     tab = '[class $= -tab__fix]',
         //ul
-    contents = $('.payment-section-tab__info'),
+    contents = $('[class *= -tab__info]'),
         //tab content
     idx = $(this).parent().index();
     $(this).closest(tab).children().removeClass('is-current');
@@ -271,7 +270,41 @@ jQuery(function () {
     return false;
   }
 
-  $(document).on('click', '.js-payment-open', paymentTab); //--END[탭] ----------------------
+  $(document).on('click', '.js-payment-open', paymentTab); // 고객센터 > 멤버쉽 탭
+
+  function membershipTab() {
+    var item = '[class $= __item]',
+        //li
+    tab = '[class $= -tab__fix]',
+        //ul
+    contents = $('[class *= -tab__info]'),
+        //tab content
+    idx = $(this).parent().index();
+    $(this).closest(tab).children().removeClass('is-current');
+    $(this).parent(item).addClass('is-current');
+    contents.removeClass('is-current');
+    contents.eq(idx).addClass('is-current');
+    return false;
+  }
+
+  $(document).on('click', '.js-membership-tab', membershipTab); //스토어 탭
+
+  function storesTab() {
+    var item = '[class $= __item]',
+        //li
+    tab = '[class $= -tab__fix]',
+        //ul
+    contents = $('[class *= -tab__info]'),
+        //tab content
+    idx = $(this).parent().index();
+    $(this).closest(tab).children().removeClass('is-current');
+    $(this).parent(item).addClass('is-current');
+    contents.removeClass('is-current');
+    contents.eq(idx).addClass('is-current');
+    return false;
+  }
+
+  $(document).on('click', '.js-stores-tab', storesTab); //--END[탭] ----------------------
 
   /*---------------------
   * [select] :: custom 
@@ -299,7 +332,7 @@ jQuery(function () {
     function selectedTextChange(e) {
       var link = e.target,
           value = link.innerText,
-          select = link.parentNode.parentNode;
+          select = link.parentNode.parentNode; //ul
 
       if (link.parentNode.className === optName.replace('.', '')) {
         //hidden input 에 value 값 넣기
@@ -652,43 +685,24 @@ jQuery(function () {
       effect: "fade",
       loop: true
     });
-  } //매장정보 슬라이드
+  } //스토어 스페셜 슬라이드
 
 
-  if ($('.js-find-slide').length > 0) {
-    var findSlide = new Swiper('.js-find-slide', {
+  if ($('.special-slide').length > 0) {
+    var specialSlide = new Swiper('.special-slide__container', {
+      observer: true,
+      observeParents: true,
+      watchOverflow: true,
       loop: true,
-      speed: 500,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false
-      },
+      slidesPerView: 1,
       pagination: {
-        el: '.find-slide__dot',
-        clickable: true
+        el: ".special-slide__pagination",
+        type: "fraction"
+      },
+      navigation: {
+        nextEl: ".special-slide__next",
+        prevEl: ".special-slide__prev"
       }
-    });
-  }
-
-  findSlide.on('slideChange', function () {
-    var num = findSlide.realIndex + 1;
-    var findStoreElem = document.querySelectorAll('.find-store__item');
-    Array.prototype.forEach.call(findStoreElem, function (findElem) {
-      findElem.classList.remove('is-active');
-    });
-    document.querySelector(".find-store__item[data-num='" + num + "']").classList.add('is-active');
-  });
-  /**
-   * ScrollMagic: Opacity
-   */
-
-  if ($('.motion-up').length > 0) {
-    var controller = new ScrollMagic.Controller();
-    $('.motion-up').each(function () {
-      var Opacity = new ScrollMagic.Scene({
-        triggerElement: this.children[0],
-        triggerHook: 0.9
-      }).reverse(false).setClassToggle(this, 'motion-up--active').addTo(controller);
     });
   } //--END[swiper slider]-----------------------------
 
