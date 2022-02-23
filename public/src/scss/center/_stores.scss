@@ -1,0 +1,350 @@
+//스토어
+
+//--- 최상단 탭 --------
+.stores-tab{
+    height:calcRem(45rem);
+    position: relative;
+    margin-bottom:calcRem(50rem);
+
+    //head
+    &__fix{
+        border-top:solid 1px $gray1;
+        background-color: $whiteColor;
+        width:100%;
+        box-sizing: border-box;
+        @include flexNoWrap;
+
+        &:after{
+            @include block-reset;
+        }
+    }
+
+    &__item{
+        width:calc(100% / 3);
+        text-align: center;
+        margin: auto;
+    }
+
+    &__link{
+        display: block;
+        @include body1;
+        padding:calcRem(8rem) 0;
+        position: relative;
+
+        .is-current &{
+            font-weight: $medium;
+        }
+
+        &:after{
+            content:"";
+            height:calcRem(2rem);
+            background-color: $black1;
+            position: absolute;
+            top:-1px;
+            left:0;
+            right:0;
+            opacity: 0;
+
+            .is-current &{
+                opacity: 1;
+            }
+        }
+    }
+
+    &__info{
+        display:none;
+
+        &.is-current{
+            display: block;
+        }
+
+        &.detail-tab__info--detail{
+            margin:0 calcRem(-20rem);
+        }
+    }
+}
+
+
+//--- location --------
+.stores{
+    &-filter{
+        padding: calcRem(20rem);
+        box-sizing: border-box;
+        &__list{
+            @include flexNoWrap;
+            @include flex-alignCenter;
+        }
+        &__item{
+            margin-right: 5px;
+            
+            .form__select{
+                background-color: $whiteColor;
+            }
+
+            &:last-child{
+                width: 100%;
+                margin-right: 0;
+            }
+
+            &--inner{
+                @include flexNoWrap;
+            }
+            &--btn{
+                display: inline-block;
+                .btn-v1{
+                    padding: calcRem(6rem) 0;
+                    width: calcRem(85rem);
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    
+    &-location{
+        margin-top: calcRem(40rem);
+
+        &__wrap{
+            border-top: 1px solid $black1;
+            border-bottom: 1px solid $gray2;
+            padding: calcRem(20rem);
+            // box-sizing: border-box;
+
+            @include flexNoWrap;
+        }
+        &__list{
+            width: calcRem(280rem);
+            margin-right: calcRem(30rem);
+        }  
+        &__map{
+            width: calcRem(550rem);
+            max-height: calcRem(579rem);
+            background-color: rgb(244, 248, 250);
+            overflow: hidden;
+
+            &>div,
+            &>iframe{
+                min-width: 100%;
+                min-height: 100%;
+            }
+        }  
+
+        .location-item{
+            margin-bottom:calcRem(20rem);
+            font-size: calcRem(11rem);
+            font-weight: $light;
+
+            &__title{
+                @include body8;
+            }
+            &__meta{
+                margin-top:calcRem(10rem);
+                &--tel{
+                    color: $darkgray;
+                }
+            }
+            &__country{
+                color: $grayTextColor;
+                margin-bottom:calcRem(7rem);
+            }
+        }
+
+        &__item:not(:nth-child(5n)){
+            border-bottom: 1px solid $gray2;
+            margin-bottom:calcRem(20rem);
+        }
+
+        &__item:nth-child(5n){
+            .location-item{
+                margin-bottom:0;
+            }
+        }
+        
+    }
+}
+
+
+//--- global ----------
+.stores-global{
+    &__section:first-child{
+        margin-bottom:calcRem(60rem);
+    }
+    .stores-location{
+        margin-top:calcRem(10rem);
+    }
+    &__title{
+        @include title2;
+    }
+    &__list {
+        overflow: hidden;
+        line-height:0;
+        font-size:0;
+        margin-top: calcRem(20rem);
+    }
+
+    &__inner{
+        // white-space: nowrap;
+        @include flexNoWrap;
+        @include flex-alignCenter;
+        // justify-content: space-around;
+    }
+
+    &__item{
+        // display: inline-block;
+        width:calcRem(128rem);
+        // margin-right:calcRem(15rem);
+        // vertical-align: top;
+        margin: auto;
+
+        &:first-child{ margin-left:0; }
+        &:last-child{ margin-right:0; }
+    }
+
+    .global-item{
+        &__text{
+            @include body7;
+            text-align: center;
+            margin-top: calcRem(15rem);
+        }
+    }
+}
+
+
+//--- special ---------
+.stores-special{
+    &__item:not(:last-child){
+        margin-bottom: calcRem(40rem);
+    }
+ 
+    .special-item{
+        &__link{
+            display: block;
+            position: relative;
+        }
+        &__title{
+            @include ab-center;
+            @include heading3;
+            color: $whiteColor;
+        }
+    }
+}
+
+
+//--- special 상세페이지 ---------
+.special-single{
+    &__title{
+        margin-top:calcRem(60rem);
+        margin-bottom:calcRem(10rem);
+        text-align: center;
+        @include heading4;
+        font-weight: $medium;
+    }
+    &__sub{
+        display: block;
+        @include body3;
+        text-align: center;
+        color: $darkgray;
+    }
+    &__cont{
+        margin-top:calcRem(50rem);
+        @include body1;
+        p{  
+            margin-bottom: calcRem(30rem);
+        }
+        .title{
+            font-size: calcRem(14rem);
+            font-weight: $medium;
+        }
+        .email{
+            @include body7;
+            color: $darkgray;
+            margin-bottom: calcRem(30rem);
+        }
+    }
+    &__btn{
+        width:calcRem(200rem);
+        margin: auto;
+        padding-top: calcRem(20rem);
+        .btn-v1{ @include body6; }
+    }
+
+    //슬라이드
+    .special-slide{
+        margin-bottom:calcRem(32rem);
+     
+        &__inner{
+            line-height:0;
+            width:100%;
+        }
+
+        .swiper-container{
+            height: 460px;
+        }
+    
+        &__img{
+            width:100%;
+            display: block;
+        }
+    
+        //페이징
+        &__pagination{
+            text-align: center;
+            font-size:0;
+            line-height:0;
+            margin-top:calcRem(18rem);
+    
+            .swiper-pagination{
+                &-current{
+                    font-size:calcRem(12rem);
+                    line-height:calclH(19,12);
+                    padding-right:calcRem(11rem);
+                    position: relative;
+    
+                    &:after{
+                        content:"";
+                        width:1px;
+                        height:calcRem(10rem);
+                        background-color: $gray1;
+                        position: absolute;
+                        right:0;
+                        @include vertical-center;
+                    }
+                }
+    
+                &-total{
+                    font-size:calcRem(12rem);
+                    line-height:calclH(19,12);
+                    padding-left:calcRem(10rem);
+                }
+            }
+        }
+    
+        // 버튼
+        &__container{
+            position: relative;
+        }
+        .swiper{
+            &-button{
+                &-next{
+                    @include vertical-center;
+                    width: calcRem(15rem);
+                    height: calcRem(30rem);
+                    position: absolute;
+                    right: calcRem(10rem);
+                    background: url('../../images/collection/list/collection_slide_next_w.png') no-repeat center center /contain;
+                    z-index: 100;
+                }
+                &-prev{
+                    @include vertical-center;
+                    width: calcRem(15rem);
+                    height: calcRem(30rem);
+                    position: absolute;
+                    left: calcRem(10rem);
+                    background: url('../../images/collection/list/collection_slide_prev_w.png') no-repeat center center /contain;
+                    z-index: 100;
+                }
+            }
+        }
+    }
+
+
+}
