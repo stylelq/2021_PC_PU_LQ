@@ -47,11 +47,14 @@
 
 //detail thumb
 .detail-thumb{
+    &__container.swiper-container{
+        height: calcRem(720rem);
+    }
     //썸네일
     &__inner{
         position: relative;
         width:100%;
-        height: calcRem(740rem);
+        height: calcRem(720rem);
 
         &:after{
             content:"";
