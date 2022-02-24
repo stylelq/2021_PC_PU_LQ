@@ -16,19 +16,6 @@ jQuery(function(){
         $('#' + el).addClass('is-active');
         $('.popup__body').scrollTop(0);
 
-        // mobile 디바이스 하단 네비게이션 버튼 바
-        // var vh = window.innerHeight * 0.01;  
-        // document.documentElement.style.setProperty('--vh', vh+'px');
-
-        // window.addEventListener('resize', function(){
-        //     var vh = window.innerHeight * 0.01;
-        //     document.documentElement.style.setProperty('--vh', vh+'px');
-        // });
-        // window.addEventListener('touchmove', function(){
-        //     var vh = window.innerHeight * 0.01 //window.innerHeight/100;
-        //     document.documentElement.style.setProperty('--vh', vh+'px');
-        // });
-
         // // 전체 팝업 body scroll 없앰
         // $('html').addClass('is-hidden'); 
 
@@ -109,20 +96,20 @@ jQuery(function(){
     $(document).on('click', '.js-popup-close', closePopup);
 
     //배송지 정보 탭
-    function shippingTab() {
-        var idx = $(this).parent('li').index();
-        var shippingIdx = $('.shipping-tab__item:nth-child(4)');
-        $(this).parent('li').addClass('is-current').siblings('li').removeClass('is-current');
-        $('.js-pop-tab-cont').eq(idx).addClass('is-current').siblings('.js-pop-tab-cont').removeClass('is-current');
-        $('html, body').animate({scrollTop: $('.popup__body').offset().top}, 340);
+    // function shippingTab() {
+    //     var idx = $(this).parent('li').index();
+    //     var shippingIdx = $('.shipping-tab__item:nth-child(4)');
+    //     $(this).parent('li').addClass('is-current').siblings('li').removeClass('is-current');
+    //     $('.js-pop-tab-cont').eq(idx).addClass('is-current').siblings('.js-pop-tab-cont').removeClass('is-current');
+    //     $('html, body').animate({scrollTop: $('.popup__body').offset().top}, 340);
 
-        if(shippingIdx.hasClass('is-current')){
-            $('#shippingPop .popup-confirm__link').text('확인');
-        }else{
-            $('#shippingPop .popup-confirm__link').text('선택 주소 사용');
-        }
-    }
-    $(document).on('click', '.js-pop-tab-link', shippingTab);
+    //     if(shippingIdx.hasClass('is-current')){
+    //         $('#shippingPop .popup-confirm__link').text('확인');
+    //     }else{
+    //         $('#shippingPop .popup-confirm__link').text('선택 주소 사용');
+    //     }
+    // }
+    // $(document).on('click', '.js-pop-tab-link', shippingTab);
 
 
 
