@@ -675,7 +675,49 @@ jQuery(function(){
         });
     }
 
-  //--END[swiper slider]-----------------------------
+    // project - about 매장슬라이드
+    if($('.js-find-slide').length > 0) {
+        var findSlide = new Swiper('.js-find-slide', {
+            loop: true,
+            speed: 500,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.find-slide-pagination',
+                clickable: true,
+            },
+        });
+
+        findSlide.on('slideChange',function(){
+            var num = findSlide.realIndex + 1;
+            var findStoreElem = document.querySelectorAll('.find-store__item');
+            Array.prototype.forEach.call(findStoreElem,function(findElem){
+                findElem.classList.remove('is-active');
+            })
+            document.querySelector(".find-store__item[data-num='"+num+"']").classList.add('is-active');
+        })
+
+
+
+    }
+
+    // 스크롤매직 모션사용
+    if($('.motion-up').length > 0){
+        var controller = new ScrollMagic.Controller();
+        $('.motion-up').each(function(){
+            var Opacity = new ScrollMagic.Scene({
+                triggerElement: this.children[0],
+                triggerHook:0.9
+            })
+                .reverse(false)
+                .setClassToggle(this, 'motion-up--active')
+                .addTo(controller);
+        });
+    }
+
+    //--END[swiper slider]-----------------------------
 
 
 

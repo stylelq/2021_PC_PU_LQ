@@ -638,9 +638,6 @@
 }
 
 // project - about: 섹션
-.site-project{
-    margin-bottom: calcRem(-50rem);
-}
 
 .find{
     //기본값
@@ -702,6 +699,7 @@
 
     //섹션2
     &-section2 {
+        margin-bottom: calcRem(-120rem);
         overflow: hidden;
         background: url(https://cdn.louisclub.com/static/fr/img/find/bg_03.jpg) no-repeat center center/cover;
         &__top {
@@ -1118,7 +1116,6 @@
         line-height: 1.2;
     }
     &__txt2{
-        //margin: calcRem(7rem) 0 0;
         font-size: calcRem(16rem);
         font-weight: 500;
     }
@@ -1134,7 +1131,7 @@
         }
     }
 }
-.find-slide {
+.find-slide{
     position: relative;
     overflow: hidden;
     &__list{
@@ -1145,72 +1142,33 @@
     &__link{
         display: block;
     }
-    /*&__dot{
+    &-pagination{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: calcRem(10rem);
+        bottom: calcRem(20rem) !important;
         text-align: center;
+        width: 100%;
         z-index: 50;
-        span{
-            position: absolute;
-            margin: 0 !important;
-            width: calcRem(9rem);
-            height: calcRem(9rem);
+        line-height: 0;
+        font-size: 0;
+        .swiper-pagination-bullet {
+            margin-left: 18px;
+            width: 8px;
+            height: 8px;
             background: #fff !important;
             opacity: 1 !important;
+            display: inline-block;
             border-radius: 100%;
-            &.swiper-pagination-bullet-active{
-                background: #000000 !important;
+            &:first-child{
+                margin-left: 0;
             }
         }
-        span + span{
-            margin-left: calcRem(7rem)!important;
+        .swiper-pagination-bullet-active{
+            background: #000 !important;
         }
-    }*/
+    }
 }
-
-.find-slide {
-    position: relative;
-    overflow: hidden;
-}
-
-.find-slide__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.find-slide__link {
-    display: block;
-}
-
-.find-slide__dot {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 10px;
-    text-align: center;
-    z-index: 50;
-}
-
-.find-slide__dot span {
-    margin: 0 !important;
-    width: 9px;
-    height: 9px;
-    background: #fff !important;
-    opacity: 1 !important;
-}
-
-.find-slide__dot span.swiper-pagination-bullet-active {
-    background: #000000 !important;
-}
-
-.find-slide__dot span + span {
-    margin-left: 7px !important;
-}
-
-
 //애니메이션
 .motion{
     &-up{
