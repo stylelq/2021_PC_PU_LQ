@@ -739,6 +739,39 @@ jQuery(function () {
         triggerHook: 0.9
       }).reverse(false).setClassToggle(this, 'motion-up--active').addTo(controller);
     });
-  } //--END[swiper slider]-----------------------------
+  }
 
+  if ($('.js-findIntroduce1-slide').length > 0) {
+    var findIntroduceSlide1 = new Swiper('.js-findIntroduce1-slide', {
+      loop: true,
+      speed: 500,
+      pagination: {
+        el: '.findIntroduce-slide__dot',
+        clickable: true
+      }
+    });
+  }
+
+  if ($('.js-findIntroduce2-slide').length > 0) {
+    var findIntroduceSlide2 = new Swiper('.js-findIntroduce2-slide', {
+      loop: true,
+      speed: 500,
+      pagination: {
+        el: '.findIntroduce-slide__dot2',
+        clickable: true
+      }
+    });
+  }
+
+  function CopyUrlToClipboard(e) {
+    e.preventDefault();
+    var obShareUrl = document.getElementById("ShareUrl");
+    obShareUrl.value = window.document.location.href;
+    obShareUrl.select();
+    document.execCommand("copy");
+    obShareUrl.blur();
+  }
+
+  var copyBtn = document.querySelector('.js-url-copy');
+  copyBtn.addEventListener('click', CopyUrlToClipboard); //--END[swiper slider]-----------------------------
 }); //jQuery
