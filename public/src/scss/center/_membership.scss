@@ -2,7 +2,7 @@
 
 // 최상단 탭
 .membership-tab{
-    height:calcRem(35rem);
+    height:calcRem(42rem);
     position: relative;
     margin-bottom:calcRem(50rem);
 
@@ -28,7 +28,8 @@
     &__link{
         display: block;
         @include body1;
-        padding:calcRem(8rem) 0;
+        // padding:calcRem(8rem) 0;
+        padding-top:calcRem(15rem);
         position: relative;
 
         .is-current &{
@@ -53,7 +54,7 @@
 
     //cont
     &__cont{
-        padding:calcRem(35rem) calcRem(20rem) 0;
+        padding:calcRem(20rem) calcRem(20rem) 0;
     }
 
     &__info{
@@ -202,12 +203,12 @@
     }
 
     &-notice{
-        margin-top:calcRem(60rem);
+        margin-top:calcRem(80rem);
         .center-bullet__item{ @include body3; }
         
         &__title{
             @include title1;
-            margin-bottom:calcRem(13rem);
+            margin-bottom:calcRem(20rem);
         }
     }
 }
@@ -219,14 +220,22 @@
 
     &__text{
         @include body1;
+        margin-top: 0;
         margin-bottom: calcRem(40rem);
     }
     &__title{
         @include title1;
         margin-bottom: calcRem(15rem);
     }
-    .basic-table tbody th{
-        background-color: transparent;
+    .basic-table{
+        tbody th{
+            background-color: transparent;
+        }
+        tbody td{
+            .basic-table__sub{
+                font-size: calcRem(14rem);
+            }
+        }
     }
     .center-bullet{
         margin-top: calcRem(30rem);
