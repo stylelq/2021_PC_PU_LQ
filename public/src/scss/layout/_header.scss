@@ -209,3 +209,65 @@
     }
   }
 }
+
+/*로그인 후 리스트 오픈*/
+.header-mypage{
+    display:none;
+    position:absolute;
+    left:60%;
+    transform: translateX(-50%);
+    z-index:60;
+    &.is-active{display:block;}
+    &__list{
+      position:relative;
+      width:120px;
+      margin:26px 0 0 0;
+      padding:20px;
+      border:1px solid #ccc;
+      background-color:#fff;
+      box-sizing:border-box;
+      &:before{
+        display:block;
+        position:absolute;
+        top:-7px;
+        left:0;
+        right:0;
+        width:14px;
+        height:8px;
+        margin:0 auto;
+        background: url(../../images/common/icon_triangle.png) no-repeat center center / contain;
+        content:'';
+        z-index:10;
+      }
+      &:after{
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        width:14px;
+        height:0;
+        margin:0 auto;
+        border-top:1px solid #fff;
+        z-index:10;
+        content:'';
+      }
+    }
+    &__item{
+      list-style:none;
+      text-align: left;
+      & + &{
+        margin-top:8px;
+      }
+    }
+    &__link{
+      position:relative;
+      overflow:hidden;
+      display:inline-block;
+      color:#000 !important;
+      &:hover{
+        &:after{width:100%;}
+      }
+      &:after{position:absolute; bottom:0; left:0; width:0; height:0; border-bottom:1px solid $black1; transition: width 0.2s; content:'';}
+    }
+}

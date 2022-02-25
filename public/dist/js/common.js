@@ -817,6 +817,16 @@ jQuery(function () {
 
   if (copyBtn) {
     copyBtn.addEventListener('click', CopyUrlToClipboard);
-  } //--END[swiper slider]-----------------------------
+  } // 로그인 후 - 상단메뉴클릭 시 레이어 노출
 
+
+  $('.js-mypage').on('click', function (e) {
+    e.preventDefault();
+
+    if ($('.header-mypage').hasClass('is-active')) {
+      $('.header-mypage').removeClass('is-active');
+    } else {
+      $('.header-mypage').addClass('is-active');
+    }
+  }); //--END[swiper slider]-----------------------------
 }); //jQuery
