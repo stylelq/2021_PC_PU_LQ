@@ -535,6 +535,10 @@ jQuery(function () {
       watchOverflow: true,
       slidesPerView: 3,
       slidesPerGroup: 3,
+      //   effect: 'fade',
+      //   fadeEffect: {
+      //       crossFade: true
+      //   },    
       navigation: {
         nextEl: ".detail-thumb--next",
         prevEl: ".detail-thumb--prev"
@@ -773,5 +777,9 @@ jQuery(function () {
   }
 
   var copyBtn = document.querySelector('.js-url-copy');
-  copyBtn.addEventListener('click', CopyUrlToClipboard); //--END[swiper slider]-----------------------------
+
+  if (copyBtn) {
+    copyBtn.addEventListener('click', CopyUrlToClipboard);
+  } //--END[swiper slider]-----------------------------
+
 }); //jQuery

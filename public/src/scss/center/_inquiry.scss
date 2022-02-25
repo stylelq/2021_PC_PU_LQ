@@ -1,11 +1,17 @@
 //1:1문의
 
 // [layout]
-.center-inquiry__wrap{
-    //상단 타이틀
-    .center-right__head{
-        border-bottom: 1px solid $black1;
+//상단 타이틀
+.center-right__head{
+    border-bottom: 1px solid $black1;
+    min-height: calcRem(68rem);
+    box-sizing: border-box;
+    .center-right__title{
+        margin: 0;
+        padding-top:  calcRem(20rem);
     }
+}
+.center-inquiry__wrap{
     //하단 버튼
     .btn-inquiry__group{
         padding-top: calcRem(40rem);
@@ -21,6 +27,7 @@
         }
     }
 }
+
 .center-inquiry{
     padding: calcRem(30rem) 0 calcRem(20rem);
 
