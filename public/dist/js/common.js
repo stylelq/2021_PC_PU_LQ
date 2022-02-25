@@ -535,6 +535,10 @@ jQuery(function () {
       watchOverflow: true,
       slidesPerView: 3,
       slidesPerGroup: 3,
+      //   effect: 'fade',
+      //   fadeEffect: {
+      //       crossFade: true
+      //   },    
       navigation: {
         nextEl: ".detail-thumb--next",
         prevEl: ".detail-thumb--prev"
