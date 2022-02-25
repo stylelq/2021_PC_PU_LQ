@@ -749,9 +749,10 @@ jQuery(function(){
         obShareUrl.blur();
     }
 
-    const copyBtn = document.querySelector('.js-url-copy');
-    copyBtn.addEventListener('click',CopyUrlToClipboard)
-
+    var copyBtn = document.querySelector('.js-url-copy');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', CopyUrlToClipboard);
+    }
 
     //--END[swiper slider]-----------------------------
 
