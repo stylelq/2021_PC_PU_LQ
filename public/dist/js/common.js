@@ -777,5 +777,9 @@ jQuery(function () {
   }
 
   var copyBtn = document.querySelector('.js-url-copy');
-  copyBtn.addEventListener('click', CopyUrlToClipboard); //--END[swiper slider]-----------------------------
+
+  if (copyBtn) {
+    copyBtn.addEventListener('click', CopyUrlToClipboard);
+  } //--END[swiper slider]-----------------------------
+
 }); //jQuery
