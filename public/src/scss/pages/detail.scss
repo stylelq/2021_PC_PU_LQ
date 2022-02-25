@@ -566,6 +566,19 @@
             overflow: visible;
         }
 
+        // //다중슬라이드 fade-in
+        // &__wrapper{
+        //     transition-property: opacity;
+        // }
+        // &__item{
+        //     opacity: 0;
+        //     &.swiper-slide-active,
+        //     &.swiper-slide-next,
+        //     &.swiper-slide-next + &{
+        //         opacity: 1;
+        //     }
+        // }
+
         //페이징
         &__pagination{
             margin-top:calcRem(40rem);

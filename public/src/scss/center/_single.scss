@@ -1,4 +1,11 @@
 // 공지사항 상세페이지
+.center-notice__single{
+    //상단 타이틀
+    .center-right__head{
+        border-bottom: 0;
+    }
+}
+
 .center{
     &-single{
         //헤더

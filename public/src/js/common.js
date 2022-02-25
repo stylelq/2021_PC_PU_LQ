@@ -479,6 +479,7 @@ jQuery(function(){
 /*---------------------
   * [swiper slider] 
   ---------------------*/
+  //상품상세
   if ($('.detail-thumb').length > 0) {
     var detailThumbSlide = new Swiper('.detail-thumb__container', {
       observer: true,
@@ -492,8 +493,41 @@ jQuery(function(){
       navigation: {
         nextEl: ".detail-thumb--next",
         prevEl: ".detail-thumb--prev"
+      },
+      on:{
+        slideChange:function(){
+            $('.detail-thumb--prev, .detail-thumb--next').removeClass('swiper-button-disabled')
+            if( this.activeIndex === 0 ){
+                $('.detail-thumb--prev').addClass('swiper-button-disabled')
+            }
+            if( this.activeIndex === this.imagesLoaded - 1){
+                $('.detail-thumb--next').addClass('swiper-button-disabled')
+            }
+        },
+        click:function(){
+            $('.detail-thumb--prev, .detail-thumb--next').removeClass('swiper-button-disabled')
+            if( this.activeIndex === 0 ){
+                $('.detail-thumb--prev').addClass('swiper-button-disabled')
+            }
+            if( this.activeIndex === this.imagesLoaded - 1){
+                $('.detail-thumb--next').addClass('swiper-button-disabled')
+            }
+            console.group('-----------');
+            console.log('click : ',this)
+            console.groupEnd()
+        }
       }
     });
+
+    function slideButtonClassName(){
+        $('.detail-thumb--prev, .detail-thumb--next').removeClass('swiper-button-disabled')
+        if( this.activeIndex === 0 ){
+            $('.detail-thumb--prev').addClass('swiper-button-disabled')
+        }
+        if( this.activeIndex === this.imagesLoaded - 1){
+            $('.detail-thumb--next').addClass('swiper-button-disabled')
+        }
+    }
   } 
 
   //연관제품 슬라이드
@@ -503,7 +537,7 @@ jQuery(function(){
       observeParents: true,
       watchOverflow: true,
       slidesPerView: 3,
-      slidesPerGroup: 3,
+      slidesPerGroup: 3,  
       navigation: {
         nextEl: ".detail-thumb--next",
         prevEl: ".detail-thumb--prev"
@@ -754,9 +788,22 @@ jQuery(function(){
         copyBtn.addEventListener('click', CopyUrlToClipboard);
     }
 
+    // 로그인 후 - 상단메뉴클릭 시 레이어 노출
+    $('.js-mypage').on('click',function(e){
+        e.preventDefault();
+        if ($('.header-mypage').hasClass('is-active')) {
+            $('.header-mypage').removeClass('is-active');
+        }else{
+            $('.header-mypage').addClass('is-active');
+        }
+    });
+
     //--END[swiper slider]-----------------------------
 
 
 
 
 });//jQuery
+
+
+
