@@ -481,6 +481,19 @@ jQuery(function(){
   ---------------------*/
   //상품상세
   if ($('.detail-thumb').length > 0) {
+    function slideButtonClassName(ele){
+        $('.detail-thumb--prev, .detail-thumb--next').removeClass('swiper-button-disabled')
+        if( ele.activeIndex === 0 ){
+            $('.detail-thumb--prev').addClass('swiper-button-disabled')
+        }
+        if( ele.activeIndex === ele.imagesLoaded - 1){
+            $('.detail-thumb--next').addClass('swiper-button-disabled')
+        }
+        console.group('-----------');
+        console.log('ee : ',ele)
+        console.groupEnd()
+    }
+
     var detailThumbSlide = new Swiper('.detail-thumb__container', {
       observer: true,
       observeParents: true,
@@ -495,39 +508,14 @@ jQuery(function(){
         prevEl: ".detail-thumb--prev"
       },
       on:{
-        slideChange:function(){
-            $('.detail-thumb--prev, .detail-thumb--next').removeClass('swiper-button-disabled')
-            if( this.activeIndex === 0 ){
-                $('.detail-thumb--prev').addClass('swiper-button-disabled')
-            }
-            if( this.activeIndex === this.imagesLoaded - 1){
-                $('.detail-thumb--next').addClass('swiper-button-disabled')
-            }
+        slideChange: function(){
+            slideButtonClassName(this)
         },
         click:function(){
-            $('.detail-thumb--prev, .detail-thumb--next').removeClass('swiper-button-disabled')
-            if( this.activeIndex === 0 ){
-                $('.detail-thumb--prev').addClass('swiper-button-disabled')
-            }
-            if( this.activeIndex === this.imagesLoaded - 1){
-                $('.detail-thumb--next').addClass('swiper-button-disabled')
-            }
-            console.group('-----------');
-            console.log('click : ',this)
-            console.groupEnd()
+            slideButtonClassName(this)
         }
       }
     });
-
-    function slideButtonClassName(){
-        $('.detail-thumb--prev, .detail-thumb--next').removeClass('swiper-button-disabled')
-        if( this.activeIndex === 0 ){
-            $('.detail-thumb--prev').addClass('swiper-button-disabled')
-        }
-        if( this.activeIndex === this.imagesLoaded - 1){
-            $('.detail-thumb--next').addClass('swiper-button-disabled')
-        }
-    }
   } 
 
   //연관제품 슬라이드

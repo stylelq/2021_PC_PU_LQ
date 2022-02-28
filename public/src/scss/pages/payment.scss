@@ -313,9 +313,9 @@
         @include flexWrap;
         -webkit-box-orient: vertical; -ms-flex-direction: column;
         flex-direction: column;
-        height: calcRem(210rem);
+        height: calcRem(150rem); //210
         padding: calcRem(30rem) 0;
-        box-sizing: border-box;
+        // box-sizing: border-box;
 
         &:first-child{
             border-top: 1px solid $gray2;
