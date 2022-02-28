@@ -22,8 +22,6 @@
 
     
     
-        <link rel="stylesheet" href="../../css/pages/join.css">
-    
     
     
     
@@ -34,6 +32,8 @@
     
     
     
+    
+        <link rel="stylesheet" href="../../css/pages/mypage.css">
     
     
     
@@ -380,51 +380,290 @@
 <!-- contents start -->
 <div class="container">
     <div class="site-main">
-        <section class="join">
-            <div class="join__title">회원가입</div>
-            <div class="wrap join-done">
-                <div class="join__box2">
-                    <p class="join__info type-naver">
-                        <span class="join__point2">네이버 계정으로 가입완료 하셨습니다.</span>
-                    </p>
-                    <p class="join__tit">회원가입을 축하합니다.</p>
+        <!-- lnb -->
+<div class="lnb">
+    <div class="lnb__tit">마이페이지</div>
+    <!-- lnbMenu -->
+    <div class="lnb__wrap">
+        <ul class="lnb__list">
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">주문배송조회</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">취소/반품</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">쿠폰</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">적립금</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">상품 리뷰</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">Wish List</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="lnb__list">
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">1:1 문의</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">상품 Q&A</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">재입고 알림 내역</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">이벤트 참여현황</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="lnb__list">
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">회원정보수정</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">비밀번호 변경</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">배송지 관리</span>
+                </a>
+            </li>
+            <li class="lnb__item false">
+                <a href="" class="lnb__link">
+                    <span class="lnb__line">회원 탈퇴</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- .lnbMenu -->
+</div>
+<!-- .lnb -->
+        <section class="service-center">
+            <div class="mypage-mylouis">
+                <div>
+                    <!-- userLevel '
+                        [className style:: icon & text color]
+                        level-1 : PLATINUM
+                        level-2 : GOLD
+                        level-3 : SILVER
+                        level-4 : CLUB
+                        level-5 : CLUB PLUS
+                        --->
+                    <div class="myLouis-level level-1">
+                        <div class="myLouis-level__icon"></div>
+                        <div class="myLouis-level__name">PLATINUM</div>
+                        <div class="myLouis-level__more">
+                            <a href="#" class="myLouis-level__more--userInfo">홍길동님</a>
+                            <a href="#membershipJoin" class="myLouis-level__more--membership js-popup-open">맴버쉽 혜택</a>
+                        </div>
+                    </div>
+                    <!-- .userLevel --->
+                    <!-- userInfo -->
+                    <div class="myLouis-info">
+                        <ul class="myLouis-info__list">
+                            <li class="myLouis-info__item">
+                                <a href="">
+                                    <div class="myLouis-info__item-icon"></div>
+                                    <div class="myLouis-info__item-name">쿠폰</div>
+                                    <div class="myLouis-info__item-num">2</div>
+                                </a>
+                            </li>
+                            <li class="myLouis-info__item">
+                                <a href="">
+                                    <div class="myLouis-info__item-icon"></div>
+                                    <div class="myLouis-info__item-name">적립금</div>
+                                    <div class="myLouis-info__item-num">50,000</div>
+                                </a>
+                            </li>
+                            <li class="myLouis-info__item">
+                                <a href="">
+                                    <div class="myLouis-info__item-icon"></div>
+                                    <div class="myLouis-info__item-name">WISH LIST</div>
+                                    <div class="myLouis-info__item-num">2</div>
+                                </a>
+                            </li>
+                            <li class="myLouis-info__item">
+                                <a href="">
+                                    <div class="myLouis-info__item-icon"></div>
+                                    <div class="myLouis-info__item-name">최근본상품</div>
+                                    <div class="myLouis-info__item-num">8</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- .userInfo -->
                 </div>
-                <div class="join-benefit join__area">
-                    <ul class="join-benefit__list">
-                        <li class="join-benefit__item type-coin">
-                            <span class="join-benefit__para">
-                                멤버십 회원에게<br>
-                                바로 지급되는 적립금
-                            </span>
-                            <span class="join-benefit__point">7,000점</span>
-                        </li>
-                        <li class="join-benefit__item type-coupon">
-                            <span class="join-benefit__para">
-                                상품구매 시, 즉시 사용<br>
-                                가능한 즉시 적립금
-                            </span>
-                            <span class="join-benefit__point">구매금액 2%</span>
-                        </li>
-                        <li class="join-benefit__item type-birth">
-                            <span class="join-benefit__para">
-                                추가 할인쿠폰과<br>
-                                생일기념 적립금 지급
-                            </span>
-                            <span class="join-benefit__point">5%쿠폰, 1만원</span>
-                        </li>
-                    </ul>
+
+                <!-- 최근주문헌황 프로세스-->
+                <div class="mypage-order">
+                    <div class="center-section__head">
+                        <h3 class="center-section__title">최근 주문 현황 <span class="center-section__title--small">(최근 6개월 기준)</span> </h3>
+                        <a href="#" class="center-section__more">전체보기</a>
+                    </div>
+                    <!--list -->
+                    <div class="mypage-order__process">
+                        <ul class="mypage-order__inner">
+                            <li class="mypage-order__item">
+                                <div class="order-item">
+                                    <a href="" class="order-item__link">
+                                        <div class="order-item__img"><img src="../../images/notice/ico_rock.png" alt=""></div>
+                                        <div class="order-item__text">ID/비밀번호찾기</div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="mypage-order__item">
+                                <div class="order-item">
+                                    <a href="" class="order-item__link">
+                                        <div class="order-item__img"><img src="../../images/notice/ico_rock.png" alt=""></div>
+                                        <div class="order-item__text">ID/비밀번호찾기</div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="mypage-order__item">
+                                <div class="order-item">
+                                    <a href="" class="order-item__link">
+                                        <div class="order-item__img"><img src="../../images/notice/ico_rock.png" alt=""></div>
+                                        <div class="order-item__text">ID/비밀번호찾기</div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="mypage-order__item">
+                                <div class="order-item">
+                                    <a href="" class="order-item__link">
+                                        <div class="order-item__img"><img src="../../images/notice/ico_rock.png" alt=""></div>
+                                        <div class="order-item__text">ID/비밀번호찾기</div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="mypage-order__item">
+                                <div class="order-item">
+                                    <a href="" class="order-item__link">
+                                        <div class="order-item__img"><img src="../../images/notice/ico_rock.png" alt=""></div>
+                                        <div class="order-item__text">ID/비밀번호찾기</div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //list -->
                 </div>
-                <a href="" class="join__link">멤버십 회원 혜택 보기</a>
-                <div class="btn-group join__group">
-                    <ul class="btn-group__list type-two">
-                        <li class="btn-group__item">
-                            <button class="btn-group__btn btn-v1 btn-v1--small type-white">홈으로</button>
-                        </li>
-                        <li class="btn-group__item">
-                            <button class="btn-group__btn btn-v1 btn-v1--small type-primary">로그인</button>
-                        </li>
-                    </ul>
+                <!-- //최근주문헌황 프로세스 -->
+
+                <!-- 최근주문헌황 리스트 -->
+                <div class="mypage-orderList">
+                    
+                    <!--list -->
+                    <div class="review-list">
+                        <div class="order-product">
+    <!-- tabel -->
+    <div class="order-product__table">
+        <div class="order-product__thead">
+            <div class="order-product__th"></div>
+            <div class="order-product__th">상품/옵션 정보</div>
+            <div class="order-product__th">판매가/혜택가</div>
+            <div class="order-product__th">수량</div>
+            <div class="order-product__th">합계</div>
+            <div class="order-product__th">배송비</div>
+        </div>
+
+        <div class="order-product__tbody">
+            <!-- item -->
+            <div class="order-product__item">
+                <a href="#;" class="order-product__thumb"><img class="order-product__img" src="../../images/dummy/detail-img1.jpg" alt=""></a>
+                <div class="order-product__info">
+                    <div class="order-product__cont">
+                        <div class="order-product__option">
+                            <ul class="order-product__option--list">
+                                <li class="order-product__option--item">
+                                    <span class="order-product__option--text order-product__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</span>
+                                </li>
+                                <li class="order-product__option--item order-product__option--price">
+                                    <span class="order-product__option--current">289,290원</span>
+                                    <span class="order-product__option--sale">328,000원</span>
+                                </li>
+                                <li class="order-product__option--item">
+                                    <span class="order-product__option--text">1</span>
+                                </li>
+                                <li class="order-product__option--item">
+                                    <span class="order-product__option--current">289,290원</span>
+                                </li>
+                                <li class="order-product__option--item">
+                                    <span class="order-product__option--text">무료배송</span>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <!-- //item -->
+
+             <!-- item -->
+             <div class="order-product__item">
+                <a href="#;" class="order-product__thumb"><img class="order-product__img" src="../../images/dummy/detail-img1.jpg" alt=""></a>
+                <div class="order-product__info">
+                    <div class="order-product__cont">
+                        <div class="order-product__option">
+                            <ul class="order-product__option--list">
+                                <li class="order-product__option--item">
+                                    <span class="order-product__option--text order-product__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</span>
+                                </li>
+                                <li class="order-product__option--item order-product__option--price">
+                                    <span class="order-product__option--current">289,290원</span>
+                                    <span class="order-product__option--sale">328,000원</span>
+                                </li>
+                                <li class="order-product__option--item">
+                                    <span class="order-product__option--text">1</span>
+                                </li>
+                                <li class="order-product__option--item">
+                                    <span class="order-product__option--current">289,290원</span>
+                                </li>
+                                <li class="order-product__option--item">
+                                    <span class="order-product__option--text">무료배송</span>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //item -->
+
+        </div>
+    </div> 
+    <!-- //tabel -->
+</div>
+                    </div>
+                    <!-- //list -->
+                </div>
+                 <!-- //최근주문헌황 리스트 -->
             </div>
         </section>
     </div>
@@ -502,6 +741,12 @@
         </div>
     </div>
 </footer>
+<!-- cart-fix -->
+<div class="cart-fix">
+    <a href="#;" class="cart-fix__add"><span class="cart-fix__add--count">2</span></a>
+    <div class="cart-fix__top js-scrollTop"><span class="sr-only">맨위로</span></div>
+</div>
+<!-- .cart-fix -->
 
 <script src="../../js/libs/jquery-3.6.0.min.js"></script>
 
@@ -515,7 +760,10 @@
 
 
 
+    <script src="../../js/libs/swiper-4.5.0.min.js"></script>
+
 
 </body>
 </html>
 <!--footer끝-->
+

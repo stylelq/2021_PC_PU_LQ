@@ -1,0 +1,218 @@
+/************************
+*  [ 마이페이지 ]
+*  메인 && 공통사항 
+*************************/ 
+// layout
+.site-main{
+    width: calcRem($minWidth);
+    margin: auto;
+    @include flexNoWrap;
+    padding-top: calcRem(70rem);
+}
+.lnb{
+    width: calcRem(240rem);
+    margin-right: calcRem(60rem);
+}
+.service-center{
+    width: calcRem(900rem);
+}
+
+//---  왼쪽 세션 :: gnb ------------------
+.lnb{
+    &__tit{
+        @include heading2;
+        &:after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $black1;
+            margin: calcRem(20rem) 0 calcRem(30rem);
+        }
+    }
+
+    &__item{
+        margin-top: calcRem(15rem);
+        @include body1;
+
+        &.is-active,
+        &:hover{
+            font-weight: $medium;
+            color: $point1;
+        }
+    }
+}
+
+//--- 오른쪽 세션 ------------------------
+// [공통]각 세션별 타이틀
+.center-right{
+    &__title{
+        @include heading3;
+        margin-top: calcRem(10rem);
+        margin-bottom: calcRem(24rem);
+    }
+}
+.center-section{
+    &__head{
+        position: relative;
+    }
+    &__title{
+        text-align: center;
+        @include heading3;
+        padding-top: calcRem(60rem);
+        margin-top: 0;
+    }
+    &__more{
+        position: absolute;
+        width:calcRem(10rem);
+        height:calcRem(10rem);
+        @include pageBackground('/images/notice/ico_more_plus.svg','no-repeat center / 100%');
+        right:calcRem(20rem);
+        bottom:calcRem(10rem);
+    }
+}
+
+//--------------------------
+
+
+
+//주문 제품
+.order-product{
+    margin-top: calcRem(-30rem);
+
+    &__thead{  
+        @include flexNoWrap; 
+        @include vendor-prefix('justify-content','space-between');
+        justify-content: space-between;
+        width: 100%;
+        margin: calcRem(20rem) 0;
+    }
+    &__th{
+        text-align: center;
+        @include body7;
+
+        &:nth-child(1){ width: calcRem(110rem); }
+        &:nth-child(2){ 
+            width: calcRem(249rem); 
+            text-align: left;
+        }
+        &:nth-child(3){ width: calcRem(116rem); }
+        &:nth-child(4){ width: calcRem(65rem); }
+        &:nth-child(5){ width: calcRem(100rem); }
+        &:nth-child(6){ width: calcRem(80rem); }
+    }
+
+    &__item{
+        @include flexWrap;
+        -webkit-box-orient: vertical; -ms-flex-direction: column;
+        flex-direction: column;
+        height: calcRem(210rem);
+        padding: calcRem(30rem) 0;
+        box-sizing: border-box;
+
+        &:first-child{
+            border-top: 1px solid $gray2;
+        }
+        border-bottom: 1px solid $gray2;
+        
+    }
+    &__thumb{
+        width: calcRem(110rem);
+        height: 100%;
+        position: relative;
+    }
+    &__info,
+    &__meta,
+    &__message{
+        width: calc(( 100% - #{calcRem(110rem)} ))
+    }
+
+    &__img{
+        width:100%;
+        @include ab-center;
+    }
+
+    &__title{
+       @include body7;
+        text-align: left;
+    }
+
+    &__option{
+        &--list{
+            @include flexNoWrap;
+            width: 100%;
+        }
+        &--item{
+            text-align: center;
+            &:nth-child(1){ 
+                width: calcRem(249rem); 
+                text-align: left;
+            }
+            &:nth-child(2){ width: calcRem(116rem); }
+            &:nth-child(3){ width: calcRem(65rem); }
+            &:nth-child(4){ width: calcRem(100rem); }
+            &:nth-child(5){ width: calcRem(80rem); }
+        }
+
+        &--title{
+            display: block;
+            float:left;
+            margin-right:calcRem(5rem);
+            @include body7;
+        }
+
+        &--text{
+            display: block;
+            overflow: hidden;
+            @include body7;
+        }
+
+        &--price{
+            line-height: 0;
+            position: relative;
+        }
+        &--current{
+            @include body2;
+            font-weight: $medium;
+            display: block;
+        }
+        &--sale{
+            @include body2;
+            font-weight: $light;
+            color:$throughColor;
+            text-decoration: line-through;
+            display: inline-block;
+        }
+    }
+
+    &__meta{
+        margin-top: auto;
+        &--list{ text-align: left; }
+        &--item{
+            display: inline-block;
+            margin-right: calcRem(10rem);
+            position: relative;
+        }
+        .form__checkbox{
+            padding-right: calcRem(20rem);;
+        }
+        &--btn{
+            width:calcRem(16rem);
+            height:calcRem(16rem);
+            position: absolute;
+            right:0;
+            @include vertical-center;
+            @include pageBackground('/images/common/ico_info-btn.svg','no-repeat center center / contain');
+            background-size:calcRem(16rem) calcRem(16rem) ;
+        }
+    }
+
+    &__message{
+        margin-top:calcRem(15rem);
+        .form__input--textarea{
+            height: calcRem(36rem);
+            width: 100%;
+            @include body7;
+        }
+    }
+}
