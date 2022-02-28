@@ -1,0 +1,138 @@
+<%
+type = "mypage"
+page = "mypage"
+popup = "false"
+lnbTitle = "MY LOUIS"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <div class="site-main">
+        <% include ../_include/_lnbMyPage %>
+        <section class="service-center">
+            <div class="mypage-mylouis">
+                <div>
+                    <!-- userLevel '
+                        [className style:: icon & text color]
+                        level-1 : PLATINUM
+                        level-2 : GOLD
+                        level-3 : SILVER
+                        level-4 : CLUB
+                        level-5 : CLUB PLUS
+                        --->
+                    <div class="myLouis-level level-1">
+                        <div class="myLouis-level__icon"></div>
+                        <div class="myLouis-level__name">PLATINUM</div>
+                        <div class="myLouis-level__more">
+                            <a href="#" class="myLouis-level__more--userInfo">홍길동님</a>
+                            <a href="#membershipJoin" class="myLouis-level__more--membership js-popup-open">맴버쉽 혜택</a>
+                        </div>
+                    </div>
+                    <!-- .userLevel --->
+                    <!-- userInfo -->
+                    <div class="myLouis-info">
+                        <ul class="myLouis-info__list">
+                            <li class="myLouis-info__item">
+                                <a href="">
+                                    <div class="myLouis-info__item-icon"></div>
+                                    <div class="myLouis-info__item-name">쿠폰</div>
+                                    <div class="myLouis-info__item-num">2</div>
+                                </a>
+                            </li>
+                            <li class="myLouis-info__item">
+                                <a href="">
+                                    <div class="myLouis-info__item-icon"></div>
+                                    <div class="myLouis-info__item-name">적립금</div>
+                                    <div class="myLouis-info__item-num">50,000</div>
+                                </a>
+                            </li>
+                            <li class="myLouis-info__item">
+                                <a href="">
+                                    <div class="myLouis-info__item-icon"></div>
+                                    <div class="myLouis-info__item-name">WISH LIST</div>
+                                    <div class="myLouis-info__item-num">2</div>
+                                </a>
+                            </li>
+                            <li class="myLouis-info__item">
+                                <a href="">
+                                    <div class="myLouis-info__item-icon"></div>
+                                    <div class="myLouis-info__item-name">최근본상품</div>
+                                    <div class="myLouis-info__item-num">8</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- .userInfo -->
+                </div>
+
+                <!-- 최근주문헌황 프로세스-->
+                <div class="mypage-order">
+                    <div class="center-section__head">
+                        <h3 class="center-section__title">최근 주문 현황 <span class="center-section__title--small">(최근 6개월 기준)</span> </h3>
+                        <a href="#" class="center-section__more">전체보기</a>
+                    </div>
+                    <!--list -->
+                    <div class="mypage-order__process">
+                        <ul class="mypage-order__inner">
+                            <li class="mypage-order__item">
+                                <div class="order-item">
+                                    <a href="" class="order-item__link">
+                                        <div class="order-item__img"><img src="../../images/notice/ico_rock.png" alt=""></div>
+                                        <div class="order-item__text">ID/비밀번호찾기</div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="mypage-order__item">
+                                <div class="order-item">
+                                    <a href="" class="order-item__link">
+                                        <div class="order-item__img"><img src="../../images/notice/ico_rock.png" alt=""></div>
+                                        <div class="order-item__text">ID/비밀번호찾기</div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="mypage-order__item">
+                                <div class="order-item">
+                                    <a href="" class="order-item__link">
+                                        <div class="order-item__img"><img src="../../images/notice/ico_rock.png" alt=""></div>
+                                        <div class="order-item__text">ID/비밀번호찾기</div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="mypage-order__item">
+                                <div class="order-item">
+                                    <a href="" class="order-item__link">
+                                        <div class="order-item__img"><img src="../../images/notice/ico_rock.png" alt=""></div>
+                                        <div class="order-item__text">ID/비밀번호찾기</div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="mypage-order__item">
+                                <div class="order-item">
+                                    <a href="" class="order-item__link">
+                                        <div class="order-item__img"><img src="../../images/notice/ico_rock.png" alt=""></div>
+                                        <div class="order-item__text">ID/비밀번호찾기</div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //list -->
+                </div>
+                <!-- //최근주문헌황 프로세스 -->
+
+                <!-- 최근주문헌황 리스트 -->
+                <div class="mypage-orderList">
+                    
+                    <!--list -->
+                    <div class="review-list">
+                        <% include ../_include/_orderProductNonMember %>
+                    </div>
+                    <!-- //list -->
+                </div>
+                 <!-- //최근주문헌황 리스트 -->
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_cartFix %>
+<% include ../_include/_footer %>
