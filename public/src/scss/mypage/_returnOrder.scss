@@ -1,0 +1,149 @@
+/**********************
+  PAGE
+  취소/반품
+**********************/
+.myReturnOrder{
+    //전체, 취소내역, 반품내역 탭
+    &-tab{
+        height:calcRem(35rem);
+        position: relative;
+        padding-bottom: calcRem(30rem);
+
+        //head
+        &__fix{
+            border-top:solid 1px $gray1;
+            position: absolute;
+            padding:0 calcRem(20rem);
+            height:calcRem(35rem);
+            background-color: $whiteColor;
+            top:0;
+            left:0;
+            width:100%;
+            z-index: $childZindex;
+            box-sizing: border-box;
+
+            &:after{
+                @include block-reset;
+            }
+
+            .is-fixed &{
+                transition: transform 0.3s;
+                position: fixed;
+                transform:translateZ(0) translateY(0);
+            }
+
+            .is-fixed.is-down &{
+                transform:translateZ(0) translateY(calcRem(45rem));
+            }
+        }
+
+        &__item{
+            width:33.333%;
+            float:left;
+            text-align: center;
+        }
+
+        &__link{
+            display: block;
+            @include body3;
+            padding:calcRem(8rem) calcRem(5rem);
+            position: relative;
+
+            .is-current &{
+                font-weight: $medium;
+            }
+
+            &:after{
+                content:"";
+                height:calcRem(2rem);
+                background-color: $black1;
+                position: absolute;
+                top:-1px;
+                left:0;
+                right:0;
+                opacity: 0;
+
+                .is-current &{
+                    opacity: 1;
+                }
+            }
+        }
+
+        //cont
+        &__cont{
+            padding-top:calcRem(40rem);
+        }
+
+        &__info{
+            display:none;
+
+            &.is-current{
+                display: block;
+            }
+        }
+    }
+
+    .order-mypage__contents{
+        padding: calcRem(30rem) 0 calcRem(10rem);
+    }
+
+    
+
+}
+
+
+.notData-wrap{
+    .notData-workflow{
+        margin-bottom: calcRem(40rem);
+    
+        &__list{
+            @include flexNoWrap;
+            @include flex-alignCenter;
+            border: 1px solid $lightgray4;
+            padding: calcRem(28rem) 0;
+            box-sizing: border-box;
+        }
+        &__link{
+            display: block;
+            text-align: center;
+        }
+        &__item{
+            @include body7;
+            position: relative;
+            margin: auto;
+            text-align: center;
+    
+            &-name{
+                margin: 0;
+            }
+            &-figure{ 
+                margin: 0;
+                margin-top:10px;
+                color: $point1;
+                @include body8;
+                &.br-under{text-decoration: underline;}
+            }
+    
+            &:not(:last-child):after{
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: calcRem(-38rem);
+                transform: translateY(-50%);
+    
+                width:calcRem(6rem);
+                height:calcRem(11rem);
+                @include pageBackground('/images/common/ico_more_gray.svg','no-repeat center center / contain');
+            }
+        }
+    }
+
+    .center-bullet-number__item{
+        .center-bullet.type-small{
+            .center-bullet__item{
+                margin-top: calcRem(9rem);
+                color: $darkgray;
+            }
+        }
+    }
+}

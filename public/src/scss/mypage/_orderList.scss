@@ -1,0 +1,145 @@
+//--- 주문배송조회 리스트 -------------
+.myOrderList-section{
+    margin-bottom: calcRem(40rem);
+    .list-table{
+        .detail-Meta{
+            height: calcRem(110rem);
+        }
+    }
+    
+}
+
+//--- 주문배송조회 디테일 -------------
+// 기간조회
+.myOrderList-detail{
+    &__order{
+        @include flexNoWrap;
+        @include flex-alignCenter;
+        width: 100%;
+        padding: calcRem(20rem);
+        box-sizing: border-box;
+    }
+    &__order--txt{
+        p{
+            display: inline-block;
+            margin: 0;
+            @include body2;
+        }
+        p+span{ @include body7; }
+    }
+    &__search-btn{
+        width: calcRem(100rem);
+        background-color: $whiteColor;
+        @include body8;
+        &:nth-child(2){
+            margin-left: auto;
+        }
+    }
+    &+.myOrderList-section{
+        margin-top: calcRem(60rem);
+    }
+}
+
+//배송정보
+.myOrderListDetail-info{
+    margin-bottom: calcRem(30rem);
+    .fieldset__title{
+        margin-top: calcRem(60rem);
+    }
+
+    .info-more{
+        float: right;
+        @include body8;
+
+        &:after{
+            content: '';
+            display: inline-block;
+            width:calcRem(6rem);
+            height:calcRem(9rem);
+            box-sizing: border-box;
+            margin-left: calcRem(5rem);
+            @include pageBackground('/images/common/ico_address_more.svg','no-repeat center center / contain');    
+        }
+    }
+}
+
+
+//결제금액
+.myOrderListDetail-payment{
+    margin-bottom: calcRem(30rem);
+    float: left;
+    width: calc((100% - 60px) / 2 );
+
+    .fieldset-dl__group{
+        dt{ width: 50%; }
+    }
+    .fieldset-dl__text{
+        text-align: right;
+    }
+    .group-bold{
+        dt,dd{ @include title4; }
+    }
+
+    .payment-total__price{
+        overflow: hidden;
+        border-top: 1px solid $gray2;
+        margin-top:  calcRem(25rem);
+
+        &--title{
+            float: left;
+            margin-bottom: 0;
+            @include title2;
+        }
+        &--text{
+            float: right;
+            margin-bottom: 0;
+            @include title4;
+            color: $point1;
+        }
+    }
+}
+
+//결제정보
+.myOrderListDetail-paymentMethod{
+    float: right;
+    width: calc((100% - 60px) / 2 );    
+}
+
+
+// 주문자 정보
+.myOrderListDetail-user{
+    margin-bottom: calcRem(30rem);
+    clear: both;
+    overflow: hidden;
+
+    .order-info{
+        clear: both;
+        overflow: hidden;
+        width: 100%;
+        //group ::dl 
+        &__group{
+            @include flexNoWrap;
+            margin:0;
+            &:not(:last-child){
+                margin-bottom: calcRem(10rem);
+            }
+            dt{ 
+                width: 100px;
+                @include body7;
+            }
+            dd{ 
+                width: 100%;
+                @include body7;
+            }
+        }
+        &__text:not(:first-child){
+            margin-top: calcRem(10rem);
+        }
+    }
+}
+
+//목록보기
+.myOrderListDetail-user + .center-single__btn{
+    width: calcRem(200rem);
+    margin:calcRem(60rem) auto 0;
+}
