@@ -78,6 +78,13 @@
       text-align: center;
       padding:calcRem(30rem) calcRem(20rem);
   }
+
+  &__title{
+    @include  title1;
+    margin: calcRem(30rem) 0;
+    border-bottom: 1px solid $black1;
+    padding-bottom:10px; 
+  }
 }
 
 .fieldset-dl{
@@ -95,9 +102,28 @@
     dd{ 
         width: 100%;
         @include body7;
+
+        p{
+          // margin: 10px 0;
+          &:first-child{
+            margin-top: 0;
+          }
+        }
+    }
+
+    &.group-bold{
+      dt,dd{ font-weight: $medium; }
     }
   }
+  
   &__text:not(:first-child){
       margin-top: calcRem(10rem);
+  }
+  &__btn{
+    .btn-v1,.btn-v2{}
+    .btn-v3{
+      width: calcRem(180rem);
+      @include body8;
+    }
   }
 }

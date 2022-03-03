@@ -382,7 +382,7 @@
     <div class="site-main">
         <!-- lnb -->
 <div class="lnb">
-    <div class="lnb__tit">마이페이지</div>
+    <div class="lnb__tit">MY LOUIS</div>
     <!-- lnbMenu -->
     <div class="lnb__wrap">
         <ul class="lnb__list">
@@ -467,7 +467,7 @@
 <!-- .lnb -->
         <section class="service-center">
             <div class="mypage-mylouis">
-                <div>
+                <div class="mypage-mylouis__userInfo">
                     <!-- userLevel '
                         [className style:: icon & text color]
                         level-1 : PLATINUM
@@ -478,9 +478,9 @@
                         --->
                     <div class="myLouis-level level-1">
                         <div class="myLouis-level__icon"></div>
-                        <div class="myLouis-level__name">PLATINUM</div>
                         <div class="myLouis-level__more">
                             <a href="#" class="myLouis-level__more--userInfo">홍길동님</a>
+                            <p class="myLouis-level__more--text"><span class="myLouis-level__name">PLATINUM</span> 등급입니다.</p>
                             <a href="#membershipJoin" class="myLouis-level__more--membership js-popup-open">맴버쉽 혜택</a>
                         </div>
                     </div>
@@ -490,28 +490,24 @@
                         <ul class="myLouis-info__list">
                             <li class="myLouis-info__item">
                                 <a href="">
-                                    <div class="myLouis-info__item-icon"></div>
                                     <div class="myLouis-info__item-name">쿠폰</div>
                                     <div class="myLouis-info__item-num">2</div>
                                 </a>
                             </li>
                             <li class="myLouis-info__item">
                                 <a href="">
-                                    <div class="myLouis-info__item-icon"></div>
                                     <div class="myLouis-info__item-name">적립금</div>
                                     <div class="myLouis-info__item-num">50,000</div>
                                 </a>
                             </li>
                             <li class="myLouis-info__item">
                                 <a href="">
-                                    <div class="myLouis-info__item-icon"></div>
                                     <div class="myLouis-info__item-name">WISH LIST</div>
                                     <div class="myLouis-info__item-num">2</div>
                                 </a>
                             </li>
                             <li class="myLouis-info__item">
                                 <a href="">
-                                    <div class="myLouis-info__item-icon"></div>
                                     <div class="myLouis-info__item-name">최근본상품</div>
                                     <div class="myLouis-info__item-num">8</div>
                                 </a>
@@ -521,148 +517,138 @@
                     <!-- .userInfo -->
                 </div>
 
-                <!-- 최근주문헌황 프로세스-->
-                <div class="mypage-order">
-                    <div class="center-section__head">
-                        <h3 class="center-section__title">최근 주문 현황 <span class="center-section__title--small">(최근 6개월 기준)</span> </h3>
-                        <a href="#" class="center-section__more">전체보기</a>
-                    </div>
-                    <!--list -->
-                    <div class="mypage-order__process">
-                        <ul class="mypage-order__inner">
-                            <li class="mypage-order__item">
-                                <div class="order-item">
-                                    <a href="" class="order-item__link">
-                                        <div class="order-item__img"><img src="../../images/notice/ico_rock.png" alt=""></div>
-                                        <div class="order-item__text">ID/비밀번호찾기</div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="mypage-order__item">
-                                <div class="order-item">
-                                    <a href="" class="order-item__link">
-                                        <div class="order-item__img"><img src="../../images/notice/ico_rock.png" alt=""></div>
-                                        <div class="order-item__text">ID/비밀번호찾기</div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="mypage-order__item">
-                                <div class="order-item">
-                                    <a href="" class="order-item__link">
-                                        <div class="order-item__img"><img src="../../images/notice/ico_rock.png" alt=""></div>
-                                        <div class="order-item__text">ID/비밀번호찾기</div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="mypage-order__item">
-                                <div class="order-item">
-                                    <a href="" class="order-item__link">
-                                        <div class="order-item__img"><img src="../../images/notice/ico_rock.png" alt=""></div>
-                                        <div class="order-item__text">ID/비밀번호찾기</div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="mypage-order__item">
-                                <div class="order-item">
-                                    <a href="" class="order-item__link">
-                                        <div class="order-item__img"><img src="../../images/notice/ico_rock.png" alt=""></div>
-                                        <div class="order-item__text">ID/비밀번호찾기</div>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- //list -->
+                <!-- 최근 주문 현황 -->
+                <div class="myOrderList-workflow">
+                   <div class="center-section__head">
+                       <h3 class="center-section__title">최근 주문 현황 <span class="center-section__title--small">(최근 6개월 기준)</span> </h3>
+                       <a href="#" class="center-section__link">전체보기<span  class="center-section__more"></span> </a>
+                   </div>
+
+                   <ul class="myOrderList-workflow__list">
+                       <li class="myOrderList-workflow__item">
+                           <a href="#;" class="myOrderList-workflow__link">
+                               <p class="myOrderList-workflow__item-name">주문전체</p>
+                               <p class="myOrderList-workflow__item-figure br-under">2</p>
+                           </a>
+                       </li>
+                       <li class="myOrderList-workflow__item">
+                           <a href="#;" class="myOrderList-workflow__link">
+                               <p class="myOrderList-workflow__item-name">입금대기</p>
+                               <p class="myOrderList-workflow__item-figure">0</p>
+                           </a>
+                       </li>
+                       <li class="myOrderList-workflow__item">
+                           <a href="#;" class="myOrderList-workflow__link">
+                               <p class="myOrderList-workflow__item-name">결제완료</p>
+                               <p class="myOrderList-workflow__item-figure br-under">1</p>
+                           </a>
+                       </li>
+                       <li class="myOrderList-workflow__item">
+                           <a href="#;" class="myOrderList-workflow__link">
+                               <p class="myOrderList-workflow__item-name">상품 준비중</p>
+                               <p class="myOrderList-workflow__item-figure">0</p>
+                           </a>
+                       </li>
+                       <li class="myOrderList-workflow__item">
+                           <a href="#;" class="myOrderList-workflow__link">
+                               <p class="myOrderList-workflow__item-name">상품 배송중</p>
+                               <p class="myOrderList-workflow__item-figure">0</p>
+                           </a>
+                       </li>
+                       <li class="myOrderList-workflow__item">
+                           <a href="#;" class="myOrderList-workflow__link">
+                           <p class="myOrderList-workflow__item-name">배송완료</p>
+                           <p class="myOrderList-workflow__item-figure br-under">1</p>
+                           </a>
+                       </li>
+                   </ul>
                 </div>
-                <!-- //최근주문헌황 프로세스 -->
+                <!-- .최근 주문 현황 -->
 
                 <!-- 최근주문헌황 리스트 -->
-                <div class="mypage-orderList">
-                    
-                    <!--list -->
-                    <div class="review-list">
-                        <div class="order-product">
-    <!-- tabel -->
-    <div class="order-product__table">
-        <div class="order-product__thead">
-            <div class="order-product__th"></div>
-            <div class="order-product__th">상품/옵션 정보</div>
-            <div class="order-product__th">판매가/혜택가</div>
-            <div class="order-product__th">수량</div>
-            <div class="order-product__th">합계</div>
-            <div class="order-product__th">배송비</div>
-        </div>
-
-        <div class="order-product__tbody">
-            <!-- item -->
-            <div class="order-product__item">
-                <a href="#;" class="order-product__thumb"><img class="order-product__img" src="../../images/dummy/detail-img1.jpg" alt=""></a>
-                <div class="order-product__info">
-                    <div class="order-product__cont">
-                        <div class="order-product__option">
-                            <ul class="order-product__option--list">
-                                <li class="order-product__option--item">
-                                    <span class="order-product__option--text order-product__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</span>
-                                </li>
-                                <li class="order-product__option--item order-product__option--price">
-                                    <span class="order-product__option--current">289,290원</span>
-                                    <span class="order-product__option--sale">328,000원</span>
-                                </li>
-                                <li class="order-product__option--item">
-                                    <span class="order-product__option--text">1</span>
-                                </li>
-                                <li class="order-product__option--item">
-                                    <span class="order-product__option--current">289,290원</span>
-                                </li>
-                                <li class="order-product__option--item">
-                                    <span class="order-product__option--text">무료배송</span>
-                                </li>
-                                
-                            </ul>
-                        </div>
+                <section class="myOrderList-section">
+                    <div class="order-mypage__list">
+                        <div class="order-mypage">
+    <table class="list-table" summary="주문배송조회">
+        <caption>주문배송조회</caption>
+        <colgroup>
+            <col><col width="45%"><col width="3%"><col><col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>주문번호</th>
+                <th>상품/옵션 정보</th>
+                <th>수량</th>
+                <th>총 결제금액</th>
+                <th>주문상태</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <p class="detail-Meta__orderId">P20210812142407</p>
+                    <p class="detail-Meta__date">2021.10.27</p>
+                    <!-- <div class="detail-Meta__btn">
+                        <button class="btn-v3 btn-v3--small type-white">상세보기</button>
+                    </div> -->
+                </td>
+                <td>
+                    <div class="detail-Meta">
+                        <a href="#;" class="detail-Meta__thumb"><img class="cart-product__img" src="../../images/dummy/detail-img1.jpg" alt="" /></a>
+                        <h2 class="detail-Meta__title">oalc SINGLE BREASTED HARRIS TWEED JACKET 싱글브레스트 해리스 트위드 재킷 (Beige)</h2>
+                        <div class="detail-Meta__option">FREESIZE </div>
                     </div>
-                </div>
-            </div>
-            <!-- //item -->
-
-             <!-- item -->
-             <div class="order-product__item">
-                <a href="#;" class="order-product__thumb"><img class="order-product__img" src="../../images/dummy/detail-img1.jpg" alt=""></a>
-                <div class="order-product__info">
-                    <div class="order-product__cont">
-                        <div class="order-product__option">
-                            <ul class="order-product__option--list">
-                                <li class="order-product__option--item">
-                                    <span class="order-product__option--text order-product__title">루이까또즈 MINI CAVIAR (미니캐비어) 사첼백 HO1PM21IV</span>
-                                </li>
-                                <li class="order-product__option--item order-product__option--price">
-                                    <span class="order-product__option--current">289,290원</span>
-                                    <span class="order-product__option--sale">328,000원</span>
-                                </li>
-                                <li class="order-product__option--item">
-                                    <span class="order-product__option--text">1</span>
-                                </li>
-                                <li class="order-product__option--item">
-                                    <span class="order-product__option--current">289,290원</span>
-                                </li>
-                                <li class="order-product__option--item">
-                                    <span class="order-product__option--text">무료배송</span>
-                                </li>
-                                
-                            </ul>
-                        </div>
+                </td>
+                <td><span>1</span></td>
+                <td><span class="detail-Meta__price--current">289,290원</span></td>
+                <td>
+                    <p class="detail-Meta__state--text">주문접수</p>
+                    <!-- <p class="detail-Meta__state--num">123456789000<br>
+                        롯데택배</p>
+                    <div class="detail-Meta__btn">
+                        <a href="" class="btn-v3 btn-v3--small type-white">배송조회</a>
+                    </div> -->
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="detail-Meta__orderId">P20210812142407</p>
+                    <p class="detail-Meta__date">2021.10.27</p>
+                </td>
+                <td>
+                    <div class="detail-Meta">
+                        <a href="#;" class="detail-Meta__thumb"><img class="cart-product__img" src="../../images/dummy/collection-img.png" alt="" /></a>
+                        <h2 class="detail-Meta__title">oalc SINGLE BREASTED HARRIS TWEED JACKET 싱글브레스트 해리스 트위드 재킷 (Beige)</h2>
+                        <div class="detail-Meta__option">FREESIZE </div>
                     </div>
-                </div>
-            </div>
-            <!-- //item -->
-
-        </div>
-    </div> 
-    <!-- //tabel -->
+                </td>
+                <td><span>1</span></td>
+                <td><span class="detail-Meta__price--current">289,290원</span></td>
+                <td>
+                    <p class="detail-Meta__state--text">배송완료</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
+
+
+
                     </div>
-                    <!-- //list -->
-                </div>
+                    <!-- paging -->
+<div class="paging">
+    <ul class="paging__list">
+        <li class="paging__item paging__item--prev"><a class="paging__link" href="#;"><span class="sr-only">prev</span></a></li>
+        <li class="paging__item is-current"><span class="paging__link">1</span></li>
+        <li class="paging__item"><a class="paging__link" href="#;">2</a></li>
+        <li class="paging__item"><a class="paging__link" href="#;">3</a></li>
+        <li class="paging__item"><a class="paging__link" href="#;">4</a></li>
+        <li class="paging__item"><a class="paging__link" href="#;">5</a></li>
+        <li class="paging__item paging__item--next"><a class="paging__link" href="#;"><span class="sr-only">next</span></a></li>
+    </ul>
+</div>
+<!-- .paging -->
+                </section>
                  <!-- //최근주문헌황 리스트 -->
             </div>
         </section>

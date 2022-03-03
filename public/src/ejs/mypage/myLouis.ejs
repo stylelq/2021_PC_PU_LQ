@@ -10,7 +10,7 @@ lnbTitle = "MY LOUIS"
         <% include ../_include/_lnbMyPage %>
         <section class="service-center">
             <div class="mypage-mylouis">
-                <div>
+                <div class="mypage-mylouis__userInfo">
                     <!-- userLevel '
                         [className style:: icon & text color]
                         level-1 : PLATINUM
@@ -21,9 +21,9 @@ lnbTitle = "MY LOUIS"
                         --->
                     <div class="myLouis-level level-1">
                         <div class="myLouis-level__icon"></div>
-                        <div class="myLouis-level__name">PLATINUM</div>
                         <div class="myLouis-level__more">
                             <a href="#" class="myLouis-level__more--userInfo">홍길동님</a>
+                            <p class="myLouis-level__more--text"><span class="myLouis-level__name">PLATINUM</span> 등급입니다.</p>
                             <a href="#membershipJoin" class="myLouis-level__more--membership js-popup-open">맴버쉽 혜택</a>
                         </div>
                     </div>
@@ -33,28 +33,24 @@ lnbTitle = "MY LOUIS"
                         <ul class="myLouis-info__list">
                             <li class="myLouis-info__item">
                                 <a href="">
-                                    <div class="myLouis-info__item-icon"></div>
                                     <div class="myLouis-info__item-name">쿠폰</div>
                                     <div class="myLouis-info__item-num">2</div>
                                 </a>
                             </li>
                             <li class="myLouis-info__item">
                                 <a href="">
-                                    <div class="myLouis-info__item-icon"></div>
                                     <div class="myLouis-info__item-name">적립금</div>
                                     <div class="myLouis-info__item-num">50,000</div>
                                 </a>
                             </li>
                             <li class="myLouis-info__item">
                                 <a href="">
-                                    <div class="myLouis-info__item-icon"></div>
                                     <div class="myLouis-info__item-name">WISH LIST</div>
                                     <div class="myLouis-info__item-num">2</div>
                                 </a>
                             </li>
                             <li class="myLouis-info__item">
                                 <a href="">
-                                    <div class="myLouis-info__item-icon"></div>
                                     <div class="myLouis-info__item-name">최근본상품</div>
                                     <div class="myLouis-info__item-num">8</div>
                                 </a>
@@ -64,70 +60,61 @@ lnbTitle = "MY LOUIS"
                     <!-- .userInfo -->
                 </div>
 
-                <!-- 최근주문헌황 프로세스-->
-                <div class="mypage-order">
-                    <div class="center-section__head">
-                        <h3 class="center-section__title">최근 주문 현황 <span class="center-section__title--small">(최근 6개월 기준)</span> </h3>
-                        <a href="#" class="center-section__more">전체보기</a>
-                    </div>
-                    <!--list -->
-                    <div class="mypage-order__process">
-                        <ul class="mypage-order__inner">
-                            <li class="mypage-order__item">
-                                <div class="order-item">
-                                    <a href="" class="order-item__link">
-                                        <div class="order-item__img"><img src="../../images/notice/ico_rock.png" alt=""></div>
-                                        <div class="order-item__text">ID/비밀번호찾기</div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="mypage-order__item">
-                                <div class="order-item">
-                                    <a href="" class="order-item__link">
-                                        <div class="order-item__img"><img src="../../images/notice/ico_rock.png" alt=""></div>
-                                        <div class="order-item__text">ID/비밀번호찾기</div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="mypage-order__item">
-                                <div class="order-item">
-                                    <a href="" class="order-item__link">
-                                        <div class="order-item__img"><img src="../../images/notice/ico_rock.png" alt=""></div>
-                                        <div class="order-item__text">ID/비밀번호찾기</div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="mypage-order__item">
-                                <div class="order-item">
-                                    <a href="" class="order-item__link">
-                                        <div class="order-item__img"><img src="../../images/notice/ico_rock.png" alt=""></div>
-                                        <div class="order-item__text">ID/비밀번호찾기</div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="mypage-order__item">
-                                <div class="order-item">
-                                    <a href="" class="order-item__link">
-                                        <div class="order-item__img"><img src="../../images/notice/ico_rock.png" alt=""></div>
-                                        <div class="order-item__text">ID/비밀번호찾기</div>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- //list -->
+                <!-- 최근 주문 현황 -->
+                <div class="myOrderList-workflow">
+                   <div class="center-section__head">
+                       <h3 class="center-section__title">최근 주문 현황 <span class="center-section__title--small">(최근 6개월 기준)</span> </h3>
+                       <a href="#" class="center-section__link">전체보기<span  class="center-section__more"></span> </a>
+                   </div>
+
+                   <ul class="myOrderList-workflow__list">
+                       <li class="myOrderList-workflow__item">
+                           <a href="#;" class="myOrderList-workflow__link">
+                               <p class="myOrderList-workflow__item-name">주문전체</p>
+                               <p class="myOrderList-workflow__item-figure br-under">2</p>
+                           </a>
+                       </li>
+                       <li class="myOrderList-workflow__item">
+                           <a href="#;" class="myOrderList-workflow__link">
+                               <p class="myOrderList-workflow__item-name">입금대기</p>
+                               <p class="myOrderList-workflow__item-figure">0</p>
+                           </a>
+                       </li>
+                       <li class="myOrderList-workflow__item">
+                           <a href="#;" class="myOrderList-workflow__link">
+                               <p class="myOrderList-workflow__item-name">결제완료</p>
+                               <p class="myOrderList-workflow__item-figure br-under">1</p>
+                           </a>
+                       </li>
+                       <li class="myOrderList-workflow__item">
+                           <a href="#;" class="myOrderList-workflow__link">
+                               <p class="myOrderList-workflow__item-name">상품 준비중</p>
+                               <p class="myOrderList-workflow__item-figure">0</p>
+                           </a>
+                       </li>
+                       <li class="myOrderList-workflow__item">
+                           <a href="#;" class="myOrderList-workflow__link">
+                               <p class="myOrderList-workflow__item-name">상품 배송중</p>
+                               <p class="myOrderList-workflow__item-figure">0</p>
+                           </a>
+                       </li>
+                       <li class="myOrderList-workflow__item">
+                           <a href="#;" class="myOrderList-workflow__link">
+                           <p class="myOrderList-workflow__item-name">배송완료</p>
+                           <p class="myOrderList-workflow__item-figure br-under">1</p>
+                           </a>
+                       </li>
+                   </ul>
                 </div>
-                <!-- //최근주문헌황 프로세스 -->
+                <!-- .최근 주문 현황 -->
 
                 <!-- 최근주문헌황 리스트 -->
-                <div class="mypage-orderList">
-                    
-                    <!--list -->
-                    <div class="review-list">
-                        <% include ../_include/_orderProductNonMember %>
+                <section class="myOrderList-section">
+                    <div class="order-mypage__list">
+                        <% include ../_include/_orderList %>
                     </div>
-                    <!-- //list -->
-                </div>
+                    <% include ../_include/_paging %>
+                </section>
                  <!-- //최근주문헌황 리스트 -->
             </div>
         </section>

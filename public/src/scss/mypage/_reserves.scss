@@ -1,0 +1,52 @@
+/**********************
+  PAGE
+  적립금
+**********************/
+.myReserves-contents{
+    .myOrderList-filter{
+        margin-bottom: calcRem(40rem);
+    }
+}
+
+.myReserves-total{
+    text-align: center;
+    margin-bottom: calcRem(40rem);
+    &__list{
+        display: inline-flex;
+        @include body1;
+        &:first-child:after{
+            content: '';
+            display: inline-block;
+            width: 1px;height: 20px;
+            background-color: $lightgray4;
+            margin: 0 calcRem(15rem);
+        }
+    }
+    &__total{
+        @include title2;
+        margin-left: calcRem(15rem);
+        line-height: 1.3;
+        &.point-red{
+            color: $point1;
+        }
+    }
+    &__total + span{ 
+        @include body2; 
+    }
+}
+
+
+//리스트
+.mypage-reserve__point{
+    font-weight: $medium;
+    &.num-plus{
+        color: $point1;
+    }
+}
+.mypage-reserve__type{
+    @include body8;
+}
+
+.myReserves-section + .center-bullet{
+    margin-top: calcRem(40rem);
+}

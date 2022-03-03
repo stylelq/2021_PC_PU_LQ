@@ -1,0 +1,492 @@
+/** 공통 ****************************/ 
+// layout
+.site-main{
+    width: calcRem($minWidth);
+    margin: auto;
+    @include flexNoWrap;
+    padding-top: calcRem(70rem);
+}
+.lnb{
+    width: calcRem(240rem);
+    margin-right: calcRem(60rem);
+}
+.service-center{
+    width: calcRem(900rem);
+    & > [class ^= mypage- ]{
+        margin-top: calcRem(68rem)
+    }
+}
+
+//---  왼쪽 세션 :: gnb ------------------
+.lnb{
+    &__tit{
+        @include heading2;
+        &:after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $black1;
+            margin: calcRem(20rem) 0 calcRem(30rem);
+        }
+    }
+    &__list{
+        &:not(:first-child){
+            border-top: 1px solid $gray2;
+            margin-top: calcRem(20rem);
+            padding-top: calcRem(5rem);
+        }
+    }
+
+    &__item{
+        margin-top: calcRem(15rem);
+        @include body1;
+
+        &.is-active,
+        &:hover{
+            font-weight: $medium;
+            color: $point1;
+        }
+    }
+}
+
+//--- 오른쪽 세션 ------------------------
+// [공통]각 세션별 타이틀
+.center-right{
+    &__title{
+        @include heading3;
+        margin-top: calcRem(10rem);
+        margin-bottom: calcRem(24rem);
+    }
+}
+.center-section{
+    &__head{
+        position: relative;
+        @include flexNoWrap;
+        @include flex-alignCenter;
+        padding-top: calcRem(60rem);
+        margin-bottom: calcRem(20rem);
+    }
+    &__title{
+        @include heading3;
+        margin: 0;
+        &--small{
+            @include body1;
+        }
+    }
+    &__link{
+        position: relative;
+        padding-right: calcRem(40rem);
+        margin-left: auto;
+    }
+    &__more{
+        position: absolute;
+        width:calcRem(10rem);
+        height:calcRem(10rem);
+        @include pageBackground('/images/common/ico_slide_next.svg','no-repeat center / 100%');
+        right:calcRem(20rem);
+        bottom:calcRem(5rem);
+    }
+}
+//--------------------------
+
+
+//--- 리스트&테이블 ------------------------
+//최근 주문한 상품 리스트
+// div 
+.order-mypage{
+    &__thead{  
+        @include flexWrap; 
+        width: 100%;
+        margin: calcRem(20rem) 0;
+        border-top: 1px solid $black1;
+        padding:  calcRem(20rem) calcRem(20rem) 0;
+        box-sizing: border-box;
+    }
+    &__th{
+        text-align: center;
+        @include body7;
+
+        &:nth-child(1){ width: calcRem(110rem); }
+        &:nth-child(2){ 
+            width: calcRem(270rem);
+            text-align: left;
+        }
+        &:nth-child(3){ width:calcRem(60rem); } 
+        &:nth-child(4){ width: calcRem(150rem);} 
+        &:nth-child(5){ width: calcRem(150rem); } 
+        &:nth-child(6){ width: calcRem(120rem); } 
+    }
+
+    //-- tbody custom layout
+    //tr custom
+    &__item{ 
+        @include flexWrap;
+        padding: calcRem(30rem) calcRem(20rem);
+        margin-left: 0;
+        box-sizing: border-box;
+        position: relative;
+
+        &:first-child{
+            border-top: 1px solid $gray2;
+        }
+        border-bottom: 1px solid $gray2;
+        
+    }
+    //--- td custom layout
+    &__thumb{
+        width: calcRem(110rem);
+        height: calcRem(110rem);
+        position: absolute;
+        top:50%;
+        left: calcRem(20rem);
+        transform: translateY(-50%);
+    }
+    &__info{
+        width: calc(( 100% - #{calcRem(230rem)} ));
+        margin-left: calcRem(110rem);
+    }
+    &__state{
+        width: calcRem(120rem);
+        height: 100%;
+        @include body7;
+        text-align: center;
+    }
+    //---
+
+    &__img{
+        width:100%;
+        @include ab-center;
+    }
+
+    &__title{
+       @include body7;
+        text-align: left;
+    }
+
+    &__option{
+        &--list{
+            @include flexWrap;
+            width: 100%;
+        }
+        &--item{
+            text-align: center;
+            &:nth-child(1){ 
+                width: calcRem(270rem);
+                text-align: left;
+                margin-left: 0;
+            }
+            &:nth-child(2){  width: calcRem(60rem); } 
+            &:nth-child(3){ width: calcRem(150rem); } 
+            &:nth-child(4){ width: calcRem(150rem); } 
+        }
+
+        &--title{
+            display: block;
+            float:left;
+            margin-right:calcRem(5rem);
+            @include body7;
+        }
+
+        &--text{
+            display: block;
+            overflow: hidden;
+            @include body7;
+        }
+
+        &--price{
+            line-height: 0;
+            position: relative;
+        }
+        &--current{
+            @include body7;
+            font-weight: $medium;
+            display: block;
+        }
+        &--sale{
+            @include body7;
+            font-weight: $light;
+            color:$throughColor;
+            text-decoration: line-through;
+            display: inline-block;
+        }
+    }
+
+    &__meta{
+        margin-top: calcRem(20rem);
+
+        &--list{ text-align: left; }
+        &--item{
+            display: inline-block;
+            margin-right: calcRem(10rem);
+            position: relative;
+        }
+        .form__checkbox{
+            padding-right: calcRem(20rem);;
+        }
+        &--btn{
+            width:calcRem(16rem);
+            height:calcRem(16rem);
+            position: absolute;
+            right:0;
+            @include vertical-center;
+            @include pageBackground('/images/common/ico_info-btn.svg','no-repeat center center / contain');
+            background-size:calcRem(16rem) calcRem(16rem) ;
+        }
+        &__state{
+            &--text{
+                color: $point1;
+                @include body8;
+            }
+            &--num{
+                font-weight: $light;
+                font-size: calcRem(11rem);
+            }
+        }
+    }
+    &__message{
+        .form__input--textarea{
+            margin-top:calcRem(15rem);
+            height: calcRem(36rem);
+            display: inline-block;
+            @include body7;
+            width: 85%;
+        }
+        .btn-v3{
+            margin-top:calcRem(15rem);
+            display: inline-block;
+            vertical-align: top;
+            width: auto;
+            padding: 8px 20px 6px 20px;
+        }
+    }
+    &__state{
+        .detail-Meta__state--text{
+            color: $point1;
+            @include body8;
+            margin: 0;
+            &.text-black{
+                color: $black1;
+            }
+        }
+        .detail-Meta__state--num{
+            font-weight: $light;
+            font-size: calcRem(11rem);
+        }
+        .detail-Meta__btn{
+            width: calcRem(88rem);
+            margin: auto;
+            &:not(:last-child){
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .order-mypage__meta.type-text{
+        .order-mypage__meta--item{
+            display: block;
+            @include body8;
+        }
+        &+.order-mypage__message{
+            @include body7;
+        }
+    }
+    .detail-Meta__option{
+        @include body7;
+        color: $disabledColor;
+        margin-top: calcRem(10rem);
+    }
+}
+
+//table
+.order-mypage{
+    .list-table{
+        tbody{
+            td{
+                vertical-align: top;
+                padding: calcRem(30rem) calcRem(20rem);
+                p{margin: 0;}
+            }
+        }
+        .detail-Meta{
+            @include flexWrap;
+            -webkit-box-orient: vertical; -ms-flex-direction: column;
+            flex-direction: column;
+            height: calcRem(150rem);
+
+            &__orderId{
+                @include body6;
+            }
+            &__date{
+                @include body7;
+            }
+
+            &__btn{
+                width: calcRem(88rem);
+                margin: auto;
+                .btn-v3{margin: 5px 0;}
+            }
+            &__thumb{
+                width: calcRem(110rem);
+                height: 100%;
+                overflow: hidden;
+                position: relative;
+                margin: auto;
+
+                img{
+                    @include ab-center;
+                }
+            }
+            &__title{
+                width: calc(100% - 170px);
+                // @include body3;
+                @include body7;
+                text-align: left;
+                margin-top:0;
+            }
+            &__option{
+                width: calc(100% - 170px);
+                color: $disabledColor;
+                // margin-bottom: auto;
+
+                @include flexWrap;
+                .btn-v3{
+                    width: auto;
+                    height: calcRem(24rem);
+                    padding: calcRem(5rem) calcRem(8rem);
+                    box-sizing: border-box;
+                    line-height: 1;
+                    margin-left: calcRem(20rem);
+                }
+            }
+
+            &__price{
+                line-height: 0;
+                position: relative;
+        
+                &--current{
+                    // @include body2;
+                    @include body8;
+                    font-weight: $medium;
+                    display: block;
+                }
+        
+                &--sale{
+                    // @include body2;
+                    @include body7;
+                    font-weight: $light;
+                    color:$throughColor;
+                    text-decoration: line-through;
+                    display: inline-block;
+                }
+            }
+        
+            &__benefit{
+                display: inline-block;
+                font-size:calcRem(12rem);
+                line-height:calclH(20,12);
+                color:$whiteColor;
+                padding:calcRem(2rem) calcRem(15rem);
+                background-color: $point1;
+                letter-spacing: $defaultLetter;
+                margin-top:calcRem(15rem);
+            }
+
+            &__state{
+                &--text{
+                    color: $point1;
+                    @include body8;
+                }
+                &--num{
+                    font-weight: $light;
+                    font-size: calcRem(11rem);
+                }
+            }
+        }
+    }
+}
+//--------------------------
+
+
+//데이터 없음
+.no-result{
+    padding: calcRem(100rem) 0;
+}
+
+.myOrderList-section__title{
+    @include  title1;
+    margin: calcRem(20rem) 0 calcRem(10rem) ;
+}
+
+
+//---- 3개월,6개월,1년 기간조회 버튼 --------------------
+.myOrderList-filter{
+    $filter : ".myOrderList-filter";
+    padding: calcRem(20rem);
+    margin-bottom: calcRem(60rem);
+    background: $lightgray2;
+    @include flexNoWrap;
+    @include flex-alignCenter;
+
+    &__btnList{
+        overflow: hidden;
+        flex: 1;
+
+        #{$filter}__item{
+            float: left;
+            width: 20%;
+            max-width:  calcRem(60rem);
+            height:  calcRem(36rem);
+            &:not(:last-child){ margin-right: calcRem(5rem); }
+
+            .myOrderList-btn{
+                height:  calcRem(36rem);
+                padding: 0;
+                box-sizing: border-box;
+                border-color: $gray2;
+                background: $whiteColor;
+                display: block;
+                @include body8;
+            }
+
+            &.is-current{
+                .myOrderList-btn{
+                    background: $point1;
+                    color: $whiteColor;
+                    border-color: $point1;
+                }
+            }
+        }
+    }
+
+    //기간조회 detail
+    &__detail{
+        #{$filter}__date{
+            display: inline-block;
+            vertical-align: middle;
+            .form-date__field{
+                .form__input--text{
+                    @include body7;
+                }
+                &:nth-child(2){
+                    transform: translateY(20%);
+                }
+            }
+        }
+        #{$filter}__search-btn{
+            display: inline-block;
+            width: calcRem(100rem);
+            height:calcRem(36rem);
+            vertical-align: middle;
+            
+            @include body8;
+            color:$whiteColor;
+            text-align: center;
+            background-color: $darkgray;
+            line-height: 0;
+        }
+    }
+    
+}
+//--------------------------
+

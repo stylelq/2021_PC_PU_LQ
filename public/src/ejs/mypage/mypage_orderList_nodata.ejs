@@ -1,0 +1,98 @@
+<%
+type = "mypage"
+page = "mypage"
+popup = "false"
+lnbTitle = "주문배송조회"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <div class="site-main">
+        <% include ../_include/_lnbMyPage %>
+        <section class="service-center">
+            <div class="myOrderList-contents">
+                <div class="center-right__head">
+                    <p class="center-right__title">주문배송조회</p>
+                </div>
+                <!-- 기간조회 -->
+                <div class="myOrderList-filter bg-gray">
+                    <ul class="myOrderList-filter__btnList">
+                        <li class="myOrderList-filter__item is-current"><button class="myOrderList-btn btn-v1 btn-v1--small">3개월</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small">6개월</button></li>
+                        <li class="myOrderList-filter__item"><button class="myOrderList-btn btn-v1 btn-v1--small">1년</button></li>
+                    </ul>
+                    <div class="myOrderList-filter__detail">
+                        <div class="myOrderList-filter__date">
+                            <div class="form-date__field">
+                                <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
+                            </div>
+                            <span class="form-date__field">~</span>
+                            <div class="form-date__field">
+                                <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
+                            </div> 
+                        </div>
+                        <button class="myOrderList-filter__search-btn btn-v1">조회하기</button>
+                    </div>
+                </div>
+                <!-- .기간조회 -->
+
+                <!-- 최근 주문 현황 -->
+                <div class="myOrderList-workflow">
+                    <ul class="myOrderList-workflow__list">
+                       <li class="myOrderList-workflow__item">
+                           <a href="#;" class="myOrderList-workflow__link">
+                               <p class="myOrderList-workflow__item-name">주문전체</p>
+                               <p class="myOrderList-workflow__item-figure br-under">2</p>
+                           </a>
+                       </li>
+                       <li class="myOrderList-workflow__item">
+                           <a href="#;" class="myOrderList-workflow__link">
+                               <p class="myOrderList-workflow__item-name">입금대기</p>
+                               <p class="myOrderList-workflow__item-figure">0</p>
+                           </a>
+                       </li>
+                       <li class="myOrderList-workflow__item">
+                           <a href="#;" class="myOrderList-workflow__link">
+                               <p class="myOrderList-workflow__item-name">결제완료</p>
+                               <p class="myOrderList-workflow__item-figure br-under">1</p>
+                           </a>
+                       </li>
+                       <li class="myOrderList-workflow__item">
+                           <a href="#;" class="myOrderList-workflow__link">
+                               <p class="myOrderList-workflow__item-name">상품 준비중</p>
+                               <p class="myOrderList-workflow__item-figure">0</p>
+                           </a>
+                       </li>
+                       <li class="myOrderList-workflow__item">
+                           <a href="#;" class="myOrderList-workflow__link">
+                               <p class="myOrderList-workflow__item-name">상품 배송중</p>
+                               <p class="myOrderList-workflow__item-figure">0</p>
+                           </a>
+                       </li>
+                       <li class="myOrderList-workflow__item">
+                           <a href="#;" class="myOrderList-workflow__link">
+                           <p class="myOrderList-workflow__item-name">배송완료</p>
+                           <p class="myOrderList-workflow__item-figure br-under">1</p>
+                           </a>
+                       </li>
+                   </ul>
+                </div>
+                <!-- .최근 주문 현황 -->
+
+                <!-- 최근주문헌황 리스트 -->
+                <section class="myOrderList-section">
+                    <div class="order-mypage__list">
+                        <% include ../_include/_orderListNoData %>
+                    </div>
+                </section>
+                <!-- //최근주문헌황 리스트 -->
+
+                <ul class="center-bullet">
+                    <li class="center-bullet__item">주문취소/반품접수는 주문상세정보 페이지에서 이용하실 수 있습니다.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_cartFix %>
+<% include ../_include/_footer %>

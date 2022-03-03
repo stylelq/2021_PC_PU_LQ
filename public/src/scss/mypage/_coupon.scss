@@ -1,0 +1,135 @@
+/**********************
+  PAGE
+  쿠폰
+**********************/
+.myCoupon{
+    // 프로모션 폼
+    &__title{
+        @include title4;
+        display: inline-flex;
+    }
+    &-form{ 
+        padding:calcRem(20rem); 
+
+        &__inner{
+            display: inline-flex;
+            margin-left: calcRem(20rem);
+            width: 40%;
+
+            .form__input--text{
+                background: $lightgray3;
+            }
+
+            &--btn{
+                position: relative;
+                padding-right:calcRem(87rem);
+    
+                .form__input--btn{
+                    @include body2;
+                    color:$whiteColor;
+                    padding:calcRem(9rem) calcRem(5rem);
+                    height:calcRem(38rem);
+                    text-align: center;
+                    width:calcRem(83rem);
+                    background-color: $darkgray;
+                    position: absolute;
+                    right:0;
+                    @include vertical-center;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+
+    // 쿠폰
+    &-cont{ 
+        .myCoupon__title{
+            border-bottom: 1px solid $black1;
+            display: block;
+            margin-top: calcRem(60rem);
+            padding-bottom: calcRem(10rem);
+            margin-bottom: 0;
+        }
+    }
+    &__item{
+        border-bottom: 1px solid $lightgray4;
+        padding:calcRem(14rem) calcRem(20rem);
+        box-sizing: border-box;
+    } 
+
+    &__price{ 
+        display: inline-block;     
+        vertical-align: top;
+        width:calcRem(100rem);
+        padding-right:calcRem(25rem);
+
+        &--box{
+            border:solid 1px $point1;
+            border-radius: 0 calcRem(7rem) 0 calcRem(7rem);
+            height:calcRem(63rem);
+            width:100%;
+            position: relative;
+        }
+
+        &--inner{
+            @include ab-center;
+            width:100%;
+            text-align: center;
+        }
+
+        &--title{
+            @include body7;
+            font-weight: $medium;
+            color:$point1;
+            display: block;
+        }
+        &--text{
+            @include title1;
+            color:$point1;
+            font-weight: $regular;
+            display: block;
+            strong{ font-weight: $regular; }
+        }
+        &--won{
+            @include body4;
+        }
+    }
+
+    // 쿠폰 설명
+    &__textBox{
+        display: inline-block;  
+        width: calc(100% - #{calcRem(130rem)});
+        margin:0;
+        vertical-align: middle;
+        transform: translateY(10px);
+        @include body2;
+
+        &--title{
+            margin: 0;
+            float: left;
+            width: 50%;
+        }
+        &--date{
+            margin: 0;
+            @include body6;
+        }
+        &--text{
+            @include body7;
+            margin: 0;
+            float: right;
+        }
+    }
+
+    &-contents{
+        //유의사항
+        .center-bullet{
+            margin-top: calcRem(40rem);
+        }
+
+    }
+}
+
+ 
+
+
+
