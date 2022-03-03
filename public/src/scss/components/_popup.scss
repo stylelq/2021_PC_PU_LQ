@@ -2380,11 +2380,11 @@
 .btn-popup__group{
     padding-top: calcRem(40rem);
     border-top: 1px solid $gray2;
-    &__list{
-        width: 40%;
+    .btn-group__list{
+        width: 50%;
         margin: auto;
     } 
-    &__btn{
+    .btn-group__btn{
         @include body8;
     }   
 }

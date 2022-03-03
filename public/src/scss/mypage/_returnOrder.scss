@@ -7,13 +7,12 @@
     &-tab{
         height:calcRem(35rem);
         position: relative;
-        padding-bottom: calcRem(30rem);
+        padding-bottom: calcRem(50rem);
 
         //head
         &__fix{
             border-top:solid 1px $gray1;
             position: absolute;
-            padding:0 calcRem(20rem);
             height:calcRem(35rem);
             background-color: $whiteColor;
             top:0;
@@ -92,15 +91,34 @@
 }
 
 
+//유의사항
 .notData-wrap{
+    &__textBox{
+        &--title{
+            @include title1;
+            margin-top: calcRem(60rem);
+        }
+        &--text{
+            @include title4;
+            margin-top: calcRem(20rem);
+            margin-bottom: calcRem(10rem);
+        }
+        
+        &--text+.center-bullet{
+            margin-top: calcRem(10rem);
+        }
+
+        .notData-workflow + .center-bullet{
+            margin-bottom: calcRem(20rem);
+        }
+    }
     .notData-workflow{
         margin-bottom: calcRem(40rem);
     
         &__list{
             @include flexNoWrap;
-            @include flex-alignCenter;
             border: 1px solid $lightgray4;
-            padding: calcRem(28rem) 0;
+            padding: calcRem(40rem) 0 calcRem(30rem);
             box-sizing: border-box;
         }
         &__link{
@@ -110,11 +128,13 @@
         &__item{
             @include body7;
             position: relative;
-            margin: auto;
+            margin:0 auto;
             text-align: center;
     
             &-name{
                 margin: 0;
+                margin-top: calcRem(20rem);
+                @include title4;
             }
             &-figure{ 
                 margin: 0;
@@ -122,6 +142,10 @@
                 color: $point1;
                 @include body8;
                 &.br-under{text-decoration: underline;}
+            }
+            &-text{
+                @include body6;
+                color: $disabledColor;
             }
     
             &:not(:last-child):after{
