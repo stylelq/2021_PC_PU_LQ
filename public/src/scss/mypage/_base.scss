@@ -78,6 +78,7 @@
         position: relative;
         padding-right: calcRem(40rem);
         margin-left: auto;
+        @include body8;
     }
     &__more{
         position: absolute;
