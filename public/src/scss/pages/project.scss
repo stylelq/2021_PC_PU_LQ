@@ -716,7 +716,7 @@
 //프로젝트 컨포넌트
 .findIntroduce{
     $this:&;
-    $total:10;
+    $total:11;
     @for $i from 1 to $total{
         &.nth-#{$i}{
             margin-bottom: calcRem(-120rem);
