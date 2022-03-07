@@ -893,9 +893,23 @@
         position: absolute;
         top:40px;
         right:40px;
-        margin:0; font-size:16px; z-index:50; font-family: GothamB; text-align:right; line-height:1.625;}
-    &__point{display:block; font-family: GothamM;}
-    &__list{ margin:0; padding:0; list-style:none;}
+        margin:0;
+        font-size:16px;
+        z-index:50;
+        font-family: GothamB;
+        text-align:right;
+        line-height:1.625;
+    }
+    &__point{
+        display:block;
+        font-family: GothamM;
+        text-transform: uppercase;
+    }
+    &__list{
+        margin:0;
+        padding:0;
+        list-style:none;
+    }
     &__dot{
         position: absolute;
         left: 0;
