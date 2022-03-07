@@ -1,0 +1,85 @@
+<%
+type = "mypage"
+page = "mypage"
+popup = "true"
+lnbTitle = "배송지 관리"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <div class="site-main">
+        <% include ../_include/_lnbMyPage %>
+        <section class="service-center myAddress">
+            <div class="myAddress-center">
+                <div class="center-right__head">
+                    <p class="center-right__title">배송지 관리</p>
+                </div>
+
+                <!--  -->
+                <div class="myAddress-form bg-gray">
+                    <h2 class="myAddress-form__title">자주 사용하시는 배송지를 등록해 두시면 편리하게 이용하실 수 있습니다.</h2>
+                    <div class="myAddress-form__inner myAddress-form__inner--btn">
+                        <a href="#" class="form__input--btn btn-v3 type-primary">배송지 등록</a>
+                    </div>
+                </div>
+
+                <!-- list -->
+                <div class="order-mypage">
+                    <table class="list-table" summary="배송지 관리">
+                        <caption>배송지 관리</caption>
+                        <colgroup>
+                            <col><col><col width="38%"><col><col width="4%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>배송지명</th>
+                                <th>받으시는분</th>
+                                <th>주소</th>
+                                <th>연락처</th>
+                                <th>관리</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>회사</td>
+                                <td>홍길동</td>
+                                <td>(02586) 서울시 동대문구 하정로 26 (신설동) 3F</td>
+                                <td>010-1234-5678</td>
+                                <td>
+                                    <div class="detail-Meta__btn">
+                                        <a href="" class="btn-v3 btn-v3--small type-primary">수정</a>
+                                    </div>
+                                    <div class="detail-Meta__btn">
+                                        <a href="" class="btn-v3 btn-v3--small type-white">삭제</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="user-address__meta--state">기본배송지</span>
+                                    회사
+                                </td>
+                                <td>홍길동</td>
+                                <td>(02586) 서울시 동대문구 하정로 26 (신설동) 3F</td>
+                                <td>010-1234-5678</td>
+                                <td>
+                                    <div class="detail-Meta__btn">
+                                        <a href="" class="btn-v3 btn-v3--small type-primary">수정</a>
+                                    </div>
+                                    <div class="detail-Meta__btn">
+                                        <a href="" class="btn-v3 btn-v3--small type-white">삭제</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- .list -->
+                <!-- paging -->
+                <% include ../_include/_paging %>
+                <!-- .paging -->
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>

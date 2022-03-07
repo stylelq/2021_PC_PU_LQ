@@ -1,0 +1,91 @@
+/**********************
+  PAGE
+  회원정보수정 - 인증
+**********************/
+.myInfo{
+    &-center{
+        padding-bottom: calcRem(50rem);
+        border-bottom: 1px solid $gray2;
+    }
+    .center-right__title{
+        border-bottom: 1px solid $black1;
+        margin-bottom:0;
+        padding-bottom: calcRem(24rem);
+    }
+}
+
+.myInfo-cont{
+    padding-top: calcRem(40rem);
+    width: calcRem(320rem);
+    margin: auto;
+
+    &__text{
+        @include body7;
+        text-align: center;
+    }
+
+    &__numberBox{
+        margin: calcRem(40rem) 0 calcRem(30rem);
+        padding: calcRem(15rem) calcRem(20rem);
+        
+        span{ 
+            @include body7;
+        }
+
+        .identi-num{
+            font-size: calcRem(20rem);
+            font-weight: $medium;
+            margin-left: calcRem(15rem);
+            display: inline-block;
+            width: 45%;
+        }
+    }
+
+    .input-list{
+        &__item{
+            margin: 0;padding:0;
+            .input-v1{
+                margin-bottom: calcRem(20rem);
+            }
+        }
+    }
+}
+
+// 회원정보수정
+ 
+
+
+
+
+//비밀번호 변경
+.myPass-center{
+    padding:0 calcRem(20rem);
+    &__text{ @include body3; }
+}
+.myPass-cont{
+    .input-list{
+        &__item{
+            margin: 0;padding:0;
+            .input-v1{
+                margin-bottom: calcRem(20rem);
+            }
+            &:first-child{
+                border-bottom: 1px solid $lightgray4;
+                margin-bottom: calcRem(20rem); 
+            }
+        }
+        &__inner{
+            .input-v1{
+                margin-bottom: calcRem(10rem);
+            } 
+        }
+        &__item+.btn-v1{ margin-top: calcRem(10rem);}
+    }
+}
+.myPass-infoSearch{
+    margin-top: calcRem(20rem);
+    p{
+        @include body3;
+        color: $point1;
+    }
+}

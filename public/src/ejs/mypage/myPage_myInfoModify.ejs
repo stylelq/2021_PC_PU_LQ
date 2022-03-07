@@ -1,0 +1,108 @@
+<%
+type = "mypage"
+page = "mypage"
+popup = "true"
+lnbTitle = "회원정보수정"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <div class="site-main">
+        <% include ../_include/_lnbMyPage %>
+        <section class="service-center myInfoModify">
+            <div class="myInfoModify-center">
+                <div class="center-right__head">
+                    <p class="center-right__title">회원정보수정</p>
+                </div>
+
+                <!-- 컨텐츠 -->
+                <div class="myInfoModify-cont">
+                    <div class="myInfoModify-cont__table">
+                        <h3 class="myInfoModify-cont__table--title">기본정보</h3>
+                        <div class="fieldset__group">
+                            <div class="fieldset__label">가입 유형</div>
+                            <div class="fieldset__text">[네이버]</div>
+                        </div>
+
+                        <div class="fieldset__group">
+                            <div class="fieldset__label">아이디</div>
+                            <div class="fieldset__text">youngv77</div>
+                        </div>
+
+                        <div class="fieldset__group">
+                            <div class="fieldset__label">이름</div>
+                            <div class="fieldset__text">홍길동</div>
+                        </div>
+
+                        <div class="fieldset__group">
+                            <div class="fieldset__label">휴대폰번호</div>
+                            <div class="fieldset__text">010-1234-5678 <a href="#" class="basic-table--btn">수정</a></div>
+                        </div>
+
+                        <div class="fieldset__group">
+                            <div class="fieldset__label">이메일</div>
+                            <div class="fieldset__text">abcedfg@gmail.com <a href="#emailModify" class="basic-table--btn js-popup-open">수정</a></div>
+                        </div>
+
+                        <div class="fieldset__group">
+                            <div class="fieldset__label">이벤트/쇼핑정보</div>
+                            <div class="fieldset__inner--btn">
+                                <div class="form__checkbox form__checkbox--big">
+                                    <input class="form__checkbox--input sr-only" type="checkbox" name="aggree1" id="aggree1">
+                                    <label class="form__checkbox--text" for="aggree1">SMS/LMS 문자 수신 동의</label>
+                                </div>
+                                <div class="form__checkbox form__checkbox--big">
+                                    <input class="form__checkbox--input sr-only" type="checkbox" name="aggree2" id="aggree2">
+                                    <label class="form__checkbox--text" for="aggree2">이메일 수신 동의</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fieldset__group">
+                            <div class="fieldset__label">성별</div>
+                            <div class="fieldset__inner--btn">
+                                <div class="form__radio form__radio--big form__radio--red">
+                                    <input class="form__radio--input sr-only" type="radio" name="sex" id="sex_M">
+                                    <label class="form__radio--text" for="sex_M">남</label>
+                                </div>
+                                <div class="form__radio form__radio--big form__radio--red">
+                                    <input class="form__radio--input sr-only" type="radio" name="sex" id="sex_F">
+                                    <label class="form__radio--text" for="sex_F">여</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="fieldset__group">
+                            <div class="fieldset__label">생년월일</div>
+                            <div class="fieldset__text">
+                                <div class="form-date__field">
+                                    <input type="date" pattern="\d{4}-\d{2}-\d{2}" class="form__input--text" placeholder="2021.07.10"><span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="center-bullet">
+                        <li class="center-bullet__item">주문/결제 시 안내 및 기타 중요 안내 사항은 이메일, SMS 수신 여부와 관계없이 발송됩니다.</li>
+                        <li class="center-bullet__item">본인이 아닌 타인의 실명을 도용하여 가입할 경우 회원자격이 박탈되고 형사상의 처벌을 받으실 수 있습니다.</li>
+                    </ul>
+                </div>
+                <!-- .컨텐츠 -->
+
+                <div class="btn-group btn-inquiry__group">
+                    <ul class="btn-group__list type-two">
+                        <li class="btn-group__item">
+                            <button class="btn-group__btn btn-v1 btn-v1--small type-white">취소</button>
+                        </li>
+                        <li class="btn-group__item">
+                            <button class="btn-group__btn btn-v1 btn-v1--small type-primary">저장</button>
+                        </li>
+                    </ul>
+                </div>                 
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_popup/_emailModify %>
+<% include ../_popup/_emailModifyResult %>
+<% include ../_include/_footer %>

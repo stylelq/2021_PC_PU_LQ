@@ -1,0 +1,43 @@
+//배송지 리스트
+.myAddress{
+    &-form{ 
+        padding:calcRem(20rem); 
+        display: flex;
+        @include flex-alignCenter;
+        margin-bottom: calcRem(60rem);
+
+        &__title{
+            @include body1;
+        }
+
+        &__inner{
+            margin-left: auto;
+            .btn-v3{
+                @include body7;
+                padding: calcRem(8rem) calcRem(30rem);
+            }
+        }
+    }
+
+    .order-mypage{
+        .list-table{
+            tbody td{
+                vertical-align: middle;
+            }
+
+            .detail-Meta__btn{
+                width: calcRem(60rem);
+                .btn-v3 {
+                    @include body7;
+                }
+            }
+        }
+    }
+
+    .user-address__meta--state{
+        display: block;
+        color: $point1;
+    }
+}
+
+

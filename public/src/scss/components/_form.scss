@@ -288,6 +288,16 @@
   }
 }
 
+.btn-group{
+  &__list{
+      width: 36.5%;
+      margin: auto;
+  } 
+  &__btn{
+      @include body8;
+  }   
+}
+
 //인풋 리스트 형태
 .input-list{
 

@@ -2595,48 +2595,54 @@
 
 //마이페이지 :: 이메일 주소수정 인증발송/결과
 .emailModify-wrap{
-  .email-box{
-      &__field{
-          position: relative;
-          padding-right: 7.375rem;
-          box-sizing: border-box;
-      }
-      &__select{
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          width: 7.4375rem;
-      }
-  }
+    margin-top: calcRem(20rem);
+    width: calcRem(320rem);
+    .email-box{
+        &__field{
+            position: relative;
+            padding-right: 7.375rem;
+            box-sizing: border-box;
+            .input-v1,
+            .form__select{
+                @include body7;
+            }
+        }
+        &__select{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 7.4375rem;
+        }
+    }
   
-  .popup-confirm__link{
-      margin-top: calcRem(30rem);
+    .popup-confirm__link{
+        margin-top: calcRem(20rem);
+        @include body7;
 
-      &.type-white{
-          background-color: $whiteColor;
-          color: $darkgray;
-          margin-top: calcRem(20rem);
-      }
-  }
+        &.type-white{
+            background-color: $whiteColor;
+            color: $darkgray;
+        }
+    }
 
-  .emailModify-textBox{
-      text-align: center;
+    .emailModify-textBox{
+        text-align: center;
 
-      &__title{
-          @include title2;
-          margin:calcRem(30rem) 0 calcRem(10rem);
-      }
-      &__text{
-        //   @include body3;
-          @include body7;
-          margin-bottom: calcRem(10rem);
-      }
-  }
+        &__title{
+            @include title2;
+            margin:calcRem(30rem) 0 calcRem(10rem);
+        }
+        &__text{
+            //   @include body3;
+            @include body7;
+            margin-bottom: calcRem(10rem);
+        }
+    }
 
-  .center-bullet{
-      margin-top: calcRem(30rem);
-  }
+    .center-bullet{
+        margin-top: calcRem(30rem);
+    }
 }
 
 //마이페이지 :: 주문취소

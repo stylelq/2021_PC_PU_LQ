@@ -1,0 +1,90 @@
+<%
+type = "mypage"
+page = "mypage"
+popup = "false"
+lnbTitle = "회원 탈퇴"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <div class="site-main">
+        <% include ../_include/_lnbMyPage %>
+        <section class="service-center memberRemove">
+            <div class="memberRemove-center">
+                <div class="center-right__head">
+                    <p class="center-right__title">회원 탈퇴</p>
+                </div>
+
+                <!-- 컨텐츠 -->
+                <div class="memberRemove-cont">
+                    <div class="memberRemove-cont__title">그 동안 루이까또즈를 이용해 주셔서<br>
+                        감사합니다.</div>
+                    
+                    <div class="memberRemove-cont__textBox">
+                        <div class="memberRemove-cont__text is-point">탈퇴를 하시면 회원만의 특별한 혜택을 누리실 수 없습니다.</div>
+                        <div class="memberRemove-cont__text is-point">탈퇴 후 30일 이내 재가입이 불가 합니다, 신중히 생각하신 후 탈퇴를 해주세요.</div>
+                        <ul class="center-bullet">
+                            <li class="center-bullet__item">진행중인 거래(주문, 교환, 반품) 내역이 있을 경우 즉시 회원 탈퇴가 불가능합니다. 거래내역 종료 후 탈퇴 신청을 완료해주세요.</li>
+                            <li class="center-bullet__item">회원탈퇴 시 보유하고 있는 적립금, 쿠폰은 모두 삭제됩니다.</li>
+                            <li class="center-bullet__item">탈퇴하신 아이디는 다시 사용할 수 없습니다.</li>
+                            <li class="center-bullet__item">회원탈퇴 후 재가입 시 신규 가입으로 처리되며, 탈퇴전 회원정보와 거래정보 및 적립금, 쿠폰 정보 등은 복구되지 않습니다</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="memberRemove-cont__textBox">
+                        <div class="memberRemove-cont__title">회원탈퇴 사유 (필수, 중복 체크 가능)</div>
+                        <ul class="memberRemove-cont__list">
+                            <li class="memberRemove-cont__item">
+                                <div class="form__checkbox form__checkbox--big">
+                                    <input class="form__checkbox--input sr-only" type="checkbox" name="chk" id="chk1">
+                                    <label class="form__checkbox--text" for="chk1">상품의 다양성/가격 불만</label>
+                                </div>
+                            </li>
+                            <li class="memberRemove-cont__item">
+                                <div class="form__checkbox form__checkbox--big">
+                                    <input class="form__checkbox--input sr-only" type="checkbox" name="chk" id="chk2">
+                                    <label class="form__checkbox--text" for="chk2">회원혜택의 불만</label>
+                                </div>
+                            </li>
+                            <li class="memberRemove-cont__item">
+                                <div class="form__checkbox form__checkbox--big">
+                                    <input class="form__checkbox--input sr-only" type="checkbox" name="chk" id="chk3">
+                                    <label class="form__checkbox--text" for="chk3">사이트 시스템 및 속도 불안</label>
+                                </div>
+                            </li>
+                            <li class="memberRemove-cont__item">
+                                <div class="form__checkbox form__checkbox--big">
+                                    <input class="form__checkbox--input sr-only" type="checkbox" name="chk" id="chk4">
+                                    <label class="form__checkbox--text" for="chk4">자주 이용하지 않음</label>
+                                </div>
+                            </li>
+                            <li class="memberRemove-cont__item">
+                                <div class="form__checkbox form__checkbox--big">
+                                    <input class="form__checkbox--input sr-only" type="checkbox" name="chk" id="chk5">
+                                    <label class="form__checkbox--text" for="chk5">상담원의 고객응대 불만</label>
+                                </div>
+                            </li>
+                            <li class="memberRemove-cont__item">
+                                <div class="form__checkbox form__checkbox--big">
+                                    <input class="form__checkbox--input sr-only" type="checkbox" name="chk" id="chk6">
+                                    <label class="form__checkbox--text" for="chk6">기타</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                                        
+                </div>
+                <!-- .컨텐츠 -->
+                
+                <div class="btn-group btn-inquiry__group">
+                    <ul class="btn-group__list">
+                        <li class="btn-group__item">
+                            <button class="btn-group__btn btn-v1 btn-v1--small type-white">취소</button>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>

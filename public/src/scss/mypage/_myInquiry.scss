@@ -1,0 +1,51 @@
+.myInquiry{
+    &-form{ 
+        padding:calcRem(20rem); 
+        display: flex;
+        @include flex-alignCenter;
+        margin-bottom: calcRem(60rem);
+
+        &__title{
+            @include body1;
+        }
+
+        &__inner{
+            margin-left: auto;
+            .btn-v3{
+                @include body7;
+                padding: calcRem(8rem) calcRem(30rem);
+            }
+        }
+    }
+
+    .order-mypage{
+        .list-table{
+            tbody td{ padding: calcRem(20rem); }
+            
+            [class*=state-item__]{
+                @include body8;
+            }
+            .state-item__ing{
+                color: $gray1;
+            }
+            .state-item__end{
+                color: $point1;
+            }
+
+            .order-mypage__header--title{
+                display: block;
+                text-align: left;
+                @include body8;
+            }
+        }
+    }
+
+    .user-address__meta--state{
+        display: block;
+        color: $point1;
+    }
+
+    .center-bullet{
+        margin-top: calcRem(40rem);
+    }
+}
