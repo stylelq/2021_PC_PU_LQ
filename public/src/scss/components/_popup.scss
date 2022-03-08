@@ -2847,3 +2847,16 @@
       border-radius: 0;
   }
 }
+
+
+// 마이페이지 :: 비밀번호 변경 결과
+.myPass-infoSearch{
+    margin-top: calcRem(60rem);
+    text-align: center;
+    .small-popup-confirm__btn{
+        padding-top: calcRem(10rem);
+    }
+    .small-popup-confirm__item{
+        margin-top: calcRem(20rem);
+    }
+}
