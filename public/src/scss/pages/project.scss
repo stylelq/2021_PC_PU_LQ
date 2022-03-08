@@ -890,10 +890,10 @@
     overflow:hidden;
     &__desc{
         position: absolute;
-        top:40px;
-        right:40px;
+        top:calcRem(40rem);
+        right:calcRem(40rem);
         margin:0;
-        font-size:16px;
+        font-size:calcRem(16rem);
         z-index:50;
         font-family: GothamB;
         text-align:right;
@@ -922,8 +922,8 @@
         font-size: 0;
         .swiper-pagination-bullet {
             margin-left: 18px;
-            width: 8px;
-            height: 8px;
+            width: calcRem(8rem);
+            height: calcRem(8rem);
             background: #fff !important;
             opacity: 1 !important;
             display: inline-block;
@@ -937,14 +937,16 @@
         }
     }
 }
-.findIntroduce-store{position:relative; border-top:1px solid rgba(255,255,255,0.6);
+.findIntroduce-store{
+    position:relative;
+    border-top:1px solid rgba(255,255,255,0.6);
     $this:&;
     &:after{display:block; clear:both; content:'';}
-    &__box{position:absolute; top:0; left:0; bottom:0; display:inline-block; width:400px; border-right:1px solid rgba(255,255,255,0.6); vertical-align: top; box-sizing: border-box;}
-    &__slide{float:right; width:800px;}
-    &__wrap{position: absolute; left:30px; bottom:108px;}
-    &__name{margin-bottom:4px;}
-    &__list{margin:26px 0 0 0; padding:0; list-style:none;}
+    &__box{position:absolute; top:0; left:0; bottom:0; display:inline-block; width:calcRem(400rem); border-right:1px solid rgba(255,255,255,0.6); vertical-align: top; box-sizing: border-box;}
+    &__slide{float:right; width:calcRem(800rem);}
+    &__wrap{position: absolute; left:calcRem(30rem); bottom:calcRem(108rem);}
+    &__name{margin-bottom:calcRem(4rem);}
+    &__list{margin:calcRem(26rem) 0 0 0; padding:0; list-style:none;}
     &__item{
         &.type-address{
             #{$this}__link:before{background:url('../../images/common/ico_1.png')}
@@ -957,21 +959,21 @@
         }
         & + &{margin-top:12px;}
     }
-    &__input{overflow: hidden;position: absolute;top: auto;width: 1px;height: 1px;padding: 0;margin: -1px;border: 0;clip: rect(0, 0, 0, 0); user-select: auto;}
-    &__link{position:relative; padding-left:32px; box-sizing: border-box; margin:0; font-size:16px; font-weight:400;
-        &:before{position:absolute; top:0; bottom:0; left:0; display:block; width:24px; height:24px; margin:auto 0; content:'';}
+    &__input{overflow: hidden;position: absolute;top: auto;width: calcRem(1rem);height: calcRem(1rem);padding: 0;margin: -1px;border: 0;clip: rect(0, 0, 0, 0); user-select: auto;}
+    &__link{position:relative; padding-left:calcRem(32rem); box-sizing: border-box; margin:0; font-size:16px; font-weight:400;
+        &:before{position:absolute; top:0; bottom:0; left:0; display:block; width:calcRem(24rem); height:calcRem(24rem); margin:auto 0; content:'';}
     }
-    &__name{margin:0; font-size:24px; font-weight:bold;}
-    &__address{margin:0; font-size:16px; font-weight:400;}
+    &__name{margin:0; font-size:calcRem(24rem); font-weight:bold;}
+    &__address{margin:0; font-size:calcRem(16rem); font-weight:400;}
 }
 
 .find-sns{
     float:right;
     margin:0;
-    padding:0 30px 0 0;
+    padding:0 calcRem(30rem) 0 0;
     list-style:none;
     &__item{
-        & + &{margin-top:20px;}
+        & + &{margin-top:calcRem(20rem);}
     }
 }
 
@@ -1021,4 +1023,377 @@
 
 .content-video__area.nth-10 .content-video__intro {
     background: url("https://cdn.louisclub.com/static/fr/img/find/youtube_thumbnail_10.jpg") no-repeat center center/cover;
+}
+
+
+/* 프로젝트 그루비룸 */
+.event-wrap {
+    width: 100%;
+    margin: 0 auto calcRem(-120rem);
+}
+.event-top {
+    position: relative;
+    &__btn{
+        position: absolute;
+        display: block;
+        right: calcRem(93rem);
+        top: calcRem(40rem);
+        width: calcRem(37rem);
+        height: calcRem(30rem);
+        background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/sound_off.png") no-repeat center center/contain;
+        z-index: 30;
+        &.is-active{
+            background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/sound_on.png") no-repeat center center/contain;
+        }
+    }
+
+    &__video{
+        position: relative;
+        width: 100%;
+        video{
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__arrow{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 10%;
+        display: block;
+        margin: 0 auto;
+        width: calcRem(31rem);
+        height: calcRem(16rem);
+        background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/top_arrow.png") no-repeat center center/contain;
+        z-index: 30;
+        animation: sdb 1s infinite;
+    }
+
+    &__box{
+        img{
+            width: 100%;
+        }
+    }
+}
+.event-section {
+    position: relative;
+    height: 100vh;
+    z-index: 30;
+    &__wrap{
+        max-width: calcRem(1280rem);
+        width: 100%;
+        height: inherit;
+        margin: 0 auto;
+        padding: 0 40px;
+        box-sizing: border-box;
+        &.type-section{
+            padding: 0 0 0 6.6%;
+            box-sizing: border-box;
+        }
+    }
+
+    &__area{
+        max-width: calcRem(942rem);
+    }
+
+    &.nth-1{
+        background-color: #000;
+    }
+    &.nth-0{
+        background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/section_bg_0.jpg") no-repeat center center/cover;
+    }
+    &.nth-2{
+        background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/section_bg_1.jpg") no-repeat center center/cover;
+    }
+    &.nth-3{
+        background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/section_bg_2.jpg") no-repeat center center/cover;
+    }
+    &.nth-4{
+        background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/section_bg_3.jpg") no-repeat center center/cover;
+    }
+    &.nth-5{
+        background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/section_bg_4.jpg") no-repeat center center/cover;
+    }
+    &.nth-6{
+        background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/section_bg_5.jpg") no-repeat center center/cover;
+    }
+    &.nth-7{
+        background-color: #000;
+    }
+
+    &__outer{
+        display: inline-table;
+        width: 100%;
+        height: 100%;
+    }
+    &__inner{
+        display: table-cell;
+        height: 100%;
+        width: 1%;
+        vertical-align: middle;
+        text-align: center;
+    }
+    &__box:after{
+        display: block;
+        clear: both;
+        content: '';
+    }
+    &__menu{
+        position: relative;
+        float: right;
+        margin-top: calcRem(12rem);
+    }
+    &__link{
+        position: absolute;
+        display: block;
+        height: 100%;
+        overflow: hidden;
+        text-indent: -999px;
+        &:nth-child(1){
+            left: 0;
+            width: 23.33%;
+            z-index: 5;
+        }
+        &:nth-child(2){
+            left: 0;
+            right: 0;
+            width: 37.33%;
+            margin: 0 auto;
+        }
+    }
+
+    &__bg{
+        display: none;
+        &.is-active{
+            display: block;
+        }
+    }
+    &__img{
+        display: inline-block;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+    &__white{
+        color: #fff;
+    }
+}
+
+.event-section__wrap.type-section .event-section__inner {
+    text-align: left;
+}
+
+.event-section__link:nth-child(3), .event-section__link.type-music {
+    left:auto;
+    right: 0;
+    width: 21.66%;
+    z-index: 5;
+}
+
+.event-section__menu.type-two .event-section__link:nth-child(1){
+    left:auto;
+    right:29%;
+    width: 30%;
+    margin: 0 auto;
+}
+.event-section__menu.type-two .event-section__link:nth-child(2){
+    left:auto;
+    width: 21.66%;
+}
+
+
+@media only screen and (max-width: 1280px) {
+    .event-section__wrap.type-section {
+        padding: 0 6.6% 0 6.6%;
+        box-sizing: border-box;
+    }
+}
+
+.content-video {
+    text-align: center;
+    &__wrap{
+        position: relative;
+        margin: calcRem(20rem) 0 calcRem(48rem);
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+    }
+    &__area{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        &.is-active{
+            z-index: 20;
+            opacity: 1;
+        }
+    }
+    &__intro{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 15;
+        &.is-hide{
+            display: none;
+        }
+    }
+    &__play{
+        width: 100%;
+        height: 100%;
+        background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/play_btn.png") no-repeat center center/cover;
+        cursor: pointer;
+    }
+    &__youtube{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        z-index: 10;
+    }
+}
+
+.content-video__area.nth-1 .content-video__intro {
+    background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/video_bg_16.jpg") no-repeat center center/cover;
+}
+
+.content-video__area.nth-2 .content-video__intro {
+    background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/video_bg_18.jpg") no-repeat center center/cover;
+}
+
+.content-video__area.nth-3 .content-video__intro {
+    background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/video_bg_17.jpg") no-repeat center center/cover;
+}
+
+.content-video__area.nth-4 .content-video__intro {
+    background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/video_bg_1.jpg") no-repeat center center/cover;
+}
+
+.content-video__area.nth-5 .content-video__intro {
+    background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/video_bg_2.jpg") no-repeat center center/cover;
+}
+
+.content-video__area.nth-6 .content-video__intro {
+    background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/video_bg_3.jpg") no-repeat center center/cover;
+}
+
+.content-video__area.nth-7 .content-video__intro {
+    background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/video_bg_4.jpg") no-repeat center center/cover;
+}
+
+.content-video__area.nth-8 .content-video__intro {
+    background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/video_bg_5.jpg") no-repeat center center/cover;
+}
+
+.content-video__area.nth-9 .content-video__intro {
+    background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/video_bg_6.jpg") no-repeat center center/cover;
+}
+
+.content-video__area.nth-10 .content-video__intro {
+    background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/video_bg_7.jpg") no-repeat center center/cover;
+}
+
+.content-video__area.nth-11 .content-video__intro {
+    background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/video_bg_8.jpg") no-repeat center center/cover;
+}
+.content-video__area.nth-12 .content-video__intro {
+    background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/video_bg_9.jpg") no-repeat center center/cover;
+}
+.content-video__area.nth-13 .content-video__intro {
+    background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/video_bg_10.jpg") no-repeat center center/cover;
+}
+.content-video__area.nth-14 .content-video__intro {
+    background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/video_bg_11.jpg") no-repeat center center/cover;
+}
+.content-video__area.nth-15 .content-video__intro {
+    background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/video_bg_12.jpg") no-repeat center center/cover;
+}
+.content-video__area.nth-16 .content-video__intro {
+    background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/video_bg_13.jpg") no-repeat center center/cover;
+}
+.content-video__area.nth-17 .content-video__intro {
+    background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/video_bg_14.jpg") no-repeat center center/cover;
+}
+.content-video__area.nth-18 .content-video__intro {
+    background: url("https://cdn.louisclub.com/static/fr/img/specialty/20200710/video_bg_15.jpg") no-repeat center center/cover;
+}
+
+.event-typed {
+    display: inline-block;
+    position: relative;
+    &__wrap{
+        display: none;
+    }
+}
+.event-typed__tit {
+    display: inline-block;
+    margin: 0;
+    font-size: calcRem(70rem);
+    font-weight: 300;
+    color: #7b7b7b;
+    font-family: GothamB;
+}
+
+.event-typed__point {
+    color: #fff;
+}
+
+.event-menu {
+    margin: calcRem(8rem);
+    padding: 0;
+    text-align: left;
+    &.type-section{
+        float: left;
+    }
+    &.type-top{
+        margin-top: calcRem(50rem);
+    }
+}
+.event-menu__item {
+    display: inline-block;
+    list-style: none;
+    vertical-align: middle;
+}
+.event-menu__item + .event-menu__item {
+    margin-left: calcRem(28rem);
+}
+
+.typed-cursor {
+    opacity: 0;
+    display: inline-block;
+    bottom: 0;
+    right: 0;
+    margin-left: calcRem(5rem);
+    font-weight: 500;
+    font-size: calcRem(70rem);
+    &.is-focus{
+        opacity: 1;
+        animation: blink 0.6s infinite;
+    }
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    50.01%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes sdb {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0px, 20px);
+        opacity: 0;
+    }
 }
