@@ -397,6 +397,7 @@
 
 //table
 .order-mypage{
+    zoom:1;
     .list-table{
         tbody{
             td{
@@ -509,6 +510,12 @@
 .no-result{
     padding: calcRem(100rem) 0;
 }
+.notData-wrap{
+    padding: calcRem(100rem) 0;
+    text-align: center;
+    @include body7;
+}
+
 
 .myOrderList-section__title{
     @include  title1;

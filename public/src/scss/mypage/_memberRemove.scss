@@ -44,13 +44,7 @@
         margin-bottom: calcRem(15rem);
         &:last-child{ margin-bottom: calcRem(30rem); }
     }
-    .center-bullet__item{
-        margin-top: calcRem(7rem);
-        @include body1;
-        color: $black1;
-    }
 
-    //회원탈퇴 - 비밀번호입력 폼
     &__textBox{
         &:not(:nth-child(3)){
             border-top: 1px solid $lightgray4;
@@ -59,33 +53,53 @@
         box-sizing: border-box;
 
         .memberRemove-cont__title{
-            text-align: center;
+            text-align: left;
             margin-bottom: calcRem(10rem);
             @include title2;
         }
 
         &:last-child{
-            .memberRemove-cont__title{
-                margin-bottom:calcRem(30rem);
+            .memberRemove-cont__title{ 
+                margin-bottom: calcRem(25rem); 
+            } 
+        }   
+    }
+
+    //회원탈퇴 - 비밀번호입력 폼
+    .memberRemove2-cont{
+        &__textBox{
+            border-top: 1px solid $lightgray4;
+            padding: calcRem(60rem) 0 calcRem(10rem);
+            box-sizing: border-box;
+    
+            .input-list{
+                width: calcRem(320rem);
+                margin: auto;
             }
-            .memberRemove-cont__text{
-                text-align: center;
-                font-weight: $light;
-                margin-bottom:calcRem(20rem);
-                @include body7;
+            .input-box__btn{
+                margin-top:calcRem(20rem);
             }
+        }
+        &__title{
+            text-align: center;
+            margin-bottom:calcRem(30rem);
+            @include title2;
         }
 
-        .input-list{
-            width: calcRem(320rem);
-            margin: auto;
-        }
-        .input-box__btn{
-            margin-top:calcRem(20rem);
+        &__text{
+            text-align: center;
+            font-weight: $light;
+            margin-bottom:calcRem(20rem);
+            @include body7;
         }
     }
-  
-}
 
+    .center-bullet__item{
+        margin-top: calcRem(7rem);
+        @include body1;
+        color: $black1;
+    }
+
+}
 
 
