@@ -680,18 +680,20 @@
       display: block;
   }
   &__top{
-      padding: calcRem(24rem) 0;
+      padding: calcRem(58rem) 0;
       background-color: #cac0b3;
       text-align: center;
+      font-size: calcRem(20rem);
   }
   &__bottom{
-      padding: calcRem(24rem) 0;
+      padding: calcRem(58rem) 0;
       background-color: #f06035;
       text-align: center;
+      font-size: calcRem(20rem);
   }
   &__time{
       &--lunch{
-          font-size: calcRem(12rem);
+          font-size: calcRem(16rem);
       }
   }
 }

@@ -1,13 +1,135 @@
 @import "../base/variables";
 @import "../base/mixins";
 
-//메인
-.main{
-    &-slide{
-      &__img{
-        overflow: hidden;
+//메인 탑배너슬라이드
+.main-banner{
+  position: relative;
+
+  &__inner{
+    display: block;
+    width:100vw;
+    height: auto;
+    line-height:0;
+  }
+  &__source{
+    display: block;
+    &--img{
+      height: 100vh;
+    }
+    &--video{
+      height: 100vh;
+    }
+  }
+  &__img{
+    width: 100%;
+    height: 100%;
+  }
+  &__video{
+    width: 100%;
+  }
+  &__content{
+    bottom: calcRem(50rem);
+    position: absolute;
+  }
+  &__name{
+    color: #000;
+    font-size: calcRem(17rem); //16
+    line-height: calcRem(28rem);
+  }
+  &__pagination{
+    bottom: calcRem(20rem);
+    width: 100%;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    z-index: 100;
+    font-size:0;
+    line-height:0;
+    &.is-white{
+      color: #000;
+      .swiper-pagination-current:after{
+        background-color: #000;
       }
     }
+
+    &.is-black{
+      color: #fff;
+    }
+
+    &.disabled{
+      display: none !important;
+    }
+
+    .swiper-pagination{
+      &-current {
+        font-size: calcRem(12rem);
+        line-height: calclH(19, 12);
+        padding-right: calcRem(11rem);
+        position: relative;
+
+        &:after {
+          content: "";
+          width: 1px;
+          height: calcRem(10rem);
+          background-color: #fff;
+          position: absolute;
+          right: 0;
+          @include vertical-center;
+        }
+      }
+      &-total{
+        font-size:calcRem(12rem);
+        line-height:calclH(19,12);
+        padding-left:calcRem(10rem);
+      }
+    }
+  }
+
+  // 프로그래스바
+  .swiper-progress-bar{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    display: block;
+    z-index: 1;
+    height: calcRem(3rem);
+    .slide_progress-bar {
+      position: absolute;
+      height: calcRem(3rem);
+      background: rgba(255, 255, 255, 0.5);
+      width: auto;
+      clear: both;
+      opacity: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #9B192F;
+        height: 100%;
+        width: 0;
+        content: "";
+        transition: 0.1s width linear;
+      }
+    }
+    &.active {
+      .slide_progress-bar {
+        opacity: 1;
+      }
+    }
+    &.animate {
+      .slide_progress-bar {
+        &:after {
+          width: 100%;
+          transition: width linear;
+          transition-delay: unset;
+          transition-duration: 5s;
+        }
+      }
+    }
+  }
 }
 
 //검색결과
@@ -65,5 +187,126 @@
     width:calcRem($minWidth);
     margin: auto;
     margin-bottom: calcRem(120rem);
+  }
+}
+
+//메인 신상슬라이드
+.main-new {
+  position: relative;
+  overflow: hidden;
+  padding-top: calcRem(60rem);
+  width: calcRem(1200rem);
+
+  &__header{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding-top: calcRem(55rem);
+  }
+  &__title{
+    top: 0;
+    position: relative;
+    font-size: calcRem(20rem);
+    line-height: calcRem(32rem);
+    z-index: 90;
+    font-weight: $medium;
+  }
+  &__container{
+    overflow: visible;
+  }
+  &__slide{
+    position: relative;
+    margin: 0 calcRem(18rem);
+    //롤링슬라이드
+    .swiper-wrapper{
+      transition-timing-function: linear;
+    }
+  }
+  &__item{
+    padding: 0 calcRem(2.5rem);
+    box-sizing: border-box;
+  }
+  &__inner {
+    display: block;
+    width: 100%;
+    line-height: 0;
+  }
+  &__img {
+    display: block;
+    //width: 100%;
+  }
+
+  &__content {
+    bottom: calcRem(35rem);
+    // top: calcRem(319rem);
+    position: absolute;
+    color: #000;
+    text-align: center;
+  }
+
+  &__name {
+    font-size: calcRem(12rem); //14
+    font-weight: 300;
+    line-height: calcRem(19rem); //20
+    padding: 0 calcRem(10rem);
+  }
+  &__price {
+    padding-top: calcRem(5rem);
+    font-size: calcRem(14rem);
+    font-weight: 400;
+    line-height: calcRem(20rem);
+  }
+  &__pagination {
+    /*bottom: calcRem(20rem);*/
+    padding: calcRem(20rem) 0 0;
+    width: 100%;
+    position: relative;
+    color: #000;
+    text-align: center;
+    z-index: 100;
+    font-size: 0;
+    line-height: 0;
+
+    .swiper-pagination {
+      &-current {
+        font-size: calcRem(12rem);
+        line-height: calclH(19, 12);
+        padding-right: calcRem(11rem);
+        position: relative;
+
+        &:after {
+          content: "";
+          width: 1px;
+          height: calcRem(10rem);
+          background-color: $gray1;
+          position: absolute;
+          right: 0;
+          @include vertical-center;
+        }
+      }
+
+      &-total {
+        font-size: calcRem(12rem);
+        line-height: calclH(19, 12);
+        padding-left: calcRem(10rem);
+      }
+    }
+  }
+  &__more{
+    display: block;
+    padding-top: calcRem(25rem);
+  }
+  &__link{
+    display: block;
+  }
+  &__button{
+    margin: 0 auto;
+    width: calcRem(210rem);
+    padding: calcRem(9rem) 0;
+    border: 1px solid #000;
+    font-size: calcRem(12rem);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: $medium;
   }
 }
