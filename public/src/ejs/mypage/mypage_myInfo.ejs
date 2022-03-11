@@ -1,0 +1,35 @@
+<%
+type = "mypage"
+page = "mypage"
+lnbTitle = "회원정보수정"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <div class="site-main">
+        <% include ../_include/_lnbMyPage %>
+        <section class="service-center myInfo">
+            <div class="myInfo-center">
+                <div class="center-right__head">
+                    <p class="center-right__title">회원정보수정</p>
+                </div>
+
+                <div class="myInfo-cont">
+                    <div class="myInfo-cont__text">개인정보를 안전하게 취급하며, 회원님의 동의 없이는 회원정보를 공개 및 변경 하지 않습니다.</div>
+                    <div class="myInfo-cont__numberBox bg-gray">
+                        <span>인증번호</span><span class="identi-num">138168</span>
+                    </div>
+
+                    <div class="input-list">
+                        <div class="input-list__item">
+                            <input type="text" class="input-v1" placeholder="인증번호 입력">
+                        </div>
+                        <button class="join-box__btn btn-v1 type-primary">확인</button>
+                    </div>
+                </div>
+                <!-- .컨텐츠 -->
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>

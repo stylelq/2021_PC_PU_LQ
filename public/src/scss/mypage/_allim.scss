@@ -1,0 +1,29 @@
+.myAllim{
+
+    .order-mypage{
+        .list-table{
+            tbody td{
+                padding:calcRem(30rem) 0;
+                vertical-align: middle;
+            }
+            .detail-Meta{
+                height: calcRem(110rem);
+
+                &__title{
+                    margin: auto 0;
+                }
+                &__price--current{
+                    display: inline-block;
+                    margin-left: calcRem(10rem);
+                }
+                &__btn{
+                    .btn-v3{
+                        width: calcRem(60rem);
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+

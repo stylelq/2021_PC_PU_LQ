@@ -1,0 +1,46 @@
+<%
+type = "mypage"
+page = "mypage"
+popup = "false"
+lnbTitle = "회원 탈퇴"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <div class="site-main">
+        <% include ../_include/_lnbMyPage %>
+        <section class="service-center memberRemove">
+            <div class="memberRemove-center">
+                <div class="center-right__head">
+                    <p class="center-right__title">회원 탈퇴</p>
+                </div>
+
+                <!-- 컨텐츠 -->
+                <div class="memberRemove-cont">
+                    <div class="memberRemove-cont__title">그 동안 루이까또즈를 이용해 주셔서<br>
+                        감사합니다.</div>
+
+                    <div class="memberRemove2-cont__textBox">
+                        <div class="memberRemove2-cont__title">회원탈퇴 안내사항을 모두 확인했으며,<br>
+                            탈퇴에 동의 하시겠습니까? </div>
+                        <div class="memberRemove2-cont__text">동의하시면 ‘동의합니다’라고 입력해 주세요.</div>
+                        <div class="input-list">
+                            <ul class="input-list__list">
+                                <li class="input-list__item">
+                                    <input type="text" class="input-v1" placeholder="입력해 주세요.">
+                                </li>
+                                <li class="input-list__item">
+                                    <input type="password" class="input-v1" placeholder="비밀번호를 입력해 주세요.">
+                                </li>
+                            </ul>
+                            <button class="input-box__btn btn-v1 type-primary">탈퇴하기</button>
+                        </div>
+                    </div>
+                                        
+                </div>
+                <!-- .컨텐츠 -->
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>

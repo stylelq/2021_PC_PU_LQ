@@ -1,0 +1,155 @@
+// 1:1문의 리스트
+.myInquiry{
+    &-form{ 
+        padding:calcRem(20rem); 
+        display: flex;
+        @include flex-alignCenter;
+        margin-bottom: calcRem(60rem);
+
+        &__title{
+            @include body1;
+        }
+
+        &__inner{
+            margin-left: auto;
+            .btn-v3{
+                @include body7;
+                padding: calcRem(8rem) calcRem(30rem);
+            }
+        }
+    }
+
+    .order-mypage{
+        .list-table{
+            tbody td{ padding: calcRem(20rem); }
+            
+            [class*=state-item__]{
+                @include body8;
+            }
+            .state-item__ing{
+                color: $gray1;
+            }
+            .state-item__end{
+                color: $point1;
+            }
+
+            .order-mypage__header--title{
+                display: block;
+                text-align: left;
+                @include body8;
+            }
+        }
+    }
+
+    .user-address__meta--state{
+        display: block;
+        color: $point1;
+    }
+
+    .center-bullet{
+        margin-top: calcRem(40rem);
+    }
+}
+
+
+// 1:1문의 디테일
+.myInquiryDetail{
+    .center-right__head{
+        border-bottom: 1px solid $black1;
+    }
+
+    &__header{
+        @include flexNoWrap;
+        @include flex-alignCenter;
+        border-bottom: 1px solid $lightgray4;
+        padding: calcRem(30rem) calcRem(20rem);
+    }
+    &__title{
+        position: relative;
+        @include title4;
+        &:before{
+            content: 'Q.';
+            display: inline-block;
+            width: 20px;
+        }
+    }
+    &__date{
+        margin-left: auto;
+        @include body6;
+    }
+
+
+    .detail-Meta{
+        @include flexNoWrap;
+        @include flex-alignCenter;
+        padding: calcRem(20rem) 0;
+        border-bottom: 1px solid $lightgray4;
+
+        &__btn{
+            width: calcRem(88rem);
+            margin: auto;
+            .btn-v3{margin: 5px 0;}
+        }
+        &__thumb{
+            width: calcRem(110rem);
+            height: calcRem(110rem);
+            overflow: hidden;
+            position: relative;
+
+            img{
+                @include ab-center;
+            }
+        }
+        &__title{
+            @include body7;
+        }
+    }
+
+    &__body{
+        @include body7;
+        padding: calcRem(40rem) 0;
+        border-bottom: 1px solid $black1;
+    }
+
+    &__img{
+        margin-top:calcRem(10rem);
+        img{margin:calcRem(10rem) 0;}
+    }
+
+    &__btn{
+        margin-top: calcRem(40rem);
+        overflow: hidden;
+        
+        .btn-v1{
+            float: left;
+            width: calcRem(100rem);
+            margin-right: 10px;
+
+            &.btn-right{
+                float: right;
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__anc{
+        margin-top: calcRem(20rem);
+    }
+    &__string{
+        padding: calcRem(20rem) calcRem(20rem) calcRem(10rem);
+        @include title4;
+        &:before{
+            content: 'A.';
+            display: inline-block;
+            width: 20px;
+        }
+    }
+    &__pre{
+        margin: 0;
+        padding: calcRem(10rem) calcRem(20rem) calcRem(20rem);
+
+        p{margin-top: 0;}
+    }
+
+    
+}
