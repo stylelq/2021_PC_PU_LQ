@@ -288,6 +288,16 @@
   }
 }
 
+.btn-group{
+  &__list{
+      width: 36.5%;
+      margin: auto;
+  } 
+  &__btn{
+      @include body8;
+  }   
+}
+
 //인풋 리스트 형태
 .input-list{
 
@@ -1069,12 +1079,12 @@ input {
 	
 	caption{
 		overflow:hidden;
-        position:absolute;
-        border:0;
-        margin:-1px;
-        width:1px; height:1px; 
-        clip: rect(1px 1px 1px 1px); 
-        clip-path: inset(50%); 
+    position:absolute;
+    border:0;
+    margin:-1px;
+    width:1px; height:1px; 
+    clip: rect(1px 1px 1px 1px); 
+    clip-path: inset(50%); 
 	}
 
 	thead{

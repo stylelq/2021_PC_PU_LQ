@@ -1,0 +1,105 @@
+<%
+type = "mypage"
+page = "mypage"
+popup = "true"
+lnbTitle = "재입고 알림 내역"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <div class="site-main">
+        <% include ../_include/_lnbMyPage %>
+        <section class="service-center myAllim">
+            <div class="myAllim-center">
+                <div class="center-right__head">
+                    <p class="center-right__title">재입고 알림 내역</p>
+                </div>
+
+                <!-- list -->
+                <div class="order-mypage">
+                    <table class="list-table" summary="상품리뷰">
+                        <caption>상품리뷰</caption>
+                        <colgroup>
+                            <col width="50%"><col><col><col width="5%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>상품/옵션 정보</th>
+                                <th>판매가</th>
+                                <th>신청일</th>
+                                <th>신청 취소</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="detail-Meta">
+                                        <a href="#;" class="detail-Meta__thumb"><img class="detail-Meta__img" src="../../images/dummy/detail-img1.jpg" alt="" /></a>
+                                        <h2 class="detail-Meta__title">oalc SINGLE BREASTED HARRIS TWEED JACKET 싱글브레스트 해리스 트위드 재킷 (Beige)</h2>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="detail-Meta__price">
+                                        <span class="detail-Meta__price--sale">289,290원</span>
+                                        <span class="detail-Meta__price--current">289,290원</span>
+                                    </div>
+                                </td>
+                                <td><span class="detail-Meta__date">2021.09.20</span></td>
+                                <td>
+                                    <div class="detail-Meta__btn">
+                                        <a href="" class="btn-v3 btn-v3--small type-white">취소</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="detail-Meta">
+                                        <a href="#;" class="detail-Meta__thumb"><img class="detail-Meta__img" src="../../images/dummy/product_img1.png" alt="" /></a>
+                                        <h2 class="detail-Meta__title">oalc SINGLE BREASTED HARRIS TWEED JACKET 싱글브레스트 해리스 트위드 재킷 (Beige)</h2>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="detail-Meta__price">
+                                        <span class="detail-Meta__price--sale">289,290원</span>
+                                        <span class="detail-Meta__price--current">289,290원</span>
+                                    </div>
+                                </td>
+                                <td><span class="detail-Meta__date">2021.09.20</span></td>
+                                <td>
+                                    <div class="detail-Meta__btn">
+                                        <a href="" class="btn-v3 btn-v3--small type-white">취소</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="detail-Meta">
+                                        <a href="#;" class="detail-Meta__thumb"><img class="detail-Meta__img" src="../../images/dummy/product_img3.png" alt="" /></a>
+                                        <h2 class="detail-Meta__title">oalc SINGLE BREASTED HARRIS TWEED JACKET 싱글브레스트 해리스 트위드 재킷 (Beige)</h2>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="detail-Meta__price">
+                                        <span class="detail-Meta__price--sale">289,290원</span>
+                                        <span class="detail-Meta__price--current">289,290원</span>
+                                    </div>
+                                </td>
+                                <td><span class="detail-Meta__date">2021.09.20</span></td>
+                                <td>
+                                    <div class="detail-Meta__btn">
+                                        <a href="" class="btn-v3 btn-v3--small type-white">취소</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- .list -->
+                <!-- paging -->
+                <% include ../_include/_paging %>
+                <!-- .paging -->
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>

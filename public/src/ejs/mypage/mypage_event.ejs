@@ -1,0 +1,60 @@
+<%
+type = "mypage"
+page = "mypage"
+popup = "true"
+lnbTitle = "이벤트 참여현황"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <div class="site-main">
+        <% include ../_include/_lnbMyPage %>
+        <section class="service-center myEvent">
+            <div class="myEvent-center">
+                <div class="center-right__head">
+                    <p class="center-right__title">이벤트 참여현황</p>
+                </div>
+
+                <!-- list -->
+                <div class="order-mypage">
+                    <table class="list-table" summary="이벤트">
+                        <caption>이벤트</caption>
+                        <colgroup>
+                            <col><col width="38%"><col><col><col width="5%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>이벤트 상태</th>
+                                <th>이벤트명</th>
+                                <th>이벤트 기간</th>
+                                <th>당첨자 발표</th> 
+                                <th>응모일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="state-item__ing">진행중</span></td>
+                                <td><span class="order-mypage__header--title">Who Am I ? 저의 이름을 맞춰주세요!</span></td>
+                                <td>2021.06.10 ~ 2021.06.16</td>
+                                <td>2021.06.30</td>
+                                <td>2021.06.10</td>
+                            </tr>
+                            <tr>
+                                <td><span class="state-item__end">완료</span></td>
+                                <td><span class="order-mypage__header--title">이벤트 내용  제목 입니다.</span></td>
+                                <td>2021.06.10 ~ 2021.06.16</td>
+                                <td>2021.06.30</td>
+                                <td>2021.06.10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- .list -->
+                <!-- paging -->
+                <% include ../_include/_paging %>
+                <!-- .paging -->
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>

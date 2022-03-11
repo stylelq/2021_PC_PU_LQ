@@ -83,7 +83,9 @@ jQuery(function(){
     //팝업닫기(공통)
     function closePopup() {
         if($('.popup.is-active').length <= 1) {
-            $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
+            $(this).closest('.popup, .small-popup, .slide-popup, .button-popup')
+                   .removeClass('is-active');
+            // $('.popup, .small-popup, .slide-popup, .button-popup').removeClass('is-active');
             $('html').removeClass('is-hidden');
         }else{
             $(this).closest('.popup').removeClass('is-active');

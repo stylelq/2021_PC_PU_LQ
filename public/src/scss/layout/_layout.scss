@@ -22,9 +22,12 @@
     margin-bottom:calcRem(15rem);
   }
   &__label{
-      width: calcRem(100rem);
-      @include body7;
-      margin-top:calcRem(10rem);
+    width: calcRem(100rem);
+    @include body7;
+    margin-top:calcRem(10rem);
+  }
+  &__text{
+    @include body7;
   }
   &__list{
       width: 100%;
