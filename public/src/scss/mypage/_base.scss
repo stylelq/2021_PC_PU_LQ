@@ -398,11 +398,13 @@
 //table
 .order-mypage{
     zoom:1;
+    
     .list-table{
         tbody{
             td{
                 vertical-align: top;
-                padding: calcRem(30rem) calcRem(20rem);
+                padding: calcRem(30rem) 2%;
+                box-sizing: border-box;
                 p{margin: 0;}
             }
         }

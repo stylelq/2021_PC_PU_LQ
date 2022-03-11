@@ -185,7 +185,7 @@ jQuery(function () {
     });
   }
 
-  $(document).on('click', '.new-address .js-popup-open', addressDepth); //고객센터 > 1:1문의하기 리스트 선택 시 퍼블확인용
+  $(document).on('click', '.new-address .js-popup-open, .myAddressModify .js-popup-open', addressDepth); //고객센터 > 1:1문의하기 리스트 선택 시 퍼블확인용
   // ㄴ 주문내역 > 리스트 선택 > 콘텐츠 show
   // ㄴ 상품검색 > 썸네일 선택 > 콘텐츠 show
 
