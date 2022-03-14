@@ -90,84 +90,86 @@
 
 }
 
-
-//유의사항
-.notData-wrap{
-    &__textBox{
-        &--title{
-            @include title1;
-            margin-top: calcRem(60rem);
-        }
-        &--text{
-            @include title4;
-            margin-top: calcRem(20rem);
-            margin-bottom: calcRem(10rem);
-        }
-        
-        &--text+.center-bullet{
-            margin-top: calcRem(10rem);
-        }
-
-        .notData-workflow + .center-bullet{
-            margin-bottom: calcRem(20rem);
-        }
-    }
-    .notData-workflow{
-        margin-bottom: calcRem(40rem);
-    
-        &__list{
-            @include flexNoWrap;
-            border: 1px solid $lightgray4;
-            padding: calcRem(40rem) 0 calcRem(30rem);
-            box-sizing: border-box;
-        }
-        &__link{
-            display: block;
-            text-align: center;
-        }
-        &__item{
-            @include body7;
-            position: relative;
-            margin:0 auto;
-            text-align: center;
-    
-            &-name{
-                margin: 0;
-                margin-top: calcRem(20rem);
+.myReturnOrder-contents{
+    //유의사항
+    .notData-wrap{
+        &__textBox{
+            text-align: left;
+            &--title{
+                @include title1;
+                margin-top: calcRem(60rem);
+            }
+            &--text{
                 @include title4;
+                margin-top: calcRem(20rem);
+                margin-bottom: calcRem(10rem);
             }
-            &-figure{ 
-                margin: 0;
-                margin-top:10px;
-                color: $point1;
-                @include body8;
-                &.br-under{text-decoration: underline;}
+            
+            &--text+.center-bullet{
+                margin-top: calcRem(10rem);
             }
-            &-text{
-                @include body6;
-                color: $disabledColor;
-            }
-    
-            &:not(:last-child):after{
-                content: '';
-                position: absolute;
-                top: 50%;
-                right: calcRem(-38rem);
-                transform: translateY(-50%);
-    
-                width:calcRem(6rem);
-                height:calcRem(11rem);
-                @include pageBackground('/images/common/ico_more_gray.svg','no-repeat center center / contain');
+
+            .notData-workflow + .center-bullet{
+                margin-bottom: calcRem(20rem);
             }
         }
-    }
-
-    .center-bullet-number__item{
-        .center-bullet.type-small{
-            .center-bullet__item{
-                margin-top: calcRem(9rem);
-                color: $darkgray;
+        .notData-workflow{
+            margin-bottom: calcRem(40rem);
+        
+            &__list{
+                @include flexNoWrap;
+                border: 1px solid $lightgray4;
+                padding: calcRem(40rem) 0 calcRem(30rem);
+                box-sizing: border-box;
+            }
+            &__link{
+                display: block;
+                text-align: center;
+            }
+            &__item{
+                @include body7;
+                position: relative;
+                margin:0 auto;
+                text-align: center;
+        
+                &-name{
+                    margin: 0;
+                    margin-top: calcRem(20rem);
+                    @include title4;
+                }
+                &-figure{ 
+                    margin: 0;
+                    margin-top:10px;
+                    color: $point1;
+                    @include body8;
+                    &.br-under{text-decoration: underline;}
+                }
+                &-text{
+                    @include body6;
+                    color: $disabledColor;
+                }
+        
+                &:not(:last-child):after{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: calcRem(-38rem);
+                    transform: translateY(-50%);
+        
+                    width:calcRem(6rem);
+                    height:calcRem(11rem);
+                    @include pageBackground('/images/common/ico_more_gray.svg','no-repeat center center / contain');
+                }
+            }
+        }
+        .center-bullet-number__item{
+            .center-bullet.type-small{
+                .center-bullet__item{
+                    margin-top: calcRem(9rem);
+                    color: $darkgray;
+                }
             }
         }
     }
 }
+
