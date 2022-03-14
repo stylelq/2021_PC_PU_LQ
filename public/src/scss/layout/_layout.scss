@@ -14,7 +14,7 @@
   margin-top:calcRem($SiteMainMargin);
 }
 
-
+//추가:: 컴포넌트 단위 레이아웃
 .fieldset{
   // group::일반 div dom
   &__group{

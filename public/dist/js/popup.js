@@ -112,59 +112,53 @@ jQuery(function () {
   //     }
   // }
   // $(document).on('click', '.js-pop-tab-link', shippingTab);
-  //---- 마이페이지::상품리뷰 이미지보기
-  // 상품리뷰 이미지 팝업 오픈
-
-  function reviewImgOpen(id) {
-    $('.popup').attr('id', id);
-
-    if ($('.popup.is-active').length <= 1) {} else {
-      $('.popup').removeClass('is-active');
-    }
-
-    $('#' + id).addClass('is-active');
-    $('html').addClass('is-hidden');
-  } // 클릭한 리스트의 포토 개수에 따른 slide생성
-
-
-  function reviewImgSlideDraw(ele) {
-    var item = ele.closest('.review-list__photo--list'),
-        slideWrap = $('.swiper-wrapper'),
-        slide = '',
-        imgSrc = [];
-
-    for (var i = 0, len = item.find('li').length; i < len; i++) {
-      imgSrc.push(item.find('li').eq(i).find('img').attr('src'));
-      slide += '<div class="swiper-slide"><img src="' + imgSrc[i] + '"></div>';
-    }
-
-    slideWrap.html(slide);
-  } // 상품리뷰 이미지 팝업 콘텐츠 뷰
-
-
-  function reviewImgView() {
-    var id = $(this).attr('href').replace('#', '');
-    var idx = $(this).parent('li').index();
-    reviewImgOpen(id);
-    reviewImgSlideDraw($(this));
-    var slide = new Swiper('.reviewImages__view .swiper-container', {
-      observer: true,
-      observeParents: true,
-      watchOverflow: true,
-      slidesPerView: 1,
-      initialSlide: idx,
-      pagination: {
-        el: ".detail-thumb__pagination",
-        type: "fraction"
-      },
-      navigation: {
-        nextEl: ".detail-thumb--next",
-        prevEl: ".detail-thumb--prev"
-      }
-    });
-  }
-
-  $(document).on('click', '.js-imgView-open', reviewImgView); //----
+  // //---- 마이페이지::상품리뷰 이미지보기
+  // // 상품리뷰 이미지 팝업 오픈
+  // function reviewImgOpen(id){
+  //     $('.popup').attr('id',id);
+  //     if($('.popup.is-active').length <= 1) {
+  //     }else{
+  //         $('.popup').removeClass('is-active');
+  //     }
+  //     $('#'+id).addClass('is-active');
+  //     $('html').addClass('is-hidden');
+  // }
+  // // 클릭한 리스트의 포토 개수에 따른 slide생성
+  // function reviewImgSlideDraw(ele){
+  //     var item = ele.closest('.review-list__photo--list'),
+  //         slideWrap = $('.swiper-wrapper'),
+  //         slide = '',
+  //         imgSrc = [];
+  //     for(var i=0,len=item.find('li').length;i<len;i++){
+  //         imgSrc.push( item.find('li').eq(i).find('img').attr('src') );
+  //         slide += '<div class="swiper-slide"><img src="'+ imgSrc[i] +'"></div>';
+  //     }
+  //     slideWrap.html(slide);
+  // }
+  // // 상품리뷰 이미지 팝업 콘텐츠 뷰
+  // function reviewImgView(){
+  //     var id = $(this).attr('href').replace('#','');
+  //     var idx = $(this).parent('li').index();
+  //     reviewImgOpen(id);
+  //     reviewImgSlideDraw($(this));
+  //     var slide = new Swiper('.reviewImages__view .swiper-container', {
+  //         observer: true, 
+  //         observeParents: true,
+  //         watchOverflow: true,
+  //         slidesPerView: 1,
+  //         initialSlide: idx,
+  //         pagination: {
+  //             el: ".detail-thumb__pagination",
+  //             type: "fraction",
+  //         },
+  //         navigation: {
+  //             nextEl: ".detail-thumb--next",
+  //             prevEl: ".detail-thumb--prev",
+  //         },
+  //     });
+  // }
+  // $(document).on('click', '.js-imgView-open', reviewImgView);
+  // //----
   //------[임시::퍼블 확인용] 데이터 삽입시 지울것---------------------
   // 주소검색 > 검색리스트 > 상세입력
 
