@@ -445,9 +445,18 @@
 
     <!--what's new-->
     <div class="main-new">
-        <!--<div class="main-new__header">
-            <div class="main-new__title">WHAT'S NEW</div>
-        </div>-->
+        <div class="main-new__left">
+            <div class="main-new__header">
+                <div class="main-new__title">WHAT'S NEW</div>
+            </div>
+            <div class="main-new__more">
+                <a href="#" class="main-new__link">
+                    <div class="main-new__button">more new</div>
+                </a>
+            </div>
+            <div class="swiper-pagination main-new__pagination"></div>
+        </div>
+
         <div class="main-new__slide">
             <div class="swiper-container main-new__container">
                 <div class="swiper-wrapper main-new__wrapper">
@@ -508,14 +517,45 @@
                 </div>
             </div>
         </div>
-        <!--<div class="swiper-pagination main-new__pagination"></div>
-        <div class="main-new__more">
-            <a href="#" class="main-new__link">
-                <div class="main-new__button">more new</div>
-            </a>
-        </div>-->
     </div>
     <!--//what's new-->
+
+    <!--메인 배너슬라이드2-->
+    <div class="main-banner2">
+        <div class="swiper-container main-banner2__container">
+            <div class="swiper-wrapper main-banner2__wrapper">
+                <div class='swiper-slide main-banner2__item' data-bg="white">
+                    <a href="#;" class="main-banner2__inner">
+                        <!--이미지일 때-->
+                        <div class="main-banner2__source main-banner2__source--img">
+                            <img class="main-banner2__img" src="../../images/main/main-banner2-img01.png" alt="" />
+                        </div>
+                        <!--//이미지일 때-->
+                    </a>
+                    <div class="main-banner2__content">
+                        <div class="main-banner2__name">L-QUILTING MINI</div>
+                    </div>
+                </div>
+                <div class='swiper-slide main-banner2__item' data-bg="black">
+                    <a href="#;" class="main-banner2__inner">
+                        <!--비디오일 때-->
+                        <div class="main-banner2__source main-banner2__source--video">
+                            <video class="main-banner2__video" src="https://mcdn.louisclub.com/static/mo/img/specialty/20200710/find.mp4" loop="" autoplay="" muted="true" playsinline="" data-object-fit="cover" poster="https://mcdn.louisclub.com/static/mo/img/specialty/20200710/video_bg.jpg"></video>
+                        </div>
+                        <!--//비디오일 때-->
+                    </a>
+                    <div class="main-banner2__content">
+                        <div class="main-banner2__name">L-QUILTING MINI</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination main-banner2__pagination"></div>
+        <div class="swiper-progress-bar main-banner2__progressbar">
+            <span class="slide_progress-bar"></span>
+        </div>
+    </div>
+    <!--//메인 배너슬라이드2-->
 </div>
 
 <!-- //section끝 -->

@@ -918,7 +918,7 @@ jQuery(function () {
       observer: true,
       observeParents: true,
       watchOverflow: true,
-      slidesPerView: 2,
+      slidesPerView: 3,
       centeredSlides: true,
       speed: 10000,
       loop: true,
@@ -973,6 +973,64 @@ jQuery(function () {
 
     $(document).on('click', mainNewSlide, function () {
       mainNewSlide.autoplay.stop();
+    });
+  } //메인 배너슬라이드2
+
+
+  if ($('.main-banner2').length > 0 && $('.main-banner2__item').length > 1) {
+    var mainSlide = new Swiper('.main-banner2__container', {
+      observer: true,
+      observeParents: true,
+      watchOverflow: true,
+      slidesPerView: 1,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".main-banner2__pagination",
+        type: "fraction"
+      },
+      on: {
+        init: function init() {
+          var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
+          var bg = slide.data("bg");
+
+          if ($('.main-banner2__item').find('.swiper-slide-active').data('bg') === 'white') {
+            $('.main-banner2__pagination').removeClass('is-black');
+            $('.main-banner2__pagination').addClass('is-white');
+          } else {
+            $('.main-banner2__pagination').removeClass('is-white');
+            $('.main-banner2__pagination').addClass('is-black');
+          }
+
+          $('.main-banner2__progressbar').removeClass("animate");
+          $('.main-banner2__progressbar').removeClass("active");
+          $('.main-banner2__progressbar').eq(0).addClass("animate");
+          $('.main-banner2__progressbar').eq(0).addClass("active");
+        },
+        slideChangeTransitionStart: function slideChangeTransitionStart() {
+          $('.main-banner2__progressbar').removeClass("animate");
+          $('.main-banner2__progressbar').removeClass("active");
+          $('.main-banner2__progressbar').eq(0).addClass("active");
+        },
+        slideChangeTransitionEnd: function slideChangeTransitionEnd() {
+          $('.main-banner2__progressbar').eq(0).addClass("animate");
+        },
+        beforeTransitionStart: function beforeTransitionStart() {
+          var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
+          var bg = slide.data("bg");
+
+          if ($('.main-banner2__item').find('.swiper-slide-active').data('bg') === 'white') {
+            $('.main-banner2__pagination').removeClass('is-black');
+            $('.main-banner2__pagination').addClass('is-white');
+          } else {
+            $('.main-banner2__pagination').removeClass('is-white');
+            $('.main-banner2__pagination').addClass('is-black');
+          }
+        }
+      }
     });
   } //--END[swiper slider]-----------------------------
 
