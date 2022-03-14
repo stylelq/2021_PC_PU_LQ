@@ -1,5 +1,9 @@
 <!-- //section끝 -->
 <!--footer시작-->
+<% popup = "true" %>
+<% include ../_popup/_terms1 %>
+<% include ../_popup/_terms2 %>
+
 <footer class="footer">
     <div class="footer__layout">
         <div class="footer__wrap">
@@ -23,10 +27,10 @@
             <div class="footer__right">
                 <ul class="footer__list">
                     <li class="footer__item">
-                        <a href="" class="footer__link">이용약관</a>
+                        <a href="#termsPop" class="footer__link js-popup-open">이용약관</a>
                     </li>
                     <li class="footer__item">
-                        <a href="" class="footer__link">개인정보처리방침</a>
+                        <a href="#termsPop2" class="footer__link js-popup-open">개인정보처리방침</a>
                     </li>
                     <li class="footer__item">
                         <a href="" class="footer__link">고객센터</a>
@@ -71,3 +75,4 @@
         </div>
     </div>
 </footer>
+

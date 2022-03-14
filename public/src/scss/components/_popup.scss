@@ -133,7 +133,7 @@
 @mixin lineStyle {
   position: relative;
   padding-left: 15px;
-  @include body3();
+  @include body8();
   
   &:before{
       content: '';
@@ -145,15 +145,19 @@
       background: $grayTextColor;
   }
 }
-.section-terms{ 
-  padding-top:0;
+.section-terms,
+.terms-only{ 
+//   padding-top:0;
 
   ol{ margin:calcRem(10rem) 0; &>li{ @include numStyle; } }
   ul{ margin:calcRem(10rem) 0; &>li{ @include dotStyle; } }
 
   ol.etc__dot, ul.etc__dot{ margin:calcRem(10rem) 0; &>li{ @include dotStyle; } }
   ol.etc__num, ul.etc__num{ margin:calcRem(10rem) 0; &>li{@include numStyle;} }
-  ol.etc__line, ul.etc__line, ol.list, ul.list{ margin:calcRem(10rem) 0; &>li{@include lineStyle;} }
+  ol.etc__line, ul.etc__line, ol.list, ul.list{ 
+      margin:calcRem(10rem) 0; 
+      &>li{@include lineStyle;} 
+    }
   ol.reset, ul.reset{ &>li{ list-style: none; }}
 
   .etc__dot:not(ul):not(ol){@include dotStyle;}
