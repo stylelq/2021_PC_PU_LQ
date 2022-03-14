@@ -408,7 +408,16 @@ jQuery(function () {
     return false;
   }
 
-  $(document).on('click', '.color-list__title', colorCheck);
+  $(document).on('click', '.color-list__title', colorCheck); //마이페이지 필터버튼 3/6/9
+
+  function btnActive() {
+    var item = '.myOrderList-filter__item';
+    $(item).removeClass('is-current');
+    $(this).parent(item).addClass('is-current');
+    return false;
+  }
+
+  $(document).on('click', '.myOrderList-btn', btnActive);
   /*
       //Join(회원가입, 로그인)
   */
