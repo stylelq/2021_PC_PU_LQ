@@ -905,7 +905,7 @@ jQuery(function () {
       observer: true,
       observeParents: true,
       watchOverflow: true,
-      slidesPerView: 1,
+      slidesPerView: 2,
       centeredSlides: true,
       speed: 10000,
       loop: true,

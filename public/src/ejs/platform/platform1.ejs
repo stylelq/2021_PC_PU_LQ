@@ -15,12 +15,12 @@ noSort = "false"
                 <video src="https://mcdn.louisclub.com/static/mo/img/platform/video_210907.mp4" class="platform-banner__file" loop="" autoplay="" muted="muted" playsinline="" data-object-fit="cover"></video>
             </div>
             <!-- .platform video -->
-            
+
+            <!-- _platformFilter noSort= true 값이면 오른쪽 소팅 버튼 숨기기. [noSort = true/false]  -->
+            <% include ../_include/_platformFilter %>
+
             <!-- product post -->
             <div class="product-post product-post--post">
-                <!-- _platformFilter noSort= true 값이면 오른쪽 소팅 버튼 숨기기. [noSort = true/false]  -->
-                <% include ../_include/_platformFilter %>
- 
                 <ul class="product-post__list">
                     <li class="product-post__item">
                         <!-- item -->
