@@ -504,7 +504,20 @@ jQuery(function () {
     return false;
   }
 
-  $(document).on('click', '.js-faq-more', faqMore); //--END[dropdown::아코디언] ----------------------
+  $(document).on('click', '.js-faq-more', faqMore); //마이페이지 :: qna 더보기(아코디언)
+
+  function myQnaMore() {
+    var parent = $(this).closest('.myQna-wrap__item');
+
+    if (parent.hasClass('is-active')) {
+      parent.removeClass('is-active');
+    } else {
+      $('.myQna-wrap__item').removeClass('is-active');
+      parent.addClass('is-active');
+    }
+  }
+
+  $(document).on('click', '.js-myQna-more', myQnaMore); //--END[dropdown::아코디언] ----------------------
 
   /*---------------------
     * [swiper slider] 

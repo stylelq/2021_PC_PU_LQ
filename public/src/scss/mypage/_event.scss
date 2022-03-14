@@ -1,0 +1,23 @@
+.myEvent{
+    .order-mypage{
+        .list-table{
+            tbody td{ padding: calcRem(20rem); }
+            
+            [class*=state-item__]{
+                @include body8;
+            }
+            .state-item__ing{
+                color: $point1;
+            }
+            .state-item__end{
+                color: $gray1;
+            }
+
+            .order-mypage__header--title{
+                display: block;
+                text-align: left;
+                @include body8;
+            }
+        }
+    }
+}

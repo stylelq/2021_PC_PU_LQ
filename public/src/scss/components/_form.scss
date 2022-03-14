@@ -288,6 +288,16 @@
   }
 }
 
+.btn-group{
+  &__list{
+      width: 36.5%;
+      margin: auto;
+  } 
+  &__btn{
+      @include body8;
+  }   
+}
+
 //인풋 리스트 형태
 .input-list{
 
@@ -992,12 +1002,12 @@ input {
 	
 	caption{
 		overflow:hidden;
-        position:absolute;
-        border:0;
-        margin:-1px;
-        width:1px; height:1px; 
-        clip: rect(1px 1px 1px 1px); 
-        clip-path: inset(50%); 
+    position:absolute;
+    border:0;
+    margin:-1px;
+    width:1px; height:1px; 
+    clip: rect(1px 1px 1px 1px); 
+    clip-path: inset(50%); 
 	}
 
   thead{
@@ -1066,15 +1076,16 @@ input {
 	margin-bottom:calcRem(25rem);
 	border-top:solid 1px $black1;
 	width:100%;
+  box-sizing: border-box;
 	
 	caption{
 		overflow:hidden;
-        position:absolute;
-        border:0;
-        margin:-1px;
-        width:1px; height:1px; 
-        clip: rect(1px 1px 1px 1px); 
-        clip-path: inset(50%); 
+    position:absolute;
+    border:0;
+    margin:-1px;
+    width:1px; height:1px; 
+    clip: rect(1px 1px 1px 1px); 
+    clip-path: inset(50%); 
 	}
 
 	thead{
@@ -1084,6 +1095,7 @@ input {
 			padding:calcRem(20rem) calcRem(10rem);
 			border-bottom:solid 1px $gray2;
 			text-align: center;
+      box-sizing: border-box;
 		}
 	}
 
@@ -1091,6 +1103,7 @@ input {
 		tr{
 			th,td{
 				border-color:$gray2;
+        box-sizing: border-box;
 			}
 		}
 		th{

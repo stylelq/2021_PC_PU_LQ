@@ -1,0 +1,52 @@
+<%
+type = "mypage"
+page = "mypage"
+popup = "true"
+lnbTitle = "재입고 알림 내역"
+%>
+<% include ../_include/_header %>
+<div class="container">
+    <div class="site-main">
+        <% include ../_include/_lnbMyPage %>
+        <section class="service-center myAllim">
+            <div class="myAllim-center">
+                <div class="center-right__head">
+                    <p class="center-right__title">재입고 알림 내역</p>
+                </div>
+
+                <!-- list -->
+                <div class="order-mypage">
+                    <table class="list-table" summary="상품리뷰">
+                        <caption>상품리뷰</caption>
+                        <colgroup>
+                            <col width="50%"><col><col><col width="5%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>상품/옵션 정보</th>
+                                <th>판매가</th>
+                                <th>신청일</th>
+                                <th>신청 취소</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="4">
+                                    <div class="no-result">
+                                        최근 6개월 이내 주문내역이 없습니다.
+                                    </div>
+                               </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- .list -->
+                <!-- paging -->
+                <% include ../_include/_paging %>
+                <!-- .paging -->
+            </div>
+        </section>
+    </div>
+</div>
+<% include ../_include/_contentFooter %>
+<% include ../_include/_footer %>

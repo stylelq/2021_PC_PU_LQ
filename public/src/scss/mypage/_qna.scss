@@ -1,0 +1,190 @@
+/**********************
+  PAGE
+  상품 Q&A 
+**********************/
+//레이아웃
+.myQna{
+    &-wrap__list{
+        border-top:solid 1px $black1; 
+
+        &:last-child{
+            border-bottom:solid 1px $black1;
+        }
+    }
+    &-wrap__item{
+        padding:0 calcRem(20rem);
+        &:not(:last-child){
+            border-bottom:solid 1px $lightgray4;
+        }
+    }
+
+    //유의사항
+    &-info{
+        padding: calcRem(40rem) calcRem(20rem) 0;
+    }
+}
+
+.myQna-item{
+   //==[dt]=====
+   //컨텐츠 
+    &__title{
+        position: relative;
+        padding-right:calcRem(20rem);
+        box-sizing: border-box;
+        
+        &:after{
+            content: "";
+            width:calcRem(8rem);
+            height:calcRem(4rem);
+            @include pageBackground('/images/common/ico_faq_arrow.svg','no-repeat center center / contain');
+            background-size: calcRem(8rem) calcRem(4rem);
+            position: absolute;
+            right:0;
+            top:calcRem(10rem);
+
+            .is-active &{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    // 컨텐츠 썸네일&상품인포 레이아웃
+    &__link{
+        display: flex;
+    }
+    &__thumb{
+        width:calcRem(60rem);
+    }
+    &__info{
+        margin-left:calcRem(15rem);
+        @include body2;
+        $mg:calcRem(75rem); //thumWid + margin-left
+        width: calc(100% - #{$mg});
+    }
+
+    // 썸네일
+    &__state{
+        @include body2;
+        margin-bottom: calcRem(6rem);
+
+        &--title{
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            max-width:90%;
+            vertical-align: middle;
+        }
+    }
+    &__tag{
+        display: inline-block;
+        @include body8;
+        padding:0 calcRem(5rem);
+        text-align: center;
+        border-width: 1px;
+        border-style: solid;
+        margin-right: calcRem(10rem);
+
+        &.inquiry-item__waiting{
+            border-color: $gray1;
+            color:$gray1;
+        }
+
+        &.inquiry-item__end{
+            border-color: $point1;
+            color:$point1;
+        }
+    }
+    //list data
+    &__pre{
+        @include body7;
+        margin-bottom: calcRem(10rem);
+    }
+ 
+    //==[dd]=====
+    &__cont{
+        @include body2;
+        margin-left: calcRem(70rem); 
+        // padding: calcRem(20rem) 0 calcRem(10rem);
+        // border-top: 1px solid $lightgray4;
+        // margin-top: 20px;
+        display: none;
+        width: calc( 100% - #{calcRem(70rem)} );
+
+        .is-active &{
+            display: block;
+        }
+    }
+
+    // cont--head::작성일, 수정/삭제 버튼
+    &__date{
+        @include body5;
+        color: $darkgray;
+        float: left;
+        // line-height:calclH(18,11);
+        padding-top: 2px;
+    }
+    &__btn{
+        @include body7;
+        margin-top: calcRem(20rem);
+        // float: right;
+        .myQna-btn{
+            display: inline-block;
+            text-decoration: underline;
+            &:not(:first-child){
+                margin-left: calcRem(8rem);
+            }
+        }
+    }
+    
+    // cont--body:: 질문
+    &__cont--body{
+        overflow: hidden;
+        clear: both;
+        position: relative;
+        padding-top: calcRem(20rem);
+    }
+
+    &__bullet--string{
+        float: left;
+        width:calcRem(20rem);
+    }
+
+    &__cont--text,
+    &__cont--pre{
+        float: left;
+        width: 93%;
+    }
+    &__cont--pre{
+        // margin-top: calcRem(10rem);
+        // margin-left: calcRem(20rem);
+        line-height: calclH(17,11);
+        font-weight: $light;
+    }
+
+    // 답변
+    &__cont--anc{
+        margin-top: calcRem(20rem);
+        padding: calcRem(20rem) 0 calcRem(40rem) calcRem(17rem);
+        // border-top: 1px solid $gray2;
+
+        overflow: hidden;
+        clear: both;
+
+        .myQna-item__cont--pre{
+            margin: 0;
+
+            p{margin-top: 0;}
+        }
+    }
+          
+   
+}
+
+
+
+
+
+
+
+
+

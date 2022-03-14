@@ -1,4 +1,8 @@
-/** 공통 ****************************/ 
+/********** ********
+* 
+*  공통 
+*
+*******************/ 
 // layout
 .site-main{
     width: calcRem($minWidth);
@@ -283,6 +287,98 @@
         }
     }
 
+    .detail-Meta{
+        @include flexWrap;
+        -webkit-box-orient: vertical; -ms-flex-direction: column;
+        flex-direction: column;
+        height: calcRem(150rem);
+
+        &__orderId{
+            @include body6;
+        }
+        &__date{
+            @include body7;
+        }
+
+        &__btn{
+            width: calcRem(88rem);
+            margin: auto;
+            .btn-v3{margin: 5px 0;}
+        }
+        &__thumb{
+            width: calcRem(110rem);
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+
+            img{
+                @include ab-center;
+            }
+        }
+        &__title{
+            width: calc(100% - 170px);
+            @include body7;
+            text-align: left;
+            margin-top:0;
+        }
+        &__option{
+            width: calc(100% - 170px);
+            color: $disabledColor;
+
+            @include flexWrap;
+            .btn-v3{
+                width: auto;
+                height: calcRem(24rem);
+                padding: calcRem(5rem) calcRem(8rem);
+                box-sizing: border-box;
+                line-height: 1;
+                margin-left: calcRem(20rem);
+            }
+        }
+
+        &__price{
+            line-height: 0;
+            position: relative;
+    
+            &--current{
+                @include body8;
+                font-weight: $medium;
+                display: block;
+            }
+    
+            &--sale{
+                @include body7;
+                font-weight: $light;
+                color:$throughColor;
+                text-decoration: line-through;
+                display: inline-block;
+            }
+        }
+    
+        &__benefit{
+            display: inline-block;
+            font-size:calcRem(12rem);
+            line-height:calclH(20,12);
+            color:$whiteColor;
+            padding:calcRem(2rem) calcRem(15rem);
+            background-color: $point1;
+            letter-spacing: $defaultLetter;
+            margin-top:calcRem(15rem);
+        }
+
+        &__state{
+            &--text{
+                color: $point1;
+                @include body8;
+            }
+            &--num{
+                font-weight: $light;
+                font-size: calcRem(11rem);
+            }
+        }
+    }
+
     .order-mypage__meta.type-text{
         .order-mypage__meta--item{
             display: block;
@@ -301,11 +397,14 @@
 
 //table
 .order-mypage{
+    zoom:1;
+    
     .list-table{
         tbody{
             td{
                 vertical-align: top;
-                padding: calcRem(30rem) calcRem(20rem);
+                padding: calcRem(30rem) 2%;
+                box-sizing: border-box;
                 p{margin: 0;}
             }
         }
@@ -413,10 +512,20 @@
 .no-result{
     padding: calcRem(100rem) 0;
 }
+.notData-wrap{
+    padding: calcRem(100rem) 0;
+    text-align: center;
+    @include body7;
+}
+
 
 .myOrderList-section__title{
     @include  title1;
     margin: calcRem(20rem) 0 calcRem(10rem) ;
+}
+
+.title-link{
+    text-decoration: underline;
 }
 
 

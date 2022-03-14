@@ -16,15 +16,6 @@
     .btn-inquiry__group{
         padding-top: calcRem(40rem);
         border-top: 1px solid $gray2;
-        .btn-group{
-            &__list{
-                width: 40%;
-                margin: auto;
-            } 
-            &__btn{
-                @include body8;
-            }   
-        }
     }
 }
 

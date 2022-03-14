@@ -1,0 +1,105 @@
+/**********************
+  PAGE
+  회원탈퇴
+**********************/
+.memberRemove{
+    .center-right__head{
+        border-bottom: 1px solid $black1;
+    }
+    .btn-group{
+        margin-top: calcRem(25rem);
+        &__list{
+            width: 100%;
+            text-align: right;
+        }
+        &__item{
+            width: calcRem(100rem);
+        }
+    }
+}
+
+.memberRemove-cont{
+    padding:calcRem(40rem) calcRem(20rem);
+    border-bottom: 1px solid $gray2;
+
+    &__title{
+        margin-bottom:calcRem(40rem);
+        text-align: center;
+        @include title2;
+    }
+
+    &__text{
+        @include body2;
+        margin-bottom:calcRem(7rem);
+
+        &.is-point{
+            color: $point1;
+        }
+        &:nth-child(2){
+            margin-bottom:calcRem(20rem);
+        }
+    }
+
+    &__item{
+        margin-bottom: calcRem(15rem);
+        &:last-child{ margin-bottom: calcRem(30rem); }
+    }
+
+    &__textBox{
+        &:not(:nth-child(3)){
+            border-top: 1px solid $lightgray4;
+        }
+        padding: calcRem(60rem) 0 calcRem(10rem);
+        box-sizing: border-box;
+
+        .memberRemove-cont__title{
+            text-align: left;
+            margin-bottom: calcRem(10rem);
+            @include title2;
+        }
+
+        &:last-child{
+            .memberRemove-cont__title{ 
+                margin-bottom: calcRem(25rem); 
+            } 
+        }   
+    }
+
+    //회원탈퇴 - 비밀번호입력 폼
+    .memberRemove2-cont{
+        &__textBox{
+            border-top: 1px solid $lightgray4;
+            padding: calcRem(60rem) 0 calcRem(10rem);
+            box-sizing: border-box;
+    
+            .input-list{
+                width: calcRem(320rem);
+                margin: auto;
+            }
+            .input-box__btn{
+                margin-top:calcRem(20rem);
+            }
+        }
+        &__title{
+            text-align: center;
+            margin-bottom:calcRem(30rem);
+            @include title2;
+        }
+
+        &__text{
+            text-align: center;
+            font-weight: $light;
+            margin-bottom:calcRem(20rem);
+            @include body7;
+        }
+    }
+
+    .center-bullet__item{
+        margin-top: calcRem(7rem);
+        @include body1;
+        color: $black1;
+    }
+
+}
+
+

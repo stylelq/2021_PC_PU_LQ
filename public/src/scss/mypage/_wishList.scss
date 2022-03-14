@@ -1,0 +1,94 @@
+.wish-list{
+    border-top: 1px solid $black1;
+
+    //데이터 없음
+    .no-result{
+        text-align: center;
+        border-bottom: 1px solid $black1;
+    }
+}
+
+// 리스트
+.order-list__item{
+    @include flexNoWrap;
+    @include flex-alignCenter;
+    padding: calcRem(40rem) calcRem(20rem);
+    border-bottom: 1px solid $gray2;
+
+    .detail-Meta{
+        @include flexWrap;
+        -webkit-box-orient: vertical; -ms-flex-direction: column;
+        flex-direction: column;
+        height: calcRem(150rem);
+        width: 100%;
+        margin: 0 8%;
+    
+        &__btn{
+            width: calcRem(100rem);
+            margin: auto;
+            .btn-v3{margin: 5px 0;}
+        }
+        &__thumb{
+            width: calcRem(150rem);
+            height: calcRem(150rem);
+        }
+        &__title{
+            width: calc(100% - 170px);
+            @include body3;
+            text-align: left;
+            margin-top: auto;
+        }
+    
+        &__price{
+            line-height: 0;
+            position: relative;
+            margin-bottom: auto;
+    
+            &--current{
+                @include body2;
+                font-weight: $medium;
+                display: inline-block;
+                margin-left:calcRem(20rem);
+            }
+    
+            &--sale{
+                @include body2;
+                font-weight: $light;
+                color:$throughColor;
+                text-decoration: line-through;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    
+        &__benefit{
+            display: inline-block;
+            font-size:calcRem(12rem);
+            line-height:calclH(20,12);
+            color:$whiteColor;
+            padding:calcRem(2rem) calcRem(15rem);
+            background-color: $point1;
+            letter-spacing: $defaultLetter;
+            margin-top:calcRem(15rem);
+            margin-left:calcRem(20rem);
+        }
+    }
+}
+
+//하단 버튼 & 유의사항
+.wishList-bottom__list{
+    position: relative;
+    overflow: hidden;
+    margin-top:calcRem(20rem);
+    
+    .list-btn{
+        float: left;
+        .btn-v3 {
+            display: inline-block;
+            width: calcRem(100rem);
+        }
+    }
+    .center-bullet{
+        float: right;
+    }   
+}
