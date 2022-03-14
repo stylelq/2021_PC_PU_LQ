@@ -113,18 +113,18 @@
             &__item{
                 position: relative;
                 text-align: center;
-                margin: auto;
+                // margin: auto;
+                width: 25%;
                 &:not(:last-child):after{
                     content: '';
                     position: absolute;
-                    top: 0;right: calcRem(-35rem);
+                    top: 0;right: 0;
                     width: 1px;height: 100%;
                     background-color: $lightgray4;
                 }
                 &-name{
                     @include body7;
                 }
-        
                 &-num{
                     @include body3;
                     color: $point1;

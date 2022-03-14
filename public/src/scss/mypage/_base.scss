@@ -424,7 +424,10 @@
             &__btn{
                 width: calcRem(88rem);
                 margin: auto;
-                .btn-v3{margin: 5px 0;}
+                .btn-v3{
+                    padding: calcRem(5rem) calcRem(10rem);
+                    margin: 5px 0;
+                }
             }
             &__thumb{
                 width: calcRem(110rem);

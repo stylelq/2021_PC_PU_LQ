@@ -2,6 +2,9 @@
 .myOrderList-section{
     margin-bottom: calcRem(40rem);
     .list-table{
+        tbody{
+            td{ padding: calcRem(40rem) 2%; }
+        }
         .detail-Meta{
             height: calcRem(110rem);
         }
