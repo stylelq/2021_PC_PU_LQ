@@ -198,10 +198,11 @@
   display: flex;
   overflow: hidden;
   padding: calcRem(120rem) 0 calcRem(104rem);
-  /*min-width: calcRem(1300rem);;
-  width: calcRem(1300rem);
-  float: right;*/
 
+  &__wrap{
+    display: flex;
+    align-items: center;
+  }
   &__header{
     position: relative;
     text-align: center;
@@ -210,15 +211,15 @@
   &__title{
     top: 0;
     position: relative;
-    font-size: calcRem(20rem);
+    font-size: calcRem(30rem);
     line-height: calcRem(32rem);
     z-index: 90;
     font-weight: $medium;
   }
 
   &__left{
+    margin: 0 auto;
     flex: 1;
-    //loat: left;
     display: inline-block;
     width: calcRem(340rem);
     min-width: calcRem(340rem);
@@ -239,6 +240,29 @@
     .swiper-wrapper{
       transition-timing-function: linear;
     }
+  }
+  &__prev{
+    width:calcRem(8rem);
+    height:calcRem(16rem);
+    position: absolute;
+    left:calcRem(130rem);
+    top: 60.7%;
+    transform: translateY(-50%);
+    @include pageBackground('/images/common/ico_slide_prev.svg','no-repeat center center / contain');
+    background-size:calcRem(8rem) calcRem(16rem) ;
+    z-index: $childZindex;
+  }
+
+  &__next{
+    width:calcRem(8rem);
+    height:calcRem(16rem);
+    position: absolute;
+    left:204px;
+    top: 60.7%;
+    transform: translateY(-50%);
+    @include pageBackground('/images/common/ico_slide_next.svg','no-repeat center center / contain');
+    background-size:calcRem(8rem) calcRem(16rem) ;
+    z-index: $childZindex;
   }
   &__item{
     padding: 0 calcRem(2.5rem);
@@ -274,19 +298,17 @@
     line-height: calcRem(20rem);
   }
   &__pagination {
-    /*bottom: calcRem(20rem);*/
     padding: calcRem(20rem) 0 0;
     width: 100%;
     position: relative;
     color: #000;
     text-align: center;
-    z-index: 100;
     font-size: 0;
     line-height: 0;
 
     .swiper-pagination {
       &-current {
-        font-size: calcRem(12rem);
+        font-size: calcRem(18rem);
         line-height: calclH(19, 12);
         padding-right: calcRem(11rem);
         position: relative;
@@ -294,7 +316,7 @@
         &:after {
           content: "";
           width: 1px;
-          height: calcRem(10rem);
+          height: calcRem(14rem);
           background-color: $gray1;
           position: absolute;
           right: 0;
@@ -303,7 +325,7 @@
       }
 
       &-total {
-        font-size: calcRem(12rem);
+        font-size: calcRem(18rem);
         line-height: calclH(19, 12);
         padding-left: calcRem(10rem);
       }
@@ -318,20 +340,19 @@
   }
   &__button{
     margin: 0 auto;
-    width: calcRem(210rem);
-    padding: calcRem(9rem) 0;
+    width: calcRem(160rem);
+    padding: calcRem(10rem) 0;
     border: 1px solid #000;
-    font-size: calcRem(12rem);
+    font-size: calcRem(18rem);
+    font-weight: $regular;
     text-align: center;
     text-transform: uppercase;
-    font-weight: $medium;
   }
 }
 
 //메인 배너슬라이드2
 .main-banner2 {
   position: relative;
-  padding-top: calcRem(60rem);
 
   &__inner {
     display: block;
@@ -348,7 +369,7 @@
     }
 
     &--video {
-      height: auto;
+      height: 100%;
     }
   }
 
@@ -469,148 +490,6 @@
   }
 
 
-  //메인 배너슬라이드3
-  .main-banner3 {
-    position: relative;
-    padding-top: calcRem(60rem);
-
-    &__inner {
-      display: block;
-      width: 100%;
-      line-height: 0;
-    }
-
-    &__source {
-      /*display: block;
-      height: calcRem(540rem);
-      &--img{
-      }
-      &--video{
-      }*/
-    }
-
-    &__img {
-      max-width: 100%;
-      height: 100%;
-      width: 100%;
-    }
-
-    &__video {
-      width: 100%;
-      height: calcRem(410rem);
-      object-fit: cover;
-    }
-
-    &__content {
-      bottom: calcRem(50rem);
-      position: absolute;
-    }
-
-    &__name {
-      font-size: calcRem(16rem);
-      line-height: calcRem(28rem);
-    }
-
-    &__pagination {
-      bottom: calcRem(22rem);
-      width: 100%;
-      position: absolute;
-      color: #000;
-      text-align: center;
-      z-index: 100;
-      font-size: 0;
-      line-height: 0;
-      color: #fff;
-
-      &.is-white {
-        color: #000;
-
-        .swiper-pagination-current:after {
-          background-color: #000;
-        }
-      }
-
-      &.is-black {
-        color: #fff;
-      }
-
-      .swiper-pagination {
-        &-current {
-          font-size: calcRem(12rem);
-          line-height: calclH(19, 12);
-          padding-right: calcRem(11rem);
-          position: relative;
-
-          &:after {
-            content: "";
-            width: 1px;
-            height: calcRem(10rem);
-            background-color: #fff;
-            position: absolute;
-            right: 0;
-            @include vertical-center;
-          }
-        }
-
-        &-total {
-          font-size: calcRem(12rem);
-          line-height: calclH(19, 12);
-          padding-left: calcRem(10rem);
-        }
-      }
-    }
-
-    // 프로그래스바
-    .swiper-progress-bar {
-      bottom: 0;
-      position: absolute;
-      width: 100%;
-      display: block;
-      z-index: 1;
-      height: calcRem(3rem);
-
-      .slide_progress-bar {
-        position: absolute;
-        height: calcRem(3rem);
-        background: rgba(255, 255, 255, 0.5);
-        width: auto;
-        clear: both;
-        opacity: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-
-        &:after {
-          position: absolute;
-          top: 0;
-          left: 0;
-          background: #9B192F;
-          height: 100%;
-          width: 0;
-          content: "";
-          transition: 0.1s width linear;
-        }
-      }
-
-      &.active {
-        .slide_progress-bar {
-          opacity: 1;
-        }
-      }
-
-      &.animate {
-        .slide_progress-bar {
-          &:after {
-            width: 100%;
-            transition: width linear;
-            transition-delay: unset;
-            transition-duration: 5s;
-          }
-        }
-      }
-    }
-  }
-
   //------- 640fixed  -----------------
   .main-banner, .main-banner2, .main-new {
     height: 100vh;
@@ -680,56 +559,6 @@
   }
   //----------------------------------
 
-  //구매자 베스트
-  .main-best {
-    margin-top: calcRem(60rem);
-
-    &__header {
-      margin-bottom: calcRem(20rem);
-      text-align: center;
-    }
-
-    &__title {
-      @include heading3;
-      text-transform: uppercase;
-      margin: 0 0 calcRem(15rem);
-    }
-
-    //tab
-    &__tab {
-      &--inner {
-        text-align: center;
-        font-size: 0;
-        line-height: 0;
-        margin: 0 calcRem(-20rem);
-        border-top: 1px solid #b8b8b8;
-      }
-
-      &--item {
-        display: inline-block;
-        vertical-align: middle;
-        padding: calcRem(8rem) 0;
-        width: 29.33333%;
-        border-top: 2px solid transparent;
-        /*padding:0 calcRem(15rem);*/
-        &.is-current {
-          border-top: 2px solid #000;
-        }
-      }
-
-      &--link {
-        display: block;
-        @include body3;
-        opacity: 0.5;
-        text-transform: uppercase;
-        font-weight: $regular;
-
-        .is-current & {
-          opacity: 1;
-        }
-      }
-    }
-  }
 
   //메인 컬렉션
   .main-collection {
@@ -941,106 +770,6 @@
       color: #fff;
       text-align: center;
       @include vertical-center;
-    }
-  }
-
-  //best slide
-  //detail thumb
-  .best-thumb {
-    //썸네일
-    &__inner {
-      padding: calcRem(20rem) 0 calcRem(50rem);
-      position: relative;
-      width: 100%;
-      display: block;
-
-      &:after {
-        content: "";
-        display: block;
-        padding-bottom: 100%;
-      }
-    }
-
-    &__img {
-      @include ab-center;
-      width: 100%;
-      padding-bottom: calcRem(20rem);
-    }
-
-    //prev, next
-    &--prev {
-      width: calcRem(8rem);
-      height: calcRem(16rem);
-      position: absolute;
-      left: 0;
-      @include vertical-center;
-      @include pageBackground('/images/common/ico_slide_prev.svg', 'no-repeat center center / contain');
-      background-size: calcRem(8rem) calcRem(16rem);
-      z-index: $childZindex;
-    }
-
-    &--next {
-      width: calcRem(8rem);
-      height: calcRem(16rem);
-      position: absolute;
-      right: 0;
-      @include vertical-center;
-      @include pageBackground('/images/common/ico_slide_next.svg', 'no-repeat center center / contain');
-      background-size: calcRem(8rem) calcRem(16rem);
-      z-index: $childZindex;
-    }
-
-    //페이징
-    &__pagination {
-      padding-top: calcRem(20rem);
-      text-align: center;
-      font-size: 0;
-      line-height: 0;
-
-      .swiper-pagination {
-        &-current {
-          font-size: calcRem(12rem);
-          line-height: calclH(19, 12);
-          padding-right: calcRem(11rem);
-          position: relative;
-
-          &:after {
-            content: "";
-            width: 1px;
-            height: calcRem(10rem);
-            background-color: $gray1;
-            position: absolute;
-            right: 0;
-            @include vertical-center;
-          }
-        }
-
-        &-total {
-          font-size: calcRem(12rem);
-          line-height: calclH(19, 12);
-          padding-left: calcRem(10rem);
-        }
-      }
-    }
-
-    //상품명,가격
-    &__bottom {
-      bottom: 0;
-      position: fixed;
-      width: 100%;
-      text-align: center;
-      font-size: calcRem(12rem);
-      line-height: calcRem(20rem);
-    }
-
-    &__name {
-      @include body3;
-      padding-bottom: calcRem(5rem);
-      font-weight: $regular;
-    }
-
-    &__price {
-      @include body2;
     }
   }
 
@@ -1288,5 +1017,457 @@
       font-weight: 300;
       line-height: calcRem(22rem);
     }
+  }
+}
+
+//구매자 베스트
+.main-best{
+  margin: calcRem(140rem) auto calcRem(140rem);
+  width: calcRem(1200rem);
+  min-width: calcRem(1200rem);
+
+  &__header{
+    margin-bottom:calcRem(20rem);
+    text-align: center;
+  }
+
+  &__title{
+    @include heading3;
+    text-transform: uppercase;
+    margin:0 0 calcRem(30rem);
+  }
+
+  //tab
+  &__tab{
+    &--inner{
+      text-align: center;
+      font-size:0;
+      line-height:0;
+      margin:0 calcRem(-20rem);
+      border-top: 1px solid #b8b8b8;
+    }
+
+    &--item{
+      display: inline-block;
+      vertical-align: middle;
+      padding: calcRem(8rem) 0;
+      width: 15.33333%;
+      border-top: 2px solid transparent;
+      &.is-current{
+        border-top: 2px solid #000;
+      }
+    }
+
+    &--link{
+      display: block;
+      @include heading4;
+      opacity: 0.5;
+      text-transform: uppercase;
+      font-weight: $regular;
+
+      .is-current &{
+        opacity: 1;
+      }
+    }
+  }
+}
+
+//best slide
+//detail thumb
+.best-thumb {
+  //썸네일
+  &__inner {
+    padding: calcRem(20rem) 0 calcRem(50rem);
+    position: relative;
+    width: 100%;
+    display: block;
+
+    &:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+
+  &__img {
+    @include ab-center;
+    width: 100%;
+    padding-bottom: calcRem(20rem);
+  }
+
+  //prev, next
+  &--prev {
+    width: calcRem(8rem);
+    height: calcRem(16rem);
+    position: absolute;
+    left: 0;
+    @include vertical-center;
+    @include pageBackground('/images/common/ico_slide_prev.svg', 'no-repeat center center / contain');
+    background-size: calcRem(8rem) calcRem(16rem);
+    z-index: $childZindex;
+  }
+
+  &--next {
+    width: calcRem(8rem);
+    height: calcRem(16rem);
+    position: absolute;
+    right: 0;
+    @include vertical-center;
+    @include pageBackground('/images/common/ico_slide_next.svg', 'no-repeat center center / contain');
+    background-size: calcRem(8rem) calcRem(16rem);
+    z-index: $childZindex;
+  }
+
+  //페이징
+  &__pagination {
+    padding-top: calcRem(20rem);
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+
+    .swiper-pagination {
+      &-current {
+        font-size: calcRem(12rem);
+        line-height: calclH(19, 12);
+        padding-right: calcRem(11rem);
+        position: relative;
+
+        &:after {
+          content: "";
+          width: 1px;
+          height: calcRem(10rem);
+          background-color: $gray1;
+          position: absolute;
+          right: 0;
+          @include vertical-center;
+        }
+      }
+
+      &-total {
+        font-size: calcRem(12rem);
+        line-height: calclH(19, 12);
+        padding-left: calcRem(10rem);
+      }
+    }
+  }
+
+  //상품명,가격
+  &__bottom {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    font-size: calcRem(12rem);
+    line-height: calcRem(20rem);
+  }
+
+  &__name{
+    text-align: center;
+    padding-bottom: calcRem(5rem);
+  }
+
+  &__price {
+    @include body2;
+  }
+}
+
+//메인 배너슬라이드3
+.main-banner3 {
+  position: relative;
+  padding-top: calcRem(60rem);
+
+  &__inner {
+    display: block;
+    width: 100%;
+    line-height: 0;
+  }
+
+  &__source {
+    /*display: block;
+    height: calcRem(540rem);
+    &--img{
+    }
+    &--video{
+    }*/
+  }
+
+  &__img {
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__video {
+    width: 100%;
+    height: calcRem(410rem);
+    object-fit: cover;
+  }
+
+  &__content {
+    bottom: calcRem(50rem);
+    position: absolute;
+  }
+
+  &__name {
+    font-size: calcRem(16rem);
+    line-height: calcRem(28rem);
+  }
+
+  &__pagination {
+    bottom: calcRem(22rem);
+    width: 100%;
+    position: absolute;
+    color: #000;
+    text-align: center;
+    z-index: 100;
+    font-size: 0;
+    line-height: 0;
+    color: #fff;
+
+    &.is-white {
+      color: #000;
+
+      .swiper-pagination-current:after {
+        background-color: #000;
+      }
+    }
+
+    &.is-black {
+      color: #fff;
+    }
+
+    .swiper-pagination {
+      &-current {
+        font-size: calcRem(12rem);
+        line-height: calclH(19, 12);
+        padding-right: calcRem(11rem);
+        position: relative;
+
+        &:after {
+          content: "";
+          width: 1px;
+          height: calcRem(10rem);
+          background-color: #fff;
+          position: absolute;
+          right: 0;
+          @include vertical-center;
+        }
+      }
+
+      &-total {
+        font-size: calcRem(12rem);
+        line-height: calclH(19, 12);
+        padding-left: calcRem(10rem);
+      }
+    }
+  }
+
+  // 프로그래스바
+  .swiper-progress-bar {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    display: block;
+    z-index: 1;
+    height: calcRem(3rem);
+
+    .slide_progress-bar {
+      position: absolute;
+      height: calcRem(3rem);
+      background: rgba(255, 255, 255, 0.5);
+      width: auto;
+      clear: both;
+      opacity: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #9B192F;
+        height: 100%;
+        width: 0;
+        content: "";
+        transition: 0.1s width linear;
+      }
+    }
+
+    &.active {
+      .slide_progress-bar {
+        opacity: 1;
+      }
+    }
+
+    &.animate {
+      .slide_progress-bar {
+        &:after {
+          width: 100%;
+          transition: width linear;
+          transition-delay: unset;
+          transition-duration: 5s;
+        }
+      }
+    }
+  }
+}
+
+//메인 신상슬라이드
+.main-collection {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  padding: calcRem(120rem) 0 calcRem(104rem);
+
+  &__wrap{
+    display: flex;
+    align-items: center;
+  }
+  &__header{
+    position: relative;
+    text-align: center;
+    padding-top: calcRem(55rem);
+  }
+  &__title{
+    top: 0;
+    position: relative;
+    font-size: calcRem(30rem);
+    line-height: calcRem(32rem);
+    z-index: 90;
+    font-weight: $medium;
+    text-transform: uppercase;
+  }
+
+  &__left{
+    margin: 0 auto;
+    flex: 1;
+    display: inline-block;
+    width: calcRem(340rem);
+    min-width: calcRem(340rem);
+  }
+  &__container{
+    overflow: visible;
+  }
+  &__slide{
+    flex: 1;
+    position: relative;
+    margin: 0 calcRem(18rem);
+    float: right;
+    display: inline-block;
+    width: calcRem(1580rem);
+    min-width: calcRem(1580rem);
+    overflow: hidden;
+    //롤링슬라이드
+    .swiper-wrapper{
+      transition-timing-function: linear;
+    }
+  }
+  &__prev{
+    width:calcRem(8rem);
+    height:calcRem(16rem);
+    position: absolute;
+    left:calcRem(130rem);
+    top: 60.7%;
+    transform: translateY(-50%);
+    @include pageBackground('/images/common/ico_slide_prev.svg','no-repeat center center / contain');
+    background-size:calcRem(8rem) calcRem(16rem) ;
+    z-index: $childZindex;
+  }
+
+  &__next{
+    width:calcRem(8rem);
+    height:calcRem(16rem);
+    position: absolute;
+    left:204px;
+    top: 60.7%;
+    transform: translateY(-50%);
+    @include pageBackground('/images/common/ico_slide_next.svg','no-repeat center center / contain');
+    background-size:calcRem(8rem) calcRem(16rem) ;
+    z-index: $childZindex;
+  }
+  &__item{
+    padding: 0 calcRem(2.5rem);
+    box-sizing: border-box;
+  }
+  &__inner {
+    display: block;
+    width: 100%;
+    line-height: 0;
+  }
+  &__img {
+    display: block;
+    width: auto;
+  }
+
+  &__content {
+    bottom: calcRem(35rem);
+    position: absolute;
+    color: #000;
+    text-align: center;
+  }
+
+  &__name {
+    font-size: calcRem(12rem); //14
+    font-weight: 300;
+    line-height: calcRem(19rem); //20
+    padding: 0 calcRem(10rem);
+  }
+  &__price {
+    padding-top: calcRem(5rem);
+    font-size: calcRem(14rem);
+    font-weight: 400;
+    line-height: calcRem(20rem);
+  }
+  &__pagination {
+    padding: calcRem(20rem) 0 0;
+    width: 100%;
+    position: relative;
+    color: #000;
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+
+    .swiper-pagination {
+      &-current {
+        font-size: calcRem(18rem);
+        line-height: calclH(19, 12);
+        padding-right: calcRem(11rem);
+        position: relative;
+
+        &:after {
+          content: "";
+          width: 1px;
+          height: calcRem(14rem);
+          background-color: $gray1;
+          position: absolute;
+          right: 0;
+          @include vertical-center;
+        }
+      }
+
+      &-total {
+        font-size: calcRem(18rem);
+        line-height: calclH(19, 12);
+        padding-left: calcRem(10rem);
+      }
+    }
+  }
+  &__more{
+    display: block;
+    padding-top: calcRem(25rem);
+  }
+  &__link{
+    display: block;
+  }
+  &__button{
+    margin: 0 auto;
+    width: calcRem(160rem);
+    padding: calcRem(10rem) 0;
+    border: 1px solid #000;
+    font-size: calcRem(18rem);
+    font-weight: $regular;
+    text-align: center;
+    text-transform: uppercase;
   }
 }
