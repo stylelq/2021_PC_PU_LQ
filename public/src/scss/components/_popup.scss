@@ -145,7 +145,7 @@
       background: $grayTextColor;
   }
 }
-.section-terms,
+.section-terms, //스테이징&운영에 맞춘 스타일::개인정보,이용약관
 .terms-only{ 
 //   padding-top:0;
 
@@ -201,14 +201,14 @@
 .etc{
   $this:&;
   &__dl{margin:0;}
-  &__dt{margin-bottom:calcRem(10rem); @include body2();}
-  &__dd{margin:0; @include body3();
+  &__dt{margin-bottom:calcRem(10rem); @include body6();}
+  &__dd{margin:0; @include body7();
       & + #{$this}__dt{margin-top:calcRem(20rem);}
   }
-  &__p{ margin-bottom:20px; @include body3(); }
+  &__p{ margin-bottom:20px; @include body7(); }
   &__title{ 
       margin:calcRem(30rem) 0 calcRem(10rem); 
-      @include body2();
+      @include body6();
       font-weight: 400;
   }
 

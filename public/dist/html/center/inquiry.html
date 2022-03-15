@@ -432,131 +432,133 @@
                     <p class="center-right__title">1:1문의</p>
                 </div>
                                 
-                <div class="center-inquiry">
-                    <div class="wrap">
-                        <!--info form -->
-                        <div class="inquiry-form__info">
-                            <ul class="inquiry-form__list">
-                                <li class="inquiry-form__item fieldset__group">
-                                    <div class="fieldset__label">문의 유형</div>
-                                    <div class="fieldset__list">
-                                        <div class="fieldset__inner">
-                                            <select name="wirteselect" id="wirteselect" class="form__select js-placeholder" title="문의 유형 선택">
-                                                <option value="" disabled="" selected>문의 유형 선택</option>
-                                                <option value="303">상품</option>
-                                                <option value="304">주문/결제</option>
-                                                <option value="305">배송</option>
-                                                <option value="306">취소/교환/반품</option>
-                                                <option value="307">쿠폰/포인트/영수증</option>
-                                                <option value="308">A/S</option>
-                                                <option value="309">매장</option>
-                                                <option value="310">회원</option>
-                                                <option value="311">시스템장애</option>
-                                                <option value="312">포장</option>
-                                                <option value="313">기타</option>
-                                                <option value="2130">L-STYLE</option>
-                                            </select>
+                
+                    <div class="center-inquiry">
+                        <div class="wrap">
+                            <!--info form -->
+                            <div class="inquiry-form__info">
+                                <ul class="inquiry-form__list">
+                                    <li class="inquiry-form__item fieldset__group">
+                                        <div class="fieldset__label">문의 유형</div>
+                                        <div class="fieldset__list">
+                                            <div class="fieldset__inner">
+                                                <select name="wirteselect" id="wirteselect" class="form__select js-placeholder" title="문의 유형 선택">
+                                                    <option value="" disabled="" selected>문의 유형 선택</option>
+                                                    <option value="303">상품</option>
+                                                    <option value="304">주문/결제</option>
+                                                    <option value="305">배송</option>
+                                                    <option value="306">취소/교환/반품</option>
+                                                    <option value="307">쿠폰/포인트/영수증</option>
+                                                    <option value="308">A/S</option>
+                                                    <option value="309">매장</option>
+                                                    <option value="310">회원</option>
+                                                    <option value="311">시스템장애</option>
+                                                    <option value="312">포장</option>
+                                                    <option value="313">기타</option>
+                                                    <option value="2130">L-STYLE</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="inquiry-form__item fieldset__group">
-                                    <div class="fieldset__label">제목</div>
-                                    <div class="fieldset__list">
-                                        <input type="text" class="form__input--text" title="제목" placeholder="제목을 입력해 주세요">
-                                    </div>
-                                </li>
-                                <li class="inquiry-form__item fieldset__group">
-                                    <div class="fieldset__label">내용</div>
-                                    <div class="fieldset__list">
-                                        <textarea class="form__input--textarea" title="내용" placeholder="문의하실 내용을 입력해 주세요"></textarea>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- .info form -->
-
-                        <!-- 주문&상품 검색 -->
-                        <div class="inquiry-search fieldset__group">
-                            <div class="fieldset__label">주문/상품 선택</div>
-                            <div class="fieldset__list">
-                                <ul class="fieldset__inner--btn">
-                                    <li class="inquiry-order">
-                                        <a href="#inquiryOrderPop" class="form-arrow__btn js-popup-open"><span class="form-arrow__btn--text">주문내역</span></a>
                                     </li>
-                                    <li class="inquiry-product">
-                                        <a href="#inquiryProductPop" class="form-arrow__btn js-popup-open"><span class="form-arrow__btn--text">상품검색</span></a>
+                                    <li class="inquiry-form__item fieldset__group">
+                                        <div class="fieldset__label">제목</div>
+                                        <div class="fieldset__list">
+                                            <input type="text" class="form__input--text" title="제목" placeholder="제목을 입력해 주세요">
+                                        </div>
+                                    </li>
+                                    <li class="inquiry-form__item fieldset__group">
+                                        <div class="fieldset__label">내용</div>
+                                        <div class="fieldset__list">
+                                            <textarea class="form__input--textarea" title="내용" placeholder="문의하실 내용을 입력해 주세요"></textarea>
+                                        </div>
                                     </li>
                                 </ul>
-                                <p class="inquiry-product__text">상담할 상품이 온라인 스토어에서 확인되지 않을 경우 직접 상품명이나 제품 코드를 입력해 주세요.</p>
-                                <!-- 주문내용 -->
-                                <div class="inquiry-search__view"></div>
-                                <!-- //주문내용 -->
                             </div>
-                        </div>
-                        <!-- //주문&상품 검색 -->
-                        
-
-                        <!-- 이미지 첨부 -->
-                        <div class="inquiry-imgFile fieldset__group">
-                            <div class="fieldset__label">이미지 첨부</div>
-                            <div class="fieldset__list">
-                                <div class="fieldset__inner--btn">
-                                    <div class="inquiry-image">
-                                        <div class="form-arrow__btn"><span class="form-arrow__btn--text">이미지 첨부1</span></div>
-                                        <input type="file" name="inquiryImage" class="inquiry-image__file">
-                                    </div>
-                                    <!-- 첨부파일 버튼 추가 -->
-                                    <!-- <div class="inquiry-image">
-                                        <div class="form-arrow__btn"><span class="form-arrow__btn--text">이미지 첨부2</span></div>
-                                        <input type="file" name="inquiryImage" class="inquiry-image__file">
-                                    </div>
-                                    <div class="inquiry-image">
-                                        <div class="form-arrow__btn"><span class="form-arrow__btn--text">이미지 첨부3</span></div>
-                                        <input type="file" name="inquiryImage" class="inquiry-image__file">
-                                    </div> -->
+                            <!-- .info form -->
+    
+                            <!-- 주문&상품 검색 -->
+                            <div class="inquiry-search fieldset__group">
+                                <div class="fieldset__label">주문/상품 선택</div>
+                                <div class="fieldset__list">
+                                    <ul class="fieldset__inner--btn">
+                                        <li class="inquiry-order">
+                                            <a href="#inquiryOrderPop" class="form-arrow__btn js-popup-open"><span class="form-arrow__btn--text">주문내역</span></a>
+                                        </li>
+                                        <li class="inquiry-product">
+                                            <a href="#inquiryProductPop" class="form-arrow__btn js-popup-open"><span class="form-arrow__btn--text">상품검색</span></a>
+                                        </li>
+                                    </ul>
+                                    <p class="inquiry-product__text">상담할 상품이 온라인 스토어에서 확인되지 않을 경우 직접 상품명이나 제품 코드를 입력해 주세요.</p>
+                                    <!-- 주문내용 -->
+                                    <div class="inquiry-search__view"></div>
+                                    <!-- //주문내용 -->
                                 </div>
-                                <p class="inquiry-image__text">첨부파일 형식 : gif, jpg, png, jpeg (각 2MB이하)<br />최대 0장까지 첨부 가능합니다.</p>
-                                <!-- 첨부파일 미리보기 -->
-                                <div class="inquiry-image__view"></div>
-                                <!-- //첨부파일 미리보기 -->
                             </div>
-                        </div>
-                        <!-- .이미지 첨부- -->
-
-                        <!-- 알림 신청 -->
-                        <div class="inquiry-alim fieldset__group">
-                            <div class="fieldset__label">답변 알림 신청</div>
-                            <div class="fieldset__list">
-                                <ul class="inquiry-notification__list">
-                                    <li class="inquiry-notification__item">
-                                        <div class="form__checkbox form__checkbox--big">
-                                            <input class="form__checkbox--input sr-only" type="checkbox" name="notification" id="notification1" checked>
-                                            <label class="form__checkbox--text" for="notification1">youn***@gmail.com 이메일 수신</label>
+                            <!-- //주문&상품 검색 -->
+                            
+    
+                            <!-- 이미지 첨부 -->
+                            <div class="inquiry-imgFile fieldset__group">
+                                <div class="fieldset__label">이미지 첨부</div>
+                                <div class="fieldset__list">
+                                    <div class="fieldset__inner--btn">
+                                        <div class="inquiry-image">
+                                            <div class="form-arrow__btn"><span class="form-arrow__btn--text">이미지 첨부1</span></div>
+                                            <input type="file" name="inquiryImage" class="inquiry-image__file">
                                         </div>
-                                    </li>
-                                    <li class="inquiry-notification__item">
-                                        <div class="form__checkbox form__checkbox--big">
-                                            <input class="form__checkbox--input sr-only" type="checkbox" name="notification" id="notification2">
-                                            <label class="form__checkbox--text" for="notification2">010-****-1622 문자 수신</label>
+                                        <!-- 첨부파일 버튼 추가 -->
+                                        <!-- <div class="inquiry-image">
+                                            <div class="form-arrow__btn"><span class="form-arrow__btn--text">이미지 첨부2</span></div>
+                                            <input type="file" name="inquiryImage" class="inquiry-image__file">
                                         </div>
-                                    </li>
-                                </ul>
+                                        <div class="inquiry-image">
+                                            <div class="form-arrow__btn"><span class="form-arrow__btn--text">이미지 첨부3</span></div>
+                                            <input type="file" name="inquiryImage" class="inquiry-image__file">
+                                        </div> -->
+                                    </div>
+                                    <p class="inquiry-image__text">첨부파일 형식 : gif, jpg, png, jpeg (각 2MB이하)<br />최대 0장까지 첨부 가능합니다.</p>
+                                    <!-- 첨부파일 미리보기 -->
+                                    <div class="inquiry-image__view"></div>
+                                    <!-- //첨부파일 미리보기 -->
+                                </div>
                             </div>
+                            <!-- .이미지 첨부- -->
+    
+                            <!-- 알림 신청 -->
+                            <div class="inquiry-alim fieldset__group">
+                                <div class="fieldset__label">답변 알림 신청</div>
+                                <div class="fieldset__list">
+                                    <ul class="inquiry-notification__list">
+                                        <li class="inquiry-notification__item">
+                                            <div class="form__checkbox form__checkbox--big">
+                                                <input class="form__checkbox--input sr-only" type="checkbox" name="notification" id="notification1" checked>
+                                                <label class="form__checkbox--text" for="notification1">youn***@gmail.com 이메일 수신</label>
+                                            </div>
+                                        </li>
+                                        <li class="inquiry-notification__item">
+                                            <div class="form__checkbox form__checkbox--big">
+                                                <input class="form__checkbox--input sr-only" type="checkbox" name="notification" id="notification2">
+                                                <label class="form__checkbox--text" for="notification2">010-****-1622 문자 수신</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- .알림 신청 -->
                         </div>
-                        <!-- .알림 신청 -->
                     </div>
-                </div>
-
-                <div class="btn-group btn-inquiry__group">
-                    <ul class="btn-group__list type-two">
-                        <li class="btn-group__item">
-                            <button class="btn-group__btn btn-v1 btn-v1--small type-white">취소</button>
-                        </li>
-                        <li class="btn-group__item">
-                            <button class="btn-group__btn btn-v1 btn-v1--small type-primary">문의하기</button>
-                        </li>
-                    </ul>
-                </div>
+    
+                    <div class="btn-group btn-inquiry__group">
+                        <ul class="btn-group__list type-two">
+                            <li class="btn-group__item">
+                                <button class="btn-group__btn btn-v1 btn-v1--small type-white">취소</button>
+                            </li>
+                            <li class="btn-group__item">
+                                <button class="btn-group__btn btn-v1 btn-v1--small type-primary">문의하기</button>
+                            </li>
+                        </ul>
+                    </div>
+                
 
             </div>
         </section>
