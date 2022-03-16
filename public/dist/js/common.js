@@ -1157,6 +1157,64 @@ jQuery(function () {
     $(document).on('click', mainNewSlide, function () {
       mainNewSlide.autoplay.stop();
     });
+  } //메인 배너슬라이드4
+
+
+  if ($('.main-banner4').length > 0 && $('.main-banner4__item').length > 1) {
+    var mainSlide = new Swiper('.main-banner4__container', {
+      observer: true,
+      observeParents: true,
+      watchOverflow: true,
+      slidesPerView: 1,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".main-banner4__pagination",
+        type: "fraction"
+      },
+      on: {
+        init: function init() {
+          var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
+          var bg = slide.data("bg");
+
+          if ($('.main-banner4__item').find('.swiper-slide-active').data('bg') === 'white') {
+            $('.main-banner4__pagination').removeClass('is-black');
+            $('.main-banner4__pagination').addClass('is-white');
+          } else {
+            $('.main-banner4__pagination').removeClass('is-white');
+            $('.main-banner4__pagination').addClass('is-black');
+          }
+
+          $('.main-banner4__progressbar').removeClass("animate");
+          $('.main-banner4__progressbar').removeClass("active");
+          $('.main-banner4__progressbar').eq(0).addClass("animate");
+          $('.main-banner4__progressbar').eq(0).addClass("active");
+        },
+        slideChangeTransitionStart: function slideChangeTransitionStart() {
+          $('.main-banner4__progressbar').removeClass("animate");
+          $('.main-banner4__progressbar').removeClass("active");
+          $('.main-banner4__progressbar').eq(0).addClass("active");
+        },
+        slideChangeTransitionEnd: function slideChangeTransitionEnd() {
+          $('.main-banner4__progressbar').eq(0).addClass("animate");
+        },
+        beforeTransitionStart: function beforeTransitionStart() {
+          var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
+          var bg = slide.data("bg");
+
+          if ($('.main-banner4__item').find('.swiper-slide-active').data('bg') === 'white') {
+            $('.main-banner4__pagination').removeClass('is-black');
+            $('.main-banner4__pagination').addClass('is-white');
+          } else {
+            $('.main-banner4__pagination').removeClass('is-white');
+            $('.main-banner4__pagination').addClass('is-black');
+          }
+        }
+      }
+    });
   } //--END[swiper slider]-----------------------------
 
 }); //jQuery

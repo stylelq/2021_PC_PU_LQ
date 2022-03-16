@@ -593,80 +593,6 @@
     }
   }
 
-  //선물 추천
-  .main-gift {
-    position: relative;
-    margin-top: calcRem(60rem);
-
-    &__visual {
-      position: relative;
-    }
-
-    &__img {
-      width: 100%;
-      display: block;
-    }
-
-    &__wrap {
-      position: absolute;
-      width: 100%;
-      @include vertical-center;
-    }
-
-    &__header {
-      padding: 0 calcRem(20rem);
-      color: #fff;
-      text-align: center;
-    }
-
-    &__title {
-      line-height: calcRem(32rem);
-      font-size: calcRem(20rem);
-      font-weight: 400;
-      text-transform: uppercase;
-    }
-
-    &__txt {
-      line-height: calcRem(20rem);
-      font-size: calcRem(12rem);
-      font-weight: $medium;
-      padding-top: calcRem(40rem);
-      margin-bottom: 4px;
-    }
-
-    &__info {
-      @include body3;
-      padding: calcRem(40rem) 0 calcRem(45rem); //20, 30
-      color: #fff;
-      text-align: center;
-      // &--cont2{
-      // 	padding-top: calcRem(10rem);
-      // }
-    }
-
-    &__gender {
-      padding: 0 calcRem(20rem);
-    }
-
-    &__link {
-      display: block;
-    }
-
-    &__button {
-      padding: calcRem(10rem) 0;
-      color: #fff;
-      border: 1px solid #fff;
-      text-align: center;
-      text-transform: uppercase;
-      font-weight: $regular;
-      font-size: calcRem(14rem);
-    }
-
-    &__link + &__link {
-      margin-top: calcRem(30rem);
-    }
-  }
-
   //루이까또즈 멤버십
   .main-membership {
     color: #9B192F;
@@ -1468,5 +1394,271 @@
     font-weight: $regular;
     text-align: center;
     text-transform: uppercase;
+  }
+}
+
+// 선물 추천
+.main-gift{
+  &__wrap{
+    display: flex;
+  }
+  &__inner{
+    padding: calcRem(50rem);
+  }
+  &__title{
+    padding-bottom: calcRem(140rem);
+    font-size: calcRem(30rem);
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  &__left{
+    flex: 1;
+    background: radial-gradient(101.9% 177.25% at 101.9% 44.78%, #FF8888 0%, rgba(255, 87, 87, 0.479167) 52.08%, rgba(255, 150, 53, 0.49) 100%);
+  }
+  &__right{
+    flex: 1;
+    background-color: #f5f5f5;
+  }
+  &__bottom{
+    display: flex;
+  }
+  &__info{
+    flex: 1;
+    &--top{
+      margin: 0;
+      font-size: calcRem(22rem);
+      font-weight: 400;
+    }
+    &--bottom{
+      margin: 0;
+      padding-top: calcRem(38rem);
+      font-size: calcRem(18rem);
+      font-weight: 300;
+    }
+  }
+  &__gender{
+  }
+  &__link{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-size: calcRem(24rem);
+    font-weight: 400;
+    &:after{
+      content: '';
+      right: 0;
+      width:calcRem(8rem);
+      height:calcRem(30rem);
+      position: absolute;
+      @include pageBackground('/images/main/main-gift-arrow01.png','no-repeat center center / contain');
+      background-size:calcRem(8rem) calcRem(16rem) ;
+    }
+  }
+  &__link + &__link{
+    margin-top: calcRem(20rem);
+  }
+}
+
+//멤버십
+.main-membership{
+  &__wrap{
+    display: flex;
+  }
+  &__inner{
+    padding: calcRem(50rem);
+  }
+  &__info{
+    display: flex;
+  }
+  &__title {
+    padding-bottom: calcRem(140rem);
+    color: #9B192F;
+    font-size: calcRem(30rem);
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  &__logo{
+
+  }
+  &__txt{
+    margin-left: calcRem(24rem);
+    margin-right: calcRem(70rem);
+    color: #9B192F;
+    font-size: calcRem(18rem);
+    font-weight: 300;
+  }
+
+  &__button{
+    width: calcRem(240rem);
+    height: calcRem(50rem);
+    color: #fff;
+    background-color: #9B192F;
+    font-size: calcRem(24rem);
+    text-align: center;
+  }
+  &__link{
+    display: block;
+    line-height: calcRem(50rem);
+  }
+}
+
+//메인 배너슬라이드4
+.main-banner4 {
+  position: relative;
+  margin-bottom: calcRem(190rem);
+  padding-top: calcRem(60rem);
+  &__title{
+    @include heading3;
+    text-transform: uppercase;
+    text-align: center;
+    margin:0 0 calcRem(30rem);
+  }
+  &__txt{
+    @include heading4;
+    text-align:center;
+  }
+
+  &__slide{
+    position: relative;
+    margin: 0 calcRem(18rem);
+  }
+  &__container{
+    overflow: visible;
+  }
+
+  &__inner {
+    display: block;
+    width: 100%;
+    line-height: 0;
+  }
+
+  &__source {
+   margin: 0 calcRem(10rem);
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+
+  &__item{
+    //padding: 0 calcRem(70rem);
+    box-sizing: border-box;
+  }
+
+  &__video {
+    width: 100%;
+    height: calcRem(410rem);
+    object-fit: cover;
+  }
+
+  &__content {
+    bottom: calcRem(50rem);
+    position: absolute;
+  }
+
+  &__name {
+    font-size: calcRem(16rem);
+    line-height: calcRem(28rem);
+  }
+
+  &__pagination {
+    bottom: calcRem(22rem);
+    width: 100%;
+    position: absolute;
+    color: #000;
+    text-align: center;
+    z-index: 100;
+    font-size: 0;
+    line-height: 0;
+    color: #fff;
+
+    &.is-white {
+      color: #000;
+
+      .swiper-pagination-current:after {
+        background-color: #000;
+      }
+    }
+
+    &.is-black {
+      color: #fff;
+    }
+
+    .swiper-pagination {
+      &-current {
+        font-size: calcRem(12rem);
+        line-height: calclH(19, 12);
+        padding-right: calcRem(11rem);
+        position: relative;
+
+        &:after {
+          content: "";
+          width: 1px;
+          height: calcRem(10rem);
+          background-color: #fff;
+          position: absolute;
+          right: 0;
+          @include vertical-center;
+        }
+      }
+
+      &-total {
+        font-size: calcRem(12rem);
+        line-height: calclH(19, 12);
+        padding-left: calcRem(10rem);
+      }
+    }
+  }
+
+  // 프로그래스바
+  .swiper-progress-bar {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    display: block;
+    z-index: 1;
+    height: calcRem(3rem);
+
+    .slide_progress-bar {
+      position: absolute;
+      height: calcRem(3rem);
+      background: rgba(255, 255, 255, 0.5);
+      width: auto;
+      clear: both;
+      opacity: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #9B192F;
+        height: 100%;
+        width: 0;
+        content: "";
+        transition: 0.1s width linear;
+      }
+    }
+
+    &.active {
+      .slide_progress-bar {
+        opacity: 1;
+      }
+    }
+
+    &.animate {
+      .slide_progress-bar {
+        &:after {
+          width: 100%;
+          transition: width linear;
+          transition-delay: unset;
+          transition-duration: 5s;
+        }
+      }
+    }
   }
 }
