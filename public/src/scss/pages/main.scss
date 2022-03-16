@@ -193,6 +193,29 @@
   }
 }
 
+//최근본상품페이지
+//검색결과
+.main-viewed{
+  position: relative;
+  display: block;
+  padding-top: calcRem(180rem);
+  // overflow: scroll;
+  &__wrap{
+    min-width: 1200px;
+    text-align: center;
+  }
+  .viewed__result{
+    width:calcRem($minWidth);
+    margin: auto;
+    margin-bottom: calcRem(120rem);
+    &--noti{
+      padding: calcRem(150rem) 0 calcRem(300rem);
+      font-size: calcRem(14rem);
+      font-weight: 300;
+    }
+  }
+}
+
 //메인 신상슬라이드
 .main-new {
   position: relative;
