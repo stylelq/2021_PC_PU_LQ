@@ -7,7 +7,7 @@
 
   &__inner{
     display: block;
-    width:100vw;
+    width:100%;
     height: auto;
     line-height:0;
   }
@@ -30,7 +30,7 @@
     width: 100%;
   }
   &__content{
-    bottom: calcRem(50rem);
+    bottom: calcRem(70rem);
     position: absolute;
   }
   &__name{
@@ -39,7 +39,7 @@
     line-height: calcRem(28rem);
   }
   &__pagination{
-    bottom: calcRem(20rem);
+    bottom: calcRem(40rem);
     width: 100%;
     position: absolute;
     color: #fff;
@@ -96,13 +96,14 @@
     z-index: 1;
     height: calcRem(3rem);
     .slide_progress-bar {
+      margin: 0 auto;
       position: absolute;
+      width: calcRem(480rem);
       height: calcRem(3rem);
       background: rgba(255, 255, 255, 0.5);
-      width: auto;
       clear: both;
       opacity: 0;
-      bottom: 0;
+      bottom: calcRem(20rem);
       left: 0;
       right: 0;
       &:after {
@@ -1130,7 +1131,7 @@
   }
 
   &__content {
-    bottom: calcRem(50rem);
+    bottom: calcRem(70rem);
     position: absolute;
   }
 
@@ -1140,7 +1141,7 @@
   }
 
   &__pagination {
-    bottom: calcRem(22rem);
+    bottom: calcRem(40rem);
     width: 100%;
     position: absolute;
     color: #000;
@@ -1198,13 +1199,14 @@
     height: calcRem(3rem);
 
     .slide_progress-bar {
+      margin: 0 auto;
       position: absolute;
+      width: calcRem(480rem);
       height: calcRem(3rem);
       background: rgba(255, 255, 255, 0.5);
-      width: auto;
       clear: both;
       opacity: 0;
-      bottom: 0;
+      bottom: calcRem(20rem);
       left: 0;
       right: 0;
 
@@ -1523,7 +1525,7 @@
     margin: 0 calcRem(18rem);
   }
   &__container{
-    overflow: visible;
+    //overflow: visible;
   }
 
   &__inner {
@@ -1543,8 +1545,8 @@
   }
 
   &__item{
-    //padding: 0 calcRem(70rem);
     box-sizing: border-box;
+    overflow: visible;
   }
 
   &__video {
