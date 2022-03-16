@@ -1,0 +1,113 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+//검색결과
+.gift{
+  position: relative;
+  display: block;
+  padding-top: calcRem(180rem);
+  // overflow: scroll;
+  &__wrap{
+    min-width: 1200px;
+    text-align: center;
+  }
+  &__top{
+    display: block;
+  }
+  &__gender{
+    position: relative;
+    text-align: center;
+  }
+  &__title{
+    display: inline-block;
+    &.is-active{
+      text-decoration: underline;
+    }
+  }
+  &__title:last-child{
+    color: #9B192F;
+    &:after{
+      content: '';
+      width:calcRem(4rem);
+      height:calcRem(10rem);
+      top: calcRem(6rem);
+      margin-left: calcRem(40rem);
+      position: absolute;
+      @include pageBackground('/images/common/more.png','no-repeat center center / contain');
+    }
+  }
+  &__title + &__title{
+    margin-left: calcRem(30rem);
+  }
+  &__link{
+    display: block;
+  }
+  &__result{
+    font-size: calcRem(20rem);
+    font-weight: 400;
+    line-height: calcRem(32rem);
+  }
+
+  &__bottom{
+    position: relative;
+    padding: calcRem(60rem) 0;
+  }
+  &__list{
+    display: inline-block;
+  }
+  &__item + &__item{
+    margin-left: calcRem(10rem);
+  }
+  &__item{
+    width: calcRem(70rem);
+    float: left;
+    display: inline-block;
+    padding: calcRem(5rem) calcRem(8rem);
+    border: 1px solid #cbcbcb;
+    &.is-active{
+      color: #9B192F;
+      border: 1px solid #9B192F;
+    }
+  }
+  &__inner{
+    display: block;
+    font-size: calcRem(14rem);
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  &__result{
+    width:calcRem($minWidth);
+    margin: auto;
+    margin-bottom: calcRem(120rem);
+  }
+  &__banner{
+    margin: 0 auto;
+    margin-bottom: calcRem(120rem);
+    width:calcRem($minWidth);
+    background: radial-gradient(101.9% 177.25% at 101.9% 44.78%, #FF8888 0%, rgba(255, 87, 87, 0.479167) 65.99%, rgba(255, 150, 53, 0.49) 100%);
+    &--box{
+      display: flex;
+      padding: calcRem(45rem) calcRem(40rem);
+      text-transform: uppercase;
+    }
+    &--left{
+      flex: 1;
+      font-size: calcRem(24rem);
+      text-align: left;
+      line-height: calcRem(46rem);
+    }
+    &--right{
+      flex: 1;
+    }
+    &--button{
+      padding: calcRem(12rem) 0;
+      float: right;
+      width: calcRem(360rem);
+      border: 1px solid #000;
+      text-align: center;
+    }
+    &--link{
+      display: block;
+    }
+  }
+}
