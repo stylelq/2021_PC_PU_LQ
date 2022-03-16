@@ -2813,11 +2813,10 @@
 
 // 메인공지팝업
 .notice-popup{
-  left: 50%;
+  left: 20%;
   position: absolute;
-  width: 80%;
+  width: auto;
   transform: translate(-50%, 40%);
-
   &__img{
       width: 100%;
       display: block;
