@@ -280,7 +280,7 @@
   }
 
   &__content {
-    bottom: calcRem(35rem);
+    bottom: calcRem(106rem);
     position: absolute;
     color: #000;
     text-align: center;
@@ -1328,17 +1328,18 @@
   }
 
   &__content {
-    bottom: calcRem(35rem);
     position: absolute;
     color: #000;
     text-align: center;
   }
 
   &__name {
-    font-size: calcRem(12rem); //14
-    font-weight: 300;
-    line-height: calcRem(19rem); //20
     padding: 0 calcRem(10rem);
+    font-size: calcRem(24rem);
+    font-weight: 300;
+    line-height: calcRem(20rem);
+    color: #fff;
+    text-transform: uppercase;
   }
   &__price {
     padding-top: calcRem(5rem);
