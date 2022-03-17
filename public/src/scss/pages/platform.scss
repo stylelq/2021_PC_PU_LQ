@@ -11,6 +11,15 @@
         line-height:0;
         position: relative;
         overflow: hidden;
+        /*exhibition페이지 only*/
+        &.is-main{
+            margin-bottom: 0;
+        }
+        &.is-bgColor{
+            margin-bottom: 0;
+            background-color: #f4d36b;
+            text-align: center;
+        }
 
         &.platform-banner--video:after{
             content:"";
@@ -28,11 +37,27 @@
             @include ab-center;
             width:100%;
         }
+        &__img2{
+            width:100%;
+        }
 
         &__file{
             @include ab-center;
             width:100% !important;
             height:100% !important;
+        }
+    }
+
+    &-txt{
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        margin: 0 auto;
+        &__img{
+            position: relative;
+            margin-top: 3%;
+            z-index: 10;
+            width: calcRem(160rem);
         }
     }
 
