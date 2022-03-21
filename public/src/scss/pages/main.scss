@@ -1521,10 +1521,12 @@
 }
 
 //메인 배너슬라이드4
+//메인 신상슬라이드
 .main-banner4 {
   position: relative;
-  margin-bottom: calcRem(190rem);
-  padding-top: calcRem(60rem);
+  overflow: hidden;
+  padding: calcRem(60rem) 0 calcRem(80rem);
+
   &__title{
     @include heading3;
     text-transform: uppercase;
@@ -1536,75 +1538,78 @@
     @include heading4;
     text-align:center;
   }
-
-  &__slide{
-    position: relative;
-    margin: 0 calcRem(18rem);
-  }
   &__container{
     overflow: visible;
   }
-
+  &__slide{
+    position: relative;
+    margin: 0 calcRem(100rem);
+  }
+  &__item{
+    padding: 0 calcRem(5rem);
+    box-sizing: border-box;
+  }
   &__inner {
     display: block;
     width: 100%;
     line-height: 0;
   }
-
-  &__source {
-   margin: 0 calcRem(10rem);
-  }
-
   &__img {
-    height: 100%;
-    width: 100%;
     display: block;
-  }
-
-  &__item{
-    box-sizing: border-box;
-    padding: 0 calcRem(20rem);
-    //overflow: visible;
-  }
-
-  &__video {
     width: 100%;
-    height: calcRem(410rem);
-    object-fit: cover;
   }
 
   &__content {
-    bottom: calcRem(50rem);
     position: absolute;
+    color: #fff;
+    text-align: center;
   }
 
   &__name {
-    font-size: calcRem(16rem);
-    line-height: calcRem(28rem);
+    font-size: calcRem(36rem);
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  &__name2{
+    font-size: calcRem(30rem);
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  &__prev{
+    width:calcRem(18rem);
+    height:calcRem(34rem);
+    position: absolute;
+    left:calcRem(20rem);
+    top: 50%;
+    transform: translateY(-50%);
+    @include pageBackground('/images/common/ico_slide_prev_w.svg','no-repeat center center / contain');
+    background-size:calcRem(18rem) calcRem(34rem) ;
+    z-index: $childZindex;
+    cursor: pointer;
   }
 
-  &__pagination {
-    bottom: calcRem(22rem);
-    width: 100%;
+  &__next{
+    width:calcRem(18rem);
+    height:calcRem(34rem);
     position: absolute;
+    right:calcRem(20rem);
+    top: 50%;
+    transform: translateY(-50%);
+    @include pageBackground('/images/common/ico_slide_next_w.svg','no-repeat center center / contain');
+    background-size:calcRem(18rem) calcRem(34rem) ;
+    z-index: $childZindex;
+    cursor: pointer;
+  }
+  &__pagination {
+    /*bottom: calcRem(20rem);*/
+    padding: calcRem(20rem) 0 0;
+    width: 100%;
+    position: relative;
     color: #000;
     text-align: center;
     z-index: 100;
     font-size: 0;
     line-height: 0;
-    color: #fff;
-
-    &.is-white {
-      color: #000;
-
-      .swiper-pagination-current:after {
-        background-color: #000;
-      }
-    }
-
-    &.is-black {
-      color: #fff;
-    }
 
     .swiper-pagination {
       &-current {
@@ -1617,7 +1622,7 @@
           content: "";
           width: 1px;
           height: calcRem(10rem);
-          background-color: #fff;
+          background-color: $gray1;
           position: absolute;
           right: 0;
           @include vertical-center;
@@ -1634,7 +1639,7 @@
 
   // 프로그래스바
   .swiper-progress-bar {
-    bottom: 0;
+    //bottom: 0;
     position: absolute;
     width: 100%;
     display: block;
@@ -1642,6 +1647,7 @@
     height: calcRem(3rem);
 
     .slide_progress-bar {
+      margin: 0 calcRem(105rem);
       position: absolute;
       height: calcRem(3rem);
       background: rgba(255, 255, 255, 0.5);
