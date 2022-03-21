@@ -1119,30 +1119,28 @@ jQuery(function(){
                 }
             }
         });
+
+        /*슬라이드 온클릭 시 자동슬라이드 정지*/
+        $(document).on('click',mainNewSlide, function() {
+            mainNewSlide.autoplay.stop();
+        });
     }
 
-
-    //메인배너4 슬라이드
+    //메인 배너슬라이드4
     if($('.main-banner4').length > 0 && $('.main-banner4__item').length > 1){
-        var eventSliderTouch = false;
-        var mainNewSlide = new Swiper('.main-banner4__container', {
+        var mainSlide = new Swiper('.main-banner4__container', {
             observer: true,
             observeParents: true,
             watchOverflow: true,
             slidesPerView: 1,
-            centeredSlides: true,
-            autoplay: {
-                delay: 10000,
-                disableOnInteraction: true,
-            },
             loop:true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
             pagination: {
                 el: ".main-banner4__pagination",
                 type: "fraction",
-            },
-            navigation: {
-                nextEl: ".main-banner4__next",
-                prevEl: ".main-banner4__prev",
             },
             on: {
                 init: function(){
@@ -1155,6 +1153,7 @@ jQuery(function(){
                         $('.main-banner4__pagination').removeClass('is-white');
                         $('.main-banner4__pagination').addClass('is-black');
                     }
+
                     $('.main-banner4__progressbar').removeClass("animate");
                     $('.main-banner4__progressbar').removeClass("active");
                     $('.main-banner4__progressbar').eq(0).addClass("animate");
@@ -1179,13 +1178,8 @@ jQuery(function(){
                         $('.main-banner4__pagination').removeClass('is-white');
                         $('.main-banner4__pagination').addClass('is-black');
                     }
-                },
+                }
             }
-        });
-
-        /*슬라이드 온클릭 시 자동슬라이드 정지*/
-        $(document).on('click',mainNewSlide, function() {
-            mainNewSlide.autoplay.stop();
         });
     }
 
