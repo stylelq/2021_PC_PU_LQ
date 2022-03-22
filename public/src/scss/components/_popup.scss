@@ -610,6 +610,45 @@
     }
 }
 
+@media screen and (max-width:1200px) {
+    #installmentPop .small-popup{
+        &__body{
+            @include ab-center;
+            background-color: $bgSiteColor;
+            min-width: calcRem(400rem);
+            max-width: calcRem(500rem);
+            width: auto;
+            height: calcRem(400rem);
+            min-height: calcRem(450rem);
+            z-index: $childZindex;
+            padding:calcRem(40rem);
+            box-sizing: border-box;
+            &.platforml-only{
+                padding: 0;
+            }
+            &.terms-only{
+                width: calcRem(600rem);
+            }
+
+            .wrap{
+                padding: 0;
+                overflow: hidden;
+                overflow-y: auto;
+                @include scrollbar-custom;
+            }
+
+            .small-popup__header + .wrap{
+                margin-top: calcRem(20rem);
+                max-height: calcRem(400rem);
+                height: calcRem(300rem);
+                overflow: hidden;
+                overflow-y: auto;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
 //혜택가 안내
 .pop-benefits{
   $this:&;
