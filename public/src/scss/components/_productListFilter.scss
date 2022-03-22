@@ -27,6 +27,10 @@
 //filter Select - custom
 .filter__meta {
     position: relative;
+    &--select{
+        float: right;
+        width: auto;
+    }
 } 
 .filter-custom{
     $this:&;
@@ -35,6 +39,7 @@
         font-weight: 400;
         letter-spacing: 0.06em;
         text-align: right;
+        margin-top: 0;
         margin-bottom: 10px;
         cursor: pointer;
         &:after{
