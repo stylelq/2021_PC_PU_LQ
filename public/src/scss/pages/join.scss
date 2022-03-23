@@ -74,6 +74,9 @@
   &__box2{
     width: calcRem(400rem);
     margin: 0 auto;
+    .btn-group__list{
+      width: auto;
+    }
   }
 
   &__point {
