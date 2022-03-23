@@ -7,7 +7,7 @@
   position:fixed;
   left:0;
   width:100%;
-  height:calcRem(420rem);
+  height:auto;
   background:#fff;
   transition: top 0.3s;
   z-index:$searchZindex;
@@ -22,7 +22,7 @@
     margin: 0 auto;
     width: calcRem(510rem);
     height:auto;
-    padding-top: calcRem(20rem);
+    padding: calcRem(20rem) 0 calcRem(70rem);
     box-sizing:border-box;
   }
 
