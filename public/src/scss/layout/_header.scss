@@ -92,19 +92,19 @@
       margin-left: calcRem(52rem);
       &.type-search{
         width: calcRem(20rem);
-        height: calcRem(20rem);
+        height: calcRem(18rem);
         background: url('../images/common/icon_search_blk.svg') no-repeat center top;
         &.is-active{
           background: url('../images/common/icon_close2.png') no-repeat center top;
         }
       }
       &.type-login{
-        width: calcRem(20rem);
+        width: calcRem(22rem);
         height: calcRem(20rem);
         background: url('../images/common/icon_mypage.svg') no-repeat center top;
       }
       &.type-cart{
-        width: calcRem(20rem);
+        width: calcRem(16rem);
         height: calcRem(20rem);
         background: url('../images/common/icon_basket.svg') no-repeat center top;
       }
