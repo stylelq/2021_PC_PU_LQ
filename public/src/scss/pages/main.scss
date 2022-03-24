@@ -270,8 +270,8 @@
     height:calcRem(16rem);
     position: absolute;
     left:calcRem(130rem);
-    top: 60.7%;
-    transform: translateY(-50%);
+    //top: 60.7%;
+    //transform: translateY(-50%);
     @include pageBackground('/images/common/ico_slide_prev.svg','no-repeat center center / contain');
     background-size:calcRem(8rem) calcRem(16rem) ;
     z-index: $childZindex;
@@ -282,8 +282,8 @@
     height:calcRem(16rem);
     position: absolute;
     left:204px;
-    top: 60.7%;
-    transform: translateY(-50%);
+    //top: 60.7%;
+    //transform: translateY(-50%);
     @include pageBackground('/images/common/ico_slide_next.svg','no-repeat center center / contain');
     background-size:calcRem(8rem) calcRem(16rem) ;
     z-index: $childZindex;
@@ -321,8 +321,12 @@
     font-weight: 400;
     line-height: calcRem(20rem);
   }
+  &__option {
+    padding-top: calcRem(40rem);
+  }
   &__pagination {
-    padding: calcRem(20rem) 0 0;
+    //padding: calcRem(20rem) 0 0;
+    top: calcRem(-5rem);
     width: 100%;
     position: relative;
     color: #000;
@@ -1310,8 +1314,8 @@
     height:calcRem(16rem);
     position: absolute;
     left:calcRem(130rem);
-    top: 60.7%;
-    transform: translateY(-50%);
+    //top: 60.7%;
+    //transform: translateY(-50%);
     @include pageBackground('/images/common/ico_slide_prev.svg','no-repeat center center / contain');
     background-size:calcRem(8rem) calcRem(16rem) ;
     z-index: $childZindex;
@@ -1322,8 +1326,8 @@
     height:calcRem(16rem);
     position: absolute;
     left:204px;
-    top: 60.7%;
-    transform: translateY(-50%);
+    //top: 60.7%;
+    //transform: translateY(-50%);
     @include pageBackground('/images/common/ico_slide_next.svg','no-repeat center center / contain');
     background-size:calcRem(8rem) calcRem(16rem) ;
     z-index: $childZindex;
@@ -1362,8 +1366,12 @@
     font-weight: 400;
     line-height: calcRem(20rem);
   }
+  &__option {
+    padding-top: calcRem(40rem);
+  }
   &__pagination {
-    padding: calcRem(20rem) 0 0;
+    //padding: calcRem(20rem) 0 0;
+    top: calcRem(-5rem);
     width: 100%;
     position: relative;
     color: #000;
