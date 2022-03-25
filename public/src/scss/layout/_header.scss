@@ -114,6 +114,10 @@
       height: 100%;
       display: inline-block;
       font-size: 0;
+      padding: calcRem(10rem);
+      top: calcRem(-10rem);
+      right: calcRem(10rem);
+      position: relative;
     }
   }
 
