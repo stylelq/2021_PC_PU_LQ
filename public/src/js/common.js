@@ -210,7 +210,7 @@ jQuery(function(){
         contents.eq(idx).addClass('is-current');
 
         //왼쪽 탭 고정시키기 
-        $('html').animate({scrollTop : 920 });
+        $('html, body').animate({scrollTop : 920 });
         $('.detail-tab').addClass('fixed');
         contents.eq(idx).css({minHeight: 600});
         //오른쪽 옵션값 고정시키기
@@ -379,6 +379,7 @@ jQuery(function(){
         var item = '.color-list__item';
         $(item).removeClass('is-current');
         $(this).parent(item).addClass('is-current');
+        location.href = $(this).attr('href');
         return false;
     }
     $(document).on('click', '.color-list__title', colorCheck);
