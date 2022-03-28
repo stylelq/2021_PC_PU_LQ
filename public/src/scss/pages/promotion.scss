@@ -326,3 +326,127 @@
     margin-bottom: calcRem(30rem);
   }
 }
+
+
+
+/*promotin lalawllet css*/
+.event {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f4f4f4;
+  padding: 0 !important;
+  &-wrap{
+    padding: calcRem(40rem) 0;
+    min-width: calcRem(1200rem);
+  }
+  &-title{
+    position: relative;
+    font-size: calcRem(30rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    &__name{
+      text-align: center;
+      letter-spacing: calcRem(1.3rem);
+    }
+  }
+  &-slide{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    &__container{
+      text-align: center;
+    }
+    &__section{
+      position: relative;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    &__name{
+      padding-bottom: calcRem(50rem);
+      font-size: calcRem(22rem);
+      font-weight: 300;
+      letter-spacing: calcRem(1.3rem);
+    }
+    &__item{
+      display: block;
+    }
+    &__img{
+      width: auto !important;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  /* input range */
+  &-range{
+    margin: 0 auto;
+    width: calcRem(863rem);
+    padding-top: calcRem(30rem);
+    &__bar{
+      -webkit-appearance: none;
+      width: 100%;
+      height: calcRem(100rem);
+      background: none;
+      &:focus{
+        outline: none;
+      }
+      &::-webkit-slider-runnable-track {
+        width: 100%;
+        height: calcRem(10rem);
+        cursor: pointer;
+        background: url('https://cdn.louisclub.com/static/fr/img/specialty/20220324/pc_img_bar.png') no-repeat center center/cover;
+      }
+      &::-webkit-slider-thumb {
+        margin-top: calcRem(-10rem);
+        height: calcRem(55rem);
+        width: calcRem(39rem);
+        border-radius: 7px;
+        background: url('https://cdn.louisclub.com/static/fr/img/specialty/20220324/pc_img_cursor.png') no-repeat center center/cover;
+        cursor: pointer;
+        -webkit-appearance: none;
+      }
+      &:focus::-webkit-slider-runnable-track {
+        background: url('https://cdn.louisclub.com/static/fr/img/specialty/20220324/pc_img_bar.png') no-repeat center center/cover;
+      }
+      &::-moz-range-track {
+        width: 100%;
+        height: calcRem(12.8rem);
+        cursor: pointer;
+      }
+      &::-moz-range-thumb {
+        height: calcRem(55rem);
+        width: calcRem(39rem);
+        background: url('https://cdn.louisclub.com/static/fr/img/specialty/20220324/pc_img_cursor.png') no-repeat center center/cover;
+        cursor: pointer;
+      }
+      &::-ms-track {
+        width: 100%;
+        height: calcRem(12.8rem);
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        border-width: calcRem(39rem) 0;
+        color: transparent;
+      }
+      &::-ms-fill-lower {
+        background: url('https://cdn.louisclub.com/static/fr/img/specialty/20220324/pc_img_bar.png') no-repeat center center/cover;
+      }
+      &::-ms-fill-upper {
+        background: url('https://cdn.louisclub.com/static/fr/img/specialty/20220324/pc_img_bar.png') no-repeat center center/cover;
+      }
+      &::-ms-thumb {
+        height: calcRem(55rem);
+        width: calcRem(39rem);
+        background: url('https://cdn.louisclub.com/static/fr/img/specialty/20220324/pc_img_cursor.png') no-repeat center center/cover;
+        cursor: pointer;
+      }
+      &:focus::-ms-fill-lower {
+        background: url('https://cdn.louisclub.com/static/fr/img/specialty/20220324/pc_img_bar.png') no-repeat center center/cover;
+      }
+      &:focus::-ms-fill-upper {
+        background: url('https://cdn.louisclub.com/static/fr/img/specialty/20220324/pc_img_bar.png') no-repeat center center/cover;
+      }
+    }
+  }
+}
