@@ -163,6 +163,7 @@
       &__item{
         padding: 0 calcRem(5rem);
         box-sizing: border-box;
+        height: fit-content;
       }
       &__wrap{
         width: 100%;
