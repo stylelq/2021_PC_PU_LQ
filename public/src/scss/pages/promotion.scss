@@ -331,11 +331,25 @@
 
 /*promotin lalawllet css*/
 .event {
+  &.minicaviar{
+    background: none !important;
+  }
   position: relative;
   width: 100%;
   margin: 0 auto;
   background-color: #f4f4f4;
   padding: 0 !important;
+  &-visual{
+    width: 100%;
+    height: auto;
+    &__wrap{
+      position: relative;
+      width: 100%;
+    }
+    &__img{
+      width: 100%;
+    }
+  }
   &-wrap{
     padding: calcRem(40rem) 0;
     min-width: calcRem(1200rem);
@@ -449,4 +463,264 @@
       }
     }
   }
+
+  &-contents{
+    position: relative;
+    width: 100%;
+    &.minicaviar{
+      background: url('https://cdn.louisclub.com/static/fr/img/specialty/20220310/pc_bg01.png') no-repeat center center/cover;
+    }
+    &__wrap{
+      margin: 0 auto;
+      width: calcRem(890rem);
+      padding: calcRem(120rem) 0;
+    }
+    &__txt{
+      padding-bottom: calcRem(120rem);
+      font-size: calcRem(20rem);
+      line-height: calcRem(34rem);
+      text-align: center;
+    }
+    &__message{
+      width: 100%;
+      text-align: center;
+    }
+    &__item{
+      position: relative;
+      display: inline-block;
+      &:nth-child(2){
+        top: calcRem(80rem);
+      }
+      &:nth-child(3){
+        bottom: calcRem(60rem);
+      }
+      &:last-child{
+        top: calcRem(120rem);
+      }
+    }
+    &__bag{
+      padding-top: calcRem(180rem);
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+    &__img{
+      width: 100%;
+    }
+    &__inner{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: #8e4db3;
+    }
+    &__percent{
+      margin: 0;
+      font-size: calcRem(100rem);
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 300;
+      line-height: 1.2;
+    }
+    &__span {
+      font-size: calcRem(60rem);
+    }
+    &__bottom{
+      margin: 0;
+      font-size: calcRem(35rem);
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 300;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+    &__info{
+      padding-top: calcRem(20rem);
+      color: #8e4db3;
+      font-size: calcRem(22rem);
+      font-weight: 400;
+      text-align: center;
+      line-height: 1.5;
+    }
+    &__noti{
+      padding-top: calcRem(25rem);
+      color: #000;
+      font-size: calcRem(18rem);
+      font-weight: 400;
+      text-align: center;
+      line-height: 1.5;
+    }
+  }
+
+  /*이벤트 기간 및 참여방법*/
+  &-date{
+    position: relative;
+    width: 100%;
+    background-color: #fef5ff;
+    padding: calcRem(20rem) 0;
+    &__wrap{
+      margin: 0 auto;
+      width: calcRem(890rem);
+    }
+    &__cont{
+      position: relative;
+      margin-left: calcRem(200rem);
+      font-size: calcRem(18rem);
+    }
+    &__cont + &__cont{
+      margin-top: calcRem(4rem);
+    }
+    &__howto{
+      position: relative;
+      display: inline-block;
+      &:first-child{
+        width: calcRem(100rem);
+      }
+    }
+    &__howto + &__howto{
+      padding-left: calcRem(11rem);
+      &:before{
+        position: absolute;
+        top: calcRem(4rem);
+        left: 0;
+        width: 0;
+        height: calcRem(17rem);
+        border-left: 1px solid #d2d2d2;
+        content: "";
+      }
+    }
+    &__span{
+      &:first-child:before{
+        content: '1';
+      }
+      &:nth-child(2):before{
+        content: '2';
+      }
+      &:last-child:before{
+        content: '3';
+      }
+    }
+  }
+
+  /*이벤트 댓글게시판*/
+  &-notice{
+    margin: 0 auto;
+    position: relative;
+    width: calcRem(890rem);
+    &__box{
+      padding-top: calcRem(80rem);
+    }
+    &__title{
+      margin: 0;
+      padding-bottom: calcRem(25rem);
+      color: #8e4db3;
+      font-size: calcRem(22rem);
+      font-weight: 300;
+      text-align: center;
+    }
+    &__area{
+      width: 100%;
+      height: calcRem(126rem);
+      padding: calcRem(15rem);
+      border: 1px solid #d3d3d3;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      font-size: calcRem(14rem);
+      color: #000;
+      outline: none;
+      resize: none;
+    }
+    &__btn{
+      display: block;
+      width: calcRem(230rem);
+      height: calcRem(50rem);
+      margin: calcRem(14rem) auto 0;
+      line-height: calcRem(50rem);
+      color: #fff !important;
+      text-align: center;
+      font-size: calcRem(16rem);
+      background-color: #8e4db3;
+    }
+    &__list{
+      padding: 0;
+      margin-top: calcRem(56rem);
+      border-top: none;
+    }
+    &__item{
+      padding: calcRem(30rem) 0;
+      list-style: none;
+      border-bottom: 1px solid #d2d2d2;
+    }
+    &__txt{
+      overflow: hidden;
+      display: inline-block;
+      max-width: calcRem(680rem);
+      margin: 0;
+      text-overflow: inherit;
+      white-space: normal;
+      vertical-align: middle;
+    }
+    &__date{
+      float: right;
+      &--span{
+        position: relative;
+      }
+      &--span + &--span{
+        margin-left: calcRem(10rem);
+        padding-left: calcRem(11rem);
+      }
+      &--span + &--span:before{
+        position: absolute;
+        top: calcRem(2rem);
+        left: 0;
+        width: 0;
+        height: calcRem(13rem);
+        border-left: 1px solid #d2d2d2;
+        content: "";
+      }
+    }
+  }
+  &-important{
+    background-color: #f9f9f9;
+    &__wrap{
+      margin: 0 auto;
+      padding: calcRem(24rem) 0;
+      width: calcRem(890rem);
+      color: #9d9d9d;
+      font-weight: 300;
+    }
+  }
+}
+
+.common-span:before{
+  width: calcRem(18rem);
+  height: calcRem(18rem);
+  margin-right: calcRem(3rem);
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  background-color: #8e4db3;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 1;
+}
+
+.pagination{
+  margin-bottom: calcRem(100rem);
+  &__list {
+    display: table;
+    width: 100%;
+    text-align: center;
+  }
+}
+/*모션 delay css*/
+.type-delay5{
+  transition-delay: 0.5s;
+}
+.type-delay10{
+  transition-delay: 1s;
+}
+.type-delay15{
+  transition-delay: 1.5s;
+}
+.type-delay20{
+  transition-delay: 2s;
 }
