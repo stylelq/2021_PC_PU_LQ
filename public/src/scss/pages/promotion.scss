@@ -125,19 +125,36 @@
   // 프로모션 뷰 비주얼
   &-view{
     padding: calcRem(60rem) 0 calcRem(100rem);
+    &.payco-only{
+      margin: 0 auto;
+      width: calcRem(894rem);
+      min-width: calcRem(894rem);
+    }
     &__name{
       font-size: calcRem(24rem);
       font-weight: 400;
+      &.payco-only{
+        font-size: calcRem(30rem);
+        font-weight: 300;
+      }
     }
     &__title{
       text-align: center;
       padding-top: calcRem(100rem);
+      &.payco-only{
+        padding: calcRem(30rem) 0;
+        border-top: 1px solid #e3e3e3;
+        border-bottom: 1px solid #e3e3e3;
+      }
     }
     &__date{
       margin-top: calcRem(9rem);
       font-size: calcRem(14rem);
       font-weight: 100;
       color: #484848;
+      &.payco-only{
+        letter-spacing: calcRem(1.3rem);
+      }
     }
     &__visual{
       img{
