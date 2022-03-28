@@ -1566,14 +1566,15 @@
   
     &__zip{
         float:left;
-        margin-right:calcRem(5rem);
-        min-width:calcRem(55rem);
+        margin-right:calcRem(20rem);
+        min-width:calcRem(40rem);
         box-sizing: border-box;
       //   @include body3;
         @include body7;
     }
     
     &__cont{
+        width: calcRem(300rem);
         overflow: hidden;
   
         &--zip{
@@ -1594,8 +1595,8 @@
     .btn-v3{
         position: absolute;
         top: calcRem(20rem);
-        right: 0;
-        width: auto;
+        right: calcRem(6rem);
+        width: calcRem(54rem);
         padding: calcRem(4rem) calcRem(10rem);
     }
   
