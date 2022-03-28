@@ -436,6 +436,11 @@
     }
   }
 
+  &-premium{
+    margin: 0 calcRem(80rem) calcRem(50rem);
+    text-align: center;
+  }
+
   // 컬렉션 모델슬라이드
   &-model{
     position: relative;
