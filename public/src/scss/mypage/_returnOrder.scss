@@ -94,6 +94,7 @@
 //유의사항
 .notData-wrap{
     text-align: left;
+
     &__textBox{
         &--title{
             @include title1;
