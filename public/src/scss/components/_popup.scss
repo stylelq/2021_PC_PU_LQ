@@ -2154,10 +2154,10 @@
     margin: 0 auto;
 }
 
-#qnaWrite .popup-write__form {
+#qnaWrite .wrap {
     margin-top: 1.25rem;
     max-height: calcRem(400rem);
-    height: calcRem(400rem);
+    height: calcRem(300rem);
     overflow: hidden;
     overflow-y: auto;
     box-sizing: border-box;
