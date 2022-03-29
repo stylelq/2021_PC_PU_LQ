@@ -5,9 +5,13 @@ jQuery(function(){
         if( this.tagName === 'BUTTON' ){
             el = this.dataset.popup;
         }
-        if( this.tagName === "A" ){
-            el = $(this).attr('href').replace('#','');            
+        if ($(this).attr('href')) {
+            el = $(this).attr('href').replace('#','');
         }
+
+        /*if( this.tagName === "A" ){
+            el = $(this).attr('href').replace('#','');
+        }*/
         
         if($('.popup.is-active').length <= 1) {
         }else{
