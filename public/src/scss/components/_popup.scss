@@ -2145,7 +2145,23 @@
 
 }
 
+//상품 Q&A작성
+#qnaWrite .popup__body{
+    position: relative;
+    transform: none;
+    top: 10%;
+    left: 0;
+    margin: 0 auto;
+}
 
+#qnaWrite .popup-write__form {
+    margin-top: 1.25rem;
+    max-height: calcRem(250rem);
+    height: calcRem(250rem);
+    overflow: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
 
 
 
@@ -2302,7 +2318,7 @@
     }
     .address{
         &-info{
-            &--text{           
+            &--text{
                 font-size:calcRem(11rem);
                 padding-left:calcRem(7rem);
                 position: relative;
@@ -2311,7 +2327,7 @@
                 color:$darkgray;
                 margin:calcRem(15rem) 0 0;
                 font-weight: $light;
-    
+
                 &:after{
                     content:"";
                     width:calcRem(2rem);
@@ -2323,18 +2339,18 @@
                     background:$darkgray;
                 }
             }
-    
+
             &__inner{
                 margin-top:calcRem(10rem);
-    
+
                 &:first-child{
                     margin-top:0;
                 }
-    
+
                 &--btn{
                     position: relative;
                     padding-right:calcRem(87rem);
-    
+
                     .form__input--btn{
                         @include body2;
                         color:$whiteColor;
@@ -2349,37 +2365,37 @@
                         box-sizing: border-box;
                     }
                 }
-    
+
                 &--list{
                     margin-right:calcRem(-5rem);
                     box-sizing: border-box;
-    
+
                     &:after{
                         @include block-reset;
                     }
                 }
-    
+
                 &--item{
                     width:33.333%;
                     float:left;
                     padding-right:calcRem(5rem);
                     box-sizing: border-box;
                 }
-    
+
                 .form__checkbox--text{
                     @include body7;
                 }
             }
-    
+
             &__custom{
                 margin-top:calcRem(10rem);
                 display: none;
-    
+
                 &.is-active{
                     display: block;
                 }
             }
-    
+
             // group::일반 div dom
             &__group{
                 @include flexNoWrap;
@@ -2391,7 +2407,7 @@
             }
             &__list{
                 width: 100%;
-    
+
                 .form__input--text,
                 .form__select{
                     @include body8;
@@ -2401,7 +2417,7 @@
             &__inner{
                 width: 50%;
                 margin-bottom: calcRem(15rem);
-                
+
                 &--btn{
                     @include flexNoWrap;
                     .form__input--btn{
@@ -2419,25 +2435,25 @@
     }
 }
 
-// 하단 버튼 두개 
+// 하단 버튼 두개
 .btn-popup__group{
     padding-top: calcRem(40rem);
     border-top: 1px solid $gray2;
     .btn-group__list{
         width: 50%;
         margin: auto;
-    } 
+    }
     .btn-group__btn{
         @include body8;
-    }   
+    }
 }
 
 
 
 //마이페이지 :: 반품신청
 .return-order__contents{
-  padding:0 calcRem(20rem);    
-  // margin-bottom: calcRem(50rem);  
+  padding:0 calcRem(20rem);
+  // margin-bottom: calcRem(50rem);
   overflow: hidden;
   overflow-y: scroll;
 
@@ -2451,22 +2467,22 @@
       padding: 0 0 calcRem(5rem);
       border: 0;
   }
-  
-  .order-mypage__title{ 
-      @include body2; 
+
+  .order-mypage__title{
+      @include body2;
   }
-  
+
   .order-mypage__thumb{
       margin-right:calcRem(15rem);
       width:calcRem(120rem);
       display: inline-block;
       position: relative;
       overflow: hidden;
-      
+
       img,
-      .order-mypage__img{ 
+      .order-mypage__img{
           width:100%;
-          @include ab-center; 
+          @include ab-center;
       }
 
       &:after{
@@ -2475,16 +2491,16 @@
           padding-bottom:100%;
       }
   }
-          
+
   .order-mypage__option{
       margin-top:calcRem(12rem);
-  
-      &--item{    
+
+      &--item{
           &:after{
               @include block-reset;
           }
       }
-  
+
       &--title{
           display: block;
           float:left;
@@ -2492,7 +2508,7 @@
         //   @include body3;
           @include body7;
       }
-  
+
       &--text{
           display: block;
           overflow: hidden;
@@ -2500,7 +2516,7 @@
           @include body7;
       }
   }
-  
+
   .order-mypage__price{
       margin-top:calcRem(20rem);
       clear: both;
@@ -2516,7 +2532,7 @@
           display: inline-block;
           vertical-align: middle;
       }
-  
+
       &--sale{
           @include title2;
           color:$throughColor;
@@ -2547,9 +2563,9 @@
       }
   }
 
-  .order-mypage__text{ 
-    //   @include body3; 
-      @include body7; 
+  .order-mypage__text{
+    //   @include body3;
+      @include body7;
       margin: calcRem(20rem) 0;
   }
 
@@ -2577,7 +2593,7 @@
       img{ width:100%; }
   }
 
-  .detail-thumb{    
+  .detail-thumb{
       //prev, next
       &--prev{
           width:calcRem(8rem);
@@ -2589,7 +2605,7 @@
           background-size:calcRem(8rem) calcRem(16rem) ;
           z-index: $childZindex;
       }
-  
+
       &--next{
           width:calcRem(8rem);
           height:calcRem(16rem);
@@ -2600,21 +2616,21 @@
           background-size:calcRem(8rem) calcRem(16rem) ;
           z-index: $childZindex;
       }
-  
+
       //페이징
       &__pagination{
           text-align: center;
           font-size:0;
           line-height:0;
           margin-top:calcRem(30rem);
-  
+
           .swiper-pagination{
               &-current{
                   font-size:calcRem(12rem);
                   line-height:calclH(19,12);
                   padding-right:calcRem(11rem);
                   position: relative;
-  
+
                   &:after{
                       content:"";
                       width:1px;
@@ -2625,7 +2641,7 @@
                       @include vertical-center;
                   }
               }
-  
+
               &-total{
                   font-size:calcRem(12rem);
                   line-height:calclH(19,12);
@@ -2658,7 +2674,7 @@
             width: 7.4375rem;
         }
     }
-  
+
     .popup-confirm__link{
         margin-top: calcRem(20rem);
         @include body7;
@@ -2689,10 +2705,10 @@
 }
 
 //마이페이지 :: 주문취소
-.return-orderCancel__contents{   
-  margin-bottom: calcRem(50rem);  
+.return-orderCancel__contents{
+  margin-bottom: calcRem(50rem);
   overflow: hidden;
-  
+
   .order-mypage__body--top{
       padding:0 calcRem(20rem);
       border-top: 1px solid $black1;
@@ -2702,8 +2718,8 @@
   .order-mypage__body--bottom{
       padding:0 calcRem(20rem);
 
-      .order-mypage__title{ 
-          @include title2; 
+      .order-mypage__title{
+          @include title2;
           line-height: calclH(22,14);
           padding-top: calcRem(20rem);
           margin-top: 0;
@@ -2716,25 +2732,25 @@
       width: 48%;
   }
 
-  .order-mypage__title{ 
-      @include body2; 
+  .order-mypage__title{
+      @include body2;
   }
 
   .order-mypage__type.no-step{
       padding: calcRem(30rem) 0;
   }
-  
+
   .order-mypage__thumb{
       margin-right:calcRem(15rem);
       width:calcRem(120rem);
       display: inline-block;
       position: relative;
       overflow: hidden;
-      
+
       img,
-      .order-mypage__img{ 
+      .order-mypage__img{
           width:100%;
-          @include ab-center; 
+          @include ab-center;
       }
 
       &:after{
@@ -2743,16 +2759,16 @@
           padding-bottom:100%;
       }
   }
-          
+
   .order-mypage__option{
       margin-top:calcRem(12rem);
-  
-      &--item{    
+
+      &--item{
           &:after{
               @include block-reset;
           }
       }
-  
+
       &--title{
           display: block;
           float:left;
@@ -2760,7 +2776,7 @@
         //   @include body3;
           @include body7;
       }
-  
+
       &--text{
           display: block;
           overflow: hidden;
@@ -2773,7 +2789,7 @@
       border: 0;
       padding: calcRem(30rem) 0 calcRem(5rem);
   }
-  
+
   .order-mypage__price{
       margin-top:calcRem(20rem);
       clear: both;
@@ -2788,7 +2804,7 @@
           display: inline-block;
           vertical-align: middle;
       }
-  
+
       &--sale{
           @include title2;
           font-weight: $light;
@@ -2823,9 +2839,9 @@
       }
   }
 
-  .order-mypage__text{ 
-    //   @include body3; 
-      @include body7; 
+  .order-mypage__text{
+    //   @include body3;
+      @include body7;
       margin: calcRem(30rem) 0;
   }
 
@@ -2846,7 +2862,7 @@
               .center-bullet__item{
                   margin-top:calcRem(8rem);
                   color: $darkgray;
-              } 
+              }
           }
       }
   }
