@@ -261,25 +261,203 @@
 }
 
 //주문자 정보
-.order-info{
-    //group ::dl 
-    &__group{
-        @include flexNoWrap;
-        margin:0;
-        &:not(:last-child){
-            margin-bottom: calcRem(10rem);
+.order{
+    &-info{
+        &__text:not(:first-child){
+            margin-top: calcRem(10rem);
         }
-        dt{ 
-            width: 100px;
+        &__name:first-child{
+            margin-top: 0;
+        }
+        &__name{
+            width: 50%;
+        }
+
+        &--text{
+            font-size:calcRem(11rem);
+            padding-left:calcRem(7rem);
+            position: relative;
+            line-height:calclH(18,11);
+            letter-spacing: $defaultLetter;
+            color:$darkgray;
+            margin:calcRem(15rem) 0 0;
+            font-weight: $light;
+
+            &:after{
+                content:"";
+                width:calcRem(2rem);
+                height:calcRem(2rem);
+                border-radius: 100%;
+                position: absolute;
+                top:calcRem(8rem);
+                left:0;
+                background:$darkgray;
+            }
+        }
+        &__inner{
+            margin-top:calcRem(10rem);
+
+            &:first-child{
+                margin-top:0;
+            }
+
+            &--btn{
+                position: relative;
+                padding-right:calcRem(87rem);
+
+                .form__input--btn{
+                    @include body2;
+                    color:$whiteColor;
+                    padding:calcRem(9rem) calcRem(5rem);
+                    height:calcRem(38rem);
+                    text-align: center;
+                    width:calcRem(83rem);
+                    background-color: $darkgray;
+                    position: absolute;
+                    right:0;
+                    @include vertical-center;
+                    box-sizing: border-box;
+                }
+            }
+
+            &--list{
+                margin-right:calcRem(-5rem);
+                box-sizing: border-box;
+
+                &:after{
+                    @include block-reset;
+                }
+            }
+
+            &--item{
+                width:33.333%;
+                float:left;
+                padding-right:calcRem(5rem);
+                box-sizing: border-box;
+            }
+
+            .form__checkbox--text{
+                @include body7;
+            }
+        }
+        &__custom{
+            margin-top:calcRem(10rem);
+            display: none;
+
+            &.is-active{
+                display: block;
+            }
+        }
+
+        ///group ::dl
+        &__group{
+            @include flexNoWrap;
+            margin:0;
+            &:not(:last-child){
+                margin-bottom: calcRem(10rem);
+            }
+            dt{
+                width: 100px;
+                @include body7;
+            }
+            dd{
+                width: 100%;
+                @include body7;
+            }
+            .form__input--text{
+                @include body8;
+                @include placeholder-color($gray2);
+            }
+        }
+        &__label{
+            width: calcRem(100rem);
             @include body7;
+            margin-top:calcRem(10rem);
         }
-        dd{ 
+        &__list{
             width: 100%;
-            @include body7;
+
+            .form__input--text,
+            .form__select{
+                @include body8;
+                @include placeholder-color($gray2);
+            }
         }
-    }
-    &__text:not(:first-child){
-        margin-top: calcRem(10rem);
+        &__inner{
+            width: 50%;
+            margin-bottom: calcRem(15rem);
+
+            &--btn{
+                @include flexNoWrap;
+                .form__input--btn{
+                    position: inherit;
+                    transform: translateY(0);
+                    margin-left: calcRem(5rem);
+                    padding:calcRem(10rem) calcRem(20rem);
+                    box-sizing: border-box;
+                    @include body7;
+                }
+            }
+        }
+        &__item{ margin-bottom: calcRem(15rem); }
+
+        &__field{
+            width: 50%;
+            position:relative;
+            box-sizing: border-box;
+
+            //이메일 input box
+            .input-v1{
+                width: 100%;
+                height: calcRem(38rem);
+                padding: calcRem(8rem) calcRem(10rem) calcRem(8rem);
+                font-size: calcRem(12rem);
+                font-weight: 500;
+                letter-spacing: calcRem(1rem);
+                line-height: 1.666667;
+                border: 1px solid #CBCBCB;
+                box-sizing: border-box;
+                appearance: none;
+                box-shadow: none;
+            }
+        }
+
+        &__select{
+            position:absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            width:calcRem(119rem);
+
+            //이메일 selectbox
+            .form__select{
+                display: block;
+                width: 100%;
+                height: calcRem(38rem);
+                border: solid 1px #CBCBCB;
+                font-size: calcRem(12rem);
+                line-height: 1.666667;
+                letter-spacing: calcRem(1rem);
+                font-weight: 500;
+                color: #CBCBCB;
+                padding: calcRem(8rem) calcRem(10rem) calcRem(8rem);
+                @include pageBackground('/images/join/ico_qna_more.png','no-repeat center center / contain');
+                background-size: 0.5rem 0.25rem;
+                background-position: calc(100% - 0.625rem) center;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+
+        &__btn{
+            margin: calcRem(20rem) auto calcRem(40rem);
+            display: block;
+            width: calcRem(400rem);
+            color: #fff;
+            background-color: $point1;
+            cursor: pointer;
+        }
     }
 }
 
