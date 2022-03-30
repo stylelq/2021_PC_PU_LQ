@@ -76,11 +76,11 @@
             height: auto;
         }
         .popup__close{
-            @include background('/images/common/ico_small_popup_close.svg','no-repeat center center / contain');
+            @include background('/images/common/close_big.svg','no-repeat center center / contain');
             position: absolute;
-            top:calcRem(-34rem);
+            top:calcRem(20rem);
             bottom: auto;
-            right:0;
+            right:calcRem(20rem);
         }
         .popup__header + .wrap,
         .popup-scroll{
@@ -533,11 +533,11 @@
     &__close{
         width:calcRem(20rem);
         height:calcRem(20rem);
-        @include background('/images/common/ico_small_popup_close.svg','no-repeat center center / contain');
+        @include background('/images/common/close_big.svg','no-repeat center center / contain');
         // background-size:calcRem(14rem) calcRem(14rem) ;
         position: absolute;
-        top:calcRem(-34rem);
-        right:0;
+        top:calcRem(20rem);
+        right:calcRem(20rem);
     }
 
     &__dim{
@@ -611,44 +611,23 @@
     }
 }
 
+
 @media screen and (max-width:1200px) {
     #installmentPop .small-popup{
         &__body{
-            @include ab-center;
-            background-color: $bgSiteColor;
-            min-width: calcRem(400rem);
-            max-width: calcRem(500rem);
-            width: auto;
-            height: calcRem(400rem);
-            min-height: calcRem(450rem);
-            z-index: $childZindex;
-            padding:calcRem(40rem);
-            box-sizing: border-box;
-            &.platforml-only{
-                padding: 0;
-            }
-            &.terms-only{
-                width: calcRem(600rem);
-            }
-
-            .wrap{
-                padding: 0;
-                overflow: hidden;
-                overflow-y: auto;
-                @include scrollbar-custom;
-            }
-
-            .small-popup__header + .wrap{
-                margin-top: calcRem(20rem);
-                max-height: calcRem(400rem);
-                height: calcRem(300rem);
-                overflow: hidden;
-                overflow-y: auto;
-                box-sizing: border-box;
-            }
+            height: auto;
         }
     }
+    #qnaWrite .popup__body{
+        height: auto;
+    }
 }
+
+// 판매가별도문의
+#specialPop .small-popup__cont{
+    max-height: fit-content;
+}
+
 
 //혜택가 안내
 .pop-benefits{
@@ -2143,24 +2122,6 @@
       }
   }
 
-}
-
-//상품 Q&A작성
-#qnaWrite .popup__body{
-    position: relative;
-    transform: none;
-    top: 10%;
-    left: 0;
-    margin: 0 auto;
-}
-
-#qnaWrite .wrap {
-    margin-top: 1.25rem;
-    max-height: calcRem(400rem);
-    height: calcRem(300rem);
-    overflow: hidden;
-    overflow-y: auto;
-    box-sizing: border-box;
 }
 
 
