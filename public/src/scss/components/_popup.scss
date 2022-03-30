@@ -87,7 +87,7 @@
         }
         .popup__header + .wrap,
         .popup-scroll{
-            max-height: calcRem(600rem);
+            max-height: calcRem(640rem);
             height: 100%;
             overflow: hidden;
             overflow-y: scroll;
@@ -618,7 +618,7 @@
     }
 }
 
-@media screen and (max-height: 700px){
+@media screen and (max-height: 650px){
     .small-popup__body{
         top: 0 !important;
         height: 100% !important;
