@@ -57,7 +57,10 @@
     }
   
     &__body{
-        @include ab-center;
+        //@include ab-center;
+        top: 10%;
+        margin: 0 auto;
+        position: relative;
         background-color: $bgSiteColor;
         width: calcRem(800rem);
         // width: 80%;
@@ -84,7 +87,8 @@
         }
         .popup__header + .wrap,
         .popup-scroll{
-            max-height: 600px;
+            max-height: calcRem(600rem);
+            height: 100%;
             overflow: hidden;
             overflow-y: scroll;
             @include scrollbar-custom;
@@ -551,10 +555,13 @@
     }
 
     &__body{
-      @include ab-center;
+      //@include ab-center;
+        top: 10%;
+      margin: 0 auto;
+      position: relative;
       background-color: $bgSiteColor;
-      min-width: calcRem(600rem);
-      max-width: calcRem(600rem);
+      min-width: calcRem(500rem);
+      max-width: calcRem(500rem);
       width: auto;
       min-height: calcRem(450rem);
       z-index: $childZindex;
@@ -611,23 +618,27 @@
     }
 }
 
-
-@media screen and (max-width:1200px) {
-    #installmentPop .small-popup{
-        &__body{
-            height: auto;
-        }
+@media screen and (max-height: 700px){
+    .small-popup__body{
+        top: 0 !important;
+        height: 100% !important;
     }
-    #qnaWrite .popup__body{
-        height: auto;
+    .popup__body{
+        top: 0 !important;
+        height: 100% !important;
+    }
+    #specialPop .small-popup__body{
+        top: 10% !important;
+        height: auto !important;
     }
 }
+
+
 
 // 판매가별도문의
 #specialPop .small-popup__cont{
     max-height: fit-content;
 }
-
 
 //혜택가 안내
 .pop-benefits{

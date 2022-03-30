@@ -563,6 +563,10 @@ input {
     @include placeholder-color($gray2);
     resize:none;
 
+    &.only-qnawrite{
+      height:calcRem(190rem);
+    }
+
     &:focus{
       border-color:$point1;
     }
