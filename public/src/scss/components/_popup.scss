@@ -1166,6 +1166,7 @@
         position: relative;
         &--title + &--text{
             position: absolute;
+            top: calcRem(20rem);
             bottom: calcRem(20rem);
             right: 0;
             @include body8;
