@@ -618,23 +618,6 @@
     }
 }
 
-@media screen and (max-height: 650px){
-    .small-popup__body{
-        top: 0 !important;
-        height: 100% !important;
-    }
-    .popup__body{
-        top: 0 !important;
-        height: 100% !important;
-    }
-    #specialPop .small-popup__body{
-        top: 10% !important;
-        height: auto !important;
-    }
-}
-
-
-
 // 판매가별도문의
 #specialPop .small-popup__cont{
     max-height: fit-content;
@@ -2888,5 +2871,36 @@
     }
     .small-popup-confirm__item{
         margin-top: calcRem(20rem);
+    }
+}
+
+
+
+// 해상도에 따라 레이어팝업 높이값 조정
+@media screen and (max-height: 650px){
+    .small-popup__body{
+        top: 0 !important;
+        height: 100% !important;
+    }
+    .popup__body{
+        top: 0 !important;
+        height: 100% !important;
+    }
+    #specialPop .small-popup__body{
+        top: 10% !important;
+        height: auto !important;
+    }
+    #addressPop .wrap{
+        width: fit-content;
+        height: 100%;
+        max-height: calcRem(330rem);
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+    #shippingPop .wrap{
+        height: 100%;
+        max-height: calcRem(300rem);
+        overflow: hidden;
+        overflow-y: scroll;
     }
 }
