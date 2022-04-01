@@ -508,7 +508,7 @@ input {
   width:100%;
   border:solid 1px $gray2;
   @include body2;
-  color:$gray1;
+  color:$grayTextColor;
   padding:calcRem(8rem) calcRem(30rem) calcRem(8rem) calcRem(10rem);
   height:calcRem(38rem);
   @include background('/images/common/ico_qna_more.svg','no-repeat center center / contain');
