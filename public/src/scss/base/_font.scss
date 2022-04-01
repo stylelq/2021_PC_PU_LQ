@@ -2,68 +2,78 @@
 
 //--font url--------
 //local
-$fontURL :'../fonts/notosans/';
+//$fontURL :'../fonts/notosans/';
 //sever
 // $fontURL :'http://cdn.stylelq.com/static/test/renewal/2021/mo/';
 //-------------------
 
 @import url("https://use.typekit.net/xce7dnx.css");
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+
+
 @font-face {
   font-family: 'noto-kr';
-  src: url(#{$fontURL}notokr-thin.eot);
-  src: url(#{$fontURL}notokr-thin.eot?#iefix) format("embedded-opentype"), url(#{$fontURL}notokr-thin.woff2) format("woff2"), url(#{$fontURL}notokr-thin.woff) format("woff"), url(#{$fontURL}notokr-thin.ttf) format("truetype"), url(#{$fontURL}notokr-thin.svg#notokr-thin) format("svg");
+  //src: url(#{$fontURL}notokr-thin.eot);
+  //src: url(#{$fontURL}notokr-thin.eot?#iefix) format("embedded-opentype"), url(#{$fontURL}notokr-thin.woff2) format("woff2"), url(#{$fontURL}notokr-thin.woff) format("woff"), url(#{$fontURL}notokr-thin.ttf) format("truetype"), url(#{$fontURL}notokr-thin.svg#notokr-thin) format("svg");
   font-weight: 100;
   font-style: normal;
+  unicode-range:U+AC00-D7A3;
 }
 
 @font-face {
   font-family: 'noto-kr';
-  src: url(#{$fontURL}notokr-light.eot);
-  src: url(#{$fontURL}notokr-light.eot?#iefix) format("embedded-opentype"), url(#{$fontURL}notokr-light.woff2) format("woff2"), url(#{$fontURL}notokr-light.woff) format("woff"), url(#{$fontURL}notokr-light.ttf) format("truetype"), url(#{$fontURL}notokr-light.svg#notokr-light) format("svg");
+  //src: url(#{$fontURL}notokr-light.eot);
+  //src: url(#{$fontURL}notokr-light.eot?#iefix) format("embedded-opentype"), url(#{$fontURL}notokr-light.woff2) format("woff2"), url(#{$fontURL}notokr-light.woff) format("woff"), url(#{$fontURL}notokr-light.ttf) format("truetype"), url(#{$fontURL}notokr-light.svg#notokr-light) format("svg");
   font-weight: 300;
   font-style: normal;
+  unicode-range:U+AC00-D7A3;
 }
 
 @font-face {
   font-family: 'noto-kr';
-  src: url(#{$fontURL}notokr-regular.eot);
-  src: url(#{$fontURL}notokr-regular.eot?#iefix) format("embedded-opentype"), url(#{$fontURL}notokr-regular.woff2) format("woff2"), url(#{$fontURL}notokr-regular.woff) format("woff"), url(#{$fontURL}notokr-regular.ttf) format("truetype"), url(#{$fontURL}notokr-regular.svg#notokr-regular) format("svg");
+  //src: url(#{$fontURL}notokr-regular.eot);
+  //src: url(#{$fontURL}notokr-regular.eot?#iefix) format("embedded-opentype"), url(#{$fontURL}notokr-regular.woff2) format("woff2"), url(#{$fontURL}notokr-regular.woff) format("woff"), url(#{$fontURL}notokr-regular.ttf) format("truetype"), url(#{$fontURL}notokr-regular.svg#notokr-regular) format("svg");
   font-weight: 400;
   font-style: normal;
+  unicode-range:U+AC00-D7A3;
 }
 
 @font-face {
   font-family: 'noto-kr';
-  src: url(#{$fontURL}notokr-medium.eot);
-  src: url(#{$fontURL}notokr-medium.eot?#iefix) format("embedded-opentype"), url(#{$fontURL}notokr-medium.woff2) format("woff2"), url(#{$fontURL}notokr-medium.woff) format("woff"), url(#{$fontURL}notokr-medium.ttf) format("truetype"), url(#{$fontURL}notokr-medium.svg#notokr-medium) format("svg");
+  //src: url(#{$fontURL}notokr-medium.eot);
+  //src: url(#{$fontURL}notokr-medium.eot?#iefix) format("embedded-opentype"), url(#{$fontURL}notokr-medium.woff2) format("woff2"), url(#{$fontURL}notokr-medium.woff) format("woff"), url(#{$fontURL}notokr-medium.ttf) format("truetype"), url(#{$fontURL}notokr-medium.svg#notokr-medium) format("svg");
   font-weight: 500;
   font-style: normal;
   unicode-range: U+AC00-D7A3;
+  unicode-range:U+AC00-D7A3;
 }
 
 @font-face {
   font-family: 'noto-kr';
-  src: url(#{$fontURL}notokr-bold.eot);
-  src: url(#{$fontURL}notokr-bold.eot?#iefix) format("embedded-opentype"), url(#{$fontURL}notokr-bold.woff2) format("woff2"), url(#{$fontURL}notokr-bold.woff) format("woff"), url(#{$fontURL}notokr-bold.ttf) format("truetype"), url(#{$fontURL}notokr-bold.svg#notokr-bold) format("svg");
+  //src: url(#{$fontURL}notokr-bold.eot);
+  //src: url(#{$fontURL}notokr-bold.eot?#iefix) format("embedded-opentype"), url(#{$fontURL}notokr-bold.woff2) format("woff2"), url(#{$fontURL}notokr-bold.woff) format("woff"), url(#{$fontURL}notokr-bold.ttf) format("truetype"), url(#{$fontURL}notokr-bold.svg#notokr-bold) format("svg");
   font-weight: 600;
   font-style: normal;
+  unicode-range:U+AC00-D7A3;
 }
 
 @font-face {
   font-family: 'noto-kr';
-  src: url(#{$fontURL}notokr-black.eot);
-  src: url(#{$fontURL}notokr-black.eot?#iefix) format("embedded-opentype"), url(#{$fontURL}notokr-black.woff2) format("woff2"), url(#{$fontURL}notokr-black.woff) format("woff"), url(#{$fontURL}notokr-black.ttf) format("truetype"), url(#{$fontURL}notokr-black.svg#notokr-black) format("svg");
+  //src: url(#{$fontURL}notokr-black.eot);
+  //src: url(#{$fontURL}notokr-black.eot?#iefix) format("embedded-opentype"), url(#{$fontURL}notokr-black.woff2) format("woff2"), url(#{$fontURL}notokr-black.woff) format("woff"), url(#{$fontURL}notokr-black.ttf) format("truetype"), url(#{$fontURL}notokr-black.svg#notokr-black) format("svg");
   font-weight: 700;
   font-style: normal;
+  unicode-range:U+AC00-D7A3;
 }
 
 @font-face {
   font-family: 'noto-kr';
-  src: url(#{$fontURL}notokr-black.eot);
-  src: url(#{$fontURL}notokr-black.eot?#iefix) format("embedded-opentype"), url(#{$fontURL}notokr-black.woff2) format("woff2"), url(#{$fontURL}notokr-black.woff) format("woff"), url(#{$fontURL}notokr-black.ttf) format("truetype"), url(#{$fontURL}notokr-black.svg#notokr-black) format("svg");
+  //src: url(#{$fontURL}notokr-black.eot);
+  //src: url(#{$fontURL}notokr-black.eot?#iefix) format("embedded-opentype"), url(#{$fontURL}notokr-black.woff2) format("woff2"), url(#{$fontURL}notokr-black.woff) format("woff"), url(#{$fontURL}notokr-black.ttf) format("truetype"), url(#{$fontURL}notokr-black.svg#notokr-black) format("svg");
   font-weight: 700;
   font-style: normal;
+  unicode-range:U+AC00-D7A3;
 }
 
 // @font-face {
