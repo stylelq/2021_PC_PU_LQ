@@ -79,11 +79,23 @@
             height: auto;
         }
         .popup__close{
-            @include background('/images/common/close_big.svg','no-repeat center center / contain');
-            position: absolute;
-            top:calcRem(20rem);
+            padding: calcRem(10rem);
+            display: block;
+            top:calcRem(10rem);
             bottom: auto;
-            right:calcRem(20rem);
+            right:calcRem(10rem);
+            background: none;
+            cursor: pointer;
+        }
+        .popup__inner{
+            display: block;
+            top: 0;
+            bottom: auto;
+            right:calcRem(0rem);
+            padding: calcRem(20rem);
+            position: absolute;
+            @include background('/images/common/close_big.svg','no-repeat center center / contain');
+            background-size: calcRem(20rem);
         }
         .popup__header + .wrap,
         .popup-scroll{
@@ -534,14 +546,37 @@
         display: block;
     }
 
+    /*
     &__close{
         width:calcRem(20rem);
         height:calcRem(20rem);
         @include background('/images/common/close_big.svg','no-repeat center center / contain');
-        // background-size:calcRem(14rem) calcRem(14rem) ;
         position: absolute;
         top:calcRem(20rem);
         right:calcRem(20rem);
+    }*/
+
+    &__close{
+        position: absolute;
+        width:calcRem(20rem);
+        height:calcRem(20rem);
+        padding: calcRem(10rem);
+        display: block;
+        top:calcRem(10rem);
+        bottom: auto;
+        right:calcRem(10rem);
+        background: none;
+        cursor: pointer;
+    }
+    &__inner{
+        display: block;
+        top: 0;
+        bottom: auto;
+        right:calcRem(0rem);
+        padding: calcRem(20rem);
+        position: absolute;
+        @include background('/images/common/close_big.svg','no-repeat center center / contain');
+        background-size: calcRem(20rem);
     }
 
     &__dim{

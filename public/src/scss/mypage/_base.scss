@@ -19,6 +19,12 @@
     & > [class ^= mypage- ]{
         margin-top: calcRem(68rem)
     }
+
+    &.myAllim{
+        .list-table thead th{
+            white-space: pre;
+        }
+    }
 }
 
 //---  왼쪽 세션 :: gnb ------------------
