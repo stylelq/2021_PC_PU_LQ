@@ -340,7 +340,9 @@
     }
 
     &__title{
-        min-width: calcRem(40rem);
+        //min-width: calcRem(40rem);
+        padding: 0 calcRem(10rem);
+        width: auto;
         height:calcRem(40rem);
         text-align: center;
         // padding:calcRem(6rem) calcRem(6rem);
@@ -352,7 +354,8 @@
         opacity: 0.3;
 
         .size-list__text{
-            @include ab-center;
+            //@include ab-center;
+            line-height: 2.8;
         }
 
         #{$this}__input:checked + &{
