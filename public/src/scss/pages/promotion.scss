@@ -247,6 +247,7 @@
     &__wrap{
       width: 100%;
       overflow: hidden;
+      @include flexWrap;
     }
     &__item{
       width: 33%;
