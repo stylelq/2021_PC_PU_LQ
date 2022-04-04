@@ -99,7 +99,8 @@
         }
         .popup__header + .wrap,
         .popup-scroll{
-            max-height: calcRem(640rem);
+            //height: calcRem(300rem) !important;
+            //max-height: calcRem(640rem);
             height: 100%;
             overflow: hidden;
             overflow-y: scroll;
