@@ -25,6 +25,10 @@
                 vertical-align: middle;
             }
 
+            tbody td:last-child{
+                display: inline-block;
+            }
+
             .detail-Meta__btn{
                 width: calcRem(60rem);
                 .btn-v3 {
