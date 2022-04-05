@@ -221,16 +221,16 @@
         @include flex-alignCenter;
     }
     &__item{
-        width: 55%;
+        width: 60%;
         margin-top:calcRem(10rem);
 
         &:first-child{
             //margin-top:0;
-            width: 45%;
+            width: 40%;
         }
 
         &:nth-child(3){
-            width: 45%;
+            width: 40%;
         }
     }
 }
