@@ -2921,7 +2921,13 @@
     }
 }
 
-
+#returnPop .wrap,
+#orderCancelPop .wrap{
+    height: 100%;
+    max-height: calcRem(700rem);
+    overflow: hidden;
+    overflow-y: scroll;
+}
 
 // 해상도에 따라 레이어팝업 높이값 조정
 @media screen and (max-height: 650px){

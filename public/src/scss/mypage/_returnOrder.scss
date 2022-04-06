@@ -257,6 +257,9 @@
         padding-top: calcRem(40rem);
     }
     &-list{
+        &__top{
+            @include title2;
+        }
         &--text{
             font-size:calcRem(12rem);
             position: relative;
@@ -329,9 +332,26 @@
             border-bottom: 1px solid #cbcbcb;
         }
         &__label{
+            position: relative;
             width: calcRem(100rem);
             @include body7;
             margin-top:calcRem(10rem);
+            padding-left: calcRem(10rem);
+            &:after{
+                content:"*";
+                width:calcRem(2rem);
+                height:calcRem(2rem);
+                border-radius: 100%;
+                position: absolute;
+                top:0;
+                left:0;
+                color: #9B192F;
+                background:none;
+
+                .type-small &{
+                    background:$bulletColor;
+                }
+            }
         }
         &__list{
             width: 100%;
@@ -393,6 +413,12 @@
 
                 .type-small &{
                     background:$bulletColor;
+                }
+            }
+            &.num{
+                padding-left: 0;
+                &:after{
+                    content: none;
                 }
             }
         }
