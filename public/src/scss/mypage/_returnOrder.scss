@@ -387,7 +387,9 @@
         }
     }
     &-cont{
+        padding-top: calcRem(40rem);
         &__title{
+            margin: 0;
             @include title1;
         }
         &__sub{
