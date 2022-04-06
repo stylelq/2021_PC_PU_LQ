@@ -20,7 +20,8 @@ lnbTitle = "주문배송조회"
                             <p>주문번호 <span>P20210812142407</span></p>
                             <span>( 2021.10.19 오후 04:10 )</span>
                         </div>
-                        <button class="myOrderList-detail__search-btn btn-v1 type-white">반품신청</button>
+                        <a href="#returnPop" class="myOrderList-detail__search-btn js-popup-open btn-v1 type-white">반품신청</a>
+                        <!--<button class="myOrderList-detail__search-btn btn-v1 type-white">반품신청</button>-->
                     </div>
                 </div>
                 <!-- .기간조회::detail  -->
@@ -146,6 +147,7 @@ lnbTitle = "주문배송조회"
 <% include ../_popup/_addressModify %>
 <% include ../_popup/_addressAdd %>
 <% include ../_popup/_addressSearch %>
+<% include ../_popup/_returnPopup %>
 <% include ../_popup/_gift %>
 <% include ../_popup/_message %>
 <% include ../_include/_footer %>

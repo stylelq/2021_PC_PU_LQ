@@ -502,7 +502,8 @@
                             <p>주문번호 <span>P20210812142407</span></p>
                             <span>( 2021.10.19 오후 04:10 )</span>
                         </div>
-                        <button class="myOrderList-detail__search-btn btn-v1 type-white">반품신청</button>
+                        <a href="#returnPop" class="myOrderList-detail__search-btn js-popup-open btn-v1 type-white">반품신청</a>
+                        <!--<button class="myOrderList-detail__search-btn btn-v1 type-white">반품신청</button>-->
                     </div>
                 </div>
                 <!-- .기간조회::detail  -->
@@ -1299,6 +1300,121 @@
         </div>
     </section>
 </section>
+<!-- 반품신청 popup -->
+<section id="returnPop" class="popup type-write">
+    <div class="popup__dim"></div>
+    <section class="popup__body">
+        <div class="small-popup__close js-popup-close">
+            <a class="small-popup__inner" href="#;"><span class="sr-only">닫기</span></a>
+        </div>
+
+        <div class="wrap popup-scroll">
+            <!-- list -->
+            <div class="return-list">
+                <table class="list-table" summary="반품신청">
+                    <caption>반품신청</caption>
+                    <colgroup>
+                        <col width="3%"><col width="50%"><col><col><col><col><col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="type-chk">
+                                <div class="checkbox-point">
+                                    <input class="checkbox-point__input sr-only js-table-checkAll" type="checkbox" name="cart" id="cartAll" >
+                                    <label for="cartAll" class="checkbox-point__label"><span class="sr-only">체크</span></label>
+                                </div>
+                            </th>
+                            <th>상품/옵션 정보</th>
+                            <th>수량</th>
+                            <th>총 결제금액</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td class="type-chk">
+                            <div class="checkbox-point">
+                                <input class="checkbox-point__input sr-only" type="checkbox" name="cart" id="cart1" >
+                                <label for="cart1" class="checkbox-point__label"><span class="sr-only">체크</span></label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="detail-Meta">
+                                <a href="#;" class="detail-Meta__thumb"><img class="cart-product__img" src="../../images/dummy/detail-img1.jpg" alt="" /></a>
+                                <h2 class="detail-Meta__title">oalc SINGLE BREASTED HARRIS TWEED JACKET 싱글브레스트 해리스 트위드 재킷 (Beige)</h2>
+                                <div class="detail-Meta__option">
+                                    <div class="selBox__meta--select">FREESIZE</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <!-- quantity -->
+                            <div class="quantity">1</div>
+                            <!-- quantity -->
+                        </td>
+                        <td><span class="detail-Meta__price--current">289,290원</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- item -->
+                <div class="return-list__group">
+                    <div class="return-list__label">반품사유</div>
+                    <div class="return-list__list">
+                        <div class="return-list__inner return-list__item--message">
+                            <select name="wirteOption" id="addressSelect2" class="form__select js-placeholder js-custom-message" title="배송 메세지 선택">
+                                <option value="1">메시지를 선택해주세요</option>
+                                <option value="2">가격불만족</option>
+                                <option value="3">단순변심</option>
+                                <option value="4">서비스불만족</option>
+                                <option value="5">다른 상품으로 재주문</option>
+                                <option value="6">기타</option>
+                            </select>
+                        </div>
+                        <div class="return-list__item js-select-custom">
+                            <textarea class="return-list__text form__input--text js-max-keyup" placeholder="50자 이내 입력해주세요."></textarea>
+                        </div>
+                        <p class="return-list--text">
+                            <span class="js-byte">0</span>/50byte
+                        </p>
+                    </div>
+                </div>
+                <!-- //item -->
+
+                <!--반품신청 버튼영역-->
+                <div class="btn-group return-group">
+                    <ul class="btn-group__list type-two">
+                        <li class="btn-group__item">
+                            <button class="btn-group__btn btn-v1 btn-v1--small type-white js-popup-close">닫기</button>
+                        </li>
+                        <li class="btn-group__item">
+                            <button class="btn-group__btn btn-v1 btn-v1--small type-primary">반품 신청</button>
+                        </li>
+                    </ul>
+                </div>
+                <!--.반품신청 버튼영역-->
+
+                <div class="return-cont">
+                    <h2 class="return-cont__title">반품 이용안내</h2>
+                    <p class="return-cont__sub">반품비용 구매자 부담</p>
+                    <ul class="return-cont__list">
+                        <li class="return-cont__item">상품에 이상은 없으나 구매의사 없음</li>
+                        <li class="return-cont__item">옵션을 잘못 선택함</li>
+                    </ul>
+
+                    <p class="return-cont__sub">반품비용 쇼핑몰 부담</p>
+                    <ul class="return-cont__list">
+                        <li class="return-cont__item">상품에 결함이 있음</li>
+                        <li class="return-cont__item">도착한 상품이 상품상세 정보와 다름</li><br />
+                        <li class="return-cont__item">반품 사유가 구매자 책임인 경우 최초 발송 비용을 포함한 왕복 배송비가 부과될 수 있습니다.</li>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- .list -->
+        </div>
+    </section>
+</section>
+<!-- .반품신청 popup -->
 <!-- gift popup -->
 <section id="giftPop" class="small-popup modal-pop">
     <div class="small-popup__dim"></div>
