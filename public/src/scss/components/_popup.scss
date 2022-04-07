@@ -1219,6 +1219,9 @@
                 }
 
                 .detail-Meta{
+                    &__center{
+                        text-align: center !important;
+                    }
                     &__title--option{
                         display: block;
                         margin-top: calcRem(20rem);
