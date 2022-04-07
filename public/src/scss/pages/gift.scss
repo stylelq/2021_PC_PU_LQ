@@ -26,21 +26,24 @@
   }
   &__title:last-child{
     color: #9B192F;
-    &:after{
-      content: '';
-      width:calcRem(4rem);
-      height:calcRem(10rem);
-      top: calcRem(6rem);
-      margin-left: calcRem(40rem);
-      position: absolute;
-      @include pageBackground('/images/common/more.png','no-repeat center center / contain');
-    }
+
   }
   &__title + &__title{
     margin-left: calcRem(30rem);
   }
   &__link{
     display: block;
+    &.add-arrow{
+      &:after{
+        content: '';
+        width:calcRem(4rem);
+        height:calcRem(10rem);
+        top: calcRem(6rem);
+        margin-left: calcRem(10rem);
+        position: absolute;
+        @include pageBackground('/images/common/more.png','no-repeat center center / contain');
+      }
+    }
   }
   &__result{
     font-size: calcRem(20rem);
