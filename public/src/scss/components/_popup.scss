@@ -99,8 +99,6 @@
         }
         .popup__header + .wrap,
         .popup-scroll{
-            //height: calcRem(300rem) !important;
-            //max-height: calcRem(640rem);
             height: 100%;
             overflow: hidden;
             overflow-y: scroll;
@@ -2929,6 +2927,15 @@
     overflow-y: scroll;
 }
 
+#couponPop .popup__header + .wrap{
+    overflow-y: unset;
+    padding-right: 0;
+}
+
+#couponPop .popup__body{
+    //height: calcRem(650rem);
+}
+
 // 해상도에 따라 레이어팝업 높이값 조정
 @media screen and (max-height: 650px){
     .small-popup__body{
@@ -2955,5 +2962,11 @@
         max-height: calcRem(300rem);
         overflow: hidden;
         overflow-y: scroll;
+    }
+    #couponPop .popup__header + .wrap{
+        height: 100%;
+        overflow: hidden;
+        overflow-y: scroll;
+        @include scrollbar-custom;
     }
 }
