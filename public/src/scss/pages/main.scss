@@ -7,35 +7,10 @@
 
   &__inner{
     display: block;
-    position: relative;
-    width: 100%;
-    height: inherit;
-    overflow: hidden;
-
-    /*display: block;
     width:100%;
     height: auto;
-    line-height:0;*/
+    line-height:0;
   }
-  &__box{
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: inherit;
-    background-size: cover;
-    background-position: center center;
-    background-image: url('https://cdn.louisclub.com/static/upload/display/2022/03/10/14fa4aaa-daf3-485a-9c4d-2ac821b2bc8d.jpg');
-  }
-
-  &__wrap{
-    position: relative;
-    width: 100%;
-    height: inherit;
-  }
-
-
   &__source{
     display: block;
     &--img{
