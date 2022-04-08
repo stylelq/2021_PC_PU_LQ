@@ -285,7 +285,7 @@
             font-size: calcRem(11rem);
         }
         .detail-Meta__btn{
-            width: calcRem(88rem);
+            width: auto !important;
             margin: auto;
             &:not(:last-child){
                 margin-bottom: 5px;
