@@ -4,24 +4,42 @@
 //메인 탑배너슬라이드
 .main-banner{
   position: relative;
+  min-width: calcRem(1200rem);
+  height: calcRem(900rem);
+  margin: 0;
+  padding: 0;
 
-  &__inner{
-    display: block;
-    width:100%;
-    height: auto;
-    line-height:0;
+  &__item{
+    display: inline-block;
+    height: inherit;
+    list-style: none;
   }
-  &__source{
+
+  &__inner {
     display: block;
-    &--img{
-      min-width: calcRem(1200rem);
-      height: 100vh;
-    }
-    &--video{
-      min-width: calcRem(1200rem);
-      height: 100vh;
-    }
+    //position: relative;
+    width: 100%;
+    height: inherit;
+    overflow: hidden;
   }
+
+  &__box{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    background-image: url('https://cdn.louisclub.com/static/upload/display/2022/04/01/fe33ea49-0ed5-4238-befa-21654a78bfd1.jpg');
+    background-size: cover;
+  }
+
+  &__wrap{
+    position: relative;
+    width: 100%;
+    height: inherit;
+  }
+
   &__img{
     width: 100%;
     height: 100%;
@@ -32,9 +50,10 @@
   &__content{
     bottom: calcRem(70rem);
     position: absolute;
+    width: 100%;
+    text-align: center;
   }
   &__name{
-    //color: #000;
     font-size: calcRem(22rem);
     line-height: calcRem(28rem);
   }
