@@ -1128,7 +1128,7 @@
   //상품명,가격
   &__bottom {
     bottom: 0;
-    position: fixed;
+    position: absolute;
     width: 100%;
     text-align: center;
     font-size: calcRem(16rem);
