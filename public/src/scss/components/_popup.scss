@@ -534,26 +534,32 @@
 //스몰 팝업
 .small-popup{
     position: fixed;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
     z-index: $popupZindex;
     display: none;
+    text-align: center;
+
+    &:before{
+        position: relative;
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        content: "";
+    }
+    &__wrap{
+        position: relative;
+        display: inline-block;
+        margin: auto;
+        vertical-align: middle;
+    }
 
     &.is-active{
         display: block;
     }
-
-    /*
-    &__close{
-        width:calcRem(20rem);
-        height:calcRem(20rem);
-        @include background('/images/common/close_big.svg','no-repeat center center / contain');
-        position: absolute;
-        top:calcRem(20rem);
-        right:calcRem(20rem);
-    }*/
 
     &__close{
         position: absolute;
@@ -589,18 +595,17 @@
     }
 
     &__body{
-      //@include ab-center;
-        top: 10%;
         margin: 0 auto;
         position: relative;
         background-color: $bgSiteColor;
-        min-width: calcRem(500rem);
-        max-width: calcRem(500rem);
-        width: auto;
-        min-height: calcRem(500rem);
+        width: calcRem(500rem);
+        height: calcRem(550rem);
         z-index: $childZindex;
         padding:calcRem(40rem);
         box-sizing: border-box;
+        vertical-align: middle;
+        text-align: left;
+
         &.platforml-only{
           padding: 0;
        }
@@ -610,7 +615,7 @@
 
        .wrap{
           padding: 0;
-        //   height: calcRem(640rem);
+          height: calcRem(500rem);
           overflow: hidden;
           overflow-y: auto;
           @include scrollbar-custom;
@@ -618,12 +623,21 @@
 
         .small-popup__header + .wrap{
             margin-top: calcRem(20rem);
-            max-height: calcRem(530rem);
+            max-height: calcRem(420rem);
             height: auto;
             overflow: hidden;
             overflow-y: auto;
             box-sizing: border-box;
         }
+
+        .address-search{
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            max-width: 100%;
+            outline: none;
+        }
+
     }
 
     &__header{
@@ -1136,7 +1150,7 @@
 
   &-bullet__text{
       margin:0;
-      font-size:calcRem(11rem);
+      font-size:calcRem(12rem) !important;
       padding-left:calcRem(7rem);
       position: relative;
       line-height:calclH(18,11);
@@ -1512,6 +1526,7 @@
   &__section{
       display: none;
       width: calcRem(420rem);
+      margin: 0 auto;
       margin-top: calcRem(20rem);
 
       &.is-current{
@@ -2935,36 +2950,20 @@
     padding-right: 0;
 }
 
-#couponPop .popup__body{
-    //height: calcRem(650rem);
+
+#giftPop .small-popup__body,
+#messagePop .small-popup__body{
+    padding: calcRem(50rem);
+    width: calcRem(400rem);
+    height: calcRem(450rem);
 }
+
 
 // 해상도에 따라 레이어팝업 높이값 조정
 @media screen and (max-height: 700px){
-    .small-popup__body{
-        top: 0 !important;
-        height: 100% !important;
-    }
     .popup__body{
         top: 0 !important;
         height: 100% !important;
-    }
-    #specialPop .small-popup__body{
-        top: 10% !important;
-        height: auto !important;
-    }
-    #addressPop .wrap{
-        width: fit-content;
-        height: 100%;
-        max-height: calcRem(420rem);
-        overflow: hidden;
-        overflow-y: scroll;
-    }
-    #shippingPop .wrap{
-        height: 100%;
-        max-height: calcRem(300rem);
-        overflow: hidden;
-        overflow-y: scroll;
     }
     #couponPop .popup__header + .wrap{
         height: 100%;
