@@ -101,7 +101,7 @@
     &__cont{
         position: relative;
         margin-top: calcRem(10rem);
-        display: none;
+        //display: none;
 
         &.is-current{
             display: block;
