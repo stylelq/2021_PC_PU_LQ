@@ -328,7 +328,7 @@ jQuery(function(){
         selectView('.filter-custom__option');
         return false;
     }
-    //$(document).on('click','.filter-custom__selected',customSelect);
+    $(document).on('click','.filter-custom__selected',customSelect);
 
     // 장바구니FREESIZE
     function cartCustomSelect(){
@@ -336,7 +336,7 @@ jQuery(function(){
         selectView('.selBox-custom__option');
         return false;
     }
-    //$(document).on('click','.selBox-custom__selected',cartCustomSelect);
+    $(document).on('click','.selBox-custom__selected',cartCustomSelect);
 
     //--END[select]--------------------------
 
@@ -358,7 +358,7 @@ jQuery(function(){
         }
         return false
     }
-    $(document).on('click','.product-icon__link',productItem);
+    //$(document).on('click','.product-icon__link',productItem);
 
 
     // 좋아요버튼 active style

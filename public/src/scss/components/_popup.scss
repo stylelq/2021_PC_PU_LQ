@@ -7,6 +7,8 @@
     bottom: 0;
     // background-color:#fff;
     z-index:$popupZindex;
+    text-align: center;
+    vertical-align: middle;
 
     &.is-active{
         display:block;
@@ -55,18 +57,35 @@
         outline:none;
         text-indent: -9999px;
     }
+
+    &__wrap{
+        position: relative;
+        display: inline-block;
+        margin: auto;
+        vertical-align: middle;
+    }
   
     &__body{
         //@include ab-center;
-        top: 7%;
+        //top: 7%;
         margin: 0 auto;
         position: relative;
         background-color: $bgSiteColor;
         width: calcRem(800rem);
-        // width: 80%;
+        height: 100%;
+        //height: calcRem(700rem);
         z-index: $childZindex;
         padding:calcRem(40rem);
         box-sizing: border-box;
+
+        .wrap{
+            margin-top: calcRem(20rem);
+            max-height: calcRem(420rem);
+            height: auto;
+            overflow: hidden;
+            overflow-y: auto;
+            box-sizing: border-box;
+        }
     }
 
     &.type-write{
@@ -2991,10 +3010,10 @@
 
 // 해상도에 따라 레이어팝업 높이값 조정
 @media screen and (max-height: 700px){
-    .popup__body{
+    /*.popup__body{
         top: 0 !important;
         height: 100% !important;
-    }
+    }*/
     #couponPop .popup__header + .wrap{
         height: 100%;
         overflow: hidden;
