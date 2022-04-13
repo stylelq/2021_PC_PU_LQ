@@ -230,7 +230,6 @@ jQuery(function(){
             return true;
         }
     }
-
     $(document).on('click', 
     '.popup-orderlist__body .detail-Meta__btn>a, .product-post__item', 
     orderMetaSelect);
