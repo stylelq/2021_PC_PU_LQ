@@ -374,6 +374,7 @@ jQuery(function(){
     }
     $(document).on('click', '[class $= __link--like]', likeButtonStyle);
 
+
     //상세 컬러 선택
     function colorCheck() {
         var item = '.color-list__item';
@@ -383,7 +384,6 @@ jQuery(function(){
         return false;
     }
     $(document).on('click', '.color-list__title', colorCheck);
-
 
     /*
         //Join(회원가입, 로그인)
