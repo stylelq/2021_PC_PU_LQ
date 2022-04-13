@@ -330,6 +330,7 @@ jQuery(function(){
     }
     //$(document).on('click','.filter-custom__selected',customSelect);
 
+
     // 장바구니FREESIZE
     function cartCustomSelect(){
         selectViewDropDown(this);
@@ -337,6 +338,7 @@ jQuery(function(){
         return false;
     }
     //$(document).on('click','.selBox-custom__selected',cartCustomSelect);
+
 
     //--END[select]--------------------------
 
