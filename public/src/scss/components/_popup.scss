@@ -2722,6 +2722,36 @@
     }
 }
 
+// 휴대폰인증팝업
+.phone-box{
+    margin: 0 auto;
+    margin-bottom: calcRem(20rem);
+    text-align: center;
+    border: 1px solid #E9E9E9;
+    &__img{
+        padding: calcRem(35rem) 0;
+    }
+}
+.phone-info{
+    padding-top: calcRem(20rem);
+    position: relative;
+    @include body6;
+    &__list{
+        margin-left: calcRem(5rem);
+    }
+    &__list:before{
+        content: '';
+        left: 0;
+        margin-top: calcRem(8rem);
+        width: calcRem(2rem);
+        height: calcRem(2rem);
+        border-radius: 100%;
+        background-color: #000;
+        position: absolute;
+    }
+}
+
+
 //마이페이지 :: 주문취소
 .return-orderCancel__contents{
   margin-bottom: calcRem(50rem);
