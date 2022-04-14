@@ -1079,7 +1079,7 @@
     left: 0;
     @include vertical-center;
     @include pageBackground('/images/common/ico_slide_prev.svg', 'no-repeat center center / contain');
-    background-size: calcRem(8rem) calcRem(16rem);
+    background-size: calcRem(15rem) calcRem(30rem);
     z-index: $childZindex;
     cursor: pointer;
   }
@@ -1091,7 +1091,7 @@
     right: 0;
     @include vertical-center;
     @include pageBackground('/images/common/ico_slide_next.svg', 'no-repeat center center / contain');
-    background-size: calcRem(8rem) calcRem(16rem);
+    background-size: calcRem(15rem) calcRem(30rem);
     z-index: $childZindex;
     cursor: pointer;
   }
