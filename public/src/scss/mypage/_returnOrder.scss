@@ -388,6 +388,7 @@
     }
     &-cont{
         padding-top: calcRem(40rem);
+        text-align: left;
         &__title{
             margin: 0;
             @include title1;
