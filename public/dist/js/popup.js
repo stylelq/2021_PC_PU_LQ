@@ -16,13 +16,14 @@ jQuery(function () {
         el = $(this).attr('href').replace('#','');
     }*/
 
+    /*
+    if($('.popup.is-active').length <= 1) {
+        document.getElementsByTagName('body')[0].style.overflow = 'auto';
+        document.getElementsByTagName('body')[0].style.height = '100%';
+    }else{
+        $('.popup').removeClass('is-active');
+    }*/
 
-    if ($('.popup.is-active').length <= 1) {
-      document.getElementsByTagName('body')[0].style.overflow = 'auto';
-      document.getElementsByTagName('body')[0].style.height = '100%';
-    } else {
-      $('.popup').removeClass('is-active');
-    }
     /*
     document.getElementsByClassName('js-popup-open')[0].addEventListener('click', function() {
         document.getElementsByClassName('popup').style.display = 'block';
