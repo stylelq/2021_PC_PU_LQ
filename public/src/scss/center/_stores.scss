@@ -133,6 +133,13 @@
                 min-height: 100%;
             }
         }  
+        &__none{
+            position: relative;
+            width: 100%;
+            text-align: center;
+            font-size: calcRem(14rem);
+            font-weight: 300;
+        }
 
         .location-item{
             margin-bottom:calcRem(20rem);
