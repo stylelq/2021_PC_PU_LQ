@@ -45,5 +45,6 @@
 		margin:calcRem(15rem) auto 0;
 		@include background('/images/common/ico_btn_top.png','no-repeat center center / contain');
 		background-size: calcRem(30rem) calcRem(30rem);
+		cursor: pointer;
 	}
 }

@@ -295,6 +295,7 @@
     @include pageBackground('/images/common/ico_slide_prev.svg','no-repeat center center / contain');
     background-size:calcRem(8rem) calcRem(16rem) ;
     z-index: $childZindex;
+    cursor: pointer;
   }
 
   &__next{
@@ -307,6 +308,7 @@
     @include pageBackground('/images/common/ico_slide_next.svg','no-repeat center center / contain');
     background-size:calcRem(8rem) calcRem(16rem) ;
     z-index: $childZindex;
+    cursor: pointer;
   }
   &__item{
     padding: 0 calcRem(2.5rem);
@@ -1079,6 +1081,7 @@
     @include pageBackground('/images/common/ico_slide_prev.svg', 'no-repeat center center / contain');
     background-size: calcRem(8rem) calcRem(16rem);
     z-index: $childZindex;
+    cursor: pointer;
   }
 
   &--next {
@@ -1090,6 +1093,7 @@
     @include pageBackground('/images/common/ico_slide_next.svg', 'no-repeat center center / contain');
     background-size: calcRem(8rem) calcRem(16rem);
     z-index: $childZindex;
+    cursor: pointer;
   }
 
   //페이징
@@ -1340,6 +1344,7 @@
     @include pageBackground('/images/common/ico_slide_prev.svg','no-repeat center center / contain');
     background-size:calcRem(8rem) calcRem(16rem) ;
     z-index: $childZindex;
+    cursor: pointer;
   }
 
   &__next{
@@ -1352,6 +1357,7 @@
     @include pageBackground('/images/common/ico_slide_next.svg','no-repeat center center / contain');
     background-size:calcRem(8rem) calcRem(16rem) ;
     z-index: $childZindex;
+    cursor: pointer;
   }
   &__item{
     padding: 0 calcRem(2.5rem);
