@@ -2243,6 +2243,7 @@
 //멤버쉽 전환
 .membership-join{
   padding:0 calcRem(20rem);
+    text-align: left;
 
   &__contBox-img{
       height: calcRem(120rem);
@@ -2265,6 +2266,7 @@
       @include popupBulletItem;
   }
 }
+
 
 //멤버쉽 전환 :: 완료, 기존회원
 .membershipJoin-result{
@@ -3005,6 +3007,14 @@
     padding: calcRem(50rem);
     width: calcRem(400rem);
     height: calcRem(450rem);
+}
+
+#membershipJoin .popup__body{
+    width: calcRem(460rem);
+}
+
+#membershipJoin .popup__header{
+    border-bottom: none;
 }
 
 
