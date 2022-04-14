@@ -590,6 +590,7 @@ input {
     @include body7;
     position: relative;
     padding-left:calcRem(20rem);
+    cursor: pointer;
 
     //red-big size
     #{$this}--big-red &{
