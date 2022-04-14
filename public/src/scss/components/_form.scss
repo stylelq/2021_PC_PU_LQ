@@ -661,6 +661,7 @@ input {
     box-sizing: border-box;
     border:solid 1px $point1;
     position: relative;
+    cursor: pointer;
 
     &:after{
       content:"";

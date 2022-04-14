@@ -374,6 +374,7 @@
             &--modify,&--del{
                 text-decoration: underline;
                 margin-left: calcRem(10rem);
+                cursor: pointer;
             }
         }
     }
