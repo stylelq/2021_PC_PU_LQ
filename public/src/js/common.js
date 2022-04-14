@@ -883,6 +883,9 @@ jQuery(function(){
         // mainBannerOption.on = {};
     }
 
+
+
+
     //new 배너슬라이드
     if($('.main-new').length > 0 && $('.main-new__item').length > 1){
         var eventSliderTouch = false;
@@ -892,10 +895,10 @@ jQuery(function(){
             watchOverflow: true,
             slidesPerView: 3,
             centeredSlides: true,
-            speed: 10000,
+            //speed: 10000,
             loop:true,
             autoplay: {
-                delay: 0,
+                delay: 1000,
                 disableOnInteraction: true,
             },
             pagination: {
@@ -907,7 +910,7 @@ jQuery(function(){
                 prevEl: ".main-new__prev",
             },
             on: {
-                init: function(){
+                /*init: function(){
                     var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
                     var bg = slide.data("bg");
                     if($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')){
@@ -917,7 +920,8 @@ jQuery(function(){
                         $('body').removeClass('is-white');
                         $('body').addClass('is-black');
                     }
-                },
+                    this.params.speed = 5000;
+                },*/
                 beforeTransitionStart: function () {
                     var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
                     var bg = slide.data("bg");
@@ -928,6 +932,7 @@ jQuery(function(){
                         $('body').removeClass('is-white');
                         $('body').addClass('is-black');
                     }
+                    this.params.speed = 1000;
                 },
                 touchMove: function() {
                     eventSliderTouch = true;
@@ -938,9 +943,6 @@ jQuery(function(){
                         this.params.speed = 500;
                     }
                 },
-                transitionEnd: function() {
-                    this.params.speed = 10000;
-                }
             }
         });
 
@@ -1169,7 +1171,6 @@ jQuery(function(){
                 slideChangeTransitionEnd: function(){
                     $('.main-banner4__progressbar').eq(0).addClass("animate");
                 },
-
                 beforeTransitionStart: function () {
                     var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
                     var bg = slide.data("bg");
