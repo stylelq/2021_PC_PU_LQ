@@ -123,7 +123,7 @@
         }  
         &__map{
             width: calcRem(550rem);
-            height: calcRem(500rem);
+            height: calcRem(459rem);
             max-height: calcRem(579rem);
             background-color: rgb(244, 248, 250);
             overflow: hidden;
@@ -346,6 +346,7 @@
                     right: calcRem(10rem);
                     background: url('../../images/collection/list/collection_slide_next_w.png') no-repeat center center /contain;
                     z-index: 100;
+                    cursor: pointer;
                 }
                 &-prev{
                     @include vertical-center;
@@ -355,6 +356,7 @@
                     left: calcRem(10rem);
                     background: url('../../images/collection/list/collection_slide_prev_w.png') no-repeat center center /contain;
                     z-index: 100;
+                    cursor: pointer;
                 }
             }
         }
