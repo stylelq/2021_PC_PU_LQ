@@ -16,6 +16,35 @@
     &-info{
         position: relative;
     }
+    &-fix{
+        &__btn{
+            position: absolute;
+            top: calcRem(42rem);
+            right: calcRem(62rem);
+            z-index: 20;
+        }
+        &__zoom{
+            width: calcRem(40rem);
+            height: calcRem(40rem);
+            box-sizing: border-box;
+            border: solid 1px #CBCBCB;
+            border-radius: 100%;
+            display: block;
+            margin-bottom: 0.625rem;
+            position: relative;
+            &:after{
+                content: "";
+                width: 0.75rem;
+                height: 0.75rem;
+                background: url(../../images/common/ico_zoom.svg?ver=211025) no-repeat center center / contain;
+                background-size: 0.75rem 0.75rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
     img{
         width: 100%;
         display: block;
