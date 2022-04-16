@@ -107,6 +107,15 @@
         width: calcRem(16rem);
         height: calcRem(20rem);
         background: url('../images/common/icon_basket.svg') no-repeat center top;
+        .header-wrap__link{
+          position: relative;
+          padding: 0;
+          top: calcRem(0rem);
+          left: calcRem(-1rem);
+          font-size: calcRem(10rem);
+          height: 100%;
+          letter-spacing: calcRem(-2.5rem);
+        }
       }
     }
     &__link{
