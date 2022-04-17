@@ -1647,7 +1647,7 @@
 
     .swiper-pagination {
       &-current {
-        font-size: calcRem(12rem);
+        font-size: calcRem(18rem);
         line-height: calclH(19, 12);
         padding-right: calcRem(11rem);
         position: relative;
@@ -1664,7 +1664,7 @@
       }
 
       &-total {
-        font-size: calcRem(12rem);
+        font-size: calcRem(18rem);
         line-height: calclH(19, 12);
         padding-left: calcRem(10rem);
       }
