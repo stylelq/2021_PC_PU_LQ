@@ -95,6 +95,10 @@
 .notData-wrap{
     text-align: left;
 
+    &.only-qna-null{
+        text-align: center;
+    }
+
     &__textBox{
         &--title{
             @include title1;
