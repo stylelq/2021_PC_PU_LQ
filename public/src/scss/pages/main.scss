@@ -48,7 +48,7 @@
     width: 100%;
   }
   &__content{
-    bottom: calcRem(70rem);
+    bottom: calcRem(100rem);
     position: absolute;
     width: 100%;
     text-align: center;
@@ -83,7 +83,7 @@
 
     .swiper-pagination{
       &-current {
-        font-size: calcRem(12rem);
+        font-size: calcRem(18rem);
         line-height: calclH(19, 12);
         padding-right: calcRem(11rem);
         position: relative;
@@ -99,7 +99,7 @@
         }
       }
       &-total{
-        font-size:calcRem(12rem);
+        font-size:calcRem(18rem);
         line-height:calclH(19,12);
         padding-left:calcRem(10rem);
       }
@@ -1174,7 +1174,7 @@
   }
 
   &__content {
-    bottom: calcRem(70rem);
+    bottom: calcRem(100rem);
     position: absolute;
   }
 
@@ -1208,7 +1208,7 @@
 
     .swiper-pagination {
       &-current {
-        font-size: calcRem(12rem);
+        font-size: calcRem(18rem);
         line-height: calclH(19, 12);
         padding-right: calcRem(11rem);
         position: relative;
@@ -1225,7 +1225,7 @@
       }
 
       &-total {
-        font-size: calcRem(12rem);
+        font-size: calcRem(18rem);
         line-height: calclH(19, 12);
         padding-left: calcRem(10rem);
       }
