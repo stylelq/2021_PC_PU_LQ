@@ -2079,7 +2079,8 @@
       transform: translateY(0);
   }
   .popup__header{
-    border-bottom: none;
+      border-bottom: none;
+      background-color: #fff;
   }
   .popup__body{
       top: 0 !important;
