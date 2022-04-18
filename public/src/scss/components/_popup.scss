@@ -2397,6 +2397,9 @@
     }
     .address{
         &-info{
+            &__form{
+                text-align: left;
+            }
             &--text{
                 font-size:calcRem(11rem);
                 padding-left:calcRem(7rem);
