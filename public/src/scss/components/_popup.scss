@@ -997,14 +997,14 @@
               position: absolute;
               left:calcRem(20rem);
               @include vertical-center;
-              @include pageBackground('/images/common/ico_slide_prev.svg','no-repeat center center / contain');
+              @include pageBackground('../../images/common/ico_slide_prev.svg','no-repeat center center / contain');
               background-size:calcRem(22rem) calcRem(44rem);
               z-index: $childZindex;
               border: none;
               &:after{
                   width:calcRem(22rem);
                   height:calcRem(44rem);
-                  @include pageBackground('/images/common/ico_slide_prev.svg','no-repeat center center / contain');
+                  @include pageBackground('../../images/common/ico_slide_prev.svg','no-repeat center center / contain');
                   background-size:calcRem(22rem) calcRem(44rem);
               }
           }
@@ -1041,14 +1041,14 @@
               position: absolute;
               right:calcRem(20rem);
               @include vertical-center;
-              @include pageBackground('/images/common/ico_slide_next.svg','no-repeat center center / contain');
+              @include pageBackground('../../images/common/ico_slide_next.svg','no-repeat center center / contain');
               background-size:calcRem(22rem) calcRem(44rem) ;
               z-index: $childZindex;
               border: none;
               &:after{
                   width:calcRem(22rem);
                   height:calcRem(44rem);
-                  @include pageBackground('/images/common/ico_slide_next.svg','no-repeat center center / contain');
+                  @include pageBackground('../../images/common/ico_slide_next.svg','no-repeat center center / contain');
                   background-size:calcRem(22rem) calcRem(44rem);
               }
           }
