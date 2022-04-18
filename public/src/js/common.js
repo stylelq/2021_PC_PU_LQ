@@ -1114,25 +1114,19 @@ jQuery(function(){
 
     //메인배너4 슬라이드
     if($('.main-banner4').length > 0 && $('.main-banner4__item').length > 1){
-        var eventSliderTouch = false;
         var mainNewSlide = new Swiper('.main-banner4__container', {
             observer: true,
             observeParents: true,
             watchOverflow: true,
             slidesPerView: 1,
-            centeredSlides: true,
-            autoplay: {
-                delay: 10000,
-                disableOnInteraction: true,
-            },
             loop:true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
             pagination: {
                 el: ".main-banner4__pagination",
                 type: "fraction",
-            },
-            navigation: {
-                nextEl: ".main-banner4__next",
-                prevEl: ".main-banner4__prev",
             },
             on: {
                 init: function(){
@@ -1145,6 +1139,7 @@ jQuery(function(){
                         $('.main-banner4__pagination').removeClass('is-white');
                         $('.main-banner4__pagination').addClass('is-black');
                     }
+
                     $('.main-banner4__progressbar').removeClass("animate");
                     $('.main-banner4__progressbar').removeClass("active");
                     $('.main-banner4__progressbar').eq(0).addClass("animate");
@@ -1158,6 +1153,7 @@ jQuery(function(){
                 slideChangeTransitionEnd: function(){
                     $('.main-banner4__progressbar').eq(0).addClass("animate");
                 },
+
                 beforeTransitionStart: function () {
                     var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
                     var bg = slide.data("bg");
@@ -1168,7 +1164,7 @@ jQuery(function(){
                         $('.main-banner4__pagination').removeClass('is-white');
                         $('.main-banner4__pagination').addClass('is-black');
                     }
-                },
+                }
             }
         });
 
