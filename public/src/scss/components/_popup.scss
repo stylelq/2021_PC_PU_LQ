@@ -2159,8 +2159,8 @@
   }
 }
 // 콜라보 레이어
-#collaborationPop{
-  display: block;
+.collaborationpop{
+  display: block !important;
   opacity: 0;
   visibility: hidden;
   transform: translateY(110%);
