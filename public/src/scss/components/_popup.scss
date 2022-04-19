@@ -995,7 +995,7 @@
               width:calcRem(22rem);
               height:calcRem(44rem);
               position: absolute;
-              left:calcRem(20rem);
+              left:calcRem(250rem);
               @include vertical-center;
               @include pageBackground('../../images/common/ico_slide_prev.svg','no-repeat center center / contain');
               background-size:calcRem(22rem) calcRem(44rem);
@@ -1039,7 +1039,7 @@
               width:calcRem(22rem);
               height:calcRem(44rem);
               position: absolute;
-              right:calcRem(20rem);
+              right:calcRem(250rem);
               @include vertical-center;
               @include pageBackground('../../images/common/ico_slide_next.svg','no-repeat center center / contain');
               background-size:calcRem(22rem) calcRem(44rem) ;
