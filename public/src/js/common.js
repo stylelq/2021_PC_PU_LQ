@@ -107,7 +107,8 @@ jQuery(function(){
     /*---------------------------
      * [Scroll]
      ---------------------------*/
-    var $sc,$winH,$divH;
+    var $sc,$winH,$divH,$docH,$prHeight,$tot;
+    var scHeight;
     var $styleOpt = {}
     function positionAbsolute(num){
         $styleOpt.position = 'absolute';
@@ -164,22 +165,28 @@ jQuery(function(){
     if( $('.payment').length > 0){
         $(window).on('scroll',function () {
             $sc = $(document).scrollTop();
+            $docH = $(document).height();
             $winH = $(window).height();
             $divH = $('.payment-left').height();
+            $prHeight = $('.payment-right').height() + 50;
+            scHeight = $('.payment').prop('scrollHeight');
+            $tot = scHeight - $prHeight;
 
-            if( $sc >= $winH ){
-                positionAbsolute($divH - 400);
-            }else{
-                positionFixed($('.header').height() + 20);
-            }
-            if( $sc < 100 ){
+            if($sc < 100){
                 positionFixed( '' ); //default css
+            }else{
+                if ($sc >= $tot) {
+                    positionAbsolute($divH - 200);
+                } else {
+                    positionFixed($divH);
+                    positionFixed($('.header').height() + 20);
+                }
             }
             $('.payment-right').css($styleOpt);
-
             return;
         });
     }
+
     //--END[Scroll]----------------
 
 
