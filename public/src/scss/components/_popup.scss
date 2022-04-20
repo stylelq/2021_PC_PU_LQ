@@ -2310,28 +2310,43 @@
 
 //멤버쉽 전환 :: 완료, 기존회원
 .membershipJoin-result{
-  padding:0 calcRem(20rem);
+    margin: 0 auto;
+    width: calcRem(400rem);
+    text-align: left;
 
-  &__text{
+    .btn-group__item{   // 멤버십전환 only
+        padding-left: 0;
+        padding-right: calcRem(5rem);
+    }
+
+    .btn-group__item + .btn-group__item{    // 멤버십전환 only
+        padding-right: 0;
+    }
+
+    .join__group{
+        margin-top: calcRem(15rem);
+    }
+
+    &__text{
       text-align: center;
       @include title2;
       margin:calcRem(10rem) 0 calcRem(35rem) 0;
 
       &.two-line{ margin:calcRem(0rem) 0 calcRem(23rem) 0; }
       .text--point{ color: $point1; }
-  }
+    }
 
-  &__text.two-line + &__table{
+    &__text.two-line + &__table{
       table{ margin-bottom: calcRem(10rem) }
-  }
+    }
 
-  &__bullet{
+    &__bullet{
       @include popupBulletItem;
-  }
+    }
 
-  &__link{
+    &__link{
       text-align: center;
-      margin-top: calcRem(40rem);
+      margin-top: calcRem(20rem);
       @include body2;
       color: $point1;
 
