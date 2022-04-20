@@ -225,6 +225,7 @@ jQuery(function(){
             position: 'fixed',
             top: $('.header').height()+20
         });*/
+
     }
     $(document).on('click', '.js-tab-link', detailTab);
 
