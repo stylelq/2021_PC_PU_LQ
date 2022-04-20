@@ -2309,10 +2309,22 @@
 
 
 //멤버쉽 전환 :: 완료, 기존회원
+.membershipJoin{
+    margin: 0 auto;
+    width: calcRem(400rem);
+}
+
 .membershipJoin-result{
     margin: 0 auto;
     width: calcRem(400rem);
     text-align: left;
+
+    &__title{
+        @include heading3;
+        margin-top: calcRem(10rem);
+        margin-bottom: calcRem(24rem);
+        text-align: center;
+    }
 
     .btn-group__item{   // 멤버십전환 only
         padding-left: 0;

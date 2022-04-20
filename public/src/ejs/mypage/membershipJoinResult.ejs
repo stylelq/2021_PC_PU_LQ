@@ -1,15 +1,19 @@
 <%
 type = "mypage"
 page = "mypage"
-popup = "true"
+popup = "false"
 lnbTitle = "멤버십회원으로 전환"
 %>
 <% include ../_include/_header %>
 <div class="container">
     <div class="site-main">
+        <% include ../_include/_lnbMyPage %>
         <section class="membershipJoin">
             <div class="membershipJoin-result">
-                <div class="membershipJoin-result__text">멤버십 회원으로 전환이 <span class="text--point">완료</span>되었습니다.</div>
+                <div class="membershipJoin-result__head">
+                    <p class="membershipJoin-result__title">멤버십 전환안내</p>
+                </div>
+                <div class="membershipJoin-result__text">회원님께서는 기존에 가입하신 <br /><span class="text--point">멤버십 회원 정보가 존재</span>합니다.</div>
                 <div class="membershipJoin-result__table">
                     <table class="basic-table">
                         <caption class="sr-only">구매 채별별 적립율</caption>
@@ -42,20 +46,10 @@ lnbTitle = "멤버십회원으로 전환"
                     </table>
                 </div>
                 <ul class="center-bullet">
-                    <li class="center-bullet__item">멤버십회원은 하나의 ID로 온라인 및 오프라인 매장에서 적립금 사용 및 적립이 가능 합니다. </li>
+                    <li class="center-bullet__item">MEMBERSHIP 아이디로 로그인 후 사용하시기 바랍니다</li>
+                    <li class="center-bullet__item">ID통합 등 회원 관련 문의사항은 <a class="join-existing__tel" href="tel:080-599-1414">080-599-1414</a>로 문의 주시기 바랍니다.</li>
+                    <li class="center-bullet__item">멤버십회원은 하나의 ID로 온라인 및 오프라인 매장에서 적립금 사용 및 적립이 가능 합니다.</li>
                 </ul>
-                <div class="membershipJoin-result__link"><a href="#" class="order-mypage__btn btn-v1 type-white">멤버쉽 혜택</a></div>
-            
-                <div class="btn-group join__group">
-                    <ul class="btn-group__list type-two">
-                        <li class="btn-group__item">
-                            <button class="btn-group__btn btn-v1 btn-v1--small type-white">홈으로</button>
-                        </li>
-                        <li class="btn-group__item">
-                            <button class="btn-group__btn btn-v1 btn-v1--small type-primary">로그인</button>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </section>
     </div>
