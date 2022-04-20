@@ -155,7 +155,7 @@ jQuery(function(){
                 $('.detail-tab__item').eq(0).addClass('is-current');
                 $('.detail-tab__info').eq(0).addClass('is-current');
             }
-            $('.product-option-fix').css($styleOpt);
+            //$('.product-option-fix').css($styleOpt);
 
             return
         });
@@ -221,10 +221,10 @@ jQuery(function(){
         $('.detail-tab').addClass('fixed');
         contents.eq(idx).css({minHeight: 600});
         //오른쪽 옵션값 고정시키기
-        $('.product-option-fix').css({
+        /*$('.product-option-fix').css({
             position: 'fixed',
             top: $('.header').height()+20
-        });
+        });*/
     }
     $(document).on('click', '.js-tab-link', detailTab);
 

@@ -64,8 +64,8 @@
 
     // [right] option
     .product-option-fix{
-        position: fixed;
-        top:'180px';
+        position: absolute;
+        //top:'180px';
         right: 50%;
         width: calcRem(430rem);
         transform: translateX(139.5%);
