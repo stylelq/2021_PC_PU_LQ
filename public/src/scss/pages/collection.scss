@@ -89,11 +89,13 @@
             @include swiperButtonStyle;
             right: calcRem(10rem);
             background: url('../../images/collection/list/collection_slide_next.png') no-repeat center center /contain;
+            cursor: pointer;
           }
           &-prev{
             @include swiperButtonStyle;
             left: calcRem(10rem);
             background: url('../../images/collection/list/collection_slide_prev.png') no-repeat center center /contain;
+            cursor: pointer;
           }
         }
       }
