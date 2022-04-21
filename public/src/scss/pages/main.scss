@@ -48,7 +48,7 @@
     width: 100%;
   }
   &__content{
-    bottom: calcRem(100rem);
+    bottom: calcRem(88rem);
     position: absolute;
     width: 100%;
     text-align: center;
@@ -58,7 +58,7 @@
     line-height: calcRem(28rem);
   }
   &__pagination{
-    bottom: calcRem(40rem);
+    bottom: calcRem(44rem);
     width: 100%;
     position: absolute;
     color: #fff;
@@ -289,8 +289,6 @@
     height:calcRem(16rem);
     position: absolute;
     left:calcRem(130rem);
-    //top: 60.7%;
-    //transform: translateY(-50%);
     @include pageBackground('/images/common/ico_slide_prev.svg','no-repeat center center / contain');
     background-size:calcRem(8rem) calcRem(16rem) ;
     z-index: $childZindex;
@@ -302,8 +300,6 @@
     height:calcRem(16rem);
     position: absolute;
     left:204px;
-    //top: 60.7%;
-    //transform: translateY(-50%);
     @include pageBackground('/images/common/ico_slide_next.svg','no-repeat center center / contain');
     background-size:calcRem(8rem) calcRem(16rem) ;
     z-index: $childZindex;
@@ -343,7 +339,7 @@
     line-height: calcRem(20rem);
   }
   &__option {
-    padding-top: calcRem(40rem);
+    padding-top: calcRem(38rem);
   }
   &__pagination {
     //padding: calcRem(20rem) 0 0;
@@ -382,7 +378,7 @@
   }
   &__more{
     display: block;
-    padding-top: calcRem(25rem);
+    padding-top: calcRem(38rem);
   }
   &__link{
     display: block;
@@ -1571,6 +1567,7 @@
     margin: 0;
     @include heading4;
     text-align:center;
+    text-transform: uppercase;
   }
   &__container{
     overflow: visible;
