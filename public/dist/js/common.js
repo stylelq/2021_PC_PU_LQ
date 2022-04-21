@@ -162,9 +162,13 @@ jQuery(function () {
             positionFixed($('.header').height() + 20);
           }
         }
+
+        $('.detail-height').addClass('is-summary');
       } else {
         $('.detail-tab').removeClass('fixed');
         positionFixed(''); //default css
+
+        $('.detail-height').removeClass('is-summary');
       } // 스크롤 0일때 초기화
 
 
@@ -172,9 +176,9 @@ jQuery(function () {
         $('.detail-tab__item').removeClass('is-current');
         $('.detail-tab__item').eq(0).addClass('is-current');
         $('.detail-tab__info').eq(0).addClass('is-current');
-      } //$('.product-option-fix').css($styleOpt);
+      }
 
-
+      $('.product-option-fix').css($styleOpt);
       return;
     });
   } // 주문서 배송지 option fix scroll
@@ -244,10 +248,10 @@ jQuery(function () {
       minHeight: 600
     }); //오른쪽 옵션값 고정시키기
 
-    /*$('.product-option-fix').css({
-        position: 'fixed',
-        top: $('.header').height()+20
-    });*/
+    $('.product-option-fix').css({
+      position: 'fixed',
+      top: $('.header').height() + 20
+    });
   }
 
   $(document).on('click', '.js-tab-link', detailTab); //주문서 배송지 탭

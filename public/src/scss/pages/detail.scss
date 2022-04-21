@@ -195,6 +195,7 @@
 .detail-Meta{
     padding:calcRem(30rem) calcRem(20rem);
     border-top:solid 1px $black1;
+    display: block;
 
     &__title{
         margin:0;
@@ -245,6 +246,7 @@
 .detail-purchase{
     padding:calcRem(30rem) calcRem(20rem) calcRem(30rem);
     border-top:solid 1px $lightgray4;
+    display: block;
     &__list{
         @include flexWrap;
         @include flex-alignCenter;
@@ -1444,5 +1446,14 @@
         padding:calcRem(9rem) calcRem(20rem);
         box-sizing: border-box;
         text-transform: uppercase;
+    }
+}
+
+// 화면사이즈 높이가 800이하일 때
+@media only screen and (max-height: 800px){
+    .detail-height{
+        &.is-summary {
+            display: none;
+        }
     }
 }

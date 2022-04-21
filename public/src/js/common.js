@@ -144,9 +144,11 @@ jQuery(function(){
                         positionFixed($('.header').height()+20);
                     }
                 }
+                $('.detail-height').addClass('is-summary');
             }else{
                 $('.detail-tab').removeClass('fixed');
                 positionFixed(''); //default css
+                $('.detail-height').removeClass('is-summary');
             }
 
             // 스크롤 0일때 초기화
@@ -155,7 +157,7 @@ jQuery(function(){
                 $('.detail-tab__item').eq(0).addClass('is-current');
                 $('.detail-tab__info').eq(0).addClass('is-current');
             }
-            //$('.product-option-fix').css($styleOpt);
+            $('.product-option-fix').css($styleOpt);
 
             return
         });
@@ -210,6 +212,7 @@ jQuery(function(){
             tab = '[class $= -tab__fix]', //ul
             contents = $('[class *= -tab__info]'), //tab content
             idx = $(this).parent().index();
+
         $(this).closest(tab).children().removeClass('is-current');
         $(this).parent(item).addClass('is-current');
 
@@ -220,11 +223,12 @@ jQuery(function(){
         $('html, body').animate({scrollTop : 920 });
         $('.detail-tab').addClass('fixed');
         contents.eq(idx).css({minHeight: 600});
+
         //오른쪽 옵션값 고정시키기
-        /*$('.product-option-fix').css({
+        $('.product-option-fix').css({
             position: 'fixed',
             top: $('.header').height()+20
-        });*/
+        });
     }
     $(document).on('click', '.js-tab-link', detailTab);
 
