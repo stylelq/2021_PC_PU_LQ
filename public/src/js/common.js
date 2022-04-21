@@ -144,10 +144,12 @@ jQuery(function(){
                         positionFixed($('.header').height()+20);
                     }
                 }
+
                 $('.detail-height').addClass('is-summary');
             }else{
                 $('.detail-tab').removeClass('fixed');
                 positionFixed(''); //default css
+
                 $('.detail-height').removeClass('is-summary');
             }
 
