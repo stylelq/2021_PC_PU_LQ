@@ -149,7 +149,6 @@ jQuery(function(){
             }else{
                 $('.detail-tab').removeClass('fixed');
                 positionFixed(''); //default css
-
                 $('.detail-height').removeClass('is-summary');
             }
 
