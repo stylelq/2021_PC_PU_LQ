@@ -104,17 +104,18 @@
         background: url('../images/common/icon_mypage.svg') no-repeat center top;
       }
       &.type-cart{
-        width: calcRem(16rem);
+        width: calcRem(15rem);
         height: calcRem(20rem);
         background: url('../images/common/icon_basket.svg') no-repeat center top;
         .header-wrap__link{
           position: relative;
           padding: 0;
           top: calcRem(0rem);
-          left: calcRem(-1rem);
+          left: 0;
+          right: 0;
           font-size: calcRem(10rem);
           height: 100%;
-          letter-spacing: calcRem(-2.5rem);
+          letter-spacing: 0;
         }
       }
     }
