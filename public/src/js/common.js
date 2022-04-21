@@ -142,6 +142,7 @@ jQuery(function(){
                         $('.detail-tab').removeClass('fixed');
                     }else{
                         positionFixed($('.header').height()+10);
+
                     }
                 }
 
