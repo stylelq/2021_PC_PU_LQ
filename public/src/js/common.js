@@ -892,7 +892,6 @@ jQuery(function(){
 
 
 
-
     //new 배너슬라이드
     if($('.main-new').length > 0 && $('.main-new__item').length > 1){
         var eventSliderTouch = false;
