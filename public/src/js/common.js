@@ -141,7 +141,7 @@ jQuery(function(){
                         positionAbsolute($divH + 240);
                         $('.detail-tab').removeClass('fixed');
                     }else{
-                        positionFixed($('.header').height()+20);
+                        positionFixed($('.header').height()+10);
                     }
                 }
 
