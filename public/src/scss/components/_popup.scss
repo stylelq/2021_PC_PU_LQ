@@ -18,7 +18,7 @@
         text-align: left;
         p,ol,ul,li,
         .etc__p,
-        .etc__title {
+        .etc__title, {
             font-size: calcRem(12rem);
             font-family: 'Noto Sans KR', sans-serif;
             line-height: calcRem(20rem);
@@ -243,7 +243,17 @@
 }
 
 .section-terms.wrap{
-    height: calcRem(450rem) !important;
+    margin-top: calcRem(20rem);
+    height: calcRem(420rem) !important;
+
+    p,ol,ul,li,
+    .etc__p,
+    .etc__title, {
+        font-size: calcRem(12rem);
+        font-family: 'Noto Sans KR', sans-serif;
+        line-height: calcRem(20rem);
+    }
+
 }
 
 .etc{
@@ -681,7 +691,7 @@
         padding-bottom:calcRem(20rem);
         border-bottom:solid 1px $gray1;
         &.terms{
-            border-bottom: none;
+            //border-bottom: none;
         }
 
         &--title,
