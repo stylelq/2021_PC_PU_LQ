@@ -339,6 +339,7 @@
     line-height: calcRem(20rem);
   }
   &__option {
+    display: block;
     padding-top: calcRem(38rem);
   }
   &__pagination {
@@ -427,40 +428,47 @@
   }
 
   &__content {
-    bottom: calcRem(50rem);
+    bottom: calcRem(88rem);
+    width: 100%;
     position: absolute;
+    text-align: center;
   }
 
   &__name {
     font-size: calcRem(22rem);
     line-height: calcRem(28rem);
+    &.is-white{
+      color: #fff;
+    }
   }
 
-  &__pagination {
-    bottom: calcRem(22rem);
+  &__pagination{
+    bottom: calcRem(44rem);
     width: 100%;
     position: absolute;
     color: #fff;
     text-align: center;
     z-index: 100;
-    font-size: 0;
-    line-height: 0;
-
-    &.is-white {
+    font-size:0;
+    line-height:0;
+    &.is-white{
       color: #000;
-
-      .swiper-pagination-current:after {
+      .swiper-pagination-current:after{
         background-color: #000;
       }
     }
 
-    &.is-black {
+    &.is-black{
       color: #fff;
     }
 
-    .swiper-pagination {
+    &.disabled{
+      display: none !important;
+    }
+
+    .swiper-pagination{
       &-current {
-        font-size: calcRem(12rem);
+        font-size: calcRem(18rem);
         line-height: calclH(19, 12);
         padding-right: calcRem(11rem);
         position: relative;
@@ -469,41 +477,39 @@
           content: "";
           width: 1px;
           height: calcRem(10rem);
-          background-color: $gray1;
+          background-color: #fff;
           position: absolute;
           right: 0;
           @include vertical-center;
         }
       }
-
-      &-total {
-        font-size: calcRem(12rem);
-        line-height: calclH(19, 12);
-        padding-left: calcRem(10rem);
+      &-total{
+        font-size:calcRem(18rem);
+        line-height:calclH(19,12);
+        padding-left:calcRem(10rem);
       }
     }
   }
 
   // 프로그래스바
-  .swiper-progress-bar {
+  .swiper-progress-bar{
     bottom: 0;
     position: absolute;
     width: 100%;
     display: block;
     z-index: 1;
     height: calcRem(3rem);
-
     .slide_progress-bar {
+      margin: 0 auto;
       position: absolute;
+      width: calcRem(480rem);
       height: calcRem(3rem);
       background: rgba(255, 255, 255, 0.5);
-      width: auto;
       clear: both;
       opacity: 0;
-      bottom: 0;
+      bottom: calcRem(20rem);
       left: 0;
       right: 0;
-
       &:after {
         position: absolute;
         top: 0;
@@ -515,13 +521,11 @@
         transition: 0.1s width linear;
       }
     }
-
     &.active {
       .slide_progress-bar {
         opacity: 1;
       }
     }
-
     &.animate {
       .slide_progress-bar {
         &:after {
@@ -1021,7 +1025,7 @@
     &--item{
       display: inline-block;
       vertical-align: middle;
-      padding: calcRem(8rem) 0;
+      padding: calcRem(18rem) 0;
       width: 15.33333%;
       border-top: 2px solid transparent;
       &.is-current{
@@ -1093,7 +1097,7 @@
 
   //페이징
   &__pagination {
-    padding-top: calcRem(64rem);
+    padding-top: calcRem(60rem);
     text-align: center;
     font-size: 0;
     line-height: 0;
@@ -1149,7 +1153,7 @@
 //메인 배너슬라이드3
 .main-banner3 {
   position: relative;
-  padding-top: calcRem(60rem);
+  //padding-top: calcRem(60rem);
 
   &__inner {
     display: block;
@@ -1170,7 +1174,7 @@
   }
 
   &__content {
-    bottom: calcRem(100rem);
+    bottom: calcRem(88rem);
     position: absolute;
   }
 
@@ -1447,14 +1451,18 @@
 
 // 선물 추천
 .main-gift{
+  &-bottom{
+    margin-bottom: calcRem(57rem);
+  }
   &__wrap{
     display: flex;
   }
   &__inner{
-    padding: calcRem(50rem);
+    padding: 0 calcRem(50rem);
   }
   &__title{
-    padding-bottom: calcRem(140rem);
+    margin-top: calcRem(50rem);
+    margin-bottom: calcRem(120rem);
     font-size: calcRem(30rem);
     font-weight: 400;
     text-transform: uppercase;
@@ -1519,7 +1527,8 @@
     display: flex;
   }
   &__title {
-    padding-bottom: calcRem(140rem);
+    margin-top: calcRem(50rem);
+    margin-bottom: calcRem(120rem);
     color: #9B192F;
     font-size: calcRem(30rem);
     font-weight: 400;
