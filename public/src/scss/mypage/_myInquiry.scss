@@ -103,6 +103,9 @@
         &__title{
             @include body7;
         }
+        &__num{
+            display: block;
+        }
     }
 
     &__body{
