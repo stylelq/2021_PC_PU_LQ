@@ -653,7 +653,8 @@
         text-align: left;
 
         &.platforml-only{
-          padding: 0;
+            padding: 0;
+            height: auto;
        }
        &.terms-only{
          width: calcRem(600rem);
