@@ -170,6 +170,14 @@
     &__inner{
       font-size: calcRem(14rem);
       font-weight: 400;
+      position:relative;
+      overflow:hidden;
+      display:inline-block;
+      color:#000 !important;
+      &:hover{
+        &:after{width:100%;}
+      }
+      &:after{position:absolute; bottom:0; left:0; width:0; height:0; border-bottom:1px solid $black1; transition: width 0.2s; content:'';}
     }
   }
 
@@ -221,6 +229,16 @@
     }
     &__item{
       padding-bottom: calcRem(15rem);
+    }
+    &__inner{
+      position:relative;
+      overflow:hidden;
+      display:inline-block;
+      color:#000 !important;
+      &:hover{
+        &:after{width:100%;}
+      }
+      &:after{position:absolute; bottom:0; left:0; width:0; height:0; border-bottom:1px solid $black1; transition: width 0.2s; content:'';}
     }
   }
 }
