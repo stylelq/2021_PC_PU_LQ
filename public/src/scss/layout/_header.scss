@@ -229,14 +229,14 @@
 .header-mypage{
     display:none;
     position:absolute;
-    left:60%;
+    left:63%;
     transform: translateX(-50%);
     z-index:60;
     &.is-active{display:block;}
     &__list{
       position:relative;
       width:120px;
-      margin:26px 0 0 0;
+      //margin:26px 0 0 0;
       padding:20px;
       border:1px solid #ccc;
       background-color:#fff;
