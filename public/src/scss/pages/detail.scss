@@ -34,10 +34,10 @@
             position: relative;
             &:after{
                 content: "";
-                width: 0.75rem;
-                height: 0.75rem;
+                width: calcRem(14rem);
+                height: calcRem(14rem);
                 background: url(../../images/common/ico_zoom.svg?ver=211025) no-repeat center center / contain;
-                background-size: 0.75rem 0.75rem;
+                background-size: calcRem(14rem) calcRem(14rem);
                 position: absolute;
                 top: 50%;
                 left: 50%;
