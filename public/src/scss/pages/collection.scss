@@ -61,10 +61,14 @@
         display: block;
       }
       &__button{
+        position: absolute;
+        margin: 0 calcRem(100rem);
+        width: calcRem(360rem);
+        height: calcRem(50rem);
         color: #fff;
         border: 1px solid #fff;
-        margin: 0 calcRem(100rem);
-        padding: calcRem(12rem) 0;
+        line-height: calcRem(50rem);
+        box-sizing: border-box;
       }
     }
 
@@ -239,9 +243,12 @@
         cursor: pointer;
       }
       &__box{
+        width: calcRem(210rem);
+        height: calcRem(42rem);
         color: #fff;
         border: 1px solid #fff;
-        padding: calcRem(14rem) calcRem(64rem);
+        line-height: calcRem(40rem);
+        box-sizing: border-box;
       }
     }
 
