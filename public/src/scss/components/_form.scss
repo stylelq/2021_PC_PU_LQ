@@ -665,10 +665,10 @@ input {
 
     &:after{
       content:"";
-      width:calcRem(8rem);
-      height:calcRem(5rem);
+      width:calcRem(10rem);
+      height:calcRem(7rem);
       @include background('/images/common/ico_red-checked.svg','no-repeat center center / contain');
-      background-size:calcRem(8rem) calcRem(5rem);
+      background-size:calcRem(10rem) calcRem(7rem);
       @include ab-center;
       opacity: 0;
     }
