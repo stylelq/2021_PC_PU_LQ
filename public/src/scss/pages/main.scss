@@ -1452,17 +1452,23 @@
 // 선물 추천
 .main-gift{
   &-bottom{
-    margin-bottom: calcRem(57rem);
+    padding-bottom: calcRem(50rem);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    //margin-bottom: calcRem(57rem);
   }
   &__wrap{
     display: flex;
   }
   &__inner{
-    padding: 0 calcRem(50rem);
+    position: relative;
+    height: 100%;
+    margin: 0 calcRem(50rem);
+    //padding: 0 calcRem(50rem);
   }
   &__title{
-    margin-top: calcRem(50rem);
-    margin-bottom: calcRem(120rem);
+    padding: calcRem(50rem) 0 calcRem(250rem);
     font-size: calcRem(30rem);
     font-weight: 400;
     text-transform: uppercase;
@@ -1527,15 +1533,11 @@
     display: flex;
   }
   &__title {
-    margin-top: calcRem(50rem);
-    margin-bottom: calcRem(120rem);
+    padding: calcRem(50rem) 0 calcRem(250rem);
     color: #9B192F;
     font-size: calcRem(30rem);
     font-weight: 400;
     text-transform: uppercase;
-  }
-  &__logo{
-
   }
   &__txt{
     margin-left: calcRem(24rem);
@@ -1544,8 +1546,8 @@
     font-size: calcRem(18rem);
     font-weight: 300;
   }
-
   &__button{
+
     width: calcRem(240rem);
     height: calcRem(50rem);
     color: #fff;
@@ -1729,6 +1731,55 @@
           transition-duration: 5s;
         }
       }
+    }
+  }
+}
+
+
+// 선물추천 및 멤버십 1200px이하일 때
+@media screen and (max-width: 1200px) {
+  .main-gift{
+    &__inner{
+      margin: 0 calcRem(30rem);
+    }
+    &__bottom{
+      top: calcRem(120rem);
+      position: absolute;
+      display: block;
+    }
+    &__gender{
+      right: 0;
+      bottom: calcRem(40rem);
+      position: absolute;
+      width: calcRem(150rem);
+    }
+    &__info{
+      &--bottom{
+        padding-top: calcRem(24rem);
+      }
+    }
+  }
+
+  .main-membership{
+    &__txt{
+      margin: 0;
+      width: 100%;
+    }
+    &__logo{
+      float: left;
+      display: inline-block;
+      padding-right: calcRem(20rem);
+    }
+    &__info{
+      top: calcRem(120rem);
+      position: absolute;
+      display: block;
+    }
+    &__button{
+      right: 0;
+      bottom: calcRem(40rem);
+      position: absolute;
+      display: inline-block;
     }
   }
 }
