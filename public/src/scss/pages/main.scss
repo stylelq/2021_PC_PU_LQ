@@ -1142,9 +1142,12 @@
   }
 
   &__name{
+    margin: 0 auto;
+    padding-bottom: calcRem(18rem);
+    width: calcRem(308rem);
+    height: calcRem(40rem);
     font-weight: 300;
     text-align: center;
-    padding-bottom: calcRem(5rem);
   }
 
   &__price {
