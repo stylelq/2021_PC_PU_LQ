@@ -964,7 +964,7 @@ jQuery(function () {
     /*슬라이드 온클릭 시 자동슬라이드 정지*/
 
     $(document).on('click', mainNewSlide, function () {
-      mainNewSlide.autoplay.stop();
+      mainNewSlide.autoplay.stop(); //mainNewSlide.speed = 500;
     });
   } //메인 배너슬라이드2
 
@@ -1173,7 +1173,7 @@ jQuery(function () {
 
 
   if ($('.main-banner4').length > 0 && $('.main-banner4__item').length > 1) {
-    var mainNewSlide = new Swiper('.main-banner4__container', {
+    var mainSlide = new Swiper('.main-banner4__container', {
       observer: true,
       observeParents: true,
       watchOverflow: true,
@@ -1233,8 +1233,8 @@ jQuery(function () {
     });
     /*슬라이드 온클릭 시 자동슬라이드 정지*/
 
-    $(document).on('click', mainNewSlide, function () {
-      mainNewSlide.autoplay.stop();
+    $(document).on('click', mainSlide, function () {
+      mainSlide.autoplay.stop();
     });
   } //--END[swiper slider]-----------------------------
 

@@ -1588,7 +1588,7 @@
     margin: 0 calcRem(100rem);
   }
   &__item{
-    padding: 0 calcRem(14rem);
+    padding: 0 calcRem(7rem);
     box-sizing: border-box;
   }
   &__inner {
@@ -1601,8 +1601,11 @@
     width: 100%;
   }
   &__img {
+    margin: 0 auto;
     display: block;
     width: 100%;
+    //min-width: calcRem(1600rem);
+    //max-width: calcRem(1600rem);
   }
 
   &__content {
