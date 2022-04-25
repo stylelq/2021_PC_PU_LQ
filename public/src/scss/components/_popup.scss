@@ -253,6 +253,16 @@
         line-height: calcRem(20rem);
     }
 
+    .etc__dl, .etc__dt, .etc__dd{
+        margin-bottom: 0;
+        font-size: calcRem(12rem);
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 300;
+    }
+    .etc__dd span{
+        font-weight: 400;
+    }
+
 }
 
 .etc{
@@ -2176,9 +2186,9 @@
   padding-top:calcRem(25rem);
 
   &__scroll{
-      overflow: hidden;
-      overflow-y: auto;
-      max-height:calc(100vh - #{calcRem(290rem)});
+      //overflow: hidden;
+      //overflow-y: auto;
+      //max-height:calc(100vh - #{calcRem(290rem)});
       line-height: 0;
 
       img{
