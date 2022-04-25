@@ -943,6 +943,7 @@ jQuery(function(){
             mainNewSlide.autoplay.stop();
             //mainNewSlide.speed = 500;
         });
+
     }
 
     //메인 배너슬라이드2
