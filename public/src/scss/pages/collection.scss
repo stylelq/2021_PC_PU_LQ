@@ -593,7 +593,10 @@
     &__item{
       width: 33%;
       float: left;
-      padding-top: calcRem(40rem);
+      //padding-top: calcRem(40rem);
+      padding: calcRem(20rem) 0 calcRem(60rem);
+      position: relative;
+      box-sizing: border-box;
     }
   }
 
