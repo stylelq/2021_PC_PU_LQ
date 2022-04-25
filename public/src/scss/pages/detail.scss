@@ -193,7 +193,7 @@
 
 //제품 메타값
 .detail-Meta{
-    padding:calcRem(30rem) calcRem(20rem);
+    padding:calcRem(30rem) calcRem(15rem);
     border-top:solid 1px $black1;
     display: block;
 
@@ -244,7 +244,7 @@
 
 //제품 구매시 정보
 .detail-purchase{
-    padding:calcRem(30rem) calcRem(20rem) calcRem(30rem);
+    padding:calcRem(20rem) calcRem(15rem) calcRem(20rem);
     border-top:solid 1px $lightgray4;
     display: block;
     &__list{
@@ -305,11 +305,11 @@
 
 //제품 옵션 정보
 .detail-option{
-    padding:calcRem(30rem) calcRem(20rem) calcRem(30rem);
+    padding:calcRem(25rem) calcRem(15rem) calcRem(30rem);
     border-top:solid 1px $lightgray4;
 
     &__item{
-        margin-top:calcRem(20rem);
+        margin-top:calcRem(15rem);
 
         &:first-child{
             margin-top:0;
@@ -406,7 +406,7 @@
 .detail-sum{
 
     &__inner{
-        padding-top:calcRem(40rem);
+        padding-top:calcRem(35rem);
     }
 
     &__quantity--title{
@@ -455,7 +455,7 @@
             content: '';
             display: block;
             width: calc(100% + #{calcRem(40rem)});
-            margin: calcRem(20rem) calcRem(-20rem);
+            margin: calcRem(26rem) calcRem(-20rem) calcRem(7rem);
             height: 0.03em;
             background-color: $black1;
         }
