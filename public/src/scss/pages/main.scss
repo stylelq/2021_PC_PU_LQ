@@ -1031,6 +1031,9 @@
       &.is-current{
         border-top: 2px solid #000;
       }
+      &:nth-child(2){
+        margin: 0 calcRem(50rem);
+      }
     }
 
     &--link{
@@ -1574,10 +1577,9 @@
   }
   &__txt{
     margin: 0;
-    @include heading4;
+    @include heading5;
     text-align:center;
     text-transform: uppercase;
-    font-weight: 300;
   }
   &__container{
     overflow: visible;
