@@ -666,11 +666,13 @@
         &.platforml-only{
             padding: 0;
             height: auto;
-       }
-
-       &.terms-only{
-         width: calcRem(600rem);
-       }
+        }
+        &.terms-only{
+            width: calcRem(600rem);
+        }
+        &.naver-only{
+            height: 100%;
+        }
 
        .wrap{
           padding: 0;
@@ -2193,7 +2195,8 @@
       line-height: 0;
 
       img{
-          width:100%;
+          //width:100%;
+          margin: 0 auto;
           display: block;
       }
   }
