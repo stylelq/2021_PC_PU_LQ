@@ -1187,6 +1187,10 @@ jQuery(function () {
         el: ".main-banner4__pagination",
         type: "fraction"
       },
+      navigation: {
+        nextEl: ".main-banner4__next",
+        prevEl: ".main-banner4__prev"
+      },
       on: {
         init: function init() {
           var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
