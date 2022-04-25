@@ -215,6 +215,9 @@
       list-style: none;
       vertical-align: top;
       text-align: left;
+      &.only-project{
+        width: calcRem(250rem);
+      }
     }
     &__inner{
       font-size: calcRem(14rem);
