@@ -240,7 +240,7 @@
   position: relative;
   display: flex;
   overflow: hidden;
-  padding: calcRem(120rem) 0 calcRem(104rem);
+  padding: calcRem(100rem) 0 calcRem(100rem);
 
   &__wrap{
     display: flex;
@@ -997,7 +997,7 @@
 
 //구매자 베스트
 .main-best{
-  margin: calcRem(140rem) auto calcRem(140rem);
+  margin: calcRem(150rem) auto calcRem(150rem);
   width: calcRem(1200rem);
   min-width: calcRem(1200rem);
 
@@ -1100,7 +1100,7 @@
 
   //페이징
   &__pagination {
-    padding-top: calcRem(60rem);
+    padding-top: calcRem(40rem);
     text-align: center;
     font-size: 0;
     line-height: 0;
@@ -1296,7 +1296,7 @@
   position: relative;
   display: flex;
   overflow: hidden;
-  padding: calcRem(120rem) 0 calcRem(104rem);
+  padding: calcRem(100rem) 0 calcRem(100rem);
 
   &__wrap{
     display: flex;
@@ -1500,7 +1500,7 @@
     }
     &--bottom{
       margin: 0;
-      padding-top: calcRem(38rem);
+      padding-top: calcRem(32rem);
       font-size: calcRem(18rem);
       font-weight: 300;
     }
@@ -1552,6 +1552,7 @@
     color: #9B192F;
     font-size: calcRem(18rem);
     font-weight: 300;
+    //white-space: nowrap;
   }
   &__button{
     width: calcRem(240rem);
@@ -1571,7 +1572,7 @@
 .main-banner4 {
   position: relative;
   overflow: hidden;
-  padding: calcRem(60rem) 0 calcRem(80rem);
+  padding: calcRem(130rem) 0 calcRem(130rem);
 
   &__title{
     @include heading3;
@@ -1594,7 +1595,7 @@
     margin: 0 calcRem(100rem);
   }
   &__item{
-    padding: 0 calcRem(7rem);
+    padding: 0 calcRem(3rem);
     box-sizing: border-box;
   }
   &__inner {

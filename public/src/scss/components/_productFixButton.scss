@@ -28,6 +28,7 @@
         text-align: center;
         box-sizing: border-box;
         position: relative;
+        width: calcRem(200rem);
         min-width: calcRem(60rem);
 
         &:not(:last-child):after{
