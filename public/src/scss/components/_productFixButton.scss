@@ -16,7 +16,6 @@
         background-color: $bgSiteColor;
         border: 1px solid $lightgray4;
     }
-
     &:after{
         @include block-reset;
     }

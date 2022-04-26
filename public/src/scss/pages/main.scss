@@ -1500,7 +1500,7 @@
     }
     &--bottom{
       margin: 0;
-      padding-top: calcRem(32rem);
+      padding-top: calcRem(8rem);
       font-size: calcRem(18rem);
       font-weight: 300;
     }
@@ -1553,7 +1553,7 @@
     color: #9B192F;
     font-size: calcRem(18rem);
     font-weight: 300;
-    //white-space: nowrap;
+    line-height: calcRem(28rem);
   }
   &__button{
     width: calcRem(240rem);
@@ -1701,7 +1701,7 @@
     height: calcRem(3rem);
 
     .slide_progress-bar {
-      margin: 0 calcRem(105rem);
+      margin: 0 calcRem(103rem);
       position: absolute;
       height: calcRem(3rem);
       background: rgba(255, 255, 255, 0.5);
@@ -1711,7 +1711,6 @@
       bottom: 0;
       left: 0;
       right: 0;
-
       &:after {
         position: absolute;
         top: 0;
