@@ -1538,6 +1538,7 @@
   }
   &__info{
     display: flex;
+    bottom: calcRem(20rem);
   }
   &__title {
     padding: calcRem(50rem) 0 calcRem(250rem);
