@@ -28,7 +28,7 @@
         p+span{ @include body7; }
     }
     &__search-btn{
-        width: calcRem(100rem);
+        width: calcRem(120rem);
         background-color: $whiteColor;
         @include body8;
         &:nth-child(2){
@@ -142,4 +142,88 @@
 .myOrderListDetail-user + .center-single__btn{
     width: calcRem(200rem);
     margin:calcRem(60rem) auto 0;
+}
+
+
+//현금영수증 신청팝업
+.receipt{
+    &-tab{
+        &__fix{
+            text-align: left;
+            width: 100%;
+        }
+        &__item{
+            display: inline-block;
+            margin-right: calcRem(20rem);
+            label{cursor: pointer;}
+        }
+    }
+    &-info{
+        &__title{
+            padding: calcRem(30rem) 0;
+        }
+        &__group{
+            @include flexNoWrap;
+            margin:0;
+            &:not(:last-child){
+                margin-bottom: calcRem(10rem);
+            }
+            dt{
+                width: calcRem(120rem);
+                @include body7;
+                text-align: left;
+            }
+            dd{
+                width: 100%;
+                @include body7;
+            }
+        }
+        &__field{
+            width: 50%;
+            position:relative;
+            box-sizing: border-box;
+
+            //이메일 input box
+            .input-v1{
+                width: 100%;
+                height: calcRem(38rem);
+                padding: calcRem(8rem) calcRem(10rem) calcRem(8rem);
+                font-size: calcRem(12rem);
+                font-weight: 500;
+                letter-spacing: calcRem(1rem);
+                line-height: 1.666667;
+                border: 1px solid #CBCBCB;
+                box-sizing: border-box;
+                appearance: none;
+                box-shadow: none;
+            }
+        }
+        &__select{
+            position:absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            width:calcRem(119rem);
+
+            //이메일 selectbox
+            .form__select{
+                display: block;
+                width: 100%;
+                height: calcRem(38rem);
+                border: solid 1px #CBCBCB;
+                font-size: calcRem(12rem);
+                line-height: 1.666667;
+                letter-spacing: calcRem(1rem);
+                font-weight: 500;
+                color: #979797;
+                padding: calcRem(8rem) calcRem(10rem) calcRem(8rem);
+                @include pageBackground('/images/join/ico_qna_more.png','no-repeat center center / contain');
+                background-size: 0.5rem 0.25rem;
+                background-position: calc(100% - 0.625rem) center;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+    }
 }
