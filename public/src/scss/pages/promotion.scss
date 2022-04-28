@@ -34,6 +34,10 @@
 }
 
 .promotion{
+  &-side{
+      margin: 0 auto;
+      width: calcRem(1200rem);
+  }
   // 프로모션 리스트
   // 프로모션 메인배너
   &-banner{
@@ -124,11 +128,6 @@
 
   // 프로모션 뷰 비주얼
   &-view{
-    &.only-may{
-      margin: 0 auto;
-      padding: calcRem(60rem) calcRem(194rem) calcRem(100rem);
-    }
-
     padding: calcRem(60rem) 0 calcRem(100rem);
     &.payco-only{
       margin: 0 auto;
@@ -162,7 +161,7 @@
       }
     }
     &__visual{
-      min-width: calcRem(1200rem);
+     // min-width: calcRem(1200rem);
       img{
         @include imageBlock;
       }
@@ -359,7 +358,7 @@
   //가격대별 선물추천
   &-recommend{
     margin: calcRem(57rem) auto 0 0;
-    min-width: calcRem(1200rem);
+    //min-width: calcRem(1200rem);
 
     &__header{
       margin-bottom:calcRem(20rem);
