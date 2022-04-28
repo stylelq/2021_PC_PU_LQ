@@ -262,7 +262,7 @@
           font-family: 'Noto Sans KR', sans-serif;
           font-weight: 400;
           line-height: calcRem(40rem);
-          letter-spacing: calcRem(2.2rem);
+          letter-spacing: calcRem(1rem);
           text-transform: uppercase;
         }
     }
@@ -401,6 +401,7 @@
       &--link{
         display: block;
         font-size: calcRem(18rem);
+        font-family: 'Noto Sans KR', sans-serif;
         line-height: calcRem(44rem);
         font-weight: $regular;
         .is-current &{
