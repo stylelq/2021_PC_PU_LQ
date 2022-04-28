@@ -382,7 +382,7 @@
       &--item{
         display: inline-block;
         vertical-align: middle;
-        width: 16.33333%;
+        width: 25.33333%;
 
         color: #4C72B1;
         border: 1px solid #4B6DC3;
@@ -400,7 +400,7 @@
 
       &--link{
         display: block;
-        font-size: calcRem(22rem);
+        font-size: calcRem(18rem);
         line-height: calcRem(44rem);
         font-weight: $regular;
         .is-current &{
