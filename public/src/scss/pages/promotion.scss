@@ -401,6 +401,7 @@
         opacity: 0.5;
         text-transform: uppercase;
         font-weight: $regular;
+
         .is-current &{
           opacity: 1;
         }
