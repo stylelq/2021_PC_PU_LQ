@@ -157,6 +157,7 @@
       }
     }
     &__visual{
+      min-width: calcRem(1200rem);
       img{
         @include imageBlock;
       }
@@ -194,6 +195,10 @@
     &__video{
       width: 100%;
       display: block;
+      line-height: 0;
+      &--src{
+        width: 100%;
+      }
     }
     &__videoNew{
       width: 100%;
@@ -214,7 +219,6 @@
       -ms-user-select: auto;
       user-select: auto;
     }
-
     &__motion{
       overflow: hidden;
     }
@@ -224,6 +228,38 @@
       white-space: nowrap;
       -webkit-animation: photoline 20s infinite linear;
       animation: photoline 20s infinite linear;
+    }
+
+    &__contents{
+        display: block;
+        position: relative;
+        width: 100%;
+        padding-top: calcRem(70rem);
+        text-align: center;
+        background-color: #fbfbfb;
+    }
+    &__header{
+        color: #2C5497;
+        &--en{
+          margin: 0;
+          font-size: calcRem(44rem);
+          font-family: $defaultFont;
+          font-weight: 300;
+          line-height: calcRem(40rem);
+          text-transform: uppercase;
+          letter-spacing: calcRem(1.6rem);
+        }
+        &--ko{
+          margin: 0;
+          padding-top: calcRem(10rem);
+          font-size: calcRem(22rem);
+          //font-family: $font-kor;
+          font-family: 'Noto Sans KR', sans-serif;
+          font-weight: 300;
+          line-height: calcRem(40rem);
+          letter-spacing: calcRem(2.2rem);
+          text-transform: uppercase;
+        }
     }
   }
 
@@ -314,6 +350,216 @@
       }
     }
   }
+
+  //가격대별 선물추천
+  &-recommend{
+    margin: calcRem(57rem) auto 0 0;
+    min-width: calcRem(1200rem);
+
+    &__header{
+      margin-bottom:calcRem(20rem);
+      text-align: center;
+    }
+
+    &__title{
+      @include heading3;
+      text-transform: uppercase;
+      margin:0 0 calcRem(30rem);
+    }
+
+    //tab
+    &__tab{
+      &--inner{
+        text-align: center;
+        font-size:0;
+        line-height:0;
+      }
+
+      &--item{
+        display: inline-block;
+        vertical-align: middle;
+        width: 20.33333%;
+        //width: calcRem(390rem);
+        color: #4C72B1;
+        border: 1px solid #4B6DC3;
+        box-sizing: border-box;
+        &.is-current{
+          color: #18499A;
+          border: 1px solid #4B6DC3;
+          background: rgba(170, 184, 220, 0.33);
+        }
+        &:nth-child(2){
+          border-left: 1px solid transparent;
+          border-right: 1px solid transparent;
+        }
+      }
+
+      &--link{
+        display: block;
+        font-size: calcRem(22rem);
+        line-height: calcRem(44rem);
+        opacity: 0.5;
+        text-transform: uppercase;
+        font-weight: $regular;
+
+        .is-current &{
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &-thumb {
+    //썸네일
+    &__inner {
+      position: relative;
+      width: 100%;
+      display: block;
+    }
+
+    &__img {
+      width: 100%;
+    }
+
+    //prev, next
+    &--prev {
+      width: calcRem(15rem);
+      height: calcRem(30rem);
+      position: absolute;
+      left: 0;
+      @include vertical-center;
+      @include pageBackground('/images/common/ico_slide_prev.svg', 'no-repeat center center / contain');
+      background-size: calcRem(15rem) calcRem(30rem);
+      z-index: $childZindex;
+      cursor: pointer;
+    }
+
+    &--next {
+      width: calcRem(15rem);
+      height: calcRem(30rem);
+      position: absolute;
+      right: 0;
+      @include vertical-center;
+      @include pageBackground('/images/common/ico_slide_next.svg', 'no-repeat center center / contain');
+      background-size: calcRem(15rem) calcRem(30rem);
+      z-index: $childZindex;
+      cursor: pointer;
+    }
+
+    //페이징
+    &__pagination {
+      padding-top: calcRem(40rem);
+      text-align: center;
+      font-size: 0;
+      line-height: 0;
+
+      .swiper-pagination {
+        &-current {
+          font-size: calcRem(18rem);
+          line-height: calclH(19, 12);
+          padding-right: calcRem(11rem);
+          position: relative;
+
+          &:after {
+            content: "";
+            width: 1px;
+            height: calcRem(10rem);
+            background-color: $gray1;
+            position: absolute;
+            right: 0;
+            @include vertical-center;
+          }
+        }
+
+        &-total {
+          font-size: calcRem(18rem);
+          line-height: calclH(19, 12);
+          padding-left: calcRem(10rem);
+        }
+      }
+    }
+
+    // 프로그래스바
+    .swiper-progress-bar {
+      bottom: 0;
+      position: absolute;
+      width: 100%;
+      display: block;
+      z-index: 1;
+      height: calcRem(3rem);
+
+      .slide_progress-bar {
+        margin: 0 auto;
+        position: absolute;
+        width: calcRem(356rem);
+        height: calcRem(2rem);
+        //background: rgba(255, 255, 255, 0.5);
+        background: #dcdcdc;
+        clear: both;
+        opacity: 0;
+        bottom: calcRem(30rem);
+        left: 0;
+        right: 0;
+
+        &:after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: #2C5497;
+          height: 100%;
+          width: 0;
+          content: "";
+          transition: 0.1s width linear;
+        }
+      }
+
+      &.active {
+        .slide_progress-bar {
+          opacity: 1;
+        }
+      }
+
+      &.animate {
+        .slide_progress-bar {
+          &:after {
+            width: 100%;
+            transition: width linear;
+            transition-delay: unset;
+            transition-duration: 5s;
+          }
+        }
+      }
+    }
+
+
+    //상품명,가격
+    &__bottom {
+      bottom: calcRem(-28rem);
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      font-size: calcRem(16rem);
+      line-height: calcRem(20rem);
+    }
+
+    &__name{
+      margin: 0 auto;
+      //padding-bottom: calcRem(18rem);
+      //width: calcRem(308rem);
+      height: calcRem(40rem);
+      font-weight: 300;
+      text-align: center;
+      line-height: calcRem(24rem);
+    }
+
+    &__price {
+      @include body2;
+      position: absolute;
+      width: 100%;
+      margin-top: calcRem(18rem);
+    }
+  }
+
 }
 
 
