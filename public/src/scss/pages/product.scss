@@ -49,6 +49,14 @@
     &__cont{
         width: calcRem($minWidth);
         margin: calcRem(30rem) auto 0;
+
+        //데이터 없음
+        .notData-wrap{
+            @include body5;
+            text-align: center;
+            padding:calcRem(80rem) calcRem(20rem);
+            font-size:calcRem(12rem);
+        }
     }
 }
 
