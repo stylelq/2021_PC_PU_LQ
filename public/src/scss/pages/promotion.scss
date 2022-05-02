@@ -38,6 +38,19 @@
       margin: 0 auto;
       width: calcRem(1200rem);
   }
+  &-important{
+    background-color: #f3f3f3;
+    &__wrap{
+      margin: 0 auto;
+      padding: calcRem(24rem) 0;
+      width: calcRem(1050rem);
+      color: #9d9d9d;
+      font-size: calcRem(15rem);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 400;
+      line-height: calcRem(25rem);
+    }
+  }
 
   // 프로모션 리스트
   // 프로모션 메인배너
@@ -130,11 +143,59 @@
   // 프로모션 뷰 비주얼
   &-view{
     padding: calcRem(60rem) 0 calcRem(100rem);
+    min-width: calcRem(1200rem);
+
     &.payco-only{
       margin: 0 auto;
       width: calcRem(894rem);
       min-width: calcRem(894rem);
     }
+    &__txt{
+      display: block;
+      padding: calcRem(40rem) 0 calcRem(90rem);
+      color: #000;
+      font-size: calcRem(18rem);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 300;
+      line-height: calcRem(30rem);
+      &--bold{
+        font-weight: 400;
+      }
+    }
+    &__list{
+      display: block;
+      padding-top: calcRem(46rem);
+    }
+    &__item{
+      display: inline-block;
+      font-size: calcRem(18rem);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 300;
+      letter-spacing: calcRem(1.3rem);
+
+      &--bold{
+        font-weight: 400;
+      }
+
+      &:before{
+        content:'·';
+        left: calcRem(4rem);
+        position: relative;
+        width: calcRem(1rem);
+        height: calcRem(1rem);
+        font-weight: 400;
+      }
+
+      &:nth-child(2){
+        margin-left: calcRem(35rem);
+      }
+
+      &:last-child{
+        display: block;
+        padding-top: calcRem(30rem);
+      }
+    }
+
     &__name{
       font-size: calcRem(24rem);
       font-weight: 400;
@@ -236,6 +297,10 @@
     }
 
     &__contents{
+        &.comment-only{
+            padding: calcRem(155rem) 0;
+            background-color: #ddf7ff;
+        }
         display: block;
         position: relative;
         width: 100%;
@@ -255,7 +320,7 @@
           text-transform: uppercase;
           letter-spacing: calcRem(1.6rem);
         }
-        &--ko{
+        &--ko {
           margin: 0;
           padding-top: calcRem(10rem);
           font-size: calcRem(22rem);
@@ -265,6 +330,50 @@
           letter-spacing: calcRem(1rem);
           text-transform: uppercase;
         }
+    }
+
+    &__product{
+      margin: 0 auto;
+      width: calcRem(1200rem);
+    }
+
+    &__howto{
+      padding-top: calcRem(100rem);
+    }
+
+    &__top{
+      margin: 0;
+      padding-bottom: calcRem(25rem);
+      font-size: calcRem(24rem);
+      line-height: calcRem(25rem);
+    }
+
+    &__step{
+      display: block;
+      font-size: calcRem(18rem);
+    }
+
+    &__box{
+      display: inline-block;
+      width: calcRem(200rem);
+      background-color: #fff;
+    }
+
+    &__arrow{
+      bottom: calcRem(18rem);
+      position: relative;
+      padding: 0 calcRem(35rem);
+      display: inline-block;
+    }
+    &__inner{
+      padding: calcRem(18rem) 0;
+      font-weight: 300;
+      font-family: 'Noto Sans KR', sans-serif;
+      line-height: calcRem(28rem);
+      letter-spacing: calcRem(1.3rem);
+      &--bold{
+        font-weight: 400;
+      }
     }
   }
 
@@ -864,6 +973,9 @@
       font-size: calcRem(22rem);
       font-weight: 300;
       text-align: center;
+      &.lala-wallet{
+        color: #000;
+      }
     }
     &__area{
       width: 100%;
@@ -876,6 +988,9 @@
       color: #000;
       outline: none;
       resize: none;
+      ::placeholder{
+        color: #d7d7d7;
+      }
     }
     &__btn{
       display: block;
@@ -887,6 +1002,10 @@
       text-align: center;
       font-size: calcRem(16rem);
       background-color: #8e4db3;
+      &.lala-wallet{
+        color:#000 !important;
+        background-color: #daf6ff;
+      }
     }
     &__list{
       padding: 0;
@@ -906,6 +1025,7 @@
       text-overflow: inherit;
       white-space: normal;
       vertical-align: middle;
+      font-family: 'Noto Sans KR', sans-serif;
     }
     &__date{
       float: right;
@@ -952,14 +1072,58 @@
   line-height: 1;
 }
 
-.pagination{
-  margin-bottom: calcRem(100rem);
-  &__list {
-    display: table;
-    width: 100%;
-    text-align: center;
+
+/*프로모션 페이징*/
+.paging{
+  margin-top:calcRem(40rem);
+  padding:0 calcRem(20rem);
+  text-align: center;
+  overflow: hidden;
+
+  //제품 상세 리뷰
+  .product-review__info &{
+    margin-top:calcRem(25rem);
+  }
+
+  &__list{
+    line-height:0;
+    overflow: hidden;
+    margin:calcRem(-4rem) calcRem(-3rem);
+  }
+
+  &__item{
+    display: inline-block;
+    vertical-align: middle;
+    padding:calcRem(4rem) calcRem(3rem);
+  }
+
+  &__link{
+    display:block;
+    font-size:calcRem(11rem);
+    width:calcRem(16rem);
+    line-height:calclH(16,11);
+    height:calcRem(16rem);
+    box-sizing: border-box;
+    border-radius: 100%;
+
+    .paging__item.is-current &{
+      background-color: $point1;
+      color:$whiteColor;
+      text-align: center;
+    }
+
+    .paging__item--prev &{
+      background: url('https://www.stylelq.com/fr/images/common/ico_paging_prev.png?ver=211025') no-repeat center center / contain;
+      background-size:calcRem(6rem) calcRem(10rem) ;
+    }
+
+    .paging__item--next &{
+      background: url('https://www.stylelq.com/fr/images/common/ico_paging_next.png?ver=211025') no-repeat center center / contain;
+      background-size:calcRem(6rem) calcRem(10rem) ;
+    }
   }
 }
+
 /*모션 delay css*/
 .type-delay5{
   transition-delay: 0.5s;
