@@ -1180,7 +1180,8 @@
 
   &__video {
     width: 100%;
-    height: calcRem(410rem);
+    //height: calcRem(410rem);
+    //height: calcRem(410rem);
     object-fit: cover;
   }
 
