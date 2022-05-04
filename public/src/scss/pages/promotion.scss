@@ -301,6 +301,11 @@
             padding: calcRem(155rem) 0;
             background-color: #ddf7ff;
         }
+        &.coupon-only{
+          padding: calcRem(96rem) 0;
+          display: block;
+          background: url('../../images/promotion/view/minibag/img_background.png') no-repeat center center/cover;
+        }
         display: block;
         position: relative;
         width: 100%;
@@ -308,6 +313,51 @@
         text-align: center;
         background-color: #fbfbfb;
     }
+
+    &__download{
+      display: inline-block;
+    }
+    
+    &__coupon, &__txt{
+      float: left;
+      display: inline-block;
+      padding: 0;
+      text-align: left;
+    }
+
+    &__coupon{
+      .promotion-view__img{
+        width: calcRem(275rem);
+        height: calcRem(150rem);
+      }
+    }
+
+    &__txt{
+      padding-left: calcRem(65rem);
+    }
+
+    &__tit{
+      margin: 0;
+      color: #F45670;
+      font-size: calcRem(23rem);
+      font-weight: 500;
+      font-family: "Noto Sans KR", Sans-Serif;
+    }
+
+    &__detail{
+      font-size: calcRem(20rem);
+      font-weight: 500;
+      color: rgba(244, 86, 112, 0.4);
+    }
+
+    &__minibag{
+      img{
+        width: calcRem(192rem);
+        height: calcRem(50rem);
+      }
+    }
+    
+
     &__header{
         color: #2C5497;
 
