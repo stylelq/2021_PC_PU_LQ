@@ -162,7 +162,7 @@
         font-weight: 400;
       }
     }
-    &__list{
+    &__list, &__list2{
       display: block;
       padding-top: calcRem(46rem);
     }
@@ -194,6 +194,14 @@
         display: block;
         padding-top: calcRem(30rem);
       }
+    }
+
+    &__item2{
+      display: inline-block;
+      font-size: calcRem(18rem);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 300;
+      letter-spacing: calcRem(1.3rem);
     }
 
     &__name{
@@ -294,6 +302,9 @@
       white-space: nowrap;
       -webkit-animation: photoline 20s infinite linear;
       animation: photoline 20s infinite linear;
+      &.minibag{
+        animation: none;
+      }
     }
 
     &__contents{
@@ -342,6 +353,12 @@
       font-size: calcRem(23rem);
       font-weight: 500;
       font-family: "Noto Sans KR", Sans-Serif;
+      img{
+        margin: 0 auto;
+        width: calcRem(192rem);
+        height: calcRem(50rem);
+      }
+
     }
 
     &__detail{
@@ -351,12 +368,18 @@
     }
 
     &__minibag{
-      img{
-        width: calcRem(192rem);
-        height: calcRem(50rem);
+      margin: 0 auto;
+      margin-top: calcRem(96rem);
+      padding: calcRem(65rem) 0;
+      width: calcRem(1260rem);
+      display: block;
+      background-color: rgba(255,255,255,0.8);
+      border-radius: calcRem(45rem);
+
+      .promotion-view__tit{
+        text-align: center;
       }
     }
-    
 
     &__header{
         color: #2C5497;
