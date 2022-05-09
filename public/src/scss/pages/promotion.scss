@@ -174,12 +174,14 @@
       height: calcRem(58rem);
     }
     &__list, &__list2{
-      display: block;
+      display: inline-block;
+      margin-left: calcRem(56rem);
       padding-top: calcRem(46rem);
     }
 
     &__list2{
       &.miniwallet{
+        margin-right: calcRem(88rem);
         padding-top: calcRem(114rem);
         .promotion-view__item2:nth-child(2){
           padding: 0 calcRem(76rem);
@@ -243,11 +245,11 @@
       &--txt{
         margin: 0;
         color: #5f5f5f;
-        font-size: calcRem(20rem);
+        font-size: calcRem(19rem);
         font-family: 'Noto Sans KR', sans-serif;
         font-weight: 500;
         line-height: calcRem(30rem);
-        letter-spacing: calcRem(1.3rem);
+        letter-spacing: calcRem(0.8rem);
       }
       &--btn{
         display: block;
@@ -370,6 +372,9 @@
           padding: calcRem(96rem) 0;
           display: block;
           background: url('../../images/promotion/view/minibag/img_background.png') no-repeat center center/cover;
+          .promotion-view__info{
+            margin-top: calcRem(14rem);
+          }
         }
         display: block;
         position: relative;
@@ -404,6 +409,8 @@
 
     &__tit{
       margin: 0;
+      margin-top: calcRem(-6rem);
+      padding-left: calcRem(11rem);
       color: #F45670;
       font-size: calcRem(23rem);
       font-weight: 500;
