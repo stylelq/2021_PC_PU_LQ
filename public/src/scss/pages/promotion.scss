@@ -162,10 +162,39 @@
         font-weight: 400;
       }
     }
+
+    &__btn{
+      display: block;
+    }
+    &__down{
+      position: absolute;
+      top: calcRem(-30rem);
+      right: calcRem(-24rem);
+      width: calcRem(58rem) !important;
+      height: calcRem(58rem);
+    }
     &__list, &__list2{
       display: block;
       padding-top: calcRem(46rem);
     }
+
+    &__list2{
+      &.miniwallet{
+        padding-top: calcRem(114rem);
+        .promotion-view__item2:nth-child(2){
+          padding: 0 calcRem(76rem);
+          .promotion-view__img{
+            width: calcRem(155rem) !important;
+          }
+        }
+        .promotion-view__item2:last-child{
+          .promotion-view__img{
+            width: calcRem(174rem) !important;
+          }
+        }
+      }
+    }
+
     &__item{
       display: inline-block;
       font-size: calcRem(18rem);
@@ -198,10 +227,34 @@
 
     &__item2{
       display: inline-block;
-      font-size: calcRem(18rem);
-      font-family: 'Noto Sans KR', sans-serif;
-      font-weight: 300;
-      letter-spacing: calcRem(1.3rem);
+      img{
+        margin: 0 auto;
+        width: calcRem(200rem) !important;
+      }
+      &:nth-child(2){
+        padding: 0 calcRem(70rem) 0 calcRem(100rem);
+      }
+      &:last-child{
+        .promotion-view__img{
+          width: calcRem(177rem) !important;
+        }
+      }
+      &--txt{
+        margin: 0;
+        color: #5f5f5f;
+        font-size: calcRem(20rem);
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 500;
+        line-height: calcRem(30rem);
+        letter-spacing: calcRem(1.3rem);
+      }
+      &--btn{
+        display: block;
+        margin-top: calcRem(34rem);
+        img{
+          width: calcRem(118rem) !important;
+        }
+      }
     }
 
     &__name{
@@ -332,6 +385,7 @@
     &__coupon, &__txt{
       float: left;
       display: inline-block;
+      position: relative;
       padding: 0;
       text-align: left;
     }
@@ -353,12 +407,16 @@
       font-size: calcRem(23rem);
       font-weight: 500;
       font-family: "Noto Sans KR", Sans-Serif;
-      img{
+      &--minibag{
         margin: 0 auto;
-        width: calcRem(192rem);
+        width: calcRem(192rem) !important;
         height: calcRem(50rem);
       }
-
+      &--miniwallet{
+        margin: 0 auto;
+        width: calcRem(237rem) !important;
+        height: calcRem(40rem);
+      }
     }
 
     &__detail{
