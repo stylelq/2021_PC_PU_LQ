@@ -375,6 +375,9 @@
           .promotion-view__info{
             margin-top: calcRem(14rem);
           }
+          .promotion-view__txt2{
+            padding-left: calcRem(65rem);
+          }
         }
         display: block;
         position: relative;
@@ -387,8 +390,8 @@
     &__download{
       display: inline-block;
     }
-    
-    &__coupon, &__txt{
+
+    &__coupon, &__txt2{
       float: left;
       display: inline-block;
       position: relative;
@@ -404,7 +407,7 @@
     }
 
     &__txt{
-      padding-left: calcRem(65rem);
+      //padding-left: calcRem(65rem);
     }
 
     &__tit{
