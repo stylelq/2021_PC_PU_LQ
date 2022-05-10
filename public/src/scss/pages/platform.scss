@@ -29,13 +29,19 @@
         }
 
         &.platform-banner--img{
-            margin-top: calcRem(-102rem);
+            //margin-top: calcRem(-102rem);
+            .platform-banner__img{
+                position: relative;
+                top: 0;
+                left: 0;
+                transform: unset;
+            }
         }
 
         &.platform-banner--img:after{
             content:"";
             display: block;
-            padding-bottom:50%;
+            //padding-bottom:50%;
         }
 
         &__img{
