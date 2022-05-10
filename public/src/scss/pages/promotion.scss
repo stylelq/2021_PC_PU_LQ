@@ -34,6 +34,94 @@
 }
 
 .promotion{
+
+  // 프로모션 모델슬라이드
+  &-model{
+    position: relative;
+    &.graphic{
+      background-color: #f2f2f2;
+      padding: 0 10%;
+    }
+    &.type-gray{
+      padding: calcRem(150rem) 0;
+      background-color: #fafafa;
+    }
+    &.parismens{
+      padding-bottom: calcRem(100rem);
+      background-color: #f2f2f2;
+    }
+    &-wrap{
+      position: relative;
+      margin: 0 auto;
+      width: calcRem(1200rem);
+    }
+    &__slide{
+      margin: 0 auto;
+      width: calcRem(1200rem);
+    }
+    .swiper{
+      &-button{
+        &-next{
+          @include vertical-center;
+          display: inline-block;
+          width: calcRem(28rem);
+          height: calcRem(56rem);
+          position: absolute;
+          right: calcRem(20rem);
+          background: url('../../images/collection/collection_slide_next_w.png') no-repeat center center /contain;
+          z-index: 100;
+        }
+        &-prev{
+          @include vertical-center;
+          display: inline-block;
+          width: calcRem(28rem);
+          height: calcRem(56rem);
+          position: absolute;
+          left: calcRem(20rem);
+          background: url('../../images/collection/collection_slide_prev_w.png') no-repeat center center /contain;
+          z-index: 100;
+        }
+      }
+    }
+    &__wrap{
+      width: 100%;
+      &.monogram{
+        padding: 0 10%;
+      }
+      &.graphic{
+        padding: 0 10%;
+      }
+
+    }
+    &__img{
+      display: block;
+      width: 100%;
+    }
+    &__caption{
+      margin: 0 auto;
+      width: 100%;
+      max-width: calcRem(1200rem);
+      padding-top: calcRem(90rem);
+      &.graphic{
+        max-width: calcRem(700rem);
+      }
+    }
+    .model-next-btn{
+      right: calcRem(-50rem);
+      background: url("https://cdn.louisclub.com/static/fr/img/specialty/20210107/arrow_next.png") no-repeat center center/contain;
+      z-index: 10;
+      cursor: pointer;
+    }
+    .model-prev-btn{
+      left: calcRem(-50rem);
+      background: url("https://cdn.louisclub.com/static/fr/img/specialty/20210107/arrow_prev.png") no-repeat center center/contain;
+      z-index: 10;
+      cursor: pointer;
+    }
+  }
+
+
+
   &-side{
       margin: 0 auto;
       width: calcRem(1200rem);
