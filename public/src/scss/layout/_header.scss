@@ -60,10 +60,10 @@
       }
 
       #{$this}__black{
-        display:none;
+        display: none !important;
       }
       #{$this}__white{
-        display:block;
+        display: block !important;
       }
 
     }
@@ -77,6 +77,9 @@
     display: block;
     &__top{
       padding: calcRem(30rem) 0 calcRem(28rem);
+      &.is-white{
+        background-color: #fff;
+      }
     }
     //로고
     &__logo {
@@ -113,12 +116,10 @@
         width: calcRem(20rem);
         height: calcRem(18rem);
 
-        .search-btn{
-          display: block;
-        }
         .close-btn{
           display: none;
         }
+
         &.is-active{
           .search-btn{
             display: none;
