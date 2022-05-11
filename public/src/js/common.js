@@ -856,6 +856,7 @@ jQuery(function(){
         }
     }
 
+
     function pagingOptionChange() {
         if($('.main-banner__wrapper').find('.swiper-slide-active').data('bg') === 'white'){
             $('body').removeClass('is-black');
