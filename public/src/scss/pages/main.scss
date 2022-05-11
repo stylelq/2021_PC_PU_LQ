@@ -56,6 +56,12 @@
   &__name{
     font-size: calcRem(22rem);
     line-height: calcRem(28rem);
+    &.is-white{
+      color: #000;
+    }
+    &.is-black{
+      color: #fff;
+    }
   }
   &__pagination{
     bottom: calcRem(44rem);
