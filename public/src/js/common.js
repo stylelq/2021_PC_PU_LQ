@@ -858,6 +858,7 @@ jQuery(function(){
 
     function pagingOptionChange() {
         if($('.main-banner__wrapper').find('.swiper-slide-active').data('bg') === 'white'){
+            $('.header').addClass('is-bg-white');
             $('body').removeClass('is-black');
             $('body').addClass('is-white');
             $('.main-banner__pagination').removeClass('is-black');
@@ -865,6 +866,8 @@ jQuery(function(){
             $('.main-banner__name').removeClass('is-black');
             $('.main-banner__name').addClass('is-white');
         }else{
+            $('.header').removeClass('is-bg-white');
+            $('.header-wrap__top').removeClass('is-white');
             $('body').removeClass('is-white');
             $('body').addClass('is-black');
             $('.main-banner__pagination').removeClass('is-white');
@@ -970,6 +973,7 @@ jQuery(function(){
     if($('.main-banner2').length > 0 && $('.main-banner2__item').length > 1){
         var mainBannerProgressbarOpt= {
             init: function () {
+                pagingOptionChange();
                 var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
                 var bg = slide.data("bg");
                 if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
@@ -1003,6 +1007,7 @@ jQuery(function(){
             },
             slideChangeTransitionEnd: function () {
                 $('.main-banner2__progressbar').eq(0).addClass("animate");
+                pagingOptionChange();
             },
         }
         var mainBannerOption = {
@@ -1080,6 +1085,7 @@ jQuery(function(){
             },
             on: {
                 init: function(){
+                    pagingOptionChange();
                     var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
                     var bg = slide.data("bg");
                     if($('.main-banner3__item').find('.swiper-slide-active').data('bg') === 'white'){
@@ -1102,6 +1108,7 @@ jQuery(function(){
                 },
                 slideChangeTransitionEnd: function(){
                     $('.main-banner3__progressbar').eq(0).addClass("animate");
+                    pagingOptionChange();
                 },
 
                 beforeTransitionStart: function () {
