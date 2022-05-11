@@ -61,6 +61,10 @@
         color: #fff !important;
       }
 
+      .header-wrap__count{
+        color: #fff;
+      }
+
       #{$this}__black{
         display: none !important;
       }
@@ -151,6 +155,14 @@
           height: 100%;
           letter-spacing: 0;
         }
+      }
+    }
+    &__count{
+      top: calcRem(6rem);
+      left: calcRem(5rem);
+      position: absolute;
+      &.is-white{
+        color:#fff;
       }
     }
     &__link{
