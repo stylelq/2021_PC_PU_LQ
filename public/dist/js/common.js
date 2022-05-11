@@ -16,8 +16,7 @@ jQuery(function () {
         $('.gnb-1depth__inner').removeClass('is-white');
         $('.header__black').addClass('is-show');
         $('.header__black').removeClass('is-hide');
-        $('.header__black.close-btn').removeClass('is-show');
-        $('.header__black.close-btn').addClass('is-hide');
+        $('.header__black.close-btn').addClass('is-show'); //$('.header__black.close-btn').addClass('is-hide');
       } else {
         $('.header').removeClass('is-bg-white');
         $('.gnb-1depth__inner').removeClass('is-black');
