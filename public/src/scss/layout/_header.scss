@@ -59,6 +59,25 @@
     &:not(.is-bg-view){
       .gnb-1depth__inner{
         color: #fff !important;
+
+        &.is-black{
+          color: #000 !important;
+        }
+
+        &.is-white{
+          color: #fff !important;
+        }
+      }
+
+      .header__black{
+        display: block;
+
+        &.is-show{
+          display: block !important;
+        }
+        &.is-hide{
+          display: none !important;
+        }
       }
 
       .header-wrap__count{
