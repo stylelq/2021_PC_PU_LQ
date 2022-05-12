@@ -1273,5 +1273,31 @@ jQuery(function () {
       mainSlide.autoplay.stop();
     });
   } //--END[swiper slider]-----------------------------
+  // 동영상 소리여부 버튼 이벤트
+  //var videoWrap = $('.collabo-wrap__video');
+  //videoWrap.muted = false;     //소리 켜기(default)
+  //videoWrap.play();   // 자동재생
 
+  /* function videoSound(){
+       var popupLi = document.createElement('li');
+       popupLi.innerHTML = '<video class="collabo-wrap__video" src="https://cdn.louisclub.com/static/fr/img/collabo/view/' + collaboData[i].name + '/video.mp4" poster="https://cdn.louisclub.com/static/fr/img/collabo/view/' + collaboData[i].name + '/video_thumbnail.jpg" loop="" autoplay="" muted="true" playsinline="" data-object-fit="cover"></video>';
+       popupLi.innerHTML += '<a href="" class="collabo-wrap__sound js-sound-btn">sound on/off</a>';
+       var soundBtn = popupLi.querySelector('.js-sound-btn');
+       var video = popupLi.querySelector('.collabo-wrap__video');
+       console.log(soundBtn);
+       soundBtn.addEventListener('click', function (e) {
+           e.preventDefault();
+           var videoMuted = video.muted;
+           if (videoMuted) {
+               video.muted = true;
+               soundBtn.classList.remove('is-active');
+           } else {
+               video.muted = false;
+               soundBtn.classList.add('is-active');
+           }
+       });
+   }*/
+
+
+  $(document).on('click', '.js-sound-btn', videoSound);
 }); //jQuery
