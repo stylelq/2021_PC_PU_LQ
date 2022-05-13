@@ -862,7 +862,6 @@ jQuery(function () {
         }
     });
 
-
     function pagingOptionChange() {
         if ($('body').hasClass('is-black')) {
             $('.main-banner__pagination').removeClass('is-black');
