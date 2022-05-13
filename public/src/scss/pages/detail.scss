@@ -193,9 +193,10 @@
 
 //제품 메타값
 .detail-Meta{
-    padding:calcRem(30rem) calcRem(15rem);
+    padding:calcRem(30rem) calcRem(10rem);
     border-top:solid 1px $black1;
     display: block;
+    font-family: 'Noto Sans KR', sans-serif;
 
     &__title{
         margin:0;
@@ -244,9 +245,11 @@
 
 //제품 구매시 정보
 .detail-purchase{
-    padding:calcRem(20rem) calcRem(15rem) calcRem(20rem);
+    padding:calcRem(20rem) calcRem(10rem) calcRem(20rem);
     border-top:solid 1px $lightgray4;
     display: block;
+    font-family: 'Noto Sans KR', sans-serif;
+
     &__list{
         @include flexWrap;
         @include flex-alignCenter;
@@ -270,6 +273,7 @@
 //사전적의미 텍스트 컨포넌트
 .text-dictionary{
     margin:0;
+    font-family: 'Noto Sans KR', sans-serif;
 
     &:after{
         @include block-reset;
@@ -305,7 +309,7 @@
 
 //제품 옵션 정보
 .detail-option{
-    padding:calcRem(25rem) calcRem(15rem) calcRem(30rem);
+    padding:calcRem(25rem) calcRem(10rem) calcRem(30rem);
     border-top:solid 1px $lightgray4;
 
     &__item{
@@ -377,9 +381,9 @@
 
     &__title{
         //min-width: calcRem(40rem);
-        padding: 0 calcRem(10rem);
+        padding: 0 calcRem(8rem);
         width: auto;
-        height:calcRem(40rem);
+        height:calcRem(36rem);
         text-align: center;
         // padding:calcRem(6rem) calcRem(6rem);
         box-sizing: border-box;
@@ -392,7 +396,7 @@
 
         .size-list__text{
             //@include ab-center;
-            line-height: 2.8;
+            line-height: 2.6;
         }
 
         #{$this}__input:checked + &{
@@ -404,6 +408,7 @@
 
 //토탈 금액 계산
 .detail-sum{
+    font-family: 'Noto Sans KR', sans-serif;
 
     &__inner{
         padding-top:calcRem(35rem);
@@ -454,8 +459,8 @@
         &:before{
             content: '';
             display: block;
-            width: calc(100% + #{calcRem(40rem)});
-            margin: calcRem(26rem) calcRem(-20rem) calcRem(7rem);
+            width: calc(100% + #{calcRem(22rem)});
+            margin: calcRem(26rem) calcRem(-11rem) calcRem(7rem);
             height: 0.03em;
             background-color: $black1;
         }
