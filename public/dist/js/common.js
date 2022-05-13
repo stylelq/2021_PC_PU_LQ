@@ -71,10 +71,12 @@ jQuery(function () {
       if (!status) {
         $('.search').addClass('is-active');
         $('.type-search').addClass('is-active');
+        $('.header').addClass('is-bg-white');
         status = true;
       } else {
         $('.search').removeClass('is-active');
         $('.type-search').removeClass('is-active');
+        $('.header').removeClass('is-bg-white');
         status = false;
       }
     }
