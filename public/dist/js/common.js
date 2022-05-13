@@ -1,6 +1,5 @@
-"use strict";
+"use strict"; //loading
 
-//loading
 window.onload = function () {
   $('.loading').hide();
 };
@@ -12,19 +11,8 @@ jQuery(function () {
     $(window).on('load scroll', function () {
       if ($(window).scrollTop() > 0) {
         $('.header').addClass('is-bg-white');
-        $('.gnb-1depth__inner').addClass('is-black');
-        $('.gnb-1depth__inner').removeClass('is-white');
-        $('.header__black').addClass('is-show');
-        $('.header__black').removeClass('is-hide');
-        $('.header__black.close-btn').addClass('is-show'); //$('.header__black.close-btn').addClass('is-hide');
       } else {
         $('.header').removeClass('is-bg-white');
-        $('.gnb-1depth__inner').removeClass('is-black');
-        $('.gnb-1depth__inner').addClass('is-white'); //$('.header__black').addClass('is-hide');
-
-        $('.header__black').removeClass('is-show');
-        $('.header__black.close-btn').addClass('is-show');
-        $('.header__black.close-btn').removeClass('is-hide');
       }
     });
     $('.gnb-1depth__item').on('mouseenter', function () {
@@ -61,12 +49,10 @@ jQuery(function () {
       if (!status) {
         $('.search').addClass('is-active');
         $('.type-search').addClass('is-active');
-        $('.header-wrap__top').addClass('is-white');
         status = true;
       } else {
         $('.search').removeClass('is-active');
         $('.type-search').removeClass('is-active');
-        $('.header-wrap__top').removeClass('is-white');
         status = false;
       }
     }
@@ -251,7 +237,7 @@ jQuery(function () {
     $(this).closest(tab).children().removeClass('is-current');
     $(this).parent(item).addClass('is-current');
     contents.removeClass('is-current');
-    contents.eq(idx).addClass('is-current'); //왼쪽 탭 고정시키기 
+    contents.eq(idx).addClass('is-current'); //왼쪽 탭 고정시키기
 
     $('html, body').animate({
       scrollTop: 920
@@ -330,7 +316,7 @@ jQuery(function () {
   $(document).on('click', '.js-stores-tab', storesTab); //--END[탭] ----------------------
 
   /*---------------------
-  * [select] :: custom 
+  * [select] :: custom
   ---------------------*/
   // select dropdown
 
@@ -344,7 +330,7 @@ jQuery(function () {
       $(ele).addClass('is-active');
       $(ele).next().stop().slideDown();
     }
-  } // option view 
+  } // option view
 
 
   function selectView(option) {
@@ -874,40 +860,28 @@ jQuery(function () {
       $('.header-mypage').addClass('is-active');
     }
   });
-  var status;
-
-  function jsOpenSearchLayer() {
-    if (!status) {
-      $('.search').addClass('is-active');
-      $('.type-search').addClass('is-active');
-      $('.header-wrap__top').addClass('is-white');
-      status = true;
-    } else {
-      $('.search').removeClass('is-active');
-      $('.type-search').removeClass('is-active');
-      $('.header-wrap__top').removeClass('is-white');
-      status = false;
-    }
-  }
 
   function pagingOptionChange() {
-    if ($('.main-banner__wrapper').find('.swiper-slide-active').data('bg') === 'white') {
-      $('.header').addClass('is-bg-white');
-      $('body').removeClass('is-black');
-      $('body').addClass('is-white');
+    if ($('body').hasClass('is-black')) {
       $('.main-banner__pagination').removeClass('is-black');
       $('.main-banner__pagination').addClass('is-white');
       $('.main-banner__name').removeClass('is-black');
       $('.main-banner__name').addClass('is-white');
     } else {
-      $('.header').removeClass('is-bg-white');
-      $('.header-wrap__top').removeClass('is-white');
-      $('body').removeClass('is-white');
-      $('body').addClass('is-black');
       $('.main-banner__pagination').removeClass('is-white');
       $('.main-banner__pagination').addClass('is-black');
-      $('.main-banner__name').removeClass('is-white');
       $('.main-banner__name').addClass('is-black');
+      $('.main-banner__name').removeClass('is-white');
+    }
+
+    if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
+      $('body').removeClass('is-black');
+      $('body').addClass('is-white');
+    } else {
+      if ($('.header').hasClass('is-bg-white') == false) {
+        $('body').removeClass('is-white');
+        $('body').addClass('is-black');
+      }
     }
   } // 메인 배너슬라이드
 
@@ -915,11 +889,35 @@ jQuery(function () {
   if ($('.main-banner').length > 0 && $('.main-banner__item').length > 1) {
     var mainBannerProgressbarOpt = {
       init: function init() {
-        pagingOptionChange();
+        var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
+        var bg = slide.data("bg");
+
+        if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
+          $('body').removeClass('is-black');
+          $('body').addClass('is-white');
+        } else {
+          $('body').removeClass('is-white');
+          $('body').addClass('is-black');
+        }
+
         $('.main-banner__progressbar').removeClass("animate");
         $('.main-banner__progressbar').removeClass("active");
         $('.main-banner__progressbar').eq(0).addClass("animate");
         $('.main-banner__progressbar').eq(0).addClass("active");
+      },
+      slideChange: function slideChange() {
+        var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
+        var bg = slide.data("bg");
+
+        if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
+          $('body').removeClass('is-black');
+          $('body').addClass('is-white');
+        } else {
+          $('body').removeClass('is-white');
+          $('body').addClass('is-black');
+        }
+
+        pagingOptionChange();
       },
       slideChangeTransitionStart: function slideChangeTransitionStart() {
         $('.main-banner__progressbar').removeClass("animate");
@@ -928,7 +926,6 @@ jQuery(function () {
       },
       slideChangeTransitionEnd: function slideChangeTransitionEnd() {
         $('.main-banner__progressbar').eq(0).addClass("animate");
-        pagingOptionChange();
       }
     };
     var mainBannerOption = {
@@ -1004,7 +1001,6 @@ jQuery(function () {
   if ($('.main-banner2').length > 0 && $('.main-banner2__item').length > 1) {
     var mainBannerProgressbarOpt = {
       init: function init() {
-        pagingOptionChange();
         var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
         var bg = slide.data("bg");
 
@@ -1042,7 +1038,6 @@ jQuery(function () {
       },
       slideChangeTransitionEnd: function slideChangeTransitionEnd() {
         $('.main-banner2__progressbar').eq(0).addClass("animate");
-        pagingOptionChange();
       }
     };
     var mainBannerOption = {
@@ -1119,7 +1114,6 @@ jQuery(function () {
       },
       on: {
         init: function init() {
-          pagingOptionChange();
           var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
           var bg = slide.data("bg");
 
@@ -1143,7 +1137,6 @@ jQuery(function () {
         },
         slideChangeTransitionEnd: function slideChangeTransitionEnd() {
           $('.main-banner3__progressbar').eq(0).addClass("animate");
-          pagingOptionChange();
         },
         beforeTransitionStart: function beforeTransitionStart() {
           var slide = $(this.$wrapperEl[0]).find(".swiper-slide-active");
@@ -1273,31 +1266,5 @@ jQuery(function () {
       mainSlide.autoplay.stop();
     });
   } //--END[swiper slider]-----------------------------
-  // 동영상 소리여부 버튼 이벤트
-  //var videoWrap = $('.collabo-wrap__video');
-  //videoWrap.muted = false;     //소리 켜기(default)
-  //videoWrap.play();   // 자동재생
 
-  /* function videoSound(){
-       var popupLi = document.createElement('li');
-       popupLi.innerHTML = '<video class="collabo-wrap__video" src="https://cdn.louisclub.com/static/fr/img/collabo/view/' + collaboData[i].name + '/video.mp4" poster="https://cdn.louisclub.com/static/fr/img/collabo/view/' + collaboData[i].name + '/video_thumbnail.jpg" loop="" autoplay="" muted="true" playsinline="" data-object-fit="cover"></video>';
-       popupLi.innerHTML += '<a href="" class="collabo-wrap__sound js-sound-btn">sound on/off</a>';
-       var soundBtn = popupLi.querySelector('.js-sound-btn');
-       var video = popupLi.querySelector('.collabo-wrap__video');
-       console.log(soundBtn);
-       soundBtn.addEventListener('click', function (e) {
-           e.preventDefault();
-           var videoMuted = video.muted;
-           if (videoMuted) {
-               video.muted = true;
-               soundBtn.classList.remove('is-active');
-           } else {
-               video.muted = false;
-               soundBtn.classList.add('is-active');
-           }
-       });
-   }*/
-
-
-  $(document).on('click', '.js-sound-btn', videoSound);
 }); //jQuery
