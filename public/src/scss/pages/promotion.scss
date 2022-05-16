@@ -34,6 +34,14 @@
 }
 
 .promotion{
+  &-slide{
+    &.canvasbag{
+      background-color: #e8e7ed;
+      .promotion-model{
+        padding: calcRem(100rem) 0;
+      }
+    }
+  }
 
   // 프로모션 모델슬라이드
   &-model{
@@ -499,6 +507,11 @@
       position: relative;
       padding: 0;
       text-align: left;
+    }
+
+    .promotion-view__img2{
+      margin: 0 auto;
+      width: auto;
     }
 
     &__coupon{
