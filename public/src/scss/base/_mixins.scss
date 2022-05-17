@@ -68,6 +68,12 @@
   letter-spacing: $defaultLetter; 
   font-weight:$regular;
 }
+@mixin heading3_2(){
+  font-size:calcRem(30rem);
+  line-height:calclH(24,17);
+  letter-spacing: $defaultLetter;
+  font-weight:$regular;
+}
 @mixin heading4(){
   font-size:calcRem(20rem); 
   line-height:calclH(24,17); 

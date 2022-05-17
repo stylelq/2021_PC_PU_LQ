@@ -263,7 +263,7 @@
     font-size: calcRem(30rem);
     line-height: calcRem(32rem);
     z-index: 90;
-    font-weight: $medium;
+    font-weight: $light;
   }
 
   &__left{
@@ -1800,7 +1800,7 @@
     font-size: calcRem(30rem);
     line-height: calcRem(32rem);
     z-index: 90;
-    font-weight: $medium;
+    font-weight: $light;
     text-transform: uppercase;
   }
   &__left{
@@ -2063,7 +2063,7 @@
   padding: calcRem(130rem) 0 calcRem(130rem);
 
   &__title{
-    @include heading3;
+    @include heading3_2;
     text-transform: uppercase;
     text-align: center;
     margin:0 0 calcRem(30rem);
