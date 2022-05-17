@@ -937,29 +937,7 @@ jQuery(function () {
 
 
   if ($('.main-banner').length > 0 && $('.main-banner__item').length > 1) {
-    var mainBannerProgressbarOpt = {
-      init: function init() {
-        pagingOptionChange();
-        $('.main-banner__progressbar').removeClass("animate");
-        $('.main-banner__progressbar').removeClass("active");
-        $('.main-banner__progressbar').eq(0).addClass("animate");
-        $('.main-banner__progressbar').eq(0).addClass("active");
-      },
-      slideChange: function slideChange() {
-        pagingOptionChange();
-      },
-      slideChangeTransitionStart: function slideChangeTransitionStart() {
-        $('.main-banner__progressbar').removeClass("animate");
-        $('.main-banner__progressbar').removeClass("active");
-        $('.main-banner__progressbar').eq(0).addClass("active");
-        pagingOptionChange();
-      },
-      slideChangeTransitionEnd: function slideChangeTransitionEnd() {
-        $('.main-banner__progressbar').eq(0).addClass("animate");
-        pagingOptionChange();
-      }
-    };
-    var mainBannerOption = {
+    var mainSlide = new Swiper('.main-banner__container', {
       observer: true,
       observeParents: true,
       watchOverflow: true,
@@ -973,14 +951,34 @@ jQuery(function () {
         el: ".main-banner__pagination",
         type: "fraction"
       },
-      on: mainBannerProgressbarOpt
-    };
-    var mainSlide = new Swiper('.main-banner__container', mainBannerOption); // 1장이하일 경우
-    // mainBannerOption.loop = false;
-    // mainBannerOption.autoplay = false;
-    // mainBannerOption.pagination = false;
-    // mainBannerOption.on = {};
-  } //new 배너슬라이드
+      navigation: {
+        nextEl: ".main-banner--next",
+        prevEl: ".main-banner--prev"
+      },
+      on: {
+        init: function init() {
+          pagingOptionChange();
+          $('.main-banner__progressbar').removeClass("animate");
+          $('.main-banner__progressbar').removeClass("active");
+          $('.main-banner__progressbar').eq(0).addClass("animate");
+          $('.main-banner__progressbar').eq(0).addClass("active");
+        },
+        slideChange: function slideChange() {
+          pagingOptionChange();
+        },
+        slideChangeTransitionStart: function slideChangeTransitionStart() {
+          $('.main-banner__progressbar').removeClass("animate");
+          $('.main-banner__progressbar').removeClass("active");
+          $('.main-banner__progressbar').eq(0).addClass("active");
+          pagingOptionChange();
+        },
+        slideChangeTransitionEnd: function slideChangeTransitionEnd() {
+          $('.main-banner__progressbar').eq(0).addClass("animate");
+          pagingOptionChange();
+        }
+      }
+    });
+  } //--END[swiper slider]-----------------------------
 
 
   if ($('.main-new').length > 0 && $('.main-new__item').length > 1) {
