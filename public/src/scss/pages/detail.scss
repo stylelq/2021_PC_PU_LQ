@@ -264,6 +264,9 @@
             width: 40%;
         }
     }
+    .text-dictionary__title{
+        font-family: 'Noto Sans KR', sans-serif;
+    }
 }
 
 
@@ -280,7 +283,7 @@
         width:calcRem(60rem);
         padding-right:calcRem(10rem);
         @include body7;
-        font-family: 'Noto Sans KR', sans-serif;
+        //font-family: 'Noto Sans KR', sans-serif;
 
         &--vetical{
             padding-top:calcRem(8rem);
@@ -412,6 +415,7 @@
     &__quantity--title{
         @include body7;
         margin-bottom:calcRem(10rem);
+        font-family: 'Noto Sans KR', sans-serif;
     }
 
     &__calculate{
