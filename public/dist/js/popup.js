@@ -231,11 +231,10 @@ jQuery(function () {
   $('.collabo-wrap__sound--stop').addClass('is-show');
   $('.collabo-wrap__sound--play').addClass('is-hide'); // 콜라보레이션 영상 음소거 관련 스크립트
 
-  var videoCollabo = document.querySelector('.collabo-wrap__video');
-  var videoMuted = videoCollabo.muted;
-
   function stopSoundPop() {
     // 영상 소리 음소거
+    var videoCollabo = document.querySelector('.collabo-wrap__video');
+    var videoMuted = videoCollabo.muted;
     videoCollabo.muted = true;
     $('.collabo-wrap__sound--stop').removeClass('is-show').addClass('is-hide');
     $('.collabo-wrap__sound--play').removeClass('is-hide').addClass('is-show');
@@ -245,7 +244,9 @@ jQuery(function () {
 
   function playSoundPop() {
     //영상 소리 음소거 해제
-    videoCollabo.muted = false;
+    var videoCollaboNew = document.querySelector('.collabo-wrap__video');
+    var videoMutedNew = videoCollaboNew.muted;
+    videoCollaboNew.muted = false;
     $('.collabo-wrap__sound--stop').removeClass('is-hide').addClass('is-show');
     $('.collabo-wrap__sound--play').removeClass('is-show').addClass('is-hide');
   }
