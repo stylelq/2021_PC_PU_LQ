@@ -79,11 +79,13 @@ jQuery(function () {
             } else {
                 $('.search').removeClass('is-active');
                 $('.type-search').removeClass('is-active');
+
                 if ($(window).scrollTop() > 0) {
                     $('body').removeClass('is-black');
                     $('body').addClass('is-white');
                 } else {
                     $('.header').removeClass('is-bg-white');
+
                     if ($('.main-banner').length > 0 && $('.main-banner__item').length > 1) {
                         if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
                             $('body').removeClass('is-black');
@@ -97,6 +99,7 @@ jQuery(function () {
                         $('body').addClass('is-white');
                     }
                 }
+
                 status = false;
             }
         }
@@ -919,18 +922,15 @@ jQuery(function () {
             }
         }
 
-        if ($('body').hasClass('is-black')) {
-            $('.main-banner__pagination').removeClass('is-white');
-            $('.main-banner__pagination').addClass('is-black');
-            $('.main-banner__name').removeClass('is-white');
-            $('.main-banner__name').addClass('is-black');
-        } else {
+        if ($('.swiper-slide-active.main-banner__item').find('.main-banner__content').data("title") === "is-white") {
             $('.main-banner__pagination').removeClass('is-black');
             $('.main-banner__pagination').addClass('is-white');
-            $('.main-banner__name').removeClass('is-black');
-            $('.main-banner__name').addClass('is-white');
+        } else {
+            $('.main-banner__pagination').removeClass('is-white');
+            $('.main-banner__pagination').addClass('is-black');
         }
     } // 메인 배너슬라이드
+
 
     if ($('.main-banner').length > 0 && $('.main-banner__item').length > 1) {
         var mainSlide = new Swiper('.main-banner__container', {
@@ -971,11 +971,14 @@ jQuery(function () {
                 slideChangeTransitionEnd: function slideChangeTransitionEnd() {
                     $('.main-banner__progressbar').eq(0).addClass("animate");
                     pagingOptionChange();
+                },
+                beforeTransitionStart: function beforeTransitionStart() {
+                    pagingOptionChange();
                 }
             }
         });
-
     } //--END[swiper slider]-----------------------------
+
 
     if ($('.main-new').length > 0 && $('.main-new__item').length > 1) {
         var eventSliderTouch = false;
@@ -1026,6 +1029,13 @@ jQuery(function () {
     if ($('.main-banner2').length > 0 && $('.main-banner2__item').length > 1) {
         var mainBannerProgressbarOpt = {
             init: function init() {
+                if ($('.swiper-slide-active.main-banner2__item').find('.main-banner2__content').data("title") === "is-white") {
+                    $('.main-banner2__pagination').removeClass('is-black');
+                    $('.main-banner2__pagination').addClass('is-white');
+                } else {
+                    $('.main-banner2__pagination').removeClass('is-white');
+                    $('.main-banner2__pagination').addClass('is-black');
+                }
                 $('.main-banner2__progressbar').removeClass("animate");
                 $('.main-banner2__progressbar').removeClass("active");
                 $('.main-banner2__progressbar').eq(0).addClass("animate");
@@ -1040,6 +1050,13 @@ jQuery(function () {
                 $('.main-banner2__progressbar').eq(0).addClass("animate");
             },
             beforeTransitionStart: function beforeTransitionStart() {
+                if ($('.swiper-slide-active.main-banner2__item').find('.main-banner2__content').data("title") === "is-white") {
+                    $('.main-banner2__pagination').removeClass('is-black');
+                    $('.main-banner2__pagination').addClass('is-white');
+                } else {
+                    $('.main-banner2__pagination').removeClass('is-white');
+                    $('.main-banner2__pagination').addClass('is-black');
+                }
             }
         };
         var mainBannerOption = {
@@ -1116,6 +1133,14 @@ jQuery(function () {
             },
             on: {
                 init: function init() {
+                    if ($('.swiper-slide-active.main-banner3__item').find('.main-banner3__content').data("title") === "is-white") {
+                        $('.main-banner3__pagination').removeClass('is-black');
+                        $('.main-banner3__pagination').addClass('is-white');
+                    } else {
+                        $('.main-banner3__pagination').removeClass('is-white');
+                        $('.main-banner3__pagination').addClass('is-black');
+                    }
+
                     $('.main-banner3__progressbar').removeClass("animate");
                     $('.main-banner3__progressbar').removeClass("active");
                     $('.main-banner3__progressbar').eq(0).addClass("animate");
@@ -1130,6 +1155,13 @@ jQuery(function () {
                     $('.main-banner3__progressbar').eq(0).addClass("animate");
                 },
                 beforeTransitionStart: function beforeTransitionStart() {
+                    if ($('.swiper-slide-active.main-banner3__item').find('.main-banner3__content').data("title") === "is-white") {
+                        $('.main-banner3__pagination').removeClass('is-black');
+                        $('.main-banner3__pagination').addClass('is-white');
+                    } else {
+                        $('.main-banner3__pagination').removeClass('is-white');
+                        $('.main-banner3__pagination').addClass('is-black');
+                    }
                 }
             }
         });
@@ -1179,8 +1211,9 @@ jQuery(function () {
         $(document).on('click', mainCollectionSlide, function () {
             mainCollectionSlide.autoplay.stop();
         });
-    }
-    //메인배너4 슬라이드
+    } //메인배너4 슬라이드
+
+
     if ($('.main-banner4').length > 0 && $('.main-banner4__item').length > 1) {
         var mainSlide = new Swiper('.main-banner4__container', {
             observer: true,

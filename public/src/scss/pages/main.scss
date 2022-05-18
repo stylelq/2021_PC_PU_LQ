@@ -57,10 +57,10 @@
     font-size: calcRem(22rem);
     line-height: calcRem(28rem);
     &.is-white{
-      color: #000;
+      color: #fff;
     }
     &.is-black{
-      color: #fff;
+      color: #000;
     }
   }
   &--prev {
@@ -90,20 +90,20 @@
     bottom: calcRem(44rem);
     width: 100%;
     position: absolute;
-    color: #fff;
+    //color: #fff;
     text-align: center;
     z-index: 100;
     font-size:0;
     line-height:0;
     &.is-white{
-      color: #000;
+      color: #fff;
       .swiper-pagination-current:after{
-        background-color: #000;
+        background-color: #fff;
       }
     }
 
     &.is-black{
-      color: #fff;
+      color: #000;
     }
 
     &.disabled{
@@ -121,7 +121,7 @@
           content: "";
           width: 1px;
           height: calcRem(10rem);
-          background-color: #fff;
+          background-color: #000;
           position: absolute;
           right: 0;
           @include vertical-center;
@@ -476,20 +476,20 @@
     bottom: calcRem(44rem);
     width: 100%;
     position: absolute;
-    color: #fff;
+    //color: #fff;
     text-align: center;
     z-index: 100;
     font-size:0;
     line-height:0;
     &.is-white{
-      color: #000;
+      color: #fff;
       .swiper-pagination-current:after{
-        background-color: #000;
+        background-color: #fff;
       }
     }
 
     &.is-black{
-      color: #fff;
+      color: #000;
     }
 
     &.disabled{
@@ -507,7 +507,7 @@
           content: "";
           width: 1px;
           height: calcRem(10rem);
-          background-color: #fff;
+          background-color: #000;
           position: absolute;
           right: 0;
           @include vertical-center;
@@ -1258,14 +1258,14 @@
     font-size:0;
     line-height:0;
     &.is-white{
-      color: #000;
+      color: #fff;
       .swiper-pagination-current:after{
-        background-color: #000;
+        background-color: #fff;
       }
     }
 
     &.is-black{
-      color: #fff;
+      color: #000;
     }
 
     &.disabled{
@@ -1283,7 +1283,7 @@
           content: "";
           width: 1px;
           height: calcRem(10rem);
-          background-color: #fff;
+          background-color: #000;
           position: absolute;
           right: 0;
           @include vertical-center;

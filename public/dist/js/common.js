@@ -922,16 +922,12 @@ jQuery(function () {
       }
     }
 
-    if ($('body').hasClass('is-black')) {
-      $('.main-banner__pagination').removeClass('is-white');
-      $('.main-banner__pagination').addClass('is-black');
-      $('.main-banner__name').removeClass('is-white');
-      $('.main-banner__name').addClass('is-black');
-    } else {
+    if ($('.swiper-slide-active.main-banner__item').find('.main-banner__content').data("title") === "is-white") {
       $('.main-banner__pagination').removeClass('is-black');
       $('.main-banner__pagination').addClass('is-white');
-      $('.main-banner__name').removeClass('is-black');
-      $('.main-banner__name').addClass('is-white');
+    } else {
+      $('.main-banner__pagination').removeClass('is-white');
+      $('.main-banner__pagination').addClass('is-black');
     }
   } // 메인 배너슬라이드
 
@@ -974,6 +970,9 @@ jQuery(function () {
         },
         slideChangeTransitionEnd: function slideChangeTransitionEnd() {
           $('.main-banner__progressbar').eq(0).addClass("animate");
+          pagingOptionChange();
+        },
+        beforeTransitionStart: function beforeTransitionStart() {
           pagingOptionChange();
         }
       }
@@ -1030,6 +1029,14 @@ jQuery(function () {
   if ($('.main-banner2').length > 0 && $('.main-banner2__item').length > 1) {
     var mainBannerProgressbarOpt = {
       init: function init() {
+        if ($('.swiper-slide-active.main-banner2__item').find('.main-banner2__content').data("title") === "is-white") {
+          $('.main-banner2__pagination').removeClass('is-black');
+          $('.main-banner2__pagination').addClass('is-white');
+        } else {
+          $('.main-banner2__pagination').removeClass('is-white');
+          $('.main-banner2__pagination').addClass('is-black');
+        }
+
         $('.main-banner2__progressbar').removeClass("animate");
         $('.main-banner2__progressbar').removeClass("active");
         $('.main-banner2__progressbar').eq(0).addClass("animate");
@@ -1043,7 +1050,15 @@ jQuery(function () {
       slideChangeTransitionEnd: function slideChangeTransitionEnd() {
         $('.main-banner2__progressbar').eq(0).addClass("animate");
       },
-      beforeTransitionStart: function beforeTransitionStart() {}
+      beforeTransitionStart: function beforeTransitionStart() {
+        if ($('.swiper-slide-active.main-banner2__item').find('.main-banner2__content').data("title") === "is-white") {
+          $('.main-banner2__pagination').removeClass('is-black');
+          $('.main-banner2__pagination').addClass('is-white');
+        } else {
+          $('.main-banner2__pagination').removeClass('is-white');
+          $('.main-banner2__pagination').addClass('is-black');
+        }
+      }
     };
     var mainBannerOption = {
       observer: true,
@@ -1119,6 +1134,14 @@ jQuery(function () {
       },
       on: {
         init: function init() {
+          if ($('.swiper-slide-active.main-banner3__item').find('.main-banner3__content').data("title") === "is-white") {
+            $('.main-banner3__pagination').removeClass('is-black');
+            $('.main-banner3__pagination').addClass('is-white');
+          } else {
+            $('.main-banner3__pagination').removeClass('is-white');
+            $('.main-banner3__pagination').addClass('is-black');
+          }
+
           $('.main-banner3__progressbar').removeClass("animate");
           $('.main-banner3__progressbar').removeClass("active");
           $('.main-banner3__progressbar').eq(0).addClass("animate");
@@ -1132,7 +1155,15 @@ jQuery(function () {
         slideChangeTransitionEnd: function slideChangeTransitionEnd() {
           $('.main-banner3__progressbar').eq(0).addClass("animate");
         },
-        beforeTransitionStart: function beforeTransitionStart() {}
+        beforeTransitionStart: function beforeTransitionStart() {
+          if ($('.swiper-slide-active.main-banner3__item').find('.main-banner3__content').data("title") === "is-white") {
+            $('.main-banner3__pagination').removeClass('is-black');
+            $('.main-banner3__pagination').addClass('is-white');
+          } else {
+            $('.main-banner3__pagination').removeClass('is-white');
+            $('.main-banner3__pagination').addClass('is-black');
+          }
+        }
       }
     });
   } //main collection
