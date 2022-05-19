@@ -1027,9 +1027,26 @@
 
 //구매자 베스트
 .main-best{
-  margin: calcRem(150rem) auto calcRem(150rem);
-  width: calcRem(1200rem);
+  //margin: calcRem(150rem) auto calcRem(150rem);
+  position: relative;
   min-width: calcRem(1200rem);
+  line-height: 0;
+
+  &__left{
+    padding: calcRem(40rem) 0;
+  }
+  &__right{
+    padding: calcRem(120rem) 0 0;
+  }
+
+  &__wrap{
+    display: flex;
+    .wrap{
+      width: 50%;
+      float: left;
+      display: inline-block;
+    }
+  }
 
   &__header{
     margin-bottom:calcRem(20rem);
@@ -1037,9 +1054,10 @@
   }
 
   &__title{
+    margin: 0;
     @include heading3;
     text-transform: uppercase;
-    margin:0 0 calcRem(30rem);
+    //margin:0 0 calcRem(30rem);
   }
 
   //tab
@@ -1048,18 +1066,18 @@
       text-align: center;
       font-size:0;
       line-height:0;
-      margin:0 calcRem(-20rem);
-      border-top: 1px solid #b8b8b8;
+      //margin:0 calcRem(-20rem);
+      //border-top: 1px solid #b8b8b8;
     }
 
     &--item{
       display: inline-block;
       vertical-align: middle;
       padding: calcRem(18rem) 0 0;
-      width: 15.33333%;
-      border-top: 2px solid transparent;
+      //width: 17.33333%;
+      border-top: 1px solid transparent;
       &.is-current{
-        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
       }
       &:nth-child(2){
         margin: 0 calcRem(50rem);
@@ -1083,10 +1101,11 @@
 //best slide
 //detail thumb
 .best-thumb {
-  //썸네일
+  padding: 0 calcRem(152rem);
+  //썸네일w
   &__inner {
-    margin-bottom: calcRem(70rem);
-    padding: 0 0 calcRem(50rem);
+    //margin-bottom: calcRem(70rem);
+    //padding: 0 0 calcRem(50rem);
     position: relative;
     width: 100%;
     display: block;
@@ -1094,14 +1113,17 @@
     &:after {
       content: "";
       display: block;
-      padding-bottom: 100%;
+      //padding-bottom: 60%;
     }
   }
 
   &__img {
-    @include ab-center;
-    width: 100%;
-    //padding-bottom: calcRem(20rem);
+    margin: 0 auto;
+    display: block;
+    //position: absolute;
+    //.top: 30%;
+    //left: 50%;
+    //transform: translate(-50%, -50%);
   }
 
   //prev, next
@@ -1109,7 +1131,7 @@
     width: calcRem(15rem);
     height: calcRem(30rem);
     position: absolute;
-    left: 0;
+    left: calcRem(20rem);
     @include vertical-center;
     @include pageBackground('/images/common/ico_slide_prev.svg', 'no-repeat center center / contain');
     background-size: calcRem(15rem) calcRem(30rem);
@@ -1121,7 +1143,7 @@
     width: calcRem(15rem);
     height: calcRem(30rem);
     position: absolute;
-    right: 0;
+    right: calcRem(20rem);
     @include vertical-center;
     @include pageBackground('/images/common/ico_slide_next.svg', 'no-repeat center center / contain');
     background-size: calcRem(15rem) calcRem(30rem);
@@ -1131,10 +1153,12 @@
 
   //페이징
   &__pagination {
-    padding-top: calcRem(40rem);
+    bottom: calcRem(120rem);
+    position: absolute;
     text-align: center;
     font-size: 0;
     line-height: 0;
+    z-index: 999999;
 
     .swiper-pagination {
       &-current {
@@ -1164,8 +1188,8 @@
 
   //상품명,가격
   &__bottom {
-    bottom: calcRem(-28rem);
-    position: absolute;
+    bottom: 0;
+    //position: absolute;
     width: 100%;
     text-align: center;
     font-size: calcRem(16rem);
@@ -1176,7 +1200,7 @@
     margin: 0 auto;
     //padding-bottom: calcRem(18rem);
     //width: calcRem(308rem);
-    height: calcRem(40rem);
+    //height: calcRem(40rem);
     font-weight: 300;
     text-align: center;
     line-height: calcRem(24rem);
@@ -1184,9 +1208,9 @@
 
   &__price {
     @include body2;
-    position: absolute;
+    font-size: calcRem(16rem);
     width: 100%;
-    margin-top: calcRem(18rem);
+    margin-top: calcRem(20rem);
   }
 }
 

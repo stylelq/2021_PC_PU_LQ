@@ -1084,7 +1084,7 @@ jQuery(function () {
             observer: true,
             observeParents: true,
             watchOverflow: true,
-            slidesPerView: 3,
+            slidesPerView: 1,
             loop: true,
             pagination: {
                 el: ".best-thumb__pagination",
