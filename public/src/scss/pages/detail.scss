@@ -548,6 +548,10 @@
         &.detail-tab__info--detail{
             margin:0 calcRem(-20rem);
         }
+
+        &--review{
+            margin: 0 calcRem(-20rem) 0;
+        }
     }
 
     &.fixed{
