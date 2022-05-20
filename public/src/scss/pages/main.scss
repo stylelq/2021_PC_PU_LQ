@@ -1073,7 +1073,7 @@
     &--item{
       display: inline-block;
       vertical-align: middle;
-      padding: calcRem(47rem) 0 0;
+      padding: calcRem(24rem) 0 0;
       //width: 17.33333%;
       border-top: 1px solid transparent;
       &.is-current{
@@ -1154,14 +1154,14 @@
   &__wrap{
     position: relative;
     display: block;
-    width: 92%;
+    width: 100%;
     text-align: center;
   }
   //페이징
   &__pagination {
     display: inline-block;
-    bottom: calcRem(110rem);
-    position: absolute;
+    bottom: 0;
+    position: relative;
     text-align: center;
     font-size: 0;
     line-height: 0;
@@ -1195,8 +1195,9 @@
 
   //상품명,가격
   &__bottom {
-    bottom: calcRem(-40rem);
+    //bottom: calcRem(-30rem);
     //position: absolute;
+    margin-top: calcRem(-24rem);
     width: 100%;
     text-align: center;
     font-size: calcRem(16rem);
@@ -1218,7 +1219,7 @@
     font-size: calcRem(16rem);
     font-weight: 400;
     width: 100%;
-    margin-top: calcRem(20rem);
+    padding: calcRem(15rem) 0 calcRem(20rem);
   }
 }
 
@@ -2331,11 +2332,5 @@
       position: absolute;
       display: inline-block;
     }
-  }
-}
-
-@media screen and (max-width: 1500px){
-  .best-thumb__pagination{
-    bottom: calcRem(90rem);
   }
 }
