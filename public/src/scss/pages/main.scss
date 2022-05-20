@@ -2333,3 +2333,9 @@
     }
   }
 }
+
+@media screen and (max-width: 1500px){
+  .best-thumb__pagination{
+    bottom: calcRem(90rem);
+  }
+}
