@@ -1077,7 +1077,7 @@
       //width: 17.33333%;
       border-top: 1px solid transparent;
       &.is-current{
-        border-bottom: 2px solid #000;
+        border-bottom: 1px solid #000;
       }
       &:nth-child(2){
         margin: 0 calcRem(50rem);
