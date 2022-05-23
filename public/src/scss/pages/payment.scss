@@ -118,7 +118,7 @@
         &__item{
             display: inline-block;
             margin-right: calcRem(20rem);
-            label{cursor: pointer;}
+            label{cursor: pointer; overflow: hidden;}
             .form__radio--text{
                 @include body7;
                 &:before{ top:calcRem(2rem); }
