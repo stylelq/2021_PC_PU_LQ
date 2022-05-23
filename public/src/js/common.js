@@ -909,11 +909,12 @@ jQuery(function () {
     });
 
     function pagingOptionChange() {
-        if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
+
+        if ($('.header').hasClass('is-bg-white')) {
             $('body').removeClass('is-black');
             $('body').addClass('is-white');
         } else {
-            if ($('.header').hasClass('is-bg-white')) {
+            if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
                 $('body').removeClass('is-black');
                 $('body').addClass('is-white');
             } else {
@@ -1036,6 +1037,7 @@ jQuery(function () {
                     $('.main-banner2__pagination').removeClass('is-white');
                     $('.main-banner2__pagination').addClass('is-black');
                 }
+
                 $('.main-banner2__progressbar').removeClass("animate");
                 $('.main-banner2__progressbar').removeClass("active");
                 $('.main-banner2__progressbar').eq(0).addClass("animate");
