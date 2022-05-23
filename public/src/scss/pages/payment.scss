@@ -118,6 +118,8 @@
         &__item{
             display: inline-block;
             margin-right: calcRem(20rem);
+            overflow: hidden;
+            line-height: 0;
             label{cursor: pointer; overflow: hidden;}
             .form__radio--text{
                 @include body7;
