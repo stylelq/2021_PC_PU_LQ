@@ -203,7 +203,9 @@ jQuery(function () {
                     if ($sc - $divH > 0) {
                         //윈도우 끝쪽에 다닳았을때
                         positionAbsolute($divH + 240);
-                        $('.detail-tab').removeClass('fixed');
+                        if ($divH > 960) {
+                            $('.detail-tab').removeClass('fixed');
+                        }
                     } else {
                         positionFixed($('.header').height() + 10);
                     }
@@ -220,8 +222,9 @@ jQuery(function () {
 
             if ($sc == 0) {
                 $('.detail-tab__item').removeClass('is-current');
-                $('.detail-tab__item').eq(0).addClass('is-current');
+                //$('.detail-tab__item').eq(0).addClass('is-current');
                 $('.detail-tab__info').eq(0).addClass('is-current');
+                console.log('$sc :' + $sc);
             }
 
             $('.product-option-fix').css($styleOpt);
