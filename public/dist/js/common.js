@@ -220,13 +220,13 @@ jQuery(function () {
         $('.detail-height').removeClass('is-summary');
       } // 스크롤 0일때 초기화
 
-
+      /*
       if ($sc == 0) {
-        $('.detail-tab__item').removeClass('is-current'); //$('.detail-tab__item').eq(0).addClass('is-current');
+          $('.detail-tab__item').removeClass('is-current');
+          $('.detail-tab__item').eq(0).addClass('is-current');
+          $('.detail-tab__info').eq(0).addClass('is-current');
+      }*/
 
-        $('.detail-tab__info').eq(0).addClass('is-current');
-        console.log('$sc :' + $sc);
-      }
 
       $('.product-option-fix').css($styleOpt);
       return;

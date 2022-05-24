@@ -555,7 +555,7 @@
 
     &.fixed{
         position: fixed;
-        top: 120px;
+        top: calcRem(118rem);
         margin-top: 0;
         width: calcRem(720rem);
         height: calcRem(55rem);
