@@ -2018,6 +2018,7 @@
     //padding: 0 calcRem(50rem);
   }
   &__title{
+    display: flex;
     padding: calcRem(50rem) 0 calcRem(250rem);
     font-size: calcRem(30rem);
     font-weight: 400;
@@ -2032,7 +2033,7 @@
     background-color: #f5f5f5;
   }
   &__bottom{
-    display: flex;
+    //display: flex;
   }
   &__info{
     flex: 1;
@@ -2049,6 +2050,8 @@
     }
   }
   &__gender{
+    right: 0;
+    position: absolute;
   }
   &__link{
     position: relative;
@@ -2081,9 +2084,10 @@
   }
   &__info{
     display: flex;
-    bottom: calcRem(20rem);
+    //bottom: calcRem(20rem);
   }
   &__title {
+    display: flex;
     padding: calcRem(50rem) 0 calcRem(250rem);
     color: #9B192F;
     font-size: calcRem(30rem);
@@ -2091,12 +2095,16 @@
     text-transform: uppercase;
   }
   &__txt{
-    margin-left: calcRem(24rem);
-    margin-right: calcRem(70rem);
+    //margin-left: calcRem(24rem);
+    //margin-right: calcRem(70rem);
     color: #9B192F;
     font-size: calcRem(18rem);
     font-weight: 300;
     line-height: calcRem(28rem);
+  }
+  &__logo{
+    right: 0;
+    position: absolute;
   }
   &__button{
     width: calcRem(240rem);
@@ -2288,7 +2296,7 @@
 
 
 // 선물추천 및 멤버십 1200px이하일 때
-@media screen and (max-width: 1200px) {
+/*@media screen and (max-width: 1200px) {
   .main-gift{
     &__inner{
       margin: 0 calcRem(30rem);
@@ -2333,4 +2341,4 @@
       display: inline-block;
     }
   }
-}
+}*/
