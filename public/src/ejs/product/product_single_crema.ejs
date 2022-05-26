@@ -1,0 +1,379 @@
+<%
+type = "detail"
+page = "detail"
+popup = "true"
+noSort = "false"
+%>
+<% include ../_include/_header %>
+
+<div class="container">
+    <div class="site-main">
+        <section class="detail product-detail">
+            <!-- [left]Product detail -->
+            <div class="product-option">
+                <div class="product-option__wrap">
+                    <!-- Detail info -->
+                    <div class="detail-info">
+                        <!-- Detail share -->
+                        <div class="detail-fix__btn">
+                            <a href="#zoomPop" class="detail-fix__zoom js-popup-open"><span class="sr-only">확대해보기</span></a>
+                        </div>
+                        <!--. Detail share -->
+                        <!-- Detail Thumb Slide -->
+                        <div class="detail-thumb">
+                            <div class="swiper-container detail-thumb__container">
+                                <div class="swiper-wrapper detail-thumb__wrapper">
+                                    <div class='swiper-slide detail-thumb__item'>
+                                        <div class="detail-thumb__inner">
+                                            <img class="detail-thumb__img" src="../../images/dummy/detail-img1.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class='swiper-slide detail-thumb__item'>
+                                        <div class="detail-thumb__inner">
+                                            <img class="detail-thumb__img" src="../../images/dummy/detail-img1.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class='swiper-slide detail-thumb__item'>
+                                        <div class="detail-thumb__inner">
+                                            <img class="detail-thumb__img" src="../../images/dummy/detail-img1.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class='swiper-slide detail-thumb__item'>
+                                        <div class="detail-thumb__inner">
+                                            <img class="detail-thumb__img" src="../../images/dummy/detail-img1.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class='swiper-slide detail-thumb__item'>
+                                        <div class="detail-thumb__inner">
+                                            <img class="detail-thumb__img" src="../../images/dummy/detail-img1.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class='swiper-slide detail-thumb__item'>
+                                        <div class="detail-thumb__inner">
+                                            <img class="detail-thumb__img" src="../../images/dummy/detail-img1.jpg" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next detail-thumb--next"></div>
+                                <div class="swiper-button-prev detail-thumb--prev"></div>
+                            </div>
+                            <div class="swiper-pagination  detail-thumb__pagination"></div>
+                        </div>
+                        <!-- .Detail Thumb Slide -->
+                        <div class="view-360">
+                            <a href="#viewArPop" class="view-360__btn js-popup-open">
+                                <span class="view-360__btn-text">VIEW</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- detail tab -->
+                    <div class="detail-tab">
+                        <ul class="detail-tab__fix">
+                            <li class="detail-tab__item is-current">
+                                <a href="#;" class="detail-tab__link js-tab-link">상품상세</a>
+                            </li>
+                            <li class="detail-tab__item">
+                                <a href="#;" class="detail-tab__link js-tab-link">상품고시</a>
+                            </li>
+                            <li class="detail-tab__item">
+                                <a href="#;" class="detail-tab__link js-tab-link">REVIEW
+                                    <span class="crema-product-reviews-count" data-product-code="LLFO1DL71FXBPI0080"></span>
+                                </a>
+                            </li>
+                            <li class="detail-tab__item">
+                                <a href="#;" class="detail-tab__link js-tab-link">Q&A</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //detail tab -->
+
+                    <!-- detail Tab content -->
+                    <div class="detail-tab__cont">
+                        <!-- 상품상세 -->
+                        <div class="detail-tab__info detail-tab__info--detail is-current">
+                            <% include ../_include/_productDetail %>
+                        </div>
+                        <!-- .상품상세 -->
+                        <!-- 상품고시 -->
+                        <div class="detail-tab__info detail-tab__info--notice">
+                            <% include ../_include/_productNotice %>
+                        </div>
+                        <!-- .상품고시 -->
+                        <!-- 리뷰 -->
+                        <div class="detail-tab__info detail-tab__info--review">
+                            <div id="crema-product-reviews" class="crema-product-reviews" data-product-code="LLFO1DL71FXBPI0080"></div>
+                            <% include ../_include/_productRivew %>
+                        </div>
+                        <!-- .리뷰 -->
+                        <!-- qna -->
+                        <div class="detail-tab__info detail-tab__info--qna">
+                            <% include ../_include/_productQna %>
+                        </div>
+                        <!-- .qna -->
+                    </div>
+                    <!-- //detail Tab content -->
+                </div>
+            </div>
+            <!-- //[left]Product detail  -->
+
+            <!-- [right]Product option -->
+            <div class="product-option product-option-fix">
+                <!-- <div class="product-option-fix__wrap"></div> -->
+                <div class="detail-height">
+                    <!-- Title|Price -->
+                    <div class="detail-Meta">
+                        <h2 class="detail-Meta__title">루이까또즈 MINI CAVIAR(미니캐비어) 사첼백 HO1PM21IV</h2>
+                        <div class="detail-Meta__price">
+                            <span class="detail-Meta__price--current">289,290원</span>
+                            <span class="detail-Meta__price--sale">328,000원</span>
+                            <a href="#specialPop" class="detail-Meta__benefit js-popup-open">benefit</a>
+                        </div>
+                    </div>
+                    <!-- .Title|Price -->
+                    <!-- Detail purchase info -->
+                    <div class="detail-purchase">
+                        <ul class="detail-purchase__list">
+                            <li class="detail-purchase__item">
+                                <dl class="text-dictionary">
+                                    <dt class="text-dictionary__title">적립금</dt>
+                                    <dd class="text-dictionary__cont">4,500P</dd>
+                                </dl>
+                            </li>
+                            <li class="detail-purchase__item">
+                                <dl class="text-dictionary">
+                                    <dt class="text-dictionary__title">상품코드</dt>
+                                    <dd class="text-dictionary__cont">LLHO1PM21FB3IV0011</dd>
+                                </dl>
+                            </li>
+                            <li class="detail-purchase__item">
+                                <dl class="text-dictionary">
+                                    <dt class="text-dictionary__title">배송정보</dt>
+                                    <dd class="text-dictionary__cont">무료배송</dd>
+                                </dl>
+                            </li>
+                            <li class="detail-purchase__item">
+                                <dl class="text-dictionary">
+                                    <dt class="text-dictionary__title">카드혜택</dt>
+                                    <dd class="text-dictionary__cont">무이자 할부 3개월<a href="#installmentPop" class="text-dictionary__cont--link js-popup-open"><span class="sr-only">할부정책보기</span></a></dd>
+                                </dl>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- .Detail purchase info -->
+                </div>
+                <!-- .Detail option -->
+                <div class="detail-option">
+                    <ul class="detail-option__list">
+                        <li class="detail-option__item">
+                            <dl class="text-dictionary">
+                                <dt class="text-dictionary__title">COLOR</dt>
+                                <dd class="text-dictionary__cont">
+                                    <ul class="color-list">
+                                        <li class="color-list__item is-current">
+                                            <a href="" class="color-list__title">
+                                                <span class="color-list__bg" style="background-color:#ffffff;"></span>
+                                                <span class="color-list__name">white</span>
+                                            </a>
+                                        </li>
+                                        <li class="color-list__item">
+                                            <a href="" class="color-list__title">
+                                                <span class="color-list__bg" style="background-color:#803C15;"></span>
+                                                <span class="color-list__name">brown</span>
+                                            </a>
+                                        </li>
+                                        <li class="color-list__item">
+                                            <a href="" class="color-list__title">
+                                                <span class="color-list__bg" style="background-color:#000000;"></span>
+                                                <span class="color-list__name">black</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="detail-option__item">
+                            <dl class="text-dictionary">
+                                <dt class="text-dictionary__title text-dictionary__title--vetical">SIZE</dt>
+                                <dd class="text-dictionary__cont">
+                                    <ul class="size-list">
+                                        <li class="size-list__item">
+                                            <input class="size-list__input sr-only" type="radio" name="sizeOption" id="sizeOption1" checked>
+                                            <label class="size-list__title" for="sizeOption1"><span class="size-list__text">FREESIZE</span></label>
+                                        </li>
+                                        <li class="size-list__item">
+                                            <input class="size-list__input sr-only" type="radio" name="sizeOption" id="sizeOption2">
+                                            <label class="size-list__title" for="sizeOption2"><span class="size-list__text">품절</span></label>
+                                        </li>
+                                        <li class="size-list__item">
+                                            <input class="size-list__input sr-only" type="radio" name="sizeOption" id="sizeOption3">
+                                            <label class="size-list__title" for="sizeOption3"><span class="size-list__text">38</span></label>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <!-- total price -->
+                    <div class="detail-sum">
+                        <div class="detail-sum__inner">
+                            <div class="detail-sum__quantity--title">수량선택</div>
+                            <div class="detail-sum__calculate">
+                                <!-- quantity -->
+                                <div class="quantity">
+                                    <!-- <a href="#;" classw="quantity__minus js-minus"><span class="sr-only">minus</span></a>
+                                    <input class="quantity__text--current" type="number" value="1" min="1" max="999" maxlength="3" inputmode="numeric" pattern="[0-9]*" readonly="readonly" />
+                                    <a href="#;" class="quantity__plus js-plus"><span class="sr-only">plus</span></a> -->
+                                </div>
+                                <!-- quantity -->
+                                <div class="detail-sum__calculating">
+                                    <span class="detail-sum__calculating--text">428,500원</span>
+                                    <a href="#;" class="detail-sum__calculating--del js-sum-del"><span class="sr-only">삭제</span></a>
+                                    <!-- 삭제클릭시 컨텐츠 영역을 html 에서 삭제시키는 부분이라 따로 스크립트로 노출안되게 하는작업은 안했습니다. 삭제클릭시  사이즈쪽에 라디오 checked 되어있는 부분 checked 풀어주세요. -->
+                                    <!-- .detail-sum__inner 부분을 삭제 해주시면됩니다. -->
+                                </div>
+                            </div>
+                            <div class="detail-sum__total">428,500원</div>
+                        </div>
+                    </div>
+                    <!-- .total price -->
+                </div>
+                <!-- .Detail option -->
+                <% include ../_include/_productFixButton %>
+            </div>
+            <!-- //[right]Product option -->
+
+            <!-- 콜렉션 -->
+            <!-- <div class="collection-banner">
+                <img class="collection-banner__img" src="../../images/dummy/collection-img.png" alt="" />
+                <a href="" class="collection-banner__link">mini monte collection</a>
+            </div> -->
+            <!-- .콜렉션 -->
+
+            <!-- recommended -->
+            <div class="recommended">
+                <h3 class="recommended__title">THE RECOMMENDED</h3>
+                <div class="recommended-slide">
+                    <div class="swiper-container recommended-slide__container">
+                        <div class="swiper-wrapper recommended-slide__wrapper">
+                            <div class='swiper-slide recommended-slide__item'>
+                                <div class="recommended-product">
+                                    <div class="recommended-product__thumb">
+                                        <div class="recommended-product__state">NEW</div>
+                                        <img class="recommended-product__img" src="../../images/dummy/recommended_img.png" alt="" />
+                                        <!-- <a class="recommended-product__like is-active" href="javascript:void(0);"><span class="sr-only">좋아요</span></a> -->
+                                        <!-- 좋아요시 a 링크에 is-active -->
+                                        <% include ../_include/_productHoverButton %>
+                                    </div>
+                                    <div class="recommended-product__cont">
+                                        <div class="recommended-product__title">루이까또즈 씨엘(CIEL) 미니지갑 블루라일락 SP3SD71PB</div>
+                                        <div class="recommended-product__price">211,300원</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='swiper-slide recommended-slide__item'>
+                                <div class="recommended-product">
+                                    <div class="recommended-product__thumb">
+                                        <div class="recommended-product__state">NEW</div>
+                                        <img class="recommended-product__img" src="../../images/dummy/recommended_img.png" alt="" />
+                                        <!-- <a class="recommended-product__like" href="javascript:void(0);"><span class="sr-only">좋아요</span></a> -->
+                                        <% include ../_include/_productHoverButton %>
+                                    </div>
+                                    <div class="recommended-product__cont">
+                                        <div class="recommended-product__title">루이까또즈 씨엘(CIEL) 미니지갑 블루라일락 SP3SD71PB</div>
+                                        <div class="recommended-product__price">211,300원</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='swiper-slide recommended-slide__item'>
+                                <div class="recommended-product">
+                                    <div class="recommended-product__thumb">
+                                        <img class="recommended-product__img" src="../../images/dummy/recommended_img.png" alt="" />
+                                        <!-- <a class="recommended-product__like" href="javascript:void(0);"><span class="sr-only">좋아요</span></a> -->
+                                        <% include ../_include/_productHoverButton %>
+                                    </div>
+                                    <div class="recommended-product__cont">
+                                        <div class="recommended-product__title">루이까또즈 씨엘(CIEL) 미니지갑 블루라일락 SP3SD71PB</div>
+                                        <div class="recommended-product__price">211,300원</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='swiper-slide recommended-slide__item'>
+                                <div class="recommended-product">
+                                    <div class="recommended-product__thumb">
+                                        <img class="recommended-product__img" src="../../images/dummy/recommended_img.png" alt="" />
+                                        <!-- <a class="recommended-product__like" href="javascript:void(0);"><span class="sr-only">좋아요</span></a> -->
+                                        <% include ../_include/_productHoverButton %>
+                                    </div>
+                                    <div class="recommended-product__cont">
+                                        <div class="recommended-product__title">루이까또즈 씨엘(CIEL) 미니지갑 블루라일락 SP3SD71PB</div>
+                                        <div class="recommended-product__price">211,300원</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='swiper-slide recommended-slide__item'>
+                                <div class="recommended-product">
+                                    <div class="recommended-product__thumb">
+                                        <img class="recommended-product__img" src="../../images/dummy/recommended_img.png" alt="" />
+                                        <!-- <a class="recommended-product__like" href="javascript:void(0);"><span class="sr-only">좋아요</span></a> -->
+                                        <% include ../_include/_productHoverButton %>
+                                    </div>
+                                    <div class="recommended-product__cont">
+                                        <div class="recommended-product__title">루이까또즈 씨엘(CIEL) 미니지갑 블루라일락 SP3SD71PB</div>
+                                        <div class="recommended-product__price">211,300원</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='swiper-slide recommended-slide__item'>
+                                <div class="recommended-product">
+                                    <div class="recommended-product__thumb">
+                                        <img class="recommended-product__img" src="../../images/dummy/recommended_img.png" alt="" />
+                                        <!-- <a class="recommended-product__like" href="javascript:void(0);"><span class="sr-only">좋아요</span></a> -->
+                                        <% include ../_include/_productHoverButton %>
+                                    </div>
+                                    <div class="recommended-product__cont">
+                                        <div class="recommended-product__title">루이까또즈 씨엘(CIEL) 미니지갑 블루라일락 SP3SD71PB</div>
+                                        <div class="recommended-product__price">211,300원</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next detail-thumb--next"></div>
+                    <div class="swiper-button-prev detail-thumb--prev"></div>
+                    <div class="swiper-pagination recommended-slide__pagination"></div>
+                </div>
+            </div>
+            <!-- .recommended -->
+        </section>
+    </div>
+</div>
+
+<script type="text/javascript">
+    let productUserId = "stylelq";
+    let productUserNm = "stylelq";
+
+    (function (i, s, o, g, r, a, m) {
+        if (s.getElementById(g)) {
+            return
+        }
+        ;a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+        a.id = g;
+        a.async = 1;
+        a.src = r;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'crema-jssdk', '//widgets.cre.ma/stylelq.com/init.js');
+    window.cremaAsyncInit = function () {
+        crema.init(productUserId, productUserNm);
+    }
+</script>
+
+<% include ../_include/_contentFooter %>
+<% include ../_include/_cartFix %>
+<% include ../_popup/_qnaWrite %>
+<% include ../_popup/_benefits %>
+<% include ../_popup/_productSpecial %>
+<% include ../_popup/_installment %>
+<% include ../_popup/_view360 %>
+<% include ../_popup/_productZoom %>
+<% include ../_include/_footer %>
