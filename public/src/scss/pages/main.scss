@@ -2047,6 +2047,7 @@
       padding-top: calcRem(8rem);
       font-size: calcRem(18rem);
       font-weight: 300;
+      line-height: calclH(20, 12);
     }
   }
   &__gender{
@@ -2097,17 +2098,21 @@
   &__txt{
     //margin-left: calcRem(24rem);
     //margin-right: calcRem(70rem);
+    padding-top: calcRem(8rem);
     flex: 1;
     color: #9B192F;
     font-size: calcRem(18rem);
     font-weight: 300;
-    line-height: calcRem(28rem);
+    line-height: calclH(20, 12);
   }
   &__logo{
     right: 0;
     position: absolute;
+    width: calcRem(53rem);
+    height: auto;
   }
   &__button{
+    margin-top: calcRem(8rem);
     width: calcRem(240rem);
     height: calcRem(50rem);
     color: #fff;
@@ -2298,7 +2303,20 @@
 
 // 선물추천 및 멤버십 1200px이하일 때
 @media screen and (max-width: 1200px) {
+  .main-gift{
+    &__title{
+      padding: calcRem(40rem) 0 calcRem(120rem);
+    }
+    &__info{
+      &--bottom{
+        width: calcRem(388rem);
+      }
+    }
+  }
   .main-membership{
+    &__title{
+      padding: calcRem(40rem) 0 calcRem(120rem);
+    }
     &__button{
       align-self: flex-end;
     }
