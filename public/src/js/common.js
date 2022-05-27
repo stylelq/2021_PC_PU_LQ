@@ -1219,7 +1219,7 @@ jQuery(function () {
 
 
     if ($('.main-banner4').length > 0 && $('.main-banner4__item').length > 1) {
-        const mainSlide = new Swiper('.main-banner4__container', {
+        var bottomSlide = new Swiper('.main-banner4__container', {
             observer: true,
             observeParents: true,
             watchOverflow: true,
