@@ -1219,12 +1219,13 @@ jQuery(function () {
 
 
     if ($('.main-banner4').length > 0 && $('.main-banner4__item').length > 1) {
-        var mainSlide = new Swiper('.main-banner4__container', {
+        const mainSlide = new Swiper('.main-banner4__container', {
             observer: true,
             observeParents: true,
             watchOverflow: true,
-            slidesPerView: 1,
+            slidesPerView: 'auto',
             loop: true,
+            centeredSlides: true,
             autoplay: {
                 delay: 5000,
                 disableOnInteraction: false
