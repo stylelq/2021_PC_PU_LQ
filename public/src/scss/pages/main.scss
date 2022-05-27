@@ -1032,6 +1032,9 @@
   min-width: calcRem(1200rem);
   line-height: 0;
 
+  &__link{
+    display: block;
+  }
   &__left{
     padding: calcRem(40rem) 0;
   }
