@@ -1082,7 +1082,6 @@ jQuery(function () {
         var mainSlide = new Swiper('.main-banner2__container', mainBannerOption);
     } //best 배너슬라이드
 
-
     if ($('.best-thumb').length > 0 && $('.best-thumb__item').length > 1) {
         var bestSlide = new Swiper('.best-thumb__container', {
             observer: true,
