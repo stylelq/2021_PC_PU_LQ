@@ -46,6 +46,8 @@
   }
   &__video{
     width: 100%;
+    height: inherit;
+    object-fit: none;
   }
   &__content{
     bottom: calcRem(88rem);
