@@ -3091,14 +3091,28 @@
   }
   &__action{
       padding: calcRem(8rem) 0 calcRem(8rem) calcRem(10rem);
-      color:#fff;
-      background-color: #222;
       font-size: calcRem(12rem);
       font-size: calcRem(12rem);
       line-height: calcRem(13rem);
       text-align: left;
       label{
           vertical-align: text-top;
+      }
+
+      &.is-black{
+          color:#fff;
+          background-color: #222;
+          .notice-popup__close{
+              background-image: url('https://cdn.louisclub.com/static/fr/img/common/icon_mainpopup_close.png?ver=20200605');
+          }
+      }
+
+      &.is-white{
+          color:#222;
+          background-color: #fff;
+          .notice-popup__close{
+              background-image: url('https://cdn.louisclub.com/static/fr/img/common/icon_mainpopup_close01.png');
+          }
       }
   }
   &__close{
