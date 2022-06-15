@@ -63,13 +63,19 @@
   font-weight:$medium;
 }
 @mixin heading3(){
-  font-size:calcRem(24rem); 
+  font-size:calcRem(24rem);
   line-height:calclH(24,17); 
   letter-spacing: $defaultLetter; 
   font-weight:$regular;
 }
 @mixin heading3_2(){
   font-size:calcRem(30rem);
+  line-height:calclH(24,17);
+  letter-spacing: $defaultLetter;
+  font-weight:$regular;
+}
+@mixin heading3_3(){
+  font-size:calcRem(32rem);
   line-height:calclH(24,17);
   letter-spacing: $defaultLetter;
   font-weight:$regular;
