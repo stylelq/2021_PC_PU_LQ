@@ -34,21 +34,20 @@ jQuery(function () {
     });
     /* 마우스 오버 이벤트 제어 */
 
-    var header_mouse_over = false;
+    /*var header_mouse_over = false;
     var gnb = document.getElementsByClassName('gnb');
-    gnb.addEventListener('mouseover', function (event) {
-      header_mouse_over = true;
+    gnb.addEventListener('mouseover', (event) => {
+        header_mouse_over = true;
     });
-    gnb.addEventListener('mouseout', function (event) {
-      header_mouse_over = false;
+    gnb.addEventListener('mouseout', (event) => {
+        header_mouse_over = false;
     });
-
-    if (header_mouse_over === false) {
-      if ($('body').addClass('is-black')) {
-        $('body').removeClass('is-black');
-        $('body').addClass('is-white');
-      }
-    }
+     if (header_mouse_over === false) {
+        if($('body').addClass('is-black')){
+            $('body').removeClass('is-black');
+            $('body').addClass('is-white');
+        }
+    }*/
 
     $('.gnb-1depth__item').on('mouseenter', function () {
       var depth = $(this).attr('data-depth');

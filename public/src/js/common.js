@@ -34,7 +34,7 @@ jQuery(function () {
         });
 
         /* 마우스 오버 이벤트 제어 */
-        var header_mouse_over = false;
+        /*var header_mouse_over = false;
         var gnb = document.getElementsByClassName('gnb');
         gnb.addEventListener('mouseover', (event) => {
             header_mouse_over = true;
@@ -48,7 +48,7 @@ jQuery(function () {
                 $('body').removeClass('is-black');
                 $('body').addClass('is-white');
             }
-        }
+        }*/
 
         $('.gnb-1depth__item').on('mouseenter', function () {
             var depth = $(this).attr('data-depth');
