@@ -242,7 +242,7 @@
     min-width: calcRem(1200rem);
 
     &__yellow{
-      //position: absolute;
+      position: absolute;
       right: 15%;
       top: calcRem(300rem);
       z-index: 999999;
@@ -639,23 +639,6 @@
       letter-spacing: calcRem(1.3rem);
       &--bold{
         font-weight: 400;
-      }
-    }
-
-    /* matrix */
-
-
-
-    &__matrix{
-      .matrix-01{
-        width: calcRem(30rem);
-        height: calcRem(30rem);
-        font-size: calcRem(150rem);
-        font-weight:700;
-      }
-      &:hover .matrix-01{
-        transform: matrix(2,1,-1,1.5,30,-45);
-        -webkit-transform: matrix(2,1,-1,1.5,30,-45);
       }
     }
   }
@@ -1741,4 +1724,33 @@
     animation: loading-circle-ani 1s infinite;
     /* transition: 1s; */
   }
+}
+
+
+/* parallax */
+.parallax{
+  &-wrap{
+    display: block;
+    &__item{
+      display: block;
+
+
+      .parallax-01{
+        position: absolute;
+        left: 15%;
+        top: calcRem(150rem);
+        width: calcRem(200rem);
+      }
+      .parallax-02{
+        position: absolute;
+        right: 15%;
+        top: calcRem(300rem);
+        width: calcRem(200rem);
+      }
+    }
+  }
+  /*&:hover .matrix-01{
+    transform: matrix(2,1,-1,1.5,30,-45);
+    -webkit-transform: matrix(2,1,-1,1.5,30,-45);
+  }*/
 }
