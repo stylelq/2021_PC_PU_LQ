@@ -170,6 +170,28 @@ jQuery(function () {
     });
   } //스크롤탑 버튼
 
+  /*if ($('.promotion-view__matrix').length > 0) {
+      $(window).scroll(function(){
+          var scroll = $(this).scrollTop();
+          var pinkScroll = -scroll/3
+          var yellowScroll = -scroll/1
+           $('.pink').css({'transform' : 'translate3d(0,'+ pinkScroll +'px,0)'})
+          $('.yellow').css({'transform' : 'translate3d(0,'+ yellowScroll +'px,0)'})
+      });
+  }*/
+
+
+  $(window).scroll(function () {
+    var scroll = $(this).scrollTop();
+    var pinkScroll = -scroll / 3;
+    var yellowScroll = -scroll / 1;
+    $('.pink').css({
+      'transform': 'translate3d(0,' + pinkScroll + 'px,0)'
+    });
+    $('.promotion-view__yellow').css({
+      'transform': 'translate3d(0,' + yellowScroll + 'px,0)'
+    });
+  });
 
   function scrollTopBtn() {
     $('html, body').animate({
