@@ -5,8 +5,15 @@
 .live{
   &-view{
     position: relative;
+    margin: 0 auto;
+    width: calcRem(560rem);
+    padding-top: calcRem(150rem);
+    border-radius: calcRem(10rem) calcRem(10rem) 0 0;
+    &__wrap{
+
+    }
     &__txt{
-      bottom: calcRem(55rem);
+      bottom: calcRem(78rem);
       position: absolute;
       width: 100%;
       text-align: center;
@@ -18,7 +25,8 @@
         font-weight: 500;
       }
       &--title{
-        font-size: calcRem(26rem);
+        font-size: calcRem(36rem);
+        font-weight: 500;
         line-height: calcRem(42rem);
         letter-spacing: calcRem(1rem);
       }
@@ -32,7 +40,8 @@
     &__header{
       position: relative;
       width: 100%;
-      height: calcRem(380rem);
+      height: calcRem(592rem);
+      border-radius: calcRem(10rem) calcRem(10rem) 0 0;
       //background: url("");
       background: url('../../images/live/img_bg_live.png') no-repeat center center /contain;
       background-size: cover;
@@ -50,7 +59,7 @@
       box-sizing: border-box;
     }
     &__item + &__item{
-      margin-left: calcRem(10rem);
+      margin-left: calcRem(14rem);
     }
     &__button{
       margin: 0 auto;
@@ -60,40 +69,40 @@
       text-align: center;
     }
     &__btn{
+      padding: calcRem(13rem) 0 calcRem(16rem);
       &.btn-blk{
-        padding: calcRem(8rem) 0;
         color: #fff;
-        font-size: calcRem(11.2rem);
+        font-size: calcRem(20rem);
         background-color: #000;
-        line-height: calcRem(10rem);
+        line-height: calcRem(18rem);
       }
       &.btn-white{
-        padding: calcRem(8rem) 0;
         color: #000;
-        font-size: calcRem(11.2rem);
+        font-size: calcRem(20rem);
         background-color: #fff;
         border: 1px solid #000;
-        line-height: calcRem(10rem);
+        line-height: calcRem(18rem);
       }
       &.btn-coupon{
         right: calcRem(-18rem);
         bottom: calcRem(-12rem);
         position: absolute;
-        width: calcRem(37rem);
-        height: calcRem(37rem);
+        width: calcRem(57rem);
+        height: calcRem(57rem);
         border: none;
         background: url('../../images/live/img_icon_download.png') no-repeat center center /contain;
       }
     }
     &__coupon{
-      padding: calcRem(20rem) 0 calcRem(54rem);
+      padding: calcRem(20rem) 0 calcRem(114rem);
       background-color: #9B192F;
+      border-radius: 0 0 calcRem(10rem) calcRem(10rem);
     }
     &__download{
       &--title{
         margin: 0;
         color: #fff;
-        font-size: calcRem(20rem);
+        font-size: calcRem(28rem);
         font-weight: 500;
         text-align: center;
       }
@@ -101,44 +110,50 @@
     &__source{
       margin: calcRem(15rem) auto 0;
       position: relative;
-      width: calcRem(125rem);
-      height: calcRem(76rem);
+      width: calcRem(190rem);
+      height: calcRem(115rem);
       background: url('../../images/live/img_bg_coupon.png') no-repeat center center /contain;
-      background-size: calcRem(125rem) calcRem(76rem);
+      background-size: calcRem(190rem) calcRem(115rem);
       text-align: center;
     }
     &__percent{
-      padding-top: calcRem(14rem);
+      padding-top: calcRem(24rem);
       color: #9B192F;
-      font-size: calcRem(14rem);
+      font-size: calcRem(18rem);
       font-weight: 400;
-      line-height: calcRem(22rem);
+      line-height: calcRem(28rem);
       letter-spacing: calcRem(1rem);
       &--num{
-        font-size: calcRem(20rem);
+        font-size: calcRem(24rem);
+        line-height: calcRem(38rem);
       }
     }
   }
+  // 라이브 상품 리스트
   &-group{
-    padding-top: calcRem(40rem);
+    margin: 0 auto;
+    padding-top: calcRem(100rem);
+    width: calcRem(1200rem);
+    margin-bottom: calcRem(-60rem);
   }
   &-product{
     // position: relative;
     &__header{
-      padding: 0 20px;
+      padding: 0 calcRem(20rem) calcRem(30rem);
       text-align: center;
     }
     &__name{
-      padding-bottom: calcRem(10rem);
+      padding-bottom: calcRem(17rem);
       border-bottom: 1px solid #dddddd;
-
+      font-size: calcRem(24rem);
     }
     &__wrap{
       width: 100%;
       overflow: hidden;
+      @include flexWrap;
     }
     &__item{
-      width: 50%;
+      width: 33%;
       float: left;
       padding: calcRem(20rem) 0 calcRem(60rem);
       position: relative;
@@ -151,15 +166,15 @@
           &.type-circle{
             color: $whiteColor;
             text-align: center;
-            padding-top: calcRem(8rem);
+            padding-top: calcRem(12rem);
             box-sizing: border-box;
           }
         }
       }
 
-      &:nth-child(odd){
+      /*&:nth-child(odd){
         clear:both;
-      }
+      }*/
     }
   }
 }

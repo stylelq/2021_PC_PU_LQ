@@ -703,6 +703,37 @@
             outline: none;
         }
 
+        &.live-pop{
+            //padding: 0;
+            height: calcRem(368rem);
+            .small-popup__header{
+                padding: 0 0 calcRem(14rem);
+                margin: 0 calcRem(40rem);
+                &--title{
+                    font-size: calcRem(20rem);
+                }
+            }
+            .btn-group__item{
+                padding-left: 0;
+                width: 50%;
+                &.btn-coupon{
+                    width: 100%;
+                }
+            }
+            .btn-group__list.type-two{
+                display: flex;
+                .btn-group__item{
+                    width: 50% !important;
+                    display: inline-block;
+                    vertical-align: top;
+                    box-sizing: border-box;
+                }
+                .btn-group__item + .btn-group__item{
+                    margin-left: calcRem(4rem);
+                }
+            }
+        }
+
     }
 
     &__header{
@@ -3171,6 +3202,58 @@
 
 #membershipJoin .popup__header{
     border-bottom: none;
+}
+
+
+/*라이브 팝업 추가*/
+.pop-live{
+    padding: 0 calcRem(40rem);
+    &__txt{
+        margin: 0;
+        padding: calcRem(58rem) 0 calcRem(76rem);
+        color: #000;
+        font-size: calcRem(16rem);
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 300;
+        text-align: center;
+        line-height: calcRem(26rem);
+    }
+}
+
+.live__group{
+    .btn-v1--small{
+        margin: 0;
+    }
+}
+
+/*live 전용 쿠폰*/
+
+#liveCouponPop{
+    z-index: 1000;
+    .small-popup__header{
+        padding-bottom: 0;
+        border-bottom: none;
+        &--title{
+            font-size: calcRem(20rem);
+        }
+    }
+    .pop-live{
+        padding-bottom: calcRem(46rem);
+    }
+    .live-view{
+        &__source{
+            width: calcRem(157rem);
+            height: calcRem(94rem);
+            background-size: calcRem(157rem) calcRem(94rem);
+        }
+        &__percent{
+            padding-top: calcRem(22rem) !important;
+            font-size: calcRem(16rem);
+            &--num{
+                line-height: calcRem(32rem);
+            }
+        }
+    }
 }
 
 
