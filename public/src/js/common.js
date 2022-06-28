@@ -183,9 +183,9 @@ jQuery(function () {
             //var pinkScroll = -scroll/3
             var yellowScroll = -scroll/1
 
-            $('.parallax-01').css({'transform' : 'translate3d(0,'+ yellowScroll +'px,0)'})
-            $('.parallax-02').css({'transform' : 'matrix(0,'+ yellowScroll +'px,0)'})
-
+            $('.parallax-01').css({'transform' : 'translate3d(0,'+ yellowScroll +'px,0)'});
+            $('.parallax-02').css({'transform' : 'translate3d(0,'+ yellowScroll +'px,0)'});
+            //$('.parallax-02').css({'transform' : 'matrix3d(0,'+ yellowScroll +'px,0)'})
         });
     }
 
