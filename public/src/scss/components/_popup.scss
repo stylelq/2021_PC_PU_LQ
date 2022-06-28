@@ -3227,9 +3227,12 @@
 }
 
 /*live 전용 쿠폰*/
-
 #liveCouponPop{
     z-index: 1000;
+    .small-popup__body{
+        height: auto;
+        padding: calcRem(60rem) 0 0;
+    }
     .small-popup__header{
         padding-bottom: 0;
         border-bottom: none;
