@@ -1,0 +1,165 @@
+@import "../base/variables";
+@import "../base/mixins";
+@import "../pages/product";
+
+.live{
+  &-view{
+    position: relative;
+    &__txt{
+      bottom: calcRem(55rem);
+      position: absolute;
+      width: 100%;
+      text-align: center;
+
+      &--title,
+      &--date{
+        margin: 0;
+        color: #fff;
+        font-weight: 500;
+      }
+      &--title{
+        font-size: calcRem(26rem);
+        line-height: calcRem(42rem);
+        letter-spacing: calcRem(1rem);
+      }
+      &--date{
+        font-size: calcRem(20rem);
+        line-height: calcRem(32rem);
+        letter-spacing: calcRem(0.5rem);
+      }
+    }
+
+    &__header{
+      position: relative;
+      width: 100%;
+      height: calcRem(380rem);
+      //background: url("");
+      background: url('../../images/live/img_bg_live.png') no-repeat center center /contain;
+      background-size: cover;
+    }
+    &__list{
+      margin: 0 calcRem(17rem);
+      display: flex;
+      list-style: none;
+      font-size: 0;
+    }
+    &__item{
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+      box-sizing: border-box;
+    }
+    &__item + &__item{
+      margin-left: calcRem(10rem);
+    }
+    &__button{
+      margin: 0 auto;
+      padding: calcRem(25rem) 0;
+      position: relative;
+      background-color: #9B192F;
+      text-align: center;
+    }
+    &__btn{
+      &.btn-blk{
+        padding: calcRem(8rem) 0;
+        color: #fff;
+        font-size: calcRem(11.2rem);
+        background-color: #000;
+        line-height: calcRem(10rem);
+      }
+      &.btn-white{
+        padding: calcRem(8rem) 0;
+        color: #000;
+        font-size: calcRem(11.2rem);
+        background-color: #fff;
+        border: 1px solid #000;
+        line-height: calcRem(10rem);
+      }
+      &.btn-coupon{
+        right: calcRem(-18rem);
+        bottom: calcRem(-12rem);
+        position: absolute;
+        width: calcRem(37rem);
+        height: calcRem(37rem);
+        border: none;
+        background: url('../../images/live/img_icon_download.png') no-repeat center center /contain;
+      }
+    }
+    &__coupon{
+      padding: calcRem(20rem) 0 calcRem(54rem);
+      background-color: #9B192F;
+    }
+    &__download{
+      &--title{
+        margin: 0;
+        color: #fff;
+        font-size: calcRem(20rem);
+        font-weight: 500;
+        text-align: center;
+      }
+    }
+    &__source{
+      margin: calcRem(15rem) auto 0;
+      position: relative;
+      width: calcRem(125rem);
+      height: calcRem(76rem);
+      background: url('../../images/live/img_bg_coupon.png') no-repeat center center /contain;
+      background-size: calcRem(125rem) calcRem(76rem);
+      text-align: center;
+    }
+    &__percent{
+      padding-top: calcRem(14rem);
+      color: #9B192F;
+      font-size: calcRem(14rem);
+      font-weight: 400;
+      line-height: calcRem(22rem);
+      letter-spacing: calcRem(1rem);
+      &--num{
+        font-size: calcRem(20rem);
+      }
+    }
+  }
+  &-group{
+    padding-top: calcRem(40rem);
+  }
+  &-product{
+    // position: relative;
+    &__header{
+      padding: 0 20px;
+      text-align: center;
+    }
+    &__name{
+      padding-bottom: calcRem(10rem);
+      border-bottom: 1px solid #dddddd;
+
+    }
+    &__wrap{
+      width: 100%;
+      overflow: hidden;
+    }
+    &__item{
+      width: 50%;
+      float: left;
+      padding: calcRem(20rem) 0 calcRem(60rem);
+      position: relative;
+      box-sizing: border-box;
+
+      .product-item{
+        &__state{
+          text-transform: uppercase;
+
+          &.type-circle{
+            color: $whiteColor;
+            text-align: center;
+            padding-top: calcRem(8rem);
+            box-sizing: border-box;
+          }
+        }
+      }
+
+      &:nth-child(odd){
+        clear:both;
+      }
+    }
+  }
+}
