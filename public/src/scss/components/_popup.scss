@@ -3230,6 +3230,7 @@
 #liveCouponPop{
     z-index: 1000;
     .small-popup__body{
+        width: calcRem(360rem);
         height: auto;
         padding: calcRem(60rem) 0 0;
     }
@@ -3256,6 +3257,9 @@
                 line-height: calcRem(32rem);
             }
         }
+    }
+    .btn-group__item{
+        width: 100% !important;
     }
 }
 
