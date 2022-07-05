@@ -107,6 +107,9 @@
         display: block;
     }
 
+    &__state + &__state{
+        margin-top: calcRem(18rem);
+    }
     &__state{
         font-size:calcRem(12rem);
         line-height:calclH(16,10);
