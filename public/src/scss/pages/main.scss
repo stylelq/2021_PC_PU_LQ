@@ -2031,7 +2031,9 @@
   }
   &__left{
     flex: 1;
-    background: radial-gradient(101.9% 177.25% at 101.9% 44.78%, #FF8888 0%, rgba(255, 87, 87, 0.479167) 52.08%, rgba(255, 150, 53, 0.49) 100%);
+    @include pageBackground('/images/main/main-gift-background.jpg', 'no-repeat center center / contain');
+    background-size: cover;
+    //background: radial-gradient(101.9% 177.25% at 101.9% 44.78%, #FF8888 0%, rgba(255, 87, 87, 0.479167) 52.08%, rgba(255, 150, 53, 0.49) 100%);
   }
   &__right{
     flex: 1;
