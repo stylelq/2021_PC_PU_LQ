@@ -643,6 +643,66 @@
     }
   }
 
+  // 프로모션 모션
+  &-motion{
+    display: block;
+    &__wrap{
+      background: linear-gradient(#68f8e0, #fcb8b9);
+      //height: calcRem(500rem);
+      position: relative;
+    }
+    &__header{
+      margin: 0 calcRem(20rem);
+      padding-top: calcRem(18rem);
+      color: #ffb3b6;
+      font-size: calcRem(14rem);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 500;
+      text-transform: uppercase;
+      &--left{
+        float: left;
+      }
+      &--right{
+        float:right;
+      }
+    }
+    &__box{
+      margin: 0 auto;
+      position: relative;
+      width: calcRem(1200rem);
+      text-align: center;
+    }
+    &__bubble{
+      position: relative;
+      background-color: #fcb8b9;
+      padding-top: calcRem(100rem);
+      &--notice{
+        margin: 0;
+        top: calcRem(-55rem);
+        right: calcRem(250rem);
+        position: absolute;
+        color: #8a6463;
+        font-size: calcRem(14rem);
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 500;
+        text-align: right;
+      }
+    }
+
+    &__speech{
+      padding: calcRem(50rem) 0 calcRem(140rem);
+      &--txt{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: calcRem(78rem);
+        font-weight: 500;
+        font-family: 'Noto Sans KR', sans-serif;
+        line-height: 1.0;
+        letter-spacing: calcRem(2.2rem);
+      }
+    }
+  }
+
   // 프로모션 상품 리스트
   &-group{
     margin: 0 auto;
@@ -1726,31 +1786,140 @@
   }
 }
 
-
 /* parallax */
-.parallax{
-  &-wrap{
+.parallax {
+  &-wrap {
+    margin: 0 auto;
     display: block;
-    &__item{
+    position: relative;
+    width: calcRem(1200rem);
+    padding-top: calcRem(750rem);
+    overflow: hidden;
+
+    &__item {
       display: block;
 
-
-      .parallax-01{
+      .parallax-img{
         position: absolute;
-        left: 15%;
-        top: calcRem(150rem);
-        width: calcRem(200rem);
       }
-      .parallax-02{
-        position: absolute;
-        right: 15%;
-        top: calcRem(400rem);
-        width: calcRem(200rem);
+
+      .parallax-01 {
+        top: 0;
+        left: 0;
+        animation-delay: 1.5s;
+      }
+
+      .parallax-02 {
+        top: calcRem(30rem);
+        left: calcRem(260rem);
+        animation-delay: 1.75s;
+      }
+
+      .parallax-03 {
+        top: calcRem(30rem);
+        right: calcRem(176rem);
+        animation-delay: 2s;
+      }
+
+      .parallax-04 {
+        bottom: calcRem(130rem);
+        right: calcRem(-10rem);
+        animation-delay: 2.25s;
+      }
+
+      .parallax-05 {
+        bottom: calcRem(-50rem);
+        left: 0;
+        animation-delay: 0s;
+      }
+
+      .parallax-06 {
+        bottom: calcRem(-140rem);
+        left: calcRem(216rem);
+        animation-delay: 0.25s;
+      }
+
+      .parallax-07 {
+        bottom: calcRem(-30rem);
+        right: calcRem(368rem);
+        animation-delay: 0.5s;
+      }
+
+      .parallax-08 {
+        bottom: calcRem(-190rem);
+        right: calcRem(280rem);
+        animation-delay: 0.75s;
+      }
+      .parallax-09 {
+        bottom: calcRem(-16rem);
+        right: calcRem(160rem);
+        animation-delay: 1s;
+      }
+      .parallax-10 {
+        bottom: calcRem(-80rem);
+        right: calcRem(-110rem);
+        animation-delay: 1.25s;
       }
     }
   }
-  /*&:hover .matrix-01{
-    transform: matrix(2,1,-1,1.5,30,-45);
-    -webkit-transform: matrix(2,1,-1,1.5,30,-45);
-  }*/
+}
+
+/*bubble*/
+.bubble{
+  &-wrap{
+    &__img{
+      position: absolute;
+      width: auto !important;
+      cursor: pointer;
+
+      &.bubble-01{
+        top: calcRem(-50rem);
+        left: calcRem(320rem);
+      }
+      &.bubble-02{
+        top: calcRem(18rem);
+        left: calcRem(60rem);
+      }
+      &.bubble-03{
+        top: calcRem(-96rem);
+        left: calcRem(200rem);
+        z-index: 99;
+      }
+      &.bubble-04{
+        bottom: calcRem(90rem);
+        left: calcRem(340rem);
+        z-index: 99;
+      }
+      &.bubble-05{
+        bottom: calcRem(45rem);
+        left: calcRem(190rem);
+      }
+      &.bubble-06{
+        top: calcRem(-72rem);
+        right: calcRem(400rem);
+        z-index: 99;
+      }
+      &.bubble-07{
+        bottom: calcRem(50rem);
+        right: calcRem(420rem);
+      }
+      &.bubble-08{
+        top: calcRem(70rem);
+        right: calcRem(60rem);
+      }
+      &.bubble-09{
+        top: calcRem(100rem);
+        right: calcRem(144rem);
+      }
+      &.bubble-10{
+        bottom: calcRem(130rem);
+        right: calcRem(284rem);
+        z-index: 99;
+      }
+      &.bubble-11{
+        top: calcRem(-30rem);
+        right: calcRem(200rem);
+      }
+    }
+  }
 }
