@@ -1794,12 +1794,14 @@
 
       .parallax-img{
         position: absolute;
+        transition: all 1s;
       }
 
       .parallax-01 {
         top: calcRem(40rem);
         left: 0;
         animation-delay: 1.5s;
+        transition: all 1s;
       }
 
       .parallax-02 {
