@@ -1822,35 +1822,35 @@
 
       .parallax-05 {
         bottom: calcRem(-50rem);
-        left: 0;
+        left: calcRem(-50rem);
         animation-delay: 0s;
       }
 
       .parallax-06 {
         bottom: calcRem(-140rem);
-        left: calcRem(216rem);
+        left: calcRem(170rem);
         animation-delay: 0.25s;
       }
 
       .parallax-07 {
         bottom: calcRem(-30rem);
-        right: calcRem(368rem);
+        right: calcRem(410rem);
         animation-delay: 0.5s;
       }
 
       .parallax-08 {
         bottom: calcRem(-190rem);
-        right: calcRem(280rem);
+        right: calcRem(330rem);
         animation-delay: 0.75s;
       }
       .parallax-09 {
-        bottom: calcRem(-16rem);
-        right: calcRem(160rem);
+        bottom: calcRem(-24rem);
+        right: calcRem(210rem);
         animation-delay: 1s;
       }
       .parallax-10 {
         bottom: calcRem(-80rem);
-        right: calcRem(-110rem);
+        right: calcRem(-100rem);
         animation-delay: 1.25s;
       }
     }
