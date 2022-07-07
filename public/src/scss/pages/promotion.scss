@@ -1797,13 +1797,13 @@
       }
 
       .parallax-01 {
-        top: calcRem(-10rem);
+        top: calcRem(40rem);
         left: 0;
         animation-delay: 1.5s;
       }
 
       .parallax-02 {
-        top: calcRem(30rem);
+        top: calcRem(52rem);
         left: calcRem(260rem);
         animation-delay: 1.75s;
       }
@@ -1815,8 +1815,8 @@
       }
 
       .parallax-04 {
-        bottom: calcRem(190rem);
-        right: calcRem(10rem);
+        bottom: calcRem(120rem);
+        right: calcRem(3rem);
         animation-delay: 2.25s;
       }
 
