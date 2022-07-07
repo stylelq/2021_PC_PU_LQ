@@ -646,6 +646,11 @@
   // 프로모션 모션
   &-motion{
     display: block;
+    min-width: calcRem(1200rem);
+
+    &__words{
+      padding-top: calcRem(100rem);
+    }
     &__wrap{
       background: linear-gradient(#68f8e0, #fcb8b9);
       //height: calcRem(500rem);
@@ -669,36 +674,24 @@
     &__box{
       margin: 0 auto;
       position: relative;
-      width: calcRem(1200rem);
+      width: calcRem(1400rem);
       text-align: center;
     }
     &__bubble{
       position: relative;
       background-color: #fcb8b9;
       padding-top: calcRem(100rem);
-      &--notice{
-        margin: 0;
-        top: calcRem(-55rem);
-        right: calcRem(250rem);
-        position: absolute;
-        color: #8a6463;
-        font-size: calcRem(14rem);
-        font-family: 'Noto Sans KR', sans-serif;
-        font-weight: 500;
-        text-align: right;
-      }
+      overflow: hidden;
     }
 
     &__speech{
       padding: calcRem(50rem) 0 calcRem(140rem);
-      &--txt{
-        text-align: center;
-        text-transform: uppercase;
-        font-size: calcRem(78rem);
-        font-weight: 500;
-        font-family: 'Noto Sans KR', sans-serif;
-        line-height: 1.0;
-        letter-spacing: calcRem(2.2rem);
+    }
+
+    &__txt{
+      &--img{
+        margin: 0 auto;
+        width: auto !important;
       }
     }
   }
@@ -1873,52 +1866,52 @@
       cursor: pointer;
 
       &.bubble-01{
-        top: calcRem(-50rem);
-        left: calcRem(320rem);
+        top: calcRem(-48rem);
+        left: calcRem(458rem);
       }
       &.bubble-02{
-        top: calcRem(18rem);
-        left: calcRem(60rem);
+        top: 0;
+        left: calcRem(138rem);
       }
       &.bubble-03{
         top: calcRem(-96rem);
-        left: calcRem(200rem);
+        left: calcRem(365rem);
         z-index: 99;
       }
       &.bubble-04{
-        bottom: calcRem(90rem);
-        left: calcRem(340rem);
+        bottom: calcRem(70rem);
+        left: calcRem(414rem);
         z-index: 99;
       }
       &.bubble-05{
-        bottom: calcRem(45rem);
-        left: calcRem(190rem);
+        bottom: calcRem(25rem);
+        left: calcRem(260rem);
       }
       &.bubble-06{
-        top: calcRem(-72rem);
-        right: calcRem(400rem);
+        top: calcRem(-90rem);
+        right: calcRem(470rem);
         z-index: 99;
       }
       &.bubble-07{
-        bottom: calcRem(50rem);
-        right: calcRem(420rem);
+        bottom: calcRem(32rem);
+        right: calcRem(520rem);
       }
       &.bubble-08{
-        top: calcRem(70rem);
-        right: calcRem(60rem);
+        top: calcRem(50rem);
+        right: calcRem(140rem);
       }
       &.bubble-09{
-        top: calcRem(100rem);
-        right: calcRem(144rem);
+        top: calcRem(90rem);
+        right: calcRem(220rem);
       }
       &.bubble-10{
-        bottom: calcRem(130rem);
-        right: calcRem(284rem);
+        bottom: calcRem(116rem);
+        right: calcRem(380rem);
         z-index: 99;
       }
       &.bubble-11{
-        top: calcRem(-30rem);
-        right: calcRem(200rem);
+        top: calcRem(-50rem);
+        right: calcRem(270rem);
       }
     }
   }
