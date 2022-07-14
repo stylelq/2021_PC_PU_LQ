@@ -14,7 +14,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 window.onload = function () {
     $('.loading').hide();
-    $('.loading-kakao').hide();
 };
 
 jQuery(function () {
