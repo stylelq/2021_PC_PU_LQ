@@ -447,7 +447,14 @@
     }
 
     &--video {
-      height: 100%;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: inherit;
+      background-size: cover;
+      background-position: center;
     }
   }
 
