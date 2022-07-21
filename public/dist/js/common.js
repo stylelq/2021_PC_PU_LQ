@@ -115,6 +115,19 @@ jQuery(function () {
         }*/
 
       }
+
+      if ($('.header').hasClass('is-bg-white')) {
+        $('body').removeClass('is-black');
+        $('body').addClass('is-white');
+      } else {
+        if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
+          $('body').removeClass('is-black');
+          $('body').addClass('is-white');
+        } else {
+          $('body').removeClass('is-white');
+          $('body').addClass('is-black');
+        }
+      }
     });
     /*
     //Header Search
@@ -732,10 +745,10 @@ jQuery(function () {
     var scrollY = window.scrollY;
     var calcScrollY = parseInt(scrollY / 2) - 25; //	var targetList = [ parallax01, parallax02, parallax03, parallax04, parallax05, parallax06, parallax07, parallax08, parallax09, parallax10 ];
 
-    var targetList = [parallax01, parallax03, parallax05, parallax02, parallax09, parallax04, parallax07, parallax06, parallax08, parallax10];
+    var targetList = [parallax01, parallax05, parallax03, parallax02, parallax09, parallax04, parallax07, parallax06, parallax08, parallax10];
 
     for (var i = 0; i < targetList.length; i++) {
-      var gap = i * 40;
+      var gap = i * 30;
       var matrix1 = translateY(-600 - gap);
       var matrix2 = identity();
 
@@ -756,7 +769,9 @@ jQuery(function () {
   function updateScroll(target, matrix) {
     var scrollPos = window.scrollY;
     var progress = scrollPos / 700;
-    var m = matrix;
+
+    var m = _toConsumableArray(matrix);
+
     m[0] = progress * (matrix[0] - 1) + 1;
     m[1] = progress * matrix[1];
     m[2] = progress * matrix[2];
@@ -1123,16 +1138,18 @@ jQuery(function () {
   });
 
   function pagingOptionChange() {
-    if ($('.header').hasClass('is-bg-white')) {
-      $('body').removeClass('is-black');
-      $('body').addClass('is-white');
-    } else {
-      if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
+    if (!$('.gnb').hasClass('is-active')) {
+      if ($('.header').hasClass('is-bg-white')) {
         $('body').removeClass('is-black');
         $('body').addClass('is-white');
       } else {
-        $('body').removeClass('is-white');
-        $('body').addClass('is-black');
+        if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
+          $('body').removeClass('is-black');
+          $('body').addClass('is-white');
+        } else {
+          $('body').removeClass('is-white');
+          $('body').addClass('is-black');
+        }
       }
     }
 
