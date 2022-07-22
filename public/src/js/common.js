@@ -17,6 +17,8 @@ window.onload = function () {
 };
 
 jQuery(function () {
+    var mouseEnterCheck = false; //GNB 마우스 오버 체크
+
     $(document).ready(function () {
         var searchOpen = 'false'; //스크롤 시 헤더 배경 바뀜
 
@@ -63,6 +65,7 @@ jQuery(function () {
 
         $('.gnb-1depth__item').on('mouseenter', function () {
             var depth = $(this).attr('data-depth');
+            mouseEnterCheck = true;
 
             if ($('body').hasClass('is-black')) {
                 $('body').removeClass('is-black');
@@ -79,6 +82,7 @@ jQuery(function () {
         }).on('mouseleave', function () {
             var depth = $(this).attr('data-depth');
             $(this).removeClass('is-active');
+            mouseEnterCheck = false;
 
             if (searchOpen != "true") {
                 $('.header').removeClass('is-active');
@@ -92,16 +96,18 @@ jQuery(function () {
                 }*/
 
             }
-            if ($('.header').hasClass('is-bg-white')) {
-                $('body').removeClass('is-black');
-                $('body').addClass('is-white');
-            } else {
-                if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
+            if($('.main-banner').length){
+                if ($('.header').hasClass('is-bg-white')) {
                     $('body').removeClass('is-black');
                     $('body').addClass('is-white');
                 } else {
-                    $('body').removeClass('is-white');
-                    $('body').addClass('is-black');
+                    if ($('.main-banner__item[data-bg="white"]').hasClass('swiper-slide-active')) {
+                        $('body').removeClass('is-black');
+                        $('body').addClass('is-white');
+                    } else {
+                        $('body').removeClass('is-white');
+                        $('body').addClass('is-black');
+                    }
                 }
             }
         });
@@ -1113,7 +1119,7 @@ jQuery(function () {
     });
 
     function pagingOptionChange() {
-        if (!$('.gnb').hasClass('is-active')) {
+        if (!mouseEnterCheck) {
             if ($('.header').hasClass('is-bg-white')) {
                 $('body').removeClass('is-black');
                 $('body').addClass('is-white');
