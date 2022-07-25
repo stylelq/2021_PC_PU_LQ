@@ -587,8 +587,8 @@
     }
     &__wrap{
       width: 100%;
-      //padding-bottom: calcRem(60rem);
       overflow: hidden;
+      @include flexWrap;
     }
     &__item{
       width: 33%;
