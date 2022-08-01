@@ -220,6 +220,7 @@
       box-sizing: border-box;
       font-size: calcRem(14rem);
       font-weight: 400;
+
       &.is-active{
         .gnb-2depth__list{
           position: absolute;
